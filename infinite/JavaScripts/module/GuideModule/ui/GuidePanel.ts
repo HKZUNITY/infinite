@@ -1,0 +1,275 @@
+
+/** 
+ * AUTHOR: 穿迷彩服的鲨鱼
+ * TIME: 2023.09.26-13.56.59
+ */
+
+import GuideUI_Generate from "../../../ui-generate/module/GuideModule/GuideUI_generate";
+import HUDPanel from "../../HUDModule/ui/HUDPanel";
+import { GuideModuleC } from "../GuideModule";
+
+export default class GuidePanel extends GuideUI_Generate {
+	private canClick: boolean = false;
+
+	/**
+	 * 接收空间坐标
+	 */
+	private outPixelPos: mw.Vector2 = new mw.Vector2(0, 0);
+	/**
+	 * 用于接收视口坐标
+	 */
+	private outViewPos: mw.Vector2 = new mw.Vector2(0, 0);
+	/** 
+	 * 构造UI文件成功后，在合适的时机最先初始化一次 
+	 */
+	protected onStart() {
+		//设置能否每帧触发onUpdate
+		this.canUpdate = false;
+		this.layer = mw.UILayerMiddle;
+		this.initData();
+		this.bindButton();
+	}
+
+	private guideModuleC: GuideModuleC = null;
+	private hud: HUDPanel = null;
+	private centPos: mw.Vector2 = mw.Vector2.zero;
+	private initData(): void {
+		this.guideModuleC = ModuleService.getModule(GuideModuleC);
+		this.hud = mw.UIService.getUI(HUDPanel);
+		this.centPos = new mw.Vector(this.hud.rootCanvas.size.x / 2 - this.container.size.x / 2, this.hud.rootCanvas.size.y / 2 - this.container.size.y / 2);
+	}
+
+	private bindButton(): void {
+		this.button.onClicked.add(() => {
+			if (this.canClick) {
+				this.canClick = false;
+				this.hide();
+				this.guideModuleC.onNextStepAction.call();
+			}
+		});
+	}
+
+	// 实际逻辑写的地方
+	guideByStep(step: number) {
+		this.show();
+		this.setVisibility(this.button, true)
+		this.bg.visibility = mw.SlateVisibility.Collapsed;
+
+		switch (step) {
+			case 0:
+				this.guide0();
+				break;
+			case 1:// 第一步
+				this.guide1();
+				break;
+			case 2:// 第二步
+				this.guide2();
+				break;
+			case 3:// 第三步
+				this.guide3();
+				break;
+			case 4:
+				this.guide4();
+				break;
+			case 5:
+				this.guide5();
+				break;
+			case 6:
+				this.guide6();
+				break;
+			case 7:
+				this.guide7();
+				break;
+			case 8:
+				this.guide8();
+				break;
+			case 9:
+				this.guide9();
+				break;
+			case 10:
+				this.guide10();
+				break;
+			case 11:
+				this.guide11();
+				break;
+			case 12:
+				this.guide12();
+				break;
+			case 13:
+				this.guide13();
+				break;
+			case 14:
+				this.guide14();
+				break;
+			case 15:
+				this.guide15();
+				break;
+			case 16:
+				this.guide16();
+				break;
+			// 可以继续增加无数步
+			default:
+				this.hide();
+		}
+	}
+	private guide0(): void {
+		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
+			this.centPos, "欢迎来到元神学院，我来给你介绍一下所有按钮操作吧。", 0, true)
+	}
+
+	private guide1(): void {
+		mw.localToViewport(this.hud.mVirtualJoystickPanel.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mVirtualJoystickPanel.size,
+			new mw.Vector2(900, 200), "移动按钮，点击后拖拽可以控制角色移动。", 0, true)
+	}
+
+	private guide2(): void {
+		mw.localToViewport(this.hud.mTouchPad.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mTouchPad.size,
+			new mw.Vector2(0, 250), "视角移动区域，点击拖动这里可以控制屏幕视角。", 0, true)
+	}
+
+	private guide3(): void {
+		mw.localToViewport(this.hud.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mJumpButton.size,
+			new mw.Vector2(700, 350), "跳跃按钮，连续点击会进行二段跳。", 0, true)
+	}
+
+	private guide4(): void {
+		mw.localToViewport(this.hud.mSprintButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mSprintButton.size,
+			new mw.Vector2(700, 550), "冲刺按钮，可以直接瞬移一段距离，但会消耗蓝量。", 0, true)
+	}
+
+	private guide5(): void {
+		mw.localToViewport(this.hud.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mAtkButton.size,
+			new mw.Vector2(460, 550), "攻击按钮，连续点击可释放炫酷的连招。", 0, true)
+	}
+
+	private guide6(): void {
+		mw.localToViewport(this.hud.mMusicButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mMusicButton.size,
+			new mw.Vector2(710, 0), "背景音乐按钮，打开可更换背景音乐以及开关背景音乐。", 1, true)
+	}
+
+	private guide7(): void {
+		mw.localToViewport(this.hud.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mShopButton.size,
+			new mw.Vector2(350, 0), "武器商店按钮，可以免费使用各种炫酷的技能武器，也可以花费金币购买永久武器套装，快来使用进行战斗吧。", 1, true)
+	}
+
+	private guide8(): void {
+		mw.localToViewport(this.hud.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mRankButton.size,
+			new mw.Vector2(250, 0), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你的排名是多少吧。", 1, true)
+	}
+
+	private guide9(): void {
+		mw.localToViewport(this.hud.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mOnlineRewardButton.size,
+			new mw.Vector2(730, 150), "在线奖励按钮，玩游戏可以领取大量金币和经验，快来领取奖励吧。", 1, true)
+	}
+
+	private guide10(): void {
+		mw.localToViewport(this.hud.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mTaskButton.size,
+			new mw.Vector2(550, 150), "任务按钮，完成任务可以领取大量金币和经验，快来领取奖励吧。", 1, true)
+	}
+
+	private guide11(): void {
+		mw.localToViewport(this.hud.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mAdsButton.size,
+			new mw.Vector2(600, 150), "福利多多，可以领取大量金币和经验，快来领取奖励吧。", 1, true)
+	}
+
+	private guide12(): void {
+		mw.localToViewport(this.hud.mHomeButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mHomeButton.size,
+			new mw.Vector2(900, 300), "点我回家，找不到回家的路可以点我哦。", 1, true)
+	}
+
+	private guide13(): void {
+		mw.localToViewport(this.hud.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mRoleCanvas_G.size,
+			new mw.Vector2(550, 350), "角色属性，血量、蓝量，攻击力会随等级提升而提升。", 1, true)
+	}
+
+	private guide14(): void {
+		mw.localToViewport(this.hud.mCoinTextBlock.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mCoinTextBlock.size,
+			new mw.Vector2(550, 350), "金币，英雄套装商店消费。", 1, true)
+	}
+
+	private guide15(): void {
+		mw.localToViewport(this.hud.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.hud.mAddCoinButton.size,
+			new mw.Vector2(550, 350), "点我增加大量金币，快来试试吧。", 1, true)
+	}
+
+	private guide16(): void {
+		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
+			this.centPos, "介绍完毕，不懂的欢迎游戏圈留言。跟我路标走，带你去找一个好玩的东西", 0, true)
+	}
+
+	/**
+	 * 引导覆盖方法
+	 * @param position 目标UI的中心位置，用于把周围四个黑图环绕它
+	 * @param size 目标UI的大小，用于把周围四个黑图环绕它
+	 * @param pos 设置文本提示的显示位置
+	 * @param text 文本提示的内容
+	 * @param dir 箭头朝向
+	 * @param bgBtnShow 背景按钮是否显示
+	 */
+	cover(position: mw.Vector2, size: mw.Vector2, pos: mw.Vector2, text: string, dir: number = 0, bgBtnShow: boolean = true) {
+		this.setVisibility(this.button, bgBtnShow)
+		this.coverUI(position, size, pos, text, dir);
+	}
+
+	coverUI(position: mw.Vector2, size: mw.Vector2, pos: mw.Vector2, text: string, dir: number = 0) {
+		this.setVisibility(this.image1, true)
+		this.setVisibility(this.image2, true)
+		this.setVisibility(this.image3, true)
+		this.setVisibility(this.image4, true)
+
+		let screen = WindowUtil.getViewportSize();
+		this.image1.position = (new mw.Vector2(0, 0));
+		this.image1.size = (new mw.Vector2(position.x + size.x + 10, position.y - 10));
+		this.image2.position = (new mw.Vector2(0, position.y - 10));
+		this.image2.size = (new mw.Vector2(position.x - 10, screen.y - position.y + 10));
+		this.image3.position = (new mw.Vector2(position.x + size.x + 10, 0));
+		this.image3.size = (new mw.Vector2(screen.x - position.x - size.x - 10, position.y + size.y + 10));
+		this.image4.position = (new mw.Vector2(position.x - 10, position.y + size.y + 10));
+		this.image4.size = (new mw.Vector2(screen.x - position.x + 10, screen.y - position.y - size.y - 10));
+
+		this.canClick = true;
+		if (text) {
+			this.setVisibility(this.container, true)
+			this.container.position = pos
+			this.text.text = text
+		} else {
+			this.setVisibility(this.container, false)
+		}
+		if (!size.equals(mw.Vector2.zero)) {
+			this.setVisibility(this.guide, true)
+			if (dir == 0) {
+				this.guide.renderTransformAngle = (0);
+				this.guide.position = (new mw.Vector2(position.x + size.x / 2 - this.guide.size.x / 2,
+					position.y - this.guide.size.y));
+			} else {
+				this.guide.renderTransformAngle = (180);
+				this.guide.position = (new mw.Vector2(position.x + size.x / 2 - this.guide.size.x / 2,
+					position.y + size.y));
+			}
+		} else {
+			this.guide.visibility = mw.SlateVisibility.Collapsed;
+		}
+	}
+
+	setVisibility<T extends mw.Widget>(ui: T, isShow: boolean, isBlock = false) {
+		let visibilityType = isShow ?
+			isBlock ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Visible
+			: mw.SlateVisibility.Hidden;
+		ui.visibility = (visibilityType);
+	}
+}

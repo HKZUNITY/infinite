@@ -1,0 +1,114 @@
+import { update } from "./common/notice/Tween";
+import GlobalData from "./const/GlobalData";
+import AdsModuleC from "./module/AdsModule/AdsModuleC";
+import AdsModuleS from "./module/AdsModule/AdsModuleS";
+import { GuideData, GuideModuleC, GuideModuleS } from "./module/GuideModule/GuideModule";
+import HUDModuleC from "./module/HUDModule/HUDModuleC";
+import HUDModuleS from "./module/HUDModule/HUDModuleS";
+import OnlineRewardData from "./module/OnlineRewardModule/OnlineRewardData";
+import { OnlineRewardModuleC } from "./module/OnlineRewardModule/OnlineRewardModuleC";
+import { OnlineRewardModuleS } from "./module/OnlineRewardModule/OnlineRewardModuleS";
+import PlayerData from "./module/PlayerModule/PlayerData";
+import PlayerModuleC from "./module/PlayerModule/PlayerModuleC";
+import PlayerModuleS from "./module/PlayerModule/PlayerModuleS";
+import { PropData } from "./module/PropModule/PropData";
+import { PropModuleC } from "./module/PropModule/PropModuleC";
+import { PropModuleS } from "./module/PropModule/PropModuleS";
+import { WorldRankModuleC } from "./module/RankModule/WorldRankModuleC";
+import { WorldRankModuleS } from "./module/RankModule/WorldRankModuleS";
+import ShopData from "./module/ShopModule/ShopData";
+import ShopModuleC from "./module/ShopModule/ShopModuleC";
+import ShopModuleS from "./module/ShopModule/ShopModuleS";
+import { TaskData } from "./module/TaskModule/TaskData";
+import TaskModuleC from "./module/TaskModule/TaskModuleC";
+import TaskModuleS from "./module/TaskModule/TaskModuleS";
+
+@Component
+export default class GameLauncher extends mw.Script {
+    @mw.Property({ displayName: "是否隐藏头顶UI", group: "脚本设置" })
+    private isHideHeadUI: boolean = true;
+
+    @mw.Property({ displayName: "是否开启IAA", group: "脚本设置" })
+    private isOpenIAA: boolean = true;
+
+    @mw.Property({ displayName: "是否开启截图模式", group: "脚本设置" })
+    private isOpenCcreenshot: boolean = false;
+
+    @mw.Property({ displayName: "Log级别", group: "脚本设置", selectOptions: { "None": "0", "Log": "1", "Warn": "2", "Error": "3" } })
+    private logLevel: string = "0";
+
+
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    protected onStart(): void {
+        this.onStartCS();
+        if (mw.SystemUtil.isClient()) {
+            this.onStartC();
+        } else if (mw.SystemUtil.isServer()) {
+            this.onStartS();
+        }
+    }
+
+    /**客户端服务端的onStart */
+    private onStartCS(): void {
+        this.useUpdate = true;
+        this.onRegisterModule();
+        GlobalData.isDebug = SystemUtil.isPIE;
+        GlobalData.logLevel = Number(this.logLevel);
+        GlobalData.isHideHeadUI = this.isHideHeadUI;
+        GlobalData.isOpenIAA = this.isOpenIAA;
+        GlobalData.isOpenCcreenshot = this.isOpenCcreenshot;
+    }
+
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    protected onUpdate(dt: number): void {
+        update();
+        mw.TweenUtil.TWEEN.update();
+        if (mw.SystemUtil.isClient()) {
+            this.onUpdateC(dt);
+        } else if (mw.SystemUtil.isServer()) {
+            this.onUpdateS(dt);
+        }
+    }
+
+    /**注册模块 */
+    private onRegisterModule(): void {
+        ModuleService.registerModule(HUDModuleS, HUDModuleC, null);
+        ModuleService.registerModule(PlayerModuleS, PlayerModuleC, PlayerData);
+        ModuleService.registerModule(ShopModuleS, ShopModuleC, ShopData);
+        ModuleService.registerModule(AdsModuleS, AdsModuleC, null);
+        ModuleService.registerModule(PropModuleS, PropModuleC, PropData);
+        ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
+        ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);
+        ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
+        ModuleService.registerModule(GuideModuleS, GuideModuleC, GuideData);
+    }
+
+    /**------------------------------------------- 客户端 ------------------------------------------------ */
+    /**客户端的OnStart */
+    private onStartC(): void {
+
+    }
+
+    /**客户端的update */
+    private onUpdateC(dt: number): void {
+
+    }
+
+    /**------------------------------------------- 客户端 ------------------------------------------------ */
+
+    /**------------------------------------------- 服务端 ------------------------------------------------ */
+    /**服务端的OnStart */
+    private onStartS(): void {
+        DataStorage.setTemporaryStorage(SystemUtil.isPIE);
+    }
+
+    /**服务端的update */
+    private onUpdateS(dt: number): void {
+
+    }
+    /**------------------------------------------- 服务端 ------------------------------------------------ */
+}

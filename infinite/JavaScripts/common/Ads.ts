@@ -3,8 +3,6 @@ import { SpawnManager } from '../Modified027Editor/ModifiedSpawn';
 import { GeneralManager, } from '../Modified027Editor/ModifiedStaticAPI';
 import { IAdsElement } from "../config/Ads";
 import { GameConfig } from "../config/GameConfig";
-import GlobalData from "../const/GlobalData";
-import { AdType } from "../module/AdsModule/AdsModuleC";
 import AdTipsPanel from "../module/AdsModule/ui/AdTipsPanel";
 import ShopModuleC from "../module/ShopModule/ShopModuleC";
 
@@ -67,11 +65,11 @@ export default class Ads extends mw.Script {
             let trigger = await GameObject.asyncFindGameObjectById(value.Trigger) as mw.Trigger;
             trigger.onEnter.add((char: mw.Character) => {
                 if (char != Player.localPlayer.character) return;
-                if (GlobalData.isOpenIAA) {
-                    adsTipsPanel.showAdTips(value.id, AdType.WeaponSet1);
-                } else {
-                    shopModuleC.ads(value.id);
-                }
+                // if (GlobalData.isOpenIAA) {
+                //     adsTipsPanel.showAdTips(value.id, AdType.WeaponSet1);
+                // } else {
+                //     shopModuleC.ads(value.id);
+                // }
             });
         });
     }

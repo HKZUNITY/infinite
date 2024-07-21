@@ -14,14 +14,14 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     protected onStart(): void {
         this.hudModuleC = ModuleService.getModule(HUDModuleC);
         InputUtil.onKeyDown(mw.Keys.NumPadSeven, () => {
-            this.saveLevel(1);
+            this.adsUpLv();
         });
-        InputUtil.onKeyDown(mw.Keys.NumPadEight, () => {
-            this.saveHeight(1);
-        });
-        InputUtil.onKeyDown(mw.Keys.NumPadNine, () => {
-            this.saveKill(1);
-        });
+        // InputUtil.onKeyDown(mw.Keys.NumPadEight, () => {
+        //     this.saveHeight(1);
+        // });
+        // InputUtil.onKeyDown(mw.Keys.NumPadNine, () => {
+        //     this.saveKill(1);
+        // });
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -64,17 +64,17 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         return this.data.coin;
     }
 
-    public saveLevel(value: number): void {
-        this.server.net_saveLv(value);
-    }
+    // public saveLevel(value: number): void {
+    //     this.server.net_saveLv(value);
+    // }
 
-    public saveHeight(value: number): void {
-        this.server.net_saveHeight(value);
-    }
+    // public saveHeight(value: number): void {
+    //     this.server.net_saveHeight(value);
+    // }
 
-    public saveKill(value: number): void {
-        this.server.net_saveKill(value);
-    }
+    // public saveKill(value: number): void {
+    //     this.server.net_saveKill(value);
+    // }
 
     public saveCoin(value: number): void {
         this.hudModuleC.updateCoin(this.data.coin + value);
@@ -92,6 +92,15 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
 
     public saveCoinAndExp(coin: number, exp: number): void {
         this.server.net_saveCoinAndExp(coin, exp);
+    }
+
+    public adsUpLv(): void {
+        let exp = this.getLvUpExp();
+        this.saveCoinAndExp(0, exp);
+    }
+
+    public getLvUpExp(): number {
+        return (this.data.playerLv + 1) * 100;
     }
 
     public isInvincible(isInvincible: boolean): void {

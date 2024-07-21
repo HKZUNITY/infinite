@@ -1,7 +1,5 @@
 import { update } from "./common/notice/Tween";
 import GlobalData from "./const/GlobalData";
-import AdsModuleC from "./module/AdsModule/AdsModuleC";
-import AdsModuleS from "./module/AdsModule/AdsModuleS";
 import { GuideData, GuideModuleC, GuideModuleS } from "./module/GuideModule/GuideModule";
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
 import HUDModuleS from "./module/HUDModule/HUDModuleS";
@@ -79,7 +77,6 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(HUDModuleS, HUDModuleC, null);
         ModuleService.registerModule(PlayerModuleS, PlayerModuleC, PlayerData);
         ModuleService.registerModule(ShopModuleS, ShopModuleC, ShopData);
-        ModuleService.registerModule(AdsModuleS, AdsModuleC, null);
         ModuleService.registerModule(PropModuleS, PropModuleC, PropData);
         ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
         ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);

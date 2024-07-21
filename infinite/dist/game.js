@@ -916,7 +916,7 @@ var foreign22 = /*#__PURE__*/Object.freeze({
     DressProgressConfig: DressProgressConfig
 });
 
-const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", "2ED2DEEA", ["318618"], ["318617"], "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(0, 80, 50)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", "2ED2DEEA", ["336664", "336668"], ["336669"], "336816", ["336673", "336670", "336672"], [0.35, 0.35, 0.35], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["125704", "125704", "125704"], [new mw.Vector(0, 80, 50), new mw.Vector(0, 80, 50), new mw.Vector(0, 80, 50)], [new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1), new mw.Vector(1, 0.8, 1), new mw.Vector(1, 0.8, 1)]], [3, "蜘蛛精", "2ED2DEEA", ["336664", "336668"], ["338467"], "338468", ["338464", "338466"], [0.35, 0.35], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["125704", "125704"], [new mw.Vector(0, 80, 50), new mw.Vector(0, 80, 50)], [new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1), new mw.Vector(1, 0.8, 1)]], [4, "龙", "2ED2DEEA", ["160627", "250400", "250399", "160627"], ["160628"], "-1", ["250094", "250095"], [0.35, 0.35], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["125704", "125704"], [new mw.Vector(0, 80, 50), new mw.Vector(0, 80, 50)], [new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1), new mw.Vector(1, 0.8, 1)]], [5, "丧尸", "2ED2DEEA", ["284991", "268599"], ["285740", "269161", "285826"], "285139", ["285210"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(0, 80, 50)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [6, "角色", "2ED2DEEA", ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780", ""], "281693", ["219129", "280916", "280914"], [0.35, 0.35, 0.35], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["125704", "125704", "125704"], [new mw.Vector(0, 80, 50), new mw.Vector(0, 80, 50), new mw.Vector(0, 80, 50)], [new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1), new mw.Vector(1, 0.8, 1), new mw.Vector(1, 0.8, 1)]]];
+const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "MoveSpeed", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", ["0CD6E9E6"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", ["0CD6E9E6"], ["336664", "336668"], ["336669"], 250, "336816", ["336673", "336670", "336672"], [1, 0.95, 1.2], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["384353", "101411", "297932"], [new mw.Vector(170, 0, -50), new mw.Vector(200, 0, -120), new mw.Vector(100, 0, -125)], [new mw.Vector(0, -60, 0), new mw.Vector(0, 30, 10), new mw.Vector(0, 0, 0)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1), new mw.Vector(0.55, 1, 1)]], [3, "蜘蛛精", ["0CD6E9E6"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0.55, 1, 1), new mw.Vector(1, 1, 1)]], [4, "龙", ["0CD6E9E6"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1, 1, 1), new mw.Vector(1, 1, 1)]], [5, "丧尸", ["0CD6E9E6"], ["284991", "268599"], ["285740", "269161", "285826"], 150, "-1", ["285210"], [0.55], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["31260"], [new mw.Vector(5, 0, 0)], [new mw.Vector(0, -30, 180)], [new mw.Vector(1, 1, 1)]], [6, "角色", ["0CD6E9E6"], ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780", ""], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]]];
 class MonsterInfoConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$7);
@@ -1061,677 +1061,6 @@ GameConfig.configMap = new Map();
 var foreign23 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     GameConfig: GameConfig
-});
-
-class GlobalData {
-}
-/**log级别"None": "0", "Log": "1", "Warn": "2", "Error": "3" */
-GlobalData.logLevel = 0;
-/**是否隐藏头顶UI */
-GlobalData.isHideHeadUI = false;
-/**是否开启IAA */
-GlobalData.isOpenIAA = false;
-/**是否开启截图模式 */
-GlobalData.isOpenCcreenshot = false;
-/**是否开启攻击范围检测可视化 */
-GlobalData.isDebug = false;
-/**全局UI点击音效Guid */
-GlobalData.uiClickSoundGuid = GameConfig.Assets.getElement(1).Guid;
-/**爆炸金币特效Guid */
-GlobalData.explosiveCoinGuid = GameConfig.Assets.getElement(11).Guid;
-/**死亡墓碑Guid */
-GlobalData.tombstoneGuid = GameConfig.Assets.getElement(12).Guid;
-/**点击商店Item(限制) */
-GlobalData.isCanClickShopItem = true;
-/**On-Music-Icon */
-GlobalData.onMusicIconGuid = GameConfig.Assets.getElement(3).Guid;
-/**Off-Music-Icon */
-GlobalData.offMusicIconGuid = GameConfig.Assets.getElement(2).Guid;
-/** 每日刷新在线奖励时间格式为：时:分（0：0）*/
-GlobalData.dailyRefreshOnlineRewardTime = "4:0";
-/**每日刷新时间（目前是凌晨4点，格式为4:0） */
-GlobalData.dailyRefreshTime = "4:0";
-/**每周刷新时间（目前是每周一凌晨4点，格式为4:0） */
-GlobalData.weeklyRefreshTime = "4:0";
-/**NPC-Role */
-GlobalData.npcGuidStr = GameConfig.Assets.getElement(19).Guid + "," + GameConfig.Assets.getElement(7).Guid;
-/**NPC-Weapon */
-GlobalData.weaponGuidStr = GameConfig.Assets.getElement(20).Guid;
-/**引导线特效Guid */
-GlobalData.guideEffectGuid = GameConfig.Assets.getElement(21).Guid;
-/**引导目标点特效Guid */
-GlobalData.targetEffectGuid = GameConfig.Assets.getElement(22).Guid;
-
-var foreign32 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: GlobalData
-});
-
-class Console {
-    /**普通日志 */
-    static log(...data) {
-        if (GlobalData.logLevel < 1)
-            return;
-        console.log(data);
-    }
-    /**警告日志 */
-    static warn(...data) {
-        if (GlobalData.logLevel < 2)
-            return;
-        console.warn(data);
-    }
-    /**报错日志 */
-    static error(...data) {
-        if (GlobalData.logLevel < 3)
-            return;
-        console.error(data);
-    }
-}
-
-var foreign81 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: Console
-});
-
-let Tween$2 = class Tween extends mw.Tween {
-};
-class Utils {
-    /**
-      * 随机获取指定范围内的整数
-      * @param Min 起始值
-      * @param Max 最大值
-      * @returns 随机整数[min, max]
-      */
-    static getRandomInteger(min, max) {
-        let Range = max - min;
-        let Rand = Math.random();
-        return (min + Math.round(Rand * Range));
-    }
-    /**
-     * 获取指定范围内的随机数, decimalNum指小数保留多少位
-     * @param maxNum 最大值
-     * @param minNum 最小值
-     * @param decimalNum 保留几位数
-     * @returns 随机数[min, max]
-     */
-    static getRandomDecimals(maxNum = 0, minNum = 0, decimalNum = 0) {
-        let max = 0;
-        let min = 0;
-        minNum <= maxNum ? (min = minNum, max = maxNum) : (min = maxNum, max = minNum);
-        switch (arguments.length) {
-            case 1:
-                return Math.floor(Math.random() * (max + 1));
-            case 2:
-                return Math.floor(Math.random() * (max - min + 1) + min);
-            case 3:
-                return Number((Math.random() * (max - min) + min).toFixed(decimalNum));
-            default:
-                return Math.random();
-        }
-    }
-    /**
-     * 获取贝塞尔曲线的点的集合
-     * @param points 点的集合, 至少包含起点和终点
-     * @param num 想要生成多少点
-     * @returns
-     */
-    static getCurvePointsInNum(points, num) {
-        let result = new Array();
-        for (let i = 0; i < num; i++) {
-            let t = i / (num - 1);
-            let point = this.getKeyPoint(points, t);
-            result.push(point);
-        }
-        return result;
-    }
-    static getKeyPoint(points, t) {
-        if (points.length > 1) {
-            let dirs = new Array();
-            for (let i = 0; i < points.length - 1; ++i) {
-                dirs.push(new mw.Vector(points[i + 1].x - points[i].x, points[i + 1].y - points[i].y, points[i + 1].z - points[i].z));
-            }
-            let points2 = new Array();
-            for (let j = 0; j < dirs.length; j++) {
-                points2.push(new mw.Vector(points[j].x + dirs[j].x * t, points[j].y + dirs[j].y * t, points[j].z + dirs[j].z * t));
-            }
-            return this.getKeyPoint(points2, t);
-        }
-        else {
-            return new mw.Vector(points[0].x, points[0].y, points[0].z);
-        }
-    }
-    /**
-     * 震荡函数
-     * @param x
-     * @param speed 震荡衰减/增益的速度
-     * @param frequency 震荡的频率
-     * @param amplitude 震荡的幅度
-     * @returns
-     */
-    static shakeFunc(x, speed, frequency, amplitude) {
-        return (Math.pow(speed, -x) * Math.sin(2 * frequency * Math.PI * x)) / amplitude;
-    }
-    /**
-     * 获取三维向量的夹角(点乘 - dot product)
-     * @param center 夹角中心点
-     * @param start 起始点
-     * @param end 结束点
-     * @returns 返回夹角
-     */
-    static getTdAngle(center, start, end) {
-        let x1 = start.x - center.x, y1 = start.y - center.y, z1 = start.z - center.z;
-        let x2 = end.x - center.x, y2 = end.y - center.y, z2 = end.z - center.z;
-        let vectorDot = x1 * x2 + y1 * y2 + z1 * z2;
-        let vectorMold1 = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2) + Math.pow(z1, 2));
-        let vectorMold2 = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2) + Math.pow(z2, 2));
-        let cosAngle = vectorDot / (vectorMold1 * vectorMold2);
-        let radian = Math.acos(cosAngle);
-        return (180 / Math.PI * radian);
-    }
-    /**
-    * 获取两个向量围成的面积（叉乘 - multiplication cross）
-    * @param center 夹角中心点
-    * @param start 起始点
-    * @param end 结束点
-    * @returns 面积
-    */
-    static getmsArea(center, start, end) {
-        let x1 = start.x - center.x, y1 = start.y - center.y, z1 = start.z - center.z;
-        let x2 = end.x - center.x, y2 = end.y - center.y, z2 = end.z - center.z;
-        let vectorMultiplication = new mw.Vector(y1 * z2 - z1 * y2, z1 * x2 - x1 * z2, x1 * y2 - y1 * x2);
-        Console.error("[叉乘 - vectorMultiplication]" + vectorMultiplication);
-        let area = Math.sqrt(Math.pow(vectorMultiplication.x, 2) + Math.pow(vectorMultiplication.y, 2) + Math.pow(vectorMultiplication.z, 2));
-        return area;
-    }
-    static setWidgetVisibility(ui, visibility) {
-        if (ui.visibility != visibility)
-            ui.visibility = visibility;
-    }
-    /**得到今天日期 */
-    static getDay() {
-        let day = "";
-        day += new Date().getFullYear();
-        day += (new Date().getMonth() + 1);
-        day += new Date().getDate();
-        return day;
-    }
-    /**今天是星期几 */
-    // public static getWhatDay(): string {
-    //     let whatDay = "7123456".charAt(new Date().getDay());
-    //     Console.error("whatDay = [" + whatDay + "]");
-    //     return whatDay;
-    // }
-    /**
-     * 随机从数组中取出num个数据
-     * @param arr 数组
-     * @param num 多少个
-     * @returns 数组
-     */
-    static getRandomArr(arr, num) {
-        let len = arr.length;
-        for (let i = len - 1; i >= 0; --i) {
-            let randomIndex = Math.floor(Math.random() * (i + 1));
-            let itemIndex = arr[randomIndex];
-            arr[randomIndex] = arr[i];
-            arr[i] = itemIndex;
-        }
-        let arrList = [];
-        for (let i = 0; i < num; ++i) {
-            arrList.push(arr[i]);
-        }
-        return arrList;
-    }
-    static circularRandomCoordinates(point, radius, centerZ) {
-        const u = Math.random();
-        const theta = Math.random() * 2 * Math.PI;
-        const r = Math.sqrt(u);
-        return new mw.Vector(point.x + r * Math.cos(theta) * radius, point.y + r * Math.sin(theta) * radius, centerZ);
-    }
-    /**随机两个不一样的颜色 */
-    static randomColor() {
-        let colors = [mw.LinearColor.red, mw.LinearColor.green, mw.LinearColor.blue,
-            mw.LinearColor.yellow, new mw.LinearColor(1, 0, 1, 1), new mw.LinearColor(0, 1, 1, 1), mw.LinearColor.white];
-        let fontColor = colors[this.getRandomInteger(0, colors.length - 1)];
-        let outlineColor = colors[this.getRandomInteger(0, colors.length - 1)];
-        while (fontColor.a == outlineColor.a && fontColor.r == outlineColor.r
-            && fontColor.g == outlineColor.g && fontColor.b == outlineColor.b) {
-            outlineColor = colors[this.getRandomInteger(0, colors.length - 1)];
-            Console.error("颜色重复");
-        }
-        return [fontColor, outlineColor];
-    }
-    /**
-    * 返回当前时间（例 13：15）。
-    * @returns
-    */
-    static getCurrentTime() {
-        let date = new Date();
-        return date.getHours() + ":" + date.getMinutes();
-    }
-    /**
-     * 今天是星期几
-     * @returns
-     */
-    static getWhatDay() {
-        let whatDay = "7123456".charAt(new Date().getDay());
-        return whatDay;
-    }
-    /**
-     * 返回上次登录是周几
-     * @param day
-     * @returns
-     */
-    static getLastDay(day) {
-        let whatDay = "7123456".charAt(day);
-        return whatDay;
-    }
-    /**
-     * 判断是否同一周
-     * @param date1
-     * @param date2
-     * @returns
-     */
-    static iSameWeek(date1, date2) {
-        let dt1 = new Date();
-        dt1.setTime(date1);
-        let dt2 = new Date();
-        dt2.setTime(date2);
-        let md1 = this.tmonday(dt1);
-        let md2 = this.tmonday(dt2);
-        return md1 === md2;
-    }
-    static tmonday(dtm) {
-        let dte = new Date(dtm);
-        let day = dte.getDay();
-        let dty = dte.getDate();
-        if (day === 0) {
-            day = 7;
-        }
-        dte.setDate(dty - day + 1);
-        return dte.getFullYear() + '-' + dte.getMonth() + '-' + dte.getDate();
-    }
-    /**
-     * 开打UI缓动
-     * @param mCanvas
-     * @param onStart
-     * @param onComplete
-     */
-    static openUITween(mCanvas, onStart, onComplete) {
-        let tmpX = 0;
-        let tmpY = 0;
-        if (this.getRandomInteger(0, 1) == 0) {
-            if (this.getRandomInteger(0, 1)) {
-                tmpX = mCanvas.size.x;
-            }
-            else {
-                tmpX = -mCanvas.size.x;
-            }
-            tmpY = this.getRandomInteger(-mCanvas.size.y, mCanvas.size.y);
-            Console.error("wfz - A - tmpX = " + tmpX + "\ntmpY = " + tmpY);
-        }
-        else {
-            tmpX = this.getRandomInteger(-mCanvas.size.x, mCanvas.size.x);
-            if (this.getRandomInteger(0, 1)) {
-                tmpY = mCanvas.size.y;
-            }
-            else {
-                tmpY = -mCanvas.size.y;
-            }
-            Console.error("wfz - A - tmpX = " + tmpX + "\ntmpY = " + tmpY);
-        }
-        new mw.Tween({ x: tmpX, y: tmpY })
-            .to({ x: 0, y: 0 }, 0.5 * 1000)
-            .onStart(() => {
-            mCanvas.position = new mw.Vector2(tmpX, tmpY);
-            if (onStart)
-                onStart();
-        })
-            .onUpdate((v) => {
-            mCanvas.position = new mw.Vector2(v.x, v.y);
-        })
-            .easing(cubicBezier(.75, 2.9, .46, -0.18))
-            .onComplete(() => {
-            mCanvas.position = mw.Vector2.zero;
-            if (onComplete)
-                onComplete();
-        })
-            .start();
-        let scaleType = this.getRandomInteger(0, 2);
-        new mw.Tween({ x: 0, y: 0 })
-            .to({ x: 1, y: 1 }, 0.5 * 1000)
-            .onStart(() => {
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, 0);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(0, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(1, 1);
-                    break;
-            }
-        })
-            .onUpdate((v) => {
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, v.y);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
-                    break;
-            }
-        })
-            .onComplete(() => {
-            mCanvas.renderScale = mw.Vector2.one;
-        })
-            .start();
-    }
-    /**
-     * 开打UI缓动
-     * @param mCanvas
-     * @param onStart
-     * @param onComplete
-     */
-    static openUITween1(mCanvas, onStart, onComplete) {
-        let scaleType = this.getRandomInteger(0, 2);
-        new mw.Tween({ x: 0, y: 0 })
-            .to({ x: 1, y: 1 }, 0.5 * 1000)
-            .onStart(() => {
-            if (onStart) {
-                onStart();
-            }
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, 0);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(0, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(1, 1);
-                    break;
-            }
-        })
-            .onUpdate((v) => {
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, v.y);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
-                    break;
-            }
-        })
-            .onComplete(() => {
-            if (onComplete) {
-                onComplete();
-            }
-            mCanvas.renderScale = mw.Vector2.one;
-        })
-            .start();
-    }
-    /**
-     * 关闭UI缓动
-     * @param mCanvas
-     * @param onStart
-     * @param onComplete
-     * @param */
-    static closeUITween(mCanvas, onStart, onComplete) {
-        let scaleType = this.getRandomInteger(0, 2);
-        new mw.Tween({ x: 1, y: 1 })
-            .to({ x: 0, y: 0 }, 0.5 * 1000)
-            .onStart(() => {
-            if (onStart)
-                onStart();
-            mCanvas.renderScale = new mw.Vector2(1, 1);
-        })
-            .onUpdate((v) => {
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, v.y);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
-                    break;
-            }
-        })
-            .onComplete(() => {
-            if (onComplete)
-                onComplete();
-            switch (scaleType) {
-                case 0:
-                    mCanvas.renderScale = new mw.Vector2(1, 0);
-                    break;
-                case 1:
-                    mCanvas.renderScale = new mw.Vector2(0, 1);
-                    break;
-                case 2:
-                    mCanvas.renderScale = new mw.Vector2(0, 0);
-                    break;
-            }
-        })
-            .start();
-    }
-    /**
-     * 得到等级名字
-     * @param lv
-     * @returns
-     */
-    static getLvText(lv) {
-        let lvText = "";
-        let lvType = Math.floor(lv / 10);
-        switch (lvType) {
-            case 0:
-                lvText = "坚韧黑铁";
-                break;
-            case 1:
-                lvText = "英勇青铜";
-                break;
-            case 2:
-                lvText = "不屈白银";
-                break;
-            case 3:
-                lvText = "荣耀黄金";
-                break;
-            case 4:
-                lvText = "华贵铂金";
-                break;
-            case 5:
-                lvText = "流光翡翠";
-                break;
-            case 6:
-                lvText = "璀璨钻石";
-                break;
-            case 7:
-                lvText = "超凡大师";
-                break;
-            case 8:
-                lvText = "傲世宗师";
-                break;
-            case 9:
-                lvText = "最强王者";
-                break;
-            default:
-                lvText = "最强王者";
-                break;
-        }
-        return lvText;
-    }
-    static getWorldLocation() {
-        return this.locs[this.getRandomInteger(0, 3)];
-    }
-    static getBoss() {
-        return this.boss[this.getRandomInteger(0, this.boss.length - 1)];
-    }
-    static randomNpcName() {
-        return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
-    }
-    /**根据数字获取汉字*/
-    static numChangeToCN(num) {
-        if (this.tens[num]) {
-            return this.tens[num];
-        }
-        else if (num > 10 && num < 20) {
-            let numStr = num.toString();
-            let n = numStr.substring(1, 2);
-            let result = this.digitalUnits[1] + this.tens[n];
-            return result;
-        }
-        else if (num > 10) {
-            let result = "";
-            let numStr = num.toString();
-            for (var i = 0; i < numStr.length; ++i) {
-                let n = numStr.substring(i, i + 1);
-                let m = numStr.length - i - 1;
-                result += this.tens[n] + this.digitalUnits[m];
-            }
-            return result;
-        }
-        else
-            return "零";
-    }
-}
-/**
-* 得到等级名字
-* @param lv
-* @returns
-*/
-// public static getLvText(lv: number): string {
-//     let starLevel = lv % 10;
-//     let level = Math.floor(lv / 10);
-//     Console.error("操蛋#" + starLevel + "#" + level);
-//     let playerLevelTxt = "";
-//     switch (level) {
-//         case 0:
-//             playerLevelTxt = "斗之气 " + starLevel + " 段";
-//             break;
-//         case 1:
-//             playerLevelTxt = starLevel + " 星斗者";
-//             break;
-//         case 2:
-//             playerLevelTxt = starLevel + " 星斗师";
-//             break;
-//         case 3:
-//             playerLevelTxt = starLevel + " 星大斗师";
-//             break;
-//         case 4:
-//             playerLevelTxt = starLevel + " 星斗灵";
-//             break;
-//         case 5:
-//             playerLevelTxt = starLevel + " 星斗王";
-//             break;
-//         case 6:
-//             playerLevelTxt = starLevel + " 星斗皇";
-//             break;
-//         case 7:
-//             playerLevelTxt = starLevel + " 星斗宗";
-//             break;
-//         case 8:
-//             playerLevelTxt = starLevel + " 星斗尊";
-//             break;
-//         case 9:
-//             playerLevelTxt = starLevel + " 星斗圣";
-//             break;
-//         default:
-//             playerLevelTxt = (lv - 100) + " 星斗帝";
-//             break;
-//     }
-//     return playerLevelTxt;
-// }
-Utils.locs = [
-    new mw.Vector(500, -5500, 500),
-    new mw.Vector(150, -5100, 400),
-    new mw.Vector(2800, -2100, 200),
-    new mw.Vector(3200, -2800, 300)
-];
-Utils.boss = [
-    "219915",
-    "141618",
-    "142272",
-    "142255",
-    "219912",
-    "226915",
-    "226913",
-    "142153",
-    "219909",
-    "142396",
-    "142397"
-];
-Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云", "刘柏宏", "阮建安", "林子帆", "夏志豪", "吉茹定", "李中冰", "谢彦文", "傅智翔", "洪振霞", "刘姿婷", "荣姿康", "吕致盈", "方一强", "黎芸贵", "郑伊雯", "雷进宝", "吴美隆", "吴心真", "王美珠", "郭芳天", "李雅惠", "陈文婷", "曹敏侑", "王依婷", "陈婉璇", "吴美玉", "蔡依婷", "郑昌梦", "林家纶", "黄丽昆", "李育泉", "黄芸欢", "吴韵如", "李肇芬", "卢木仲", "李成白", "方兆玉", "刘翊惠", "丁汉臻", "吴佳瑞", "舒绿珮", "周白芷", "张姿妤", "张虹伦", "周琼玫", "倪怡芳", "郭贵妃", "杨佩芳", "黄盛玫", "郑丽青", "许智云", "张孟涵", "李小爱", "王恩龙", "朱政廷", "邓诗涵", "陈政倩", "吴俊伯", "阮馨学", "翁惠珠", "吴思翰", "林佩玲", "邓海来", "陈翊依", "李建智", "武淑芬", "金雅琪", "赖怡宜", "黄育霖", "张仪湖", "王俊民", "张诗刚", "林慧颖", "沈俊君", "陈淑妤", "李姿伶", "高咏钰", "黄彦宜", "周孟儒", "潘欣臻", "李祯韵", "叶洁启", "梁哲宇", "黄晓萍", "杨雅萍", "卢志铭", "张茂以", "林婉婷", "蔡宜芸", "林珮瑜", "黄柏仪", "周逸珮", "夏雅惠", "王采珮", "林孟霖", "林竹水", "王怡乐", "王爱乐", "金佳蓉", "韩健毓", "李士杰", "陈董珍", "苏姿婷", "张政霖", "李志宏", "陈素达", "陈虹荣", "何美玲", "李仪琳", "张俞幸", "黄秋萍", "潘吉维"];
-Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
-/**贝塞尔曲线 */
-function cubicBezier(p1x, p1y, p2x, p2y) {
-    const ZERO_LIMIT = 1e-6;
-    const ax = 3 * p1x - 3 * p2x + 1;
-    const bx = 3 * p2x - 6 * p1x;
-    const cx = 3 * p1x;
-    const ay = 3 * p1y - 3 * p2y + 1;
-    const by = 3 * p2y - 6 * p1y;
-    const cy = 3 * p1y;
-    function sampleCurveDerivativeX(t) {
-        return (3 * ax * t + 2 * bx) * t + cx;
-    }
-    function sampleCurveX(t) {
-        return ((ax * t + bx) * t + cx) * t;
-    }
-    function sampleCurveY(t) {
-        return ((ay * t + by) * t + cy) * t;
-    }
-    function solveCurveX(x) {
-        let t2 = x;
-        let derivative;
-        let x2;
-        for (let i = 0; i < 8; i++) {
-            x2 = sampleCurveX(t2) - x;
-            if (Math.abs(x2) < ZERO_LIMIT) {
-                return t2;
-            }
-            derivative = sampleCurveDerivativeX(t2);
-            if (Math.abs(derivative) < ZERO_LIMIT) {
-                break;
-            }
-            t2 -= x2 / derivative;
-        }
-        let t1 = 1;
-        let t0 = 0;
-        t2 = x;
-        while (t1 > t0) {
-            x2 = sampleCurveX(t2) - x;
-            if (Math.abs(x2) < ZERO_LIMIT) {
-                return t2;
-            }
-            if (x2 > 0) {
-                t1 = t2;
-            }
-            else {
-                t0 = t2;
-            }
-            t2 = (t1 + t0) / 2;
-        }
-        return t2;
-    }
-    function solve(x) {
-        return sampleCurveY(solveCurveX(x));
-    }
-    return solve;
-}
-
-var foreign85 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    Tween: Tween$2,
-    Utils: Utils,
-    cubicBezier: cubicBezier
 });
 
 /**
@@ -2195,7 +1524,7 @@ const mainGroup = new Group();
 const now = function () {
     return Date.now();
 };
-let Tween$1 = class Tween {
+let Tween$2 = class Tween {
     constructor(_object, _group = mainGroup) {
         this._object = _object;
         this._group = _group;
@@ -2590,7 +1919,7 @@ var foreign9 = /*#__PURE__*/Object.freeze({
     Group: Group,
     Interpolation: Interpolation,
     Sequence: Sequence,
-    Tween: Tween$1,
+    Tween: Tween$2,
     add: add,
     getAll: getAll,
     nextId: nextId,
@@ -2868,7 +2197,7 @@ class TopNoticeComponent {
         recent.targetHeight = this.insertItemTempLocation.y;
         recent.uiObject.renderOpacity = 0;
         // 插入动效
-        new Tween$1({ alpha: 0 })
+        new Tween$2({ alpha: 0 })
             .to({ alpha: 1 }, 250)
             .onUpdate(arg => {
             recent.uiObject.renderOpacity = arg.alpha;
@@ -2877,7 +2206,7 @@ class TopNoticeComponent {
     }
     fadeoutNoticeElement() {
         let item = this.visibleNotice.shift();
-        new Tween$1({ alpha: 1 })
+        new Tween$2({ alpha: 1 })
             .to({ alpha: 0 }, 250)
             .onUpdate(arg => {
             item.uiObject.renderOpacity = arg.alpha;
@@ -2979,7 +2308,7 @@ class TopNoticeComponent2 {
         recent.uiObject.renderOpacity = 0;
         recent.setLocation(this.insertItemTempLocation.x, -500);
         recent.uiObject.renderOpacity = 1;
-        new Tween$1({ posy: -500 })
+        new Tween$2({ posy: -500 })
             .to({ posy: this.insertItemTempLocation.y }, 500)
             .onUpdate(arg => {
             recent.setLocation(this.insertItemTempLocation.x, arg.posy);
@@ -2997,7 +2326,7 @@ class TopNoticeComponent2 {
         }
         this.isRemoveing = true;
         //计时
-        new Tween$1({ posX: 0 })
+        new Tween$2({ posX: 0 })
             .to({ posX: 1 }, 500)
             .onComplete(() => {
             this.isRemoveing = false;
@@ -3007,7 +2336,7 @@ class TopNoticeComponent2 {
         for (let i = 0; i < arr.length; i++) {
             const element = arr[i];
             element.targetHeight = (TopNoticeComponent2.NoticeItemIntervalSpace) + ((i) * TopNoticeComponent2.NoticeItemIntervalSpace);
-            new Tween$1({ posy: element.uiObject.position.y })
+            new Tween$2({ posy: element.uiObject.position.y })
                 .to({ posy: element.targetHeight }, 500)
                 .onUpdate(arg => {
                 element.setLocation(this.insertItemTempLocation.x, arg.posy);
@@ -3023,7 +2352,7 @@ class TopNoticeComponent2 {
             let pos = item.uiObject.position;
             this.isLeft = !this.isLeft;
             let target = new mw.Vector(0, pos.y);
-            new Tween$1({ posX: 0 })
+            new Tween$2({ posX: 0 })
                 .to({ posX: this.isLeft ? 3000 : -3000 }, 250)
                 .onUpdate(arg => {
                 target.x = arg.posX;
@@ -3088,203 +2417,676 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     Notice: Notice
 });
 
-class FlyText {
-    constructor() {
-        this._uiWidget = null;
-        this._rootCanvas = null;
-        this._textPools = [];
-        /**默认文本框大小（由于开启了自适应，所以文本框有多大，文本就有多大） */
-        this._defaultTextSize = new Vector2(200, 100);
-        /**默认文本颜色 */
-        this._defaultFontColor = LinearColor.white;
-        /**默认文本描边颜色 */
-        this._defaultOutlineColor = new mw.LinearColor(1, 0, 1, 1);
-    }
-    static get instance() {
-        if (FlyText._instance == null) {
-            FlyText._instance = new FlyText();
-        }
-        return FlyText._instance;
-    }
-    /**
-     * 展示飘字
-     * @param content 内容
-     * @param worldLocation 世界坐标
-     * @param fontColor 颜色（可选）
-     */
-    showFlyText(content, worldLocation, fontColor, outlineColor) {
-        // 将世界坐标转换为屏幕坐标
-        let vec2 = mw.InputUtil.projectWorldPositionToWidgetPosition(worldLocation, true).screenPosition;
-        // 对象池处理
-        let textBlock = null;
-        if (this._textPools.length == 0) {
-            textBlock = this.createText();
-        }
-        else {
-            textBlock = this._textPools.pop();
-        }
-        // 给一点初始偏移，方便做动画
-        vec2.x -= 120;
-        vec2.y -= 160;
-        let toX = this.getRandomIntInclusive(100, 300);
-        Math.random() < 0.5 ? toX = -toX : toX = toX;
-        let toY = this.getRandomIntInclusive(-300, 100);
-        // 用Tween，并结合PI来做曲线动画
-        let animator = new mw.Tween({ a: 0 }).to({ a: Math.PI }, 1000).onUpdate((object) => {
-            textBlock.position = vec2.clone().add(new mw.Vector2(toX * object.a / Math.PI, toY * Math.sin(object.a)));
-            textBlock.renderScale = new mw.Vector2(Math.sin(object.a));
-        }).onStart(() => {
-            textBlock.fontColor = fontColor ? fontColor : this._defaultFontColor;
-            textBlock.outlineColor = outlineColor ? outlineColor : this._defaultOutlineColor;
-            textBlock.text = content;
-            textBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }).onComplete(() => {
-            textBlock.visibility = mw.SlateVisibility.Hidden;
-            this._textPools.push(textBlock);
-        });
-        animator.start();
-    }
-    /**创建一个文本框 */
-    createText() {
-        // 首次创建，如果没有UI对象，就创建一个
-        if (!this._uiWidget) {
-            // 创建一个UI对象
-            this._uiWidget = mw.UserWidget.newObject();
-            this._uiWidget.addToViewport(1);
-            // 首次创建，如果没有rootCanvas，就创建一个
-            if (!this._rootCanvas) {
-                this._rootCanvas = mw.Canvas.newObject();
-                this._rootCanvas.size = new mw.Vector2(1920, 1080);
-                this._rootCanvas.position = mw.Vector2.zero;
-                this._uiWidget.rootContent = this._rootCanvas;
-            }
-        }
-        // 创建一个文本框，并添加到画布上
-        let textBlock = mw.TextBlock.newObject(this._rootCanvas);
-        textBlock.size = this._defaultTextSize;
-        // 开启文本自适应
-        textBlock.fontSize = 60;
-        textBlock.fontLetterSpace = 1;
-        textBlock.textHorizontalLayout = mw.UITextHorizontalLayout.NoClipping;
-        textBlock.autoAdjust = false;
-        textBlock.outlineSize = 8;
-        textBlock.glyph = mw.UIFontGlyph.Light;
-        return textBlock;
-    }
-    /**得到一个两数之间的随机整数，包括两个数在内 */
-    getRandomIntInclusive(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
-    }
+class GlobalData {
 }
+/**log级别"None": "0", "Log": "1", "Warn": "2", "Error": "3" */
+GlobalData.logLevel = 0;
+/**是否隐藏头顶UI */
+GlobalData.isHideHeadUI = false;
+/**是否开启IAA */
+GlobalData.isOpenIAA = false;
+/**是否开启截图模式 */
+GlobalData.isOpenCcreenshot = false;
+/**是否开启攻击范围检测可视化 */
+GlobalData.isDebug = false;
+/**全局UI点击音效Guid */
+GlobalData.uiClickSoundGuid = GameConfig.Assets.getElement(1).Guid;
+/**爆炸金币特效Guid */
+GlobalData.explosiveCoinGuid = GameConfig.Assets.getElement(11).Guid;
+/**死亡墓碑Guid */
+GlobalData.tombstoneGuid = GameConfig.Assets.getElement(12).Guid;
+/**点击商店Item(限制) */
+GlobalData.isCanClickShopItem = true;
+/**On-Music-Icon */
+GlobalData.onMusicIconGuid = GameConfig.Assets.getElement(3).Guid;
+/**Off-Music-Icon */
+GlobalData.offMusicIconGuid = GameConfig.Assets.getElement(2).Guid;
+/** 每日刷新在线奖励时间格式为：时:分（0：0）*/
+GlobalData.dailyRefreshOnlineRewardTime = "4:0";
+/**每日刷新时间（目前是凌晨4点，格式为4:0） */
+GlobalData.dailyRefreshTime = "4:0";
+/**每周刷新时间（目前是每周一凌晨4点，格式为4:0） */
+GlobalData.weeklyRefreshTime = "4:0";
+/**NPC-Role */
+GlobalData.npcGuidStr = GameConfig.Assets.getElement(19).Guid + "," + GameConfig.Assets.getElement(7).Guid;
+/**NPC-Weapon */
+GlobalData.weaponGuidStr = GameConfig.Assets.getElement(20).Guid;
+/**引导线特效Guid */
+GlobalData.guideEffectGuid = GameConfig.Assets.getElement(21).Guid;
+/**引导目标点特效Guid */
+GlobalData.targetEffectGuid = GameConfig.Assets.getElement(22).Guid;
 
-var foreign5 = /*#__PURE__*/Object.freeze({
+var foreign32 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    FlyText: FlyText
+    default: GlobalData
 });
 
-class ExplosiveCoins {
-    constructor() {
-        this.mapId = 0;
-        this.maxMapId = 10;
-        this.particles = [];
-        this.recycleParticles = new Map();
-        this.player = null;
-    }
-    static get instance() {
-        if (ExplosiveCoins._instance == null) {
-            ExplosiveCoins._instance = new ExplosiveCoins();
-        }
-        return ExplosiveCoins._instance;
-    }
-    /**爆金币 */
-    explosiveCoins(fromVec, coinCount = 1, coinNum = 10) {
-        // coinCount = Math.round(coinCount / coinNum);
-        if (this.mapId >= this.maxMapId)
-            this.mapId = 0;
-        let mapId = this.mapId++;
-        this.play3DSound(fromVec);
-        for (let i = 0; i < coinNum; ++i) {
-            this.startExplosiveCoins(fromVec, mapId);
-        }
-        TimeUtil.delaySecond(2).then(() => {
-            if (this.particles[mapId] == null || this.particles[mapId] == undefined)
-                return;
-            this.particles[mapId].forEach((particle, effectId) => {
-                let fromVec = particle.worldTransform.position;
-                let toVec = mw.Vector.zero;
-                if (this.player == null)
-                    this.player = Player.localPlayer;
-                toVec = this.player.character.worldTransform.position;
-                new mw.Tween({ x: fromVec.x, y: fromVec.y, z: fromVec.z })
-                    .to({ x: toVec.x, y: toVec.y, z: toVec.z }, 0.1 * 1000)
-                    .onUpdate((pos) => {
-                    particle.worldTransform.position = (new mw.Vector(pos.x, pos.y, pos.z));
-                })
-                    .start()
-                    .onComplete(() => {
-                    particle.stop();
-                    this.recycleParticles.set(effectId, particle);
-                    this.particles[mapId].delete(effectId);
-                });
-            });
-            TimeUtil.delaySecond(0.1).then(() => {
-                let vec = this.player.character.worldTransform.position;
-                FlyText.instance.showFlyText("+$ " + coinCount, new mw.Vector(vec.x, vec.y, vec.z + 30), mw.LinearColor.green, mw.LinearColor.yellow);
-            });
-            this.play3DSound(this.player.character.worldTransform.position);
-        });
-    }
-    async startExplosiveCoins(fromVec, mapId) {
-        let effectId = 0;
-        let particle = null;
-        if (this.recycleParticles.size > 0) {
-            effectId = this.recycleParticles.keys().next().value;
-            particle = this.recycleParticles.get(effectId);
-            this.recycleParticles.delete(effectId);
-        }
-        else {
-            effectId = GeneralManager.rpcPlayEffectAtLocation(GlobalData.explosiveCoinGuid, fromVec, 0);
-            particle = await EffectService.getEffectById(effectId);
-        }
-        particle.loop = true;
-        particle.play();
-        Console.error("[effectId] = " + effectId);
-        Console.error("[particle.guid] = " + particle.gameObjectId);
-        if (!particle || !effectId)
+class Console {
+    /**普通日志 */
+    static log(...data) {
+        if (GlobalData.logLevel < 1)
             return;
-        let toVec = Utils.circularRandomCoordinates(fromVec, 400, 20);
-        let moddleVec = new mw.Vector((fromVec.x + toVec.x) / 2, (fromVec.y + toVec.y) / 2, fromVec.z + Utils.getRandomInteger(150, 250));
-        let points = Utils.getCurvePointsInNum([fromVec, moddleVec, toVec], 10);
-        for (let j = 0; j < points.length - 1; ++j) {
-            await new Promise((resolve) => {
-                new mw.Tween({ x: points[j].x, y: points[j].y, z: points[j].z })
-                    .to({ x: points[j + 1].x, y: points[j + 1].y, z: points[j + 1].z }, 0.5 * 1000 / 10)
-                    .onUpdate((pos) => {
-                    particle.worldTransform.position = (new mw.Vector(pos.x, pos.y, pos.z));
-                })
-                    .start();
-                setTimeout(() => {
-                    return resolve();
-                }, 0.5 * 1000 / 10);
-            });
-        }
-        if (this.particles[mapId] == null)
-            this.particles[mapId] = new Map();
-        this.particles[mapId].set(effectId, particle);
+        console.log(data);
     }
-    play3DSound(fromVec) {
-        let soundId = SoundService.play3DSound("148629", fromVec);
-        TimeUtil.delaySecond(0.5).then(() => {
-            SoundService.stop3DSound(soundId);
-        });
+    /**警告日志 */
+    static warn(...data) {
+        if (GlobalData.logLevel < 2)
+            return;
+        console.warn(data);
+    }
+    /**报错日志 */
+    static error(...data) {
+        if (GlobalData.logLevel < 3)
+            return;
+        console.error(data);
     }
 }
 
-var foreign4 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    ExplosiveCoins: ExplosiveCoins
+    default: Console
+});
+
+let Tween$1 = class Tween extends mw.Tween {
+};
+class Utils {
+    /**
+      * 随机获取指定范围内的整数
+      * @param Min 起始值
+      * @param Max 最大值
+      * @returns 随机整数[min, max]
+      */
+    static getRandomInteger(min, max) {
+        let Range = max - min;
+        let Rand = Math.random();
+        return (min + Math.round(Rand * Range));
+    }
+    /**
+     * 获取指定范围内的随机数, decimalNum指小数保留多少位
+     * @param maxNum 最大值
+     * @param minNum 最小值
+     * @param decimalNum 保留几位数
+     * @returns 随机数[min, max]
+     */
+    static getRandomDecimals(maxNum = 0, minNum = 0, decimalNum = 0) {
+        let max = 0;
+        let min = 0;
+        minNum <= maxNum ? (min = minNum, max = maxNum) : (min = maxNum, max = minNum);
+        switch (arguments.length) {
+            case 1:
+                return Math.floor(Math.random() * (max + 1));
+            case 2:
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            case 3:
+                return Number((Math.random() * (max - min) + min).toFixed(decimalNum));
+            default:
+                return Math.random();
+        }
+    }
+    /**
+     * 获取贝塞尔曲线的点的集合
+     * @param points 点的集合, 至少包含起点和终点
+     * @param num 想要生成多少点
+     * @returns
+     */
+    static getCurvePointsInNum(points, num) {
+        let result = new Array();
+        for (let i = 0; i < num; i++) {
+            let t = i / (num - 1);
+            let point = this.getKeyPoint(points, t);
+            result.push(point);
+        }
+        return result;
+    }
+    static getKeyPoint(points, t) {
+        if (points.length > 1) {
+            let dirs = new Array();
+            for (let i = 0; i < points.length - 1; ++i) {
+                dirs.push(new mw.Vector(points[i + 1].x - points[i].x, points[i + 1].y - points[i].y, points[i + 1].z - points[i].z));
+            }
+            let points2 = new Array();
+            for (let j = 0; j < dirs.length; j++) {
+                points2.push(new mw.Vector(points[j].x + dirs[j].x * t, points[j].y + dirs[j].y * t, points[j].z + dirs[j].z * t));
+            }
+            return this.getKeyPoint(points2, t);
+        }
+        else {
+            return new mw.Vector(points[0].x, points[0].y, points[0].z);
+        }
+    }
+    /**
+     * 震荡函数
+     * @param x
+     * @param speed 震荡衰减/增益的速度
+     * @param frequency 震荡的频率
+     * @param amplitude 震荡的幅度
+     * @returns
+     */
+    static shakeFunc(x, speed, frequency, amplitude) {
+        return (Math.pow(speed, -x) * Math.sin(2 * frequency * Math.PI * x)) / amplitude;
+    }
+    /**
+     * 获取三维向量的夹角(点乘 - dot product)
+     * @param center 夹角中心点
+     * @param start 起始点
+     * @param end 结束点
+     * @returns 返回夹角
+     */
+    static getTdAngle(center, start, end) {
+        let x1 = start.x - center.x, y1 = start.y - center.y, z1 = start.z - center.z;
+        let x2 = end.x - center.x, y2 = end.y - center.y, z2 = end.z - center.z;
+        let vectorDot = x1 * x2 + y1 * y2 + z1 * z2;
+        let vectorMold1 = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2) + Math.pow(z1, 2));
+        let vectorMold2 = Math.sqrt(Math.pow(x2, 2) + Math.pow(y2, 2) + Math.pow(z2, 2));
+        let cosAngle = vectorDot / (vectorMold1 * vectorMold2);
+        let radian = Math.acos(cosAngle);
+        return (180 / Math.PI * radian);
+    }
+    /**
+    * 获取两个向量围成的面积（叉乘 - multiplication cross）
+    * @param center 夹角中心点
+    * @param start 起始点
+    * @param end 结束点
+    * @returns 面积
+    */
+    static getmsArea(center, start, end) {
+        let x1 = start.x - center.x, y1 = start.y - center.y, z1 = start.z - center.z;
+        let x2 = end.x - center.x, y2 = end.y - center.y, z2 = end.z - center.z;
+        let vectorMultiplication = new mw.Vector(y1 * z2 - z1 * y2, z1 * x2 - x1 * z2, x1 * y2 - y1 * x2);
+        Console.error("[叉乘 - vectorMultiplication]" + vectorMultiplication);
+        let area = Math.sqrt(Math.pow(vectorMultiplication.x, 2) + Math.pow(vectorMultiplication.y, 2) + Math.pow(vectorMultiplication.z, 2));
+        return area;
+    }
+    static setWidgetVisibility(ui, visibility) {
+        if (ui.visibility != visibility)
+            ui.visibility = visibility;
+    }
+    /**得到今天日期 */
+    static getDay() {
+        let day = "";
+        day += new Date().getFullYear();
+        day += (new Date().getMonth() + 1);
+        day += new Date().getDate();
+        return day;
+    }
+    /**今天是星期几 */
+    // public static getWhatDay(): string {
+    //     let whatDay = "7123456".charAt(new Date().getDay());
+    //     Console.error("whatDay = [" + whatDay + "]");
+    //     return whatDay;
+    // }
+    /**
+     * 随机从数组中取出num个数据
+     * @param arr 数组
+     * @param num 多少个
+     * @returns 数组
+     */
+    static getRandomArr(arr, num) {
+        let len = arr.length;
+        for (let i = len - 1; i >= 0; --i) {
+            let randomIndex = Math.floor(Math.random() * (i + 1));
+            let itemIndex = arr[randomIndex];
+            arr[randomIndex] = arr[i];
+            arr[i] = itemIndex;
+        }
+        let arrList = [];
+        for (let i = 0; i < num; ++i) {
+            arrList.push(arr[i]);
+        }
+        return arrList;
+    }
+    static circularRandomCoordinates(point, radius, centerZ) {
+        const u = Math.random();
+        const theta = Math.random() * 2 * Math.PI;
+        const r = Math.sqrt(u);
+        return new mw.Vector(point.x + r * Math.cos(theta) * radius, point.y + r * Math.sin(theta) * radius, centerZ);
+    }
+    /**随机两个不一样的颜色 */
+    static randomColor() {
+        let colors = [mw.LinearColor.red, mw.LinearColor.green, mw.LinearColor.blue,
+            mw.LinearColor.yellow, new mw.LinearColor(1, 0, 1, 1), new mw.LinearColor(0, 1, 1, 1), mw.LinearColor.white];
+        let fontColor = colors[this.getRandomInteger(0, colors.length - 1)];
+        let outlineColor = colors[this.getRandomInteger(0, colors.length - 1)];
+        while (fontColor.a == outlineColor.a && fontColor.r == outlineColor.r
+            && fontColor.g == outlineColor.g && fontColor.b == outlineColor.b) {
+            outlineColor = colors[this.getRandomInteger(0, colors.length - 1)];
+            Console.error("颜色重复");
+        }
+        return [fontColor, outlineColor];
+    }
+    /**
+    * 返回当前时间（例 13：15）。
+    * @returns
+    */
+    static getCurrentTime() {
+        let date = new Date();
+        return date.getHours() + ":" + date.getMinutes();
+    }
+    /**
+     * 今天是星期几
+     * @returns
+     */
+    static getWhatDay() {
+        let whatDay = "7123456".charAt(new Date().getDay());
+        return whatDay;
+    }
+    /**
+     * 返回上次登录是周几
+     * @param day
+     * @returns
+     */
+    static getLastDay(day) {
+        let whatDay = "7123456".charAt(day);
+        return whatDay;
+    }
+    /**
+     * 判断是否同一周
+     * @param date1
+     * @param date2
+     * @returns
+     */
+    static iSameWeek(date1, date2) {
+        let dt1 = new Date();
+        dt1.setTime(date1);
+        let dt2 = new Date();
+        dt2.setTime(date2);
+        let md1 = this.tmonday(dt1);
+        let md2 = this.tmonday(dt2);
+        return md1 === md2;
+    }
+    static tmonday(dtm) {
+        let dte = new Date(dtm);
+        let day = dte.getDay();
+        let dty = dte.getDate();
+        if (day === 0) {
+            day = 7;
+        }
+        dte.setDate(dty - day + 1);
+        return dte.getFullYear() + '-' + dte.getMonth() + '-' + dte.getDate();
+    }
+    /**
+     * 开打UI缓动
+     * @param mCanvas
+     * @param onStart
+     * @param onComplete
+     */
+    static openUITween(mCanvas, onStart, onComplete) {
+        let tmpX = 0;
+        let tmpY = 0;
+        if (this.getRandomInteger(0, 1) == 0) {
+            if (this.getRandomInteger(0, 1)) {
+                tmpX = mCanvas.size.x;
+            }
+            else {
+                tmpX = -mCanvas.size.x;
+            }
+            tmpY = this.getRandomInteger(-mCanvas.size.y, mCanvas.size.y);
+            Console.error("wfz - A - tmpX = " + tmpX + "\ntmpY = " + tmpY);
+        }
+        else {
+            tmpX = this.getRandomInteger(-mCanvas.size.x, mCanvas.size.x);
+            if (this.getRandomInteger(0, 1)) {
+                tmpY = mCanvas.size.y;
+            }
+            else {
+                tmpY = -mCanvas.size.y;
+            }
+            Console.error("wfz - A - tmpX = " + tmpX + "\ntmpY = " + tmpY);
+        }
+        new mw.Tween({ x: tmpX, y: tmpY })
+            .to({ x: 0, y: 0 }, 0.5 * 1000)
+            .onStart(() => {
+            mCanvas.position = new mw.Vector2(tmpX, tmpY);
+            if (onStart)
+                onStart();
+        })
+            .onUpdate((v) => {
+            mCanvas.position = new mw.Vector2(v.x, v.y);
+        })
+            .easing(cubicBezier(.75, 2.9, .46, -0.18))
+            .onComplete(() => {
+            mCanvas.position = mw.Vector2.zero;
+            if (onComplete)
+                onComplete();
+        })
+            .start();
+        let scaleType = this.getRandomInteger(0, 2);
+        new mw.Tween({ x: 0, y: 0 })
+            .to({ x: 1, y: 1 }, 0.5 * 1000)
+            .onStart(() => {
+            switch (scaleType) {
+                case 0:
+                    mCanvas.renderScale = new mw.Vector2(1, 0);
+                    break;
+                case 1:
+                    mCanvas.renderScale = new mw.Vector2(0, 1);
+                    break;
+                case 2:
+                    mCanvas.renderScale = new mw.Vector2(1, 1);
+                    break;
+            }
+        })
+            .onUpdate((v) => {
+            switch (scaleType) {
+                case 0:
+                    mCanvas.renderScale = new mw.Vector2(1, v.y);
+                    break;
+                case 1:
+                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
+                    break;
+                case 2:
+                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
+                    break;
+            }
+        })
+            .onComplete(() => {
+            mCanvas.renderScale = mw.Vector2.one;
+        })
+            .start();
+    }
+    /**
+     * 开打UI缓动
+     * @param mCanvas
+     * @param onStart
+     * @param onComplete
+     */
+    static openUITween1(mCanvas, onStart, onComplete) {
+        let scaleType = this.getRandomInteger(0, 2);
+        new mw.Tween({ x: 0, y: 0 })
+            .to({ x: 1, y: 1 }, 0.5 * 1000)
+            .onStart(() => {
+            if (onStart) {
+                onStart();
+            }
+            switch (scaleType) {
+                case 0:
+                    mCanvas.renderScale = new mw.Vector2(1, 0);
+                    break;
+                case 1:
+                    mCanvas.renderScale = new mw.Vector2(0, 1);
+                    break;
+                case 2:
+                    mCanvas.renderScale = new mw.Vector2(1, 1);
+                    break;
+            }
+        })
+            .onUpdate((v) => {
+            switch (scaleType) {
+                case 0:
+                    mCanvas.renderScale = new mw.Vector2(1, v.y);
+                    break;
+                case 1:
+                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
+                    break;
+                case 2:
+                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
+                    break;
+            }
+        })
+            .onComplete(() => {
+            if (onComplete) {
+                onComplete();
+            }
+            mCanvas.renderScale = mw.Vector2.one;
+        })
+            .start();
+    }
+    /**
+     * 关闭UI缓动
+     * @param mCanvas
+     * @param onStart
+     * @param onComplete
+     * @param */
+    static closeUITween(mCanvas, onStart, onComplete) {
+        let scaleType = this.getRandomInteger(0, 2);
+        new mw.Tween({ x: 1, y: 1 })
+            .to({ x: 0, y: 0 }, 0.5 * 1000)
+            .onStart(() => {
+            if (onStart)
+                onStart();
+            mCanvas.renderScale = new mw.Vector2(1, 1);
+        })
+            .onUpdate((v) => {
+            switch (scaleType) {
+                case 0:
+                    mCanvas.renderScale = new mw.Vector2(1, v.y);
+                    break;
+                case 1:
+                    mCanvas.renderScale = new mw.Vector2(v.x, 1);
+                    break;
+                case 2:
+                    mCanvas.renderScale = new mw.Vector2(v.x, v.y);
+                    break;
+            }
+        })
+            .onComplete(() => {
+            if (onComplete)
+                onComplete();
+            switch (scaleType) {
+                case 0:
+                    mCanvas.renderScale = new mw.Vector2(1, 0);
+                    break;
+                case 1:
+                    mCanvas.renderScale = new mw.Vector2(0, 1);
+                    break;
+                case 2:
+                    mCanvas.renderScale = new mw.Vector2(0, 0);
+                    break;
+            }
+        })
+            .start();
+    }
+    /**
+     * 得到等级名字
+     * @param lv
+     * @returns
+     */
+    // public static getLvText(lv: number): string {
+    //     let lvText = "";
+    //     let lvType = Math.floor(lv / 10);
+    //     switch (lvType) {
+    //         case 0:
+    //             lvText = "坚韧黑铁";
+    //             break;
+    //         case 1:
+    //             lvText = "英勇青铜";
+    //             break;
+    //         case 2:
+    //             lvText = "不屈白银";
+    //             break;
+    //         case 3:
+    //             lvText = "荣耀黄金";
+    //             break;
+    //         case 4:
+    //             lvText = "华贵铂金";
+    //             break;
+    //         case 5:
+    //             lvText = "流光翡翠";
+    //             break;
+    //         case 6:
+    //             lvText = "璀璨钻石";
+    //             break;
+    //         case 7:
+    //             lvText = "超凡大师";
+    //             break;
+    //         case 8:
+    //             lvText = "傲世宗师";
+    //             break;
+    //         case 9:
+    //             lvText = "最强王者";
+    //             break;
+    //         default:
+    //             lvText = "最强王者";
+    //             break;
+    //     }
+    //     return lvText;
+    // }
+    /**
+    * 得到等级名字
+    * @param lv
+    * @returns
+    */
+    static getLvText(lv) {
+        let starLevel = lv % 10;
+        let level = Math.floor(lv / 10);
+        Console.error("操蛋#" + starLevel + "#" + level);
+        let playerLevelTxt = "";
+        switch (level) {
+            case 0:
+                playerLevelTxt = starLevel + " 段斗之气";
+                break;
+            case 1:
+                playerLevelTxt = starLevel + " 星斗者";
+                break;
+            case 2:
+                playerLevelTxt = starLevel + " 星斗师";
+                break;
+            case 3:
+                playerLevelTxt = starLevel + " 星大斗师";
+                break;
+            case 4:
+                playerLevelTxt = starLevel + " 星斗灵";
+                break;
+            case 5:
+                playerLevelTxt = starLevel + " 星斗王";
+                break;
+            case 6:
+                playerLevelTxt = starLevel + " 星斗皇";
+                break;
+            case 7:
+                playerLevelTxt = starLevel + " 星斗宗";
+                break;
+            case 8:
+                playerLevelTxt = starLevel + " 星斗尊";
+                break;
+            case 9:
+                playerLevelTxt = starLevel + " 星斗圣";
+                break;
+            default:
+                playerLevelTxt = (lv - 100) + " 星斗帝";
+                break;
+        }
+        return playerLevelTxt;
+    }
+    static getWorldLocation() {
+        return this.locs[this.getRandomInteger(0, this.locs.length - 1)];
+    }
+    static getBoss() {
+        return this.boss[this.getRandomInteger(0, this.boss.length - 1)];
+    }
+    static randomNpcName() {
+        return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
+    }
+    /**根据数字获取汉字*/
+    static numChangeToCN(num) {
+        if (this.tens[num]) {
+            return this.tens[num];
+        }
+        else if (num > 10 && num < 20) {
+            let numStr = num.toString();
+            let n = numStr.substring(1, 2);
+            let result = this.digitalUnits[1] + this.tens[n];
+            return result;
+        }
+        else if (num > 10) {
+            let result = "";
+            let numStr = num.toString();
+            for (var i = 0; i < numStr.length; ++i) {
+                let n = numStr.substring(i, i + 1);
+                let m = numStr.length - i - 1;
+                result += this.tens[n] + this.digitalUnits[m];
+            }
+            return result;
+        }
+        else
+            return "零";
+    }
+}
+Utils.locs = [
+    new mw.Vector(2800, -6300, 500),
+    new mw.Vector(3000, -8000, 500),
+    new mw.Vector(4500, -6300, 500),
+    new mw.Vector(4500, -8000, 500),
+    new mw.Vector(3700, -7200, 500)
+];
+Utils.boss = [
+    "219915",
+    "141618",
+    "142272",
+    "142255",
+    "219912",
+    "226915",
+    "226913",
+    "142153",
+    "219909",
+    "142396",
+    "142397"
+];
+Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云", "刘柏宏", "阮建安", "林子帆", "夏志豪", "吉茹定", "李中冰", "谢彦文", "傅智翔", "洪振霞", "刘姿婷", "荣姿康", "吕致盈", "方一强", "黎芸贵", "郑伊雯", "雷进宝", "吴美隆", "吴心真", "王美珠", "郭芳天", "李雅惠", "陈文婷", "曹敏侑", "王依婷", "陈婉璇", "吴美玉", "蔡依婷", "郑昌梦", "林家纶", "黄丽昆", "李育泉", "黄芸欢", "吴韵如", "李肇芬", "卢木仲", "李成白", "方兆玉", "刘翊惠", "丁汉臻", "吴佳瑞", "舒绿珮", "周白芷", "张姿妤", "张虹伦", "周琼玫", "倪怡芳", "郭贵妃", "杨佩芳", "黄盛玫", "郑丽青", "许智云", "张孟涵", "李小爱", "王恩龙", "朱政廷", "邓诗涵", "陈政倩", "吴俊伯", "阮馨学", "翁惠珠", "吴思翰", "林佩玲", "邓海来", "陈翊依", "李建智", "武淑芬", "金雅琪", "赖怡宜", "黄育霖", "张仪湖", "王俊民", "张诗刚", "林慧颖", "沈俊君", "陈淑妤", "李姿伶", "高咏钰", "黄彦宜", "周孟儒", "潘欣臻", "李祯韵", "叶洁启", "梁哲宇", "黄晓萍", "杨雅萍", "卢志铭", "张茂以", "林婉婷", "蔡宜芸", "林珮瑜", "黄柏仪", "周逸珮", "夏雅惠", "王采珮", "林孟霖", "林竹水", "王怡乐", "王爱乐", "金佳蓉", "韩健毓", "李士杰", "陈董珍", "苏姿婷", "张政霖", "李志宏", "陈素达", "陈虹荣", "何美玲", "李仪琳", "张俞幸", "黄秋萍", "潘吉维"];
+Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
+/**贝塞尔曲线 */
+function cubicBezier(p1x, p1y, p2x, p2y) {
+    const ZERO_LIMIT = 1e-6;
+    const ax = 3 * p1x - 3 * p2x + 1;
+    const bx = 3 * p2x - 6 * p1x;
+    const cx = 3 * p1x;
+    const ay = 3 * p1y - 3 * p2y + 1;
+    const by = 3 * p2y - 6 * p1y;
+    const cy = 3 * p1y;
+    function sampleCurveDerivativeX(t) {
+        return (3 * ax * t + 2 * bx) * t + cx;
+    }
+    function sampleCurveX(t) {
+        return ((ax * t + bx) * t + cx) * t;
+    }
+    function sampleCurveY(t) {
+        return ((ay * t + by) * t + cy) * t;
+    }
+    function solveCurveX(x) {
+        let t2 = x;
+        let derivative;
+        let x2;
+        for (let i = 0; i < 8; i++) {
+            x2 = sampleCurveX(t2) - x;
+            if (Math.abs(x2) < ZERO_LIMIT) {
+                return t2;
+            }
+            derivative = sampleCurveDerivativeX(t2);
+            if (Math.abs(derivative) < ZERO_LIMIT) {
+                break;
+            }
+            t2 -= x2 / derivative;
+        }
+        let t1 = 1;
+        let t0 = 0;
+        t2 = x;
+        while (t1 > t0) {
+            x2 = sampleCurveX(t2) - x;
+            if (Math.abs(x2) < ZERO_LIMIT) {
+                return t2;
+            }
+            if (x2 > 0) {
+                t1 = t2;
+            }
+            else {
+                t0 = t2;
+            }
+            t2 = (t1 + t0) / 2;
+        }
+        return t2;
+    }
+    function solve(x) {
+        return sampleCurveY(solveCurveX(x));
+    }
+    return solve;
+}
+
+var foreign85 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    Tween: Tween$1,
+    Utils: Utils,
+    cubicBezier: cubicBezier
 });
 
 /**
@@ -3370,54 +3172,42 @@ var foreign90 = /*#__PURE__*/Object.freeze({
 class AdTipsPanel extends AdsTipsPanel_Generate$1 {
     constructor() {
         super(...arguments);
-        /**点击看广告事件 */
-        this.onWatchAdsAction = new Action2();
-        /**配置表的ID */
-        this.id = -1;
-        this.adType = -1;
+        this.callback = null;
     }
-    /**
-     * 构造UI文件成功后，在合适的时机最先初始化一次
-     */
     onStart() {
-        //设置能否每帧触发onUpdate
         this.canUpdate = false;
-        this.layer = mw.UILayerMiddle;
-        this.initData();
+        this.layer = mw.UILayerDialog;
         this.bindButtons();
     }
-    /**初始化数据 */
-    initData() {
-    }
-    /**按钮绑定 */
     bindButtons() {
-        this.mYesBtn.onClose.add(this.onClickYesBtn.bind(this));
-        this.mNoBtn.onClicked.add(() => {
-            if (!this.visible)
-                return;
-            Utils.closeUITween(this.rootCanvas, null, () => {
-                this.hide();
-            });
-        });
+        this.mYesBtn.onClose.add(this.onClickYesButton.bind(this));
+        this.mNoBtn.onClicked.add(this.onClickNoButton.bind(this));
     }
-    onClickYesBtn(isSuccess) {
+    onClickYesButton(isSuccess) {
         if (!isSuccess) {
-            Notice.showDownNotice("获取失败，请重试");
+            Notice.showDownNotice(`${this.mYesBtn.text}失败，请重试`);
             return;
         }
-        this.hideAdTips();
-        this.onWatchAdsAction.call(this.id, this.adType);
+        this.hideAdPanel();
+        if (this.callback)
+            this.callback();
     }
-    /**显示此界面 */
-    showAdTips(id, adType) {
+    onClickNoButton() {
+        this.hideAdPanel();
+    }
+    showRewardAd(callback, contentText, noText = "取消", yesText = "领取", isAuto = true) {
+        this.callback = callback;
+        this.mContentTxt.text = contentText;
+        this.mNoBtn.text = noText;
+        this.mYesBtn.text = yesText;
+        this.showAdPanel();
+    }
+    showAdPanel() {
         if (this.visible)
             return;
-        this.id = id;
-        this.adType = adType;
         this.show();
     }
-    /**隐藏此界面 */
-    hideAdTips() {
+    hideAdPanel() {
         if (!this.visible)
             return;
         Utils.closeUITween(this.rootCanvas, null, () => {
@@ -3425,21 +3215,6 @@ class AdTipsPanel extends AdsTipsPanel_Generate$1 {
         });
     }
     onShow(...params) {
-        switch (this.adType) {
-            case AdType.WeaponSet:
-                this.mContentTxt.text = "免费使用这个武器套装";
-                break;
-            case AdType.AddCoin:
-                this.mContentTxt.text = "免费领取1000金币";
-                break;
-            case AdType.AddCoinAndExp:
-                this.mContentTxt.text = "免费领取500金币和500经验值";
-                break;
-            case AdType.WeaponSet1:
-                this.mContentTxt.text = "免费使用这个武器套装";
-                break;
-        }
-        Console.error("[AdTips-onShow]");
         Utils.openUITween(this.rootCanvas, null, null);
     }
 }
@@ -3449,401 +3224,175 @@ var foreign40 = /*#__PURE__*/Object.freeze({
     default: AdTipsPanel
 });
 
-/**
- * MapEx(可序列化)
- */
-var MapEx;
-(function (MapEx) {
-    /**
-     * 是否为空
-     * @param map
-     * @returns 是/否
-     */
-    function isNull(map) {
-        return !map || map == null || map == undefined;
-    }
-    MapEx.isNull = isNull;
-    /**
-     * 获取对象
-     * @param map
-     * @param key
-     * @returns
-     */
-    function get(map, key) {
-        if (map[key]) {
-            return map[key];
+class ModifiedCameraSystem {
+    static get cameraLocationMode() {
+        if (!SystemUtil.isClient()) {
+            return;
         }
-        let has = false;
-        let keys = Object.keys(map);
-        for (let i = 0; i < keys.length; ++i) {
-            if (keys[i] == key) {
-                has = true;
-                break;
+        return Camera.currentCamera.positionMode;
+    }
+    static set cameraLocationMode(newCameraLocationMode) {
+        if (!SystemUtil.isClient()) {
+            return;
+        }
+        let tempTransform = Camera.currentCamera.springArm.localTransform;
+        Camera.currentCamera.positionMode = newCameraLocationMode;
+        if (newCameraLocationMode == CameraPositionMode.PositionFollow) {
+            Camera.currentCamera.parent = Player.localPlayer.character;
+            Camera.currentCamera.springArm.localTransform = tempTransform;
+        }
+    }
+    static setCameraFollowTarget(target) {
+        if (!SystemUtil.isClient())
+            return;
+        Camera.currentCamera.parent = target;
+        Camera.currentCamera.springArm.localTransform = Transform.identity;
+    }
+    static cancelCameraFollowTarget() {
+        if (!SystemUtil.isClient())
+            return;
+        Camera.currentCamera.parent = Player.localPlayer.character;
+        Camera.currentCamera.springArm.localTransform = Transform.identity;
+    }
+    static setOverrideCameraRotation(newOverrideRotation) {
+        if (!SystemUtil.isClient())
+            return;
+        ModifiedCameraSystem.followEnable = true;
+        ModifiedCameraSystem.followRotationValue = newOverrideRotation;
+        Player.setControllerRotation(ModifiedCameraSystem.followRotationValue);
+        if (!ModifiedCameraSystem.isBind) {
+            TimeUtil.onEnterFrame.add(() => {
+                if (ModifiedCameraSystem.followEnable) {
+                    Player.setControllerRotation(ModifiedCameraSystem.followRotationValue);
+                }
+            }, this);
+            ModifiedCameraSystem.isBind = true;
+        }
+    }
+    static resetOverrideCameraRotation() {
+        if (!SystemUtil.isClient())
+            return;
+        ModifiedCameraSystem.followEnable = false;
+    }
+    static getCurrentSettings() {
+        if (!SystemUtil.isClient())
+            return;
+        cameraSystemConfig.cameraRelativeTransform = Camera.currentCamera.localTransform;
+        cameraSystemConfig.cameraWorldTransform = Camera.currentCamera.worldTransform;
+        cameraSystemConfig.targetArmLength = Camera.currentCamera.springArm.length;
+        cameraSystemConfig.enableCameraLocationLag = Camera.currentCamera.positionLagEnabled;
+        cameraSystemConfig.cameraLocationLagSpeed = Camera.currentCamera.positionLagSpeed;
+        cameraSystemConfig.enableCameraRotationLag = Camera.currentCamera.rotationLagEnabled;
+        cameraSystemConfig.cameraRotationLagSpeed = Camera.currentCamera.rotationLagSpeed;
+        cameraSystemConfig.cameraFOV = Camera.currentCamera.fov;
+        cameraSystemConfig.cameraLocationMode = Camera.currentCamera.positionMode;
+        cameraSystemConfig.cameraRotationMode = Camera.currentCamera.rotationMode;
+        cameraSystemConfig.enableCameraCollision = Camera.currentCamera.springArm.collisionEnabled;
+        cameraSystemConfig.cameraUpLimitAngle = Camera.currentCamera.upAngleLimit;
+        cameraSystemConfig.cameraDownLimitAngle = Camera.currentCamera.downAngleLimit;
+        return cameraSystemConfig;
+    }
+    static applySettings(CameraSetting) {
+        if (!SystemUtil.isClient())
+            return;
+        Camera.currentCamera.localTransform = CameraSetting.cameraRelativeTransform;
+        Camera.currentCamera.springArm.length = CameraSetting.targetArmLength;
+        Camera.currentCamera.positionLagEnabled = CameraSetting.enableCameraLocationLag;
+        Camera.currentCamera.positionLagSpeed = CameraSetting.cameraLocationLagSpeed;
+        Camera.currentCamera.rotationLagEnabled = CameraSetting.enableCameraRotationLag;
+        Camera.currentCamera.rotationLagSpeed = CameraSetting.cameraRotationLagSpeed;
+        Camera.currentCamera.fov = CameraSetting.cameraFOV;
+        ModifiedCameraSystem.cameraLocationMode = CameraSetting.cameraLocationMode;
+        Camera.currentCamera.rotationMode = CameraSetting.cameraRotationMode;
+        Camera.currentCamera.springArm.collisionEnabled = CameraSetting.enableCameraCollision;
+        Camera.currentCamera.upAngleLimit = CameraSetting.cameraUpLimitAngle;
+        Camera.currentCamera.downAngleLimit = CameraSetting.cameraDownLimitAngle;
+    }
+    static cameraFocusing(targetArmLength, targetOffset, timeInterval = 20) {
+        if (!SystemUtil.isClient())
+            return;
+        let timer = TimeUtil.onEnterFrame.add(() => {
+            let interpolationValue = Camera.currentCamera.springArm.length + (targetArmLength - Camera.currentCamera.springArm.length) / timeInterval;
+            Camera.currentCamera.springArm.length = interpolationValue;
+            if (Math.abs(Camera.currentCamera.springArm.length - targetArmLength) <= 0.5) {
+                TimeUtil.onEnterFrame.remove(timer);
             }
-        }
-        if (has) {
-            return map[key];
-        }
-        return null;
-    }
-    MapEx.get = get;
-    /**
-     * 设置对象
-     * @param map
-     * @param key
-     * @param val
-     */
-    function set(map, key, val) {
-        map[key] = val;
-    }
-    MapEx.set = set;
-    /**
-     * 删除对象
-     * @param map
-     * @param key
-     * @returns 成功/失败
-     */
-    function del(map, key) {
-        if (map[key]) {
-            delete map[key];
-            return true;
-        }
-        let has = false;
-        let keys = Object.keys(map);
-        for (let i = 0; i < keys.length; ++i) {
-            if (keys[i] == key) {
-                has = true;
-                break;
-            }
-        }
-        if (has) {
-            delete map[key];
-            return true;
-        }
-        return false;
-    }
-    MapEx.del = del;
-    /**
-     * 是否有指定对象
-     * @param map
-     * @param key
-     * @returns
-     */
-    function has(map, key) {
-        if (map[key]) {
-            return true;
-        }
-        let has = false;
-        let keys = Object.keys(map);
-        for (let i = 0; i < keys.length; ++i) {
-            if (keys[i] == key) {
-                has = true;
-                break;
-            }
-        }
-        if (has) {
-            return true;
-        }
-        return false;
-    }
-    MapEx.has = has;
-    /**
-     * 获取count数量
-     * @param map
-     * @param key
-     * @returns
-     */
-    function count(map) {
-        let res = 0;
-        forEach(map, e => {
-            ++res;
         });
-        return res;
     }
-    MapEx.count = count;
-    /**
-     * 遍历map
-     * @param map
-     * @param callback
-     */
-    function forEach(map, callback) {
-        for (let key in map) {
-            if (map[key]) {
-                callback(key, map[key]);
-            }
-        }
-    }
-    MapEx.forEach = forEach;
-    /**
-     * 拷贝，Val还是引用出来的，只是Map换了
-     * @param map
-     * @returns
-     */
-    function copy(map) {
-        let res = {};
-        for (let key in map) {
-            res[key] = map[key];
-        }
-        return res;
-    }
-    MapEx.copy = copy;
-})(MapEx || (MapEx = {}));
-
-var foreign83 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    get MapEx () { return MapEx; }
-});
-
-var ObjectPoolServices;
-(function (ObjectPoolServices) {
-    class ObjectPool {
-        constructor(spawn, initNum = 3) {
-            this.spawnFun = spawn;
-            this.pool = new Array(initNum);
-            this.oPool = new Array();
-            for (let index = 0; index < initNum; index++) {
-                this.pool[index] = this.spawnFun();
-            }
-        }
-        spawn() {
-            if (this.pool.length > 0) {
-                let a = this.pool.pop();
-                this.oPool.push(a);
-                return a;
-            }
-            let a = this.spawnFun();
-            this.oPool.push(a);
-            return a;
-        }
-        return(instance) {
-            if (instance == null) {
-                return;
-            }
-            this.pool.push(instance);
-        }
-        getSize() {
-            return this.pool.length;
-        }
-        clear() {
-            this.pool.length = 0;
-        }
-        oPoolClear() {
-            this.oPool.length = 0;
-        }
-        getAll() {
-            return this.pool;
-        }
-        getOPool() {
-            return this.oPool;
-        }
-    }
-    ObjectPoolServices.ObjectPool = ObjectPool;
-    const poolMap = new Map();
-    function getPool(cls, autoCreat = true) {
-        let pool = poolMap.get(cls.name);
-        if (pool === undefined && autoCreat) {
-            initPool(cls, () => new cls());
-        }
-        return poolMap.get(cls.name);
-    }
-    ObjectPoolServices.getPool = getPool;
-    function initPool(cls, spawn, initNum = 3) {
-        let pool = poolMap.get(cls.name);
-        if (pool === undefined) {
-            pool = new ObjectPool(spawn, initNum);
-            poolMap.set(cls.name, pool);
-        }
-        return pool;
-    }
-    ObjectPoolServices.initPool = initPool;
-    function destroyPool(cls) {
-        let pool = poolMap.get(cls.name);
-        if (pool !== undefined) {
-            pool.clear();
-        }
-        poolMap.delete(cls.name);
-    }
-    ObjectPoolServices.destroyPool = destroyPool;
-    function clear() {
-        for (const [key, pool] of poolMap) {
-            pool.clear();
-        }
-        poolMap.clear();
-    }
-    ObjectPoolServices.clear = clear;
-})(ObjectPoolServices || (ObjectPoolServices = {}));
-var SourceType;
-(function (SourceType) {
-    SourceType[SourceType["Error"] = 0] = "Error";
-    SourceType[SourceType["Asset"] = 1] = "Asset";
-    SourceType[SourceType["GameObject"] = 2] = "GameObject";
-    SourceType[SourceType["Prefab"] = 3] = "Prefab"; //预制体
-})(SourceType || (SourceType = {}));
-class ObjPool {
-    constructor() {
-        this.POOL_RES_GUID = 'poolResGuid'; //原始对象的guid，还对象的时候使用
-        this.sourceTypeMap = new Map();
-        this.sceneSource = new Map();
-        this.subPoolMap = new Map();
-    }
-    destroy() {
-        ObjPool.instance = null;
-    }
-    /**
-     * 生成一个对象
-     * @param guid 场景对象的guid | 资源的guid | prefab的guid
-     * @returns 对象
-     */
-    spawn(guid) {
-        if (this.subPoolMap.has(guid) && this.subPoolMap.get(guid).length > 0) {
-            let obj = this.subPoolMap.get(guid).pop();
-            obj.setVisibility(mw.PropertyStatus.On);
-            return obj;
-        }
-        if (!this.sourceTypeMap.has(guid)) {
-            this.sourceTypeMap.set(guid, this.getSourceType(guid));
-        }
-        let obj = null;
-        switch (this.sourceTypeMap.get(guid)) {
-            case SourceType.Asset:
-                obj = SpawnManager.wornSpawn(guid);
-                break;
-            case SourceType.GameObject:
-                obj = this.sceneSource.get(guid).clone();
-                break;
-            case SourceType.Prefab:
-                obj = SpawnManager.wornSpawn(guid);
-                break;
-        }
-        if (obj == null) {
-            this.sourceTypeMap.set(guid, SourceType.Error);
-        }
-        else {
-            obj.setVisibility(mw.PropertyStatus.On);
-            obj.worldTransform.position = mw.Vector.zero;
-            obj[this.POOL_RES_GUID] = guid;
-        }
-        return obj;
-    }
-    //根据资源的guid获取资源的类型
-    getSourceType(guid) {
-        if (guid.length > 18) {
-            let source = GameObject.findGameObjectById(guid);
-            if (source != null) { //场景里的
-                source.parent = null;
-                source.setVisibility(mw.PropertyStatus.Off);
-                this.sceneSource.set(guid, source);
-                return SourceType.GameObject;
-            }
-            else { //预制体
-                return SourceType.Prefab;
-            }
-        }
-        else { //库里的
-            return SourceType.Asset;
-        }
-    }
-    /**
-     * 归还一个对象
-     * @param obj 对象
-     */
-    despawn(obj) {
-        let guid = obj[this.POOL_RES_GUID];
-        if (guid == null)
+    static startCameraShake(shakeData) {
+        if (!SystemUtil.isClient())
             return;
-        if (!this.subPoolMap.has(guid))
-            this.subPoolMap.set(guid, []);
-        if (this.subPoolMap.get(guid).includes(obj))
-            return;
-        this.subPoolMap.get(guid).push(obj);
-        // obj.parent = null;
+        let info = {
+            rotationYAmplitude: shakeData.rotYawOscillation.amplitude,
+            rotationYFrequency: shakeData.rotYawOscillation.frequency,
+            rotationZAmplitude: shakeData.rotRollOscillation.amplitude,
+            rotationZFrequency: shakeData.rotRollOscillation.frequency,
+            rotationXAmplitude: shakeData.rotPitchOscillation.amplitude,
+            rotationXFrequency: shakeData.rotPitchOscillation.frequency,
+            positionXAmplitude: shakeData.locXOscillation.amplitude,
+            positionXFrequency: shakeData.locXOscillation.frequency,
+            positionYAmplitude: shakeData.locYOscillation.amplitude,
+            positionYFrequency: shakeData.locYOscillation.frequency,
+            positionZAmplitude: shakeData.locZOscillation.amplitude,
+            positionZFrequency: shakeData.locZOscillation.frequency,
+        };
+        Camera.shake(info);
     }
-    /**
-     * 清除对象池中所以guid对应的对象
-     * @param guid 清除对象的guid
-     */
-    clear(guid) {
-        if (!this.subPoolMap.has(guid) && this.subPoolMap.get(guid).length == 0) {
+    static stopCameraShake() {
+        if (!SystemUtil.isClient())
             return;
-        }
-        let arr = this.subPoolMap.get(guid);
-        for (let i = 0; i < arr.length; i++) {
-            arr[i].destroy();
-        }
-        arr.length = 0;
+        Camera.stopShake();
+    }
+    static getDefaultCameraShakeData() {
+        const defaultOscillator = {
+            amplitude: 0,
+            frequency: 0,
+            waveform: CameraModifid.EOscillatorWaveform.SineWave,
+        };
+        const defaultCameraShakeData = {
+            rotPitchOscillation: { ...defaultOscillator },
+            rotYawOscillation: { ...defaultOscillator },
+            rotRollOscillation: { ...defaultOscillator },
+            locXOscillation: { ...defaultOscillator },
+            locYOscillation: { ...defaultOscillator },
+            locZOscillation: { ...defaultOscillator },
+            fovOscillation: { ...defaultOscillator },
+        };
+        return defaultCameraShakeData;
     }
 }
-
-var foreign84 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    ObjPool: ObjPool,
-    get ObjectPoolServices () { return ObjectPoolServices; }
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.05.19-23.59.55
- */
-let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
-    get mCanvas() {
-        if (!this.mCanvas_Internal && this.uiWidgetBase) {
-            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/ScrollBox/mCanvas');
-        }
-        return this.mCanvas_Internal;
-    }
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/TextBlock"));
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
+ModifiedCameraSystem.isBind = false;
+ModifiedCameraSystem.followTargetEnable = true;
+ModifiedCameraSystem.followTargetInterpSpeed = 15;
+var CameraModifid;
+(function (CameraModifid) {
+    (function (EOscillatorWaveform) {
+        /** 正弦波 */
+        EOscillatorWaveform[EOscillatorWaveform["SineWave"] = 0] = "SineWave";
+        /** Perlin噪声 */
+        EOscillatorWaveform[EOscillatorWaveform["PerlinNoise"] = 1] = "PerlinNoise";
+    })(CameraModifid.EOscillatorWaveform || (CameraModifid.EOscillatorWaveform = {}));
+})(CameraModifid || (CameraModifid = {}));
+const cameraSystemConfig = {
+    cameraRelativeTransform: Transform.identity,
+    cameraWorldTransform: Transform.identity,
+    targetArmLength: 400,
+    enableCameraLocationLag: false,
+    cameraLocationLagSpeed: 10,
+    enableCameraRotationLag: false,
+    cameraRotationLagSpeed: 10,
+    cameraFOV: 90,
+    cameraLocationMode: CameraPositionMode.PositionFollow,
+    cameraRotationMode: CameraRotationMode.RotationControl,
+    enableCameraCollision: true,
+    cameraUpLimitAngle: 40,
+    cameraDownLimitAngle: -40,
 };
-OnlineRewardPanel_Generate = __decorate([
-    UIBind('UI/module/OnlineReward/OnlineRewardPanel.ui')
-], OnlineRewardPanel_Generate);
-var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: OnlineRewardPanel_Generate$1
+    get CameraModifid () { return CameraModifid; },
+    ModifiedCameraSystem: ModifiedCameraSystem
 });
 
 var PrefabEvent;
@@ -5151,6 +4700,937 @@ var foreign74 = /*#__PURE__*/Object.freeze({
     ColdWeapon: ColdWeapon
 });
 
+class InputManagers {
+    /**单例 */
+    static get getInstance() {
+        if (this._instance == null && !this._isDestroy) {
+            this._instance = new InputManagers("Singleton-WFZ");
+        }
+        return this._instance;
+    }
+    constructor(name) {
+        /**按压 */
+        this.onPressTouch = new mw.Action1();
+        /**抬起 */
+        this.onReleaseTouch = new mw.Action1();
+        this.name = name;
+        this.initAndBind();
+    }
+    /**初始化和绑定 */
+    initAndBind() {
+        if (mw.SystemUtil.isClient()) {
+            if (this.touch == null) {
+                this.initTouch();
+            }
+            this.touch.onTouchBegin.add(this.beginMulFun);
+            this.touch.onTouchEnd.add(this.beginMulFun);
+            this.touch.onTouch.add(this.beginMulFun);
+            this.keyDownActionMap = new Map();
+        }
+    }
+    /**
+     * 鼠标点击触发，返回点击的所有结果
+     */
+    get onTouch() {
+        if (this._onTouch == null)
+            this._onTouch = new Action1();
+        return this._onTouch;
+    }
+    /**初始化触摸数据 */
+    initTouch() {
+        if (this.touch != null)
+            return;
+        this.touch = new mw.TouchInput();
+        this.beginMulFun = this.touchControl.bind(this);
+        Player.asyncGetLocalPlayer().then(player => {
+            // this.touch.setPlayerController();
+            this.touch.onTouchBegin.add(this.touchHandler.bind(this));
+        });
+    }
+    /**屏幕触摸控制 */
+    touchControl(index, loc, touchType) {
+        let touchArr = this.touch.getTouchVectorArray();
+        if (touchType == mw.TouchInputType.TouchEnd) {
+            this.onReleaseTouch.call(new TouchData(touchType, loc.x, loc.y));
+        }
+        else {
+            for (let i = 0; i < touchArr.length; i++) {
+                if (touchArr[i].z > 0) {
+                    this.onPressTouch.call(new TouchData(touchType, touchArr[i].x, touchArr[i].y));
+                }
+            }
+        }
+    }
+    /**获取点击屏幕位置的物体 */
+    touchHandler(index, location, state) {
+        if (this.onTouch.count == 0)
+            return;
+        location = this.touch.getTouchVectorArray()[0];
+        let list = ScreenUtil.getGameObjectByScreenPosition(location.x, location.y, 50000, true, false);
+        let arr = [];
+        for (let i = 0; list != null && i < list.length; i++) {
+            if (arr.includes(list[i]))
+                continue;
+            arr.push(list[i]);
+        }
+        if (list.length > 0) {
+            this.onTouch.call(arr);
+        }
+    }
+    /**
+     * 按下键盘事件(增加了重复监听的判断，还可以移除监听方法)
+     * @param key 按键类型
+     * @returns 监听的Action方法
+     */
+    onKeyDown(key) {
+        if (!this.keyDownActionMap.has(key)) {
+            this.keyDownActionMap.set(key, new Action1());
+            InputUtil.onKeyDown(key, () => {
+                this.keyDownActionMap.get(key).call(key);
+            });
+        }
+        let action = this.keyDownActionMap.get(key);
+        if (action.count > 0) {
+            Console.error("重复的键盘事件监听 key=" + key);
+            return null;
+        }
+        return action;
+    }
+    /**Test */
+    log(list) {
+        Console.error("------------Mouse Click……");
+        for (let i = 0; list != null && i < list.length; i++) {
+            Console.error("List: " + list[i].gameObject.name);
+        }
+    }
+    /**
+     * 获取屏幕手指点击屏幕的坐标
+     * @param index 第几个点击
+     * @returns
+     */
+    getTouchPos(index) {
+        let pos = this.touch.getTouchVectorArray()[index];
+        return new mw.Vector2(pos.x, pos.y);
+    }
+    /**回收 */
+    clearTouch() {
+        this.onReleaseTouch.clear();
+        this.onPressTouch.clear();
+    }
+    /**回收 */
+    static destroy() {
+        this._isDestroy = true;
+        InputManagers._instance = null;
+    }
+}
+InputManagers._instance = null;
+class TouchData {
+    constructor(event, x, y) {
+        this.event = event;
+        this.x = x;
+        this.y = y;
+    }
+}
+
+var foreign82 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    InputManagers: InputManagers,
+    TouchData: TouchData
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/ShopModule/NPCHead.ui
+ * TIME: 2024.05.19-23.59.55
+ */
+let NPCHead_Generate = class NPCHead_Generate extends UIScript {
+    get mFreeCanvas() {
+        if (!this.mFreeCanvas_Internal && this.uiWidgetBase) {
+            this.mFreeCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mFreeCanvas');
+        }
+        return this.mFreeCanvas_Internal;
+    }
+    get mFreeText() {
+        if (!this.mFreeText_Internal && this.uiWidgetBase) {
+            this.mFreeText_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mFreeCanvas/mFreeText');
+        }
+        return this.mFreeText_Internal;
+    }
+    get mCoinCanvas() {
+        if (!this.mCoinCanvas_Internal && this.uiWidgetBase) {
+            this.mCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas');
+        }
+        return this.mCoinCanvas_Internal;
+    }
+    get mCoinImage() {
+        if (!this.mCoinImage_Internal && this.uiWidgetBase) {
+            this.mCoinImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas/mCoinImage');
+        }
+        return this.mCoinImage_Internal;
+    }
+    get mCoinImage_1() {
+        if (!this.mCoinImage_1_Internal && this.uiWidgetBase) {
+            this.mCoinImage_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas/mCoinImage_1');
+        }
+        return this.mCoinImage_1_Internal;
+    }
+    get mCoinText() {
+        if (!this.mCoinText_Internal && this.uiWidgetBase) {
+            this.mCoinText_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas/mCoinText');
+        }
+        return this.mCoinText_Internal;
+    }
+    get mAdsCanvas() {
+        if (!this.mAdsCanvas_Internal && this.uiWidgetBase) {
+            this.mAdsCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mAdsCanvas');
+        }
+        return this.mAdsCanvas_Internal;
+    }
+    get mAdsText() {
+        if (!this.mAdsText_Internal && this.uiWidgetBase) {
+            this.mAdsText_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mAdsCanvas/mAdsText');
+        }
+        return this.mAdsText_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mFreeText);
+        this.initLanguage(this.mCoinText);
+        this.initLanguage(this.mAdsText);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+NPCHead_Generate = __decorate([
+    UIBind('UI/module/ShopModule/NPCHead.ui')
+], NPCHead_Generate);
+var NPCHead_Generate$1 = NPCHead_Generate;
+
+var foreign98 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: NPCHead_Generate$1
+});
+
+class FlyText {
+    constructor() {
+        this._uiWidget = null;
+        this._rootCanvas = null;
+        this._textPools = [];
+        /**默认文本框大小（由于开启了自适应，所以文本框有多大，文本就有多大） */
+        this._defaultTextSize = new Vector2(200, 100);
+        /**默认文本颜色 */
+        this._defaultFontColor = LinearColor.white;
+        /**默认文本描边颜色 */
+        this._defaultOutlineColor = new mw.LinearColor(1, 0, 1, 1);
+    }
+    static get instance() {
+        if (FlyText._instance == null) {
+            FlyText._instance = new FlyText();
+        }
+        return FlyText._instance;
+    }
+    /**
+     * 展示飘字
+     * @param content 内容
+     * @param worldLocation 世界坐标
+     * @param fontColor 颜色（可选）
+     */
+    showFlyText(content, worldLocation, fontColor, outlineColor) {
+        // 将世界坐标转换为屏幕坐标
+        let vec2 = mw.InputUtil.projectWorldPositionToWidgetPosition(worldLocation, true).screenPosition;
+        // 对象池处理
+        let textBlock = null;
+        if (this._textPools.length == 0) {
+            textBlock = this.createText();
+        }
+        else {
+            textBlock = this._textPools.pop();
+        }
+        // 给一点初始偏移，方便做动画
+        vec2.x -= 120;
+        vec2.y -= 160;
+        let toX = this.getRandomIntInclusive(100, 300);
+        Math.random() < 0.5 ? toX = -toX : toX = toX;
+        let toY = this.getRandomIntInclusive(-300, 100);
+        // 用Tween，并结合PI来做曲线动画
+        let animator = new mw.Tween({ a: 0 }).to({ a: Math.PI }, 1000).onUpdate((object) => {
+            textBlock.position = vec2.clone().add(new mw.Vector2(toX * object.a / Math.PI, toY * Math.sin(object.a)));
+            textBlock.renderScale = new mw.Vector2(Math.sin(object.a));
+        }).onStart(() => {
+            textBlock.fontColor = fontColor ? fontColor : this._defaultFontColor;
+            textBlock.outlineColor = outlineColor ? outlineColor : this._defaultOutlineColor;
+            textBlock.text = content;
+            textBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }).onComplete(() => {
+            textBlock.visibility = mw.SlateVisibility.Hidden;
+            this._textPools.push(textBlock);
+        });
+        animator.start();
+    }
+    /**创建一个文本框 */
+    createText() {
+        // 首次创建，如果没有UI对象，就创建一个
+        if (!this._uiWidget) {
+            // 创建一个UI对象
+            this._uiWidget = mw.UserWidget.newObject();
+            this._uiWidget.addToViewport(1);
+            // 首次创建，如果没有rootCanvas，就创建一个
+            if (!this._rootCanvas) {
+                this._rootCanvas = mw.Canvas.newObject();
+                this._rootCanvas.size = new mw.Vector2(1920, 1080);
+                this._rootCanvas.position = mw.Vector2.zero;
+                this._uiWidget.rootContent = this._rootCanvas;
+            }
+        }
+        // 创建一个文本框，并添加到画布上
+        let textBlock = mw.TextBlock.newObject(this._rootCanvas);
+        textBlock.size = this._defaultTextSize;
+        // 开启文本自适应
+        textBlock.fontSize = 60;
+        textBlock.fontLetterSpace = 1;
+        textBlock.textHorizontalLayout = mw.UITextHorizontalLayout.NoClipping;
+        textBlock.autoAdjust = false;
+        textBlock.outlineSize = 8;
+        textBlock.glyph = mw.UIFontGlyph.Light;
+        return textBlock;
+    }
+    /**得到一个两数之间的随机整数，包括两个数在内 */
+    getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+    }
+}
+
+var foreign5 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    FlyText: FlyText
+});
+
+class ExplosiveCoins {
+    constructor() {
+        this.mapId = 0;
+        this.maxMapId = 10;
+        this.particles = [];
+        this.recycleParticles = new Map();
+        this.player = null;
+    }
+    static get instance() {
+        if (ExplosiveCoins._instance == null) {
+            ExplosiveCoins._instance = new ExplosiveCoins();
+        }
+        return ExplosiveCoins._instance;
+    }
+    /**爆金币 */
+    explosiveCoins(fromVec, coinCount = 1, coinNum = 10) {
+        // coinCount = Math.round(coinCount / coinNum);
+        if (this.mapId >= this.maxMapId)
+            this.mapId = 0;
+        let mapId = this.mapId++;
+        this.play3DSound(fromVec);
+        for (let i = 0; i < coinNum; ++i) {
+            this.startExplosiveCoins(fromVec, mapId);
+        }
+        TimeUtil.delaySecond(2).then(() => {
+            if (this.particles[mapId] == null || this.particles[mapId] == undefined)
+                return;
+            this.particles[mapId].forEach((particle, effectId) => {
+                let fromVec = particle.worldTransform.position;
+                let toVec = mw.Vector.zero;
+                if (this.player == null)
+                    this.player = Player.localPlayer;
+                toVec = this.player.character.worldTransform.position;
+                new mw.Tween({ x: fromVec.x, y: fromVec.y, z: fromVec.z })
+                    .to({ x: toVec.x, y: toVec.y, z: toVec.z }, 0.1 * 1000)
+                    .onUpdate((pos) => {
+                    particle.worldTransform.position = (new mw.Vector(pos.x, pos.y, pos.z));
+                })
+                    .start()
+                    .onComplete(() => {
+                    particle.stop();
+                    this.recycleParticles.set(effectId, particle);
+                    this.particles[mapId].delete(effectId);
+                });
+            });
+            TimeUtil.delaySecond(0.1).then(() => {
+                let vec = this.player.character.worldTransform.position;
+                FlyText.instance.showFlyText("+$ " + coinCount, new mw.Vector(vec.x, vec.y, vec.z + 30), mw.LinearColor.green, mw.LinearColor.yellow);
+            });
+            this.play3DSound(this.player.character.worldTransform.position);
+        });
+    }
+    async startExplosiveCoins(fromVec, mapId) {
+        let effectId = 0;
+        let particle = null;
+        if (this.recycleParticles.size > 0) {
+            effectId = this.recycleParticles.keys().next().value;
+            particle = this.recycleParticles.get(effectId);
+            this.recycleParticles.delete(effectId);
+        }
+        else {
+            effectId = GeneralManager.rpcPlayEffectAtLocation(GlobalData.explosiveCoinGuid, fromVec, 0);
+            particle = await EffectService.getEffectById(effectId);
+        }
+        particle.loop = true;
+        particle.play();
+        Console.error("[effectId] = " + effectId);
+        Console.error("[particle.guid] = " + particle.gameObjectId);
+        if (!particle || !effectId)
+            return;
+        let toVec = Utils.circularRandomCoordinates(fromVec, 400, 20);
+        let moddleVec = new mw.Vector((fromVec.x + toVec.x) / 2, (fromVec.y + toVec.y) / 2, fromVec.z + Utils.getRandomInteger(150, 250));
+        let points = Utils.getCurvePointsInNum([fromVec, moddleVec, toVec], 10);
+        for (let j = 0; j < points.length - 1; ++j) {
+            await new Promise((resolve) => {
+                new mw.Tween({ x: points[j].x, y: points[j].y, z: points[j].z })
+                    .to({ x: points[j + 1].x, y: points[j + 1].y, z: points[j + 1].z }, 0.5 * 1000 / 10)
+                    .onUpdate((pos) => {
+                    particle.worldTransform.position = (new mw.Vector(pos.x, pos.y, pos.z));
+                })
+                    .start();
+                setTimeout(() => {
+                    return resolve();
+                }, 0.5 * 1000 / 10);
+            });
+        }
+        if (this.particles[mapId] == null)
+            this.particles[mapId] = new Map();
+        this.particles[mapId].set(effectId, particle);
+    }
+    play3DSound(fromVec) {
+        let soundId = SoundService.play3DSound("148629", fromVec);
+        TimeUtil.delaySecond(0.5).then(() => {
+            SoundService.stop3DSound(soundId);
+        });
+    }
+}
+
+var foreign4 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    ExplosiveCoins: ExplosiveCoins
+});
+
+class PlayerModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.hudModuleC = null;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        InputUtil.onKeyDown(mw.Keys.NumPadSeven, () => {
+            this.adsUpLv();
+        });
+        // InputUtil.onKeyDown(mw.Keys.NumPadEight, () => {
+        //     this.saveHeight(1);
+        // });
+        // InputUtil.onKeyDown(mw.Keys.NumPadNine, () => {
+        //     this.saveKill(1);
+        // });
+    }
+    onEnterScene(sceneType) {
+        this.hudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
+    }
+    net_onPlayerAtkSelf(damage, hitPoint) {
+        let fontColor = Utils.randomColor();
+        FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
+    }
+    net_onSelfAtkPlayer(damage, hitPoint, isDie, maxHp) {
+        Console.error("net_onSelfAtkPlayer");
+        let fontColor = Utils.randomColor();
+        FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
+        if (isDie) {
+            ExplosiveCoins.instance.explosiveCoins(new mw.Vector(hitPoint.x, hitPoint.y, hitPoint.z / 2), maxHp / 10, Utils.getRandomInteger(5, 10));
+            Notice.showDownNotice("增加" + maxHp / 10 + "金币");
+            Notice.showDownNotice("增加" + maxHp / 10 + "经验");
+        }
+    }
+    net_updateLvExpAndCoin(isAddLv, coin = 0) {
+        let playerLv = this.data.playerLv;
+        this.hudModuleC.updateLvExpCoin(playerLv, this.data.exp, this.data.coin, isAddLv);
+        if (coin > 0)
+            Notice.showDownNotice(`获得${coin}金币`);
+        if (isAddLv)
+            Notice.showDownNotice("等级提升至 " + Utils.getLvText(playerLv) + " Lv." + playerLv);
+    }
+    net_flyText(damage, hitPoint) {
+        let fontColor = Utils.randomColor();
+        FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
+    }
+    net_updateHp(curHp) {
+        this.hudModuleC.updateHp(curHp);
+    }
+    getCoin() {
+        return this.data.coin;
+    }
+    // public saveLevel(value: number): void {
+    //     this.server.net_saveLv(value);
+    // }
+    // public saveHeight(value: number): void {
+    //     this.server.net_saveHeight(value);
+    // }
+    // public saveKill(value: number): void {
+    //     this.server.net_saveKill(value);
+    // }
+    saveCoin(value) {
+        this.hudModuleC.updateCoin(this.data.coin + value);
+        this.server.net_saveCoin(value);
+    }
+    /**
+     * 更新金币
+     * @param value
+     */
+    net_updateCoin(value) {
+        this.hudModuleC.updateCoin(this.data.coin + value);
+        Notice.showDownNotice("发现宝箱，获得" + value + "金币");
+    }
+    saveCoinAndExp(coin, exp) {
+        this.server.net_saveCoinAndExp(coin, exp);
+    }
+    adsUpLv() {
+        let exp = this.getLvUpExp();
+        this.saveCoinAndExp(0, exp);
+    }
+    getLvUpExp() {
+        return (this.data.playerLv + 1) * 100;
+    }
+    isInvincible(isInvincible) {
+        this.server.net_isInvincible(isInvincible);
+    }
+    net_killTip(killerUserId, killerName, killedUserId, killedName) {
+        this.hudModuleC.killTip(killerUserId, killerName, killedUserId, killedName);
+    }
+}
+
+var foreign52 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PlayerModuleC
+});
+
+/**
+ * MapEx(可序列化)
+ */
+var MapEx;
+(function (MapEx) {
+    /**
+     * 是否为空
+     * @param map
+     * @returns 是/否
+     */
+    function isNull(map) {
+        return !map || map == null || map == undefined;
+    }
+    MapEx.isNull = isNull;
+    /**
+     * 获取对象
+     * @param map
+     * @param key
+     * @returns
+     */
+    function get(map, key) {
+        if (map[key]) {
+            return map[key];
+        }
+        let has = false;
+        let keys = Object.keys(map);
+        for (let i = 0; i < keys.length; ++i) {
+            if (keys[i] == key) {
+                has = true;
+                break;
+            }
+        }
+        if (has) {
+            return map[key];
+        }
+        return null;
+    }
+    MapEx.get = get;
+    /**
+     * 设置对象
+     * @param map
+     * @param key
+     * @param val
+     */
+    function set(map, key, val) {
+        map[key] = val;
+    }
+    MapEx.set = set;
+    /**
+     * 删除对象
+     * @param map
+     * @param key
+     * @returns 成功/失败
+     */
+    function del(map, key) {
+        if (map[key]) {
+            delete map[key];
+            return true;
+        }
+        let has = false;
+        let keys = Object.keys(map);
+        for (let i = 0; i < keys.length; ++i) {
+            if (keys[i] == key) {
+                has = true;
+                break;
+            }
+        }
+        if (has) {
+            delete map[key];
+            return true;
+        }
+        return false;
+    }
+    MapEx.del = del;
+    /**
+     * 是否有指定对象
+     * @param map
+     * @param key
+     * @returns
+     */
+    function has(map, key) {
+        if (map[key]) {
+            return true;
+        }
+        let has = false;
+        let keys = Object.keys(map);
+        for (let i = 0; i < keys.length; ++i) {
+            if (keys[i] == key) {
+                has = true;
+                break;
+            }
+        }
+        if (has) {
+            return true;
+        }
+        return false;
+    }
+    MapEx.has = has;
+    /**
+     * 获取count数量
+     * @param map
+     * @param key
+     * @returns
+     */
+    function count(map) {
+        let res = 0;
+        forEach(map, e => {
+            ++res;
+        });
+        return res;
+    }
+    MapEx.count = count;
+    /**
+     * 遍历map
+     * @param map
+     * @param callback
+     */
+    function forEach(map, callback) {
+        for (let key in map) {
+            if (map[key]) {
+                callback(key, map[key]);
+            }
+        }
+    }
+    MapEx.forEach = forEach;
+    /**
+     * 拷贝，Val还是引用出来的，只是Map换了
+     * @param map
+     * @returns
+     */
+    function copy(map) {
+        let res = {};
+        for (let key in map) {
+            res[key] = map[key];
+        }
+        return res;
+    }
+    MapEx.copy = copy;
+})(MapEx || (MapEx = {}));
+
+var foreign83 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get MapEx () { return MapEx; }
+});
+
+var ObjectPoolServices;
+(function (ObjectPoolServices) {
+    class ObjectPool {
+        constructor(spawn, initNum = 3) {
+            this.spawnFun = spawn;
+            this.pool = new Array(initNum);
+            this.oPool = new Array();
+            for (let index = 0; index < initNum; index++) {
+                this.pool[index] = this.spawnFun();
+            }
+        }
+        spawn() {
+            if (this.pool.length > 0) {
+                let a = this.pool.pop();
+                this.oPool.push(a);
+                return a;
+            }
+            let a = this.spawnFun();
+            this.oPool.push(a);
+            return a;
+        }
+        return(instance) {
+            if (instance == null) {
+                return;
+            }
+            this.pool.push(instance);
+        }
+        getSize() {
+            return this.pool.length;
+        }
+        clear() {
+            this.pool.length = 0;
+        }
+        oPoolClear() {
+            this.oPool.length = 0;
+        }
+        getAll() {
+            return this.pool;
+        }
+        getOPool() {
+            return this.oPool;
+        }
+    }
+    ObjectPoolServices.ObjectPool = ObjectPool;
+    const poolMap = new Map();
+    function getPool(cls, autoCreat = true) {
+        let pool = poolMap.get(cls.name);
+        if (pool === undefined && autoCreat) {
+            initPool(cls, () => new cls());
+        }
+        return poolMap.get(cls.name);
+    }
+    ObjectPoolServices.getPool = getPool;
+    function initPool(cls, spawn, initNum = 3) {
+        let pool = poolMap.get(cls.name);
+        if (pool === undefined) {
+            pool = new ObjectPool(spawn, initNum);
+            poolMap.set(cls.name, pool);
+        }
+        return pool;
+    }
+    ObjectPoolServices.initPool = initPool;
+    function destroyPool(cls) {
+        let pool = poolMap.get(cls.name);
+        if (pool !== undefined) {
+            pool.clear();
+        }
+        poolMap.delete(cls.name);
+    }
+    ObjectPoolServices.destroyPool = destroyPool;
+    function clear() {
+        for (const [key, pool] of poolMap) {
+            pool.clear();
+        }
+        poolMap.clear();
+    }
+    ObjectPoolServices.clear = clear;
+})(ObjectPoolServices || (ObjectPoolServices = {}));
+var SourceType;
+(function (SourceType) {
+    SourceType[SourceType["Error"] = 0] = "Error";
+    SourceType[SourceType["Asset"] = 1] = "Asset";
+    SourceType[SourceType["GameObject"] = 2] = "GameObject";
+    SourceType[SourceType["Prefab"] = 3] = "Prefab"; //预制体
+})(SourceType || (SourceType = {}));
+class ObjPool {
+    constructor() {
+        this.POOL_RES_GUID = 'poolResGuid'; //原始对象的guid，还对象的时候使用
+        this.sourceTypeMap = new Map();
+        this.sceneSource = new Map();
+        this.subPoolMap = new Map();
+    }
+    destroy() {
+        ObjPool.instance = null;
+    }
+    /**
+     * 生成一个对象
+     * @param guid 场景对象的guid | 资源的guid | prefab的guid
+     * @returns 对象
+     */
+    spawn(guid) {
+        if (this.subPoolMap.has(guid) && this.subPoolMap.get(guid).length > 0) {
+            let obj = this.subPoolMap.get(guid).pop();
+            obj.setVisibility(mw.PropertyStatus.On);
+            return obj;
+        }
+        if (!this.sourceTypeMap.has(guid)) {
+            this.sourceTypeMap.set(guid, this.getSourceType(guid));
+        }
+        let obj = null;
+        switch (this.sourceTypeMap.get(guid)) {
+            case SourceType.Asset:
+                obj = SpawnManager.wornSpawn(guid);
+                break;
+            case SourceType.GameObject:
+                obj = this.sceneSource.get(guid).clone();
+                break;
+            case SourceType.Prefab:
+                obj = SpawnManager.wornSpawn(guid);
+                break;
+        }
+        if (obj == null) {
+            this.sourceTypeMap.set(guid, SourceType.Error);
+        }
+        else {
+            obj.setVisibility(mw.PropertyStatus.On);
+            obj.worldTransform.position = mw.Vector.zero;
+            obj[this.POOL_RES_GUID] = guid;
+        }
+        return obj;
+    }
+    //根据资源的guid获取资源的类型
+    getSourceType(guid) {
+        if (guid.length > 18) {
+            let source = GameObject.findGameObjectById(guid);
+            if (source != null) { //场景里的
+                source.parent = null;
+                source.setVisibility(mw.PropertyStatus.Off);
+                this.sceneSource.set(guid, source);
+                return SourceType.GameObject;
+            }
+            else { //预制体
+                return SourceType.Prefab;
+            }
+        }
+        else { //库里的
+            return SourceType.Asset;
+        }
+    }
+    /**
+     * 归还一个对象
+     * @param obj 对象
+     */
+    despawn(obj) {
+        let guid = obj[this.POOL_RES_GUID];
+        if (guid == null)
+            return;
+        if (!this.subPoolMap.has(guid))
+            this.subPoolMap.set(guid, []);
+        if (this.subPoolMap.get(guid).includes(obj))
+            return;
+        this.subPoolMap.get(guid).push(obj);
+        // obj.parent = null;
+    }
+    /**
+     * 清除对象池中所以guid对应的对象
+     * @param guid 清除对象的guid
+     */
+    clear(guid) {
+        if (!this.subPoolMap.has(guid) && this.subPoolMap.get(guid).length == 0) {
+            return;
+        }
+        let arr = this.subPoolMap.get(guid);
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].destroy();
+        }
+        arr.length = 0;
+    }
+}
+
+var foreign84 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    ObjPool: ObjPool,
+    get ObjectPoolServices () { return ObjectPoolServices; }
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
+ * TIME: 2024.05.19-23.59.55
+ */
+let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/ScrollBox/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        //文本多语言
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/TextBlock"));
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+OnlineRewardPanel_Generate = __decorate([
+    UIBind('UI/module/OnlineReward/OnlineRewardPanel.ui')
+], OnlineRewardPanel_Generate);
+var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
+
+var foreign95 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: OnlineRewardPanel_Generate$1
+});
+
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
@@ -5779,413 +6259,1185 @@ var foreign100 = /*#__PURE__*/Object.freeze({
     default: ShopPanel_Generate$1
 });
 
-class ModifiedCameraSystem {
-    static get cameraLocationMode() {
-        if (!SystemUtil.isClient()) {
-            return;
-        }
-        return Camera.currentCamera.positionMode;
+/**
+ * AUTHOR: 爱玩游戏的小胖子
+ * TIME: 2023.07.29-22.55.52
+ */
+class ShopPanel extends ShopPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.shopModuleC = null;
+        this.coldWeapons = [];
+        this.currentChildIndex = 0;
+        this.shopItems = [];
+        this.curSelectId = 0;
     }
-    static set cameraLocationMode(newCameraLocationMode) {
-        if (!SystemUtil.isClient()) {
-            return;
-        }
-        let tempTransform = Camera.currentCamera.springArm.localTransform;
-        Camera.currentCamera.positionMode = newCameraLocationMode;
-        if (newCameraLocationMode == CameraPositionMode.PositionFollow) {
-            Camera.currentCamera.parent = Player.localPlayer.character;
-            Camera.currentCamera.springArm.localTransform = tempTransform;
-        }
+    ;
+    /**
+     * 构造UI文件成功后，在合适的时机最先初始化一次
+     */
+    onStart() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerMiddle;
+        this.initDatas();
+        this.registerActions();
+        this.bindButtons();
     }
-    static setCameraFollowTarget(target) {
-        if (!SystemUtil.isClient())
-            return;
-        Camera.currentCamera.parent = target;
-        Camera.currentCamera.springArm.localTransform = Transform.identity;
+    initDatas() {
+        this.shopModuleC = ModuleService.getModule(ShopModuleC);
+        this.initShopItems();
     }
-    static cancelCameraFollowTarget() {
-        if (!SystemUtil.isClient())
-            return;
-        Camera.currentCamera.parent = Player.localPlayer.character;
-        Camera.currentCamera.springArm.localTransform = Transform.identity;
+    registerActions() {
+        Console.error("[ShopPanel-registerActions]");
     }
-    static setOverrideCameraRotation(newOverrideRotation) {
-        if (!SystemUtil.isClient())
-            return;
-        ModifiedCameraSystem.followEnable = true;
-        ModifiedCameraSystem.followRotationValue = newOverrideRotation;
-        Player.setControllerRotation(ModifiedCameraSystem.followRotationValue);
-        if (!ModifiedCameraSystem.isBind) {
-            TimeUtil.onEnterFrame.add(() => {
-                if (ModifiedCameraSystem.followEnable) {
-                    Player.setControllerRotation(ModifiedCameraSystem.followRotationValue);
-                }
-            }, this);
-            ModifiedCameraSystem.isBind = true;
-        }
-    }
-    static resetOverrideCameraRotation() {
-        if (!SystemUtil.isClient())
-            return;
-        ModifiedCameraSystem.followEnable = false;
-    }
-    static getCurrentSettings() {
-        if (!SystemUtil.isClient())
-            return;
-        cameraSystemConfig.cameraRelativeTransform = Camera.currentCamera.localTransform;
-        cameraSystemConfig.cameraWorldTransform = Camera.currentCamera.worldTransform;
-        cameraSystemConfig.targetArmLength = Camera.currentCamera.springArm.length;
-        cameraSystemConfig.enableCameraLocationLag = Camera.currentCamera.positionLagEnabled;
-        cameraSystemConfig.cameraLocationLagSpeed = Camera.currentCamera.positionLagSpeed;
-        cameraSystemConfig.enableCameraRotationLag = Camera.currentCamera.rotationLagEnabled;
-        cameraSystemConfig.cameraRotationLagSpeed = Camera.currentCamera.rotationLagSpeed;
-        cameraSystemConfig.cameraFOV = Camera.currentCamera.fov;
-        cameraSystemConfig.cameraLocationMode = Camera.currentCamera.positionMode;
-        cameraSystemConfig.cameraRotationMode = Camera.currentCamera.rotationMode;
-        cameraSystemConfig.enableCameraCollision = Camera.currentCamera.springArm.collisionEnabled;
-        cameraSystemConfig.cameraUpLimitAngle = Camera.currentCamera.upAngleLimit;
-        cameraSystemConfig.cameraDownLimitAngle = Camera.currentCamera.downAngleLimit;
-        return cameraSystemConfig;
-    }
-    static applySettings(CameraSetting) {
-        if (!SystemUtil.isClient())
-            return;
-        Camera.currentCamera.localTransform = CameraSetting.cameraRelativeTransform;
-        Camera.currentCamera.springArm.length = CameraSetting.targetArmLength;
-        Camera.currentCamera.positionLagEnabled = CameraSetting.enableCameraLocationLag;
-        Camera.currentCamera.positionLagSpeed = CameraSetting.cameraLocationLagSpeed;
-        Camera.currentCamera.rotationLagEnabled = CameraSetting.enableCameraRotationLag;
-        Camera.currentCamera.rotationLagSpeed = CameraSetting.cameraRotationLagSpeed;
-        Camera.currentCamera.fov = CameraSetting.cameraFOV;
-        ModifiedCameraSystem.cameraLocationMode = CameraSetting.cameraLocationMode;
-        Camera.currentCamera.rotationMode = CameraSetting.cameraRotationMode;
-        Camera.currentCamera.springArm.collisionEnabled = CameraSetting.enableCameraCollision;
-        Camera.currentCamera.upAngleLimit = CameraSetting.cameraUpLimitAngle;
-        Camera.currentCamera.downAngleLimit = CameraSetting.cameraDownLimitAngle;
-    }
-    static cameraFocusing(targetArmLength, targetOffset, timeInterval = 20) {
-        if (!SystemUtil.isClient())
-            return;
-        let timer = TimeUtil.onEnterFrame.add(() => {
-            let interpolationValue = Camera.currentCamera.springArm.length + (targetArmLength - Camera.currentCamera.springArm.length) / timeInterval;
-            Camera.currentCamera.springArm.length = interpolationValue;
-            if (Math.abs(Camera.currentCamera.springArm.length - targetArmLength) <= 0.5) {
-                TimeUtil.onEnterFrame.remove(timer);
-            }
+    bindButtons() {
+        this.mCloseButton.onClicked.add(() => {
+            this.hide();
+            this.shopModuleC.onSwitchCameraAction.call(false);
+        });
+        this.mSaveButton.onClicked.add(() => {
+            this.shopModuleC.updateRoleType(this.coldWeapons[this.curSelectId - 1]);
         });
     }
-    static startCameraShake(shakeData) {
-        if (!SystemUtil.isClient())
-            return;
-        let info = {
-            rotationYAmplitude: shakeData.rotYawOscillation.amplitude,
-            rotationYFrequency: shakeData.rotYawOscillation.frequency,
-            rotationZAmplitude: shakeData.rotRollOscillation.amplitude,
-            rotationZFrequency: shakeData.rotRollOscillation.frequency,
-            rotationXAmplitude: shakeData.rotPitchOscillation.amplitude,
-            rotationXFrequency: shakeData.rotPitchOscillation.frequency,
-            positionXAmplitude: shakeData.locXOscillation.amplitude,
-            positionXFrequency: shakeData.locXOscillation.frequency,
-            positionYAmplitude: shakeData.locYOscillation.amplitude,
-            positionYFrequency: shakeData.locYOscillation.frequency,
-            positionZAmplitude: shakeData.locZOscillation.amplitude,
-            positionZFrequency: shakeData.locZOscillation.frequency,
-        };
-        Camera.shake(info);
+    initShopItems() {
+        this.coldWeapons = GameConfig.ColdWeapon.getAllElement();
+        this.showShopItems();
     }
-    static stopCameraShake() {
-        if (!SystemUtil.isClient())
-            return;
-        Camera.stopShake();
+    showShopItems() {
+        this.currentChildIndex = 0;
+        for (let i = 0; i < this.coldWeapons.length; ++i) {
+            let shopItem = ObjectPoolServices.getPool(ShopItem).spawn();
+            let id = this.coldWeapons[i].id;
+            shopItem.initData(id, this.coldWeapons[i].RoleIcon, this.shopModuleC.isHaveWeapon(id), this.coldWeapons[i].RoleType);
+            this.mItemCanvas.addChild(shopItem.shopItem);
+            shopItem.shopItem.size = new mw.Vector2(200, 200);
+            shopItem.shopItem.position = new mw.Vector2(200 * this.currentChildIndex++, 0);
+            this.shopItems.push(shopItem);
+        }
+        this.mItemCanvas.size = new mw.Vector2(200 * this.currentChildIndex, 200);
     }
-    static getDefaultCameraShakeData() {
-        const defaultOscillator = {
-            amplitude: 0,
-            frequency: 0,
-            waveform: CameraModifid.EOscillatorWaveform.SineWave,
-        };
-        const defaultCameraShakeData = {
-            rotPitchOscillation: { ...defaultOscillator },
-            rotYawOscillation: { ...defaultOscillator },
-            rotRollOscillation: { ...defaultOscillator },
-            locXOscillation: { ...defaultOscillator },
-            locYOscillation: { ...defaultOscillator },
-            locZOscillation: { ...defaultOscillator },
-            fovOscillation: { ...defaultOscillator },
-        };
-        return defaultCameraShakeData;
+    defaultSelectItem(id) {
+        this.curSelectId = id;
+        this.shopItems[this.curSelectId - 1].selectState();
+    }
+    updateShopNPC(id) {
+        if (this.curSelectId == id) {
+            Notice.showDownNotice("已选择");
+            return;
+        }
+        this.shopItems[this.curSelectId - 1].cancleSelectState();
+        this.curSelectId = id;
+        this.shopItems[this.curSelectId - 1].selectState();
+        let coldWeapon = this.coldWeapons[id - 1];
+        this.shopModuleC.updateShopRoles(coldWeapon);
+        let roleType = coldWeapon.RoleType;
+        if (roleType == 1) {
+            this.mSaveTextBlock.text = "使用";
+        }
+        else if (roleType == 2) {
+            if (this.shopModuleC.isHaveWeapon(id)) {
+                this.mSaveTextBlock.text = "使用";
+            }
+            else {
+                this.mSaveTextBlock.text = "购买";
+            }
+        }
+        else if (roleType == 3) {
+            this.mSaveTextBlock.text = "使用";
+        }
+    }
+    updateTextBlock() {
+        this.mSaveTextBlock.text = "使用";
+        this.shopItems[this.curSelectId - 1].mTextBlock.visibility = mw.SlateVisibility.Collapsed;
     }
 }
-ModifiedCameraSystem.isBind = false;
-ModifiedCameraSystem.followTargetEnable = true;
-ModifiedCameraSystem.followTargetInterpSpeed = 15;
-var CameraModifid;
-(function (CameraModifid) {
-    (function (EOscillatorWaveform) {
-        /** 正弦波 */
-        EOscillatorWaveform[EOscillatorWaveform["SineWave"] = 0] = "SineWave";
-        /** Perlin噪声 */
-        EOscillatorWaveform[EOscillatorWaveform["PerlinNoise"] = 1] = "PerlinNoise";
-    })(CameraModifid.EOscillatorWaveform || (CameraModifid.EOscillatorWaveform = {}));
-})(CameraModifid || (CameraModifid = {}));
-const cameraSystemConfig = {
-    cameraRelativeTransform: Transform.identity,
-    cameraWorldTransform: Transform.identity,
-    targetArmLength: 400,
-    enableCameraLocationLag: false,
-    cameraLocationLagSpeed: 10,
-    enableCameraRotationLag: false,
-    cameraRotationLagSpeed: 10,
-    cameraFOV: 90,
-    cameraLocationMode: CameraPositionMode.PositionFollow,
-    cameraRotationMode: CameraRotationMode.RotationControl,
-    enableCameraCollision: true,
-    cameraUpLimitAngle: 40,
-    cameraDownLimitAngle: -40,
-};
-
-var foreign34 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    get CameraModifid () { return CameraModifid; },
-    ModifiedCameraSystem: ModifiedCameraSystem
-});
-
-class InputManagers {
-    /**单例 */
-    static get getInstance() {
-        if (this._instance == null && !this._isDestroy) {
-            this._instance = new InputManagers("Singleton-WFZ");
-        }
-        return this._instance;
+/**服装 */
+class ShopItem {
+    /**生成Item */
+    constructor() {
+        this.mCanvas = undefined;
+        this.mSelectImage = undefined;
+        this.mIconImage = undefined;
+        this.mClickButton = undefined;
+        this.mTextBlock = undefined;
+        this.mTextBlock_1 = undefined;
+        this.id = null;
+        this.isSelect = false;
+        this.shopItem = mw.createUIByName("module/ShopModule/ShopItem");
+        this.mCanvas = this.shopItem.findChildByPath("RootCanvas/mCanvas");
+        this.mClickButton = this.shopItem.findChildByPath("RootCanvas/mCanvas/mClickButton");
+        this.mSelectImage = this.shopItem.findChildByPath("RootCanvas/mCanvas/mSelectImage");
+        this.mIconImage = this.shopItem.findChildByPath("RootCanvas/mCanvas/mIconImage");
+        this.mTextBlock = this.shopItem.findChildByPath("RootCanvas/mCanvas/mTextBlock");
+        this.mTextBlock_1 = this.shopItem.findChildByPath("RootCanvas/mCanvas/mTextBlock_1");
     }
-    constructor(name) {
-        /**按压 */
-        this.onPressTouch = new mw.Action1();
-        /**抬起 */
-        this.onReleaseTouch = new mw.Action1();
-        this.name = name;
-        this.initAndBind();
-    }
-    /**初始化和绑定 */
-    initAndBind() {
-        if (mw.SystemUtil.isClient()) {
-            if (this.touch == null) {
-                this.initTouch();
+    /**填充数据 */
+    initData(id, iconGuid, isHave, roleType) {
+        this.id = id;
+        this.mIconImage.imageGuid = iconGuid;
+        this.mClickButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick");
+            if (!GlobalData.isCanClickShopItem) {
+                Notice.showDownNotice("别点太快");
+                return;
             }
-            this.touch.onTouchBegin.add(this.beginMulFun);
-            this.touch.onTouchEnd.add(this.beginMulFun);
-            this.touch.onTouch.add(this.beginMulFun);
-            this.keyDownActionMap = new Map();
-        }
-    }
-    /**
-     * 鼠标点击触发，返回点击的所有结果
-     */
-    get onTouch() {
-        if (this._onTouch == null)
-            this._onTouch = new Action1();
-        return this._onTouch;
-    }
-    /**初始化触摸数据 */
-    initTouch() {
-        if (this.touch != null)
-            return;
-        this.touch = new mw.TouchInput();
-        this.beginMulFun = this.touchControl.bind(this);
-        Player.asyncGetLocalPlayer().then(player => {
-            // this.touch.setPlayerController();
-            this.touch.onTouchBegin.add(this.touchHandler.bind(this));
+            GlobalData.isCanClickShopItem = false;
+            TimeUtil.delaySecond(0.5).then(() => {
+                GlobalData.isCanClickShopItem = true;
+            });
+            mw.UIService.getUI(ShopPanel).updateShopNPC(this.id);
         });
-    }
-    /**屏幕触摸控制 */
-    touchControl(index, loc, touchType) {
-        let touchArr = this.touch.getTouchVectorArray();
-        if (touchType == mw.TouchInputType.TouchEnd) {
-            this.onReleaseTouch.call(new TouchData(touchType, loc.x, loc.y));
+        this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
+        if (roleType == 3) {
+            this.mTextBlock_1.text = "限时";
+            this.mTextBlock.visibility = mw.SlateVisibility.Collapsed;
         }
         else {
-            for (let i = 0; i < touchArr.length; i++) {
-                if (touchArr[i].z > 0) {
-                    this.onPressTouch.call(new TouchData(touchType, touchArr[i].x, touchArr[i].y));
-                }
-            }
+            this.mTextBlock.visibility = isHave ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible;
+            this.mTextBlock_1.text = "永久";
         }
+        this.cancleSelectState();
     }
-    /**获取点击屏幕位置的物体 */
-    touchHandler(index, location, state) {
-        if (this.onTouch.count == 0)
-            return;
-        location = this.touch.getTouchVectorArray()[0];
-        let list = ScreenUtil.getGameObjectByScreenPosition(location.x, location.y, 50000, true, false);
-        let arr = [];
-        for (let i = 0; list != null && i < list.length; i++) {
-            if (arr.includes(list[i]))
-                continue;
-            arr.push(list[i]);
-        }
-        if (list.length > 0) {
-            this.onTouch.call(arr);
-        }
+    /**选中状态 */
+    selectState() {
+        this.isSelect = true;
+        this.mSelectImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
     }
-    /**
-     * 按下键盘事件(增加了重复监听的判断，还可以移除监听方法)
-     * @param key 按键类型
-     * @returns 监听的Action方法
-     */
-    onKeyDown(key) {
-        if (!this.keyDownActionMap.has(key)) {
-            this.keyDownActionMap.set(key, new Action1());
-            InputUtil.onKeyDown(key, () => {
-                this.keyDownActionMap.get(key).call(key);
-            });
-        }
-        let action = this.keyDownActionMap.get(key);
-        if (action.count > 0) {
-            Console.error("重复的键盘事件监听 key=" + key);
-            return null;
-        }
-        return action;
+    /**取消选中状态 */
+    cancleSelectState() {
+        this.isSelect = false;
+        this.mSelectImage.visibility = mw.SlateVisibility.Collapsed;
     }
-    /**Test */
-    log(list) {
-        Console.error("------------Mouse Click……");
-        for (let i = 0; list != null && i < list.length; i++) {
-            Console.error("List: " + list[i].gameObject.name);
-        }
-    }
-    /**
-     * 获取屏幕手指点击屏幕的坐标
-     * @param index 第几个点击
-     * @returns
-     */
-    getTouchPos(index) {
-        let pos = this.touch.getTouchVectorArray()[index];
-        return new mw.Vector2(pos.x, pos.y);
-    }
-    /**回收 */
-    clearTouch() {
-        this.onReleaseTouch.clear();
-        this.onPressTouch.clear();
-    }
-    /**回收 */
-    static destroy() {
-        this._isDestroy = true;
-        InputManagers._instance = null;
-    }
-}
-InputManagers._instance = null;
-class TouchData {
-    constructor(event, x, y) {
-        this.event = event;
-        this.x = x;
-        this.y = y;
+    /**回收Item */
+    recycleItem() {
+        this.cancleSelectState();
+        ObjectPoolServices.getPool(ShopItem).return(this);
     }
 }
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign66 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    InputManagers: InputManagers,
-    TouchData: TouchData
+    default: ShopPanel
 });
 
 /**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2023.07.21-21.54.50
  */
-let NPCHead_Generate = class NPCHead_Generate extends UIScript {
-    get mFreeCanvas() {
-        if (!this.mFreeCanvas_Internal && this.uiWidgetBase) {
-            this.mFreeCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mFreeCanvas');
-        }
-        return this.mFreeCanvas_Internal;
+class HUDPanel extends HUDPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.hudModuleC = null;
+        this.shopPanel = null;
+        this.hideKillTipIntervalId = null;
+        this.killTipItems = [];
+        this.killTipDatas = [];
+        //#endregion
+        //#region 连杀提示
+        this.killTipsTimeOutId1 = null;
+        this.killTipsTimeOutId2 = null;
+        //#endregion
+        //#region 攻击
+        this.curInputIndex = -1;
+        //#endregion
+        //#region 背景音乐
+        /**是否打开BGM */
+        this.isOpenBGM = true;
+        /**背景音乐事件（true-打开|false-关闭） */
+        this.onBgmAction = new Action1();
+        /**切换背景音乐（-1前一首|1下一首） */
+        this.onSwitchBgmAction = new Action1();
+        this.jumpyImage_1_1 = null;
+        this.jumpyImage_1_2 = null;
+        this.jumpyImageTime_1 = 1;
+        this.jumpyImage_2 = null;
+        this.jumpyImageTime_2 = 1;
+        //#endregion
+        //#region 在线奖励
+        this.redPointTween1 = null;
+        this.redPointTween2 = null;
+        //#endregion
+        //#region 任务
+        this.taskRedPointTween1 = null;
+        this.taskRedPointTween2 = null;
+        //#endregion
+        //#endregion
     }
-    get mFreeText() {
-        if (!this.mFreeText_Internal && this.uiWidgetBase) {
-            this.mFreeText_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mFreeCanvas/mFreeText');
-        }
-        return this.mFreeText_Internal;
-    }
-    get mCoinCanvas() {
-        if (!this.mCoinCanvas_Internal && this.uiWidgetBase) {
-            this.mCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas');
-        }
-        return this.mCoinCanvas_Internal;
-    }
-    get mCoinImage() {
-        if (!this.mCoinImage_Internal && this.uiWidgetBase) {
-            this.mCoinImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas/mCoinImage');
-        }
-        return this.mCoinImage_Internal;
-    }
-    get mCoinImage_1() {
-        if (!this.mCoinImage_1_Internal && this.uiWidgetBase) {
-            this.mCoinImage_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas/mCoinImage_1');
-        }
-        return this.mCoinImage_1_Internal;
-    }
-    get mCoinText() {
-        if (!this.mCoinText_Internal && this.uiWidgetBase) {
-            this.mCoinText_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCoinCanvas/mCoinText');
-        }
-        return this.mCoinText_Internal;
-    }
-    get mAdsCanvas() {
-        if (!this.mAdsCanvas_Internal && this.uiWidgetBase) {
-            this.mAdsCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mAdsCanvas');
-        }
-        return this.mAdsCanvas_Internal;
-    }
-    get mAdsText() {
-        if (!this.mAdsText_Internal && this.uiWidgetBase) {
-            this.mAdsText_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mAdsCanvas/mAdsText');
-        }
-        return this.mAdsText_Internal;
-    }
-    onAwake() {
+    /**
+     * 构造UI文件成功后，在合适的时机最先初始化一次
+     */
+    onStart() {
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
+        this.layer = mw.UILayerMiddle;
+        this.initDatas();
+        this.bindButtons();
+        this.initUI();
+        this.initRoleData();
     }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mFreeText);
-        this.initLanguage(this.mCoinText);
-        this.initLanguage(this.mAdsText);
-        //文本多语言
+    /**初始化数据 */
+    initDatas() {
+        this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        this.shopPanel = mw.UIService.getUI(ShopPanel);
     }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
+    /**绑定按钮 */
+    bindButtons() {
+        this.mAtkButton.onClicked.clear();
+        this.mShopButton.onClicked.add(() => {
+            this.hudModuleC.onOpenShopAction.call();
+        });
+        this.mPlayerButton.onClicked.add(() => {
+            this.hudModuleC.onOpenPlayerAction.call();
+            this.hide();
+        });
+        this.mJumpButton.onClicked.add(() => {
+            this.hudModuleC.onJumpAction.call();
+        });
+        this.mSprintButton.onClicked.add(() => {
+            this.hudModuleC.onSprintAction.call();
+        });
+        this.mOnlineRewardButton.onClicked.add(() => {
+            this.hudModuleC.onOpenOnlineRewardAction.call();
+        });
+        this.mTaskButton.onClicked.add(() => {
+            this.hudModuleC.onOpenTaskAction.call();
+        });
+        this.mRankButton.onClicked.add(() => {
+            this.hudModuleC.onOpenRankAction.call();
+        });
+        this.mHomeButton.onClicked.add(() => {
+            this.hudModuleC.onHomeAction.call();
+        });
+        this.mAddCoinButton.onClicked.add(() => {
+            this.hudModuleC.onAddCoinAction.call();
+        });
+        this.mAdsButton.onClicked.add(() => {
+            this.hudModuleC.onAdsAction.call();
+        });
+        let isInvincible = false;
+        this.mInvincibleTextBlock.text = "已关闭";
+        this.mInvincibleButton.onClicked.add(() => {
+            isInvincible = !isInvincible;
+            this.mInvincibleTextBlock.text = isInvincible ? "已开启" : "已关闭";
+            this.hudModuleC.onInvincibleAction.call(isInvincible);
+        });
+        this.mOnlineRewardButton.normalImageGuid = "193281";
+        this.mOnlineRewardButton.pressedImageGuid = "193281";
+        this.mOnlineRewardButton.disableImageGuid = "193281";
+        this.bindMusicButton();
+    }
+    /**
+     * 初始化UI
+     */
+    initUI() {
+        this.initRedPointTween();
+        this.initTaskTween();
+        this.initKillTipItems();
+        this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
+        this.mTaskPointImage.visibility = mw.SlateVisibility.Collapsed;
+        Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
+        Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
+    }
+    onShow(...params) {
+        Console.error("[HUD-onShow]");
+        this.mVirtualJoystickPanel.resetJoyStick();
+        this.atk(0);
+    }
+    onHide() {
+        Console.error("[HUD-onHide]");
+        this.mVirtualJoystickPanel.resetJoyStick();
+        this.mAtkButton.onPressed.clear();
+        this.mAtkButton.onReleased.clear();
+    }
+    //#region 击杀提示
+    initKillTipItems() {
+        for (let i = 0; i < 4; ++i) {
+            let killTipItem = UIService.create(KillTipItem);
+            killTipItem.uiObject.position = new mw.Vector2(0, 37 * i);
+            Utils.setWidgetVisibility(killTipItem.uiObject, mw.SlateVisibility.Collapsed);
+            this.mKillTipCanvas.addChild(killTipItem.uiObject);
+            this.killTipItems.push(killTipItem);
         }
     }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
+    killTip(killTipType, killerName, killedName) {
+        let killTipData = new KillTipData();
+        killTipData.killTipType = killTipType;
+        killTipData.killerName = killerName;
+        killTipData.killedName = killedName;
+        if (this.killTipDatas.length >= 4) {
+            this.killTipDatas.shift();
+        }
+        this.killTipDatas.push(killTipData);
+        this.updateKillTipItems();
+        this.clearHideKillTipIntervalId();
+        this.hideKillTipIntervalId = TimeUtil.setInterval(() => {
+            if (this.killTipDatas && this.killTipDatas.length > 0) {
+                this.killTipDatas.shift();
+                this.updateKillTipItems();
+            }
+            else {
+                this.clearHideKillTipIntervalId();
+            }
+        }, 5);
     }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
+    clearHideKillTipIntervalId() {
+        if (this.hideKillTipIntervalId) {
+            TimeUtil.clearInterval(this.hideKillTipIntervalId);
+            this.hideKillTipIntervalId = null;
+        }
     }
-};
-NPCHead_Generate = __decorate([
-    UIBind('UI/module/ShopModule/NPCHead.ui')
-], NPCHead_Generate);
-var NPCHead_Generate$1 = NPCHead_Generate;
+    updateKillTipItems() {
+        for (let i = 0; i < this.killTipDatas.length; ++i) {
+            this.killTipItems[i].setInfo(this.killTipDatas[i]);
+        }
+        for (let i = this.killTipDatas.length; i < 4; ++i) {
+            Utils.setWidgetVisibility(this.killTipItems[i].uiObject, mw.SlateVisibility.Collapsed);
+        }
+    }
+    showKillTips1(killTips, killerName, killedName) {
+        Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
+            + "\n" + "<color=#red>" + killTips + "</color>");
+    }
+    clearKillTipsTimeOutId1() {
+        if (this.killTipsTimeOutId1) {
+            clearTimeout(this.killTipsTimeOutId1);
+            this.killTipsTimeOutId1 = null;
+        }
+    }
+    showKillTips2(killerName, killedName, killTipType) {
+        if (killTipType == KillTipType.None)
+            return;
+        this.clearKillTipsTimeOutId2();
+        if (killTipType == KillTipType.Killed) {
+            this.mKillTipTextBlock3.text = "你已被 " + killerName + " 击败";
+        }
+        else if (killTipType == KillTipType.revenge) {
+            this.mKillTipTextBlock3.text = "击败 " + killedName + " 完成复仇";
+        }
+        Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
+        this.killTipsTimeOutId2 = setTimeout(() => {
+            Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
+            this.clearKillTipsTimeOutId2();
+        }, 3 * 1000);
+    }
+    clearKillTipsTimeOutId2() {
+        if (this.killTipsTimeOutId2) {
+            clearTimeout(this.killTipsTimeOutId2);
+            this.killTipsTimeOutId2 = null;
+        }
+    }
+    //#endregion
+    //#region Role
+    initRoleData() {
+        this.mHpProgressBar.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        this.mMpProgressBar.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        AccountService.fillAvatar(this.mRoleIconImage);
+    }
+    updateLvExpCoin(lv, exp, coin) {
+        this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
+        this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
+        this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
+        this.mCoinTextBlock.text = coin + "";
+        this.shopPanel.mCoinTextBlock.text = coin + "";
+        let atk = 50 + (lv * 3);
+        this.mAtkTextBlock.text = "攻击力：" + atk;
+        ColdWeapon.getInstance().updateHitDamage(atk);
+    }
+    updateCoin(coin) {
+        this.mCoinTextBlock.text = coin + "";
+        this.shopPanel.mCoinTextBlock.text = coin + "";
+    }
+    updateMp(curMp, maxMp) {
+        this.mMpProgressBar.currentValue = curMp / maxMp;
+        this.mMpTextBlock.text = curMp + "/" + maxMp;
+    }
+    updateHp(curHp, maxHp) {
+        if (curHp < 0)
+            curHp = 0;
+        this.mHpProgressBar.currentValue = curHp / maxHp;
+        this.mHpTextBlock.text = curHp + "/" + maxHp;
+    }
+    atk(index) {
+        this.mAtkButton.onPressed.add(() => {
+            if (this.curInputIndex != -1)
+                return;
+            ColdWeapon.getInstance().attack(index);
+            this.curInputIndex = index;
+        });
+        this.mAtkButton.onReleased.add(() => {
+            if (this.curInputIndex != index)
+                return;
+            ColdWeapon.getInstance().endCharge(true);
+            this.curInputIndex = -1;
+        });
+    }
+    /**初始化背景音乐按钮 */
+    bindMusicButton() {
+        this.mMusicCanvas.visibility = mw.SlateVisibility.Collapsed;
+        this.mMusicButton.onClicked.add(() => {
+            if (this.mMusicCanvas.visibility == mw.SlateVisibility.SelfHitTestInvisible)
+                return;
+            Utils.openUITween(this.mMusicCanvas, () => {
+                this.mMusicCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            }, null);
+            if (this.isOpenBGM)
+                this.startMusicTween();
+        });
+        this.mOnOffMusicBtn.onClicked.add(() => {
+            this.isOpenBGM = !this.isOpenBGM;
+            this.onBgmAction.call(this.isOpenBGM);
+            let offOnIcon = "";
+            if (this.isOpenBGM) {
+                offOnIcon = GlobalData.onMusicIconGuid;
+                this.startMusicTween();
+            }
+            else {
+                offOnIcon = GlobalData.offMusicIconGuid;
+                this.stopMusicTween();
+            }
+            this.mOnOffMusicBtn.normalImageGuid = offOnIcon;
+            this.mOnOffMusicBtn.pressedImageGuid = offOnIcon;
+            this.mOnOffMusicBtn.disableImageGuid = offOnIcon;
+        });
+        this.mLeftMusicBtn.onClicked.add(() => {
+            this.onSwitchBgmAction.call(-1);
+        });
+        this.mRightMusicBtn.onClicked.add(() => {
+            this.onSwitchBgmAction.call(1);
+        });
+        this.mCloseMusicBtn.onClicked.add(() => {
+            if (this.mMusicCanvas.visibility == mw.SlateVisibility.Collapsed)
+                return;
+            Utils.closeUITween(this.mMusicCanvas, null, () => {
+                this.mMusicCanvas.visibility = mw.SlateVisibility.Collapsed;
+            });
+            this.stopMusicTween();
+        });
+        this.initJumpyImage_1();
+        this.initJumpyImage_2();
+    }
+    /**开始Music的Tween */
+    startMusicTween() {
+        this.jumpyImage_1_1.start();
+        this.jumpyImage_2.start();
+    }
+    /**停止Music的Tween */
+    stopMusicTween() {
+        this.jumpyImage_1_1.stop();
+        this.jumpyImage_1_2.stop();
+        this.jumpyImage_2.stop();
+    }
+    initJumpyImage_1() {
+        this.jumpyImage_1_1 = new Tween$1({ y: 0.2 })
+            .to({ y: 1.5 }, this.jumpyImageTime_1 * 1000)
+            .onStart(() => {
+            this.mJumpyImage_1.renderScale = new mw.Vector2(1, 0.2);
+        })
+            .onUpdate((v) => {
+            this.mJumpyImage_1.renderScale = new mw.Vector2(1, v.y);
+        })
+            .onComplete(() => {
+            this.jumpyImage_1_2.start();
+        })
+            .easing(cubicBezier(.65, 2.01, .27, -0.87));
+        this.jumpyImage_1_2 = new Tween$1({ y: 1.5 })
+            .to({ y: 0.2 }, this.jumpyImageTime_1 * 1000)
+            .onStart(() => {
+            this.mJumpyImage_1.renderScale = new mw.Vector2(1, 1.5);
+        })
+            .onUpdate((v) => {
+            this.mJumpyImage_1.renderScale = new mw.Vector2(1, v.y);
+        })
+            .onComplete(() => {
+            this.jumpyImage_1_1.start();
+        })
+            .easing(cubicBezier(.65, 2.01, .27, -0.87));
+    }
+    initJumpyImage_2() {
+        this.jumpyImage_2 = new Tween$1({ angle: 0 })
+            .to({ angle: 360 }, this.jumpyImageTime_2 * 1000)
+            .onStart(() => {
+            this.mJumpyImage_2.renderTransformAngle = 0;
+        })
+            .onUpdate((v) => {
+            this.mJumpyImage_2.renderTransformAngle = v.angle;
+        })
+            .onComplete(() => {
+            this.mJumpyImage_2.renderTransformAngle = 0;
+        })
+            .repeat(Infinity);
+    }
+    startRedPointTween() {
+        if (this.redPointTween1) {
+            this.redPointTween1.start();
+        }
+        else {
+            this.initRedPointTween();
+            this.redPointTween1.start();
+        }
+    }
+    stopRedPointTween() {
+        if (this.redPointTween1) {
+            this.redPointTween1.stop();
+        }
+        if (this.redPointTween2) {
+            this.redPointTween2.stop();
+        }
+    }
+    /**
+     * 初始化在线奖励红点缓动
+     */
+    initRedPointTween() {
+        this.redPointTween1 = new mw.Tween({ value: 0.8 })
+            .to({ value: 1.2 }, 0.2 * 1000)
+            .onStart(() => {
+            this.mPointImage.renderScale = mw.Vector2.one.multiply(0.8);
+        })
+            .onUpdate((v) => {
+            this.mPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+        })
+            .onComplete(() => {
+            this.redPointTween2.start();
+        })
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
+        this.redPointTween2 = new mw.Tween({ value: 1.2 })
+            .to({ value: 0.8 }, 0.2 * 1000)
+            .onStart(() => {
+            this.mPointImage.renderScale = mw.Vector2.one.multiply(1.2);
+        })
+            .onUpdate((v) => {
+            this.mPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+        })
+            .onComplete(() => {
+            this.redPointTween1.start();
+        })
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
+    }
+    /**
+     * 更新在线奖励Icon
+     * @param icon
+     */
+    updateOnlineRewradIcon(icon) {
+        if (icon == "") {
+            this.stopRedPointTween();
+            this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
+            return;
+        }
+        this.mOnlineRewardButton.normalImageGuid = icon;
+        this.mOnlineRewardButton.pressedImageGuid = icon;
+        this.mOnlineRewardButton.disableImageGuid = icon;
+        this.mPointImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        this.startRedPointTween();
+    }
+    startTaskRedPointTween() {
+        if (this.taskRedPointTween1) {
+            this.taskRedPointTween1.start();
+        }
+        else {
+            this.initTaskTween();
+            this.taskRedPointTween1.start();
+        }
+        this.mTaskPointImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+    }
+    stopTaskRedPointTween() {
+        if (this.taskRedPointTween1) {
+            this.taskRedPointTween1.stop();
+        }
+        if (this.taskRedPointTween2) {
+            this.taskRedPointTween2.stop();
+        }
+        this.mTaskPointImage.visibility = mw.SlateVisibility.Collapsed;
+    }
+    initTaskTween() {
+        this.taskRedPointTween1 = new mw.Tween({ value: 0.8 })
+            .to({ value: 1.2 }, 0.2 * 1000)
+            .onStart(() => {
+            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(0.8);
+        })
+            .onUpdate((v) => {
+            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+        })
+            .onComplete(() => {
+            this.taskRedPointTween2.start();
+        })
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
+        this.taskRedPointTween2 = new mw.Tween({ value: 1.2 })
+            .to({ value: 0.8 }, 0.2 * 1000)
+            .onStart(() => {
+            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(1.2);
+        })
+            .onUpdate((v) => {
+            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+        })
+            .onComplete(() => {
+            this.taskRedPointTween1.start();
+        })
+            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
+    }
+    updateHUDText(text) {
+        this.mOnlineRewardTextBlock.text = text;
+    }
+}
+class KillTipItem extends KillTipItem_Generate$1 {
+    onAwake() {
+    }
+    setInfo(killTipDatas) {
+        this.mKillerTextBlock.text = killTipDatas.killerName;
+        this.mKilledTextBlock.text = killTipDatas.killedName;
+        switch (killTipDatas.killTipType) {
+            case KillTipType.None:
+                this.mKillerTextBlock.fontColor = mw.LinearColor.white;
+                this.mKillerTextBlock.shadowColor = mw.LinearColor.white;
+                this.mKilledTextBlock.fontColor = mw.LinearColor.white;
+                this.mKilledTextBlock.shadowColor = mw.LinearColor.white;
+                break;
+            case KillTipType.Killer:
+                this.mKillerTextBlock.fontColor = mw.LinearColor.yellow;
+                this.mKillerTextBlock.shadowColor = mw.LinearColor.red;
+                this.mKilledTextBlock.fontColor = mw.LinearColor.white;
+                this.mKilledTextBlock.shadowColor = mw.LinearColor.white;
+                break;
+            case KillTipType.Killed:
+                this.mKillerTextBlock.fontColor = mw.LinearColor.white;
+                this.mKillerTextBlock.shadowColor = mw.LinearColor.white;
+                this.mKilledTextBlock.fontColor = mw.LinearColor.yellow;
+                this.mKilledTextBlock.shadowColor = mw.LinearColor.red;
+                break;
+        }
+        Utils.setWidgetVisibility(this.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+        setTimeout(() => {
+            this.mBgImage.size = new mw.Vector2(this.mMainCanvas.size.x + 20, this.mMainCanvas.size.y);
+        }, 1);
+    }
+}
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign45 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: NPCHead_Generate$1
+    KillTipItem: KillTipItem,
+    default: HUDPanel
+});
+
+/**
+ * AUTHOR: 爱玩游戏的小胖子
+ * TIME: 2023.09.20-22.36.29
+ */
+class OnlineRewardPanel extends OnlineRewardPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.hudModuleC = null;
+        this.onlineRewardsModuleC = null;
+        this.onlineRewardsElements = [];
+        /**所有的item */
+        this.onlineRewardItems = [];
+        /**需要更新的Items */
+        this.needUpdateItems = {};
+        /**需要缓动的Item */
+        this.needTweenItems = {};
+    }
+    onStart() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerMiddle;
+        this.initData();
+        this.bindButton();
+    }
+    /**
+     * 初始化面板数据
+     */
+    initData() {
+        this.onlineRewardsModuleC = ModuleService.getModule(OnlineRewardModuleC);
+        this.hudModuleC = ModuleService.getModule(HUDModuleC);
+    }
+    /**
+     * 绑定按钮事件
+     */
+    bindButton() {
+        this.mCloseButton.onClicked.add(() => {
+            this.onlineRewardsModuleC.onOnlineRewardsAction.call(false);
+        });
+    }
+    onShow(...params) {
+        this.openNeedTweenItems(true);
+        Console.error("this.rootCanvas.position = " + this.rootCanvas.position);
+        Utils.openUITween(this.rootCanvas, null, null);
+    }
+    /**
+     * 隐藏缓动
+     */
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+        });
+    }
+    onHide() {
+        this.openNeedTweenItems(false);
+    }
+    /**
+     * 初始化在线奖励Item
+     * @param itemCount
+     */
+    initOnlineRewardItem(onlineSecond, isGetRewards) {
+        this.onlineRewardsElements = GameConfig.OnlineRewards.getAllElement();
+        for (let i = 0; i < this.onlineRewardsElements.length; ++i) {
+            let onlineRewardItem = ObjectPoolServices.getPool(OnlineRewardItem).spawn();
+            let onlineRewardItemState = OnlineRewardItemState.notSatisfy;
+            let onlineRewardsElement = this.onlineRewardsElements[i];
+            let needTime = onlineRewardsElement.OnlineTime;
+            let needUpdate = false;
+            let needTween = false;
+            if (isGetRewards[i]) {
+                onlineRewardItemState = OnlineRewardItemState.getReward;
+            }
+            else {
+                if (onlineSecond >= needTime * 60) {
+                    onlineRewardItemState = OnlineRewardItemState.satisfy;
+                    needTween = true;
+                }
+                else {
+                    onlineRewardItemState = OnlineRewardItemState.notSatisfy;
+                    needUpdate = true;
+                }
+            }
+            onlineRewardItem.setData(i, onlineRewardsElement.OnlineTime, onlineRewardItemState, onlineRewardsElement.RewardCount, onlineRewardsElement.Icon);
+            this.mCanvas.addChild(onlineRewardItem.onlineRewardItem);
+            onlineRewardItem.onlineRewardItem.size = new mw.Vector2(200, 200);
+            this.onlineRewardItems.push(onlineRewardItem);
+            if (needUpdate)
+                MapEx.set(this.needUpdateItems, i, onlineRewardItem);
+            if (needTween)
+                this.addNeedTweenItem(i, onlineRewardItem);
+        }
+    }
+    /**
+     * 一直在线的玩家重置数据
+     * @param onlineSecond
+     * @param isGetRewards
+     */
+    resetOnlineRewardItem(onlineSecond, isGetRewards) {
+        this.needUpdateItems = {};
+        for (let i = 0; i < this.onlineRewardItems.length; ++i) {
+            let onlineRewardItem = this.onlineRewardItems[i];
+            let onlineRewardItemState = OnlineRewardItemState.notSatisfy;
+            let onlineRewardsElement = this.onlineRewardsElements[i];
+            let needTime = onlineRewardsElement.OnlineTime;
+            let needUpdate = false;
+            if (isGetRewards[i]) {
+                onlineRewardItemState = OnlineRewardItemState.getReward;
+            }
+            else {
+                if (onlineSecond >= needTime * 60) {
+                    onlineRewardItemState = OnlineRewardItemState.satisfy;
+                }
+                else {
+                    onlineRewardItemState = OnlineRewardItemState.notSatisfy;
+                    needUpdate = true;
+                }
+            }
+            onlineRewardItem.setData(i, needTime, onlineRewardItemState, onlineRewardsElement.RewardCount, onlineRewardsElement.Icon);
+            if (needUpdate)
+                MapEx.set(this.needUpdateItems, i, onlineRewardItem);
+        }
+    }
+    /**
+     * 更新需要更新的Item
+     * @param onlineSecond
+     */
+    updateNeedUpdateItems(onlineSecond) {
+        if (MapEx.count(this.needUpdateItems) == 0)
+            return;
+        let isCanUpdateHUD = true;
+        MapEx.forEach(this.needUpdateItems, (key, value) => {
+            value.updateTime(onlineSecond, isCanUpdateHUD);
+            isCanUpdateHUD = false;
+        });
+    }
+    /**
+     * 删除需要更新的Item
+     * @param index
+     */
+    deleteNeedUpdateItem(index) {
+        if (MapEx.has(this.needUpdateItems, index)) {
+            this.addNeedTweenItem(index, MapEx.get(this.needUpdateItems, index));
+            MapEx.del(this.needUpdateItems, index);
+        }
+    }
+    /**
+     * 开启|关闭需要缓动的Item
+     */
+    openNeedTweenItems(isOpen) {
+        Console.error("MapEx.count(this.needTweenItems) = " + MapEx.count(this.needTweenItems));
+        MapEx.forEach(this.needTweenItems, (key, value) => {
+            isOpen ? value.startTween() : value.stopTween();
+        });
+    }
+    /**
+     * 添加需要缓动的Item
+     * @param index
+     * @param onlineRewardItem
+     */
+    addNeedTweenItem(index, onlineRewardItem) {
+        MapEx.set(this.needTweenItems, index, onlineRewardItem);
+        this.hudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
+    }
+    /**
+     * 得到当前需要显示的Icon
+     * @returns
+     */
+    getOnlineRewradIcon() {
+        if (MapEx.count(this.needTweenItems) == 0)
+            return "";
+        for (let i = this.onlineRewardsElements.length - 1; i >= 0; --i) {
+            if (MapEx.has(this.needTweenItems, i)) {
+                return this.onlineRewardsElements[i].Icon;
+            }
+        }
+        return "";
+    }
+    /**
+     * 删除需要缓动的Item
+     * @param index
+     */
+    deleteNeedTweenItem(index) {
+        if (MapEx.has(this.needTweenItems, index)) {
+            MapEx.get(this.needTweenItems, index).stopTween();
+            MapEx.del(this.needTweenItems, index);
+            this.hudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
+        }
+    }
+}
+class OnlineRewardItem {
+    /**生成Item */
+    constructor() {
+        this.mButton = undefined;
+        this.mTimeTextBlock = undefined;
+        this.mGetRewardTextBlock = undefined;
+        this.mCanRewardTextBlock = undefined;
+        this.mCoinCanvas = undefined;
+        this.mCoinTextBlock = undefined;
+        this.mExpCanvas = undefined;
+        this.mExpTextBlock = undefined;
+        this.mRoleCanvas = undefined;
+        this.mRoleTextBlock = undefined;
+        this.hudPanel = null;
+        this.index = 0;
+        this.needTime = 0;
+        this.onlineRewardItemState = OnlineRewardItemState.notSatisfy;
+        this.rewardCounts = [];
+        this.icon = "";
+        this.tween1 = null;
+        this.tween2 = null;
+        this.onlineRewardItem = mw.createUIByName("module/OnlineReward/OnlineRewardItem");
+        this.mButton = this.onlineRewardItem.findChildByPath("RootCanvas/mButton");
+        this.mTimeTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mTimeTextBlock");
+        this.mGetRewardTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mGetRewardTextBlock");
+        this.mCanRewardTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mCanRewardTextBlock");
+        this.mCoinCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mCoinCanvas");
+        this.mCoinTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mCoinCanvas/mCoinTextBlock");
+        this.mExpCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mExpCanvas");
+        this.mExpTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mExpCanvas/mExpTextBlock");
+        this.mRoleCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas");
+        this.mRoleTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas/mRoleTextBlock");
+    }
+    get getHUDPanel() {
+        if (this.hudPanel == null) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    /**
+     * 设置数据
+     */
+    setData(index, needTime, onlineRewardItemState, rewardCounts, icon) {
+        this.index = index;
+        this.needTime = needTime * 60;
+        this.onlineRewardItemState = onlineRewardItemState;
+        this.rewardCounts = rewardCounts;
+        this.icon = icon;
+        this.initItemStateTextBlock();
+        this.bindButton();
+        this.initRewardTextBlock();
+        this.initTween();
+    }
+    /**
+     * 初始化Item状态文本
+     */
+    initItemStateTextBlock() {
+        switch (this.onlineRewardItemState) {
+            case OnlineRewardItemState.notSatisfy:
+                this.mGetRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
+                this.mCanRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
+                this.mTimeTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+                this.mButton.normalImageColor = mw.LinearColor.white;
+                this.mTimeTextBlock.text = "00:00:00";
+                break;
+            case OnlineRewardItemState.satisfy:
+                this.mGetRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
+                this.mCanRewardTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+                this.mTimeTextBlock.visibility = mw.SlateVisibility.Collapsed;
+                this.mButton.normalImageColor = mw.LinearColor.white;
+                break;
+            case OnlineRewardItemState.getReward:
+                this.onClickButtonUpdateUI();
+                break;
+        }
+    }
+    /**
+     * 绑定按钮事件
+     */
+    bindButton() {
+        this.mButton.onClicked.clear();
+        this.mButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick");
+            switch (this.onlineRewardItemState) {
+                case OnlineRewardItemState.notSatisfy:
+                    Notice.showDownNotice("在线时间不足");
+                    break;
+                case OnlineRewardItemState.satisfy:
+                    this.onlineRewardItemState = OnlineRewardItemState.getReward;
+                    ModuleService.getModule(OnlineRewardModuleC).getOnlineRewrad(this.index);
+                    mw.UIService.getUI(OnlineRewardPanel).deleteNeedTweenItem(this.index);
+                    this.onClickButtonUpdateUI();
+                    Notice.showDownNotice("领取奖励");
+                    break;
+                case OnlineRewardItemState.getReward:
+                    Notice.showDownNotice("已领取奖励");
+                    break;
+            }
+        });
+        this.mButton.normalImageGuid = this.icon;
+        this.mButton.pressedImageGuid = this.icon;
+        this.mButton.disableImageGuid = this.icon;
+        this.mButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
+    }
+    /**
+     * 初始化奖励文本
+     */
+    initRewardTextBlock() {
+        if (this.rewardCounts[0] == 0) {
+            this.mCoinCanvas.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mCoinCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mCoinTextBlock.text = "×" + this.rewardCounts[0];
+        }
+        if (this.rewardCounts[1] == 0) {
+            this.mExpCanvas.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mExpCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mExpTextBlock.text = "×" + this.rewardCounts[1];
+        }
+        if (this.rewardCounts[2] == 0) {
+            this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mRoleCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mRoleTextBlock.text = "随机1" + this.rewardCounts[2] + "个\n永久套装";
+        }
+    }
+    /**
+    * 点击按钮更新UI
+    */
+    onClickButtonUpdateUI() {
+        this.mCanRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
+        this.mGetRewardTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        this.mButton.normalImageColor = mw.LinearColor.gray;
+        this.mTimeTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        this.mTimeTextBlock.text = "00:00:00";
+    }
+    /**
+     * 更新时间
+     * @param onlineSecond
+     */
+    updateTime(onlineSecond, isCanUpdateHUD) {
+        let timeLeft = this.needTime - onlineSecond;
+        if (timeLeft <= 0) {
+            this.mTimeTextBlock.visibility = mw.SlateVisibility.Collapsed;
+            this.mCanRewardTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.onlineRewardItemState = OnlineRewardItemState.satisfy;
+            mw.UIService.getUI(OnlineRewardPanel).deleteNeedUpdateItem(this.index);
+            this.startTween();
+            return;
+        }
+        let hour = Math.floor(timeLeft / 3600);
+        let minute = Math.floor((timeLeft - hour * 3600) / 60);
+        let second = Math.floor(timeLeft - hour * 3600 - minute * 60);
+        this.mTimeTextBlock.text =
+            (hour >= 10 ? hour : "0" + hour) + ":" +
+                (minute >= 10 ? minute : "0" + minute) + ":" +
+                (second >= 10 ? second : "0" + second);
+        if (isCanUpdateHUD)
+            this.getHUDPanel.updateHUDText(this.mTimeTextBlock.text);
+    }
+    /**
+     * 开始缓动
+     */
+    startTween() {
+        if (this.tween1) {
+            this.tween1.start();
+        }
+    }
+    /**
+     * 停止缓动
+     */
+    stopTween() {
+        if (this.tween1) {
+            this.tween1.stop();
+        }
+        if (this.tween2) {
+            this.tween2.stop();
+        }
+    }
+    /**
+     * 初始化缓动
+     */
+    initTween() {
+        if (this.tween1 != null)
+            return;
+        this.tween1 = new mw.Tween({ renderOpacity: 1 })
+            .to({ renderOpacity: 0.3 }, 0.5 * 1000)
+            .onUpdate((v) => {
+            this.mCanRewardTextBlock.renderOpacity = v.renderOpacity;
+        })
+            .onComplete(() => {
+            this.tween2.start();
+        })
+            .easing(cubicBezier(.18, .72, .28, .77));
+        if (this.tween2 != null)
+            return;
+        this.tween2 = new mw.Tween({ renderOpacity: 0.3 })
+            .to({ renderOpacity: 1 }, 0.5 * 1000)
+            .onUpdate((v) => {
+            this.mCanRewardTextBlock.renderOpacity = v.renderOpacity;
+        })
+            .onComplete(() => {
+            this.tween1.start();
+        })
+            .easing(cubicBezier(.18, .72, .28, .77));
+    }
+    recycle() {
+        ObjectPoolServices.getPool(OnlineRewardItem).return(this);
+    }
+}
+
+var foreign50 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    OnlineRewardItem: OnlineRewardItem,
+    OnlineRewardPanel: OnlineRewardPanel
+});
+
+class OnlineRewardModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.playerModuleC = null;
+        this.onlineRewardsPanel = undefined;
+        /**打开关闭在线奖励界面 */
+        this.onOnlineRewardsAction = new Action();
+        this.onlineSecond = 0;
+        this.isGetRewards = [];
+        this.isNeedUpdateItem = false;
+        this.isStartTimer = false;
+        this.secondTimer = 0;
+        this.secondTime = 1;
+        this.minuteTimer = 0;
+        this.minuteTime = 60;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.initData();
+        this.registerAction();
+    }
+    /**
+     * 初始化数据
+     */
+    initData() {
+        this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        this.onlineRewardsPanel = mw.UIService.getUI(OnlineRewardPanel);
+    }
+    /**
+     * 注册事件
+     */
+    registerAction() {
+        this.onOnlineRewardsAction.add((isOpen) => {
+            this.isNeedUpdateItem = isOpen;
+            isOpen ? this.onlineRewardsPanel.show() : this.onlineRewardsPanel.hideTween();
+        });
+    }
+    /**
+     * 获取在线奖励数据
+     */
+    net_getServerOnlineRewardData() {
+        this.onlineSecond = this.data.onlineMinute * 60;
+        this.isGetRewards = this.data.isGetRewards;
+        this.isStartTimer = true;
+        this.onlineRewardsPanel.initOnlineRewardItem(this.onlineSecond, this.isGetRewards);
+    }
+    /**
+     * 重置在线奖励数据（在现状态下）
+     */
+    net_resetOnlineReward() {
+        this.onlineSecond = this.data.onlineMinute * 60;
+        this.isGetRewards = this.data.isGetRewards;
+        this.onlineRewardsPanel.resetOnlineRewardItem(this.onlineSecond, this.isGetRewards);
+        this.secondTimer = 0;
+        this.minuteTimer = 0;
+        this.isStartTimer = true;
+        Console.error("重置在线奖励数据（在现状态下）");
+    }
+    /**
+     * 设置领取奖励的状态
+     * @param index
+     * @returns
+     */
+    setIsGetRewards(index) {
+        if (index < 0 || index >= this.isGetRewards.length)
+            return;
+        this.isGetRewards[index] = true;
+        this.server.net_saveIsGetRewards(index);
+    }
+    onUpdate(dt) {
+        if (!this.isStartTimer)
+            return;
+        this.secondTimer += dt;
+        if (this.secondTimer < this.secondTime)
+            return;
+        this.secondTimer = 0;
+        this.onlineSecond += this.secondTime;
+        this.minuteTimer += this.secondTime;
+        // if (this.isNeedUpdateItem)
+        this.onlineRewardsPanel.updateNeedUpdateItems(this.onlineSecond);
+        if (this.minuteTimer < this.minuteTime)
+            return;
+        this.minuteTimer = 0;
+        this.server.net_saveOnlineMinute(1);
+    }
+    /**
+     * 得到在线奖励
+     * @param index
+     */
+    getOnlineRewrad(index) {
+        this.setIsGetRewards(index);
+        let rewardCount = GameConfig.OnlineRewards.getElement(index + 1).RewardCount;
+        Notice.showDownNotice("奖励金币：" + rewardCount[0]);
+        Notice.showDownNotice("奖励经验：" + rewardCount[1]);
+        this.playerModuleC.saveCoinAndExp(rewardCount[0], rewardCount[1]);
+    }
+}
+var OnlineRewardItemState;
+(function (OnlineRewardItemState) {
+    /**不满足 */
+    OnlineRewardItemState[OnlineRewardItemState["notSatisfy"] = 0] = "notSatisfy";
+    /**满足未领取 */
+    OnlineRewardItemState[OnlineRewardItemState["satisfy"] = 1] = "satisfy";
+    /**已领取 */
+    OnlineRewardItemState[OnlineRewardItemState["getReward"] = 2] = "getReward";
+})(OnlineRewardItemState || (OnlineRewardItemState = {}));
+
+var foreign48 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get OnlineRewardItemState () { return OnlineRewardItemState; },
+    OnlineRewardModuleC: OnlineRewardModuleC
 });
 
 var TaskItemType;
@@ -7153,1689 +8405,6 @@ var foreign68 = /*#__PURE__*/Object.freeze({
     default: TaskModuleC
 });
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.05.19-23.59.55
- */
-let CostPanel_Generate = class CostPanel_Generate extends UIScript {
-    get mCostTextBlock() {
-        if (!this.mCostTextBlock_Internal && this.uiWidgetBase) {
-            this.mCostTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCostTextBlock');
-        }
-        return this.mCostTextBlock_Internal;
-    }
-    get mSureButton() {
-        if (!this.mSureButton_Internal && this.uiWidgetBase) {
-            this.mSureButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mSureButton');
-        }
-        return this.mSureButton_Internal;
-    }
-    get mCancleButton() {
-        if (!this.mCancleButton_Internal && this.uiWidgetBase) {
-            this.mCancleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCancleButton');
-        }
-        return this.mCancleButton_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mSureButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mSureButton");
-        });
-        this.mSureButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mCancleButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCancleButton");
-        });
-        this.mCancleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mCostTextBlock);
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/mSureButton/TextBlock_1"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/mCancleButton/TextBlock_1"));
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-CostPanel_Generate = __decorate([
-    UIBind('UI/module/ShopModule/CostPanel.ui')
-], CostPanel_Generate);
-var CostPanel_Generate$1 = CostPanel_Generate;
-
-var foreign97 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: CostPanel_Generate$1
-});
-
-/**
- * AUTHOR: 爱玩游戏的小胖子
- * TIME: 2023.07.30-16.55.05
- */
-class CostPanel extends CostPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.shopModuleC = null;
-    }
-    /**
-     * 构造UI文件成功后，在合适的时机最先初始化一次
-     */
-    onStart() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerMiddle;
-        this.initData();
-        this.bindButtons();
-    }
-    initData() {
-        this.shopModuleC = ModuleService.getModule(ShopModuleC);
-    }
-    bindButtons() {
-        this.mSureButton.onClicked.add(() => {
-            this.hide();
-            this.shopModuleC.sureBuy();
-        });
-        this.mCancleButton.onClicked.add(() => {
-            this.hide();
-        });
-    }
-    showAndInitData(price) {
-        this.mCostTextBlock.text = "确定要花费" + price + "金币\n购买此英雄套装吗？";
-        this.show();
-    }
-}
-
-var foreign65 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: CostPanel
-});
-
-class ShopModuleC extends ModuleC {
-    constructor() {
-        super(...arguments);
-        this.hudModuleC = null;
-        this.playerModuleC = null;
-        this.taskModuleC = null;
-        this.shopPanel = null;
-        this.costPanel = null;
-        this.adsTipsPanel = null;
-        this.weaponSet = [];
-        this.coldWeaponElement = null;
-        /**玩家和皮肤商店之间的相机转化 */
-        this.onSwitchCameraAction = new Action1();
-        /**玩家身上的相机 */
-        this.camera = null;
-        /**皮肤商店要展示的NPC */
-        this.shopNpc = null;
-        this.headUI = null;
-        this.shopNPCEffectId = null;
-        this.npcAnima = null;
-        this.rightWeapon = null;
-        this.leftWeapon = null;
-        this.oldCameraData = {};
-        /**记录当前滑动屏幕的X轴正负值 */
-        this.x = 0;
-        /**旋转速度 */
-        this.slideSpeedX = 1;
-        /**当前Npc的旋转Z轴值 */
-        this.currentNpcRotZ = 0;
-        this.limitedTouchXs = [460, 1460];
-        this.limitedTouchYs = [220, 840];
-    }
-    ;
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.initDatas();
-        this.registerActions();
-    }
-    /**初始化数据 */
-    initDatas() {
-        this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        this.taskModuleC = ModuleService.getModule(TaskModuleC);
-        this.shopPanel = mw.UIService.getUI(ShopPanel);
-        this.costPanel = mw.UIService.getUI(CostPanel);
-        this.adsTipsPanel = mw.UIService.getUI(AdTipsPanel);
-        let rootCanvaSize = mw.getViewportSize();
-        this.limitedTouchXs[0] = 460 * rootCanvaSize.x / 1920;
-        this.limitedTouchXs[1] = 1460 * rootCanvaSize.x / 1920;
-        this.limitedTouchYs[0] = 220 * rootCanvaSize.y / 1080;
-        this.limitedTouchYs[1] = 840 * rootCanvaSize.y / 1080;
-        Console.error(this.limitedTouchXs + " | " + this.limitedTouchYs);
-    }
-    registerActions() {
-        this.hudModuleC.onOpenShopAction.add(() => {
-            this.shopPanel.show();
-            this.onSwitchCameraAction.call(true);
-        });
-        this.onSwitchCameraAction.add((isOpenSkinShop) => {
-            isOpenSkinShop ? this.openWeaponSetShop() : this.closeWeaponSetShop();
-        });
-    }
-    onEnterScene(sceneType) {
-        this.initShopNPCData();
-        // this.appearance = this.localPlayer.character.setDescription(mw.HumanoidV2);
-        this.weaponSet = this.data.weaponSet;
-        TimeUtil.delaySecond(3).then(() => {
-            let id = this.data.useWeaponId;
-            let coldWeaponElement = GameConfig.ColdWeapon.getElement(id);
-            // this.updateRoleType(coldWeaponElement);
-            this.onSwitchWeapon(coldWeaponElement);
-            //切换角色
-            this.onSwitchRole(coldWeaponElement.Role);
-            //切换翅膀
-            this.onSwitchWing(coldWeaponElement);
-            this.updateShopRoles(coldWeaponElement);
-            this.shopPanel.defaultSelectItem(id);
-            this.updateHeadUI(coldWeaponElement);
-        });
-    }
-    /**更新角色类型 */
-    updateRoleType(element) {
-        this.coldWeaponElement = element;
-        switch (this.coldWeaponElement.RoleType) {
-            case 1:
-                this.onSwitchWeaponSet();
-                break;
-            case 2:
-                this.isHaveWeaponSet();
-                break;
-            case 3:
-                this.onWatchAdSwitchWeaponSet();
-                break;
-        }
-    }
-    /**判断是否拥有 */
-    isHaveWeaponSet() {
-        if (this.weaponSet.includes(this.coldWeaponElement.id)) {
-            this.onSwitchWeaponSet();
-        }
-        else {
-            this.costPanel.showAndInitData(this.coldWeaponElement.Price);
-        }
-    }
-    sureBuy() {
-        let costPrice = this.coldWeaponElement.Price;
-        if (this.playerModuleC.getCoin() >= costPrice) {
-            let id = this.coldWeaponElement.id;
-            if (!this.weaponSet.includes(id)) {
-                this.weaponSet.push(id);
-            }
-            this.saveWeaponSet(id);
-            this.playerModuleC.saveCoin(-costPrice);
-            this.updateHeadUI(this.coldWeaponElement);
-            this.shopPanel.updateTextBlock();
-            Notice.showDownNotice("购买成功");
-            this.taskModuleC.buyWeapon();
-        }
-        else {
-            Notice.showDownNotice("金币不足");
-        }
-    }
-    /**看广告切换武器套装 */
-    onWatchAdSwitchWeaponSet() {
-        if (GlobalData.isOpenIAA) {
-            this.adsTipsPanel.showAdTips(0, AdType.WeaponSet);
-        }
-        else {
-            this.onSwitchWeaponSet();
-        }
-    }
-    /**----------【PlayerModule】---------- */
-    ads(id) {
-        this.coldWeaponElement = GameConfig.ColdWeapon.getElement(id);
-        //切换武器
-        this.onSwitchWeapon(this.coldWeaponElement);
-        //切换角色
-        this.onSwitchRole(this.coldWeaponElement.Role);
-        //切换翅膀
-        this.onSwitchWing(this.coldWeaponElement);
-    }
-    /**切换武器套装 */
-    onSwitchWeaponSet() {
-        //切换武器
-        this.onSwitchWeapon(this.coldWeaponElement);
-        //切换角色
-        this.onSwitchRole(this.coldWeaponElement.Role);
-        //切换翅膀
-        this.onSwitchWing(this.coldWeaponElement);
-        this.shopPanel.hide();
-        this.onSwitchCameraAction.call(false);
-    }
-    /**切换武器 */
-    onSwitchWeapon(element) {
-        const userInstance = ColdWeapon.getInstance();
-        userInstance.register(element);
-        if (element.RoleType != 3) {
-            this.saveUseWeaponId(element.id);
-        }
-    }
-    // private appearance: mw.HumanoidV2 = null;
-    /**切换角色 */
-    onSwitchRole(role) {
-        this.localPlayer.character.setDescription([role]);
-        this.localPlayer.character.syncDescription();
-    }
-    /**切换翅膀 */
-    onSwitchWing(element) {
-        this.server.net_onSwitchWing(element.EffectId, element.EffectOffset, element.EffectRot, element.EffectScale);
-    }
-    /**拿到相机 */
-    get getCamera() {
-        if (this.camera == null) {
-            this.camera = Camera.currentCamera;
-        }
-        return this.camera;
-    }
-    /**得到商店的NPC */
-    get getShopNpc() {
-        if (this.shopNpc == null) {
-            this.shopNpc = GameObject.findGameObjectById("333D8F0C");
-        }
-        return this.shopNpc;
-    }
-    // private npcHv2: mw.HumanoidV2 = null;
-    /**初始化商店NPC数据 */
-    async initShopNPCData() {
-        this.shopNpc = await GameObject.asyncFindGameObjectById("333D8F0C");
-        this.shopNpc.complexMovementEnabled = false;
-        AccountService.downloadData(this.getShopNpc);
-        // let nickName = AccountService.getNickName();
-        // nickName = (nickName) ? nickName : "playerId:" + this.currentPlayerId;
-        this.getShopNpc.displayName = "";
-        this.currentNpcRotZ = this.getShopNpc.localTransform.rotation.z;
-        // this.npcHv2 = this.getShopNpc.setDescription(mw.HumanoidV2);
-        this.lookObj = await GameObject.asyncFindGameObjectById("3F08E093");
-        this.cameraRotation = this.getShopNpc.worldTransform.getForwardVector().multiply(-1).toRotation();
-        this.headUI = mw.UIService.create(NPCHead_Generate$1);
-        let headUIWidget = await GameObject.asyncFindGameObjectById("1A034CD5");
-        headUIWidget.setTargetUIWidget(this.headUI.uiWidgetBase);
-    }
-    updateHeadUI(element) {
-        switch (element.RoleType) {
-            case 1:
-                this.headUI.mFreeCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.headUI.mCoinCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.headUI.mAdsCanvas.visibility = mw.SlateVisibility.Collapsed;
-                break;
-            case 2:
-                this.headUI.mFreeCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.headUI.mCoinCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.headUI.mAdsCanvas.visibility = mw.SlateVisibility.Collapsed;
-                if (this.weaponSet.includes(element.id)) {
-                    this.headUI.mCoinText.fontSize = 100;
-                    this.headUI.mCoinText.text = "已拥有";
-                    // this.headUI.mCoinImage.visibility = mw.SlateVisibility.Collapsed;
-                }
-                else {
-                    this.headUI.mCoinText.fontSize = 70;
-                    this.headUI.mCoinText.text = "需要花费\n" + element.Price + "金币购买";
-                    // this.headUI.mCoinImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                }
-                break;
-            case 3:
-                this.headUI.mFreeCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.headUI.mCoinCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.headUI.mAdsCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                break;
-        }
-    }
-    async updateShopRoles(element) {
-        if (!element.Role) {
-            Console.error("配置表角色GUID不存在");
-            return;
-        }
-        if (!this.getShopNpc) {
-            Console.error("商店角色不存在");
-            return;
-        }
-        this.getShopNpc.setDescription([element.Role]);
-        this.getShopNpc.displayName = element.Del;
-        if (this.shopNPCEffectId) {
-            EffectService.stop(this.shopNPCEffectId);
-            this.shopNPCEffectId = null;
-        }
-        this.shopNPCEffectId = GeneralManager.rpcPlayEffectOnPlayer(element.EffectId, this.getShopNpc, mw.HumanoidSlotType.BackOrnamental, 0, element.EffectOffset, new mw.Rotation(element.EffectRot), element.EffectScale);
-        if (this.npcAnima) {
-            this.npcAnima.stop();
-            this.npcAnima = null;
-        }
-        if (element.StandbyAnimation) {
-            this.npcAnima = PlayerManagerExtesion.loadAnimationExtesion(this.getShopNpc, element.StandbyAnimation, false);
-            this.npcAnima.loop = 0;
-            this.npcAnima.play();
-        }
-        if (this.rightWeapon) {
-            this.rightWeapon.destroy();
-            this.rightWeapon = null;
-        }
-        if (element.rightWeaponGuid) {
-            this.rightWeapon = await SpawnManager.asyncSpawn({ guid: element.rightWeaponGuid, replicates: false });
-            this.getShopNpc.attachToSlot(this.rightWeapon, mw.HumanoidSlotType.RightHand);
-        }
-        if (this.leftWeapon) {
-            this.leftWeapon.destroy();
-            this.leftWeapon = null;
-        }
-        if (element.leftWeaponGuid) {
-            this.leftWeapon = await SpawnManager.asyncSpawn({ guid: element.leftWeaponGuid, replicates: false });
-            this.getShopNpc.attachToSlot(this.leftWeapon, mw.HumanoidSlotType.LeftHand);
-        }
-        this.updateHeadUI(element);
-    }
-    /**打开武器套装商店 */
-    openWeaponSetShop() {
-        this.oldCameraData = this.getCameraData();
-        let cs = this.getCamera;
-        this.oldRotation = cs.worldTransform.clone().rotation.clone();
-        this.oldCameraData[1].followTargetInterpSpeed = ModifiedCameraSystem.followTargetInterpSpeed;
-        ModifiedCameraSystem.followTargetInterpSpeed = 0;
-        cs.positionLagSpeed = 0;
-        cs.rotationLagEnabled = false;
-        cs.positionLagEnabled = false;
-        cs.rotationLagSpeed = 0;
-        cs.springArm.localTransform.position = mw.Vector.zero;
-        cs.localTransform.position = mw.Vector.zero;
-        ModifiedCameraSystem.setCameraFollowTarget(this.lookObj);
-        let crT = cs.localTransform.clone();
-        crT.position = new mw.Vector(0, 0, 85);
-        crT.rotation = mw.Rotation.zero;
-        cs.localTransform = crT;
-        ModifiedCameraSystem.setOverrideCameraRotation(this.cameraRotation);
-        InputManagers.getInstance.onPressTouch.add((data) => {
-            this.onPressTouch(data);
-        });
-        InputManagers.getInstance.onReleaseTouch.add((data) => {
-            this.onReleaseTouch(data);
-        });
-    }
-    /**关闭武器套装商店 */
-    closeWeaponSetShop() {
-        let cs = this.getCamera;
-        ModifiedCameraSystem.setCameraFollowTarget(this.localPlayer.character);
-        ModifiedCameraSystem.applySettings(this.oldCameraData[0]);
-        ModifiedCameraSystem.setOverrideCameraRotation(this.oldRotation);
-        setTimeout(() => {
-            cs.positionLagEnabled = this.oldCameraData[1].positionLagEnabled;
-            cs.rotationLagEnabled = this.oldCameraData[1].rotationLagEnabled;
-            ModifiedCameraSystem.followTargetInterpSpeed = this.oldCameraData[1].followTargetInterpSpeed;
-            cs.positionLagSpeed = this.oldCameraData[1].positionLagSpeed;
-            cs.rotationLagSpeed = this.oldCameraData[1].rotationLagSpeed;
-            ModifiedCameraSystem.resetOverrideCameraRotation();
-        }, 200);
-        InputManagers.getInstance.onPressTouch.clear();
-        InputManagers.getInstance.onReleaseTouch.clear();
-    }
-    getCameraData() {
-        let tmp = ModifiedCameraSystem.getCurrentSettings();
-        let ret = [{}, {}];
-        for (const key in tmp) {
-            if (Object.prototype.hasOwnProperty.call(tmp, key)) {
-                if (key == "cameraLocationLagSpeed" ||
-                    key == "cameraRotationLagSpeed" ||
-                    key == "followTargetInterpSpeed") {
-                    ret[0][key] = 0;
-                    ret[1][key] = tmp[key];
-                }
-                else if (key == "cameraRotationLagEnable" ||
-                    key == "cameraLocationLagEnable") {
-                    ret[0][key] = false;
-                    ret[1][key] = tmp[key];
-                }
-                else {
-                    ret[0][key] = tmp[key];
-                }
-            }
-        }
-        return ret;
-    }
-    /**按下 */
-    onPressTouch(data) {
-        // Console.error("[onPressTouch-data] " + data.x + "/" + data.y);
-        if (data.x > this.limitedTouchXs[1] || data.x < this.limitedTouchXs[0]
-            || data.y > this.limitedTouchYs[1] || data.y < this.limitedTouchYs[0])
-            return;
-        if (this.x != 0) {
-            let x = (data.x - this.x) * this.slideSpeedX;
-            // Console.error("x = " + x);
-            this.currentNpcRotZ -= x;
-            this.getShopNpc.localTransform.rotation = (new mw.Rotation(0, 0, this.currentNpcRotZ));
-        }
-        this.x = data.x;
-    }
-    /**释放 */
-    onReleaseTouch(data) {
-        // Console.error("[onReleaseTouch-data] " + data.x + "/" + data.y);
-        this.x = 0;
-    }
-    getWeaponSet() {
-        return this.data.weaponSet;
-    }
-    /**
-     * 是否拥有
-     * @param id
-     * @returns
-     */
-    isHaveWeapon(id) {
-        return this.data.weaponSet.includes(id);
-    }
-    saveWeaponSet(weaponId) {
-        this.server.net_saveWeaponSet(weaponId);
-    }
-    saveUseWeaponId(useWeaponId) {
-        this.server.net_saveUseWeaponId(useWeaponId);
-    }
-}
-
-var foreign63 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: ShopModuleC
-});
-
-/**
- * AUTHOR: 爱玩游戏的小胖子
- * TIME: 2023.07.29-22.55.52
- */
-class ShopPanel extends ShopPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.shopModuleC = null;
-        this.coldWeapons = [];
-        this.currentChildIndex = 0;
-        this.shopItems = [];
-        this.curSelectId = 0;
-    }
-    ;
-    /**
-     * 构造UI文件成功后，在合适的时机最先初始化一次
-     */
-    onStart() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerMiddle;
-        this.initDatas();
-        this.registerActions();
-        this.bindButtons();
-    }
-    initDatas() {
-        this.shopModuleC = ModuleService.getModule(ShopModuleC);
-        this.initShopItems();
-    }
-    registerActions() {
-        Console.error("[ShopPanel-registerActions]");
-    }
-    bindButtons() {
-        this.mCloseButton.onClicked.add(() => {
-            this.hide();
-            this.shopModuleC.onSwitchCameraAction.call(false);
-        });
-        this.mSaveButton.onClicked.add(() => {
-            this.shopModuleC.updateRoleType(this.coldWeapons[this.curSelectId - 1]);
-        });
-    }
-    initShopItems() {
-        this.coldWeapons = GameConfig.ColdWeapon.getAllElement();
-        this.showShopItems();
-    }
-    showShopItems() {
-        this.currentChildIndex = 0;
-        for (let i = 0; i < this.coldWeapons.length; ++i) {
-            let shopItem = ObjectPoolServices.getPool(ShopItem).spawn();
-            let id = this.coldWeapons[i].id;
-            shopItem.initData(id, this.coldWeapons[i].RoleIcon, this.shopModuleC.isHaveWeapon(id), this.coldWeapons[i].RoleType);
-            this.mItemCanvas.addChild(shopItem.shopItem);
-            shopItem.shopItem.size = new mw.Vector2(200, 200);
-            shopItem.shopItem.position = new mw.Vector2(200 * this.currentChildIndex++, 0);
-            this.shopItems.push(shopItem);
-        }
-        this.mItemCanvas.size = new mw.Vector2(200 * this.currentChildIndex, 200);
-    }
-    defaultSelectItem(id) {
-        this.curSelectId = id;
-        this.shopItems[this.curSelectId - 1].selectState();
-    }
-    updateShopNPC(id) {
-        if (this.curSelectId == id) {
-            Notice.showDownNotice("已选择");
-            return;
-        }
-        this.shopItems[this.curSelectId - 1].cancleSelectState();
-        this.curSelectId = id;
-        this.shopItems[this.curSelectId - 1].selectState();
-        let coldWeapon = this.coldWeapons[id - 1];
-        this.shopModuleC.updateShopRoles(coldWeapon);
-        let roleType = coldWeapon.RoleType;
-        if (roleType == 1) {
-            this.mSaveTextBlock.text = "使用";
-        }
-        else if (roleType == 2) {
-            if (this.shopModuleC.isHaveWeapon(id)) {
-                this.mSaveTextBlock.text = "使用";
-            }
-            else {
-                this.mSaveTextBlock.text = "购买";
-            }
-        }
-        else if (roleType == 3) {
-            this.mSaveTextBlock.text = "使用";
-        }
-    }
-    updateTextBlock() {
-        this.mSaveTextBlock.text = "使用";
-        this.shopItems[this.curSelectId - 1].mTextBlock.visibility = mw.SlateVisibility.Collapsed;
-    }
-}
-/**服装 */
-class ShopItem {
-    /**生成Item */
-    constructor() {
-        this.mCanvas = undefined;
-        this.mSelectImage = undefined;
-        this.mIconImage = undefined;
-        this.mClickButton = undefined;
-        this.mTextBlock = undefined;
-        this.mTextBlock_1 = undefined;
-        this.id = null;
-        this.isSelect = false;
-        this.shopItem = mw.createUIByName("module/ShopModule/ShopItem");
-        this.mCanvas = this.shopItem.findChildByPath("RootCanvas/mCanvas");
-        this.mClickButton = this.shopItem.findChildByPath("RootCanvas/mCanvas/mClickButton");
-        this.mSelectImage = this.shopItem.findChildByPath("RootCanvas/mCanvas/mSelectImage");
-        this.mIconImage = this.shopItem.findChildByPath("RootCanvas/mCanvas/mIconImage");
-        this.mTextBlock = this.shopItem.findChildByPath("RootCanvas/mCanvas/mTextBlock");
-        this.mTextBlock_1 = this.shopItem.findChildByPath("RootCanvas/mCanvas/mTextBlock_1");
-    }
-    /**填充数据 */
-    initData(id, iconGuid, isHave, roleType) {
-        this.id = id;
-        this.mIconImage.imageGuid = iconGuid;
-        this.mClickButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick");
-            if (!GlobalData.isCanClickShopItem) {
-                Notice.showDownNotice("别点太快");
-                return;
-            }
-            GlobalData.isCanClickShopItem = false;
-            TimeUtil.delaySecond(0.5).then(() => {
-                GlobalData.isCanClickShopItem = true;
-            });
-            mw.UIService.getUI(ShopPanel).updateShopNPC(this.id);
-        });
-        this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        if (roleType == 3) {
-            this.mTextBlock_1.text = "限时";
-            this.mTextBlock.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mTextBlock.visibility = isHave ? mw.SlateVisibility.Collapsed : mw.SlateVisibility.SelfHitTestInvisible;
-            this.mTextBlock_1.text = "永久";
-        }
-        this.cancleSelectState();
-    }
-    /**选中状态 */
-    selectState() {
-        this.isSelect = true;
-        this.mSelectImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-    }
-    /**取消选中状态 */
-    cancleSelectState() {
-        this.isSelect = false;
-        this.mSelectImage.visibility = mw.SlateVisibility.Collapsed;
-    }
-    /**回收Item */
-    recycleItem() {
-        this.cancleSelectState();
-        ObjectPoolServices.getPool(ShopItem).return(this);
-    }
-}
-
-var foreign66 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: ShopPanel
-});
-
-/**
- * AUTHOR: 爱玩游戏的小胖子
- * TIME: 2023.07.21-21.54.50
- */
-class HUDPanel extends HUDPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.hudModuleC = null;
-        this.shopPanel = null;
-        this.hideKillTipIntervalId = null;
-        this.killTipItems = [];
-        this.killTipDatas = [];
-        //#endregion
-        //#region 连杀提示
-        this.killTipsTimeOutId1 = null;
-        this.killTipsTimeOutId2 = null;
-        //#endregion
-        //#region 攻击
-        this.curInputIndex = -1;
-        //#endregion
-        //#region 背景音乐
-        /**是否打开BGM */
-        this.isOpenBGM = true;
-        /**背景音乐事件（true-打开|false-关闭） */
-        this.onBgmAction = new Action1();
-        /**切换背景音乐（-1前一首|1下一首） */
-        this.onSwitchBgmAction = new Action1();
-        this.jumpyImage_1_1 = null;
-        this.jumpyImage_1_2 = null;
-        this.jumpyImageTime_1 = 1;
-        this.jumpyImage_2 = null;
-        this.jumpyImageTime_2 = 1;
-        //#endregion
-        //#region 在线奖励
-        this.redPointTween1 = null;
-        this.redPointTween2 = null;
-        //#endregion
-        //#region 任务
-        this.taskRedPointTween1 = null;
-        this.taskRedPointTween2 = null;
-        //#endregion
-        //#endregion
-    }
-    /**
-     * 构造UI文件成功后，在合适的时机最先初始化一次
-     */
-    onStart() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerMiddle;
-        this.initDatas();
-        this.bindButtons();
-        this.initUI();
-        this.initRoleData();
-    }
-    /**初始化数据 */
-    initDatas() {
-        this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        this.shopPanel = mw.UIService.getUI(ShopPanel);
-    }
-    /**绑定按钮 */
-    bindButtons() {
-        this.mAtkButton.onClicked.clear();
-        this.mShopButton.onClicked.add(() => {
-            this.hudModuleC.onOpenShopAction.call();
-        });
-        this.mPlayerButton.onClicked.add(() => {
-            this.hudModuleC.onOpenPlayerAction.call();
-            this.hide();
-        });
-        this.mJumpButton.onClicked.add(() => {
-            this.hudModuleC.onJumpAction.call();
-        });
-        this.mSprintButton.onClicked.add(() => {
-            this.hudModuleC.onSprintAction.call();
-        });
-        this.mOnlineRewardButton.onClicked.add(() => {
-            this.hudModuleC.onOpenOnlineRewardAction.call();
-        });
-        this.mTaskButton.onClicked.add(() => {
-            this.hudModuleC.onOpenTaskAction.call();
-        });
-        this.mRankButton.onClicked.add(() => {
-            this.hudModuleC.onOpenRankAction.call();
-        });
-        this.mHomeButton.onClicked.add(() => {
-            this.hudModuleC.onHomeAction.call();
-        });
-        this.mAddCoinButton.onClicked.add(() => {
-            this.hudModuleC.onAddCoinAction.call();
-        });
-        this.mAdsButton.onClicked.add(() => {
-            this.hudModuleC.onAdsAction.call();
-        });
-        let isInvincible = false;
-        this.mInvincibleTextBlock.text = "已关闭";
-        this.mInvincibleButton.onClicked.add(() => {
-            isInvincible = !isInvincible;
-            this.mInvincibleTextBlock.text = isInvincible ? "已开启" : "已关闭";
-            this.hudModuleC.onInvincibleAction.call(isInvincible);
-        });
-        this.mOnlineRewardButton.normalImageGuid = "193281";
-        this.mOnlineRewardButton.pressedImageGuid = "193281";
-        this.mOnlineRewardButton.disableImageGuid = "193281";
-        this.bindMusicButton();
-    }
-    /**
-     * 初始化UI
-     */
-    initUI() {
-        this.initRedPointTween();
-        this.initTaskTween();
-        this.initKillTipItems();
-        this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
-        this.mTaskPointImage.visibility = mw.SlateVisibility.Collapsed;
-        Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
-        Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
-    }
-    onShow(...params) {
-        Console.error("[HUD-onShow]");
-        this.mVirtualJoystickPanel.resetJoyStick();
-        this.atk(0);
-    }
-    onHide() {
-        Console.error("[HUD-onHide]");
-        this.mVirtualJoystickPanel.resetJoyStick();
-        this.mAtkButton.onPressed.clear();
-        this.mAtkButton.onReleased.clear();
-    }
-    //#region 击杀提示
-    initKillTipItems() {
-        for (let i = 0; i < 4; ++i) {
-            let killTipItem = UIService.create(KillTipItem);
-            killTipItem.uiObject.position = new mw.Vector2(0, 37 * i);
-            Utils.setWidgetVisibility(killTipItem.uiObject, mw.SlateVisibility.Collapsed);
-            this.mKillTipCanvas.addChild(killTipItem.uiObject);
-            this.killTipItems.push(killTipItem);
-        }
-    }
-    killTip(killTipType, killerName, killedName) {
-        let killTipData = new KillTipData();
-        killTipData.killTipType = killTipType;
-        killTipData.killerName = killerName;
-        killTipData.killedName = killedName;
-        if (this.killTipDatas.length >= 4) {
-            this.killTipDatas.shift();
-        }
-        this.killTipDatas.push(killTipData);
-        this.updateKillTipItems();
-        this.clearHideKillTipIntervalId();
-        this.hideKillTipIntervalId = TimeUtil.setInterval(() => {
-            if (this.killTipDatas && this.killTipDatas.length > 0) {
-                this.killTipDatas.shift();
-                this.updateKillTipItems();
-            }
-            else {
-                this.clearHideKillTipIntervalId();
-            }
-        }, 5);
-    }
-    clearHideKillTipIntervalId() {
-        if (this.hideKillTipIntervalId) {
-            TimeUtil.clearInterval(this.hideKillTipIntervalId);
-            this.hideKillTipIntervalId = null;
-        }
-    }
-    updateKillTipItems() {
-        for (let i = 0; i < this.killTipDatas.length; ++i) {
-            this.killTipItems[i].setInfo(this.killTipDatas[i]);
-        }
-        for (let i = this.killTipDatas.length; i < 4; ++i) {
-            Utils.setWidgetVisibility(this.killTipItems[i].uiObject, mw.SlateVisibility.Collapsed);
-        }
-    }
-    showKillTips1(killTips, killerName, killedName) {
-        Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
-            + "\n" + "<color=#red>" + killTips + "</color>");
-    }
-    clearKillTipsTimeOutId1() {
-        if (this.killTipsTimeOutId1) {
-            clearTimeout(this.killTipsTimeOutId1);
-            this.killTipsTimeOutId1 = null;
-        }
-    }
-    showKillTips2(killerName, killedName, killTipType) {
-        if (killTipType == KillTipType.None)
-            return;
-        this.clearKillTipsTimeOutId2();
-        if (killTipType == KillTipType.Killed) {
-            this.mKillTipTextBlock3.text = "你已被 " + killerName + " 击败";
-        }
-        else if (killTipType == KillTipType.revenge) {
-            this.mKillTipTextBlock3.text = "击败 " + killedName + " 完成复仇";
-        }
-        Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
-        this.killTipsTimeOutId2 = setTimeout(() => {
-            Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
-            this.clearKillTipsTimeOutId2();
-        }, 3 * 1000);
-    }
-    clearKillTipsTimeOutId2() {
-        if (this.killTipsTimeOutId2) {
-            clearTimeout(this.killTipsTimeOutId2);
-            this.killTipsTimeOutId2 = null;
-        }
-    }
-    //#endregion
-    //#region Role
-    initRoleData() {
-        this.mHpProgressBar.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        this.mMpProgressBar.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        AccountService.fillAvatar(this.mRoleIconImage);
-    }
-    updateLvExpCoin(lv, exp, coin) {
-        this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
-        this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
-        this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
-        this.mCoinTextBlock.text = coin + "";
-        this.shopPanel.mCoinTextBlock.text = coin + "";
-        let atk = 50 + (lv * 3);
-        this.mAtkTextBlock.text = "攻击力：" + atk;
-        ColdWeapon.getInstance().updateHitDamage(atk);
-    }
-    updateCoin(coin) {
-        this.mCoinTextBlock.text = coin + "";
-        this.shopPanel.mCoinTextBlock.text = coin + "";
-    }
-    updateMp(curMp, maxMp) {
-        this.mMpProgressBar.currentValue = curMp / maxMp;
-        this.mMpTextBlock.text = curMp + "/" + maxMp;
-    }
-    updateHp(curHp, maxHp) {
-        if (curHp < 0)
-            curHp = 0;
-        this.mHpProgressBar.currentValue = curHp / maxHp;
-        this.mHpTextBlock.text = curHp + "/" + maxHp;
-    }
-    atk(index) {
-        this.mAtkButton.onPressed.add(() => {
-            if (this.curInputIndex != -1)
-                return;
-            ColdWeapon.getInstance().attack(index);
-            this.curInputIndex = index;
-        });
-        this.mAtkButton.onReleased.add(() => {
-            if (this.curInputIndex != index)
-                return;
-            ColdWeapon.getInstance().endCharge(true);
-            this.curInputIndex = -1;
-        });
-    }
-    /**初始化背景音乐按钮 */
-    bindMusicButton() {
-        this.mMusicCanvas.visibility = mw.SlateVisibility.Collapsed;
-        this.mMusicButton.onClicked.add(() => {
-            if (this.mMusicCanvas.visibility == mw.SlateVisibility.SelfHitTestInvisible)
-                return;
-            Utils.openUITween(this.mMusicCanvas, () => {
-                this.mMusicCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            }, null);
-            if (this.isOpenBGM)
-                this.startMusicTween();
-        });
-        this.mOnOffMusicBtn.onClicked.add(() => {
-            this.isOpenBGM = !this.isOpenBGM;
-            this.onBgmAction.call(this.isOpenBGM);
-            let offOnIcon = "";
-            if (this.isOpenBGM) {
-                offOnIcon = GlobalData.onMusicIconGuid;
-                this.startMusicTween();
-            }
-            else {
-                offOnIcon = GlobalData.offMusicIconGuid;
-                this.stopMusicTween();
-            }
-            this.mOnOffMusicBtn.normalImageGuid = offOnIcon;
-            this.mOnOffMusicBtn.pressedImageGuid = offOnIcon;
-            this.mOnOffMusicBtn.disableImageGuid = offOnIcon;
-        });
-        this.mLeftMusicBtn.onClicked.add(() => {
-            this.onSwitchBgmAction.call(-1);
-        });
-        this.mRightMusicBtn.onClicked.add(() => {
-            this.onSwitchBgmAction.call(1);
-        });
-        this.mCloseMusicBtn.onClicked.add(() => {
-            if (this.mMusicCanvas.visibility == mw.SlateVisibility.Collapsed)
-                return;
-            Utils.closeUITween(this.mMusicCanvas, null, () => {
-                this.mMusicCanvas.visibility = mw.SlateVisibility.Collapsed;
-            });
-            this.stopMusicTween();
-        });
-        this.initJumpyImage_1();
-        this.initJumpyImage_2();
-    }
-    /**开始Music的Tween */
-    startMusicTween() {
-        this.jumpyImage_1_1.start();
-        this.jumpyImage_2.start();
-    }
-    /**停止Music的Tween */
-    stopMusicTween() {
-        this.jumpyImage_1_1.stop();
-        this.jumpyImage_1_2.stop();
-        this.jumpyImage_2.stop();
-    }
-    initJumpyImage_1() {
-        this.jumpyImage_1_1 = new Tween$2({ y: 0.2 })
-            .to({ y: 1.5 }, this.jumpyImageTime_1 * 1000)
-            .onStart(() => {
-            this.mJumpyImage_1.renderScale = new mw.Vector2(1, 0.2);
-        })
-            .onUpdate((v) => {
-            this.mJumpyImage_1.renderScale = new mw.Vector2(1, v.y);
-        })
-            .onComplete(() => {
-            this.jumpyImage_1_2.start();
-        })
-            .easing(cubicBezier(.65, 2.01, .27, -0.87));
-        this.jumpyImage_1_2 = new Tween$2({ y: 1.5 })
-            .to({ y: 0.2 }, this.jumpyImageTime_1 * 1000)
-            .onStart(() => {
-            this.mJumpyImage_1.renderScale = new mw.Vector2(1, 1.5);
-        })
-            .onUpdate((v) => {
-            this.mJumpyImage_1.renderScale = new mw.Vector2(1, v.y);
-        })
-            .onComplete(() => {
-            this.jumpyImage_1_1.start();
-        })
-            .easing(cubicBezier(.65, 2.01, .27, -0.87));
-    }
-    initJumpyImage_2() {
-        this.jumpyImage_2 = new Tween$2({ angle: 0 })
-            .to({ angle: 360 }, this.jumpyImageTime_2 * 1000)
-            .onStart(() => {
-            this.mJumpyImage_2.renderTransformAngle = 0;
-        })
-            .onUpdate((v) => {
-            this.mJumpyImage_2.renderTransformAngle = v.angle;
-        })
-            .onComplete(() => {
-            this.mJumpyImage_2.renderTransformAngle = 0;
-        })
-            .repeat(Infinity);
-    }
-    startRedPointTween() {
-        if (this.redPointTween1) {
-            this.redPointTween1.start();
-        }
-        else {
-            this.initRedPointTween();
-            this.redPointTween1.start();
-        }
-    }
-    stopRedPointTween() {
-        if (this.redPointTween1) {
-            this.redPointTween1.stop();
-        }
-        if (this.redPointTween2) {
-            this.redPointTween2.stop();
-        }
-    }
-    /**
-     * 初始化在线奖励红点缓动
-     */
-    initRedPointTween() {
-        this.redPointTween1 = new mw.Tween({ value: 0.8 })
-            .to({ value: 1.2 }, 0.2 * 1000)
-            .onStart(() => {
-            this.mPointImage.renderScale = mw.Vector2.one.multiply(0.8);
-        })
-            .onUpdate((v) => {
-            this.mPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })
-            .onComplete(() => {
-            this.redPointTween2.start();
-        })
-            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
-        this.redPointTween2 = new mw.Tween({ value: 1.2 })
-            .to({ value: 0.8 }, 0.2 * 1000)
-            .onStart(() => {
-            this.mPointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })
-            .onUpdate((v) => {
-            this.mPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })
-            .onComplete(() => {
-            this.redPointTween1.start();
-        })
-            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
-    }
-    /**
-     * 更新在线奖励Icon
-     * @param icon
-     */
-    updateOnlineRewradIcon(icon) {
-        if (icon == "") {
-            this.stopRedPointTween();
-            this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
-            return;
-        }
-        this.mOnlineRewardButton.normalImageGuid = icon;
-        this.mOnlineRewardButton.pressedImageGuid = icon;
-        this.mOnlineRewardButton.disableImageGuid = icon;
-        this.mPointImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        this.startRedPointTween();
-    }
-    startTaskRedPointTween() {
-        if (this.taskRedPointTween1) {
-            this.taskRedPointTween1.start();
-        }
-        else {
-            this.initTaskTween();
-            this.taskRedPointTween1.start();
-        }
-        this.mTaskPointImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-    }
-    stopTaskRedPointTween() {
-        if (this.taskRedPointTween1) {
-            this.taskRedPointTween1.stop();
-        }
-        if (this.taskRedPointTween2) {
-            this.taskRedPointTween2.stop();
-        }
-        this.mTaskPointImage.visibility = mw.SlateVisibility.Collapsed;
-    }
-    initTaskTween() {
-        this.taskRedPointTween1 = new mw.Tween({ value: 0.8 })
-            .to({ value: 1.2 }, 0.2 * 1000)
-            .onStart(() => {
-            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(0.8);
-        })
-            .onUpdate((v) => {
-            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })
-            .onComplete(() => {
-            this.taskRedPointTween2.start();
-        })
-            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
-        this.taskRedPointTween2 = new mw.Tween({ value: 1.2 })
-            .to({ value: 0.8 }, 0.2 * 1000)
-            .onStart(() => {
-            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })
-            .onUpdate((v) => {
-            this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })
-            .onComplete(() => {
-            this.taskRedPointTween1.start();
-        })
-            .easing(cubicBezier(0.25, 0.1, 0.25, 1));
-    }
-    updateHUDText(text) {
-        this.mOnlineRewardTextBlock.text = text;
-    }
-}
-class KillTipItem extends KillTipItem_Generate$1 {
-    onAwake() {
-    }
-    setInfo(killTipDatas) {
-        this.mKillerTextBlock.text = killTipDatas.killerName;
-        this.mKilledTextBlock.text = killTipDatas.killedName;
-        switch (killTipDatas.killTipType) {
-            case KillTipType.None:
-                this.mKillerTextBlock.fontColor = mw.LinearColor.white;
-                this.mKillerTextBlock.shadowColor = mw.LinearColor.white;
-                this.mKilledTextBlock.fontColor = mw.LinearColor.white;
-                this.mKilledTextBlock.shadowColor = mw.LinearColor.white;
-                break;
-            case KillTipType.Killer:
-                this.mKillerTextBlock.fontColor = mw.LinearColor.yellow;
-                this.mKillerTextBlock.shadowColor = mw.LinearColor.red;
-                this.mKilledTextBlock.fontColor = mw.LinearColor.white;
-                this.mKilledTextBlock.shadowColor = mw.LinearColor.white;
-                break;
-            case KillTipType.Killed:
-                this.mKillerTextBlock.fontColor = mw.LinearColor.white;
-                this.mKillerTextBlock.shadowColor = mw.LinearColor.white;
-                this.mKilledTextBlock.fontColor = mw.LinearColor.yellow;
-                this.mKilledTextBlock.shadowColor = mw.LinearColor.red;
-                break;
-        }
-        Utils.setWidgetVisibility(this.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-        setTimeout(() => {
-            this.mBgImage.size = new mw.Vector2(this.mMainCanvas.size.x + 20, this.mMainCanvas.size.y);
-        }, 1);
-    }
-}
-
-var foreign45 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    KillTipItem: KillTipItem,
-    default: HUDPanel
-});
-
-/**
- * AUTHOR: 爱玩游戏的小胖子
- * TIME: 2023.09.20-22.36.29
- */
-class OnlineRewardPanel extends OnlineRewardPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.hudModuleC = null;
-        this.onlineRewardsModuleC = null;
-        this.onlineRewardsElements = [];
-        /**所有的item */
-        this.onlineRewardItems = [];
-        /**需要更新的Items */
-        this.needUpdateItems = {};
-        /**需要缓动的Item */
-        this.needTweenItems = {};
-    }
-    onStart() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerMiddle;
-        this.initData();
-        this.bindButton();
-    }
-    /**
-     * 初始化面板数据
-     */
-    initData() {
-        this.onlineRewardsModuleC = ModuleService.getModule(OnlineRewardModuleC);
-        this.hudModuleC = ModuleService.getModule(HUDModuleC);
-    }
-    /**
-     * 绑定按钮事件
-     */
-    bindButton() {
-        this.mCloseButton.onClicked.add(() => {
-            this.onlineRewardsModuleC.onOnlineRewardsAction.call(false);
-        });
-    }
-    onShow(...params) {
-        this.openNeedTweenItems(true);
-        Console.error("this.rootCanvas.position = " + this.rootCanvas.position);
-        Utils.openUITween(this.rootCanvas, null, null);
-    }
-    /**
-     * 隐藏缓动
-     */
-    hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, () => {
-            this.hide();
-        });
-    }
-    onHide() {
-        this.openNeedTweenItems(false);
-    }
-    /**
-     * 初始化在线奖励Item
-     * @param itemCount
-     */
-    initOnlineRewardItem(onlineSecond, isGetRewards) {
-        this.onlineRewardsElements = GameConfig.OnlineRewards.getAllElement();
-        for (let i = 0; i < this.onlineRewardsElements.length; ++i) {
-            let onlineRewardItem = ObjectPoolServices.getPool(OnlineRewardItem).spawn();
-            let onlineRewardItemState = OnlineRewardItemState.notSatisfy;
-            let onlineRewardsElement = this.onlineRewardsElements[i];
-            let needTime = onlineRewardsElement.OnlineTime;
-            let needUpdate = false;
-            let needTween = false;
-            if (isGetRewards[i]) {
-                onlineRewardItemState = OnlineRewardItemState.getReward;
-            }
-            else {
-                if (onlineSecond >= needTime * 60) {
-                    onlineRewardItemState = OnlineRewardItemState.satisfy;
-                    needTween = true;
-                }
-                else {
-                    onlineRewardItemState = OnlineRewardItemState.notSatisfy;
-                    needUpdate = true;
-                }
-            }
-            onlineRewardItem.setData(i, onlineRewardsElement.OnlineTime, onlineRewardItemState, onlineRewardsElement.RewardCount, onlineRewardsElement.Icon);
-            this.mCanvas.addChild(onlineRewardItem.onlineRewardItem);
-            onlineRewardItem.onlineRewardItem.size = new mw.Vector2(200, 200);
-            this.onlineRewardItems.push(onlineRewardItem);
-            if (needUpdate)
-                MapEx.set(this.needUpdateItems, i, onlineRewardItem);
-            if (needTween)
-                this.addNeedTweenItem(i, onlineRewardItem);
-        }
-    }
-    /**
-     * 一直在线的玩家重置数据
-     * @param onlineSecond
-     * @param isGetRewards
-     */
-    resetOnlineRewardItem(onlineSecond, isGetRewards) {
-        this.needUpdateItems = {};
-        for (let i = 0; i < this.onlineRewardItems.length; ++i) {
-            let onlineRewardItem = this.onlineRewardItems[i];
-            let onlineRewardItemState = OnlineRewardItemState.notSatisfy;
-            let onlineRewardsElement = this.onlineRewardsElements[i];
-            let needTime = onlineRewardsElement.OnlineTime;
-            let needUpdate = false;
-            if (isGetRewards[i]) {
-                onlineRewardItemState = OnlineRewardItemState.getReward;
-            }
-            else {
-                if (onlineSecond >= needTime * 60) {
-                    onlineRewardItemState = OnlineRewardItemState.satisfy;
-                }
-                else {
-                    onlineRewardItemState = OnlineRewardItemState.notSatisfy;
-                    needUpdate = true;
-                }
-            }
-            onlineRewardItem.setData(i, needTime, onlineRewardItemState, onlineRewardsElement.RewardCount, onlineRewardsElement.Icon);
-            if (needUpdate)
-                MapEx.set(this.needUpdateItems, i, onlineRewardItem);
-        }
-    }
-    /**
-     * 更新需要更新的Item
-     * @param onlineSecond
-     */
-    updateNeedUpdateItems(onlineSecond) {
-        if (MapEx.count(this.needUpdateItems) == 0)
-            return;
-        let isCanUpdateHUD = true;
-        MapEx.forEach(this.needUpdateItems, (key, value) => {
-            value.updateTime(onlineSecond, isCanUpdateHUD);
-            isCanUpdateHUD = false;
-        });
-    }
-    /**
-     * 删除需要更新的Item
-     * @param index
-     */
-    deleteNeedUpdateItem(index) {
-        if (MapEx.has(this.needUpdateItems, index)) {
-            this.addNeedTweenItem(index, MapEx.get(this.needUpdateItems, index));
-            MapEx.del(this.needUpdateItems, index);
-        }
-    }
-    /**
-     * 开启|关闭需要缓动的Item
-     */
-    openNeedTweenItems(isOpen) {
-        Console.error("MapEx.count(this.needTweenItems) = " + MapEx.count(this.needTweenItems));
-        MapEx.forEach(this.needTweenItems, (key, value) => {
-            isOpen ? value.startTween() : value.stopTween();
-        });
-    }
-    /**
-     * 添加需要缓动的Item
-     * @param index
-     * @param onlineRewardItem
-     */
-    addNeedTweenItem(index, onlineRewardItem) {
-        MapEx.set(this.needTweenItems, index, onlineRewardItem);
-        this.hudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
-    }
-    /**
-     * 得到当前需要显示的Icon
-     * @returns
-     */
-    getOnlineRewradIcon() {
-        if (MapEx.count(this.needTweenItems) == 0)
-            return "";
-        for (let i = this.onlineRewardsElements.length - 1; i >= 0; --i) {
-            if (MapEx.has(this.needTweenItems, i)) {
-                return this.onlineRewardsElements[i].Icon;
-            }
-        }
-        return "";
-    }
-    /**
-     * 删除需要缓动的Item
-     * @param index
-     */
-    deleteNeedTweenItem(index) {
-        if (MapEx.has(this.needTweenItems, index)) {
-            MapEx.get(this.needTweenItems, index).stopTween();
-            MapEx.del(this.needTweenItems, index);
-            this.hudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
-        }
-    }
-}
-class OnlineRewardItem {
-    /**生成Item */
-    constructor() {
-        this.mButton = undefined;
-        this.mTimeTextBlock = undefined;
-        this.mGetRewardTextBlock = undefined;
-        this.mCanRewardTextBlock = undefined;
-        this.mCoinCanvas = undefined;
-        this.mCoinTextBlock = undefined;
-        this.mExpCanvas = undefined;
-        this.mExpTextBlock = undefined;
-        this.mRoleCanvas = undefined;
-        this.mRoleTextBlock = undefined;
-        this.hudPanel = null;
-        this.index = 0;
-        this.needTime = 0;
-        this.onlineRewardItemState = OnlineRewardItemState.notSatisfy;
-        this.rewardCounts = [];
-        this.icon = "";
-        this.tween1 = null;
-        this.tween2 = null;
-        this.onlineRewardItem = mw.createUIByName("module/OnlineReward/OnlineRewardItem");
-        this.mButton = this.onlineRewardItem.findChildByPath("RootCanvas/mButton");
-        this.mTimeTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mTimeTextBlock");
-        this.mGetRewardTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mGetRewardTextBlock");
-        this.mCanRewardTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mCanRewardTextBlock");
-        this.mCoinCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mCoinCanvas");
-        this.mCoinTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mCoinCanvas/mCoinTextBlock");
-        this.mExpCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mExpCanvas");
-        this.mExpTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mExpCanvas/mExpTextBlock");
-        this.mRoleCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas");
-        this.mRoleTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas/mRoleTextBlock");
-    }
-    get getHUDPanel() {
-        if (this.hudPanel == null) {
-            this.hudPanel = mw.UIService.getUI(HUDPanel);
-        }
-        return this.hudPanel;
-    }
-    /**
-     * 设置数据
-     */
-    setData(index, needTime, onlineRewardItemState, rewardCounts, icon) {
-        this.index = index;
-        this.needTime = needTime * 60;
-        this.onlineRewardItemState = onlineRewardItemState;
-        this.rewardCounts = rewardCounts;
-        this.icon = icon;
-        this.initItemStateTextBlock();
-        this.bindButton();
-        this.initRewardTextBlock();
-        this.initTween();
-    }
-    /**
-     * 初始化Item状态文本
-     */
-    initItemStateTextBlock() {
-        switch (this.onlineRewardItemState) {
-            case OnlineRewardItemState.notSatisfy:
-                this.mGetRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
-                this.mCanRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
-                this.mTimeTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.mButton.normalImageColor = mw.LinearColor.white;
-                this.mTimeTextBlock.text = "00:00:00";
-                break;
-            case OnlineRewardItemState.satisfy:
-                this.mGetRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
-                this.mCanRewardTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.mTimeTextBlock.visibility = mw.SlateVisibility.Collapsed;
-                this.mButton.normalImageColor = mw.LinearColor.white;
-                break;
-            case OnlineRewardItemState.getReward:
-                this.onClickButtonUpdateUI();
-                break;
-        }
-    }
-    /**
-     * 绑定按钮事件
-     */
-    bindButton() {
-        this.mButton.onClicked.clear();
-        this.mButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick");
-            switch (this.onlineRewardItemState) {
-                case OnlineRewardItemState.notSatisfy:
-                    Notice.showDownNotice("在线时间不足");
-                    break;
-                case OnlineRewardItemState.satisfy:
-                    this.onlineRewardItemState = OnlineRewardItemState.getReward;
-                    ModuleService.getModule(OnlineRewardModuleC).getOnlineRewrad(this.index);
-                    mw.UIService.getUI(OnlineRewardPanel).deleteNeedTweenItem(this.index);
-                    this.onClickButtonUpdateUI();
-                    Notice.showDownNotice("领取奖励");
-                    break;
-                case OnlineRewardItemState.getReward:
-                    Notice.showDownNotice("已领取奖励");
-                    break;
-            }
-        });
-        this.mButton.normalImageGuid = this.icon;
-        this.mButton.pressedImageGuid = this.icon;
-        this.mButton.disableImageGuid = this.icon;
-        this.mButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-    }
-    /**
-     * 初始化奖励文本
-     */
-    initRewardTextBlock() {
-        if (this.rewardCounts[0] == 0) {
-            this.mCoinCanvas.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mCoinCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mCoinTextBlock.text = "×" + this.rewardCounts[0];
-        }
-        if (this.rewardCounts[1] == 0) {
-            this.mExpCanvas.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mExpCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mExpTextBlock.text = "×" + this.rewardCounts[1];
-        }
-        if (this.rewardCounts[2] == 0) {
-            this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mRoleCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mRoleTextBlock.text = "随机1" + this.rewardCounts[2] + "个\n永久套装";
-        }
-    }
-    /**
-    * 点击按钮更新UI
-    */
-    onClickButtonUpdateUI() {
-        this.mCanRewardTextBlock.visibility = mw.SlateVisibility.Collapsed;
-        this.mGetRewardTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        this.mButton.normalImageColor = mw.LinearColor.gray;
-        this.mTimeTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        this.mTimeTextBlock.text = "00:00:00";
-    }
-    /**
-     * 更新时间
-     * @param onlineSecond
-     */
-    updateTime(onlineSecond, isCanUpdateHUD) {
-        let timeLeft = this.needTime - onlineSecond;
-        if (timeLeft <= 0) {
-            this.mTimeTextBlock.visibility = mw.SlateVisibility.Collapsed;
-            this.mCanRewardTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.onlineRewardItemState = OnlineRewardItemState.satisfy;
-            mw.UIService.getUI(OnlineRewardPanel).deleteNeedUpdateItem(this.index);
-            this.startTween();
-            return;
-        }
-        let hour = Math.floor(timeLeft / 3600);
-        let minute = Math.floor((timeLeft - hour * 3600) / 60);
-        let second = Math.floor(timeLeft - hour * 3600 - minute * 60);
-        this.mTimeTextBlock.text =
-            (hour >= 10 ? hour : "0" + hour) + ":" +
-                (minute >= 10 ? minute : "0" + minute) + ":" +
-                (second >= 10 ? second : "0" + second);
-        if (isCanUpdateHUD)
-            this.getHUDPanel.updateHUDText(this.mTimeTextBlock.text);
-    }
-    /**
-     * 开始缓动
-     */
-    startTween() {
-        if (this.tween1) {
-            this.tween1.start();
-        }
-    }
-    /**
-     * 停止缓动
-     */
-    stopTween() {
-        if (this.tween1) {
-            this.tween1.stop();
-        }
-        if (this.tween2) {
-            this.tween2.stop();
-        }
-    }
-    /**
-     * 初始化缓动
-     */
-    initTween() {
-        if (this.tween1 != null)
-            return;
-        this.tween1 = new mw.Tween({ renderOpacity: 1 })
-            .to({ renderOpacity: 0.3 }, 0.5 * 1000)
-            .onUpdate((v) => {
-            this.mCanRewardTextBlock.renderOpacity = v.renderOpacity;
-        })
-            .onComplete(() => {
-            this.tween2.start();
-        })
-            .easing(cubicBezier(.18, .72, .28, .77));
-        if (this.tween2 != null)
-            return;
-        this.tween2 = new mw.Tween({ renderOpacity: 0.3 })
-            .to({ renderOpacity: 1 }, 0.5 * 1000)
-            .onUpdate((v) => {
-            this.mCanRewardTextBlock.renderOpacity = v.renderOpacity;
-        })
-            .onComplete(() => {
-            this.tween1.start();
-        })
-            .easing(cubicBezier(.18, .72, .28, .77));
-    }
-    recycle() {
-        ObjectPoolServices.getPool(OnlineRewardItem).return(this);
-    }
-}
-
-var foreign50 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    OnlineRewardItem: OnlineRewardItem,
-    OnlineRewardPanel: OnlineRewardPanel
-});
-
-class OnlineRewardModuleC extends ModuleC {
-    constructor() {
-        super(...arguments);
-        this.playerModuleC = null;
-        this.onlineRewardsPanel = undefined;
-        /**打开关闭在线奖励界面 */
-        this.onOnlineRewardsAction = new Action();
-        this.onlineSecond = 0;
-        this.isGetRewards = [];
-        this.isNeedUpdateItem = false;
-        this.isStartTimer = false;
-        this.secondTimer = 0;
-        this.secondTime = 1;
-        this.minuteTimer = 0;
-        this.minuteTime = 60;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.initData();
-        this.registerAction();
-    }
-    /**
-     * 初始化数据
-     */
-    initData() {
-        this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        this.onlineRewardsPanel = mw.UIService.getUI(OnlineRewardPanel);
-    }
-    /**
-     * 注册事件
-     */
-    registerAction() {
-        this.onOnlineRewardsAction.add((isOpen) => {
-            this.isNeedUpdateItem = isOpen;
-            isOpen ? this.onlineRewardsPanel.show() : this.onlineRewardsPanel.hideTween();
-        });
-    }
-    /**
-     * 获取在线奖励数据
-     */
-    net_getServerOnlineRewardData() {
-        this.onlineSecond = this.data.onlineMinute * 60;
-        this.isGetRewards = this.data.isGetRewards;
-        this.isStartTimer = true;
-        this.onlineRewardsPanel.initOnlineRewardItem(this.onlineSecond, this.isGetRewards);
-    }
-    /**
-     * 重置在线奖励数据（在现状态下）
-     */
-    net_resetOnlineReward() {
-        this.onlineSecond = this.data.onlineMinute * 60;
-        this.isGetRewards = this.data.isGetRewards;
-        this.onlineRewardsPanel.resetOnlineRewardItem(this.onlineSecond, this.isGetRewards);
-        this.secondTimer = 0;
-        this.minuteTimer = 0;
-        this.isStartTimer = true;
-        Console.error("重置在线奖励数据（在现状态下）");
-    }
-    /**
-     * 设置领取奖励的状态
-     * @param index
-     * @returns
-     */
-    setIsGetRewards(index) {
-        if (index < 0 || index >= this.isGetRewards.length)
-            return;
-        this.isGetRewards[index] = true;
-        this.server.net_saveIsGetRewards(index);
-    }
-    onUpdate(dt) {
-        if (!this.isStartTimer)
-            return;
-        this.secondTimer += dt;
-        if (this.secondTimer < this.secondTime)
-            return;
-        this.secondTimer = 0;
-        this.onlineSecond += this.secondTime;
-        this.minuteTimer += this.secondTime;
-        // if (this.isNeedUpdateItem)
-        this.onlineRewardsPanel.updateNeedUpdateItems(this.onlineSecond);
-        if (this.minuteTimer < this.minuteTime)
-            return;
-        this.minuteTimer = 0;
-        this.server.net_saveOnlineMinute(1);
-    }
-    /**
-     * 得到在线奖励
-     * @param index
-     */
-    getOnlineRewrad(index) {
-        this.setIsGetRewards(index);
-        let rewardCount = GameConfig.OnlineRewards.getElement(index + 1).RewardCount;
-        Notice.showDownNotice("奖励金币：" + rewardCount[0]);
-        Notice.showDownNotice("奖励经验：" + rewardCount[1]);
-        this.playerModuleC.saveCoinAndExp(rewardCount[0], rewardCount[1]);
-    }
-}
-var OnlineRewardItemState;
-(function (OnlineRewardItemState) {
-    /**不满足 */
-    OnlineRewardItemState[OnlineRewardItemState["notSatisfy"] = 0] = "notSatisfy";
-    /**满足未领取 */
-    OnlineRewardItemState[OnlineRewardItemState["satisfy"] = 1] = "satisfy";
-    /**已领取 */
-    OnlineRewardItemState[OnlineRewardItemState["getReward"] = 2] = "getReward";
-})(OnlineRewardItemState || (OnlineRewardItemState = {}));
-
-var foreign48 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    get OnlineRewardItemState () { return OnlineRewardItemState; },
-    OnlineRewardModuleC: OnlineRewardModuleC
-});
-
 class HUDModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -8952,20 +8521,18 @@ class HUDModuleC extends ModuleC {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
         });
         this.onAddCoinAction.add(() => {
-            if (GlobalData.isOpenIAA) {
-                this.adsTipsPanel.showAdTips(0, AdType.AddCoin);
-            }
-            else {
-                this.playerModuleC.saveCoin(1000);
-            }
+            // if (GlobalData.isOpenIAA) {
+            //     this.adsTipsPanel.showAdTips(0, AdType.AddCoin);
+            // } else {
+            //     this.playerModuleC.saveCoin(1000);
+            // }
         });
         this.onAdsAction.add(() => {
-            if (GlobalData.isOpenIAA) {
-                this.adsTipsPanel.showAdTips(0, AdType.AddCoinAndExp);
-            }
-            else {
-                this.playerModuleC.saveCoinAndExp(500, 500);
-            }
+            // if (GlobalData.isOpenIAA) {
+            //     this.adsTipsPanel.showAdTips(0, AdType.AddCoinAndExp);
+            // } else {
+            //     this.playerModuleC.saveCoinAndExp(500, 500);
+            // }
         });
         this.onInvincibleAction.add((isInvincible) => {
             this.playerModuleC.isInvincible(isInvincible);
@@ -9294,178 +8861,506 @@ var foreign43 = /*#__PURE__*/Object.freeze({
     default: HUDModuleC
 });
 
-class PlayerModuleC extends ModuleC {
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/ShopModule/CostPanel.ui
+ * TIME: 2024.05.19-23.59.55
+ */
+let CostPanel_Generate = class CostPanel_Generate extends UIScript {
+    get mCostTextBlock() {
+        if (!this.mCostTextBlock_Internal && this.uiWidgetBase) {
+            this.mCostTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCostTextBlock');
+        }
+        return this.mCostTextBlock_Internal;
+    }
+    get mSureButton() {
+        if (!this.mSureButton_Internal && this.uiWidgetBase) {
+            this.mSureButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mSureButton');
+        }
+        return this.mSureButton_Internal;
+    }
+    get mCancleButton() {
+        if (!this.mCancleButton_Internal && this.uiWidgetBase) {
+            this.mCancleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mCancleButton');
+        }
+        return this.mCancleButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mSureButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mSureButton");
+        });
+        this.mSureButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mCancleButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCancleButton");
+        });
+        this.mCancleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mCostTextBlock);
+        //文本多语言
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/mSureButton/TextBlock_1"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/mCancleButton/TextBlock_1"));
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+CostPanel_Generate = __decorate([
+    UIBind('UI/module/ShopModule/CostPanel.ui')
+], CostPanel_Generate);
+var CostPanel_Generate$1 = CostPanel_Generate;
+
+var foreign97 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CostPanel_Generate$1
+});
+
+/**
+ * AUTHOR: 爱玩游戏的小胖子
+ * TIME: 2023.07.30-16.55.05
+ */
+class CostPanel extends CostPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.shopModuleC = null;
+    }
+    /**
+     * 构造UI文件成功后，在合适的时机最先初始化一次
+     */
+    onStart() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerMiddle;
+        this.initData();
+        this.bindButtons();
+    }
+    initData() {
+        this.shopModuleC = ModuleService.getModule(ShopModuleC);
+    }
+    bindButtons() {
+        this.mSureButton.onClicked.add(() => {
+            this.hide();
+            this.shopModuleC.sureBuy();
+        });
+        this.mCancleButton.onClicked.add(() => {
+            this.hide();
+        });
+    }
+    showAndInitData(price) {
+        this.mCostTextBlock.text = "确定要花费" + price + "金币\n购买此英雄套装吗？";
+        this.show();
+    }
+}
+
+var foreign65 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: CostPanel
+});
+
+class ShopModuleC extends ModuleC {
     constructor() {
         super(...arguments);
         this.hudModuleC = null;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        InputUtil.onKeyDown(mw.Keys.NumPadSeven, () => {
-            this.saveLevel(1);
-        });
-        InputUtil.onKeyDown(mw.Keys.NumPadEight, () => {
-            this.saveHeight(1);
-        });
-        InputUtil.onKeyDown(mw.Keys.NumPadNine, () => {
-            this.saveKill(1);
-        });
-    }
-    onEnterScene(sceneType) {
-        this.hudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
-    }
-    net_onPlayerAtkSelf(damage, hitPoint) {
-        let fontColor = Utils.randomColor();
-        FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
-    }
-    net_onSelfAtkPlayer(damage, hitPoint, isDie, maxHp) {
-        Console.error("net_onSelfAtkPlayer");
-        let fontColor = Utils.randomColor();
-        FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
-        if (isDie) {
-            ExplosiveCoins.instance.explosiveCoins(new mw.Vector(hitPoint.x, hitPoint.y, hitPoint.z / 2), maxHp / 10, Utils.getRandomInteger(5, 10));
-            Notice.showDownNotice("增加" + maxHp / 10 + "金币");
-            Notice.showDownNotice("增加" + maxHp / 10 + "经验");
-        }
-    }
-    net_updateLvExpAndCoin(isAddLv, coin = 0) {
-        let playerLv = this.data.playerLv;
-        this.hudModuleC.updateLvExpCoin(playerLv, this.data.exp, this.data.coin, isAddLv);
-        if (coin > 0)
-            Notice.showDownNotice(`获得${coin}金币`);
-        if (isAddLv)
-            Notice.showDownNotice("等级提升至 " + Utils.getLvText(playerLv) + " Lv." + playerLv);
-    }
-    net_flyText(damage, hitPoint) {
-        let fontColor = Utils.randomColor();
-        FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
-    }
-    net_updateHp(curHp) {
-        this.hudModuleC.updateHp(curHp);
-    }
-    getCoin() {
-        return this.data.coin;
-    }
-    saveLevel(value) {
-        this.server.net_saveLv(value);
-    }
-    saveHeight(value) {
-        this.server.net_saveHeight(value);
-    }
-    saveKill(value) {
-        this.server.net_saveKill(value);
-    }
-    saveCoin(value) {
-        this.hudModuleC.updateCoin(this.data.coin + value);
-        this.server.net_saveCoin(value);
-    }
-    /**
-     * 更新金币
-     * @param value
-     */
-    net_updateCoin(value) {
-        this.hudModuleC.updateCoin(this.data.coin + value);
-        Notice.showDownNotice("发现宝箱，获得" + value + "金币");
-    }
-    saveCoinAndExp(coin, exp) {
-        this.server.net_saveCoinAndExp(coin, exp);
-    }
-    isInvincible(isInvincible) {
-        this.server.net_isInvincible(isInvincible);
-    }
-    net_killTip(killerUserId, killerName, killedUserId, killedName) {
-        this.hudModuleC.killTip(killerUserId, killerName, killedUserId, killedName);
-    }
-}
-
-var foreign52 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: PlayerModuleC
-});
-
-class AdsModuleC extends ModuleC {
-    constructor() {
-        super(...arguments);
-        /**商店模块 */
-        this.shopModuleC = null;
-        this.taskModuleC = null;
         this.playerModuleC = null;
-        /**广告面板 */
-        this.adTipsPanel = null;
+        this.taskModuleC = null;
+        this.shopPanel = null;
+        this.costPanel = null;
+        this.adsTipsPanel = null;
+        this.weaponSet = [];
+        this.coldWeaponElement = null;
+        /**玩家和皮肤商店之间的相机转化 */
+        this.onSwitchCameraAction = new Action1();
+        /**玩家身上的相机 */
+        this.camera = null;
+        /**皮肤商店要展示的NPC */
+        this.shopNpc = null;
+        this.headUI = null;
+        this.shopNPCEffectId = null;
+        this.npcAnima = null;
+        this.rightWeapon = null;
+        this.leftWeapon = null;
+        this.oldCameraData = {};
+        /**记录当前滑动屏幕的X轴正负值 */
+        this.x = 0;
+        /**旋转速度 */
+        this.slideSpeedX = 1;
+        /**当前Npc的旋转Z轴值 */
+        this.currentNpcRotZ = 0;
+        this.limitedTouchXs = [460, 1460];
+        this.limitedTouchYs = [220, 840];
     }
+    ;
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
-        this.initData();
+        this.initDatas();
         this.registerActions();
     }
     /**初始化数据 */
-    initData() {
-        this.shopModuleC = ModuleService.getModule(ShopModuleC);
-        this.taskModuleC = ModuleService.getModule(TaskModuleC);
+    initDatas() {
+        this.hudModuleC = ModuleService.getModule(HUDModuleC);
         this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        this.adTipsPanel = mw.UIService.getUI(AdTipsPanel);
+        this.taskModuleC = ModuleService.getModule(TaskModuleC);
+        this.shopPanel = mw.UIService.getUI(ShopPanel);
+        this.costPanel = mw.UIService.getUI(CostPanel);
+        this.adsTipsPanel = mw.UIService.getUI(AdTipsPanel);
+        let rootCanvaSize = mw.getViewportSize();
+        this.limitedTouchXs[0] = 460 * rootCanvaSize.x / 1920;
+        this.limitedTouchXs[1] = 1460 * rootCanvaSize.x / 1920;
+        this.limitedTouchYs[0] = 220 * rootCanvaSize.y / 1080;
+        this.limitedTouchYs[1] = 840 * rootCanvaSize.y / 1080;
+        Console.error(this.limitedTouchXs + " | " + this.limitedTouchYs);
     }
-    /**注册事件 */
     registerActions() {
-        this.adTipsPanel.onWatchAdsAction.add(this.playAds.bind(this));
-    }
-    onEnterScene(sceneType) {
-        this.defaultAds();
-    }
-    /**播放广告 */
-    playAds(id, adType) {
-        this.getReward(id, adType);
-        Notice.showDownNotice("成功获得奖励");
-    }
-    /**获得奖励 */
-    getReward(id, adType) {
-        switch (adType) {
-            case AdType.WeaponSet:
-                this.shopModuleC.onSwitchWeaponSet();
-                Notice.showDownNotice("成功获得英雄套装");
-                break;
-            case AdType.AddCoin:
-                this.playerModuleC.saveCoin(1000);
-                Notice.showDownNotice("成功获得1000金币");
-                break;
-            case AdType.AddCoinAndExp:
-                this.playerModuleC.saveCoinAndExp(500, 500);
-                Notice.showDownNotice("成功获得500金币");
-                Notice.showDownNotice("成功获得500经验");
-                break;
-            case AdType.WeaponSet1:
-                this.shopModuleC.ads(id);
-                Notice.showDownNotice("成功获得英雄套装");
-                break;
-        }
-        this.taskModuleC.ads();
-    }
-    defaultAds() {
-        TimeUtil.delaySecond(60).then(() => {
-            this.adTipsPanel.showAdTips(30, AdType.WeaponSet1);
-            TimeUtil.setInterval(() => {
-                this.adTipsPanel.showAdTips(Utils.getRandomInteger(23, 40), AdType.WeaponSet1);
-            }, 180);
+        this.hudModuleC.onOpenShopAction.add(() => {
+            this.shopPanel.show();
+            this.onSwitchCameraAction.call(true);
+        });
+        this.onSwitchCameraAction.add((isOpenSkinShop) => {
+            isOpenSkinShop ? this.openWeaponSetShop() : this.closeWeaponSetShop();
         });
     }
+    onEnterScene(sceneType) {
+        this.initShopNPCData();
+        // this.appearance = this.localPlayer.character.setDescription(mw.HumanoidV2);
+        this.weaponSet = this.data.weaponSet;
+        TimeUtil.delaySecond(3).then(() => {
+            let id = this.data.useWeaponId;
+            let coldWeaponElement = GameConfig.ColdWeapon.getElement(id);
+            // this.updateRoleType(coldWeaponElement);
+            this.onSwitchWeapon(coldWeaponElement);
+            //切换角色
+            this.onSwitchRole(coldWeaponElement.Role);
+            //切换翅膀
+            this.onSwitchWing(coldWeaponElement);
+            this.updateShopRoles(coldWeaponElement);
+            this.shopPanel.defaultSelectItem(id);
+            this.updateHeadUI(coldWeaponElement);
+        });
+    }
+    /**更新角色类型 */
+    updateRoleType(element) {
+        this.coldWeaponElement = element;
+        switch (this.coldWeaponElement.RoleType) {
+            case 1:
+                this.onSwitchWeaponSet();
+                break;
+            case 2:
+                this.isHaveWeaponSet();
+                break;
+            case 3:
+                this.onWatchAdSwitchWeaponSet();
+                break;
+        }
+    }
+    /**判断是否拥有 */
+    isHaveWeaponSet() {
+        if (this.weaponSet.includes(this.coldWeaponElement.id)) {
+            this.onSwitchWeaponSet();
+        }
+        else {
+            this.costPanel.showAndInitData(this.coldWeaponElement.Price);
+        }
+    }
+    sureBuy() {
+        let costPrice = this.coldWeaponElement.Price;
+        if (this.playerModuleC.getCoin() >= costPrice) {
+            let id = this.coldWeaponElement.id;
+            if (!this.weaponSet.includes(id)) {
+                this.weaponSet.push(id);
+            }
+            this.saveWeaponSet(id);
+            this.playerModuleC.saveCoin(-costPrice);
+            this.updateHeadUI(this.coldWeaponElement);
+            this.shopPanel.updateTextBlock();
+            Notice.showDownNotice("购买成功");
+            this.taskModuleC.buyWeapon();
+        }
+        else {
+            Notice.showDownNotice("金币不足");
+        }
+    }
+    /**看广告切换武器套装 */
+    onWatchAdSwitchWeaponSet() {
+        // if (GlobalData.isOpenIAA) {
+        //     this.adsTipsPanel.showAdTips(0, AdType.WeaponSet);
+        // }
+        // else {
+        //     this.onSwitchWeaponSet();
+        // }
+    }
+    /**----------【PlayerModule】---------- */
+    ads(id) {
+        this.coldWeaponElement = GameConfig.ColdWeapon.getElement(id);
+        //切换武器
+        this.onSwitchWeapon(this.coldWeaponElement);
+        //切换角色
+        this.onSwitchRole(this.coldWeaponElement.Role);
+        //切换翅膀
+        this.onSwitchWing(this.coldWeaponElement);
+    }
+    /**切换武器套装 */
+    onSwitchWeaponSet() {
+        //切换武器
+        this.onSwitchWeapon(this.coldWeaponElement);
+        //切换角色
+        this.onSwitchRole(this.coldWeaponElement.Role);
+        //切换翅膀
+        this.onSwitchWing(this.coldWeaponElement);
+        this.shopPanel.hide();
+        this.onSwitchCameraAction.call(false);
+    }
+    /**切换武器 */
+    onSwitchWeapon(element) {
+        const userInstance = ColdWeapon.getInstance();
+        userInstance.register(element);
+        if (element.RoleType != 3) {
+            this.saveUseWeaponId(element.id);
+        }
+    }
+    // private appearance: mw.HumanoidV2 = null;
+    /**切换角色 */
+    onSwitchRole(role) {
+        this.localPlayer.character.setDescription([role]);
+        this.localPlayer.character.syncDescription();
+    }
+    /**切换翅膀 */
+    onSwitchWing(element) {
+        this.server.net_onSwitchWing(element.EffectId, element.EffectOffset, element.EffectRot, element.EffectScale);
+    }
+    /**拿到相机 */
+    get getCamera() {
+        if (this.camera == null) {
+            this.camera = Camera.currentCamera;
+        }
+        return this.camera;
+    }
+    /**得到商店的NPC */
+    get getShopNpc() {
+        if (this.shopNpc == null) {
+            this.shopNpc = GameObject.findGameObjectById("333D8F0C");
+        }
+        return this.shopNpc;
+    }
+    // private npcHv2: mw.HumanoidV2 = null;
+    /**初始化商店NPC数据 */
+    async initShopNPCData() {
+        this.shopNpc = await GameObject.asyncFindGameObjectById("333D8F0C");
+        this.shopNpc.complexMovementEnabled = false;
+        AccountService.downloadData(this.getShopNpc);
+        // let nickName = AccountService.getNickName();
+        // nickName = (nickName) ? nickName : "playerId:" + this.currentPlayerId;
+        this.getShopNpc.displayName = "";
+        this.currentNpcRotZ = this.getShopNpc.localTransform.rotation.z;
+        // this.npcHv2 = this.getShopNpc.setDescription(mw.HumanoidV2);
+        this.lookObj = await GameObject.asyncFindGameObjectById("3F08E093");
+        this.cameraRotation = this.getShopNpc.worldTransform.getForwardVector().multiply(-1).toRotation();
+        this.headUI = mw.UIService.create(NPCHead_Generate$1);
+        let headUIWidget = await GameObject.asyncFindGameObjectById("1A034CD5");
+        headUIWidget.setTargetUIWidget(this.headUI.uiWidgetBase);
+    }
+    updateHeadUI(element) {
+        switch (element.RoleType) {
+            case 1:
+                this.headUI.mFreeCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+                this.headUI.mCoinCanvas.visibility = mw.SlateVisibility.Collapsed;
+                this.headUI.mAdsCanvas.visibility = mw.SlateVisibility.Collapsed;
+                break;
+            case 2:
+                this.headUI.mFreeCanvas.visibility = mw.SlateVisibility.Collapsed;
+                this.headUI.mCoinCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+                this.headUI.mAdsCanvas.visibility = mw.SlateVisibility.Collapsed;
+                if (this.weaponSet.includes(element.id)) {
+                    this.headUI.mCoinText.fontSize = 100;
+                    this.headUI.mCoinText.text = "已拥有";
+                    // this.headUI.mCoinImage.visibility = mw.SlateVisibility.Collapsed;
+                }
+                else {
+                    this.headUI.mCoinText.fontSize = 70;
+                    this.headUI.mCoinText.text = "需要花费\n" + element.Price + "金币购买";
+                    // this.headUI.mCoinImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+                }
+                break;
+            case 3:
+                this.headUI.mFreeCanvas.visibility = mw.SlateVisibility.Collapsed;
+                this.headUI.mCoinCanvas.visibility = mw.SlateVisibility.Collapsed;
+                this.headUI.mAdsCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+                break;
+        }
+    }
+    async updateShopRoles(element) {
+        if (!element.Role) {
+            Console.error("配置表角色GUID不存在");
+            return;
+        }
+        if (!this.getShopNpc) {
+            Console.error("商店角色不存在");
+            return;
+        }
+        this.getShopNpc.setDescription([element.Role]);
+        this.getShopNpc.displayName = element.Del;
+        if (this.shopNPCEffectId) {
+            EffectService.stop(this.shopNPCEffectId);
+            this.shopNPCEffectId = null;
+        }
+        this.shopNPCEffectId = GeneralManager.rpcPlayEffectOnPlayer(element.EffectId, this.getShopNpc, mw.HumanoidSlotType.BackOrnamental, 0, element.EffectOffset, new mw.Rotation(element.EffectRot), element.EffectScale);
+        if (this.npcAnima) {
+            this.npcAnima.stop();
+            this.npcAnima = null;
+        }
+        if (element.StandbyAnimation) {
+            this.npcAnima = PlayerManagerExtesion.loadAnimationExtesion(this.getShopNpc, element.StandbyAnimation, false);
+            this.npcAnima.loop = 0;
+            this.npcAnima.play();
+        }
+        if (this.rightWeapon) {
+            this.rightWeapon.destroy();
+            this.rightWeapon = null;
+        }
+        if (element.rightWeaponGuid) {
+            this.rightWeapon = await SpawnManager.asyncSpawn({ guid: element.rightWeaponGuid, replicates: false });
+            this.getShopNpc.attachToSlot(this.rightWeapon, mw.HumanoidSlotType.RightHand);
+        }
+        if (this.leftWeapon) {
+            this.leftWeapon.destroy();
+            this.leftWeapon = null;
+        }
+        if (element.leftWeaponGuid) {
+            this.leftWeapon = await SpawnManager.asyncSpawn({ guid: element.leftWeaponGuid, replicates: false });
+            this.getShopNpc.attachToSlot(this.leftWeapon, mw.HumanoidSlotType.LeftHand);
+        }
+        this.updateHeadUI(element);
+    }
+    /**打开武器套装商店 */
+    openWeaponSetShop() {
+        this.oldCameraData = this.getCameraData();
+        let cs = this.getCamera;
+        this.oldRotation = cs.worldTransform.clone().rotation.clone();
+        this.oldCameraData[1].followTargetInterpSpeed = ModifiedCameraSystem.followTargetInterpSpeed;
+        ModifiedCameraSystem.followTargetInterpSpeed = 0;
+        cs.positionLagSpeed = 0;
+        cs.rotationLagEnabled = false;
+        cs.positionLagEnabled = false;
+        cs.rotationLagSpeed = 0;
+        cs.springArm.localTransform.position = mw.Vector.zero;
+        cs.localTransform.position = mw.Vector.zero;
+        ModifiedCameraSystem.setCameraFollowTarget(this.lookObj);
+        let crT = cs.localTransform.clone();
+        crT.position = new mw.Vector(0, 0, 85);
+        crT.rotation = mw.Rotation.zero;
+        cs.localTransform = crT;
+        ModifiedCameraSystem.setOverrideCameraRotation(this.cameraRotation);
+        InputManagers.getInstance.onPressTouch.add((data) => {
+            this.onPressTouch(data);
+        });
+        InputManagers.getInstance.onReleaseTouch.add((data) => {
+            this.onReleaseTouch(data);
+        });
+    }
+    /**关闭武器套装商店 */
+    closeWeaponSetShop() {
+        let cs = this.getCamera;
+        ModifiedCameraSystem.setCameraFollowTarget(this.localPlayer.character);
+        ModifiedCameraSystem.applySettings(this.oldCameraData[0]);
+        ModifiedCameraSystem.setOverrideCameraRotation(this.oldRotation);
+        setTimeout(() => {
+            cs.positionLagEnabled = this.oldCameraData[1].positionLagEnabled;
+            cs.rotationLagEnabled = this.oldCameraData[1].rotationLagEnabled;
+            ModifiedCameraSystem.followTargetInterpSpeed = this.oldCameraData[1].followTargetInterpSpeed;
+            cs.positionLagSpeed = this.oldCameraData[1].positionLagSpeed;
+            cs.rotationLagSpeed = this.oldCameraData[1].rotationLagSpeed;
+            ModifiedCameraSystem.resetOverrideCameraRotation();
+        }, 200);
+        InputManagers.getInstance.onPressTouch.clear();
+        InputManagers.getInstance.onReleaseTouch.clear();
+    }
+    getCameraData() {
+        let tmp = ModifiedCameraSystem.getCurrentSettings();
+        let ret = [{}, {}];
+        for (const key in tmp) {
+            if (Object.prototype.hasOwnProperty.call(tmp, key)) {
+                if (key == "cameraLocationLagSpeed" ||
+                    key == "cameraRotationLagSpeed" ||
+                    key == "followTargetInterpSpeed") {
+                    ret[0][key] = 0;
+                    ret[1][key] = tmp[key];
+                }
+                else if (key == "cameraRotationLagEnable" ||
+                    key == "cameraLocationLagEnable") {
+                    ret[0][key] = false;
+                    ret[1][key] = tmp[key];
+                }
+                else {
+                    ret[0][key] = tmp[key];
+                }
+            }
+        }
+        return ret;
+    }
+    /**按下 */
+    onPressTouch(data) {
+        // Console.error("[onPressTouch-data] " + data.x + "/" + data.y);
+        if (data.x > this.limitedTouchXs[1] || data.x < this.limitedTouchXs[0]
+            || data.y > this.limitedTouchYs[1] || data.y < this.limitedTouchYs[0])
+            return;
+        if (this.x != 0) {
+            let x = (data.x - this.x) * this.slideSpeedX;
+            // Console.error("x = " + x);
+            this.currentNpcRotZ -= x;
+            this.getShopNpc.localTransform.rotation = (new mw.Rotation(0, 0, this.currentNpcRotZ));
+        }
+        this.x = data.x;
+    }
+    /**释放 */
+    onReleaseTouch(data) {
+        // Console.error("[onReleaseTouch-data] " + data.x + "/" + data.y);
+        this.x = 0;
+    }
+    getWeaponSet() {
+        return this.data.weaponSet;
+    }
+    /**
+     * 是否拥有
+     * @param id
+     * @returns
+     */
+    isHaveWeapon(id) {
+        return this.data.weaponSet.includes(id);
+    }
+    saveWeaponSet(weaponId) {
+        this.server.net_saveWeaponSet(weaponId);
+    }
+    saveUseWeaponId(useWeaponId) {
+        this.server.net_saveUseWeaponId(useWeaponId);
+    }
 }
-var AdType;
-(function (AdType) {
-    /**武器套装 */
-    AdType[AdType["WeaponSet"] = 1] = "WeaponSet";
-    /**AddCoin */
-    AdType[AdType["AddCoin"] = 2] = "AddCoin";
-    /**AddCoinAndExp */
-    AdType[AdType["AddCoinAndExp"] = 3] = "AddCoinAndExp";
-    /**武器套装 */
-    AdType[AdType["WeaponSet1"] = 4] = "WeaponSet1";
-})(AdType || (AdType = {}));
 
-var foreign38 = /*#__PURE__*/Object.freeze({
+var foreign63 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    get AdType () { return AdType; },
-    default: AdsModuleC
+    default: ShopModuleC
 });
 
 let Ads = class Ads extends mw.Script {
@@ -9495,8 +9390,8 @@ let Ads = class Ads extends mw.Script {
     /**客户端的onStart */
     async onStartC() {
         await ModuleService.ready();
-        let adsTipsPanel = mw.UIService.getUI(AdTipsPanel);
-        let shopModuleC = ModuleService.getModule(ShopModuleC);
+        mw.UIService.getUI(AdTipsPanel);
+        ModuleService.getModule(ShopModuleC);
         GameConfig.Ads.getAllElement().forEach(async (value, index, array) => {
             let npc = await GameObject.asyncFindGameObjectById(value.Role);
             npc.displayName = value.Del;
@@ -9518,12 +9413,11 @@ let Ads = class Ads extends mw.Script {
             trigger.onEnter.add((char) => {
                 if (char != Player.localPlayer.character)
                     return;
-                if (GlobalData.isOpenIAA) {
-                    adsTipsPanel.showAdTips(value.id, AdType.WeaponSet1);
-                }
-                else {
-                    shopModuleC.ads(value.id);
-                }
+                // if (GlobalData.isOpenIAA) {
+                //     adsTipsPanel.showAdTips(value.id, AdType.WeaponSet1);
+                // } else {
+                //     shopModuleC.ads(value.id);
+                // }
             });
         });
     }
@@ -9547,6 +9441,243 @@ var Ads$1 = Ads;
 var foreign1 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Ads$1
+});
+
+// import PlayerModuleS from "../module/PlayerModule/PlayerModuleS";
+// import { PrefabEvent } from "../Prefabs/PrefabEvent";
+// import { Utils } from "../Tools/utils";
+// import EnemyLifebar_Generate from "../ui-generate/common/EnemyLifebar_generate";
+// @Component
+// export default class Boss extends Script {
+//     @mw.Property({ displayName: "体型大小", group: "设置属性", range: { min: 1, max: 5, showSlider: true } })
+//     private bossScale: number = 1;
+//     @mw.Property({ displayName: "血量", group: "设置属性", tooltip: "血量", range: { min: 100, max: 100000, showSlider: true } })
+//     private maxHp: number = 100;
+//     @mw.Property({ displayName: "当前剩余血量", group: "设置属性", tooltip: "当前剩余血量", replicated: true, onChanged: "onHpChanged" })
+//     private curHp: number = 0;
+//     @mw.Property({ displayName: "路径", group: "设置属性", tooltip: "路径" })
+//     private pathVector: mw.Vector[] = [mw.Vector.zero];
+//     @mw.Property({ displayName: "移动速度", group: "设置属性", tooltip: "移动速度", range: { min: 100, max: 1000, showSlider: true } })
+//     private moveSpeed: number = 100;
+//     @mw.Property({ displayName: "爆炸特效", group: "设置属性", tooltip: "爆炸特效" })
+//     private explosionEffect: string = "27422";
+//     @mw.Property({ displayName: "重生时间", group: "设置属性", tooltip: "重生时间", range: { min: 5, max: 60, showSlider: true } })
+//     private respawnTime: number = 5;
+//     @mw.Property({ displayName: "重生特效", group: "设置属性", tooltip: "重生特效" })
+//     private respawnEffect: string = "142750";
+//     private boss: mw.Character = null;
+//     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+//     protected onStart(): void {
+//         this.onStartCS();
+//     }
+//     /**onStart */
+//     private async onStartCS(): Promise<void> {
+//         await ModuleService.ready();
+//         this.boss = this.gameObject as mw.Character;
+//         await this.boss.asyncReady();
+//         this.boss.displayName = "";
+//         if (mw.SystemUtil.isClient()) {
+//             this.onStartC();
+//         } else if (mw.SystemUtil.isServer()) {
+//             this.onStartS();
+//         }
+//     }
+//     /**
+//      * 周期函数 每帧执行
+//      * 此函数执行需要将this.useUpdate赋值为true
+//      * @param dt 当前帧与上一帧的延迟 / 秒
+//      */
+//     protected onUpdate(dt: number): void {
+//         if (mw.SystemUtil.isClient()) {
+//             this.onUpdateC(dt);
+//         } else if (mw.SystemUtil.isServer()) {
+//             this.onUpdateS(dt);
+//         }
+//     }
+//     /**--------------------------------【客户端】-------------------------------- */
+//     private cubeLifebar: EnemyLifebar_Generate = null;
+//     private cubeLifebarWidget: mw.UIWidget = null;
+//     private isInitLifebar = false;
+//     /**客户端的onStart */
+//     private onStartC(): void {
+//         this.useUpdate = false;
+//         this.initDataC();
+//     }
+//     private initDataC(): void {
+//         this.preHp = Math.floor(this.maxHp);
+//         this.initLifebar();
+//     }
+//     private async initLifebar(): Promise<void> {
+//         this.cubeLifebar = UIService.create(EnemyLifebar_Generate);
+//         this.cubeLifebarWidget = await mw.GameObject.asyncSpawn<mw.UIWidget>(
+//             "UIWidget",
+//             {
+//                 replicates: false
+//             });
+//         this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
+//         this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
+//         let boss = this.gameObject as mw.Character;
+//         boss.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.Rings);
+//         this.cubeLifebarWidget.occlusionEnable = false;
+//         this.cubeLifebarWidget.scaledByDistanceEnable = true;
+//         this.cubeLifebarWidget.hideByDistanceEnable = true;
+//         this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
+//         this.isInitLifebar = true;
+//         this.onHpChanged();
+//     }
+//     /**客户端的onUpdate */
+//     private onUpdateC(dt: number): void {
+//     }
+//     private preHp: number = 0;
+//     /**
+//      * 血量改变
+//      */
+//     private onHpChanged(): void {
+//         if (!this.isInitLifebar) return;
+//         if (this.preHp <= 0) this.preHp = Math.floor(this.maxHp);
+//         let damage = this.preHp - this.curHp;
+//         if (damage > 0) this.preHp = this.curHp;
+//         this.cubeLifebar.mLifebarProgressBar.percent = this.curHp / this.maxHp;
+//         this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.curHp)}/${Math.floor(this.maxHp)}`;
+//         if (this.curHp <= 0) {
+//             if (this.cubeLifebarWidget.getVisibility()) {
+//                 this.cubeLifebarWidget.setVisibility(false);
+//             }
+//         } else if (this.curHp >= this.maxHp) {
+//             if (!this.cubeLifebarWidget.getVisibility()) {
+//                 this.cubeLifebarWidget.setVisibility(true);
+//             }
+//         }
+//     }
+//     /**--------------------------------【客户端】-------------------------------- */
+//     /**--------------------------------【服务端】-------------------------------- */
+//     private playerModuleS: PlayerModuleS = null;
+//     private get getPlayerModuleS(): PlayerModuleS {
+//         if (this.playerModuleS == null) {
+//             this.playerModuleS = ModuleService.getModule(PlayerModuleS);
+//         }
+//         return this.playerModuleS;
+//     }
+//     /**服务端的onStart */
+//     private onStartS(): void {
+//         this.useUpdate = true;
+//         this.initDataS();
+//         this.initMove();
+//         this.bindEventS();
+//     }
+//     private initDataS(): void {
+//         this.maxHp = Math.floor(this.maxHp);
+//         this.curHp = this.maxHp;
+//         // this.boss.displayName = "";
+//         this.boss.worldTransform.scale = mw.Vector.one.multiply(this.bossScale);
+//         this.boss.setDescription([Utils.getBoss()]);
+//     }
+//     /**
+//      * 绑定事件
+//      */
+//     private bindEventS(): void {
+//         PrefabEvent.PrefabEvtFight.onHit(this.playerAtkEnemyS.bind(this));
+//     }
+//     /**
+//      * 玩家攻击敌人
+//      * @param senderGuid
+//      * @param targetGuid
+//      * @param damage
+//      * @param hitPoint
+//      * @returns
+//      */
+//     private playerAtkEnemyS(senderGuid: string, targetGuid: string, damage: number, hitPoint: mw.Vector): void {
+//         if (this.gameObject.gameObjectId != targetGuid) return;
+//         if (this.curHp <= 0) return;
+//         let tmpHp = this.curHp - damage;
+//         if (tmpHp >= 0) {
+//             this.curHp = tmpHp;
+//         } else {
+//             this.curHp = 0;
+//         }
+//         if (this.curHp <= 0) {
+//             this.dieS();
+//             this.getPlayerModuleS.playerKillEnemy(senderGuid, this.maxHp);
+//             TimeUtil.delaySecond(this.respawnTime).then(() => {
+//                 this.curHp = this.maxHp;
+//                 this.respawnS();
+//             });
+//         }
+//         this.getPlayerModuleS.playerAtkEnemyFlyText(senderGuid, hitPoint, damage);
+//     }
+//     private dieS(): void {
+//         this.setVisibilityS(false);
+//         EffectService.playAtPosition(
+//             this.explosionEffect,
+//             this.gameObject.worldTransform.position,
+//             {
+//                 scale: mw.Vector.one.multiply(1)
+//             });
+//     }
+//     private respawnS(): void {
+//         this.boss.setDescription([Utils.getBoss()]);
+//         this.setVisibilityS(true);
+//         EffectService.playAtPosition(
+//             this.respawnEffect,
+//             this.gameObject.worldTransform.position,
+//             {
+//                 scale: mw.Vector.one.multiply(1)
+//             });
+//     }
+//     /**
+//      * 设置物体是否被显示
+//      * @param isVisibility
+//      */
+//     private setVisibilityS(isVisibility: boolean): void {
+//         this.boss.ragdollEnabled = !isVisibility;
+//         this.useUpdate = isVisibility;
+//     }
+//     private initMove(): void {
+//         this.targetPos = this.pathVector[this.index];
+//         this.boss.maxWalkSpeed = this.moveSpeed;
+//     }
+//     private frameCount: number = 0;
+//     private maxFrameCount: number = 1;
+//     /**服务端的onUpdate */
+//     private onUpdateS(dt: number): void {
+//         this.frameCount++;
+//         if (this.frameCount < this.maxFrameCount) return;
+//         this.frameCount = 0;
+//         this.updateMove();
+//     }
+//     private index: number = 0;
+//     private pathFlag: boolean = true;
+//     private curBossDir: mw.Vector = mw.Vector.zero;
+//     private targetPos: mw.Vector = mw.Vector.zero;
+//     private targetDistance: number = 0;
+//     private updateMove(): void {
+//         if (!this.pathVector || this.pathVector.length <= 1) return;
+//         this.curBossDir = this.targetPos.clone().add(this.targetPos.clone().subtract(this.boss.worldTransform.position.clone()))
+//         this.boss.lookAt(this.curBossDir);
+//         this.boss.addMovement(mw.Vector.forward);
+//         this.targetDistance = Math.sqrt(
+//             Math.pow(this.boss.worldTransform.position.x - this.pathVector[this.index].x, 2) +
+//             Math.pow(this.boss.worldTransform.position.y - this.pathVector[this.index].y, 2)
+//         );
+//         //到达寻路点
+//         if (this.targetDistance > 50) return;
+//         if (this.pathFlag && this.index < this.pathVector.length - 1) {
+//             this.index++
+//             if (this.index == this.pathVector.length - 1) this.pathFlag = false;
+//         } else if (!this.pathFlag && this.index > 0) {
+//             this.index--
+//             if (this.index == 0) this.pathFlag = true;
+//         }
+//         this.targetPos = this.pathVector[this.index];
+//     }
+//     /**--------------------------------【服务端】-------------------------------- */
+//     /** 脚本被销毁时最后一帧执行完调用此函数 */
+//     protected onDestroy(): void {
+//     }
+// }
+
+var foreign2 = /*#__PURE__*/Object.freeze({
+    __proto__: null
 });
 
 class PlayerData_CSR {
@@ -10522,7 +10653,7 @@ class PlayerModuleS extends ModuleS {
      * @param hp
      */
     addExpAndCoin(player, hp) {
-        let value = (hp / 10);
+        let value = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
         let expOrCoin = value >= 2000 ? 2000 : value;
         let playerData = DataCenterS.getData(player, PlayerData);
         let preLv = playerData.playerLv;
@@ -10538,6 +10669,7 @@ class PlayerModuleS extends ModuleS {
                 playerLifebar.playerLevel = playerData.playerLv;
             }
             this.saveLv(player, playerData.playerLv - preLv, playerData.playerLv);
+            this.playEffectAndSoundToPlayer(player);
         }
         this.getClient(player).net_updateLvExpAndCoin(isAddLv, expOrCoin);
     }
@@ -10654,18 +10786,21 @@ class PlayerModuleS extends ModuleS {
         DataCenterS.getData(player, PlayerData).refashKill(value);
         this.worldModuleS.refreshKill_S(player.userId, value);
     }
-    net_saveLv(value) {
-        this.currentData.refashLv(value);
-        this.worldModuleS.refreshLv_S(this.currentPlayer.userId, value);
-    }
-    net_saveHeight(value) {
-        this.currentData.refashHeight(value);
-        this.worldModuleS.refreshHeight_S(this.currentPlayer.userId, value);
-    }
-    net_saveKill(value) {
-        this.currentData.refashKill(value);
-        this.worldModuleS.refreshKill_S(this.currentPlayer.userId, value);
-    }
+    // @Decorator.noReply()
+    // public net_saveLv(value: number): void {
+    //     this.currentData.refashLv(value);
+    //     this.worldModuleS.refreshLv_S(this.currentPlayer.userId, value);
+    // }
+    // @Decorator.noReply()
+    // public net_saveHeight(value: number): void {
+    //     this.currentData.refashHeight(value);
+    //     this.worldModuleS.refreshHeight_S(this.currentPlayer.userId, value);
+    // }
+    // @Decorator.noReply()
+    // public net_saveKill(value: number): void {
+    //     this.currentData.refashKill(value);
+    //     this.worldModuleS.refreshKill_S(this.currentPlayer.userId, value);
+    // }
     net_saveCoin(value) {
         this.currentData.saveCoin(value);
     }
@@ -10693,6 +10828,7 @@ class PlayerModuleS extends ModuleS {
                 playerLifebar.playerLevel = this.currentData.playerLv;
             }
             this.saveLv(player, this.currentData.playerLv - preLv, this.currentData.playerLv);
+            this.playEffectAndSoundToPlayer(player);
         }
         this.getClient(player).net_updateLvExpAndCoin(isAddLv);
     }
@@ -10701,16 +10837,11 @@ class PlayerModuleS extends ModuleS {
             this.playerLifeMap.get(this.currentPlayerId).isInvincible = isInvincible;
         }
     }
+    playEffectAndSoundToPlayer(player) {
+        SoundService.play3DSound("169179", player.character, 1, 10, { radius: 500, falloffDistance: 1200 });
+        EffectService.playOnGameObject("142750", player.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 1 });
+    }
 }
-__decorate([
-    Decorator.noReply()
-], PlayerModuleS.prototype, "net_saveLv", null);
-__decorate([
-    Decorator.noReply()
-], PlayerModuleS.prototype, "net_saveHeight", null);
-__decorate([
-    Decorator.noReply()
-], PlayerModuleS.prototype, "net_saveKill", null);
 __decorate([
     Decorator.noReply()
 ], PlayerModuleS.prototype, "net_saveCoin", null);
@@ -10731,329 +10862,6 @@ class PlayerDataS {
 var foreign53 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerModuleS
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.05.19-23.59.55
- */
-let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
-    get mLifebarProgressBar() {
-        if (!this.mLifebarProgressBar_Internal && this.uiWidgetBase) {
-            this.mLifebarProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mLifebarProgressBar');
-        }
-        return this.mLifebarProgressBar_Internal;
-    }
-    get mHpTextBlock() {
-        if (!this.mHpTextBlock_Internal && this.uiWidgetBase) {
-            this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mHpTextBlock');
-        }
-        return this.mHpTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mHpTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-EnemyLifebar_Generate = __decorate([
-    UIBind('UI/common/EnemyLifebar.ui')
-], EnemyLifebar_Generate);
-var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
-
-var foreign86 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: EnemyLifebar_Generate$1
-});
-
-let Boss = class Boss extends Script {
-    constructor() {
-        super(...arguments);
-        this.bossScale = 1;
-        this.maxHp = 100;
-        this.curHp = 0;
-        this.pathVector = [mw.Vector.zero];
-        this.moveSpeed = 100;
-        this.explosionEffect = "27422";
-        this.respawnTime = 5;
-        this.respawnEffect = "142750";
-        this.boss = null;
-        /**--------------------------------【客户端】-------------------------------- */
-        this.cubeLifebar = null;
-        this.cubeLifebarWidget = null;
-        this.isInitLifebar = false;
-        this.preHp = 0;
-        /**--------------------------------【客户端】-------------------------------- */
-        /**--------------------------------【服务端】-------------------------------- */
-        this.playerModuleS = null;
-        this.frameCount = 0;
-        this.maxFrameCount = 1;
-        this.index = 0;
-        this.pathFlag = true;
-        this.curBossDir = mw.Vector.zero;
-        this.targetPos = mw.Vector.zero;
-        this.targetDistance = 0;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.onStartCS();
-    }
-    /**onStart */
-    async onStartCS() {
-        await ModuleService.ready();
-        this.boss = this.gameObject;
-        await this.boss.asyncReady();
-        this.boss.displayName = "";
-        if (mw.SystemUtil.isClient()) {
-            this.onStartC();
-        }
-        else if (mw.SystemUtil.isServer()) {
-            this.onStartS();
-        }
-    }
-    /**
-     * 周期函数 每帧执行
-     * 此函数执行需要将this.useUpdate赋值为true
-     * @param dt 当前帧与上一帧的延迟 / 秒
-     */
-    onUpdate(dt) {
-        if (mw.SystemUtil.isClient()) {
-            this.onUpdateC(dt);
-        }
-        else if (mw.SystemUtil.isServer()) {
-            this.onUpdateS(dt);
-        }
-    }
-    /**客户端的onStart */
-    onStartC() {
-        this.useUpdate = false;
-        this.initDataC();
-    }
-    initDataC() {
-        this.preHp = Math.floor(this.maxHp);
-        this.initLifebar();
-    }
-    async initLifebar() {
-        this.cubeLifebar = UIService.create(EnemyLifebar_Generate$1);
-        this.cubeLifebarWidget = await mw.GameObject.asyncSpawn("UIWidget", {
-            replicates: false
-        });
-        this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
-        this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
-        let boss = this.gameObject;
-        boss.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.Rings);
-        this.cubeLifebarWidget.occlusionEnable = false;
-        this.cubeLifebarWidget.scaledByDistanceEnable = true;
-        this.cubeLifebarWidget.hideByDistanceEnable = true;
-        this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
-        this.isInitLifebar = true;
-        this.onHpChanged();
-    }
-    /**客户端的onUpdate */
-    onUpdateC(dt) {
-    }
-    /**
-     * 血量改变
-     */
-    onHpChanged() {
-        if (!this.isInitLifebar)
-            return;
-        if (this.preHp <= 0)
-            this.preHp = Math.floor(this.maxHp);
-        let damage = this.preHp - this.curHp;
-        if (damage > 0)
-            this.preHp = this.curHp;
-        this.cubeLifebar.mLifebarProgressBar.percent = this.curHp / this.maxHp;
-        this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.curHp)}/${Math.floor(this.maxHp)}`;
-        if (this.curHp <= 0) {
-            if (this.cubeLifebarWidget.getVisibility()) {
-                this.cubeLifebarWidget.setVisibility(false);
-            }
-        }
-        else if (this.curHp >= this.maxHp) {
-            if (!this.cubeLifebarWidget.getVisibility()) {
-                this.cubeLifebarWidget.setVisibility(true);
-            }
-        }
-    }
-    get getPlayerModuleS() {
-        if (this.playerModuleS == null) {
-            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
-        }
-        return this.playerModuleS;
-    }
-    /**服务端的onStart */
-    onStartS() {
-        this.useUpdate = true;
-        this.initDataS();
-        this.initMove();
-        this.bindEventS();
-    }
-    initDataS() {
-        this.maxHp = Math.floor(this.maxHp);
-        this.curHp = this.maxHp;
-        // this.boss.displayName = "";
-        this.boss.worldTransform.scale = mw.Vector.one.multiply(this.bossScale);
-        this.boss.setDescription([Utils.getBoss()]);
-    }
-    /**
-     * 绑定事件
-     */
-    bindEventS() {
-        PrefabEvent.PrefabEvtFight.onHit(this.playerAtkEnemyS.bind(this));
-    }
-    /**
-     * 玩家攻击敌人
-     * @param senderGuid
-     * @param targetGuid
-     * @param damage
-     * @param hitPoint
-     * @returns
-     */
-    playerAtkEnemyS(senderGuid, targetGuid, damage, hitPoint) {
-        if (this.gameObject.gameObjectId != targetGuid)
-            return;
-        if (this.curHp <= 0)
-            return;
-        let tmpHp = this.curHp - damage;
-        if (tmpHp >= 0) {
-            this.curHp = tmpHp;
-        }
-        else {
-            this.curHp = 0;
-        }
-        if (this.curHp <= 0) {
-            this.dieS();
-            this.getPlayerModuleS.playerKillEnemy(senderGuid, this.maxHp);
-            TimeUtil.delaySecond(this.respawnTime).then(() => {
-                this.curHp = this.maxHp;
-                this.respawnS();
-            });
-        }
-        this.getPlayerModuleS.playerAtkEnemyFlyText(senderGuid, hitPoint, damage);
-    }
-    dieS() {
-        this.setVisibilityS(false);
-        EffectService.playAtPosition(this.explosionEffect, this.gameObject.worldTransform.position, {
-            scale: mw.Vector.one.multiply(1)
-        });
-    }
-    respawnS() {
-        this.boss.setDescription([Utils.getBoss()]);
-        this.setVisibilityS(true);
-        EffectService.playAtPosition(this.respawnEffect, this.gameObject.worldTransform.position, {
-            scale: mw.Vector.one.multiply(1)
-        });
-    }
-    /**
-     * 设置物体是否被显示
-     * @param isVisibility
-     */
-    setVisibilityS(isVisibility) {
-        this.boss.ragdollEnabled = !isVisibility;
-        this.useUpdate = isVisibility;
-    }
-    initMove() {
-        this.targetPos = this.pathVector[this.index];
-        this.boss.maxWalkSpeed = this.moveSpeed;
-    }
-    /**服务端的onUpdate */
-    onUpdateS(dt) {
-        this.frameCount++;
-        if (this.frameCount < this.maxFrameCount)
-            return;
-        this.frameCount = 0;
-        this.updateMove();
-    }
-    updateMove() {
-        if (!this.pathVector || this.pathVector.length <= 1)
-            return;
-        this.curBossDir = this.targetPos.clone().add(this.targetPos.clone().subtract(this.boss.worldTransform.position.clone()));
-        this.boss.lookAt(this.curBossDir);
-        this.boss.addMovement(mw.Vector.forward);
-        this.targetDistance = Math.sqrt(Math.pow(this.boss.worldTransform.position.x - this.pathVector[this.index].x, 2) +
-            Math.pow(this.boss.worldTransform.position.y - this.pathVector[this.index].y, 2));
-        //到达寻路点
-        if (this.targetDistance > 50)
-            return;
-        if (this.pathFlag && this.index < this.pathVector.length - 1) {
-            this.index++;
-            if (this.index == this.pathVector.length - 1)
-                this.pathFlag = false;
-        }
-        else if (!this.pathFlag && this.index > 0) {
-            this.index--;
-            if (this.index == 0)
-                this.pathFlag = true;
-        }
-        this.targetPos = this.pathVector[this.index];
-    }
-    /**--------------------------------【服务端】-------------------------------- */
-    /** 脚本被销毁时最后一帧执行完调用此函数 */
-    onDestroy() {
-    }
-};
-__decorate([
-    mw.Property({ displayName: "体型大小", group: "设置属性", range: { min: 1, max: 5, showSlider: true } })
-], Boss.prototype, "bossScale", void 0);
-__decorate([
-    mw.Property({ displayName: "血量", group: "设置属性", tooltip: "血量", range: { min: 100, max: 100000, showSlider: true } })
-], Boss.prototype, "maxHp", void 0);
-__decorate([
-    mw.Property({ displayName: "当前剩余血量", group: "设置属性", tooltip: "当前剩余血量", replicated: true, onChanged: "onHpChanged" })
-], Boss.prototype, "curHp", void 0);
-__decorate([
-    mw.Property({ displayName: "路径", group: "设置属性", tooltip: "路径" })
-], Boss.prototype, "pathVector", void 0);
-__decorate([
-    mw.Property({ displayName: "移动速度", group: "设置属性", tooltip: "移动速度", range: { min: 100, max: 1000, showSlider: true } })
-], Boss.prototype, "moveSpeed", void 0);
-__decorate([
-    mw.Property({ displayName: "爆炸特效", group: "设置属性", tooltip: "爆炸特效" })
-], Boss.prototype, "explosionEffect", void 0);
-__decorate([
-    mw.Property({ displayName: "重生时间", group: "设置属性", tooltip: "重生时间", range: { min: 5, max: 60, showSlider: true } })
-], Boss.prototype, "respawnTime", void 0);
-__decorate([
-    mw.Property({ displayName: "重生特效", group: "设置属性", tooltip: "重生特效" })
-], Boss.prototype, "respawnEffect", void 0);
-Boss = __decorate([
-    Component
-], Boss);
-var Boss$1 = Boss;
-
-var foreign2 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: Boss$1
 });
 
 let Coin = class Coin extends Script {
@@ -11185,6 +10993,68 @@ var foreign3 = /*#__PURE__*/Object.freeze({
     default: Coin$1
 });
 
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/common/EnemyLifebar.ui
+ * TIME: 2024.05.19-23.59.55
+ */
+let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
+    get mLifebarProgressBar() {
+        if (!this.mLifebarProgressBar_Internal && this.uiWidgetBase) {
+            this.mLifebarProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mLifebarProgressBar');
+        }
+        return this.mLifebarProgressBar_Internal;
+    }
+    get mHpTextBlock() {
+        if (!this.mHpTextBlock_Internal && this.uiWidgetBase) {
+            this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mHpTextBlock');
+        }
+        return this.mHpTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mHpTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+EnemyLifebar_Generate = __decorate([
+    UIBind('UI/common/EnemyLifebar.ui')
+], EnemyLifebar_Generate);
+var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
+
+var foreign86 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: EnemyLifebar_Generate$1
+});
+
 var MonsterState;
 (function (MonsterState) {
     MonsterState[MonsterState["Inactivation"] = 0] = "Inactivation";
@@ -11234,6 +11104,7 @@ class Monster extends Script {
         this.monsterId = 0;
         this.hp = 0;
         this.maxHp = 0;
+        // @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
         this.moveSpeed = 450;
         // @mw.Property({ displayName: "pathVectors", group: "Info", tooltip: "pathVectors" })
         this.pathVectors = [mw.Vector.zero];
@@ -11246,6 +11117,11 @@ class Monster extends Script {
         this.monster = null;
         this.monsterState = MonsterState.Inactivation;
         this.monsterWidth = 0;
+        this.cubeLifebar = null;
+        this.cubeLifebarWidget = null;
+        this.isInitLifebar = false;
+        this.preHp = 0;
+        this.playerModuleS = null;
         this.chasePlayerMap = new Map();
         this.isFollowing = false;
         this.isNavigateToing = false;
@@ -11296,11 +11172,7 @@ class Monster extends Script {
         let monsterElement = GameConfig.MonsterInfo.getElement(this.monsterId);
         if (!monsterElement)
             return;
-        let pathParent = await mw.GameObject.asyncFindGameObjectById(monsterElement?.PathStr);
-        this.pathVectors.length = 0;
-        pathParent?.getChildren().forEach((child) => {
-            this.pathVectors.push(child.worldTransform.position);
-        });
+        await this.initPaths(monsterElement?.PathStr);
         this.animationInfo.idles = monsterElement?.Idles;
         this.animationInfo.moves = monsterElement?.Moves;
         this.animationInfo.attacks = monsterElement?.Attacks;
@@ -11316,6 +11188,16 @@ class Monster extends Script {
             this.attackEffectInfo.rotOffsets.push(new mw.Rotation(value));
         });
         this.attackEffectInfo.effectScales = monsterElement?.EffectScales;
+        this.moveSpeed = monsterElement?.MoveSpeed;
+    }
+    async initPaths(pathStr = null) {
+        if (!pathStr || pathStr.length == 0)
+            pathStr = GameConfig.MonsterInfo.getElement(this.monsterId)?.PathStr;
+        let pathParent = await mw.GameObject.asyncFindGameObjectById(pathStr[this.randomInt(0, pathStr.length - 1)]);
+        this.pathVectors.length = 0;
+        pathParent?.getChildren().forEach((child) => {
+            this.pathVectors.push(child.worldTransform.position);
+        });
     }
     onUpdate(dt) {
         if (mw.SystemUtil.isClient()) {
@@ -11328,12 +11210,14 @@ class Monster extends Script {
     async onStart_C() {
         this.useUpdate = false;
         this.initEvent_C();
+        this.preHp = Math.floor(this.maxHp);
+        this.initLifebar();
     }
     initEvent_C() {
         Event.addServerListener("DrawDebug", this.bindDrawDebug_C.bind(this));
     }
     bindDrawDebug_C(start, end, halfSize) {
-        console.error(`DrawDebug`);
+        // console.error(`DrawDebug`);
         mw.PhysicsService.boxTraceMulti(start, end, halfSize, mw.Rotation.zero, { objectsToIgnore: [this.getMonster] }, {
             isDrawDebug: mw.SystemUtil.isPIE,
             duration: 1,
@@ -11342,7 +11226,49 @@ class Monster extends Script {
             thickness: 3
         });
     }
+    async initLifebar() {
+        this.cubeLifebar = UIService.create(EnemyLifebar_Generate$1);
+        this.cubeLifebarWidget = await mw.GameObject.asyncSpawn("UIWidget", {
+            replicates: false
+        });
+        this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
+        this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
+        this.getMonster.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.Rings);
+        this.cubeLifebarWidget.occlusionEnable = false;
+        this.cubeLifebarWidget.scaledByDistanceEnable = true;
+        this.cubeLifebarWidget.hideByDistanceEnable = true;
+        this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
+        this.isInitLifebar = true;
+        this.onHpChanged();
+    }
+    onHpChanged() {
+        if (!this.isInitLifebar)
+            return;
+        if (this.preHp <= 0)
+            this.preHp = Math.floor(this.maxHp);
+        let damage = this.preHp - this.hp;
+        if (damage > 0)
+            this.preHp = this.hp;
+        this.cubeLifebar.mLifebarProgressBar.percent = this.hp / this.maxHp;
+        this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.hp)}/${Math.floor(this.maxHp)}`;
+        if (this.hp <= 0) {
+            if (this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(false);
+            }
+        }
+        else if (this.hp >= this.maxHp) {
+            if (!this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(true);
+            }
+        }
+    }
     onUpdate_C(dt) {
+    }
+    get getPlayerModuleS() {
+        if (this.playerModuleS == null) {
+            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
+        }
+        return this.playerModuleS;
     }
     async onStart_S() {
         this.useUpdate = false;
@@ -11368,7 +11294,9 @@ class Monster extends Script {
         else {
             this.hp = 0;
             this.die_S();
+            this.getPlayerModuleS.playerKillEnemy(senderGuid, this.maxHp);
         }
+        this.getPlayerModuleS.playerAtkEnemyFlyText(senderGuid, hitPoint, damage);
     }
     async die_S() {
         this.dieReset_S();
@@ -11396,6 +11324,7 @@ class Monster extends Script {
     }
     rebirth_S() {
         let rebirthEffect = EffectService.playOnGameObject("26157", this.getMonster, { slotType: mw.HumanoidSlotType.Root, loopCount: 0, scale: mw.Vector.one.multiply(2) });
+        this.initPaths();
         TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
@@ -11560,11 +11489,12 @@ class Monster extends Script {
     }
     attackEffect_S() {
         let monsterPos = this.getMonster.worldTransform.position;
-        let posOffset = this.attackEffectInfo.posOffsets[this.attackIndex];
-        let effectForward = this.getMonster.worldTransform.getForwardVector().multiply(posOffset.y);
-        let effectPos = new mw.Vector(monsterPos.x + effectForward.x + posOffset.x, monsterPos.y + effectForward.y, monsterPos.z + effectForward.z + posOffset.z);
-        let constructorRot = new mw.Rotation(this.getMonster.worldTransform.getForwardVector(), mw.Vector.up);
+        let effectOffset = this.attackEffectInfo.posOffsets[this.attackIndex];
+        let monsterRot = this.getMonster.worldTransform.rotation;
+        let effectLocalOffset = monsterRot.rotateVector(effectOffset);
+        let effectPos = new mw.Vector(monsterPos.x + effectLocalOffset.x, monsterPos.y + effectLocalOffset.y, monsterPos.z + effectLocalOffset.z);
         let rotOffset = this.attackEffectInfo.rotOffsets[this.attackIndex];
+        let constructorRot = new mw.Rotation(this.getMonster.worldTransform.getForwardVector(), mw.Vector.up);
         let effectRot = new mw.Rotation(constructorRot.x + rotOffset.x, constructorRot.y + rotOffset.y, constructorRot.z + rotOffset.z);
         EffectService.playAtPosition(this.attackEffectInfo.effectIds[this.attackIndex], effectPos, {
             loopCount: 1,
@@ -11636,14 +11566,11 @@ __decorate([
     mw.Property({ displayName: "monsterId", group: "Info", tooltip: "monsterId" })
 ], Monster.prototype, "monsterId", void 0);
 __decorate([
-    mw.Property({ displayName: "hp", group: "Info", tooltip: "hp" })
+    mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
 ], Monster.prototype, "hp", void 0);
 __decorate([
     mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp" })
 ], Monster.prototype, "maxHp", void 0);
-__decorate([
-    mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
-], Monster.prototype, "moveSpeed", void 0);
 
 var foreign6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -12133,17 +12060,6 @@ class TestPanel extends TestPanel_Generate$1 {
 var foreign13 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel
-});
-
-class AdsModuleS extends ModuleS {
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-    }
-}
-
-var foreign39 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: AdsModuleS
 });
 
 /**
@@ -13141,7 +13057,7 @@ class RankItem {
             this.mLvTextBlock.text = "暂无";
         }
         else {
-            this.mLvTextBlock.text = lv.toString();
+            this.mLvTextBlock.text = Utils.getLvText(lv);
         }
         if (height == 0) {
             this.mHeightTextBlock.text = "暂无";
@@ -13604,7 +13520,6 @@ let GameLauncher = class GameLauncher extends mw.Script {
         ModuleService.registerModule(HUDModuleS, HUDModuleC, null);
         ModuleService.registerModule(PlayerModuleS, PlayerModuleC, PlayerData);
         ModuleService.registerModule(ShopModuleS, ShopModuleC, ShopData);
-        ModuleService.registerModule(AdsModuleS, AdsModuleC, null);
         ModuleService.registerModule(PropModuleS, PropModuleC, PropData);
         ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
         ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);
@@ -13648,6 +13563,109 @@ var GameLauncher$1 = GameLauncher;
 var foreign33 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GameLauncher$1
+});
+
+// import { Utils } from '../../Tools/utils';
+// import { Notice } from "../../common/notice/Notice";
+// import GlobalData from '../../const/GlobalData';
+// import PlayerModuleC from "../PlayerModule/PlayerModuleC";
+// import ShopModuleC from "../ShopModule/ShopModuleC";
+// import TaskModuleC from "../TaskModule/TaskModuleC";
+// import AdsModuleS from "./AdsModuleS";
+// import AdTipsPanel from "./ui/AdTipsPanel";
+// export default class AdsModuleC extends ModuleC<AdsModuleS, null> {
+//     /**商店模块 */
+//     private shopModuleC: ShopModuleC = null;
+//     private taskModuleC: TaskModuleC = null;
+//     private playerModuleC: PlayerModuleC = null;
+//     /**广告面板 */
+//     private adTipsPanel: AdTipsPanel = null;
+//     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+//     protected onStart(): void {
+//         this.initData();
+//         this.registerActions();
+//     }
+//     /**初始化数据 */
+//     private initData(): void {
+//         this.shopModuleC = ModuleService.getModule(ShopModuleC);
+//         this.taskModuleC = ModuleService.getModule(TaskModuleC);
+//         this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+//         this.adTipsPanel = mw.UIService.getUI(AdTipsPanel);
+//     }
+//     /**注册事件 */
+//     private registerActions(): void {
+//         this.adTipsPanel.onWatchAdsAction.add(this.playAds.bind(this));
+//     }
+//     protected onEnterScene(sceneType: number): void {
+//         this.defaultAds();
+//     }
+//     /**播放广告 */
+//     private playAds(id: number, adType: number): void {
+//         this.getReward(id, adType);
+//         Notice.showDownNotice("成功获得奖励");
+//     }
+//     /**获得奖励 */
+//     private getReward(id: number, adType: number): void {
+//         switch (adType) {
+//             case AdType.WeaponSet:
+//                 this.shopModuleC.onSwitchWeaponSet();
+//                 Notice.showDownNotice("成功获得英雄套装");
+//                 break;
+//             case AdType.AddCoin:
+//                 this.playerModuleC.saveCoin(1000);
+//                 Notice.showDownNotice("成功获得1000金币");
+//                 break;
+//             case AdType.AddCoinAndExp:
+//                 this.playerModuleC.saveCoinAndExp(500, 500);
+//                 Notice.showDownNotice("成功获得500金币");
+//                 Notice.showDownNotice("成功获得500经验");
+//                 break;
+//             case AdType.WeaponSet1:
+//                 this.shopModuleC.ads(id);
+//                 Notice.showDownNotice("成功获得英雄套装");
+//                 break;
+//             default:
+//                 break;
+//         }
+//         this.taskModuleC.ads();
+//     }
+//     private defaultAds(): void {
+//         TimeUtil.delaySecond(60).then(() => {
+//             if (GlobalData.isOpenIAA) {
+//                 this.adTipsPanel.showAdTips(30, AdType.WeaponSet1);
+//             } else {
+//                 this.getReward(30, AdType.WeaponSet1);
+//             }
+//             TimeUtil.setInterval(() => {
+//                 this.adTipsPanel.showAdTips(Utils.getRandomInteger(23, 40), AdType.WeaponSet1);
+//             }, 180);
+//         });
+//     }
+// }
+// export enum AdType {
+//     /**武器套装 */
+//     WeaponSet = 1,
+//     /**AddCoin */
+//     AddCoin = 2,
+//     /**AddCoinAndExp */
+//     AddCoinAndExp = 3,
+//     /**武器套装 */
+//     WeaponSet1 = 4,
+// }
+
+var foreign38 = /*#__PURE__*/Object.freeze({
+    __proto__: null
+});
+
+// import AdsModuleC from "./AdsModuleC";
+// export default class AdsModuleS extends ModuleS<AdsModuleC, null>{
+//     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+//     protected onStart(): void {
+//     }
+// }
+
+var foreign39 = /*#__PURE__*/Object.freeze({
+    __proto__: null
 });
 
 class ObjMeshCalss {

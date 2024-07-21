@@ -4,7 +4,6 @@ import { Utils } from "../../Tools/utils";
 import { GameConfig } from "../../config/GameConfig";
 import { IMusicElement } from "../../config/Music";
 import GlobalData from "../../const/GlobalData";
-import { AdType } from "../AdsModule/AdsModuleC";
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
 import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
@@ -85,19 +84,19 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
         });
         this.onAddCoinAction.add(() => {
-            if (GlobalData.isOpenIAA) {
-                this.adsTipsPanel.showAdTips(0, AdType.AddCoin);
-            } else {
-                this.playerModuleC.saveCoin(1000);
-            }
+            // if (GlobalData.isOpenIAA) {
+            //     this.adsTipsPanel.showAdTips(0, AdType.AddCoin);
+            // } else {
+            //     this.playerModuleC.saveCoin(1000);
+            // }
         });
 
         this.onAdsAction.add(() => {
-            if (GlobalData.isOpenIAA) {
-                this.adsTipsPanel.showAdTips(0, AdType.AddCoinAndExp);
-            } else {
-                this.playerModuleC.saveCoinAndExp(500, 500);
-            }
+            // if (GlobalData.isOpenIAA) {
+            //     this.adsTipsPanel.showAdTips(0, AdType.AddCoinAndExp);
+            // } else {
+            //     this.playerModuleC.saveCoinAndExp(500, 500);
+            // }
         });
 
         this.onInvincibleAction.add((isInvincible: boolean) => {

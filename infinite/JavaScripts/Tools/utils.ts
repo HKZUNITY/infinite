@@ -433,107 +433,108 @@ export class Utils {
      * @param lv 
      * @returns 
      */
-    public static getLvText(lv: number): string {
-        let lvText = "";
-        let lvType = Math.floor(lv / 10);
-        switch (lvType) {
-            case 0:
-                lvText = "坚韧黑铁";
-                break;
-            case 1:
-                lvText = "英勇青铜";
-                break;
-            case 2:
-                lvText = "不屈白银";
-                break;
-            case 3:
-                lvText = "荣耀黄金";
-                break;
-            case 4:
-                lvText = "华贵铂金";
-                break;
-            case 5:
-                lvText = "流光翡翠";
-                break;
-            case 6:
-                lvText = "璀璨钻石";
-                break;
-            case 7:
-                lvText = "超凡大师";
-                break;
-            case 8:
-                lvText = "傲世宗师";
-                break;
-            case 9:
-                lvText = "最强王者";
-                break;
-            default:
-                lvText = "最强王者";
-                break;
-        }
-        return lvText;
-    }
+    // public static getLvText(lv: number): string {
+    //     let lvText = "";
+    //     let lvType = Math.floor(lv / 10);
+    //     switch (lvType) {
+    //         case 0:
+    //             lvText = "坚韧黑铁";
+    //             break;
+    //         case 1:
+    //             lvText = "英勇青铜";
+    //             break;
+    //         case 2:
+    //             lvText = "不屈白银";
+    //             break;
+    //         case 3:
+    //             lvText = "荣耀黄金";
+    //             break;
+    //         case 4:
+    //             lvText = "华贵铂金";
+    //             break;
+    //         case 5:
+    //             lvText = "流光翡翠";
+    //             break;
+    //         case 6:
+    //             lvText = "璀璨钻石";
+    //             break;
+    //         case 7:
+    //             lvText = "超凡大师";
+    //             break;
+    //         case 8:
+    //             lvText = "傲世宗师";
+    //             break;
+    //         case 9:
+    //             lvText = "最强王者";
+    //             break;
+    //         default:
+    //             lvText = "最强王者";
+    //             break;
+    //     }
+    //     return lvText;
+    // }
 
     /**
     * 得到等级名字
     * @param lv 
     * @returns 
     */
-    // public static getLvText(lv: number): string {
-    //     let starLevel = lv % 10;
-    //     let level = Math.floor(lv / 10);
-    //     Console.error("操蛋#" + starLevel + "#" + level);
-    //     let playerLevelTxt = "";
-    //     switch (level) {
-    //         case 0:
-    //             playerLevelTxt = "斗之气 " + starLevel + " 段";
-    //             break;
-    //         case 1:
-    //             playerLevelTxt = starLevel + " 星斗者";
-    //             break;
-    //         case 2:
-    //             playerLevelTxt = starLevel + " 星斗师";
-    //             break;
-    //         case 3:
-    //             playerLevelTxt = starLevel + " 星大斗师";
-    //             break;
-    //         case 4:
-    //             playerLevelTxt = starLevel + " 星斗灵";
-    //             break;
-    //         case 5:
-    //             playerLevelTxt = starLevel + " 星斗王";
-    //             break;
-    //         case 6:
-    //             playerLevelTxt = starLevel + " 星斗皇";
-    //             break;
-    //         case 7:
-    //             playerLevelTxt = starLevel + " 星斗宗";
-    //             break;
-    //         case 8:
-    //             playerLevelTxt = starLevel + " 星斗尊";
-    //             break;
-    //         case 9:
-    //             playerLevelTxt = starLevel + " 星斗圣";
-    //             break;
-    //         default:
-    //             playerLevelTxt = (lv - 100) + " 星斗帝";
-    //             break;
-    //     }
-    //     return playerLevelTxt;
-    // }
+    public static getLvText(lv: number): string {
+        let starLevel = lv % 10;
+        let level = Math.floor(lv / 10);
+        Console.error("操蛋#" + starLevel + "#" + level);
+        let playerLevelTxt = "";
+        switch (level) {
+            case 0:
+                playerLevelTxt = starLevel + " 段斗之气";
+                break;
+            case 1:
+                playerLevelTxt = starLevel + " 星斗者";
+                break;
+            case 2:
+                playerLevelTxt = starLevel + " 星斗师";
+                break;
+            case 3:
+                playerLevelTxt = starLevel + " 星大斗师";
+                break;
+            case 4:
+                playerLevelTxt = starLevel + " 星斗灵";
+                break;
+            case 5:
+                playerLevelTxt = starLevel + " 星斗王";
+                break;
+            case 6:
+                playerLevelTxt = starLevel + " 星斗皇";
+                break;
+            case 7:
+                playerLevelTxt = starLevel + " 星斗宗";
+                break;
+            case 8:
+                playerLevelTxt = starLevel + " 星斗尊";
+                break;
+            case 9:
+                playerLevelTxt = starLevel + " 星斗圣";
+                break;
+            default:
+                playerLevelTxt = (lv - 100) + " 星斗帝";
+                break;
+        }
+        return playerLevelTxt;
+    }
 
 
 
 
     private static locs: mw.Vector[] =
         [
-            new mw.Vector(500, -5500, 500),
-            new mw.Vector(150, -5100, 400),
-            new mw.Vector(2800, -2100, 200),
-            new mw.Vector(3200, -2800, 300)
+            new mw.Vector(2800, -6300, 500),
+            new mw.Vector(3000, -8000, 500),
+            new mw.Vector(4500, -6300, 500),
+            new mw.Vector(4500, -8000, 500),
+            new mw.Vector(3700, -7200, 500)
         ];
     public static getWorldLocation(): mw.Vector {
-        return this.locs[this.getRandomInteger(0, 3)];
+        return this.locs[this.getRandomInteger(0, this.locs.length - 1)];
     }
 
     public static boss: string[] = [

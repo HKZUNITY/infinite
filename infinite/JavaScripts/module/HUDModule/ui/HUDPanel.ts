@@ -214,7 +214,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
 		this.mCoinTextBlock.text = coin + "";
 		this.shopPanel.mCoinTextBlock.text = coin + "";
-		let atk = 50 + (lv * 3);
+		let atk = 50 + (lv * 10);
 		this.mAtkTextBlock.text = "攻击力：" + atk;
 		ColdWeapon.getInstance().updateHitDamage(atk);
 	}

@@ -8,9 +8,7 @@ import { InputManagers, TouchData } from "../../Tools/InputManager";
 import { Notice } from "../../common/notice/Notice";
 import { IColdWeaponElement } from "../../config/ColdWeapon";
 import { GameConfig } from "../../config/GameConfig";
-import GlobalData from "../../const/GlobalData";
 import NPCHead_Generate from "../../ui-generate/module/ShopModule/NPCHead_generate";
-import { AdType } from "../AdsModule/AdsModuleC";
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
@@ -131,12 +129,12 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
 
     /**看广告切换武器套装 */
     private onWatchAdSwitchWeaponSet(): void {
-        if (GlobalData.isOpenIAA) {
-            this.adsTipsPanel.showAdTips(0, AdType.WeaponSet);
-        }
-        else {
-            this.onSwitchWeaponSet();
-        }
+        // if (GlobalData.isOpenIAA) {
+        //     this.adsTipsPanel.showAdTips(0, AdType.WeaponSet);
+        // }
+        // else {
+        //     this.onSwitchWeaponSet();
+        // }
     }
 
     /**----------【PlayerModule】---------- */

@@ -109,7 +109,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
      * @param hp 
      */
     private addExpAndCoin(player: mw.Player, hp: number): void {
-        let value = (hp / 10);
+        let value = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
         let expOrCoin = value >= 2000 ? 2000 : value;
         let playerData = DataCenterS.getData(player, PlayerData);
         let preLv = playerData.playerLv;
@@ -125,6 +125,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
                 playerLifebar.playerLevel = playerData.playerLv;
             }
             this.saveLv(player, playerData.playerLv - preLv, playerData.playerLv);
+            this.playEffectAndSoundToPlayer(player);
         }
         this.getClient(player).net_updateLvExpAndCoin(isAddLv, expOrCoin);
     }
@@ -254,23 +255,23 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         this.worldModuleS.refreshKill_S(player.userId, value);
     }
 
-    @Decorator.noReply()
-    public net_saveLv(value: number): void {
-        this.currentData.refashLv(value);
-        this.worldModuleS.refreshLv_S(this.currentPlayer.userId, value);
-    }
+    // @Decorator.noReply()
+    // public net_saveLv(value: number): void {
+    //     this.currentData.refashLv(value);
+    //     this.worldModuleS.refreshLv_S(this.currentPlayer.userId, value);
+    // }
 
-    @Decorator.noReply()
-    public net_saveHeight(value: number): void {
-        this.currentData.refashHeight(value);
-        this.worldModuleS.refreshHeight_S(this.currentPlayer.userId, value);
-    }
+    // @Decorator.noReply()
+    // public net_saveHeight(value: number): void {
+    //     this.currentData.refashHeight(value);
+    //     this.worldModuleS.refreshHeight_S(this.currentPlayer.userId, value);
+    // }
 
-    @Decorator.noReply()
-    public net_saveKill(value: number): void {
-        this.currentData.refashKill(value);
-        this.worldModuleS.refreshKill_S(this.currentPlayer.userId, value);
-    }
+    // @Decorator.noReply()
+    // public net_saveKill(value: number): void {
+    //     this.currentData.refashKill(value);
+    //     this.worldModuleS.refreshKill_S(this.currentPlayer.userId, value);
+    // }
 
     @Decorator.noReply()
     public net_saveCoin(value: number): void {
@@ -303,6 +304,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
                 playerLifebar.playerLevel = this.currentData.playerLv;
             }
             this.saveLv(player, this.currentData.playerLv - preLv, this.currentData.playerLv);
+            this.playEffectAndSoundToPlayer(player);
         }
         this.getClient(player).net_updateLvExpAndCoin(isAddLv);
     }
@@ -312,6 +314,11 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (this.playerLifeMap.has(this.currentPlayerId)) {
             this.playerLifeMap.get(this.currentPlayerId).isInvincible = isInvincible;
         }
+    }
+
+    public playEffectAndSoundToPlayer(player: mw.Player): void {
+        SoundService.play3DSound("169179", player.character, 1, 10, { radius: 500, falloffDistance: 1200 });
+        EffectService.playOnGameObject("142750", player.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 1 });
     }
 }
 

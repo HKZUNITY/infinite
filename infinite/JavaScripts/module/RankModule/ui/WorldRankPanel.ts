@@ -84,7 +84,7 @@ export class RankItem {
 		if (lv == 0) {
 			this.mLvTextBlock.text = "暂无";
 		} else {
-			this.mLvTextBlock.text = lv.toString();
+			this.mLvTextBlock.text = Utils.getLvText(lv);
 		}
 		if (height == 0) {
 			this.mHeightTextBlock.text = "暂无";

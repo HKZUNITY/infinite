@@ -1,5 +1,7 @@
 ﻿import { GameConfig } from "../config/GameConfig";
+import PlayerModuleS from "../module/PlayerModule/PlayerModuleS";
 import { PrefabEvent } from "../Prefabs/PrefabEvent";
+import EnemyLifebar_Generate from "../ui-generate/common/EnemyLifebar_generate";
 
 export enum MonsterState {
     Inactivation = 0,
@@ -44,11 +46,11 @@ export class AttackEffectInfo {
 export default class Monster extends Script {
     @mw.Property({ displayName: "monsterId", group: "Info", tooltip: "monsterId" })
     private monsterId: number = 0;
-    @mw.Property({ displayName: "hp", group: "Info", tooltip: "hp" })
+    @mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
     private hp: number = 0;
     @mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp" })
     private maxHp: number = 0;
-    @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
+    // @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
     private moveSpeed: number = 450;
     // @mw.Property({ displayName: "pathVectors", group: "Info", tooltip: "pathVectors" })
     private pathVectors: mw.Vector[] = [mw.Vector.zero];
@@ -112,11 +114,7 @@ export default class Monster extends Script {
     private async initConfig(): Promise<void> {
         let monsterElement = GameConfig.MonsterInfo.getElement(this.monsterId);
         if (!monsterElement) return;
-        let pathParent = await mw.GameObject.asyncFindGameObjectById(monsterElement?.PathStr);
-        this.pathVectors.length = 0;
-        pathParent?.getChildren().forEach((child: mw.GameObject) => {
-            this.pathVectors.push(child.worldTransform.position);
-        });
+        await this.initPaths(monsterElement?.PathStr);
         this.animationInfo.idles = monsterElement?.Idles;
         this.animationInfo.moves = monsterElement?.Moves;
         this.animationInfo.attacks = monsterElement?.Attacks;
@@ -132,6 +130,16 @@ export default class Monster extends Script {
             this.attackEffectInfo.rotOffsets.push(new mw.Rotation(value));
         });
         this.attackEffectInfo.effectScales = monsterElement?.EffectScales;
+        this.moveSpeed = monsterElement?.MoveSpeed;
+    }
+
+    private async initPaths(pathStr: string[] = null): Promise<void> {
+        if (!pathStr || pathStr.length == 0) pathStr = GameConfig.MonsterInfo.getElement(this.monsterId)?.PathStr;
+        let pathParent = await mw.GameObject.asyncFindGameObjectById(pathStr[this.randomInt(0, pathStr.length - 1)]);
+        this.pathVectors.length = 0;
+        pathParent?.getChildren().forEach((child: mw.GameObject) => {
+            this.pathVectors.push(child.worldTransform.position);
+        });
     }
 
     protected onUpdate(dt: number): void {
@@ -142,9 +150,14 @@ export default class Monster extends Script {
         }
     }
 
+    private cubeLifebar: EnemyLifebar_Generate = null;
+    private cubeLifebarWidget: mw.UIWidget = null;
+    private isInitLifebar = false;
     private async onStart_C(): Promise<void> {
         this.useUpdate = false;
         this.initEvent_C();
+        this.preHp = Math.floor(this.maxHp);
+        this.initLifebar();
     }
 
     private initEvent_C(): void {
@@ -152,7 +165,7 @@ export default class Monster extends Script {
     }
 
     private bindDrawDebug_C(start: mw.Vector, end: mw.Vector, halfSize: mw.Vector): void {
-        console.error(`DrawDebug`);
+        // console.error(`DrawDebug`);
         mw.PhysicsService.boxTraceMulti(start, end, halfSize, mw.Rotation.zero,
             { objectsToIgnore: [this.getMonster] },
             {
@@ -164,8 +177,60 @@ export default class Monster extends Script {
             });
     }
 
+    private async initLifebar(): Promise<void> {
+        this.cubeLifebar = UIService.create(EnemyLifebar_Generate);
+        this.cubeLifebarWidget = await mw.GameObject.asyncSpawn<mw.UIWidget>(
+            "UIWidget",
+            {
+                replicates: false
+            });
+        this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
+        this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
+
+        this.getMonster.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.Rings);
+
+        this.cubeLifebarWidget.occlusionEnable = false;
+        this.cubeLifebarWidget.scaledByDistanceEnable = true;
+        this.cubeLifebarWidget.hideByDistanceEnable = true;
+        this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
+
+        this.isInitLifebar = true;
+        this.onHpChanged();
+    }
+
+    private preHp: number = 0;
+    private onHpChanged(): void {
+        if (!this.isInitLifebar) return;
+
+        if (this.preHp <= 0) this.preHp = Math.floor(this.maxHp);
+
+        let damage = this.preHp - this.hp;
+        if (damage > 0) this.preHp = this.hp;
+
+        this.cubeLifebar.mLifebarProgressBar.percent = this.hp / this.maxHp;
+        this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.hp)}/${Math.floor(this.maxHp)}`;
+
+        if (this.hp <= 0) {
+            if (this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(false);
+            }
+        } else if (this.hp >= this.maxHp) {
+            if (!this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(true);
+            }
+        }
+    }
+
     private onUpdate_C(dt: number): void {
 
+    }
+
+    private playerModuleS: PlayerModuleS = null;
+    private get getPlayerModuleS(): PlayerModuleS {
+        if (this.playerModuleS == null) {
+            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
+        }
+        return this.playerModuleS;
     }
 
     private async onStart_S(): Promise<void> {
@@ -192,7 +257,9 @@ export default class Monster extends Script {
         } else {
             this.hp = 0;
             this.die_S();
+            this.getPlayerModuleS.playerKillEnemy(senderGuid, this.maxHp);
         }
+        this.getPlayerModuleS.playerAtkEnemyFlyText(senderGuid, hitPoint, damage);
     }
 
     private async die_S(): Promise<void> {
@@ -221,6 +288,7 @@ export default class Monster extends Script {
 
     private rebirth_S(): void {
         let rebirthEffect = EffectService.playOnGameObject("26157", this.getMonster, { slotType: mw.HumanoidSlotType.Root, loopCount: 0, scale: mw.Vector.one.multiply(2) });
+        this.initPaths();
         TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
@@ -404,13 +472,13 @@ export default class Monster extends Script {
 
     private attackEffect_S(): void {
         let monsterPos = this.getMonster.worldTransform.position;
+        let effectOffset = this.attackEffectInfo.posOffsets[this.attackIndex];
+        let monsterRot = this.getMonster.worldTransform.rotation;
+        let effectLocalOffset = monsterRot.rotateVector(effectOffset);
+        let effectPos = new mw.Vector(monsterPos.x + effectLocalOffset.x, monsterPos.y + effectLocalOffset.y, monsterPos.z + effectLocalOffset.z);
 
-        let posOffset = this.attackEffectInfo.posOffsets[this.attackIndex];
-        let effectForward = this.getMonster.worldTransform.getForwardVector().multiply(posOffset.y);
-        let effectPos = new mw.Vector(monsterPos.x + effectForward.x + posOffset.x, monsterPos.y + effectForward.y, monsterPos.z + effectForward.z + posOffset.z);
-
-        let constructorRot = new mw.Rotation(this.getMonster.worldTransform.getForwardVector(), mw.Vector.up);
         let rotOffset = this.attackEffectInfo.rotOffsets[this.attackIndex];
+        let constructorRot = new mw.Rotation(this.getMonster.worldTransform.getForwardVector(), mw.Vector.up);
         let effectRot = new mw.Rotation(constructorRot.x + rotOffset.x, constructorRot.y + rotOffset.y, constructorRot.z + rotOffset.z);
 
         EffectService.playAtPosition(this.attackEffectInfo.effectIds[this.attackIndex],

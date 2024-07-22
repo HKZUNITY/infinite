@@ -923,6 +923,11 @@ class MonsterInfoConfig extends ConfigBase {
     }
 }
 
+var foreign24 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    MonsterInfoConfig: MonsterInfoConfig
+});
+
 const EXCELDATA$6 = [["id", "Guid", "Annotation"], ["", "", ""], [1, "118698", "STAY"], [2, "118699", "bad guy"], [3, "117222", "我会活下去"], [4, "118697", "Let Me Love You"], [5, "118700", "Running up That Hill"], [6, "118701", "Love To Hate Me"], [7, "118702", "TOMBOY"], [8, "118703", "Shut Down"], [9, "118704", "Celestial"], [10, "118712", "As It Was"], [11, "118706", "Good Morning"], [12, "118707", "Alone"], [13, "118709", "Chanderiler"], [14, "118711", "Don't Wanna Know"], [15, "118716", "Mood"], [16, "117220", "金轮"], [17, "128884", "不知道叫啥"], [18, "128888", "也不知道叫啥"]];
 class MusicConfig extends ConfigBase {
     constructor() {
@@ -6709,10 +6714,10 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mHpProgressBar.currentValue = curHp / maxHp;
         this.mHpTextBlock.text = curHp + "/" + maxHp;
         if (this.mHpProgressBar.currentValue == 1) {
-            this.startDeadCountDown();
+            this.endDeadCountDown();
         }
         else if (this.mHpProgressBar.currentValue == 0) {
-            this.endDeadCountDown();
+            this.startDeadCountDown();
         }
     }
     atk(index) {
@@ -15997,6 +16002,7 @@ const MWModuleMap = {
      '99C4E5454A40C61FC427EDB862680EA4': foreign21,
      'D4C04F604802C1AE6095B19172F0E134': foreign22,
      'EC8FA87B49BED23F0082059847D749D1': foreign23,
+     '159AA1104B1A8006C1E3109EEA075240': foreign24,
      '0482D8294ED7C6B824EE8FB76F64DEA8': foreign25,
      '336F8CF342D195E83F025D88E0E67CF5': foreign26,
      '3989B718464F7D8E96063AAE1F443A7D': foreign27,
@@ -16104,6 +16110,7 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign21 || {}, "JavaScripts/config/DressData"],
 [foreign22 || {}, "JavaScripts/config/DressProgress"],
 [foreign23 || {}, "JavaScripts/config/GameConfig"],
+[foreign24 || {}, "JavaScripts/config/MonsterInfo"],
 [foreign25 || {}, "JavaScripts/config/Music"],
 [foreign26 || {}, "JavaScripts/config/NPC"],
 [foreign27 || {}, "JavaScripts/config/OnlineRewards"],

@@ -1,0 +1,35 @@
+﻿{
+	"name": "a",
+	"packageName": "967DD45149485399DF0458851A6783E8",
+	"foldername": "infinite",
+	"mainScene": 1,
+	"scenePublic": 1,
+	"intro": "as",
+	"notes": "as",
+	"editorVersion": "v0.35.0.4",
+	"parentGameIdentity": "",
+	"parentGameId": "",
+	"extra": "{\"attribute\":2,\"IsHorizontal\":true,\"useAvatar\":1}",
+	"devEnv": 4,
+	"needToMgs": 0,
+	"attribute": 2,
+	"autoSubmitAudit": false,
+	"ignore": [
+		"game.desc",
+		"Asset_Data_List"
+	],
+	"files": [
+		{
+			"type": "Game_Thumbnail",
+			"path": "Pictures/Game_Thumbnail.jpg"
+		},
+		{
+			"type": "GameSetting",
+			"path": "Config/GameSetting.ini"
+		},
+		{
+			"type": "Asset_Data_List",
+			"path": "Asset_Data_List"
+		}
+	]
+}

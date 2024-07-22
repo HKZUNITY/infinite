@@ -268,9 +268,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mHpTextBlock.text = curHp + "/" + maxHp;
 
 		if (this.mHpProgressBar.currentValue == 1) {
-			this.startDeadCountDown();
-		} else if (this.mHpProgressBar.currentValue == 0) {
 			this.endDeadCountDown();
+		} else if (this.mHpProgressBar.currentValue == 0) {
+			this.startDeadCountDown();
 		}
 	}
 	//#endregion

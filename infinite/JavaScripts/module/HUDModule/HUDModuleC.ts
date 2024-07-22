@@ -168,7 +168,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
         this.hudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = 100 + (lv * 20);
+        let hp = Utils.getHp(lv);
         this.maxHp = hp;
         this.updateHp(hp);
     }

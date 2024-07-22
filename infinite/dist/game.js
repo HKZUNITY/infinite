@@ -947,7 +947,7 @@ var foreign26 = /*#__PURE__*/Object.freeze({
     NPCConfig: NPCConfig
 });
 
-const EXCELDATA$4 = [["ID", "OnlineTime", "RewardCount", "Icon"], ["", "", "", ""], [1, 1, [10, 10, 0], "193281"], [2, 3, [30, 30, 0], "193281"], [3, 5, [50, 50, 0], "193281"], [4, 8, [80, 80, 0], "193281"], [5, 10, [100, 100, 0], "193281"], [6, 13, [120, 120, 0], "193281"], [7, 15, [150, 150, 0], "193281"], [8, 18, [180, 180, 0], "193281"], [9, 20, [200, 200, 0], "193281"], [10, 23, [230, 230, 0], "193281"], [11, 25, [250, 250, 0], "193281"], [12, 28, [280, 280, 0], "192228"], [13, 30, [300, 300, 0], "192228"], [14, 35, [350, 350, 0], "192228"], [15, 40, [400, 400, 0], "192228"], [16, 45, [450, 450, 0], "192228"], [17, 50, [500, 500, 0], "192228"], [18, 60, [600, 500, 0], "192228"], [19, 70, [700, 500, 0], "192228"], [20, 80, [800, 500, 0], "192153"], [21, 90, [900, 500, 0], "192153"], [22, 100, [1000, 500, 0], "192153"], [23, 110, [1100, 500, 0], "192153"], [24, 120, [1200, 500, 0], "192153"], [25, 130, [1300, 500, 0], "192153"], [26, 140, [1400, 500, 0], "192153"], [27, 150, [1500, 500, 0], "193275"], [28, 160, [1600, 500, 0], "193275"], [29, 170, [1700, 500, 0], "193275"], [30, 180, [1800, 500, 0], "193275"], [31, 200, [2000, 500, 0], "193275"]];
+const EXCELDATA$4 = [["ID", "OnlineTime", "RewardCount", "Icon"], ["", "", "", ""], [1, 1, [100, 100, 0], "193281"], [2, 5, [500, 500, 0], "193281"], [3, 10, [1000, 1000, 0], "193281"], [4, 15, [1500, 1500, 0], "193281"], [5, 20, [2000, 2000, 0], "193281"], [6, 25, [2500, 2500, 0], "193281"], [7, 30, [3000, 3000, 0], "193281"], [8, 40, [4000, 4000, 0], "193281"], [9, 50, [5000, 5000, 0], "192228"], [10, 60, [6000, 6000, 0], "192228"], [11, 70, [7000, 7000, 0], "192228"], [12, 80, [8000, 8000, 0], "192228"], [13, 90, [9000, 9000, 0], "192228"], [14, 100, [10000, 10000, 0], "192228"], [15, 110, [11000, 11000, 0], "192228"], [16, 120, [12000, 12000, 0], "192228"], [17, 150, [15000, 15000, 0], "193275"], [18, 180, [18000, 18000, 0], "193275"], [19, 210, [21000, 21000, 0], "193275"], [20, 240, [24000, 24000, 0], "193275"], [21, 270, [27000, 27000, 0], "193275"], [22, 300, [30000, 30000, 0], "193275"], [23, 330, [33000, 33000, 0], "193275"], [24, 360, [36000, 36000, 0], "193275"]];
 class OnlineRewardsConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$4);
@@ -983,7 +983,7 @@ var foreign29 = /*#__PURE__*/Object.freeze({
     QuickTalkConfig: QuickTalkConfig
 });
 
-const EXCELDATA$1 = [["id", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Exp"], ["", "", "", "", "", "", "", ""], [1, "每日登陆游戏（{0}/{1}）", 1, 1, 0, 1, 10, 0], [2, "每日在线时长8分钟（{0}/{1}）", 1, 2, 3, 8, 80, 40], [3, "每日在线时长15分钟（{0}/{1}）", 1, 2, 4, 15, 150, 75], [4, "每日在线时长25分钟（{0}/{1}）", 1, 2, 5, 25, 250, 125], [5, "每日在线时长35分钟（{0}/{1}）", 1, 2, 6, 35, 350, 175], [6, "每日在线时长50分钟（{0}/{1}）", 1, 2, 7, 50, 500, 140], [7, "每日在线时长60分钟（{0}/{1}）", 1, 2, 0, 60, 600, 200], [8, "每日击杀怪物1只（{0}/{1}）", 1, 3, 9, 1, 10, 5], [9, "每日击杀怪物5只（{0}/{1}）", 1, 3, 10, 5, 50, 25], [10, "每日击杀怪物10只（{0}/{1}）", 1, 3, 11, 10, 100, 50], [11, "每日击杀怪物30只（{0}/{1}）", 1, 3, 12, 30, 300, 150], [12, "每日击杀怪物50只（{0}/{1}）", 1, 3, 13, 50, 500, 250], [13, "每日击杀怪物100只（{0}/{1}）", 1, 3, 0, 100, 1000, 500], [14, "每日击杀1只Boss（{0}/{1}）", 1, 4, 15, 1, 500, 250], [15, "每日击杀2只Boss（{0}/{1}）", 1, 4, 16, 2, 1000, 500], [16, "每日击杀3只Boss（{0}/{1}）", 1, 4, 0, 3, 1500, 750], [17, "每日击杀1个玩家（{0}/{1}）", 1, 5, 18, 1, 50, 25], [18, "每日击杀5个玩家（{0}/{1}）", 1, 5, 19, 5, 250, 125], [19, "每日击杀10个玩家（{0}/{1}）", 1, 5, 20, 10, 500, 250], [20, "每日击杀30个玩家（{0}/{1}）", 1, 5, 21, 30, 1000, 500], [21, "每日击杀50个玩家（{0}/{1}）", 1, 5, 0, 50, 1500, 750], [22, "每日购买1个武器套装（{0}/{1}）", 1, 6, 23, 1, 500, 0], [23, "每日购买2个武器套装（{0}/{1}）", 1, 6, 24, 2, 500, 0], [24, "每日购买3个武器套装（{0}/{1}）", 1, 6, 0, 3, 500, 0], [25, "每日换装1次数（{0}/{1}）", 1, 7, 26, 1, 100, 0], [26, "每日换装5次数（{0}/{1}）", 1, 7, 27, 5, 500, 0], [27, "每日换装10次数（{0}/{1}）", 1, 7, 28, 10, 1000, 0], [28, "每日换装30次数（{0}/{1}）", 1, 7, 29, 30, 1250, 0], [29, "每日换装50次数（{0}/{1}）", 1, 7, 30, 50, 1500, 0], [30, "每日换装100次数（{0}/{1}）", 1, 7, 0, 100, 1500, 0], [31, "每日切换1次背景音乐（{0}/{1}）", 1, 8, 32, 1, 1, 0], [32, "每日切换10次背景音乐（{0}/{1}）", 1, 8, 33, 10, 10, 0], [33, "每日切换50次背景音乐（{0}/{1}）", 1, 8, 34, 50, 50, 0], [34, "每日切换100次背景音乐（{0}/{1}）", 1, 8, 35, 100, 100, 0], [35, "每日切换500次背景音乐（{0}/{1}）", 1, 8, 0, 50, 500, 0], [36, "每日聊天1次（{0}/{1}）", 1, 10, 37, 1, 10, 10], [37, "每日聊天10次（{0}/{1}）", 1, 10, 38, 10, 100, 100], [38, "每日聊天100次（{0}/{1}）", 1, 10, 0, 100, 500, 500], [39, "每日看广告1次（{0}/{1}）", 1, 11, 40, 1, 100, 100], [40, "每日看广告5次（{0}/{1}）", 1, 11, 41, 5, 500, 500], [41, "每日看广告10次（{0}/{1}）", 1, 11, 42, 10, 1000, 1000], [42, "每日看广告30次（{0}/{1}）", 1, 11, 43, 30, 3000, 3000], [43, "每日看广告50次（{0}/{1}）", 1, 11, 0, 50, 5000, 5000], [44, "每周登录2天（{0}/{1}）", 2, 30, 45, 2, 200, 200], [45, "每周登录3天（{0}/{1}）", 2, 30, 46, 3, 300, 300], [46, "每周登录5天（{0}/{1}）", 2, 30, 47, 5, 500, 500], [47, "每周登录7天（{0}/{1}）", 2, 30, 0, 7, 700, 700], [48, "每周时长达到30分钟2天（{0}/{1}）", 2, 31, 49, 2, 200, 200], [49, "每周时长达到30分钟3天（{0}/{1}）", 2, 31, 50, 3, 300, 300], [50, "每周时长达到30分钟5天（{0}/{1}）", 2, 31, 51, 5, 500, 500], [51, "每周时长达到30分钟7天（{0}/{1}）", 2, 31, 0, 7, 700, 700], [52, "每周击杀怪物50只（{0}/{1}）", 2, 32, 53, 50, 500, 500], [53, "每周击杀怪物100只（{0}/{1}）", 2, 32, 54, 100, 1000, 1000], [54, "每周击杀怪物300只（{0}/{1}）", 2, 32, 55, 300, 1500, 1500], [55, "每周击杀怪物500只（{0}/{1}）", 2, 32, 56, 500, 2500, 2500], [56, "每周击杀怪物800只（{0}/{1}）", 2, 32, 0, 800, 4000, 4000], [57, "每周击杀5只Boss（{0}/{1}）", 2, 33, 58, 5, 1000, 500], [58, "每周击杀10只Boss（{0}/{1}）", 2, 33, 59, 10, 2000, 1000], [59, "每周击杀20只Boss（{0}/{1}）", 2, 33, 0, 20, 3000, 1500], [60, "每周击杀10个玩家（{0}/{1}）", 2, 34, 61, 10, 100, 50], [61, "每周击杀30个玩家（{0}/{1}）", 2, 34, 62, 30, 500, 250], [62, "每周击杀50个玩家（{0}/{1}）", 2, 34, 0, 50, 1000, 500], [63, "每周购买6个武器套装（{0}/{1}）", 2, 35, 64, 6, 1000, 0], [64, "每周购买20个武器套装（{0}/{1}）", 2, 35, 65, 20, 1000, 0], [65, "每周购买30个武器套装（{0}/{1}）", 2, 35, 0, 30, 1000, 0], [66, "每周换装100次数（{0}/{1}）", 2, 36, 67, 100, 1000, 0], [67, "每周换装200次数（{0}/{1}）", 2, 36, 68, 200, 5000, 0], [68, "每周换装300次数（{0}/{1}）", 2, 36, 69, 300, 10000, 0], [69, "每周换装400次数（{0}/{1}）", 2, 36, 70, 400, 12500, 0], [70, "每周换装500次数（{0}/{1}）", 2, 36, 71, 500, 15000, 0], [71, "每周换装600次数（{0}/{1}）", 2, 36, 0, 600, 15000, 0], [72, "每周切换100次背景音乐（{0}/{1}）", 2, 37, 73, 100, 10, 0], [73, "每周切换200次背景音乐（{0}/{1}）", 2, 37, 74, 200, 100, 0], [74, "每周切换300次背景音乐（{0}/{1}）", 2, 37, 75, 300, 500, 0], [75, "每周切换400次背景音乐（{0}/{1}）", 2, 37, 76, 400, 1000, 0], [76, "每周切换500次背景音乐（{0}/{1}）", 2, 37, 0, 500, 5000, 0], [77, "每周聊天100次（{0}/{1}）", 2, 38, 78, 100, 100, 100], [78, "每周聊天200次（{0}/{1}）", 2, 38, 79, 200, 500, 500], [79, "每周聊天300次（{0}/{1}）", 2, 38, 0, 300, 1000, 1000], [80, "每周看广告20次（{0}/{1}）", 2, 39, 81, 20, 2000, 2000], [81, "每周看广告50次（{0}/{1}）", 2, 39, 82, 50, 5000, 5000], [82, "每周看广告100次（{0}/{1}）", 2, 39, 83, 100, 10000, 10000], [83, "每周看广告200次（{0}/{1}）", 2, 39, 84, 200, 30000, 30000], [84, "每周看广告300次（{0}/{1}）", 2, 39, 0, 300, 50000, 50000]];
+const EXCELDATA$1 = [["id", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Exp"], ["", "", "", "", "", "", "", ""], [1, "每日登陆游戏（{0}/{1}）", 1, 1, 0, 1, 100, 100], [2, "每日在线时长8分钟（{0}/{1}）", 1, 11, 3, 8, 800, 800], [3, "每日在线时长15分钟（{0}/{1}）", 1, 11, 4, 15, 1500, 1500], [4, "每日在线时长25分钟（{0}/{1}）", 1, 11, 5, 25, 2500, 2500], [5, "每日在线时长35分钟（{0}/{1}）", 1, 11, 6, 35, 3500, 3555], [6, "每日在线时长50分钟（{0}/{1}）", 1, 11, 7, 50, 5000, 5000], [7, "每日在线时长60分钟（{0}/{1}）", 1, 11, 0, 60, 6000, 6000], [8, "每日击败1只美杜莎（{0}/{1}）", 1, 21, 9, 1, 500, 500], [9, "每日击败3只美杜莎（{0}/{1}）", 1, 21, 10, 3, 1500, 1500], [10, "每日击败6只美杜莎（{0}/{1}）", 1, 21, 11, 6, 3000, 3000], [11, "每日击败10只美杜莎（{0}/{1}）", 1, 21, 12, 10, 5000, 5000], [12, "每日击败20只美杜莎（{0}/{1}）", 1, 21, 0, 20, 10000, 10000], [13, "每日击败1只蜘蛛精（{0}/{1}）", 1, 31, 14, 1, 250, 250], [14, "每日击败3只蜘蛛精（{0}/{1}）", 1, 31, 15, 3, 750, 750], [15, "每日击败6只蜘蛛精（{0}/{1}）", 1, 31, 16, 6, 1500, 1500], [16, "每日击败10只蜘蛛精（{0}/{1}）", 1, 31, 17, 10, 2500, 2500], [17, "每日击败20只蜘蛛精（{0}/{1}）", 1, 31, 0, 20, 5000, 5000], [18, "每日击败1只炫彩蜘蛛（{0}/{1}）", 1, 41, 19, 1, 250, 250], [19, "每日击败3只炫彩蜘蛛（{0}/{1}）", 1, 41, 20, 3, 750, 750], [20, "每日击败6只炫彩蜘蛛（{0}/{1}）", 1, 41, 21, 6, 1500, 1500], [21, "每日击败10只炫彩蜘蛛（{0}/{1}）", 1, 41, 22, 10, 2500, 2500], [22, "每日击败20只炫彩蜘蛛（{0}/{1}）", 1, 41, 0, 20, 5000, 5000], [23, "每日击败1只龙兽（{0}/{1}）", 1, 51, 24, 1, 250, 250], [24, "每日击败3只龙兽（{0}/{1}）", 1, 51, 25, 3, 750, 750], [25, "每日击败6只龙兽（{0}/{1}）", 1, 51, 26, 6, 1500, 1500], [26, "每日击败10只龙兽（{0}/{1}）", 1, 51, 27, 10, 2500, 2500], [27, "每日击败20只龙兽（{0}/{1}）", 1, 51, 0, 20, 5000, 5000], [28, "每日击败1只丧尸（{0}/{1}）", 1, 61, 29, 1, 250, 250], [29, "每日击败3只丧尸（{0}/{1}）", 1, 61, 30, 3, 750, 750], [30, "每日击败6只丧尸（{0}/{1}）", 1, 61, 31, 6, 1500, 1500], [31, "每日击败10只丧尸（{0}/{1}）", 1, 61, 32, 10, 2500, 2500], [32, "每日击败20只丧尸（{0}/{1}）", 1, 61, 0, 20, 5000, 5000], [33, "每日击败1只变异布偶（{0}/{1}）", 1, 71, 34, 1, 250, 250], [34, "每日击败3只变异布偶（{0}/{1}）", 1, 71, 35, 3, 750, 750], [35, "每日击败6只变异布偶（{0}/{1}）", 1, 71, 36, 6, 1500, 1500], [36, "每日击败10只变异布偶（{0}/{1}）", 1, 71, 37, 10, 2500, 2500], [37, "每日击败20只变异布偶（{0}/{1}）", 1, 71, 0, 20, 5000, 5000], [38, "每日击败1名玩家（{0}/{1}）", 1, 81, 39, 1, 250, 250], [39, "每日击败3名玩家（{0}/{1}）", 1, 81, 40, 3, 750, 750], [40, "每日击败6名玩家（{0}/{1}）", 1, 81, 41, 6, 1500, 1500], [41, "每日击败10名玩家（{0}/{1}）", 1, 81, 42, 10, 2500, 2500], [42, "每日击败20名玩家（{0}/{1}）", 1, 81, 0, 20, 5000, 5000], [43, "每日等级提升1级（{0}/{1}）", 1, 91, 44, 1, 250, 250], [44, "每日等级提升3级（{0}/{1}）", 1, 91, 45, 3, 750, 750], [45, "每日等级提升6级（{0}/{1}）", 1, 91, 46, 6, 1500, 1500], [46, "每日等级提升10级（{0}/{1}）", 1, 91, 47, 10, 2500, 2500], [47, "每日等级提升20级（{0}/{1}）", 1, 91, 0, 20, 5000, 5000], [48, "每日捡到1个秘宝（{0}/{1}）", 1, 101, 49, 1, 250, 250], [49, "每日捡到3个秘宝（{0}/{1}）", 1, 101, 50, 3, 750, 750], [50, "每日捡到6个秘宝（{0}/{1}）", 1, 101, 51, 6, 1500, 1500], [51, "每日捡到10个秘宝（{0}/{1}）", 1, 101, 52, 10, 2500, 2500], [52, "每日捡到20个秘宝（{0}/{1}）", 1, 101, 0, 20, 5000, 5000], [53, "每日观看1次广告（{0}/{1}）", 1, 111, 54, 1, 250, 250], [54, "每日观看3次广告（{0}/{1}）", 1, 111, 55, 3, 750, 750], [55, "每日观看6次广告（{0}/{1}）", 1, 111, 56, 6, 1500, 1500], [56, "每日观看10次广告（{0}/{1}）", 1, 111, 57, 10, 2500, 2500], [57, "每日观看20次广告（{0}/{1}）", 1, 111, 0, 20, 5000, 5000], [58, "每周登录2天（{0}/{1}）", 2, 201, 59, 2, 2000, 2000], [59, "每周登录3天（{0}/{1}）", 2, 201, 60, 3, 3000, 3000], [60, "每周登录5天（{0}/{1}）", 2, 201, 61, 5, 5000, 5000], [61, "每周登录7天（{0}/{1}）", 2, 201, 0, 7, 7000, 7000], [62, "每周时长达到30分钟2天（{0}/{1}）", 2, 211, 63, 2, 200, 200], [63, "每周时长达到30分钟3天（{0}/{1}）", 2, 211, 64, 3, 300, 300], [64, "每周时长达到30分钟5天（{0}/{1}）", 2, 211, 65, 5, 500, 500], [65, "每周时长达到30分钟7天（{0}/{1}）", 2, 211, 0, 7, 700, 700], [66, "每周击败50只美杜莎（{0}/{1}）", 1, 221, 67, 50, 25000, 25000], [67, "每周击败150只美杜莎（{0}/{1}）", 1, 221, 68, 150, 75000, 75000], [68, "每周击败300只美杜莎（{0}/{1}）", 1, 221, 69, 300, 150000, 150000], [69, "每周击败500只美杜莎（{0}/{1}）", 1, 221, 70, 500, 250000, 250000], [70, "每周击败1000只美杜莎（{0}/{1}）", 1, 221, 0, 1000, 500000, 500000], [71, "每周击败50只蜘蛛精（{0}/{1}）", 1, 231, 72, 50, 25000, 25000], [72, "每周击败150只蜘蛛精（{0}/{1}）", 1, 231, 73, 150, 75000, 75000], [73, "每周击败300只蜘蛛精（{0}/{1}）", 1, 231, 74, 300, 150000, 150000], [74, "每周击败500只蜘蛛精（{0}/{1}）", 1, 231, 75, 500, 250000, 250000], [75, "每周击败1000只蜘蛛精（{0}/{1}）", 1, 231, 0, 1000, 500000, 500000], [76, "每周击败50只炫彩蜘蛛（{0}/{1}）", 1, 241, 77, 50, 25000, 25000], [77, "每周击败150只炫彩蜘蛛（{0}/{1}）", 1, 241, 78, 150, 75000, 75000], [78, "每周击败300只炫彩蜘蛛（{0}/{1}）", 1, 241, 79, 300, 150000, 150000], [79, "每周击败500只炫彩蜘蛛（{0}/{1}）", 1, 241, 80, 500, 250000, 250000], [80, "每周击败1000只炫彩蜘蛛（{0}/{1}）", 1, 241, 0, 1000, 500000, 500000], [81, "每周击败50只龙兽（{0}/{1}）", 1, 251, 82, 50, 25000, 25000], [82, "每周击败150只龙兽（{0}/{1}）", 1, 251, 83, 150, 75000, 75000], [83, "每周击败300只龙兽（{0}/{1}）", 1, 251, 84, 300, 150000, 150000], [84, "每周击败500只龙兽（{0}/{1}）", 1, 251, 85, 500, 250000, 250000], [85, "每周击败1000只龙兽（{0}/{1}）", 1, 251, 0, 1000, 500000, 500000], [86, "每周击败50只丧尸（{0}/{1}）", 1, 261, 87, 50, 25000, 25000], [87, "每周击败150只丧尸（{0}/{1}）", 1, 261, 88, 150, 75000, 75000], [88, "每周击败300只丧尸（{0}/{1}）", 1, 261, 89, 300, 150000, 150000], [89, "每周击败500只丧尸（{0}/{1}）", 1, 261, 90, 500, 250000, 250000], [90, "每周击败1000只丧尸（{0}/{1}）", 1, 261, 0, 1000, 500000, 500000], [91, "每周击败50只变异布偶（{0}/{1}）", 1, 271, 92, 50, 25000, 25000], [92, "每周击败150只变异布偶（{0}/{1}）", 1, 271, 93, 150, 75000, 75000], [93, "每周击败300只变异布偶（{0}/{1}）", 1, 271, 94, 300, 150000, 150000], [94, "每周击败500只变异布偶（{0}/{1}）", 1, 271, 95, 500, 250000, 250000], [95, "每周击败1000只变异布偶（{0}/{1}）", 1, 271, 0, 1000, 500000, 500000], [96, "每周击败50名玩家（{0}/{1}）", 1, 281, 97, 50, 25000, 25000], [97, "每周击败150名玩家（{0}/{1}）", 1, 281, 98, 150, 75000, 75000], [98, "每周击败300名玩家（{0}/{1}）", 1, 281, 99, 300, 150000, 150000], [99, "每周击败500名玩家（{0}/{1}）", 1, 281, 100, 500, 250000, 250000], [100, "每周击败1000名玩家（{0}/{1}）", 1, 281, 0, 1000, 500000, 500000], [101, "每周等级提升10级（{0}/{1}）", 1, 291, 102, 10, 2500, 2500], [102, "每周等级提升30级（{0}/{1}）", 1, 291, 103, 30, 7500, 7500], [103, "每周等级提升60级（{0}/{1}）", 1, 291, 104, 60, 15000, 15000], [104, "每周等级提升100级（{0}/{1}）", 1, 291, 105, 100, 25000, 25000], [105, "每周等级提升200级（{0}/{1}）", 1, 291, 0, 200, 50000, 50000], [106, "每周捡到10个秘宝（{0}/{1}）", 1, 301, 107, 10, 2500, 2500], [107, "每周捡到30个秘宝（{0}/{1}）", 1, 301, 108, 30, 7500, 7500], [108, "每周捡到60个秘宝（{0}/{1}）", 1, 301, 109, 60, 15000, 15000], [109, "每周捡到100个秘宝（{0}/{1}）", 1, 301, 110, 100, 25000, 25000], [110, "每周捡到200个秘宝（{0}/{1}）", 1, 301, 0, 200, 50000, 50000], [111, "每周观看10次广告（{0}/{1}）", 1, 311, 112, 10, 2500, 2500], [112, "每周观看30次广告（{0}/{1}）", 1, 311, 113, 30, 7500, 7500], [113, "每周观看60次广告（{0}/{1}）", 1, 311, 114, 60, 15000, 15000], [114, "每周观看100次广告（{0}/{1}）", 1, 311, 115, 100, 25000, 25000], [115, "每周观看200次广告（{0}/{1}）", 1, 311, 0, 200, 50000, 50000]];
 class TaskConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$1);
@@ -1068,7 +1068,7 @@ var foreign23 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.33
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -1135,7 +1135,7 @@ var foreign87 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.33
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -3001,6 +3001,12 @@ class Utils {
         else
             return "零";
     }
+    static getHp(lv) {
+        return 100 + (lv * 100);
+    }
+    static getAtk(lv) {
+        return 50 + (lv * 50);
+    }
 }
 Utils.locs = [
     new mw.Vector(2800, -6300, 500),
@@ -3094,7 +3100,7 @@ var foreign85 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -4843,7 +4849,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -5570,7 +5576,7 @@ var foreign84 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -5636,7 +5642,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -5933,6 +5939,18 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mKillTipTextBlock3_Internal;
     }
+    get mDeadCanvas() {
+        if (!this.mDeadCanvas_Internal && this.uiWidgetBase) {
+            this.mDeadCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas');
+        }
+        return this.mDeadCanvas_Internal;
+    }
+    get mDeadCountDownTextBlock() {
+        if (!this.mDeadCountDownTextBlock_Internal && this.uiWidgetBase) {
+            this.mDeadCountDownTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadCountDownTextBlock');
+        }
+        return this.mDeadCountDownTextBlock_Internal;
+    }
     onAwake() {
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
@@ -6024,6 +6042,7 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.mKillTipTextBlock1);
         this.initLanguage(this.mKillTipTextBlock2);
         this.initLanguage(this.mKillTipTextBlock3);
+        this.initLanguage(this.mDeadCountDownTextBlock);
         //文本多语言
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ShopCanvas/ShopTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/PlayerCanvas/ShopTextBlock"));
@@ -6033,6 +6052,8 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/AdsCanvas/AdsTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/InvincibleCanvas/InvincibleTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTipsTextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -6067,7 +6088,7 @@ var foreign92 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6143,7 +6164,7 @@ var foreign93 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -6430,6 +6451,8 @@ class HUDPanel extends HUDPanel_Generate$1 {
         super(...arguments);
         this.hudModuleC = null;
         this.shopPanel = null;
+        this.deadCountDownInterval = null;
+        this.deadCountDown = 3;
         this.hideKillTipIntervalId = null;
         this.killTipItems = [];
         this.killTipDatas = [];
@@ -6515,11 +6538,11 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mAdsButton.onClicked.add(() => {
             this.hudModuleC.onAdsAction.call();
         });
-        let isInvincible = false;
-        this.mInvincibleTextBlock.text = "已关闭";
+        let isInvincible = true;
+        this.mInvincibleTextBlock.text = "已开启防御";
         this.mInvincibleButton.onClicked.add(() => {
             isInvincible = !isInvincible;
-            this.mInvincibleTextBlock.text = isInvincible ? "已开启" : "已关闭";
+            this.mInvincibleTextBlock.text = isInvincible ? "已开启防御" : "已关闭防御";
             this.hudModuleC.onInvincibleAction.call(isInvincible);
         });
         this.mOnlineRewardButton.normalImageGuid = "193281";
@@ -6534,6 +6557,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.initRedPointTween();
         this.initTaskTween();
         this.initKillTipItems();
+        this.initDeadCountDown();
         this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
         this.mTaskPointImage.visibility = mw.SlateVisibility.Collapsed;
         Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
@@ -6550,6 +6574,33 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mAtkButton.onPressed.clear();
         this.mAtkButton.onReleased.clear();
     }
+    //#region DeadCountDown
+    initDeadCountDown() {
+        Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
+    }
+    startDeadCountDown() {
+        this.mVirtualJoystickPanel.resetJoyStick();
+        Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+        this.deadCountDown = 3;
+        this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
+        this.clearCountDownInterval();
+        this.deadCountDownInterval = TimeUtil.setInterval(() => {
+            this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
+            if (this.deadCountDown < 0)
+                this.clearCountDownInterval();
+        }, 1);
+    }
+    clearCountDownInterval() {
+        if (this.deadCountDownInterval) {
+            TimeUtil.clearInterval(this.deadCountDownInterval);
+            this.deadCountDownInterval = null;
+        }
+    }
+    endDeadCountDown() {
+        Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
+        this.clearCountDownInterval();
+    }
+    //#endregion
     //#region 击杀提示
     initKillTipItems() {
         for (let i = 0; i < 4; ++i) {
@@ -6640,7 +6691,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
         this.mCoinTextBlock.text = coin + "";
         this.shopPanel.mCoinTextBlock.text = coin + "";
-        let atk = 50 + (lv * 3);
+        let atk = Utils.getAtk(lv);
         this.mAtkTextBlock.text = "攻击力：" + atk;
         ColdWeapon.getInstance().updateHitDamage(atk);
     }
@@ -6657,6 +6708,12 @@ class HUDPanel extends HUDPanel_Generate$1 {
             curHp = 0;
         this.mHpProgressBar.currentValue = curHp / maxHp;
         this.mHpTextBlock.text = curHp + "/" + maxHp;
+        if (this.mHpProgressBar.currentValue == 1) {
+            this.startDeadCountDown();
+        }
+        else if (this.mHpProgressBar.currentValue == 0) {
+            this.endDeadCountDown();
+        }
     }
     atk(index) {
         this.mAtkButton.onPressed.add(() => {
@@ -7609,7 +7666,7 @@ var foreign67 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.05.19-23.59.56
+ * TIME: 2024.07.22-23.10.34
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -8595,7 +8652,7 @@ class HUDModuleC extends ModuleC {
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
         this.hudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = 100 + (lv * 20);
+        let hp = Utils.getHp(lv);
         this.maxHp = hp;
         this.updateHp(hp);
     }
@@ -8866,7 +8923,7 @@ var foreign43 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -10370,7 +10427,7 @@ class PlayerData extends Subdata {
         this.save(true);
     }
     getHp() {
-        return 100 + (this.playerLv * 20);
+        return Utils.getHp(this.playerLv);
     }
 }
 __decorate([
@@ -10399,7 +10456,7 @@ var foreign51 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -10477,7 +10534,13 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
         this.hp = 0;
         this.playerName = "";
         this.playerLevel = -1;
+        this.isInvincible = true;
         this._isInit = false;
+        this.character = null;
+        this.invincibleEffectId = null;
+    }
+    get getIsInvincible() {
+        return this.isInvincible;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -10491,8 +10554,8 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
         this._hpBarWidget = await SpawnManager.asyncSpawn({ guid: "UIWidget", replicates: false });
         this._hpBarWidget.setTargetUIWidget(this._hpBarUI.uiWidgetBase);
         this._hpBarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
-        let character = this.gameObject;
-        this._hpBarWidget.parent = (character.overheadUI);
+        this.character = this.gameObject;
+        this._hpBarWidget.parent = this.character.overheadUI;
         this._hpBarWidget.localTransform.position = Vector.up.multiply(0);
         this._isInit = true;
         this.onHpChange();
@@ -10522,6 +10585,17 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
         }
         this._hpBarUI.mLevelText.text = Utils.getLvText(this.playerLevel) + " 等级Lv." + this.playerLevel;
     }
+    onInvincible() {
+        if (!this._isInit) {
+            return;
+        }
+        if (this.onInvincible) {
+            this.invincibleEffectId = EffectService.playOnGameObject("140173", this.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 0 });
+        }
+        else {
+            EffectService.stop(this.invincibleEffectId);
+        }
+    }
     onDestroy() {
         this._hpBarUI?.destroy();
         this._hpBarWidget?.destroy();
@@ -10539,6 +10613,9 @@ __decorate([
 __decorate([
     mw.Property({ replicated: true, onChanged: "onLevelChange" })
 ], PlayerLifebar.prototype, "playerLevel", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "onInvincible" })
+], PlayerLifebar.prototype, "isInvincible", void 0);
 PlayerLifebar = __decorate([
     Component
 ], PlayerLifebar);
@@ -10590,7 +10667,7 @@ class PlayerModuleS extends ModuleS {
         let targetPlayer = this.allPlayerMap.get(targetGuid);
         if (this.playerLifeMap.get(targetPlayer.playerId).isDie || this.playerLifeMap.get(sendPlayer.playerId).isDie)
             return;
-        if (this.playerLifeMap.get(sendPlayer.playerId).isInvincible) {
+        if (this.playerLifeMap.get(targetPlayer.playerId).playerLifebar.getIsInvincible) {
             Console.error("已开启队友免伤");
             return;
         }
@@ -10653,8 +10730,7 @@ class PlayerModuleS extends ModuleS {
      * @param hp
      */
     addExpAndCoin(player, hp) {
-        let value = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
-        let expOrCoin = value >= 2000 ? 2000 : value;
+        let expOrCoin = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
         let playerData = DataCenterS.getData(player, PlayerData);
         let preLv = playerData.playerLv;
         playerData.saveExpAndCoin(expOrCoin);
@@ -10699,10 +10775,10 @@ class PlayerModuleS extends ModuleS {
         let targetPlayerData = this.playerLifeMap.get(playerId);
         if (targetPlayerData.isDie)
             return;
-        if (sendPlayer != null && targetPlayerData.isInvincible) {
-            Console.error("已开启队友免伤");
-            return;
-        }
+        // if (sendPlayer != null && targetPlayerData.playerLifebar.getIsInvincible) {
+        //     Console.error("已开启队友免伤");
+        //     return;
+        // }
         let curHp = targetPlayerData.playerLifebar.hp;
         curHp -= damage;
         if (curHp <= 0) {
@@ -10759,7 +10835,7 @@ class PlayerModuleS extends ModuleS {
         hpbar.hp = maxHp;
         playerDataS.playerLifebar = hpbar;
         playerDataS.isDie = false;
-        playerDataS.isInvincible = false;
+        playerDataS.playerLifebar.isInvincible = true;
         this.playerLifeMap.set(playerId, playerDataS);
         this.allPlayerMap.set(player.character.gameObjectId, player);
     }
@@ -10834,7 +10910,7 @@ class PlayerModuleS extends ModuleS {
     }
     net_isInvincible(isInvincible) {
         if (this.playerLifeMap.has(this.currentPlayerId)) {
-            this.playerLifeMap.get(this.currentPlayerId).isInvincible = isInvincible;
+            this.playerLifeMap.get(this.currentPlayerId).playerLifebar.isInvincible = isInvincible;
         }
     }
     playEffectAndSoundToPlayer(player) {
@@ -10855,7 +10931,6 @@ class PlayerDataS {
     constructor() {
         this.playerLifebar = null;
         this.isDie = false;
-        this.isInvincible = false;
     }
 }
 
@@ -10998,7 +11073,7 @@ var foreign3 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.33
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -11324,10 +11399,13 @@ class Monster extends Script {
     }
     rebirth_S() {
         let rebirthEffect = EffectService.playOnGameObject("26157", this.getMonster, { slotType: mw.HumanoidSlotType.Root, loopCount: 0, scale: mw.Vector.one.multiply(2) });
-        this.initPaths();
+        // this.initPaths();
         TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
+            this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
+            if (this.maxHp > 10000)
+                this.maxHp = 10000;
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled)
                 this.getMonster.ragdollEnabled = false;
@@ -11956,7 +12034,7 @@ var foreign12 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.33
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -12067,7 +12145,7 @@ var foreign13 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -12815,7 +12893,7 @@ var foreign57 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -15306,7 +15384,7 @@ var foreign76 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -15425,7 +15503,7 @@ var foreign94 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -15516,7 +15594,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -15616,7 +15694,7 @@ var foreign101 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.05.19-23.59.56
+ * TIME: 2024.07.22-23.10.34
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -15671,7 +15749,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.05.19-23.59.56
+ * TIME: 2024.07.22-23.10.34
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -15746,7 +15824,7 @@ var foreign104 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -15830,7 +15908,7 @@ var foreign105 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {

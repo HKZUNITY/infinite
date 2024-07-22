@@ -1,4 +1,5 @@
 import Console from "../../Tools/Console";
+import { Utils } from "../../Tools/utils";
 
 export default class PlayerData extends Subdata {
     @Decorator.persistence()
@@ -77,6 +78,6 @@ export default class PlayerData extends Subdata {
     }
 
     public getHp(): number {
-        return 100 + (this.playerLv * 20);
+        return Utils.getHp(this.playerLv);
     }
 }

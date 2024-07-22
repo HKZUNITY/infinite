@@ -14,6 +14,11 @@ export default class PlayerLifebar extends mw.Script {
     public playerName: string = "";
     @mw.Property({ replicated: true, onChanged: "onLevelChange" })
     public playerLevel: number = -1;
+    @mw.Property({ replicated: true, onChanged: "onInvincible" })
+    public isInvincible: boolean = true;
+    public get getIsInvincible(): boolean {
+        return this.isInvincible;
+    }
     private _hpBarUI: PlayerLifebar_Generate;
     private _hpBarWidget: mw.UIWidget;
     private _isInit = false;
@@ -26,13 +31,14 @@ export default class PlayerLifebar extends mw.Script {
         }
     }
 
+    private character: mw.Character = null;
     private async init() {
         this._hpBarUI = mw.UIService.create(PlayerLifebar_Generate);
         this._hpBarWidget = await SpawnManager.asyncSpawn<mw.UIWidget>({ guid: "UIWidget", replicates: false });
         this._hpBarWidget.setTargetUIWidget(this._hpBarUI.uiWidgetBase);
         this._hpBarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
-        let character = this.gameObject as mw.Character;
-        this._hpBarWidget.parent = (character.overheadUI);
+        this.character = this.gameObject as mw.Character;
+        this._hpBarWidget.parent = this.character.overheadUI;
         this._hpBarWidget.localTransform.position = Vector.up.multiply(0);
         this._isInit = true;
         this.onHpChange();
@@ -63,6 +69,18 @@ export default class PlayerLifebar extends mw.Script {
             return;
         }
         this._hpBarUI.mLevelText.text = Utils.getLvText(this.playerLevel) + " 等级Lv." + this.playerLevel;
+    }
+
+    private invincibleEffectId: number = null;
+    private onInvincible() {
+        if (!this._isInit) {
+            return;
+        }
+        if (this.onInvincible) {
+            this.invincibleEffectId = EffectService.playOnGameObject("140173", this.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 0 });
+        } else {
+            EffectService.stop(this.invincibleEffectId);
+        }
     }
 
     protected onDestroy(): void {

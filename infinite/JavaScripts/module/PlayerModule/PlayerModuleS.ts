@@ -46,7 +46,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let sendPlayer = this.allPlayerMap.get(senderGuid);
         let targetPlayer = this.allPlayerMap.get(targetGuid);
         if (this.playerLifeMap.get(targetPlayer.playerId).isDie || this.playerLifeMap.get(sendPlayer.playerId).isDie) return;
-        if (this.playerLifeMap.get(sendPlayer.playerId).isInvincible) {
+        if (this.playerLifeMap.get(targetPlayer.playerId).playerLifebar.getIsInvincible) {
             Console.error("已开启队友免伤");
             return;
         }
@@ -109,8 +109,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
      * @param hp 
      */
     private addExpAndCoin(player: mw.Player, hp: number): void {
-        let value = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
-        let expOrCoin = value >= 2000 ? 2000 : value;
+        let expOrCoin = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
         let playerData = DataCenterS.getData(player, PlayerData);
         let preLv = playerData.playerLv;
         playerData.saveExpAndCoin(expOrCoin);
@@ -161,10 +160,10 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let playerId = targetPlayer.playerId;
         let targetPlayerData = this.playerLifeMap.get(playerId);
         if (targetPlayerData.isDie) return;
-        if (sendPlayer != null && targetPlayerData.isInvincible) {
-            Console.error("已开启队友免伤");
-            return;
-        }
+        // if (sendPlayer != null && targetPlayerData.playerLifebar.getIsInvincible) {
+        //     Console.error("已开启队友免伤");
+        //     return;
+        // }
         let curHp = targetPlayerData.playerLifebar.hp;
         curHp -= damage;
         if (curHp <= 0) {
@@ -223,7 +222,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         hpbar.hp = maxHp;
         playerDataS.playerLifebar = hpbar;
         playerDataS.isDie = false;
-        playerDataS.isInvincible = false;
+        playerDataS.playerLifebar.isInvincible = true;
         this.playerLifeMap.set(playerId, playerDataS);
         this.allPlayerMap.set(player.character.gameObjectId, player);
     }
@@ -312,7 +311,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     @Decorator.noReply()
     public net_isInvincible(isInvincible: boolean): void {
         if (this.playerLifeMap.has(this.currentPlayerId)) {
-            this.playerLifeMap.get(this.currentPlayerId).isInvincible = isInvincible;
+            this.playerLifeMap.get(this.currentPlayerId).playerLifebar.isInvincible = isInvincible;
         }
     }
 
@@ -325,5 +324,4 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
 class PlayerDataS {
     public playerLifebar: PlayerLifebar = null;
     public isDie: boolean = false;
-    public isInvincible: boolean = false;
 }

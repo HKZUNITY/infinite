@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.05.19-23.59.55
+ * TIME: 2024.07.22-23.10.34
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -351,6 +351,20 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mKillTipTextBlock3_Internal
 	}
+	private mDeadCanvas_Internal: mw.Canvas
+	public get mDeadCanvas(): mw.Canvas {
+		if(!this.mDeadCanvas_Internal&&this.uiWidgetBase) {
+			this.mDeadCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas') as mw.Canvas
+		}
+		return this.mDeadCanvas_Internal
+	}
+	private mDeadCountDownTextBlock_Internal: mw.TextBlock
+	public get mDeadCountDownTextBlock(): mw.TextBlock {
+		if(!this.mDeadCountDownTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDeadCountDownTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadCountDownTextBlock') as mw.TextBlock
+		}
+		return this.mDeadCountDownTextBlock_Internal
+	}
 
 
 	protected onAwake() {
@@ -506,6 +520,9 @@ export default class HUDPanel_Generate extends UIScript {
 		this.initLanguage(this.mKillTipTextBlock3)
 		
 	
+		this.initLanguage(this.mDeadCountDownTextBlock)
+		
+	
 		//文本多语言
 		
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ShopCanvas/ShopTextBlock") as any);
@@ -530,6 +547,12 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/InvincibleCanvas/InvincibleTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTipsTextBlock") as any);
 		
 	
 	}

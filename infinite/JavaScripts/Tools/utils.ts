@@ -583,6 +583,14 @@ export class Utils {
         }
         else return "零";
     }
+
+    public static getHp(lv: number): number {
+        return 100 + (lv * 100);
+    }
+
+    public static getAtk(lv: number): number {
+        return 50 + (lv * 50);
+    }
 }
 
 /**贝塞尔曲线 */

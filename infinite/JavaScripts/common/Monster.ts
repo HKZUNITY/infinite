@@ -288,10 +288,12 @@ export default class Monster extends Script {
 
     private rebirth_S(): void {
         let rebirthEffect = EffectService.playOnGameObject("26157", this.getMonster, { slotType: mw.HumanoidSlotType.Root, loopCount: 0, scale: mw.Vector.one.multiply(2) });
-        this.initPaths();
+        // this.initPaths();
         TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
+            this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
+            if (this.maxHp > 10000) this.maxHp = 10000;
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState.Activate;

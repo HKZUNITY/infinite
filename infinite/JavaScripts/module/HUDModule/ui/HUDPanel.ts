@@ -71,11 +71,11 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mAdsButton.onClicked.add(() => {
 			this.hudModuleC.onAdsAction.call();
 		});
-		let isInvincible: boolean = false;
-		this.mInvincibleTextBlock.text = "已关闭";
+		let isInvincible: boolean = true;
+		this.mInvincibleTextBlock.text = "已开启防御";
 		this.mInvincibleButton.onClicked.add(() => {
 			isInvincible = !isInvincible;
-			this.mInvincibleTextBlock.text = isInvincible ? "已开启" : "已关闭";
+			this.mInvincibleTextBlock.text = isInvincible ? "已开启防御" : "已关闭防御";
 			this.hudModuleC.onInvincibleAction.call(isInvincible);
 		});
 		this.mOnlineRewardButton.normalImageGuid = "193281";
@@ -91,6 +91,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.initRedPointTween();
 		this.initTaskTween();
 		this.initKillTipItems();
+		this.initDeadCountDown();
 		this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
 		this.mTaskPointImage.visibility = mw.SlateVisibility.Collapsed;
 		Utils.setWidgetVisibility(this.mKillTipCountCanvas, mw.SlateVisibility.Collapsed);
@@ -109,6 +110,38 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mAtkButton.onPressed.clear();
 		this.mAtkButton.onReleased.clear();
 	}
+
+	//#region DeadCountDown
+	private initDeadCountDown(): void {
+		Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
+	}
+
+	private deadCountDownInterval: any = null;
+	private deadCountDown: number = 3;
+	public startDeadCountDown(): void {
+		this.mVirtualJoystickPanel.resetJoyStick();
+		Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+		this.deadCountDown = 3;
+		this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
+		this.clearCountDownInterval();
+		this.deadCountDownInterval = TimeUtil.setInterval(() => {
+			this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
+			if (this.deadCountDown < 0) this.clearCountDownInterval();
+		}, 1);
+	}
+
+	private clearCountDownInterval(): void {
+		if (this.deadCountDownInterval) {
+			TimeUtil.clearInterval(this.deadCountDownInterval);
+			this.deadCountDownInterval = null;
+		}
+	}
+
+	public endDeadCountDown(): void {
+		Utils.setWidgetVisibility(this.mDeadCanvas, mw.SlateVisibility.Collapsed);
+		this.clearCountDownInterval();
+	}
+	//#endregion
 
 	//#region 击杀提示
 	private initKillTipItems(): void {
@@ -214,7 +247,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
 		this.mCoinTextBlock.text = coin + "";
 		this.shopPanel.mCoinTextBlock.text = coin + "";
-		let atk = 50 + (lv * 10);
+		let atk = Utils.getAtk(lv);
 		this.mAtkTextBlock.text = "攻击力：" + atk;
 		ColdWeapon.getInstance().updateHitDamage(atk);
 	}
@@ -233,6 +266,12 @@ export default class HUDPanel extends HUDPanel_Generate {
 		if (curHp < 0) curHp = 0;
 		this.mHpProgressBar.currentValue = curHp / maxHp;
 		this.mHpTextBlock.text = curHp + "/" + maxHp;
+
+		if (this.mHpProgressBar.currentValue == 1) {
+			this.startDeadCountDown();
+		} else if (this.mHpProgressBar.currentValue == 0) {
+			this.endDeadCountDown();
+		}
 	}
 	//#endregion
 

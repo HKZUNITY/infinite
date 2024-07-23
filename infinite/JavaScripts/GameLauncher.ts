@@ -1,5 +1,6 @@
 import { update } from "./common/notice/Tween";
 import GlobalData from "./const/GlobalData";
+import { BagData, BagModuleC, BagModuleS } from "./module/BagModule/BagModule";
 import { GuideData, GuideModuleC, GuideModuleS } from "./module/GuideModule/GuideModule";
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
 import HUDModuleS from "./module/HUDModule/HUDModuleS";
@@ -9,14 +10,8 @@ import { OnlineRewardModuleS } from "./module/OnlineRewardModule/OnlineRewardMod
 import PlayerData from "./module/PlayerModule/PlayerData";
 import PlayerModuleC from "./module/PlayerModule/PlayerModuleC";
 import PlayerModuleS from "./module/PlayerModule/PlayerModuleS";
-import { PropData } from "./module/PropModule/PropData";
-import { PropModuleC } from "./module/PropModule/PropModuleC";
-import { PropModuleS } from "./module/PropModule/PropModuleS";
 import { WorldRankModuleC } from "./module/RankModule/WorldRankModuleC";
 import { WorldRankModuleS } from "./module/RankModule/WorldRankModuleS";
-import ShopData from "./module/ShopModule/ShopData";
-import ShopModuleC from "./module/ShopModule/ShopModuleC";
-import ShopModuleS from "./module/ShopModule/ShopModuleS";
 import { TaskData } from "./module/TaskModule/TaskData";
 import TaskModuleC from "./module/TaskModule/TaskModuleC";
 import TaskModuleS from "./module/TaskModule/TaskModuleS";
@@ -76,11 +71,10 @@ export default class GameLauncher extends mw.Script {
     private onRegisterModule(): void {
         ModuleService.registerModule(HUDModuleS, HUDModuleC, null);
         ModuleService.registerModule(PlayerModuleS, PlayerModuleC, PlayerData);
-        ModuleService.registerModule(ShopModuleS, ShopModuleC, ShopData);
-        ModuleService.registerModule(PropModuleS, PropModuleC, PropData);
         ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
         ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);
         ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
+        ModuleService.registerModule(BagModuleS, BagModuleC, BagData);
         ModuleService.registerModule(GuideModuleS, GuideModuleC, GuideData);
     }
 

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.07.22-23.10.34
+ * TIME: 2024.07.24-00.21.57
  */
  
 @UIBind('UI/module/OnlineReward/OnlineRewardItem.ui')
@@ -14,27 +14,6 @@ export default class OnlineRewardItem_Generate extends UIScript {
 			this.mButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mButton') as mw.Button
 		}
 		return this.mButton_Internal
-	}
-	private mTimeTextBlock_Internal: mw.TextBlock
-	public get mTimeTextBlock(): mw.TextBlock {
-		if(!this.mTimeTextBlock_Internal&&this.uiWidgetBase) {
-			this.mTimeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTimeTextBlock') as mw.TextBlock
-		}
-		return this.mTimeTextBlock_Internal
-	}
-	private mGetRewardTextBlock_Internal: mw.TextBlock
-	public get mGetRewardTextBlock(): mw.TextBlock {
-		if(!this.mGetRewardTextBlock_Internal&&this.uiWidgetBase) {
-			this.mGetRewardTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mGetRewardTextBlock') as mw.TextBlock
-		}
-		return this.mGetRewardTextBlock_Internal
-	}
-	private mCanRewardTextBlock_Internal: mw.TextBlock
-	public get mCanRewardTextBlock(): mw.TextBlock {
-		if(!this.mCanRewardTextBlock_Internal&&this.uiWidgetBase) {
-			this.mCanRewardTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanRewardTextBlock') as mw.TextBlock
-		}
-		return this.mCanRewardTextBlock_Internal
 	}
 	private mCoinCanvas_Internal: mw.Canvas
 	public get mCoinCanvas(): mw.Canvas {
@@ -78,6 +57,27 @@ export default class OnlineRewardItem_Generate extends UIScript {
 		}
 		return this.mRoleTextBlock_Internal
 	}
+	private mTimeTextBlock_Internal: mw.TextBlock
+	public get mTimeTextBlock(): mw.TextBlock {
+		if(!this.mTimeTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTimeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTimeTextBlock') as mw.TextBlock
+		}
+		return this.mTimeTextBlock_Internal
+	}
+	private mGetRewardTextBlock_Internal: mw.TextBlock
+	public get mGetRewardTextBlock(): mw.TextBlock {
+		if(!this.mGetRewardTextBlock_Internal&&this.uiWidgetBase) {
+			this.mGetRewardTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mGetRewardTextBlock') as mw.TextBlock
+		}
+		return this.mGetRewardTextBlock_Internal
+	}
+	private mCanRewardTextBlock_Internal: mw.TextBlock
+	public get mCanRewardTextBlock(): mw.TextBlock {
+		if(!this.mCanRewardTextBlock_Internal&&this.uiWidgetBase) {
+			this.mCanRewardTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanRewardTextBlock') as mw.TextBlock
+		}
+		return this.mCanRewardTextBlock_Internal
+	}
 
 
 	protected onAwake() {
@@ -101,15 +101,6 @@ export default class OnlineRewardItem_Generate extends UIScript {
 		
 		//文本多语言
 		
-		this.initLanguage(this.mTimeTextBlock)
-		
-	
-		this.initLanguage(this.mGetRewardTextBlock)
-		
-	
-		this.initLanguage(this.mCanRewardTextBlock)
-		
-	
 		this.initLanguage(this.mCoinTextBlock)
 		
 	
@@ -117,6 +108,15 @@ export default class OnlineRewardItem_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mRoleTextBlock)
+		
+	
+		this.initLanguage(this.mTimeTextBlock)
+		
+	
+		this.initLanguage(this.mGetRewardTextBlock)
+		
+	
+		this.initLanguage(this.mCanRewardTextBlock)
 		
 	
 		//文本多语言

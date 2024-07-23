@@ -31,6 +31,7 @@ export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewa
      */
     private registerAction(): void {
         this.onOnlineRewardsAction.add((isOpen: boolean) => {
+            console.error(`aaaaa`);
             this.isNeedUpdateItem = isOpen;
             isOpen ? this.onlineRewardsPanel.show() : this.onlineRewardsPanel.hideTween();
         });

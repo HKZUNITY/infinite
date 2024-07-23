@@ -2,6 +2,7 @@ import {ConfigBase, IElementBase} from "./ConfigBase";
 import {ActionConfig} from "./Action";
 import {AdsConfig} from "./Ads";
 import {AssetsConfig} from "./Assets";
+import {BagInfoConfig} from "./BagInfo";
 import {CoinConfig} from "./Coin";
 import {ColdWeaponConfig} from "./ColdWeapon";
 import {ColorConfig} from "./Color";
@@ -36,6 +37,7 @@ export class GameConfig{
 	public static get Action():ActionConfig{ return this.getConfig(ActionConfig) };
 	public static get Ads():AdsConfig{ return this.getConfig(AdsConfig) };
 	public static get Assets():AssetsConfig{ return this.getConfig(AssetsConfig) };
+	public static get BagInfo():BagInfoConfig{ return this.getConfig(BagInfoConfig) };
 	public static get Coin():CoinConfig{ return this.getConfig(CoinConfig) };
 	public static get ColdWeapon():ColdWeaponConfig{ return this.getConfig(ColdWeaponConfig) };
 	public static get Color():ColorConfig{ return this.getConfig(ColorConfig) };

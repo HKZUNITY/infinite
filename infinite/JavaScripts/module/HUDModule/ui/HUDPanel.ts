@@ -16,7 +16,6 @@ import HUDModuleC, { KillTipData, KillTipType } from "../HUDModuleC";
 
 export default class HUDPanel extends HUDPanel_Generate {
 	private hudModuleC: HUDModuleC = null;
-	private shopPanel: ShopPanel = null;
 
 	/** 
 	 * 构造UI文件成功后，在合适的时机最先初始化一次 
@@ -34,7 +33,6 @@ export default class HUDPanel extends HUDPanel_Generate {
 	/**初始化数据 */
 	private initDatas(): void {
 		this.hudModuleC = ModuleService.getModule(HUDModuleC);
-		this.shopPanel = mw.UIService.getUI(ShopPanel);
 	}
 
 	/**绑定按钮 */
@@ -246,7 +244,6 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
 		this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
 		this.mCoinTextBlock.text = coin + "";
-		this.shopPanel.mCoinTextBlock.text = coin + "";
 		let atk = Utils.getAtk(lv);
 		this.mAtkTextBlock.text = "攻击力：" + atk;
 		ColdWeapon.getInstance().updateHitDamage(atk);
@@ -254,7 +251,6 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 	public updateCoin(coin: number): void {
 		this.mCoinTextBlock.text = coin + "";
-		this.shopPanel.mCoinTextBlock.text = coin + "";
 	}
 
 	public updateMp(curMp: number, maxMp: number): void {

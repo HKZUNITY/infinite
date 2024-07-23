@@ -70,10 +70,6 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.onSprintAction.add(() => {
             this.sprint();
         });
-        this.shopModuleC.onSwitchCameraAction.add((isOpenSkinShop: boolean) => {
-            this.hudPanel.mVirtualJoystickPanel.resetJoyStick();
-            isOpenSkinShop ? this.hudPanel.hide() : this.hudPanel.show();
-        });
         this.onPlayerScaleAction.add((playerScale: number) => {
             this.playerScale = playerScale;
         });
@@ -395,6 +391,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         if (this.localPlayer.character.isJumping && this.currentJumpTime >= 2) return;
         this.currentJumpTime++;
         if (this.currentJumpTime == 2) {
+            if (!this.isHaveMp()) return;
             PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.secondJumpAniID, 1)
             let stompingEffectId: string = "";
             let soundId: string = ""

@@ -48,7 +48,7 @@ export default class GameLauncher extends mw.Script {
         GlobalData.isDebug = SystemUtil.isPIE;
         GlobalData.logLevel = Number(this.logLevel);
         GlobalData.isHideHeadUI = this.isHideHeadUI;
-        GlobalData.isOpenIAA = this.isOpenIAA;
+        GlobalData.isOpenIAA = this.isOpenIAA && mw.SystemUtil.isPIE;
         GlobalData.isOpenCcreenshot = this.isOpenCcreenshot;
     }
 

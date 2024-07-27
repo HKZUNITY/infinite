@@ -7,13 +7,14 @@ import TaskModuleC from "./TaskModuleC";
 
 export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
     private onlineRewardsModuleS: OnlineRewardModuleS = null;
+    private get getOnlineRewardsModuleS(): OnlineRewardModuleS {
+        if (!this.onlineRewardsModuleS) {
+            this.onlineRewardsModuleS = ModuleService.getModule(OnlineRewardModuleS);
+        }
+        return this.onlineRewardsModuleS;
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        this.initData();
-    }
-
-    private initData(): void {
-        this.onlineRewardsModuleS = ModuleService.getModule(OnlineRewardModuleS);
     }
 
     private playerTaskMap: Map<number, mw.Player> = new Map<number, mw.Player>();
@@ -21,7 +22,7 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
         this.playerTaskMap.set(player.playerId, player);
         this.checkResetTask_onEnterGame(player, 0);
         this.getClient(player).net_getServerTaskData(new Date().getTime());
-        this.onlineRewardsModuleS.getServerOnlineRewardData(player);
+        this.getOnlineRewardsModuleS.getServerOnlineRewardData(player);
     }
 
     protected onPlayerLeft(player: mw.Player): void {
@@ -63,7 +64,7 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
             DataCenterS.getData(player, OnlineRewardData).autoResetOnlineRewards();
         });
         this.getAllClient().net_resetDailyTask();
-        this.onlineRewardsModuleS.resetOnlineReward();
+        this.getOnlineRewardsModuleS.resetOnlineReward();
     }
 
     /**重置当前房间内所有玩家的每周任务 */
@@ -104,7 +105,7 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
     public checkResetTask_onEnterGame_GM(player: mw.Player, day: number): void {
         this.checkResetTask_onEnterGame(player, day * 86400 * 1000);
         this.getClient(player).net_getServerTaskData(new Date().getTime());
-        this.onlineRewardsModuleS.getServerOnlineRewardData(player);
+        this.getOnlineRewardsModuleS.getServerOnlineRewardData(player);
     }
 
     /**
@@ -211,8 +212,8 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
         this.currentData.resetWeeklyTask();
     }
 
-    public killMonster(player: mw.Player, isBoss: boolean): void {
-        this.getClient(player).net_killMonster(isBoss);
+    public killMonster(player: mw.Player, monsterId: number): void {
+        this.getClient(player).net_killMonster(monsterId);
     }
 
     public killPlayer(player: mw.Player): void {

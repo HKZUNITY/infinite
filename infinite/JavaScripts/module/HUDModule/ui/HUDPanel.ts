@@ -11,11 +11,16 @@ import { Notice } from "../../../common/notice/Notice";
 import GlobalData from "../../../const/GlobalData";
 import HUDPanel_Generate from "../../../ui-generate/module/HUDModule/HUDPanel_generate";
 import KillTipItem_Generate from "../../../ui-generate/module/HUDModule/KillTipItem_generate";
-import ShopPanel from "../../ShopModule/ui/ShopPanel";
 import HUDModuleC, { KillTipData, KillTipType } from "../HUDModuleC";
 
 export default class HUDPanel extends HUDPanel_Generate {
 	private hudModuleC: HUDModuleC = null;
+	private get getHudModuleC(): HUDModuleC {
+		if (!this.hudModuleC) {
+			this.hudModuleC = ModuleService.getModule(HUDModuleC);
+		}
+		return this.hudModuleC;
+	}
 
 	/** 
 	 * 构造UI文件成功后，在合适的时机最先初始化一次 
@@ -24,57 +29,51 @@ export default class HUDPanel extends HUDPanel_Generate {
 		//设置能否每帧触发onUpdate
 		this.canUpdate = false;
 		this.layer = mw.UILayerMiddle;
-		this.initDatas();
 		this.bindButtons();
 		this.initUI();
 		this.initRoleData();
-	}
-
-	/**初始化数据 */
-	private initDatas(): void {
-		this.hudModuleC = ModuleService.getModule(HUDModuleC);
 	}
 
 	/**绑定按钮 */
 	private bindButtons(): void {
 		this.mAtkButton.onClicked.clear();
 		this.mShopButton.onClicked.add(() => {
-			this.hudModuleC.onOpenShopAction.call();
+			this.getHudModuleC.onOpenShopAction.call();
 		});
 		this.mPlayerButton.onClicked.add(() => {
-			this.hudModuleC.onOpenPlayerAction.call();
+			this.getHudModuleC.onOpenPlayerAction.call();
 			this.hide();
 		});
 		this.mJumpButton.onClicked.add(() => {
-			this.hudModuleC.onJumpAction.call();
+			this.getHudModuleC.onJumpAction.call();
 		});
 		this.mSprintButton.onClicked.add(() => {
-			this.hudModuleC.onSprintAction.call();
+			this.getHudModuleC.onSprintAction.call();
 		});
 		this.mOnlineRewardButton.onClicked.add(() => {
-			this.hudModuleC.onOpenOnlineRewardAction.call();
+			this.getHudModuleC.onOpenOnlineRewardAction.call();
 		});
 		this.mTaskButton.onClicked.add(() => {
-			this.hudModuleC.onOpenTaskAction.call();
+			this.getHudModuleC.onOpenTaskAction.call();
 		});
 		this.mRankButton.onClicked.add(() => {
-			this.hudModuleC.onOpenRankAction.call();
+			this.getHudModuleC.onOpenRankAction.call();
 		});
 		this.mHomeButton.onClicked.add(() => {
-			this.hudModuleC.onHomeAction.call();
+			this.getHudModuleC.onHomeAction.call();
 		});
 		this.mAddCoinButton.onClicked.add(() => {
-			this.hudModuleC.onAddCoinAction.call();
+			this.getHudModuleC.onAddCoinAction.call();
 		});
 		this.mAdsButton.onClicked.add(() => {
-			this.hudModuleC.onAdsAction.call();
+			this.getHudModuleC.onAdsAction.call();
 		});
 		let isInvincible: boolean = true;
 		this.mInvincibleTextBlock.text = "已开启防御";
 		this.mInvincibleButton.onClicked.add(() => {
 			isInvincible = !isInvincible;
 			this.mInvincibleTextBlock.text = isInvincible ? "已开启防御" : "已关闭防御";
-			this.hudModuleC.onInvincibleAction.call(isInvincible);
+			this.getHudModuleC.onInvincibleAction.call(isInvincible);
 		});
 		this.mOnlineRewardButton.normalImageGuid = "193281";
 		this.mOnlineRewardButton.pressedImageGuid = "193281";
@@ -239,12 +238,13 @@ export default class HUDPanel extends HUDPanel_Generate {
 		AccountService.fillAvatar(this.mRoleIconImage);
 	}
 
-	public updateLvExpCoin(lv: number, exp: number, coin: number): void {
+	public updateLvExpCoin(lv: number, exp: number, coin: number, addAtk: number): void {
 		this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
 		this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
 		this.mCoinTextBlock.text = coin + "";
-		let atk = Utils.getAtk(lv);
+		let atk = Utils.getAtk(lv) + addAtk;
+		GlobalData.atk = atk;
 		this.mAtkTextBlock.text = "攻击力：" + atk;
 		ColdWeapon.getInstance().updateHitDamage(atk);
 	}
@@ -260,6 +260,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 	public updateHp(curHp: number, maxHp: number): void {
 		if (curHp < 0) curHp = 0;
+		GlobalData.hp = maxHp;
 		this.mHpProgressBar.currentValue = curHp / maxHp;
 		this.mHpTextBlock.text = curHp + "/" + maxHp;
 

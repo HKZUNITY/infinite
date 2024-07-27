@@ -4,9 +4,8 @@
  * TIME: 2023.09.21-23.46.02
  */
 
-import Console from "../../../Tools/Console";
 import { ObjectPoolServices } from "../../../Tools/ObjectPool";
-import { Utils, cubicBezier } from "../../../Tools/utils";
+import { Utils } from "../../../Tools/utils";
 import { GameConfig } from "../../../config/GameConfig";
 import { ITaskElement } from "../../../config/Task";
 import GlobalData from "../../../const/GlobalData";
@@ -17,18 +16,19 @@ import TaskModuleC from "../TaskModuleC";
 
 export default class TaskPanel extends TaskPanel_Generate {
 	private hudPanel: HUDPanel = null;
+	private get getHudPanel(): HUDPanel {
+		if (!this.hudPanel) {
+			this.hudPanel = mw.UIService.getUI(HUDPanel);
+		}
+		return this.hudPanel
+	}
 
 	protected onStart(): void {
 		//设置能否每帧触发onUpdate
 		this.canUpdate = false;
 		this.layer = mw.UILayerMiddle;
-		this.initData();
 		this.bindButton();
 		this.initTime();
-	}
-
-	private initData(): void {
-		this.hudPanel = mw.UIService.getUI(HUDPanel);
 	}
 
 	private bindButton(): void {
@@ -67,10 +67,10 @@ export default class TaskPanel extends TaskPanel_Generate {
 	public controllerPic(value: number): void {
 		this.picIndex += value;
 		if (this.picIndex > 0 && this.isPic == false) {
-			this.hudPanel.startTaskRedPointTween();
+			this.getHudPanel.startTaskRedPointTween();
 			this.isPic = true;
 		} else if (this.picIndex <= 0 && this.isPic == true) {
-			this.hudPanel.stopTaskRedPointTween();
+			this.getHudPanel.stopTaskRedPointTween();
 			this.isPic = false;
 		}
 	}

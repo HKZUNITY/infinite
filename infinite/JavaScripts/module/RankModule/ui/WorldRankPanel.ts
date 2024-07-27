@@ -113,6 +113,12 @@ export class RankItem {
 
 export class WorldRankPanel extends WorldRankPanel_Generate {
 	private hudPanel: HUDPanel = null;
+	private get getHudPanel(): HUDPanel {
+		if (!this.hudPanel) {
+			this.hudPanel = mw.UIService.getUI(HUDPanel);
+		}
+		return this.hudPanel;
+	}
 
 	/**排行模式 */
 	public onRankTypeAction: Action1<RankType> = new Action1<RankType>();
@@ -124,7 +130,6 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 	}
 
 	private initData(): void {
-		this.hudPanel = mw.UIService.getUI(HUDPanel);
 		this.showRoomCanvas();
 	}
 
@@ -171,7 +176,7 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 		Utils.openUITween(
 			this.rootCanvas,
 			() => {
-				this.hudPanel.hide();
+				this.getHudPanel.hide();
 			},
 			null
 		);
@@ -186,7 +191,7 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 			null,
 			() => {
 				this.hide();
-				this.hudPanel.show();
+				this.getHudPanel.show();
 			});
 	}
 

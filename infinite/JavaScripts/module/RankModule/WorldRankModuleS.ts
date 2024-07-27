@@ -1,11 +1,16 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
-import Console from "../../Tools/Console";
 import PlayerModuleS from "../PlayerModule/PlayerModuleS";
 import { PlayerData_CSR, PlayerData_CSW } from "./PlayerPropData";
 import { WorldRankModuleC } from "./WorldRankModuleC";
 
 export class WorldRankModuleS extends ModuleS<WorldRankModuleC, null> {
     private playerModuleS: PlayerModuleS = null;
+    private get getPlayerModuleS(): PlayerModuleS {
+        if (!this.playerModuleS) {
+            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
+        }
+        return this.playerModuleS;
+    }
 
     private worldDatas: PlayerData_CSW[] = [];
     protected onStart(): void {
@@ -13,7 +18,6 @@ export class WorldRankModuleS extends ModuleS<WorldRankModuleC, null> {
     }
 
     private async initData(): Promise<void> {
-        this.playerModuleS = ModuleService.getModule(PlayerModuleS);
         this.worldDatas = (await this.getCustomdata("WorldData")) as PlayerData_CSW[];
     }
 
@@ -38,7 +42,7 @@ export class WorldRankModuleS extends ModuleS<WorldRankModuleC, null> {
      */
     @Decorator.noReply()
     public net_onEnterScene(playerName: string, playerLv: number, playerHeight: number, playerKill: number): void {
-        this.playerModuleS.setPlayerLifeNickName(this.currentPlayerId, playerName, playerLv);
+        this.getPlayerModuleS.setPlayerLifeNickName(this.currentPlayerId, playerName, playerLv);
         this.onEnterScene(playerName, playerLv, playerHeight, playerKill);
     }
 
@@ -163,7 +167,7 @@ export class WorldRankModuleS extends ModuleS<WorldRankModuleC, null> {
         if (this.worldDatas == null) {
             this.worldDatas = [];
         }
-        if (this.worldDatas.length < 100) {
+        if (this.worldDatas.length < 500) {
             if (this.worldDatas.length == 0) {
                 this.worldDatas.push(playerData_SW);
                 isPush = true;

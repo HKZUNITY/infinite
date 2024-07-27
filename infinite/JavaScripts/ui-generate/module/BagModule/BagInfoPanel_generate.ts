@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.07.24-00.21.56
+ * TIME: 2024.07.27-01.53.21
  */
  
 @UIBind('UI/module/BagModule/BagInfoPanel.ui')
@@ -39,21 +39,35 @@ export default class BagInfoPanel_Generate extends UIScript {
 	private mUseButton_Internal: mw.Button
 	public get mUseButton(): mw.Button {
 		if(!this.mUseButton_Internal&&this.uiWidgetBase) {
-			this.mUseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mUseButton') as mw.Button
+			this.mUseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/Canvas/mUseButton') as mw.Button
 		}
 		return this.mUseButton_Internal
+	}
+	private mUseTextBlock_Internal: mw.TextBlock
+	public get mUseTextBlock(): mw.TextBlock {
+		if(!this.mUseTextBlock_Internal&&this.uiWidgetBase) {
+			this.mUseTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/Canvas/mUseButton/mUseTextBlock') as mw.TextBlock
+		}
+		return this.mUseTextBlock_Internal
 	}
 	private mPriceButton_Internal: mw.Button
 	public get mPriceButton(): mw.Button {
 		if(!this.mPriceButton_Internal&&this.uiWidgetBase) {
-			this.mPriceButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mPriceButton') as mw.Button
+			this.mPriceButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/Canvas/mPriceButton') as mw.Button
 		}
 		return this.mPriceButton_Internal
+	}
+	private mPreceTextBlock_Internal: mw.TextBlock
+	public get mPreceTextBlock(): mw.TextBlock {
+		if(!this.mPreceTextBlock_Internal&&this.uiWidgetBase) {
+			this.mPreceTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/Canvas/mPriceButton/mPreceTextBlock') as mw.TextBlock
+		}
+		return this.mPreceTextBlock_Internal
 	}
 	private mAdsButton_Internal: mw.AdsButton
 	public get mAdsButton(): mw.AdsButton {
 		if(!this.mAdsButton_Internal&&this.uiWidgetBase) {
-			this.mAdsButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mAdsButton') as mw.AdsButton
+			this.mAdsButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/Canvas/mAdsButton') as mw.AdsButton
 		}
 		return this.mAdsButton_Internal
 	}
@@ -106,6 +120,12 @@ export default class BagInfoPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mInfoTextBlock)
+		
+	
+		this.initLanguage(this.mUseTextBlock)
+		
+	
+		this.initLanguage(this.mPreceTextBlock)
 		
 	
 		//文本多语言

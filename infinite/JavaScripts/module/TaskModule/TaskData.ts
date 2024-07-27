@@ -8,44 +8,52 @@ export enum TaskItemType {
     /**每日登录游戏 */
     DailyLogin = 1,
     /**每日在线时长 */
-    DailyOnlineTime = 2,
-    /**每日击杀怪物 */
-    DailyKillMonster = 3,
-    /**每日击杀Boss */
-    DailyKillBoss = 4,
-    /**每日击杀玩家 */
-    DailyKillPlayer = 5,
-    /**每日购买武器套装个数 */
-    DailyBuyWeapon = 6,
-    /**每日换装次数 */
-    DailyChangeClothes = 7,
-    /**每日切换背景音乐次数 */
-    DailySwitchBgm = 8,
-
-    /**每日聊天次数 */
-    DailyChat = 10,
+    DailyOnlineTime = 11,
+    /**每日击败美杜莎 */
+    DailyKillMedusa = 21,
+    /**每日击败蜘蛛精 */
+    DailyKillSpider = 31,
+    /**每日击败炫彩蜘蛛 */
+    DailyKillColorfulSpider = 41,
+    /**每日击败龙兽 */
+    DailyKillDragon = 51,
+    /**每日击败丧尸 */
+    DailyKillZombie = 61,
+    /**每日击败变异布偶 */
+    DailyKillMutantPuppet = 71,
+    /**每日击败玩家 */
+    DailyKillPlayer = 81,
+    /**每日提升级 */
+    DailyUpLv = 91,
+    /**每日捡到秘宝 */
+    DailyPickUpTreasure = 101,
     /**每日看广告次数 */
-    DailyAds = 11,
-    /**每周登录 */
-    WeeklyLogin = 30,
-    /**每周登录时长 */
-    WeeklyOnlineTime = 31,
-    /**每周击杀怪物 */
-    WeeklyKillMonster = 32,
-    /**每周击杀Boss */
-    WeeklyKillBoss = 33,
-    /**每周击杀玩家 */
-    WeeklyKillPlayer = 34,
-    /**每周购买武器套装个数 */
-    WeeklyBuyWeapon = 35,
-    /**每周换装次数 */
-    WeeklyChangeClothes = 36,
-    /**每周切换背景音乐次数 */
-    WeeklySwitchBgm = 37,
-    /**每周聊天次数 */
-    WeeklyChat = 38,
+    DailyAds = 111,
+
+    /**每周登录天数 */
+    WeeklyLogin = 201,
+    /**每周在线时长30分钟次数 */
+    WeeklyOnlineTime = 211,
+    /**每周击败美杜莎 */
+    WeeklyKillMedusa = 221,
+    /**每周击败蜘蛛精 */
+    WeeklyKillSpider = 231,
+    /**每周击败炫彩蜘蛛 */
+    WeeklyKillColorfulSpider = 241,
+    /**每周击败龙兽 */
+    WeeklyKillDragon = 251,
+    /**每周击败丧尸 */
+    WeeklyKillZombie = 261,
+    /**每周击败变异布偶 */
+    WeeklyKillMutantPuppet = 271,
+    /**每周击败玩家 */
+    WeeklyKillPlayer = 281,
+    /**每周提升级 */
+    WeeklyUpLv = 291,
+    /**每周捡到秘宝 */
+    WeeklyPickUpTreasure = 301,
     /**每周看广告次数 */
-    WeeklyAds = 39,
+    WeeklyAds = 311,
 }
 
 export enum TaskType {

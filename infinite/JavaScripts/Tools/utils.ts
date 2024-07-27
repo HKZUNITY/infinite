@@ -591,6 +591,27 @@ export class Utils {
     public static getAtk(lv: number): number {
         return 50 + (lv * 50);
     }
+
+    public static getMultipleByRarity(rarity: number): number {
+        if (rarity < 0 || isNaN(rarity)) rarity = 0;
+        return (rarity + 1) * 0.1;
+    }
+
+    private static assetIconDataMap: Map<string, mw.AssetIconData> = new Map<string, mw.AssetIconData>();
+    public static setImageByAssetIconData(image: mw.Image, icon: string): void {
+        if (this.assetIconDataMap.has(icon)) {
+            image.setImageByAssetIconData(this.assetIconDataMap.get(icon));
+        } else {
+            mw.assetIDChangeIconUrlRequest([icon]).then(() => {
+                try {
+                    let assetIconData = mw.getAssetIconDataByAssetID(icon);
+                    console.error(`icon:${icon}`);
+                    image.setImageByAssetIconData(assetIconData);
+                    this.assetIconDataMap.set(icon, assetIconData);
+                } catch (error) { }
+            });
+        }
+    }
 }
 
 /**贝塞尔曲线 */

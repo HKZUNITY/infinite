@@ -120,7 +120,6 @@ export default class ShopModuleC extends ModuleC<ShopModuleS, ShopData> {
             this.updateHeadUI(this.coldWeaponElement);
             this.shopPanel.updateTextBlock();
             Notice.showDownNotice("购买成功");
-            this.taskModuleC.buyWeapon();
         }
         else {
             Notice.showDownNotice("金币不足");

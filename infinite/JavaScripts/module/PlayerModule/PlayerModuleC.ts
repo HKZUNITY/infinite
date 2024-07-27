@@ -4,15 +4,29 @@ import { ExplosiveCoins } from "../../common/ExplosiveCoins";
 import { FlyText } from "../../common/FlyText";
 import { Notice } from "../../common/notice/Notice";
 import HUDModuleC from "../HUDModule/HUDModuleC";
+import TaskModuleC from "../TaskModule/TaskModuleC";
 import PlayerData from "./PlayerData";
 import PlayerModuleS from "./PlayerModuleS";
 
 export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     private hudModuleC: HUDModuleC = null;
+    private get getHudModuleC(): HUDModuleC {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+
+    private taskModuleC: TaskModuleC = null;
+    private get getTaskModuleC(): TaskModuleC {
+        if (!this.taskModuleC) {
+            this.taskModuleC = ModuleService.getModule(TaskModuleC);
+        }
+        return this.taskModuleC;
+    }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        this.hudModuleC = ModuleService.getModule(HUDModuleC);
         InputUtil.onKeyDown(mw.Keys.NumPadSeven, () => {
             this.adsUpLv();
         });
@@ -25,7 +39,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     }
 
     protected onEnterScene(sceneType: number): void {
-        this.hudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
+        this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
     }
 
     public net_onPlayerAtkSelf(damage: number, hitPoint: mw.Vector): void {
@@ -46,9 +60,12 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
 
     public net_updateLvExpAndCoin(isAddLv: boolean, coin: number = 0): void {
         let playerLv = this.data.playerLv;
-        this.hudModuleC.updateLvExpCoin(playerLv, this.data.exp, this.data.coin, isAddLv);
+        this.getHudModuleC.updateLvExpCoin(playerLv, this.data.exp, this.data.coin, isAddLv);
         if (coin > 0) Notice.showDownNotice(`获得${coin}金币`);
-        if (isAddLv) Notice.showDownNotice("等级提升至 " + Utils.getLvText(playerLv) + " Lv." + playerLv);
+        if (isAddLv) {
+            Notice.showDownNotice("等级提升至 " + Utils.getLvText(playerLv) + " Lv." + playerLv);
+            this.getTaskModuleC.upLv(playerLv);
+        }
     }
 
     public net_flyText(damage: number, hitPoint: mw.Vector): void {
@@ -57,7 +74,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     }
 
     public net_updateHp(curHp: number): void {
-        this.hudModuleC.updateHp(curHp);
+        this.getHudModuleC.updateHp(curHp);
     }
 
     public getCoin(): number {
@@ -77,7 +94,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     // }
 
     public saveCoin(value: number): void {
-        this.hudModuleC.updateCoin(this.data.coin + value);
+        this.getHudModuleC.updateCoin(this.data.coin + value);
         this.server.net_saveCoin(value);
     }
 
@@ -86,11 +103,14 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
      * @param value 
      */
     public net_updateCoin(value: number): void {
-        this.hudModuleC.updateCoin(this.data.coin + value);
-        Notice.showDownNotice("发现宝箱，获得" + value + "金币");
+        this.getHudModuleC.updateCoin(this.data.coin + value);
+        Notice.showDownNotice("获得" + value + "金币");
     }
 
     public saveCoinAndExp(coin: number, exp: number): void {
+        if (coin < 0 || isNaN(coin)) coin = 0;
+        if (exp < 0 || isNaN(exp)) exp = 0;
+        if (coin == 0 && exp == 0) return;
         this.server.net_saveCoinAndExp(coin, exp);
     }
 
@@ -108,6 +128,6 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     }
 
     public net_killTip(killerUserId: string, killerName: string, killedUserId: string, killedName: string): void {
-        this.hudModuleC.killTip(killerUserId, killerName, killedUserId, killedName);
+        this.getHudModuleC.killTip(killerUserId, killerName, killedUserId, killedName);
     }
 }

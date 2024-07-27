@@ -3,8 +3,6 @@ import { SpawnManager } from '../Modified027Editor/ModifiedSpawn';
 import { GeneralManager, } from '../Modified027Editor/ModifiedStaticAPI';
 import { IAdsElement } from "../config/Ads";
 import { GameConfig } from "../config/GameConfig";
-import AdTipsPanel from "../module/AdsModule/ui/AdTipsPanel";
-import ShopModuleC from "../module/ShopModule/ShopModuleC";
 
 @Component
 export default class Ads extends mw.Script {
@@ -36,8 +34,6 @@ export default class Ads extends mw.Script {
     /**客户端的onStart */
     private async onStartC(): Promise<void> {
         await ModuleService.ready();
-        let adsTipsPanel = mw.UIService.getUI(AdTipsPanel);
-        let shopModuleC = ModuleService.getModule(ShopModuleC);
         GameConfig.Ads.getAllElement().forEach(async (value: IAdsElement, index: number, array: IAdsElement[]) => {
             let npc = await GameObject.asyncFindGameObjectById(value.Role) as mw.Character;
             npc.displayName = value.Del;

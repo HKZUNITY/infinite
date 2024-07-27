@@ -23,6 +23,12 @@ export class GuideData extends Subdata {
 
 export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     private guidePanel: GuidePanel = null;
+    private get getGuidePanel(): GuidePanel {
+        if (!this.guidePanel) {
+            this.guidePanel = mw.UIService.getUI(GuidePanel);
+        }
+        return this.guidePanel
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
@@ -32,22 +38,21 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
 
     protected onEnterScene(sceneType: number): void {
         if (this.data.isFirst) {
-            this.guidePanel = mw.UIService.getUI(GuidePanel);
             this.onNextStepAction.add(() => {
                 this.curStep++;
                 if (this.curStep > this.totalStep) {
                     this.onCompleted();
-                    this.startGuide();
+                    // this.startGuide();//引导
                     return;
                 }
-                this.guidePanel.guideByStep(this.curStep);
+                this.getGuidePanel.guideByStep(this.curStep);
             });
             this.onNextStepAction.call();
         }
     }
 
     /**引导目标点特效ID */
-    private targetGuideEffectId: number = null;
+    // private targetGuideEffectId: number = null;
     /**引导间隔标识 */
     private guideIntervalId: number = null;
     /**引导线特效ID */
@@ -56,17 +61,16 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     private prePlayerLoc: mw.Vector = mw.Vector.zero;
 
     /**开始引导 */
-    public startGuide(): void {
-        let targetLoc = new mw.Vector(-1450, -6600, 600);
-        if (targetLoc.x == 0 && targetLoc.y == 0 && targetLoc.z == 0) return;
+    public startGuide(targetLoc: mw.Vector): void {
+        if (!targetLoc) return;
 
-        if (this.targetGuideEffectId) {
-            EffectService.stop(this.targetGuideEffectId);
-            this.targetGuideEffectId = null;
-        }
+        // if (this.targetGuideEffectId) {
+        //     EffectService.stop(this.targetGuideEffectId);
+        //     this.targetGuideEffectId = null;
+        // }
 
-        this.targetGuideEffectId = GeneralManager.rpcPlayEffectAtLocation(GlobalData.targetEffectGuid,
-            targetLoc, 0, mw.Rotation.zero, mw.Vector.one.multiply(5));
+        // this.targetGuideEffectId = GeneralManager.rpcPlayEffectAtLocation(GlobalData.targetEffectGuid,
+        //     targetLoc, 0, mw.Rotation.zero, mw.Vector.one.multiply(5));
 
         if (this.guideIntervalId) {
             TimeUtil.clearInterval(this.guideIntervalId);
@@ -82,10 +86,10 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             if (distance <= 1000) {
                 TimeUtil.clearInterval(this.guideIntervalId);
                 this.guideIntervalId = null;
-                if (this.targetGuideEffectId) {
-                    EffectService.stop(this.targetGuideEffectId);
-                    this.targetGuideEffectId = null;
-                }
+                // if (this.targetGuideEffectId) {
+                //     EffectService.stop(this.targetGuideEffectId);
+                //     this.targetGuideEffectId = null;
+                // }
                 if (this.guideEffectIds.length != 0) {
                     this.guideEffectIds.forEach((effectId: number) => {
                         EffectService.stop(effectId);

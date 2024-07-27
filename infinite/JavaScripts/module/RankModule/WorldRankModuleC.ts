@@ -1,4 +1,3 @@
-import Console from "../../Tools/Console";
 import { Notice } from "../../common/notice/Notice";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import PlayerData from "../PlayerModule/PlayerData";
@@ -8,8 +7,26 @@ import { WorldRankPanel } from "./ui/WorldRankPanel";
 
 export class WorldRankModuleC extends ModuleC<WorldRankModuleS, null> {
     private hudModuleC: HUDModuleC = null;
+    private get getHudModuleC(): HUDModuleC {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
     private playerData: PlayerData = null;
+    private get getPlayerData(): PlayerData {
+        if (this.playerData == null) {
+            this.playerData = DataCenterC.getData(PlayerData);
+        }
+        return this.playerData;
+    }
     private worldRankPanel: WorldRankPanel = null;
+    private get getWorldRankPanel(): WorldRankPanel {
+        if (!this.worldRankPanel) {
+            this.worldRankPanel = mw.UIService.getUI(WorldRankPanel);
+        }
+        return this.worldRankPanel;
+    }
     /**排行类型 */
     private rankType: RankType = RankType.Lv;
     /**是否可以刷新 */
@@ -25,21 +42,14 @@ export class WorldRankModuleC extends ModuleC<WorldRankModuleS, null> {
 
 
     protected onStart(): void {
-        this.initData();
         this.bindAction();
     }
 
-    private initData(): void {
-        this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        this.worldRankPanel = mw.UIService.getUI(WorldRankPanel);
-        this.playerData = DataCenterC.getData(PlayerData);
-    }
-
     private bindAction(): void {
-        this.hudModuleC.onOpenRankAction.add(() => {
-            this.worldRankPanel.show();
+        this.getHudModuleC.onOpenRankAction.add(() => {
+            this.getWorldRankPanel.show();
         });
-        this.worldRankPanel.onRankTypeAction.add((rankType: RankType) => {
+        this.getWorldRankPanel.onRankTypeAction.add((rankType: RankType) => {
             if (!this.isRefresh) {
                 Notice.showDownNotice("小手别点太快哟~");
             }
@@ -58,10 +68,9 @@ export class WorldRankModuleC extends ModuleC<WorldRankModuleS, null> {
      * @param sceneType 
      */
     protected onEnterScene(sceneType: number): void {
-        if (this.playerData == null) this.playerData = DataCenterC.getData(PlayerData);
-        let playerLv = this.playerData.playerLv;
-        let playerHeight = this.playerData.playerHeight;
-        let playerKill = this.playerData.playerKill;
+        let playerLv = this.getPlayerData.playerLv;
+        let playerHeight = this.getPlayerData.playerHeight;
+        let playerKill = this.getPlayerData.playerKill;
         let nickName = mw.AccountService.getNickName();
         nickName = nickName ? nickName : "UserId:" + this.localPlayer.userId;
         this.server.net_onEnterScene(nickName, playerLv, playerHeight, playerKill);
@@ -124,10 +133,7 @@ export class WorldRankModuleC extends ModuleC<WorldRankModuleS, null> {
                 }
             }
         }
-        if (!this.worldRankPanel) {
-            this.worldRankPanel = mw.UIService.getUI(WorldRankPanel);
-        }
-        this.worldRankPanel.refreshRankPanel(this.rankPlayerDatas_CR, curPlayerIndex, isRefreshWorldRank, this.rankWorldDatas_CW, curPlayerWorldIndex);
+        this.getWorldRankPanel.refreshRankPanel(this.rankPlayerDatas_CR, curPlayerIndex, isRefreshWorldRank, this.rankWorldDatas_CW, curPlayerWorldIndex);
     }
 
     private refreshRanking(): void {
@@ -138,10 +144,7 @@ export class WorldRankModuleC extends ModuleC<WorldRankModuleS, null> {
                 curPlayerIndex = i;
             }
         }
-        if (!this.worldRankPanel) {
-            this.worldRankPanel = mw.UIService.getUI(WorldRankPanel);
-        }
-        this.worldRankPanel.refreshRankPanel(this.rankPlayerDatas_CR, curPlayerIndex, false, null, -1);
+        this.getWorldRankPanel.refreshRankPanel(this.rankPlayerDatas_CR, curPlayerIndex, false, null, -1);
     }
 
     /**

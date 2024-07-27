@@ -8,22 +8,25 @@ import { OnlineRewardPanel } from "./ui/OnlineRewardPanel";
 
 export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewardData> {
     private playerModuleC: PlayerModuleC = null;
+    private get getPlayerModuleC(): PlayerModuleC {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
     private onlineRewardsPanel: OnlineRewardPanel = undefined;
+    private get getOnlineRewardsPanel(): OnlineRewardPanel {
+        if (!this.onlineRewardsPanel) {
+            this.onlineRewardsPanel = mw.UIService.getUI(OnlineRewardPanel);
+        }
+        return this.onlineRewardsPanel
+    }
     /**打开关闭在线奖励界面 */
     public onOnlineRewardsAction: Action = new Action();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        this.initData();
         this.registerAction();
-    }
-
-    /**
-     * 初始化数据
-     */
-    private initData(): void {
-        this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        this.onlineRewardsPanel = mw.UIService.getUI(OnlineRewardPanel);
     }
 
     /**
@@ -33,7 +36,7 @@ export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewa
         this.onOnlineRewardsAction.add((isOpen: boolean) => {
             console.error(`aaaaa`);
             this.isNeedUpdateItem = isOpen;
-            isOpen ? this.onlineRewardsPanel.show() : this.onlineRewardsPanel.hideTween();
+            isOpen ? this.getOnlineRewardsPanel.show() : this.getOnlineRewardsPanel.hideTween();
         });
     }
 
@@ -46,7 +49,7 @@ export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewa
         this.onlineSecond = this.data.onlineMinute * 60;
         this.isGetRewards = this.data.isGetRewards;
         this.isStartTimer = true;
-        this.onlineRewardsPanel.initOnlineRewardItem(this.onlineSecond, this.isGetRewards);
+        this.getOnlineRewardsPanel.initOnlineRewardItem(this.onlineSecond, this.isGetRewards);
     }
 
     /**
@@ -55,7 +58,7 @@ export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewa
     public net_resetOnlineReward(): void {
         this.onlineSecond = this.data.onlineMinute * 60;
         this.isGetRewards = this.data.isGetRewards;
-        this.onlineRewardsPanel.resetOnlineRewardItem(this.onlineSecond, this.isGetRewards);
+        this.getOnlineRewardsPanel.resetOnlineRewardItem(this.onlineSecond, this.isGetRewards);
         this.secondTimer = 0;
         this.minuteTimer = 0;
         this.isStartTimer = true;
@@ -90,7 +93,7 @@ export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewa
 
         this.minuteTimer += this.secondTime;
         // if (this.isNeedUpdateItem)
-        this.onlineRewardsPanel.updateNeedUpdateItems(this.onlineSecond);
+        this.getOnlineRewardsPanel.updateNeedUpdateItems(this.onlineSecond);
         if (this.minuteTimer < this.minuteTime) return;
 
         this.minuteTimer = 0;
@@ -106,7 +109,7 @@ export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewa
         let rewardCount = GameConfig.OnlineRewards.getElement(index + 1).RewardCount;
         Notice.showDownNotice("奖励金币：" + rewardCount[0]);
         Notice.showDownNotice("奖励经验：" + rewardCount[1]);
-        this.playerModuleC.saveCoinAndExp(rewardCount[0], rewardCount[1]);
+        this.getPlayerModuleC.saveCoinAndExp(rewardCount[0], rewardCount[1]);
     }
 }
 

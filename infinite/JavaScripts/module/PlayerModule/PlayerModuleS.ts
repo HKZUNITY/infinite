@@ -3,6 +3,7 @@ import { PrefabEvent } from "../../Prefabs/PrefabEvent";
 import Console from "../../Tools/Console";
 import { Utils } from "../../Tools/utils";
 import GlobalData from "../../const/GlobalData";
+import { BagModuleS } from '../BagModule/BagModule';
 import { WorldRankModuleS } from "../RankModule/WorldRankModuleS";
 import TaskModuleS from "../TaskModule/TaskModuleS";
 import PlayerData from "./PlayerData";
@@ -11,20 +12,31 @@ import PlayerLifebar from "./ui/PlayerLifebar";
 
 export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     private worldModuleS: WorldRankModuleS = null;
+    private get getWorldModuleS(): WorldRankModuleS {
+        if (!this.worldModuleS) {
+            this.worldModuleS = ModuleService.getModule(WorldRankModuleS);
+        }
+        return this.worldModuleS;
+    }
     private taskModuleS: TaskModuleS = null;
+    private get getTaskModuleS(): TaskModuleS {
+        if (!this.taskModuleS) {
+            this.taskModuleS = ModuleService.getModule(TaskModuleS);
+        }
+        return this.taskModuleS;
+    }
+
+    private bagModuleS: BagModuleS = null;
+    private get getBagModuleS(): BagModuleS {
+        if (!this.bagModuleS) {
+            this.bagModuleS = ModuleService.getModule(BagModuleS);
+        }
+        return this.bagModuleS;
+    }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        this.initData();
         this.registerEvents();
-    }
-
-    /**
-     * 初始化数据
-     */
-    private initData(): void {
-        this.worldModuleS = ModuleService.getModule(WorldRankModuleS);
-        this.taskModuleS = ModuleService.getModule(TaskModuleS);
     }
 
     private registerEvents(): void {
@@ -85,14 +97,14 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
      * @param senderGuid 
      * @param hp 
      */
-    public playerKillEnemy(senderGuid: string, hp: number): void {
+    public playerKillEnemy(senderGuid: string, hp: number, monsterId: number): void {
         if (!this.allPlayerMap.has(senderGuid)) return;
         let sendPlayer = this.allPlayerMap.get(senderGuid);
         this.saveKill(sendPlayer, 1);
         this.addExpAndCoin(sendPlayer, hp);
-        this.taskModuleS.killMonster(sendPlayer, hp >= 20000);
+        this.getTaskModuleS.killMonster(sendPlayer, monsterId);
         let names: string[] = [];
-        names.push(this.worldModuleS.getNameByUserId(sendPlayer.userId));
+        names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
         names.push(Utils.randomNpcName());
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
     }
@@ -119,8 +131,9 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                playerLifebar.hp = playerData.getHp();
-                playerLifebar.maxHp = playerData.getHp();
+                let maxHp = playerData.getHp() + this.getBagModuleS.getAddHpByUsing(player);
+                playerLifebar.maxHp = maxHp;
+                playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = playerData.playerLv;
             }
             this.saveLv(player, playerData.playerLv - preLv, playerData.playerLv);
@@ -167,15 +180,15 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let curHp = targetPlayerData.playerLifebar.hp;
         curHp -= damage;
         if (curHp <= 0) {
-            let maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp();
+            let maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp() + this.getBagModuleS.getAddHpByUsing(targetPlayer);
             targetPlayerData.playerLifebar.hp = 0;
             targetPlayerData.isDie = true;
             if (sendPlayer) {
                 this.saveKill(sendPlayer, 1);
                 this.addExpAndCoin(sendPlayer, maxHp);
-                this.taskModuleS.killPlayer(sendPlayer);
+                this.getTaskModuleS.killPlayer(sendPlayer);
                 let names: string[] = [];
-                names = this.worldModuleS.getNamesByUserId(sendPlayer.userId, targetPlayer.userId);
+                names = this.getWorldModuleS.getNamesByUserId(sendPlayer.userId, targetPlayer.userId);
                 this.getAllClient().net_killTip(sendPlayer.userId, names[0], targetPlayer.userId, names[1]);
             }
             targetPlayer.character.ragdollEnabled = true;
@@ -194,7 +207,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (sendPlayer) {
             let maxHp = 0;
             if (targetPlayerData.isDie) {
-                maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp();
+                maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp() + this.getBagModuleS.getAddHpByUsing(targetPlayer);
             }
             this.getClient(sendPlayer).net_onSelfAtkPlayer(damage, hitPoint, targetPlayerData.isDie, maxHp);
         }
@@ -217,7 +230,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let playerId = player.playerId;
         let playerDataS = new PlayerDataS();
         let hpbar = await mw.Script.spawnScript(PlayerLifebar, true, player.character);
-        let maxHp = DataCenterS.getData(player, PlayerData).getHp();
+        let maxHp = DataCenterS.getData(player, PlayerData).getHp() + this.getBagModuleS.getAddHpByUsing(player);
         hpbar.maxHp = maxHp;
         hpbar.hp = maxHp;
         playerDataS.playerLifebar = hpbar;
@@ -231,6 +244,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     private deletePlayerData(player: mw.Player): void {
         let playerId = player.playerId;
         if (this.playerLifeMap.has(playerId)) {
+            this.playerLifeMap.get(playerId).playerLifebar.isInvincible = false;
             this.playerLifeMap.get(playerId).playerLifebar.destroy();
             this.playerLifeMap.delete(playerId);
         }
@@ -240,18 +254,18 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     }
 
     public saveLv(player: mw.Player, value: number, value1): void {
-        this.worldModuleS.refreshLv_S(player.userId, value);
+        this.getWorldModuleS.refreshLv_S(player.userId, value);
         this.setPlayerLevel(player.playerId, value1);
     }
 
     public saveHeight(player: mw.Player, value: number): void {
         DataCenterS.getData(player, PlayerData).refashHeight(value);
-        this.worldModuleS.refreshHeight_S(player.userId, value);
+        this.getWorldModuleS.refreshHeight_S(player.userId, value);
     }
 
     public saveKill(player: mw.Player, value: number): void {
         DataCenterS.getData(player, PlayerData).refashKill(value);
-        this.worldModuleS.refreshKill_S(player.userId, value);
+        this.getWorldModuleS.refreshKill_S(player.userId, value);
     }
 
     // @Decorator.noReply()
@@ -298,8 +312,9 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                playerLifebar.hp = this.currentData.getHp();
-                playerLifebar.maxHp = this.currentData.getHp();
+                let maxHp = this.currentData.getHp() + this.getBagModuleS.getAddHpByUsing(player);
+                playerLifebar.maxHp = maxHp;
+                playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = this.currentData.playerLv;
             }
             this.saveLv(player, this.currentData.playerLv - preLv, this.currentData.playerLv);
@@ -312,6 +327,14 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     public net_isInvincible(isInvincible: boolean): void {
         if (this.playerLifeMap.has(this.currentPlayerId)) {
             this.playerLifeMap.get(this.currentPlayerId).playerLifebar.isInvincible = isInvincible;
+        }
+    }
+
+    public updateHpByUsing(player: mw.Player, addHp: number): void {
+        let playerData = DataCenterS.getData(player, PlayerData);
+        let maxHp = playerData.getHp() + addHp;
+        if (this.playerLifeMap.has(player.playerId)) {
+            this.playerLifeMap.get(player.playerId).playerLifebar.maxHp = maxHp;
         }
     }
 

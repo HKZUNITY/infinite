@@ -1,8 +1,17 @@
 import { Notice } from "../../../common/notice/Notice";
 import { Utils } from "../../../Tools/utils";
 import AdsTipsPanel_Generate from "../../../ui-generate/module/AdsModule/AdsTipsPanel_generate";
+import TaskModuleC from "../../TaskModule/TaskModuleC";
 
 export default class AdTipsPanel extends AdsTipsPanel_Generate {
+	private taskModuleC: TaskModuleC = null;
+	private get getTaskModuleC(): TaskModuleC {
+		if (!this.taskModuleC) {
+			this.taskModuleC = ModuleService.getModule(TaskModuleC);
+		}
+		return this.taskModuleC;
+	}
+
 	protected onStart(): void {
 		this.canUpdate = false;
 		this.layer = mw.UILayerDialog;
@@ -21,7 +30,10 @@ export default class AdTipsPanel extends AdsTipsPanel_Generate {
 			return;
 		}
 		this.hideAdPanel();
-		if (this.callback) this.callback();
+		if (this.callback) {
+			this.callback();
+			this.getTaskModuleC.ads();
+		}
 	}
 
 	private onClickNoButton(): void {
@@ -29,7 +41,7 @@ export default class AdTipsPanel extends AdsTipsPanel_Generate {
 	}
 
 	private callback: () => void = null;
-	public showRewardAd(callback: () => void, contentText: string, noText: string = "取消", yesText = "领取", isAuto: boolean = true): void {
+	public showRewardAd(callback: () => void, contentText: string, noText: string = "取消", yesText = "领取"): void {
 		this.callback = callback;
 		this.mContentTxt.text = contentText;
 		this.mNoBtn.text = noText;
@@ -37,7 +49,7 @@ export default class AdTipsPanel extends AdsTipsPanel_Generate {
 		this.showAdPanel();
 	}
 
-	public showAdPanel(): void {
+	private showAdPanel(): void {
 		if (this.visible) return;
 		this.show();
 	}

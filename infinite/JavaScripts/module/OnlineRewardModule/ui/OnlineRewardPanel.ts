@@ -18,22 +18,26 @@ import { OnlineRewardModuleC, OnlineRewardItemState } from "../OnlineRewardModul
 
 export class OnlineRewardPanel extends OnlineRewardPanel_Generate {
 	private hudModuleC: HUDModuleC = null;
+	private get getHudModuleC(): HUDModuleC {
+		if (!this.hudModuleC) {
+			this.hudModuleC = ModuleService.getModule(HUDModuleC);
+		}
+		return this.hudModuleC;
+	}
+
 	private onlineRewardsModuleC: OnlineRewardModuleC = null;
+	private get getOnlineRewardsModuleC(): OnlineRewardModuleC {
+		if (!this.onlineRewardsModuleC) {
+			this.onlineRewardsModuleC = ModuleService.getModule(OnlineRewardModuleC);
+		}
+		return this.onlineRewardsModuleC;
+	}
 
 	protected onStart(): void {
 		//设置能否每帧触发onUpdate
 		this.canUpdate = false;
 		this.layer = mw.UILayerMiddle;
-		this.initData();
 		this.bindButton();
-	}
-
-	/**
-	 * 初始化面板数据
-	 */
-	private initData(): void {
-		this.onlineRewardsModuleC = ModuleService.getModule(OnlineRewardModuleC);
-		this.hudModuleC = ModuleService.getModule(HUDModuleC);
 	}
 
 	/**
@@ -41,7 +45,7 @@ export class OnlineRewardPanel extends OnlineRewardPanel_Generate {
 	 */
 	private bindButton(): void {
 		this.mCloseButton.onClicked.add(() => {
-			this.onlineRewardsModuleC.onOnlineRewardsAction.call(false);
+			this.getOnlineRewardsModuleC.onOnlineRewardsAction.call(false);
 		});
 	}
 
@@ -182,7 +186,7 @@ export class OnlineRewardPanel extends OnlineRewardPanel_Generate {
 	 */
 	public addNeedTweenItem(index: number, onlineRewardItem: OnlineRewardItem): void {
 		MapEx.set(this.needTweenItems, index, onlineRewardItem);
-		this.hudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
+		this.getHudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
 	}
 
 	/**
@@ -207,7 +211,7 @@ export class OnlineRewardPanel extends OnlineRewardPanel_Generate {
 		if (MapEx.has(this.needTweenItems, index)) {
 			MapEx.get(this.needTweenItems, index).stopTween();
 			MapEx.del(this.needTweenItems, index);
-			this.hudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
+			this.getHudModuleC.updateOnlineRewradIcon(this.getOnlineRewradIcon());
 		}
 	}
 }

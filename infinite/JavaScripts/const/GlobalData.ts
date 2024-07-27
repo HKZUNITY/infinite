@@ -37,12 +37,15 @@ export default class GlobalData {
     /**每周刷新时间（目前是每周一凌晨4点，格式为4:0） */
     public static weeklyRefreshTime: string = "4:0";
     /**NPC-Role */
-    public static npcGuidStr: string = GameConfig.Assets.getElement(19).Guid + "," + GameConfig.Assets.getElement(7).Guid;
+    // public static npcGuidStr: string = GameConfig.Assets.getElement(19).Guid + "," + GameConfig.Assets.getElement(7).Guid;
     /**NPC-Weapon */
-    public static weaponGuidStr: string = GameConfig.Assets.getElement(20).Guid;
+    // public static weaponGuidStr: string = GameConfig.Assets.getElement(20).Guid;
 
     /**引导线特效Guid */
     public static guideEffectGuid: string = GameConfig.Assets.getElement(21).Guid;
     /**引导目标点特效Guid */
     public static targetEffectGuid: string = GameConfig.Assets.getElement(22).Guid;
+
+    public static atk: number = 0;
+    public static hp: number = 0;
 }

@@ -1,4 +1,4 @@
-import { SpawnManager, SpawnInfo, } from '../../../Modified027Editor/ModifiedSpawn';
+import { SpawnManager } from '../../../Modified027Editor/ModifiedSpawn';
 import Console from "../../../Tools/Console";
 import { Utils } from "../../../Tools/utils";
 import GlobalData from "../../../const/GlobalData";
@@ -32,7 +32,7 @@ export default class PlayerLifebar extends mw.Script {
     }
 
     private character: mw.Character = null;
-    private async init() {
+    private async init(): Promise<void> {
         this._hpBarUI = mw.UIService.create(PlayerLifebar_Generate);
         this._hpBarWidget = await SpawnManager.asyncSpawn<mw.UIWidget>({ guid: "UIWidget", replicates: false });
         this._hpBarWidget.setTargetUIWidget(this._hpBarUI.uiWidgetBase);
@@ -47,37 +47,29 @@ export default class PlayerLifebar extends mw.Script {
         }
     }
 
-    private onHpChange() {
-        if (!this._isInit) {
-            return;
-        }
+    private onHpChange(): void {
+        if (!this._isInit) return;
         let curHp = this.hp;
         if (curHp < 0) curHp = 0;
         this._hpBarUI.mLifebar.percent = curHp / this.maxHp;
         this._hpBarUI.mLifeText.text = `${curHp}/${this.maxHp}`;
     }
 
-    private onNameChange() {
-        if (!this._isInit) {
-            return;
-        }
+    private onNameChange(): void {
+        if (!this._isInit) return;
         this._hpBarUI.mNameText.text = this.playerName;
     }
 
-    private onLevelChange() {
-        if (!this._isInit || this.playerLevel < 0) {
-            return;
-        }
+    private onLevelChange(): void {
+        if (!this._isInit || this.playerLevel < 0) return;
         this._hpBarUI.mLevelText.text = Utils.getLvText(this.playerLevel) + " 等级Lv." + this.playerLevel;
     }
 
     private invincibleEffectId: number = null;
-    private onInvincible() {
-        if (!this._isInit) {
-            return;
-        }
+    private onInvincible(): void {
+        if (!this._isInit) return;
         if (this.onInvincible) {
-            this.invincibleEffectId = EffectService.playOnGameObject("140173", this.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 0 });
+            this.invincibleEffectId = EffectService.playOnGameObject("140172", this.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 0 });
         } else {
             EffectService.stop(this.invincibleEffectId);
         }

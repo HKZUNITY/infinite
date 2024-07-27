@@ -4,21 +4,57 @@ import { Utils } from "../../Tools/utils";
 import { GameConfig } from "../../config/GameConfig";
 import { IMusicElement } from "../../config/Music";
 import GlobalData from "../../const/GlobalData";
-import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
+import AdTipsPanel from '../AdsModule/ui/AdTipsPanel';
+import { BagModuleC } from '../BagModule/BagModule';
 import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
-import ShopModuleC from "../ShopModule/ShopModuleC";
 import TaskModuleC from "../TaskModule/TaskModuleC";
 import HUDModuleS from "./HUDModuleS";
 import HUDPanel from "./ui/HUDPanel";
 
 export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
-    private shopModuleC: ShopModuleC = null
     private onlineRewardModuleC: OnlineRewardModuleC = null;
+    private get getOnlineRewardModuleC(): OnlineRewardModuleC {
+        if (!this.onlineRewardModuleC) {
+            this.onlineRewardModuleC = ModuleService.getModule(OnlineRewardModuleC);
+        }
+        return this.onlineRewardModuleC;
+    }
     private taskModuleC: TaskModuleC = null;
+    private get getTaskModuleC(): TaskModuleC {
+        if (!this.taskModuleC) {
+            this.taskModuleC = ModuleService.getModule(TaskModuleC);
+        }
+        return this.taskModuleC;
+    }
     private playerModuleC: PlayerModuleC = null;
+    private get getPlayerModuleC(): PlayerModuleC {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
     private hudPanel: HUDPanel = null;
-    private adsTipsPanel: AdTipsPanel = null;
+    private get getHudPanel(): HUDPanel {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    private adTipsPanel: AdTipsPanel = null;
+    private get getAdTipsPanel(): AdTipsPanel {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel
+    }
+    private bagModuleC: BagModuleC = null;
+    private get getBagModuleC(): BagModuleC {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
     /**跳跃事件 */
     public onJumpAction: Action = new Action();
     /**打开HUD事件 */
@@ -50,19 +86,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
 
     /**初始化数据 */
     private initDatas(): void {
-        this.shopModuleC = ModuleService.getModule(ShopModuleC);
-        this.onlineRewardModuleC = ModuleService.getModule(OnlineRewardModuleC);
-        this.taskModuleC = ModuleService.getModule(TaskModuleC);
-        this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        this.hudPanel = mw.UIService.getUI(HUDPanel);
-        this.adsTipsPanel = mw.UIService.getUI(AdTipsPanel);
         this.initMusicData();
     }
 
     /**注册事件 */
     private registerActions(): void {
         this.onOpenHUDAction.add(() => {
-            this.hudPanel.show();
+            this.getHudPanel.show();
         });
         this.onJumpAction.add(() => {
             this.playerJump();
@@ -74,29 +104,33 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.playerScale = playerScale;
         });
         this.onOpenOnlineRewardAction.add(() => {
-            this.onlineRewardModuleC.onOnlineRewardsAction.call(true);
+            this.getOnlineRewardModuleC.onOnlineRewardsAction.call(true);
         });
         this.onHomeAction.add(() => {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
         });
         this.onAddCoinAction.add(() => {
-            // if (GlobalData.isOpenIAA) {
-            //     this.adsTipsPanel.showAdTips(0, AdType.AddCoin);
-            // } else {
-            //     this.playerModuleC.saveCoin(1000);
-            // }
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.saveCoin(10000);
+                }, "免费领取10000金币", "取消", "免费领取");
+            } else {
+                this.getPlayerModuleC.saveCoin(10000);
+            }
         });
 
         this.onAdsAction.add(() => {
-            // if (GlobalData.isOpenIAA) {
-            //     this.adsTipsPanel.showAdTips(0, AdType.AddCoinAndExp);
-            // } else {
-            //     this.playerModuleC.saveCoinAndExp(500, 500);
-            // }
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.adsUpLv();
+                }, "等级免费提升一级", "取消", "免费领取");
+            } else {
+                this.getPlayerModuleC.adsUpLv();
+            }
         });
 
         this.onInvincibleAction.add((isInvincible: boolean) => {
-            this.playerModuleC.isInvincible(isInvincible);
+            this.getPlayerModuleC.isInvincible(isInvincible);
         });
 
         this.registerMusicAction();
@@ -104,16 +138,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         let isOpenHUD: boolean = false;
         InputUtil.onKeyDown(mw.Keys.NumPadOne, () => {
             isOpenHUD = !isOpenHUD;
-            isOpenHUD ? this.hudPanel.show() : this.hudPanel.hide();
+            isOpenHUD ? this.getHudPanel.show() : this.getHudPanel.hide();
             Console.error("isOpenHUD =" + isOpenHUD);
         });
     }
 
     protected onEnterScene(sceneType: number): void {
-        if (!this.hudPanel) {
-            this.hudPanel = mw.UIService.getUI(HUDPanel);
-        }
-        this.hudPanel.show();
+        this.getHudPanel.show();
         this.registerGlobalClickSound();
         this.delayedOperation();
     }
@@ -155,26 +186,36 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
      * @param icon 
      */
     public updateOnlineRewradIcon(icon: string): void {
-        this.hudPanel.updateOnlineRewradIcon(icon);
+        this.getHudPanel.updateOnlineRewradIcon(icon);
     }
 
+    private lv: number = 0;
     public updateLvExpCoin(lv: number, exp: number, coin: number, isAddLv: boolean): void {
-        this.hudPanel.updateLvExpCoin(lv, exp, coin);
+        this.lv = lv;
+        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing());
         if (!isAddLv) return;
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
-        this.hudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = Utils.getHp(lv);
+        this.getHudPanel.updateMp(this.currentMp, this.maxMp);
+        let hp = Utils.getHp(lv) + this.getBagModuleC.getAddHpByUsing();
         this.maxHp = hp;
         this.updateHp(hp);
     }
 
     public updateCoin(coin: number): void {
-        this.hudPanel.updateCoin(coin);
+        this.getHudPanel.updateCoin(coin);
     }
     private maxHp: number = -1;
+    private curHp: number = -1;
     public updateHp(curHp: number): void {
-        this.hudPanel.updateHp(curHp, this.maxHp);
+        this.curHp = curHp;
+        this.getHudPanel.updateHp(curHp, this.maxHp);
+    }
+
+    public updateHpByUsing(addHp: number): void {
+        let hp = Utils.getHp(this.lv) + addHp;
+        this.maxHp = hp;
+        this.getHudPanel.updateHp(this.curHp, this.maxHp);
     }
 
     //#region 击杀提示
@@ -185,7 +226,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         } else if (killedUserId == this.localPlayer.userId) {
             killTipType = KillTipType.Killed;
         }
-        this.hudPanel.killTip(killTipType, killerName, killedName);
+        this.getHudPanel.killTip(killTipType, killerName, killedName);
         this.killTipsSound(killerUserId, killerName, killedUserId, killedName);
     }
     //#endregion
@@ -204,7 +245,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.revengeUserIdMap.delete(killedUserId);
             SoundService.playSound("294342", 1);
         }
-        this.hudPanel.showKillTips2(killerName, killedName, killTipType);
+        this.getHudPanel.showKillTips2(killerName, killedName, killTipType);
 
         if (this.killCountMap.has(killedUserId)) this.killCountMap.delete(killedUserId);
         let killCount: number = 0;
@@ -248,7 +289,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
                 break;
         }
         SoundService.playSound(soundId, 1);
-        this.hudPanel.showKillTips1(killCountTips, killerName, killedName);
+        this.getHudPanel.showKillTips1(killCountTips, killerName, killedName);
     }
     //#endregion
 
@@ -285,7 +326,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.isStartAddMp = false;
             this.addMpTimer = 0;
         }
-        this.hudPanel.updateMp(this.currentMp, this.maxMp);
+        this.getHudPanel.updateMp(this.currentMp, this.maxMp);
     }
 
     private reduceMp: number = 10;
@@ -304,7 +345,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             return false;
         }
         this.currentMp -= this.reduceMp;
-        this.hudPanel.updateMp(this.currentMp, this.maxMp);
+        this.getHudPanel.updateMp(this.currentMp, this.maxMp);
         Console.error("this.currentMp = " + this.currentMp);
         this.isStartAddMp = false;
         if (this.isStartAddMpId) {
@@ -436,7 +477,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
 
     /**注册背景音乐事件 */
     private registerMusicAction(): void {
-        this.hudPanel.onBgmAction.add((isOpenBGM: boolean) => {
+        this.getHudPanel.onBgmAction.add((isOpenBGM: boolean) => {
             if (isOpenBGM) {
                 this.playBGM(0);
             }
@@ -444,7 +485,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
                 SoundService.stopBGM();
             }
         });
-        this.hudPanel.onSwitchBgmAction.add(this.playBGM.bind(this));
+        this.getHudPanel.onSwitchBgmAction.add(this.playBGM.bind(this));
     }
 
     /**播放背景音乐 */
@@ -458,8 +499,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         }
         let bgmId = this.bgmMusics[this.currentBgmIndex - 1].Guid;
         SoundService.playBGM(bgmId);
-        this.hudPanel.mMusicText.text = this.bgmMusics[this.currentBgmIndex - 1].Annotation;
-        this.taskModuleC.switchBgm();
+        this.getHudPanel.mMusicText.text = this.bgmMusics[this.currentBgmIndex - 1].Annotation;
     }
     //#endregion
 }

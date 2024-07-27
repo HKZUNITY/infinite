@@ -9,10 +9,29 @@ import { Task, TaskData, TaskItemType, TaskType } from "./TaskData";
 import TaskModuleS from "./TaskModuleS";
 import TaskPanel from "./ui/TaskPanel";
 
-export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
+export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData> {
     private hudModuleC: HUDModuleC = null;
+    private get getHudModuleC(): HUDModuleC {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
     private playerModuleC: PlayerModuleC = null;
+    private get getPlayerModuleC(): PlayerModuleC {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
     private taskPanel: TaskPanel = null;
+    private get getTaskPanel(): TaskPanel {
+        if (!this.taskPanel) {
+            this.taskPanel = mw.UIService.getUI(TaskPanel);
+        }
+        return this.taskPanel;
+    }
+
     /**执行任务（任务类型-数量） */
     public onExecuteTaskAction: Action2<TaskItemType, number> = new Action2<TaskItemType, number>();
     /**奖励（任务类型-ID） */
@@ -20,22 +39,15 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        this.initData();
         this.bindActions();
-    }
-
-    private initData(): void {
-        this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        this.taskPanel = mw.UIService.getUI(TaskPanel);
     }
 
     private bindActions(): void {
         this.onExecuteTaskAction.add(this.executeTask.bind(this));
         this.onTaskRewardAction.add(this.getTaskRewardAndUpdateData.bind(this));
 
-        this.hudModuleC.onOpenTaskAction.add(() => {
-            this.taskPanel.show();
+        this.getHudModuleC.onOpenTaskAction.add(() => {
+            this.getTaskPanel.show();
         });
     }
     private nowTime: number = 0;
@@ -127,7 +139,7 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
         if (dailyTaskDataMap.size == 0 && weeklyTaskDataMap.size == 0) return;
         Console.error("[dailyTaskDataMap.size] = " + dailyTaskDataMap.size);
         Console.error("[weeklyTaskDataMap.size] = " + weeklyTaskDataMap.size);
-        this.taskPanel.initTaskPanel(dailyTaskDataMap, weeklyTaskDataMap);
+        this.getTaskPanel.initTaskPanel(dailyTaskDataMap, weeklyTaskDataMap);
     }
 
     private executeTask(vipTaskType: TaskItemType, num: number): void {
@@ -159,7 +171,7 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
         this.saveDailyTask(taskId, vipTaskType, progress);
         let tmpDailTask = new Task(taskId, progress, false);
         MapEx.set(this.tempDailTask, vipTaskType, tmpDailTask);
-        this.taskPanel.updateTaskPanel(vipTaskType, progress);
+        this.getTaskPanel.updateTaskPanel(vipTaskType, progress);
     }
 
     private saveDailyTask(taskId: number, vipTaskType: TaskItemType, progress: number): void {
@@ -199,7 +211,7 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
         this.saveWeeklyTask(taskId, vipTaskType, progress);
         let tmpWeeklyTask = new Task(taskId, progress, false);
         MapEx.set(this.tempWeeklyTask, vipTaskType, tmpWeeklyTask);
-        this.taskPanel.updateTaskPanel(vipTaskType, progress);
+        this.getTaskPanel.updateTaskPanel(vipTaskType, progress);
     }
 
     private saveWeeklyTask(taskId: number, vipTaskType: TaskItemType, progress: number): void {
@@ -215,7 +227,7 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
 
     private getTaskRewardAndUpdateData(vipTaskType: TaskItemType, taskId: number): void {
         this.updateTaskCompleteData(vipTaskType);
-        this.taskPanel.updateTaskCompletePanel(vipTaskType);
+        this.getTaskPanel.updateTaskCompletePanel(vipTaskType);
         this.getTaskReward(taskId)
     }
 
@@ -266,7 +278,7 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
         Console.error("[奖励经验：" + rewardExp + "][奖励金币：" + rewardCoin + "]");
         Notice.showDownNotice("奖励金币：" + rewardCoin);
         Notice.showDownNotice("奖励经验：" + rewardExp);
-        this.playerModuleC.saveCoinAndExp(rewardCoin, rewardExp);
+        this.getPlayerModuleC.saveCoinAndExp(rewardCoin, rewardExp);
     }
 
     /**重置每日任务 */
@@ -300,81 +312,120 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData>{
     public updateDailyLogin(dt: number): void {
         this.dailyLoginTimer += dt;
         if (this.dailyLoginTimer >= this.dailyLoginTime) {
-            this.onExecuteTaskAction.call(TaskItemType.DailyOnlineTime, 1);
             this.dailyLoginTimer = 0;
+            this.dailyOnlineTime();
         }
     }
 
-    public net_killMonster(isBoss: boolean): void {
-        this.dailyKillMonster();
-        if (isBoss) this.dailyKillBoss();
+    private dailyOnlineTime(): void {
+        for (let i = 11; i <= 16; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
     }
 
-    /**每日击杀怪物 */
-    public dailyKillMonster(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailyKillMonster, 1);
-        this.weeklyKillMonster();
+    public net_killMonster(monsterId: number): void {
+        let taskItemType: TaskItemType = TaskItemType.None;
+        let taskItemType1: TaskItemType = TaskItemType.None;
+        switch (monsterId) {
+            case 1:
+                taskItemType = TaskItemType.DailyKillMedusa;
+                taskItemType1 = TaskItemType.WeeklyKillMedusa;
+                break;
+            case 2:
+                taskItemType = TaskItemType.DailyKillColorfulSpider;
+                taskItemType1 = TaskItemType.WeeklyKillColorfulSpider;
+                break;
+            case 3:
+                taskItemType = TaskItemType.DailyKillSpider;
+                taskItemType1 = TaskItemType.WeeklyKillSpider;
+                break;
+            case 4:
+                taskItemType = TaskItemType.DailyKillDragon;
+                taskItemType1 = TaskItemType.WeeklyKillDragon;
+                break;
+            case 5:
+                taskItemType = TaskItemType.DailyKillZombie;
+                taskItemType1 = TaskItemType.WeeklyKillZombie;
+                break;
+            case 6:
+                taskItemType = TaskItemType.DailyKillMutantPuppet;
+                taskItemType1 = TaskItemType.WeeklyKillMutantPuppet;
+                break;
+            default:
+                break;
+        }
+        if (taskItemType == TaskItemType.None) return;
+        this.dailyKillMonster(taskItemType);
+        this.weeklyKillMonster(taskItemType1);
     }
 
-    /**每日击杀Boss */
-    public dailyKillBoss(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailyKillBoss, 1);
-        this.weeklyKillBoss();
+    public dailyKillMonster(taskItemType: TaskItemType): void {
+        let start = Number(taskItemType);
+        let end = start + 4;
+        for (let i = start; i <= end; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
     }
 
-    /**每周登录 */
     public weeklyLogin(): void {
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyLogin, 1);
+        for (let i = 201; i <= 204; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
     }
 
-    /**每周登录时长 */
     public weeklyOnlineTime(vipTaskType: TaskItemType): void {
         if (vipTaskType != TaskItemType.DailyOnlineTime) return;
         if (MapEx.has(this.dailyTasks, TaskItemType.DailyOnlineTime)) {
             let progress = MapEx.get(this.dailyTasks, TaskItemType.DailyOnlineTime).progress;
             if (progress == 30) {//每日在线时长达到30分钟时，执行一次每周登录时长30分钟的任务
-                this.onExecuteTaskAction.call(TaskItemType.WeeklyOnlineTime, 1);
+                for (let i = 211; i <= 214; ++i) {
+                    this.onExecuteTaskAction.call(i, 1);
+                }
             }
         }
     }
 
-    /**每周击杀怪物 */
-    public weeklyKillMonster(): void {
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyKillMonster, 1);
+    public weeklyKillMonster(taskItemType: TaskItemType): void {
+        let start = Number(taskItemType);
+        let end = start + 4;
+        for (let i = start; i <= end; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
     }
 
-    /**每周击杀Boss */
-    public weeklyKillBoss(): void {
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyKillBoss, 1);
+    public upLv(lv: number): void {
+        for (let i = 91; i <= 95; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
+        for (let i = 291; i <= 295; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
+    }
+
+    public pickUpTreasure(): void {
+        for (let i = 101; i <= 105; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
+        for (let i = 301; i <= 305; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
     }
 
     public net_killPlayer(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailyKillPlayer, 1);
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyKillPlayer, 1);
-    }
-
-    public buyWeapon(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailyBuyWeapon, 1);
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyBuyWeapon, 1);
-    }
-
-    public changeClothes(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailyChangeClothes, 1);
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyChangeClothes, 1);
-    }
-
-    public switchBgm(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailySwitchBgm, 1);
-        this.onExecuteTaskAction.call(TaskItemType.WeeklySwitchBgm, 1);
-    }
-
-    public chat(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailyChat, 1);
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyChat, 1);
+        for (let i = 81; i <= 85; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
+        for (let i = 281; i <= 285; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
     }
 
     public ads(): void {
-        this.onExecuteTaskAction.call(TaskItemType.DailyAds, 1);
-        this.onExecuteTaskAction.call(TaskItemType.WeeklyAds, 1);
+        for (let i = 111; i <= 115; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
+        for (let i = 311; i <= 315; ++i) {
+            this.onExecuteTaskAction.call(i, 1);
+        }
     }
 }

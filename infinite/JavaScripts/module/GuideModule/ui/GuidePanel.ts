@@ -31,12 +31,23 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 
 	private guideModuleC: GuideModuleC = null;
-	private hud: HUDPanel = null;
+	private get getGuideModuleC(): GuideModuleC {
+		if (!this.guideModuleC) {
+			this.guideModuleC = ModuleService.getModule(GuideModuleC);
+		}
+		return this.guideModuleC;
+	}
+	private hudPanel: HUDPanel = null;
+	private get getHudPanel(): HUDPanel {
+		if (!this.hudPanel) {
+			this.hudPanel = mw.UIService.getUI(HUDPanel);
+		}
+		return this.hudPanel
+	}
+
 	private centPos: mw.Vector2 = mw.Vector2.zero;
 	private initData(): void {
-		this.guideModuleC = ModuleService.getModule(GuideModuleC);
-		this.hud = mw.UIService.getUI(HUDPanel);
-		this.centPos = new mw.Vector(this.hud.rootCanvas.size.x / 2 - this.container.size.x / 2, this.hud.rootCanvas.size.y / 2 - this.container.size.y / 2);
+		this.centPos = new mw.Vector(this.getHudPanel.rootCanvas.size.x / 2 - this.container.size.x / 2, this.getHudPanel.rootCanvas.size.y / 2 - this.container.size.y / 2);
 	}
 
 	private bindButton(): void {
@@ -44,7 +55,7 @@ export default class GuidePanel extends GuideUI_Generate {
 			if (this.canClick) {
 				this.canClick = false;
 				this.hide();
-				this.guideModuleC.onNextStepAction.call();
+				this.getGuideModuleC.onNextStepAction.call();
 			}
 		});
 	}
@@ -118,92 +129,92 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 
 	private guide1(): void {
-		mw.localToViewport(this.hud.mVirtualJoystickPanel.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mVirtualJoystickPanel.size,
+		mw.localToViewport(this.getHudPanel.mVirtualJoystickPanel.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mVirtualJoystickPanel.size,
 			new mw.Vector2(900, 200), "移动按钮，点击后拖拽可以控制角色移动。", 0, true)
 	}
 
 	private guide2(): void {
-		mw.localToViewport(this.hud.mTouchPad.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mTouchPad.size,
+		mw.localToViewport(this.getHudPanel.mTouchPad.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mTouchPad.size,
 			new mw.Vector2(0, 250), "视角移动区域，点击拖动这里可以控制屏幕视角。", 0, true)
 	}
 
 	private guide3(): void {
-		mw.localToViewport(this.hud.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mJumpButton.size,
+		mw.localToViewport(this.getHudPanel.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size,
 			new mw.Vector2(700, 350), "跳跃按钮，连续点击会进行二段跳。", 0, true)
 	}
 
 	private guide4(): void {
-		mw.localToViewport(this.hud.mSprintButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mSprintButton.size,
+		mw.localToViewport(this.getHudPanel.mSprintButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mSprintButton.size,
 			new mw.Vector2(700, 550), "冲刺按钮，可以直接瞬移一段距离，但会消耗蓝量。", 0, true)
 	}
 
 	private guide5(): void {
-		mw.localToViewport(this.hud.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mAtkButton.size,
+		mw.localToViewport(this.getHudPanel.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size,
 			new mw.Vector2(460, 550), "攻击按钮，连续点击可释放炫酷的连招。", 0, true)
 	}
 
 	private guide6(): void {
-		mw.localToViewport(this.hud.mMusicButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mMusicButton.size,
+		mw.localToViewport(this.getHudPanel.mMusicButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mMusicButton.size,
 			new mw.Vector2(710, 0), "背景音乐按钮，打开可更换背景音乐以及开关背景音乐。", 1, true)
 	}
 
 	private guide7(): void {
-		mw.localToViewport(this.hud.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mShopButton.size,
+		mw.localToViewport(this.getHudPanel.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mShopButton.size,
 			new mw.Vector2(350, 0), "武器商店按钮，可以免费使用各种炫酷的技能武器，也可以花费金币购买永久武器套装，快来使用进行战斗吧。", 1, true)
 	}
 
 	private guide8(): void {
-		mw.localToViewport(this.hud.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mRankButton.size,
+		mw.localToViewport(this.getHudPanel.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mRankButton.size,
 			new mw.Vector2(250, 0), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你的排名是多少吧。", 1, true)
 	}
 
 	private guide9(): void {
-		mw.localToViewport(this.hud.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mOnlineRewardButton.size,
+		mw.localToViewport(this.getHudPanel.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size,
 			new mw.Vector2(730, 150), "在线奖励按钮，玩游戏可以领取大量金币和经验，快来领取奖励吧。", 1, true)
 	}
 
 	private guide10(): void {
-		mw.localToViewport(this.hud.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mTaskButton.size,
+		mw.localToViewport(this.getHudPanel.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mTaskButton.size,
 			new mw.Vector2(550, 150), "任务按钮，完成任务可以领取大量金币和经验，快来领取奖励吧。", 1, true)
 	}
 
 	private guide11(): void {
-		mw.localToViewport(this.hud.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mAdsButton.size,
+		mw.localToViewport(this.getHudPanel.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size,
 			new mw.Vector2(600, 150), "福利多多，可以领取大量金币和经验，快来领取奖励吧。", 1, true)
 	}
 
 	private guide12(): void {
-		mw.localToViewport(this.hud.mHomeButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mHomeButton.size,
+		mw.localToViewport(this.getHudPanel.mHomeButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mHomeButton.size,
 			new mw.Vector2(900, 300), "点我回家，找不到回家的路可以点我哦。", 1, true)
 	}
 
 	private guide13(): void {
-		mw.localToViewport(this.hud.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mRoleCanvas_G.size,
+		mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size,
 			new mw.Vector2(550, 350), "角色属性，血量、蓝量，攻击力会随等级提升而提升。", 1, true)
 	}
 
 	private guide14(): void {
-		mw.localToViewport(this.hud.mCoinTextBlock.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mCoinTextBlock.size,
+		mw.localToViewport(this.getHudPanel.mCoinTextBlock.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mCoinTextBlock.size,
 			new mw.Vector2(550, 350), "金币，英雄套装商店消费。", 1, true)
 	}
 
 	private guide15(): void {
-		mw.localToViewport(this.hud.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.hud.mAddCoinButton.size,
+		mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size,
 			new mw.Vector2(550, 350), "点我增加大量金币，快来试试吧。", 1, true)
 	}
 

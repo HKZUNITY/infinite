@@ -131,7 +131,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = playerData.getHp() + this.getBagModuleS.getAddHpByUsing(player);
+                let maxHp = playerData.getHp() * this.getBagModuleS.getAddHpByUsing(player);
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = playerData.playerLv;
@@ -180,7 +180,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let curHp = targetPlayerData.playerLifebar.hp;
         curHp -= damage;
         if (curHp <= 0) {
-            let maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp() + this.getBagModuleS.getAddHpByUsing(targetPlayer);
+            let maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(targetPlayer);
             targetPlayerData.playerLifebar.hp = 0;
             targetPlayerData.isDie = true;
             if (sendPlayer) {
@@ -207,7 +207,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (sendPlayer) {
             let maxHp = 0;
             if (targetPlayerData.isDie) {
-                maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp() + this.getBagModuleS.getAddHpByUsing(targetPlayer);
+                maxHp = DataCenterS.getData(targetPlayer, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(targetPlayer);
             }
             this.getClient(sendPlayer).net_onSelfAtkPlayer(damage, hitPoint, targetPlayerData.isDie, maxHp);
         }
@@ -230,7 +230,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let playerId = player.playerId;
         let playerDataS = new PlayerDataS();
         let hpbar = await mw.Script.spawnScript(PlayerLifebar, true, player.character);
-        let maxHp = DataCenterS.getData(player, PlayerData).getHp() + this.getBagModuleS.getAddHpByUsing(player);
+        let maxHp = DataCenterS.getData(player, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(player);
         hpbar.maxHp = maxHp;
         hpbar.hp = maxHp;
         playerDataS.playerLifebar = hpbar;
@@ -312,7 +312,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = this.currentData.getHp() + this.getBagModuleS.getAddHpByUsing(player);
+                let maxHp = this.currentData.getHp() * this.getBagModuleS.getAddHpByUsing(player);
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = this.currentData.playerLv;
@@ -332,7 +332,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
 
     public updateHpByUsing(player: mw.Player, addHp: number): void {
         let playerData = DataCenterS.getData(player, PlayerData);
-        let maxHp = playerData.getHp() + addHp;
+        let maxHp = playerData.getHp() * addHp;
         if (this.playerLifeMap.has(player.playerId)) {
             this.playerLifeMap.get(player.playerId).playerLifebar.maxHp = maxHp;
         }

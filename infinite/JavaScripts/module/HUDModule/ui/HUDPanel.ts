@@ -243,7 +243,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
 		this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
 		this.mCoinTextBlock.text = coin + "";
-		let atk = Utils.getAtk(lv) + addAtk;
+		let atk = Utils.getAtk(lv) * addAtk;
 		GlobalData.atk = atk;
 		this.mAtkTextBlock.text = "攻击力：" + atk;
 		ColdWeapon.getInstance().updateHitDamage(atk);

@@ -197,7 +197,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
         this.getHudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = Utils.getHp(lv) + this.getBagModuleC.getAddHpByUsing();
+        let hp = Utils.getHp(lv) * this.getBagModuleC.getAddHpByUsing();
         this.maxHp = hp;
         this.updateHp(hp);
     }
@@ -213,7 +213,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     }
 
     public updateHpByUsing(addHp: number): void {
-        let hp = Utils.getHp(this.lv) + addHp;
+        let hp = Utils.getHp(this.lv) * addHp;
         this.maxHp = hp;
         this.getHudPanel.updateHp(this.curHp, this.maxHp);
     }

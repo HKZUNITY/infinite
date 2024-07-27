@@ -287,7 +287,10 @@ export default class Monster extends Script {
     }
 
     private rebirth_S(): void {
-        let rebirthEffect = EffectService.playOnGameObject("146786", this.getMonster, { slotType: mw.HumanoidSlotType.Root, loopCount: 0, scale: mw.Vector.one.multiply(2) });
+        let rebirthEffect = EffectService.playAtPosition(
+            "146786", this.getMonster.worldTransform.position,
+            { loopCount: 0, scale: mw.Vector.one.multiply(2) }
+        );
         // this.initPaths();
         TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);

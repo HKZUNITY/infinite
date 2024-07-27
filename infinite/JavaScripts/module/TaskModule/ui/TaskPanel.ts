@@ -85,12 +85,21 @@ export default class TaskPanel extends TaskPanel_Generate {
 		this.recycleAllDailyTaskItem();
 		if (dailyTaskDataMap.size == 0) return;
 		this.mDailyTaskDoneTextBlock.visibility = mw.SlateVisibility.Collapsed;
+		let tmpDailyTaskItems: TaskItem[] = [];
 		dailyTaskDataMap.forEach((value, key) => {
 			let dailyTaskItem = ObjectPoolServices.getPool(TaskItem).spawn();
 			dailyTaskItem.initTaskItemData(key, value);
-			this.mDailyTaskCanvas.addChild(dailyTaskItem.taskItem);
-			dailyTaskItem.taskItem.size = new mw.Vector2(556, 94);
+			if (dailyTaskItem.isCanGet) {
+				this.mDailyTaskCanvas.addChild(dailyTaskItem.taskItem);
+				dailyTaskItem.taskItem.size = new mw.Vector2(556, 94);
+			} else {
+				tmpDailyTaskItems.push(dailyTaskItem);
+			}
 			this.dailyTaskItemsMap.set(key, dailyTaskItem);
+		});
+		tmpDailyTaskItems.forEach((value: TaskItem) => {
+			this.mDailyTaskCanvas.addChild(value.taskItem);
+			value.taskItem.size = new mw.Vector2(556, 94);
 		});
 		// this.mCanvas_dailytask.size = new mw.Vector(this.mCanvas_dailytask.size.x,
 		// 	dailyTaskDataMap.size * Globaldata.dailyItemY);
@@ -100,10 +109,26 @@ export default class TaskPanel extends TaskPanel_Generate {
 		if (this.dailyTaskItemsMap.has(vipTaskType)) {
 			let dailyTaskItem = this.dailyTaskItemsMap.get(vipTaskType);
 			dailyTaskItem.updateTaskItemData(progress);
+			if (dailyTaskItem.isCanGet) {
+				this.dailyTaskItemsMap.forEach((value: TaskItem) => {
+					if (!value.isCanGet) {
+						this.mDailyTaskCanvas.addChild(value.taskItem);
+						value.taskItem.size = new mw.Vector2(556, 94);
+					}
+				});
+			}
 		}
 		if (this.weeklyTaskItemsMap.has(vipTaskType)) {
 			let weeklyTaskItem = this.weeklyTaskItemsMap.get(vipTaskType);
 			weeklyTaskItem.updateTaskItemData(progress);
+			if (weeklyTaskItem.isCanGet) {
+				this.weeklyTaskItemsMap.forEach((value: TaskItem) => {
+					if (!value.isCanGet) {
+						this.mWeekTaskCanvas.addChild(value.taskItem);
+						value.taskItem.size = new mw.Vector2(556, 94);
+					}
+				});
+			}
 		}
 	}
 
@@ -112,12 +137,21 @@ export default class TaskPanel extends TaskPanel_Generate {
 		this.recycleAllWeeklyTaskItem();
 		if (weeklyTaskDataMap.size == 0) return;
 		this.mWeekTaskDoneTextBlock.visibility = mw.SlateVisibility.Collapsed;
+		let tmpWeeklyTaskItems: TaskItem[] = [];
 		weeklyTaskDataMap.forEach((value, key) => {
 			let weeklyTaskItem = ObjectPoolServices.getPool(TaskItem).spawn();
 			weeklyTaskItem.initTaskItemData(key, value);
-			this.mWeekTaskCanvas.addChild(weeklyTaskItem.taskItem);
-			weeklyTaskItem.taskItem.size = new mw.Vector2(556, 94);
+			if (weeklyTaskItem.isCanGet) {
+				this.mWeekTaskCanvas.addChild(weeklyTaskItem.taskItem);
+				weeklyTaskItem.taskItem.size = new mw.Vector2(556, 94);
+			} else {
+				tmpWeeklyTaskItems.push(weeklyTaskItem);
+			}
 			this.weeklyTaskItemsMap.set(key, weeklyTaskItem);
+		});
+		tmpWeeklyTaskItems.forEach((value: TaskItem) => {
+			this.mWeekTaskCanvas.addChild(value.taskItem);
+			value.taskItem.size = new mw.Vector2(556, 94);
 		});
 		// this.mCanvas_weektask.size = new mw.Vector(this.mCanvas_weektask.size.x,
 		// 	weeklyTaskDataMap.size * Globaldata.weeklyItemY);
@@ -297,7 +331,9 @@ class TaskItem {
 		});
 	}
 
+	public isCanGet: boolean = false;
 	public isShowFinishBtn(isShow: boolean): void {
+		this.isCanGet = isShow;
 		if (isShow) {
 			if (this.mFinishButton.visibility != mw.SlateVisibility.Visible) {
 				this.mFinishButton.visibility = mw.SlateVisibility.Visible;

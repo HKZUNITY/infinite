@@ -852,7 +852,7 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
                 break;
         }
         this.mNameTextBlock.text = bagInfoElement?.Name;
-        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color><b><color=#red>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>\n提升后的<size=40><b><color=#yellow>血量：${GlobalData.hp}，攻击力：${GlobalData.atk}</color></b></size>`;
+        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>\n提升后的<size=40><b><color=#yellow>血量：${GlobalData.hp}，攻击力：${GlobalData.atk}</color></b></size>`;
         let assetId = bagInfoElement?.AssetId;
         Utils.setImageByAssetIconData(this.mIconImage, assetId);
     }

@@ -70,12 +70,12 @@ export default class GameLauncher extends mw.Script {
     /**注册模块 */
     private onRegisterModule(): void {
         ModuleService.registerModule(HUDModuleS, HUDModuleC, null);
+        ModuleService.registerModule(BagModuleS, BagModuleC, BagData);
         ModuleService.registerModule(PlayerModuleS, PlayerModuleC, PlayerData);
+        ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
+        ModuleService.registerModule(GuideModuleS, GuideModuleC, GuideData);
         ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
         ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);
-        ModuleService.registerModule(TaskModuleS, TaskModuleC, TaskData);
-        ModuleService.registerModule(BagModuleS, BagModuleC, BagData);
-        ModuleService.registerModule(GuideModuleS, GuideModuleC, GuideData);
     }
 
     /**------------------------------------------- 客户端 ------------------------------------------------ */

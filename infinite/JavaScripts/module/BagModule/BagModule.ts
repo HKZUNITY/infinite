@@ -417,10 +417,14 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         if (!objId || objId == "") return false;
 
         let bagItemGo = await GameObjPool.asyncSpawn(objId) as mw.Model;
-        if (!(bagItemGo instanceof mw.Character)) bagItemGo.collisionEnabled = false;
-        bagItemGo.worldTransform.position = loc;
+        bagItemGo.collisionEnabled = false;
+        let offset = bagInfoElement.AssetOffsetPos;
+        bagItemGo.worldTransform.position = new mw.Vector(offset.x + loc.x, offset.y + loc.y, offset.z + loc.z);
+        bagItemGo.worldTransform.rotation = new mw.Rotation(bagInfoElement.AssetOffsetRot);
+        bagItemGo.worldTransform.scale = bagInfoElement.AssetOffsetSca;
 
-        let effectId = EffectService.playAtPosition(bagItemGoEffect[Utils.getRandomInteger(0, bagItemGoEffect.length - 1)], loc, { loopCount: 0 });
+        let effectGuid: string = bagItemGoEffect[Utils.getRandomInteger(0, bagItemGoEffect.length - 1)];
+        let effectId = EffectService.playAtPosition(effectGuid, effectGuid == "146784" ? loc : new mw.Vector(loc.x, loc.y, loc.z - 50), { loopCount: 0 });
 
         this.bagItemMap.set(bagId, { go: bagItemGo, effectId: effectId, loc: loc });
         return true;
@@ -717,7 +721,13 @@ export class BagItem extends BagItem_Generate {
     }
 
     private setHas(): void {
-        this.mHasTextBlock.text = this.getBagModuleC.isHasBagId(this.bagId) ? "点击使用" : "点击获得";
+        if (this.getBagModuleC.isHasBagId(this.bagId)) {
+            this.mHasTextBlock.text = "点击使用";
+            this.mIconImage.imageColor = mw.LinearColor.white;
+        } else {
+            this.mHasTextBlock.text = "点击获得";
+            this.mIconImage.imageColor = mw.LinearColor.black;
+        }
     }
 
     private setIconImage(assetId: string): void {

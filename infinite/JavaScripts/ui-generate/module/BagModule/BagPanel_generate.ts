@@ -3,12 +3,26 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.07.27-01.53.21
+ * TIME: 2024.08.02-23.09.01
  */
  
 @UIBind('UI/module/BagModule/BagPanel.ui')
 export default class BagPanel_Generate extends UIScript {
-		private mTabCanvas_Internal: mw.Canvas
+		private mProgressBar_Internal: mw.ProgressBar
+	public get mProgressBar(): mw.ProgressBar {
+		if(!this.mProgressBar_Internal&&this.uiWidgetBase) {
+			this.mProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mProgressBar') as mw.ProgressBar
+		}
+		return this.mProgressBar_Internal
+	}
+	private mBarTextBlock_Internal: mw.TextBlock
+	public get mBarTextBlock(): mw.TextBlock {
+		if(!this.mBarTextBlock_Internal&&this.uiWidgetBase) {
+			this.mBarTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mProgressBar/mBarTextBlock') as mw.TextBlock
+		}
+		return this.mBarTextBlock_Internal
+	}
+	private mTabCanvas_Internal: mw.Canvas
 	public get mTabCanvas(): mw.Canvas {
 		if(!this.mTabCanvas_Internal&&this.uiWidgetBase) {
 			this.mTabCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/TitleBgImage/mTabCanvas') as mw.Canvas
@@ -66,6 +80,9 @@ export default class BagPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
+		this.initLanguage(this.mBarTextBlock)
+		
+	
 		//文本多语言
 		
 	}

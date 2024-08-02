@@ -91,7 +91,7 @@ export default class TaskPanel extends TaskPanel_Generate {
 		dailyTaskDataMap.forEach((value, key) => {
 			let dailyTaskItem = ObjectPoolServices.getPool(TaskItem).spawn();
 			dailyTaskItem.initTaskItemData(key, value);
-			console.error(`dailyTaskItem.isGet:${dailyTaskItem.isGet}`);
+			// console.error(`dailyTaskItem.isGet:${dailyTaskItem.isGet}`);
 			if (dailyTaskItem.isGet) {
 				this.mDailyTaskCanvas.addChild(dailyTaskItem.taskItem);
 				dailyTaskItem.taskItem.size = new mw.Vector2(556, 94);

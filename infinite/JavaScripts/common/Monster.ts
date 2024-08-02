@@ -244,7 +244,7 @@ export default class Monster extends Script {
     }
 
     private playerAtkEnemy_S(senderGuid: string, targetGuid: string, damage: number, hitPoint: mw.Vector): void {
-        console.error(`this.getMonster.gameObjectId:${this.getMonster.gameObjectId} targetGuid:${targetGuid}`);
+        // console.error(`this.getMonster.gameObjectId:${this.getMonster.gameObjectId} targetGuid:${targetGuid}`);
         if (this.getMonster.gameObjectId != targetGuid || this.getMonsterState == MonsterState.Inactivation) return;
         if (this.hp <= 0) {
             this.hp = 0;
@@ -307,7 +307,7 @@ export default class Monster extends Script {
 
     private chasePlayerMap: Map<string, number> = new Map<string, number>();
     private updateChasePlayer(targetGuid: string, damage: number): void {
-        console.error(`targetGuid:${targetGuid} damage:${damage}`);
+        // console.error(`targetGuid:${targetGuid} damage:${damage}`);
         let totalDamage: number = 0;
         if (this.chasePlayerMap.has(targetGuid)) {
             totalDamage = this.chasePlayerMap.get(targetGuid);
@@ -374,10 +374,10 @@ export default class Monster extends Script {
         Navigation.navigateTo(this.getMonster,
             this.getRandomTargetPoint_S(),
             0, () => {
-                console.error(`随机寻路成功`);
+                // console.error(`随机寻路成功`);
                 this.randomNavigateToComplete_S();
             }, () => {
-                console.error(`随机寻路失败`);
+                // console.error(`随机寻路失败`);
                 this.randomNavigateToComplete_S();
             });
     }
@@ -402,15 +402,15 @@ export default class Monster extends Script {
         let isFollowSuccess = Navigation.follow(this.getMonster,
             targetPlayer.character,
             0, () => {
-                console.error(`追踪寻路成功 dis = ${mw.Vector.distance(this.getMonster.worldTransform.position,
-                    targetPlayer.character.worldTransform.position)}`);
+                // console.error(`追踪寻路成功 dis = ${mw.Vector.distance(this.getMonster.worldTransform.position,
+                //     targetPlayer.character.worldTransform.position)}`);
                 this.chasePlayerNavigateToComplete_S(targetPlayer);
             }, () => {
-                console.error(`追踪寻路失败`);
+                // console.error(`追踪寻路失败`);
                 this.deleteChasePlayer(targetPlayer.character.gameObjectId);
                 this.chasePlayerNavigateToComplete_S(targetPlayer);
             });
-        console.error(`isFollowSuccess: ${isFollowSuccess}`);
+        // console.error(`isFollowSuccess: ${isFollowSuccess}`);
         if (isFollowSuccess) {
             this.isFollowing = true;
             return;

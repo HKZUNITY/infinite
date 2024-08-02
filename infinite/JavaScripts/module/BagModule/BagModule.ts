@@ -132,6 +132,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     protected onStart(): void {
         this.getHUDModuleC.onOpenShopAction.add(() => {
             this.getBagPanel.show();
+            this.getBagPanel.updateBar(this.bagIds.length);
         });
     }
 
@@ -172,6 +173,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.server.net_setBagId(bagId);
         this.getPlayerModuleC.adsUpLv();
         Notice.showDownNotice("恭喜获得");
+        this.getBagPanel.updateBar(this.bagIds.length);
     }
 
     public setUsingWeaponId(weaponId: number): boolean {
@@ -287,41 +289,44 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     public clickBagItem(bagId: number, buyComplete: () => void): void {
-        let isHas = this.isHasBagId(bagId);
-        this.getBagInfoPanel.showThis(bagId, isHas, () => {
-            if (isHas) {
-                this.use(bagId);
-            } else {
-                Notice.showDownNotice("未获得");
-                if (GlobalData.isOpenIAA) {
-                    this.getAdTipsPanel.showRewardAd(() => {
+        console.error(`${bagId}`);
+        this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId),
+            () => {
+                if (this.isHasBagId(bagId)) {
+                    this.use(bagId);
+                } else {
+                    Notice.showDownNotice("未获得");
+                    if (GlobalData.isOpenIAA) {
+                        this.getAdTipsPanel.showRewardAd(() => {
+                            this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
+                        }, "带你去免费获得", "取消", "免费获得");
+                    } else {
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
-                    }, "带你去免费获得", "取消", "免费获得");
-                } else {
-                    this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
+                    }
                 }
-            }
-        }, () => {
-            let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * 10000;
-            if (price < 0 || isNaN(price)) price = 10000;
-            let hasCoin = this.getPlayerModuleC.getCoin();
-            if (hasCoin >= price) {
-                this.setBagId(bagId);
-                if (buyComplete) buyComplete();
-                Notice.showDownNotice("购买成功");
-            } else {
-                Notice.showDownNotice("金币不足");
-                if (GlobalData.isOpenIAA) {
-                    this.getAdTipsPanel.showRewardAd(() => {
+            }, () => {
+                let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * 10000;
+                if (price < 0 || isNaN(price)) price = 10000;
+                let hasCoin = this.getPlayerModuleC.getCoin();
+                if (hasCoin >= price) {
+                    this.setBagId(bagId);
+                    if (buyComplete) buyComplete();
+                    this.getBagInfoPanel.mPriceButton.visibility = mw.SlateVisibility.Collapsed;
+                    this.getBagInfoPanel.mAdsButton.visibility = mw.SlateVisibility.Collapsed;
+                    Notice.showDownNotice("购买成功");
+                } else {
+                    Notice.showDownNotice("金币不足");
+                    if (GlobalData.isOpenIAA) {
+                        this.getAdTipsPanel.showRewardAd(() => {
+                            this.getPlayerModuleC.saveCoin(10000);
+                        }, "免费领取10000金币", "取消", "免费领取");
+                    } else {
                         this.getPlayerModuleC.saveCoin(10000);
-                    }, "免费领取10000金币", "取消", "免费领取");
-                } else {
-                    this.getPlayerModuleC.saveCoin(10000);
+                    }
                 }
-            }
-        }, () => {
-            this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
-        });
+            }, () => {
+                this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
+            });
     }
 
     private use(bagId: number): void {
@@ -379,19 +384,27 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     private isInitComplete: boolean = false;
     private async initTrigger(): Promise<void> {
-        let parentTrigger = await mw.GameObject.asyncFindGameObjectById("2285B717");
+        let parentTrigger = await mw.GameObject.asyncFindGameObjectById("04E0E41B");
         await parentTrigger.asyncReady();
-        parentTrigger.getChildren().forEach(async (value: mw.GameObject) => {
-            if (!(value instanceof mw.Trigger)) return;
-            let bagId = Number(value.name.split(`-`)[1]);
+        let parent = parentTrigger.getChildren();
+        for (let i = 0; i < parent.length; ++i) {
+            // await new Promise<void>(async (resolve: () => void) => {
+            let trigger = parent[i] as mw.Trigger;
+            await trigger.asyncReady();
+            let bagId = Number(trigger.name.split(`-`)[1]);
             if (isNaN(bagId) || bagId < 0) return;
-            let isInitItemSuccessfully = await this.isInitItemSuccessfully(bagId, value.worldTransform.position);
+            let isInitItemSuccessfully = await this.isInitItemSuccessfully(bagId, trigger.worldTransform.position);
             if (!isInitItemSuccessfully) return;
-            value.onEnter.add((gameObject: mw.GameObject) => {
+            trigger.onEnter.add((gameObject: mw.GameObject) => {
                 this.onEnterTrigger(gameObject, bagId);
             });
-        });
+            // setTimeout(() => {
+            //     return resolve();
+            // }, 0.1 * 1000);
+            // });
+        }
         this.isInitComplete = true;
+        console.error(`加载完成`);
     }
 
     private onEnterTrigger(go: mw.GameObject, bagId: number): void {
@@ -418,6 +431,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
         let bagItemGo = await GameObjPool.asyncSpawn(objId) as mw.Model;
         bagItemGo.collisionEnabled = false;
+        if (bagItemGo instanceof mw.Character) bagItemGo.collisionWithOtherCharacterEnabled = false;
         let offset = bagInfoElement.AssetOffsetPos;
         bagItemGo.worldTransform.position = new mw.Vector(offset.x + loc.x, offset.y + loc.y, offset.z + loc.z);
         bagItemGo.worldTransform.rotation = new mw.Rotation(bagInfoElement.AssetOffsetRot);
@@ -437,7 +451,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     protected onUpdate(dt: number): void {
-        this.setBagItemRot(dt);
+        // this.setBagItemRot(dt);
     }
 
     private setBagItemRot(dt: number): void {
@@ -661,6 +675,11 @@ export class BagPanel extends BagPanel_Generate {
         }
     }
 
+    public updateBar(curValue: number): void {
+        this.mBarTextBlock.text = `${curValue}/${333}`;
+        this.mProgressBar.currentValue = curValue / 333;
+    }
+
     protected onShow(...params: any[]): void {
         Utils.openUITween(
             this.rootCanvas,
@@ -672,14 +691,12 @@ export class BagPanel extends BagPanel_Generate {
     }
 
     public hideTween(): void {
-        this.hide();
-        this.getHudPanel.show();
-        return;
         Utils.closeUITween(
             this.rootCanvas,
             null,
             () => {
-
+                this.hide();
+                this.getHudPanel.show();
             });
     }
 }
@@ -723,9 +740,11 @@ export class BagItem extends BagItem_Generate {
     private setHas(): void {
         if (this.getBagModuleC.isHasBagId(this.bagId)) {
             this.mHasTextBlock.text = "点击使用";
+            this.mHasTextBlock_1.text = "已拥有";
             this.mIconImage.imageColor = mw.LinearColor.white;
         } else {
             this.mHasTextBlock.text = "点击获得";
+            this.mHasTextBlock_1.text = "未拥有";
             this.mIconImage.imageColor = mw.LinearColor.black;
         }
     }
@@ -762,6 +781,7 @@ export class BagTab extends BagTab_Generate {
 
 export class BagInfoPanel extends BagInfoPanel_Generate {
     protected onStart(): void {
+        this.layer = mw.UILayerTop;
         this.initUI();
         this.bindButton();
     }
@@ -802,12 +822,12 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
     private useCallBack: () => void = null;
     private priceCallBack: () => void = null;
     private adsCallBack: () => void = null;
-    public showThis(bagId: number, isHas: boolean, useCallBack: () => void, preceCallBack: () => void, adsCallBack: () => void): void {
+    public showThis(bagId: number, isHas: boolean, useCallBack: () => void, priceCallBack: () => void, adsCallBack: () => void): void {
         this.bagId = bagId;
         this.isHas = isHas;
         this.setUI();
         this.useCallBack = useCallBack;
-        this.priceCallBack = preceCallBack;
+        this.priceCallBack = priceCallBack;
         this.adsCallBack = adsCallBack;
         let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * 10000;
         this.mPreceTextBlock.text = `${price}金币购买`;

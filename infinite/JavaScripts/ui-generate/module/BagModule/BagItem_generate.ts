@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.07.27-01.53.21
+ * TIME: 2024.08.02-23.09.01
  */
  
 @UIBind('UI/module/BagModule/BagItem.ui')
@@ -43,6 +43,13 @@ export default class BagItem_Generate extends UIScript {
 		}
 		return this.mHasTextBlock_Internal
 	}
+	private mHasTextBlock_1_Internal: mw.TextBlock
+	public get mHasTextBlock_1(): mw.TextBlock {
+		if(!this.mHasTextBlock_1_Internal&&this.uiWidgetBase) {
+			this.mHasTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasTextBlock_1') as mw.TextBlock
+		}
+		return this.mHasTextBlock_1_Internal
+	}
 
 
 	protected onAwake() {
@@ -70,6 +77,9 @@ export default class BagItem_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mHasTextBlock)
+		
+	
+		this.initLanguage(this.mHasTextBlock_1)
 		
 	
 		//文本多语言

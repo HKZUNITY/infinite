@@ -68,8 +68,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mAdsButton.onClicked.add(() => {
 			this.getHudModuleC.onAdsAction.call();
 		});
-		let isInvincible: boolean = true;
-		this.mInvincibleTextBlock.text = "已开启防御";
+		let isInvincible: boolean = false;
+		this.mInvincibleTextBlock.text = "已关闭防御";
 		this.mInvincibleButton.onClicked.add(() => {
 			isInvincible = !isInvincible;
 			this.mInvincibleTextBlock.text = isInvincible ? "已开启防御" : "已关闭防御";
@@ -243,7 +243,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
 		this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
 		this.mCoinTextBlock.text = coin + "";
-		let atk = Utils.getAtk(lv) * addAtk;
+		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;
 		this.mAtkTextBlock.text = "攻击力：" + atk;
 		ColdWeapon.getInstance().updateHitDamage(atk);

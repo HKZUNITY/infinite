@@ -27,7 +27,7 @@ interface NoticeComponent<T> {
 }
 
 type InitTopNoticeFunction = (item: TopNoticeItem) => void
-class TopNoticeComponent implements NoticeComponent<TopNoticeItem>{
+class TopNoticeComponent implements NoticeComponent<TopNoticeItem> {
     private static NoticeItemLifeTime = 2
     private static NoticeItemMaxCount = 3
     private static NoticeMoveStepCount = 15
@@ -118,7 +118,7 @@ class TopNoticeComponent implements NoticeComponent<TopNoticeItem>{
         this.insertPendingNotice(this.pendingQueue.shift())
     }
 }
-class TopNoticeComponent2 implements NoticeComponent<TopNoticeItem>{
+class TopNoticeComponent2 implements NoticeComponent<TopNoticeItem> {
     //Notice提示存在时间
     private static NoticeItemLifeTime = 2;
     //Notice提示最多存在数量
@@ -318,7 +318,7 @@ class NoticeView extends NoticeView_Generate {
         this.topNoticeComponent2.init(this.con_top_notice_2)
 
         this.canUpdate = true
-        this.layer = mw.UILayerTop
+        this.layer = mw.UILayerSystem
     }
 
     onUpdate() {

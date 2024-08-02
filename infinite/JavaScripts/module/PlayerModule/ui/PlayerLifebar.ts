@@ -15,7 +15,7 @@ export default class PlayerLifebar extends mw.Script {
     @mw.Property({ replicated: true, onChanged: "onLevelChange" })
     public playerLevel: number = -1;
     @mw.Property({ replicated: true, onChanged: "onInvincible" })
-    public isInvincible: boolean = true;
+    public isInvincible: boolean = false;
     public get getIsInvincible(): boolean {
         return this.isInvincible;
     }
@@ -68,7 +68,7 @@ export default class PlayerLifebar extends mw.Script {
     private invincibleEffectId: number = null;
     private onInvincible(): void {
         if (!this._isInit) return;
-        if (this.onInvincible) {
+        if (this.isInvincible) {
             this.invincibleEffectId = EffectService.playOnGameObject("140172", this.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 0 });
         } else {
             EffectService.stop(this.invincibleEffectId);

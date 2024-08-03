@@ -105,7 +105,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         this.getTaskModuleS.killMonster(sendPlayer, monsterId);
         let names: string[] = [];
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
-        names.push(Utils.randomNpcName());
+        names.push(Utils.randomNpcName(monsterId));
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
     }
 

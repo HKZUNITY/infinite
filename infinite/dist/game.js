@@ -2635,7 +2635,21 @@ class Utils {
     static getBoss() {
         return this.boss[this.getRandomInteger(0, this.boss.length - 1)];
     }
-    static randomNpcName() {
+    static randomNpcName(monsterId) {
+        switch (monsterId) {
+            case 1:
+                return "魔兽美杜莎";
+            case 2:
+                return "魔兽炫彩蜘蛛";
+            case 3:
+                return "魔兽蜘蛛精";
+            case 4:
+                return "龙之魔兽";
+            case 5:
+                return "丧尸";
+            case 6:
+                return "变异布偶";
+        }
         return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
     }
     /**根据数字获取汉字*/
@@ -10304,7 +10318,7 @@ class BagModuleC extends ModuleC {
         return Math.round(totalAtk * Utils.getAtk(this.getPlayerModuleC.getLv));
     }
     clickBagItem(bagId, buyComplete) {
-        console.error(`${bagId}`);
+        console.warn(`${bagId}`);
         this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId), () => {
             if (this.isHasBagId(bagId)) {
                 this.use(bagId);
@@ -10315,7 +10329,7 @@ class BagModuleC extends ModuleC {
                     this.getAdTipsPanel.showRewardAd(() => {
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                         this.getBagInfoPanel.hide();
-                        this.getBagPanel.hide();
+                        this.getBagPanel.hideTween();
                     }, "带你去免费获得", "取消", "免费获得");
                 }
                 else {
@@ -10349,7 +10363,7 @@ class BagModuleC extends ModuleC {
         }, () => {
             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
             this.getBagInfoPanel.hide();
-            this.getBagPanel.hide();
+            this.getBagPanel.hideTween();
         });
     }
     use(bagId) {
@@ -10848,11 +10862,14 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
             this.priceCallBack();
     }
     addAdsButton(isSuccess) {
-        this.hide();
-        if (!isSuccess)
+        if (!isSuccess) {
+            this.hide();
+            Notice.showDownNotice(`失败`);
             return;
+        }
         if (this.adsCallBack)
             this.adsCallBack();
+        this.hide();
     }
     bindCloseButton() {
         this.hide();
@@ -11929,7 +11946,7 @@ class PlayerModuleS extends ModuleS {
         this.getTaskModuleS.killMonster(sendPlayer, monsterId);
         let names = [];
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
-        names.push(Utils.randomNpcName());
+        names.push(Utils.randomNpcName(monsterId));
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
     }
     playerAtkEnemyFlyText(senderGuid, hitPoint, damage) {

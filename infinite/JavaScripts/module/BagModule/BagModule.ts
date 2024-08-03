@@ -399,7 +399,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     public clickBagItem(bagId: number, buyComplete: () => void): void {
-        console.error(`${bagId}`);
+        console.warn(`${bagId}`);
         this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId),
             () => {
                 if (this.isHasBagId(bagId)) {
@@ -410,7 +410,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                         this.getAdTipsPanel.showRewardAd(() => {
                             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                             this.getBagInfoPanel.hide();
-                            this.getBagPanel.hide();
+                            this.getBagPanel.hideTween();
                         }, "带你去免费获得", "取消", "免费获得");
                     } else {
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
@@ -439,7 +439,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             }, () => {
                 this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                 this.getBagInfoPanel.hide();
-                this.getBagPanel.hide();
+                this.getBagPanel.hideTween();
             });
     }
 
@@ -962,9 +962,13 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
     }
 
     private addAdsButton(isSuccess: boolean): void {
-        this.hide();
-        if (!isSuccess) return;
+        if (!isSuccess) {
+            this.hide();
+            Notice.showDownNotice(`失败`);
+            return;
+        }
         if (this.adsCallBack) this.adsCallBack();
+        this.hide();
     }
 
     private bindCloseButton(): void {

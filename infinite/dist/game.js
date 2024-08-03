@@ -10076,6 +10076,7 @@ class BagModuleC extends ModuleC {
         this.getPlayerModuleC.adsUpLv();
         Notice.showDownNotice("恭喜获得");
         this.getBagPanel.updateBar(this.bagIds.length);
+        this.getBagPanel.updateBagItem(bagId);
     }
     setUsingWeaponId(weaponId) {
         if (this.usingWeaponId == weaponId) {
@@ -10342,6 +10343,7 @@ class BagModuleC extends ModuleC {
                 price = 10000;
             let hasCoin = this.getPlayerModuleC.getCoin();
             if (hasCoin >= price) {
+                this.getPlayerModuleC.saveCoin(-price);
                 this.setBagId(bagId);
                 if (buyComplete)
                     buyComplete();
@@ -10735,6 +10737,13 @@ class BagPanel extends BagPanel_Generate$1 {
             }
         }
     }
+    updateBagItem(bagId) {
+        for (let i = 0; i < this.bagItems.length; ++i) {
+            if (this.bagItems[i].uiObject.visibility != mw.SlateVisibility.Collapsed && this.bagItems[i].getBagId == bagId) {
+                this.bagItems[i].setHas();
+            }
+        }
+    }
     updateBar(curValue) {
         this.mBarTextBlock.text = `${curValue}/${GlobalData.totalBagLen}`;
         this.mProgressBar.currentValue = curValue / GlobalData.totalBagLen;
@@ -10771,6 +10780,9 @@ class BagItem extends BagItem_Generate$1 {
     }
     bindClickButton() {
         this.getBagModuleC.clickBagItem(this.bagId, this.setHas.bind(this));
+    }
+    get getBagId() {
+        return this.bagId;
     }
     setData(bagId) {
         this.bagId = bagId;

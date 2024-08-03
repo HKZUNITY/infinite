@@ -184,6 +184,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.getPlayerModuleC.adsUpLv();
         Notice.showDownNotice("恭喜获得");
         this.getBagPanel.updateBar(this.bagIds.length);
+        this.getBagPanel.updateBagItem(bagId);
     }
 
     public setUsingWeaponId(weaponId: number): boolean {
@@ -421,6 +422,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                 if (price < 0 || isNaN(price)) price = 10000;
                 let hasCoin = this.getPlayerModuleC.getCoin();
                 if (hasCoin >= price) {
+                    this.getPlayerModuleC.saveCoin(-price);
                     this.setBagId(bagId);
                     if (buyComplete) buyComplete();
                     this.getBagInfoPanel.mPriceButton.visibility = mw.SlateVisibility.Collapsed;
@@ -821,6 +823,14 @@ export class BagPanel extends BagPanel_Generate {
         }
     }
 
+    public updateBagItem(bagId: number) {
+        for (let i = 0; i < this.bagItems.length; ++i) {
+            if (this.bagItems[i].uiObject.visibility != mw.SlateVisibility.Collapsed && this.bagItems[i].getBagId == bagId) {
+                this.bagItems[i].setHas();
+            }
+        }
+    }
+
     public updateBar(curValue: number): void {
         this.mBarTextBlock.text = `${curValue}/${GlobalData.totalBagLen}`;
         this.mProgressBar.currentValue = curValue / GlobalData.totalBagLen;
@@ -869,6 +879,9 @@ export class BagItem extends BagItem_Generate {
     }
 
     private bagId: number = -1;
+    public get getBagId(): number {
+        return this.bagId;
+    }
     public setData(bagId: number): void {
         this.bagId = bagId;
         let bagInfoElement = GameConfig.BagInfo.getElement(bagId);
@@ -883,7 +896,7 @@ export class BagItem extends BagItem_Generate {
         this.mNameTextBlock.text = name;
     }
 
-    private setHas(): void {
+    public setHas(): void {
         if (this.getBagModuleC.isHasBagId(this.bagId)) {
             this.mHasTextBlock.text = "点击使用";
             this.mHasTextBlock_1.text = "已拥有";

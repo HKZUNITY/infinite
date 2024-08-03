@@ -409,6 +409,8 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
                             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
+                            this.getBagInfoPanel.hide();
+                            this.getBagPanel.hide();
                         }, "带你去免费获得", "取消", "免费获得");
                     } else {
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
@@ -436,6 +438,8 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                 }
             }, () => {
                 this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
+                this.getBagInfoPanel.hide();
+                this.getBagPanel.hide();
             });
     }
 

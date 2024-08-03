@@ -10314,6 +10314,8 @@ class BagModuleC extends ModuleC {
                 if (GlobalData.isOpenIAA) {
                     this.getAdTipsPanel.showRewardAd(() => {
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
+                        this.getBagInfoPanel.hide();
+                        this.getBagPanel.hide();
                     }, "带你去免费获得", "取消", "免费获得");
                 }
                 else {
@@ -10346,6 +10348,8 @@ class BagModuleC extends ModuleC {
             }
         }, () => {
             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
+            this.getBagInfoPanel.hide();
+            this.getBagPanel.hide();
         });
     }
     use(bagId) {

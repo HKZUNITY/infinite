@@ -1,6 +1,7 @@
 import { PlayerManagerExtesion, } from '../../Modified027Editor/ModifiedPlayer';
 import Console from "../../Tools/Console";
 import { Utils } from "../../Tools/utils";
+import { Notice } from '../../common/notice/Notice';
 import { GameConfig } from "../../config/GameConfig";
 import { IMusicElement } from "../../config/Music";
 import GlobalData from "../../const/GlobalData";
@@ -141,6 +142,10 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             isOpenHUD ? this.getHudPanel.show() : this.getHudPanel.hide();
             Console.error("isOpenHUD =" + isOpenHUD);
         });
+
+        Event.addLocalListener("AttackMp", () => {
+            this.isHaveMp(5);
+        });
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -209,13 +214,15 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     private curHp: number = -1;
     public updateHp(curHp: number): void {
         this.curHp = curHp;
+        if (this.curHp > this.maxHp) this.curHp = this.maxHp;
         this.getHudPanel.updateHp(curHp, this.maxHp);
     }
 
-    public updateHpByUsing(addHp: number): void {
+    public updateHpByUsing(addHp: number, addAtk: number): void {
         let hp = Math.round(Utils.getHp(this.lv) * addHp);
         this.maxHp = hp;
         this.getHudPanel.updateHp(this.curHp, this.maxHp);
+        this.getHudPanel.updateAtk(this.lv, addAtk);
     }
 
     //#region 击杀提示
@@ -296,6 +303,9 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     //#region 能量
     private maxMp: number = 100;
     private currentMp: number = 100;
+    public get getMp(): number {
+        return this.currentMp;
+    }
 
     private isStartAddMp: boolean = false;
     private addMpTime: number = 1;
@@ -329,14 +339,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.getHudPanel.updateMp(this.currentMp, this.maxMp);
     }
 
-    private reduceMp: number = 10;
     private isStartAddMpId: any = null;
     /**
      * 是否有能量
      * @returns 
      */
-    private isHaveMp(): boolean {
-        if (this.currentMp - this.reduceMp < 0) {
+    private isHaveMp(reduceMp: number = 10): boolean {
+        if (this.currentMp - reduceMp < 0) {
             this.isStartAddMp = true;
             if (this.isStartAddMpId) {
                 clearTimeout(this.isStartAddMpId);
@@ -344,7 +353,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.isStartAddMpId = null;
             return false;
         }
-        this.currentMp -= this.reduceMp;
+        this.currentMp -= reduceMp;
         this.getHudPanel.updateMp(this.currentMp, this.maxMp);
         Console.error("this.currentMp = " + this.currentMp);
         this.isStartAddMp = false;
@@ -374,7 +383,11 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
      */
     private sprint(): void {
         if (!this.isCanSprint) return;
-        if (!this.isHaveMp()) return;
+        if (!this.isHaveMp(10)) {
+            Notice.showDownNotice(`斗气不足`);
+            Notice.showDownNotice(`升级增加斗气储量`);
+            return;
+        }
         this.isCanSprint = false;
         if (this.sprintAnimation) this.sprintAnimation.stop();
         this.sprintAnimation = PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.sprintClips[this.sprintIndex], 1)
@@ -431,8 +444,19 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     private playerJump(): void {
         if (this.localPlayer.character.isJumping && this.currentJumpTime >= 2) return;
         this.currentJumpTime++;
+        if (this.currentJumpTime == 1) {
+            if (!this.isHaveMp(5)) {
+                Notice.showDownNotice(`斗气不足`);
+                Notice.showDownNotice(`升级增加斗气储量`);
+                return;
+            }
+        }
         if (this.currentJumpTime == 2) {
-            if (!this.isHaveMp()) return;
+            if (!this.isHaveMp(5)) {
+                Notice.showDownNotice(`斗气不足`);
+                Notice.showDownNotice(`升级增加斗气储量`);
+                return;
+            }
             PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.secondJumpAniID, 1)
             let stompingEffectId: string = "";
             let soundId: string = ""

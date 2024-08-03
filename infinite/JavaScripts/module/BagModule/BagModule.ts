@@ -1,4 +1,5 @@
-﻿import { Notice } from "../../common/notice/Notice";
+﻿import Loading from "../../common/Loading";
+import { Notice } from "../../common/notice/Notice";
 import { IBagInfoElement } from "../../config/BagInfo";
 import { GameConfig } from "../../config/GameConfig";
 import GlobalData from "../../const/GlobalData";
@@ -24,7 +25,7 @@ import TaskModuleC from "../TaskModule/TaskModuleC";
 3-天阶-213187
  */
 const bagItemBgIcons: string[] = ["213189", "213181", "213190", "213187"];
-const bagItemGoEffect: string[] = ["311092", "31645", "32240", "59956", "88773", "146767", "146768", "146784"];
+const bagItemGoEffect: string[] = ["311092", "31645", "59956", "88773", "146784"];
 
 export class BagData extends Subdata {
     @Decorator.persistence()
@@ -128,6 +129,14 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         return this.playerModuleC;
     }
 
+    private loading: Loading = null;
+    private get getLoading(): Loading {
+        if (!this.loading) {
+            this.loading = mw.UIService.getUI(Loading);
+        }
+        return this.loading;
+    }
+
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
         this.getHUDModuleC.onOpenShopAction.add(() => {
@@ -138,8 +147,9 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     protected onEnterScene(sceneType: number): void {
         this.initBagData();
-        this.initTrigger();
-        this.enterScenceUsing();
+        this.initTrigger().then(() => {
+            this.enterScenceUsing();
+        });
     }
 
     private enterScenceUsing(): void {
@@ -239,7 +249,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     private updateHpByUsing(): void {
-        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing());
+        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing(), this.getAddAtkByUsing());
     }
 
     public getAddHpByUsing(): number {
@@ -262,7 +272,57 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             petHp = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingPetId)?.Rarity);
             if (petHp < 0 || isNaN(petHp)) petHp = 0;
         }
-        return weaponHp + skinHp + equipHp + petHp;
+        let totalHp = weaponHp + skinHp + equipHp + petHp + 1;
+        if (totalHp == 0) totalHp = 1;
+        return totalHp;
+    }
+
+    public getAddedHpByUsing(bagId: number): number {
+        let weaponHp: number = 0, skinHp: number = 0, equipHp: number = 0, petHp: number = 0;
+        let bagInfoElement = GameConfig.BagInfo.getElement(bagId);
+        if (bagInfoElement.Type == 1) {
+            weaponHp = Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (weaponHp < 0 || isNaN(weaponHp)) weaponHp = 0;
+        } else {
+            if (this.usingWeaponId != -1) {
+                weaponHp = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingWeaponId)?.Rarity);
+                if (weaponHp < 0 || isNaN(weaponHp)) weaponHp = 0;
+            }
+        }
+        if (bagInfoElement.Type == 2) {
+            skinHp = Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (skinHp < 0 || isNaN(skinHp)) skinHp = 0;
+        } else {
+            if (this.usingSkinId != -1) {
+                skinHp = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingSkinId)?.Rarity);
+                if (skinHp < 0 || isNaN(skinHp)) skinHp = 0;
+            }
+        }
+        if (this.usingEquipIds && MapEx.count(this.usingEquipIds) > 0) {
+            MapEx.forEach(this.usingEquipIds, (key: number, bagId: number) => {
+                if (bagInfoElement.HumanoidSlotType == key) {
+                    equipHp += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+                } else {
+                    equipHp += Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagId)?.Rarity);
+                }
+            });
+            if (equipHp < 0 || isNaN(equipHp)) equipHp = 0;
+        } else {
+            equipHp += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (equipHp < 0 || isNaN(equipHp)) equipHp = 0;
+        }
+        if (bagInfoElement.Type == 4) {
+            petHp = Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (petHp < 0 || isNaN(petHp)) petHp = 0;
+        } else {
+            if (this.usingPetId != -1) {
+                petHp = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingPetId)?.Rarity);
+                if (petHp < 0 || isNaN(petHp)) petHp = 0;
+            }
+        }
+        let totalHp = weaponHp + skinHp + equipHp + petHp + 1;
+        if (totalHp == 0) totalHp = 1;
+        return Math.round(totalHp * Utils.getHp(this.getPlayerModuleC.getLv));
     }
 
     public getAddAtkByUsing(): number {
@@ -285,7 +345,57 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             petAtk = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingPetId)?.Rarity);
             if (petAtk < 0 || isNaN(petAtk)) petAtk = 0;
         }
-        return weaponAtk + skinAtk + equipAtk + petAtk;
+        let totalAtk = weaponAtk + skinAtk + equipAtk + petAtk + 1;
+        if (totalAtk == 0) totalAtk = 1;
+        return totalAtk;
+    }
+
+    public getAddedAtkByUsing(bagId: number): number {
+        let weaponAtk: number = 0, skinAtk: number = 0, equipAtk: number = 0, petAtk: number = 0;
+        let bagInfoElement = GameConfig.BagInfo.getElement(bagId);
+        if (bagInfoElement.Type == 1) {
+            weaponAtk = Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (weaponAtk < 0 || isNaN(weaponAtk)) weaponAtk = 0;
+        } else {
+            if (this.usingWeaponId != -1) {
+                weaponAtk = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingWeaponId)?.Rarity);
+                if (weaponAtk < 0 || isNaN(weaponAtk)) weaponAtk = 0;
+            }
+        }
+        if (bagInfoElement.Type == 2) {
+            skinAtk = Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (skinAtk < 0 || isNaN(skinAtk)) skinAtk = 0;
+        } else {
+            if (this.usingSkinId != -1) {
+                skinAtk = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingSkinId)?.Rarity);
+                if (skinAtk < 0 || isNaN(skinAtk)) skinAtk = 0;
+            }
+        }
+        if (this.usingEquipIds && MapEx.count(this.usingEquipIds) > 0) {
+            MapEx.forEach(this.usingEquipIds, (key: number, bagId: number) => {
+                if (bagInfoElement.HumanoidSlotType == key) {
+                    equipAtk += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+                } else {
+                    equipAtk += Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagId)?.Rarity);
+                }
+            });
+            if (equipAtk < 0 || isNaN(equipAtk)) equipAtk = 0;
+        } else {
+            equipAtk += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (equipAtk < 0 || isNaN(equipAtk)) equipAtk = 0;
+        }
+        if (bagInfoElement.Type == 4) {
+            petAtk = Utils.getMultipleByRarity(bagInfoElement?.Rarity);
+            if (petAtk < 0 || isNaN(petAtk)) petAtk = 0;
+        } else {
+            if (this.usingPetId != -1) {
+                petAtk = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(this.usingPetId)?.Rarity);
+                if (petAtk < 0 || isNaN(petAtk)) petAtk = 0;
+            }
+        }
+        let totalAtk = weaponAtk + skinAtk + equipAtk + petAtk + 1;
+        if (totalAtk == 0) totalAtk = 1;
+        return Math.round(totalAtk * Utils.getAtk(this.getPlayerModuleC.getLv));
     }
 
     public clickBagItem(bagId: number, buyComplete: () => void): void {
@@ -384,9 +494,11 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     private isInitComplete: boolean = false;
     private async initTrigger(): Promise<void> {
+        this.getLoading.show();
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("04E0E41B");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();
+        console.error(`${parent?.length}`);
         for (let i = 0; i < parent.length; ++i) {
             // await new Promise<void>(async (resolve: () => void) => {
             let trigger = parent[i] as mw.Trigger;
@@ -398,12 +510,15 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             trigger.onEnter.add((gameObject: mw.GameObject) => {
                 this.onEnterTrigger(gameObject, bagId);
             });
+            this.getLoading.updateBar(i + 1);
             // setTimeout(() => {
             //     return resolve();
             // }, 0.1 * 1000);
             // });
         }
         this.isInitComplete = true;
+        this.getLoading.hide();
+        this.getGuideModuleC.startFirst();
         console.error(`加载完成`);
     }
 
@@ -424,7 +539,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     private bagItemMap: Map<number, { go: mw.Model, effectId: number, loc: mw.Vector }> = new Map<number, { go: mw.Model, effectId: number, loc: mw.Vector }>();
     private async isInitItemSuccessfully(bagId: number, loc: mw.Vector): Promise<boolean> {
-        let bagInfoElement = GameConfig.BagInfo.getElement(bagId);
+        let bagInfoElement = GameConfig.BagInfo?.getElement(bagId);
         if (!bagInfoElement) return false;
         let objId = bagInfoElement?.ObjId;
         if (!objId || objId == "") return false;
@@ -437,9 +552,31 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         bagItemGo.worldTransform.rotation = new mw.Rotation(bagInfoElement.AssetOffsetRot);
         bagItemGo.worldTransform.scale = bagInfoElement.AssetOffsetSca;
 
-        let effectGuid: string = bagItemGoEffect[Utils.getRandomInteger(0, bagItemGoEffect.length - 1)];
-        let effectId = EffectService.playAtPosition(effectGuid, effectGuid == "146784" ? loc : new mw.Vector(loc.x, loc.y, loc.z - 50), { loopCount: 0 });
 
+        let effectGuid: string = "";
+        let effectId: number = null;
+        switch (bagInfoElement.Type) {
+            case 1:
+                effectGuid = bagItemGoEffect[Utils.getRandomInteger(0, bagItemGoEffect.length - 1)];
+                effectId = EffectService.playAtPosition(effectGuid, effectGuid == "146784" ? loc : new mw.Vector(loc.x, loc.y, loc.z - 50), { loopCount: 0 });
+                break;
+            case 2:
+                effectGuid = "88773";
+                effectId = EffectService.playAtPosition(effectGuid, loc, { loopCount: 0 });
+                break;
+            case 3:
+                effectGuid = "311092";
+                effectId = EffectService.playAtPosition(effectGuid, loc, { loopCount: 0 });
+                break;
+            case 4:
+                effectGuid = "146784";
+                // effectId = EffectService.playAtPosition(effectGuid, new mw.Vector(loc.x, loc.y, loc.z - 50), { loopCount: 0, scale: mw.Vector.one.multiply(3) });
+                effectId = EffectService.playOnGameObject(effectGuid, bagItemGo, { loopCount: 0 });
+                break;
+            default:
+                break;
+        }
+        // effectId = EffectService.playOnGameObject(effectGuid, bagItemGo, { loopCount: 0 });
         this.bagItemMap.set(bagId, { go: bagItemGo, effectId: effectId, loc: loc });
         return true;
     }
@@ -524,7 +661,9 @@ export class BagModuleS extends ModuleS<BagModuleC, BagData> {
             petHp = Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagData.usingPetId)?.Rarity);
             if (petHp < 0 || isNaN(petHp)) petHp = 0;
         }
-        return weaponHp + skinHp + equipHp + petHp;
+        let totalHp = weaponHp + skinHp + equipHp + petHp + 1;
+        if (totalHp == 0) totalHp = 1;
+        return totalHp;
     }
 }
 
@@ -676,8 +815,8 @@ export class BagPanel extends BagPanel_Generate {
     }
 
     public updateBar(curValue: number): void {
-        this.mBarTextBlock.text = `${curValue}/${333}`;
-        this.mProgressBar.currentValue = curValue / 333;
+        this.mBarTextBlock.text = `${curValue}/${GlobalData.totalBagLen}`;
+        this.mProgressBar.currentValue = curValue / GlobalData.totalBagLen;
     }
 
     protected onShow(...params: any[]): void {
@@ -780,6 +919,14 @@ export class BagTab extends BagTab_Generate {
 }
 
 export class BagInfoPanel extends BagInfoPanel_Generate {
+    private bagModuleC: BagModuleC = null;
+    private get getBagModuleC(): BagModuleC {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
+
     protected onStart(): void {
         this.layer = mw.UILayerTop;
         this.initUI();
@@ -882,7 +1029,7 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
                 break;
         }
         this.mNameTextBlock.text = bagInfoElement?.Name;
-        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>\n提升后的<size=40><b><color=#yellow>血量：${GlobalData.hp}，攻击力：${GlobalData.atk}</color></b></size>`;
+        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>\n提升后的<size=40><b><color=#yellow>血量：${this.getBagModuleC.getAddedHpByUsing(this.bagId)}，攻击力：${this.getBagModuleC.getAddedAtkByUsing(this.bagId)}</color></b></size>`;
         let assetId = bagInfoElement?.AssetId;
         Utils.setImageByAssetIconData(this.mIconImage, assetId);
     }

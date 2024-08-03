@@ -81,6 +81,10 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         return this.data.coin;
     }
 
+    public get getLv(): number {
+        return this.data.playerLv;
+    }
+
     // public saveLevel(value: number): void {
     //     this.server.net_saveLv(value);
     // }

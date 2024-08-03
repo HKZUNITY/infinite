@@ -51,6 +51,7 @@ export default class PlayerLifebar extends mw.Script {
         if (!this._isInit) return;
         let curHp = this.hp;
         if (curHp < 0) curHp = 0;
+        if (curHp > this.maxHp) curHp = this.maxHp;
         this._hpBarUI.mLifebar.percent = curHp / this.maxHp;
         this._hpBarUI.mLifeText.text = `${curHp}/${this.maxHp}`;
     }

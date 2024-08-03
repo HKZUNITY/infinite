@@ -125,7 +125,7 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 	private guide0(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
-			this.centPos, "欢迎来到元神学院，我来给你介绍一下所有按钮操作吧。", 0, true)
+			this.centPos, "欢迎来到斗帝都市，我来给你介绍一下所有按钮操作吧。", 0, true)
 	}
 
 	private guide1(): void {
@@ -143,19 +143,19 @@ export default class GuidePanel extends GuideUI_Generate {
 	private guide3(): void {
 		mw.localToViewport(this.getHudPanel.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size,
-			new mw.Vector2(700, 350), "跳跃按钮，连续点击会进行二段跳。", 0, true)
+			new mw.Vector2(700, 350), "跳跃按钮，连续点击会进行二段跳，会消耗斗气。", 0, true)
 	}
 
 	private guide4(): void {
 		mw.localToViewport(this.getHudPanel.mSprintButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mSprintButton.size,
-			new mw.Vector2(700, 550), "冲刺按钮，可以直接瞬移一段距离，但会消耗蓝量。", 0, true)
+			new mw.Vector2(700, 550), "冲刺按钮，可以直接瞬移一段距离，会消耗斗气。", 0, true)
 	}
 
 	private guide5(): void {
 		mw.localToViewport(this.getHudPanel.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size,
-			new mw.Vector2(460, 550), "攻击按钮，连续点击可释放炫酷的连招。", 0, true)
+			new mw.Vector2(460, 550), "攻击按钮，连续点击可释放炫酷的连招，会消耗斗气。", 0, true)
 	}
 
 	private guide6(): void {
@@ -165,62 +165,62 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 
 	private guide7(): void {
-		mw.localToViewport(this.getHudPanel.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mShopButton.size,
-			new mw.Vector2(350, 0), "武器商店按钮，可以免费使用各种炫酷的技能武器，也可以花费金币购买永久武器套装，快来使用进行战斗吧。", 1, true)
+		mw.localToViewport(this.getHudPanel.mHomeButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mHomeButton.size,
+			new mw.Vector2(350, 0), "点我回家按钮，当你被卡在地图中无法移动时可以点击我试试哦。", 1, true)
 	}
 
 	private guide8(): void {
-		mw.localToViewport(this.getHudPanel.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mRankButton.size,
-			new mw.Vector2(250, 0), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你的排名是多少吧。", 1, true)
+		mw.localToViewport(this.getHudPanel.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mShopButton.size,
+			new mw.Vector2(900, 300), "斗技功法按钮，提升等级最快的办法就是在斗帝都市寻找斗技、功法。", 1, true)
 	}
 
 	private guide9(): void {
-		mw.localToViewport(this.getHudPanel.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size,
-			new mw.Vector2(730, 150), "在线奖励按钮，玩游戏可以领取大量金币和经验，快来领取奖励吧。", 1, true)
+		mw.localToViewport(this.getHudPanel.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mRankButton.size,
+			new mw.Vector2(250, 0), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗帝都市的排名是多少吧。", 1, true)
 	}
 
 	private guide10(): void {
-		mw.localToViewport(this.getHudPanel.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mTaskButton.size,
-			new mw.Vector2(550, 150), "任务按钮，完成任务可以领取大量金币和经验，快来领取奖励吧。", 1, true)
+		mw.localToViewport(this.getHudPanel.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size,
+			new mw.Vector2(730, 150), "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到斗圣。", 1, true)
 	}
 
 	private guide11(): void {
-		mw.localToViewport(this.getHudPanel.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size,
-			new mw.Vector2(600, 150), "福利多多，可以领取大量金币和经验，快来领取奖励吧。", 1, true)
+		mw.localToViewport(this.getHudPanel.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mTaskButton.size,
+			new mw.Vector2(550, 150), "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到斗帝。", 1, true)
 	}
 
 	private guide12(): void {
-		mw.localToViewport(this.getHudPanel.mHomeButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mHomeButton.size,
-			new mw.Vector2(900, 300), "点我回家，找不到回家的路可以点我哦。", 1, true)
+		mw.localToViewport(this.getHudPanel.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size,
+			new mw.Vector2(600, 150), "福利多多，最快提升等级的办法，无限升级，成为斗帝的捷径。", 1, true)
 	}
 
 	private guide13(): void {
-		mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size,
-			new mw.Vector2(550, 350), "角色属性，血量、蓝量，攻击力会随等级提升而提升。", 1, true)
+		mw.localToViewport(this.getHudPanel.mInvincibleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mInvincibleButton.size,
+			new mw.Vector2(550, 350), "开启防御，不会被队友误伤。", 1, true)
 	}
 
 	private guide14(): void {
-		mw.localToViewport(this.getHudPanel.mCoinTextBlock.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mCoinTextBlock.size,
-			new mw.Vector2(550, 350), "金币，英雄套装商店消费。", 1, true)
+		mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size,
+			new mw.Vector2(550, 350), "角色属性，血量、斗气，攻击力会随等级提升而提升。", 1, true)
 	}
 
 	private guide15(): void {
 		mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size,
-			new mw.Vector2(550, 350), "点我增加大量金币，快来试试吧。", 1, true)
+			new mw.Vector2(550, 350), "可快速增加金币直接购买斗技功法。", 1, true)
 	}
 
 	private guide16(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
-			this.centPos, "介绍完毕，不懂的欢迎游戏圈留言。跟我路标走，带你去找一个好玩的东西", 0, true)
+			this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找斗技、功法。", 0, true)
 	}
 
 	/**

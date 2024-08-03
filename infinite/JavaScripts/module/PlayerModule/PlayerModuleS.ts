@@ -200,10 +200,10 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
                 this.getClient(targetPlayer).net_updateHp(maxHp);
                 targetPlayer.character.worldTransform.position = Utils.getWorldLocation();
             });
-        }
-        else {
+        } else {
             targetPlayerData.playerLifebar.hp = curHp;
         }
+
         if (sendPlayer) {
             let maxHp = 0;
             if (targetPlayerData.isDie) {

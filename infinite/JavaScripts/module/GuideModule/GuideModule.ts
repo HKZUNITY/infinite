@@ -2,6 +2,7 @@ import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import { Utils } from "../../Tools/utils";
 import { Notice } from "../../common/notice/Notice";
 import GlobalData from "../../const/GlobalData";
+import { BagModuleC } from '../BagModule/BagModule';
 import GuidePanel from "./ui/GuidePanel";
 
 export class GuideData extends Subdata {
@@ -29,6 +30,13 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
         }
         return this.guidePanel
     }
+    private bagModuleC: BagModuleC = null;
+    private get getBagModuleC(): BagModuleC {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
@@ -36,18 +44,19 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     private curStep: number = -1;
     public onNextStepAction: Action = new Action();
 
-    protected onEnterScene(sceneType: number): void {
+    public startFirst(): void {
         if (this.data.isFirst) {
             this.onNextStepAction.add(() => {
                 this.curStep++;
                 if (this.curStep > this.totalStep) {
                     this.onCompleted();
-                    // this.startGuide();//引导
                     return;
                 }
                 this.getGuidePanel.guideByStep(this.curStep);
             });
             this.onNextStepAction.call();
+        } else {
+            this.find();
         }
     }
 
@@ -61,7 +70,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     private prePlayerLoc: mw.Vector = mw.Vector.zero;
 
     /**开始引导 */
-    public startGuide(targetLoc: mw.Vector): void {
+    public startGuide(targetLoc: mw.Vector, onComplete: () => void = null): void {
         if (!targetLoc) return;
 
         // if (this.targetGuideEffectId) {
@@ -83,7 +92,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             this.prePlayerLoc = playerLoc;
 
             let distance = mw.Vector.distance(playerLoc, targetLoc);
-            if (distance <= 1000) {
+            if (distance <= 100) {
                 TimeUtil.clearInterval(this.guideIntervalId);
                 this.guideIntervalId = null;
                 // if (this.targetGuideEffectId) {
@@ -97,6 +106,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
                     this.guideEffectIds.length = 0;
                 }
                 Notice.showDownNotice("已到达目标点附近");
+                if (onComplete) onComplete();
                 return;
             }
 
@@ -159,11 +169,52 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
         }, 0.1);
     }
 
-    /**
-     * 完成新手引导
-     */
+    /**完成新手引导 */
     public onCompleted(): void {
         this.server.net_onCompleted();
+        this.find();
+    }
+
+    public find(): void {
+        if (!this.getBagModuleC.isHasBagId(10001)) {
+            this.startGuide(this.getBagModuleC.getBagObVec(10001), () => {
+                if (!this.getBagModuleC.isHasBagId(10037)) {
+                    this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
+                        if (!this.getBagModuleC.isHasBagId(20023)) {
+                            this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
+                                if (!this.getBagModuleC.isHasBagId(30040)) {
+                                    this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        } else {
+            if (!this.getBagModuleC.isHasBagId(10037)) {
+                this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
+                    if (!this.getBagModuleC.isHasBagId(20023)) {
+                        this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
+                            if (!this.getBagModuleC.isHasBagId(20023)) {
+                                this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                            }
+                        });
+                    }
+                });
+            } else {
+                if (!this.getBagModuleC.isHasBagId(20023)) {
+                    this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
+                        if (!this.getBagModuleC.isHasBagId(20023)) {
+                            this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                        }
+                    });
+                } else {
+                    if (!this.getBagModuleC.isHasBagId(20023)) {
+                        this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                    }
+                }
+            }
+        }
     }
 }
 

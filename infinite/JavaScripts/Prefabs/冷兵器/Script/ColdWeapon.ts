@@ -1,6 +1,7 @@
 import { PlayerManagerExtesion, } from '../../../Modified027Editor/ModifiedPlayer';
 import { SpawnManager } from '../../../Modified027Editor/ModifiedSpawn';
 import Console from "../../../Tools/Console";
+import { Notice } from '../../../common/notice/Notice';
 import { IColdWeaponElement } from "../../../config/ColdWeapon";
 import { PrefabEvent } from "../../PrefabEvent";
 import { SkillRectCheck } from "./SkillRectCheck";
@@ -88,11 +89,15 @@ export class ColdWeapon {
      * @param index 对应的序列号
      */
     public attack(index: number) {
-        if (!this._weapon) return;
+        if (!this._weapon) {
+            Notice.showDownNotice(`还未装备斗技,去寻找斗技`);
+            return;
+        }
         this.isPlaying = true;
         this._weapon.playAnimation(index,//播放完成
             (curActionIndex: number, maxIndex: number) => {
                 this._curComboTime = 0;
+                Event.dispatchToLocal("AttackMp");
             },
             //到达打击点
             this.hitTargets.bind(this),

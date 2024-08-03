@@ -241,8 +241,15 @@ export default class HUDPanel extends HUDPanel_Generate {
 	public updateLvExpCoin(lv: number, exp: number, coin: number, addAtk: number): void {
 		this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
-		this.mExpTextBlock.text = exp + "/" + ((lv + 1) * 100);
+		this.mExpTextBlock.text = `经验：${exp}/${((lv + 1) * 100)}`;
 		this.mCoinTextBlock.text = coin + "";
+		let atk = Math.round(Utils.getAtk(lv) * addAtk);
+		GlobalData.atk = atk;
+		this.mAtkTextBlock.text = "攻击力：" + atk;
+		ColdWeapon.getInstance().updateHitDamage(atk);
+	}
+
+	public updateAtk(lv: number, addAtk: number): void {
 		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;
 		this.mAtkTextBlock.text = "攻击力：" + atk;
@@ -255,14 +262,15 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 	public updateMp(curMp: number, maxMp: number): void {
 		this.mMpProgressBar.currentValue = curMp / maxMp;
-		this.mMpTextBlock.text = curMp + "/" + maxMp;
+		this.mMpTextBlock.text = `斗气：${curMp}/${maxMp}`;
 	}
 
 	public updateHp(curHp: number, maxHp: number): void {
 		if (curHp < 0) curHp = 0;
 		GlobalData.hp = maxHp;
+		if (curHp > maxHp) curHp = maxHp;
 		this.mHpProgressBar.currentValue = curHp / maxHp;
-		this.mHpTextBlock.text = curHp + "/" + maxHp;
+		this.mHpTextBlock.text = `血量：${curHp}/${maxHp}`;
 
 		if (this.mHpProgressBar.currentValue == 1) {
 			this.endDeadCountDown();
@@ -276,6 +284,11 @@ export default class HUDPanel extends HUDPanel_Generate {
 	private curInputIndex: number = -1;
 	private atk(index: number): void {
 		this.mAtkButton.onPressed.add(() => {
+			if (this.getHudModuleC.getMp < 5) {
+				Notice.showDownNotice(`斗气不足`);
+				Notice.showDownNotice(`升级增加斗气储量`);
+				return;
+			}
 			if (this.curInputIndex != -1) return;
 			ColdWeapon.getInstance().attack(index);
 			this.curInputIndex = index;

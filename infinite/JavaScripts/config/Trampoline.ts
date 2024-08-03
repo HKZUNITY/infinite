@@ -1,5 +1,5 @@
 import { ConfigBase, IElementBase } from "./ConfigBase";
-const EXCELDATA:Array<Array<any>> = [["id","TriggerGuid","ModelGuid"],["","",""],[1,"346518AF","117BDA33"],[2,"1FE69987","322A379A"]];
+const EXCELDATA:Array<Array<any>> = [["id","TriggerGuid","ModelGuid"],["","",""],[1,"02EC2335","14DAF24C"]];
 export interface ITrampolineElement extends IElementBase{
  	/**唯一ID*/
 	id:number

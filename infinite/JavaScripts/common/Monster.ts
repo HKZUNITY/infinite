@@ -48,7 +48,7 @@ export default class Monster extends Script {
     private monsterId: number = 0;
     @mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
     private hp: number = 0;
-    @mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp" })
+    @mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp", replicated: true, onChanged: "onHpChanged" })
     private maxHp: number = 0;
     // @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
     private moveSpeed: number = 450;

@@ -121,7 +121,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
      * @param hp 
      */
     private addExpAndCoin(player: mw.Player, hp: number): void {
-        let expOrCoin = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
+        let expOrCoin = Math.round((hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4)));
         let playerData = DataCenterS.getData(player, PlayerData);
         let preLv = playerData.playerLv;
         playerData.saveExpAndCoin(expOrCoin);

@@ -6830,7 +6830,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
     updateLvExpCoin(lv, exp, coin, addAtk) {
         this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
         this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
-        this.mExpTextBlock.text = `经验：${exp}/${((lv + 1) * 100)}`;
+        this.mExpTextBlock.text = `经验：${Math.round(exp)}/${((lv + 1) * 100)}`;
         this.mCoinTextBlock.text = coin + "";
         let atk = Math.round(Utils.getAtk(lv) * addAtk);
         GlobalData.atk = atk;
@@ -6844,7 +6844,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         ColdWeapon.getInstance().updateHitDamage(atk);
     }
     updateCoin(coin) {
-        this.mCoinTextBlock.text = coin + "";
+        this.mCoinTextBlock.text = Math.round(coin) + "";
     }
     updateMp(curMp, maxMp) {
         this.mMpProgressBar.currentValue = curMp / maxMp;
@@ -11973,7 +11973,7 @@ class PlayerModuleS extends ModuleS {
      * @param hp
      */
     addExpAndCoin(player, hp) {
-        let expOrCoin = (hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4));
+        let expOrCoin = Math.round((hp / (Utils.getRandomInteger(1, 2) == 1 ? 2 : 4)));
         let playerData = DataCenterS.getData(player, PlayerData);
         let preLv = playerData.playerLv;
         playerData.saveExpAndCoin(expOrCoin);
@@ -12902,7 +12902,7 @@ __decorate([
     mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
 ], Monster.prototype, "hp", void 0);
 __decorate([
-    mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp" })
+    mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp", replicated: true, onChanged: "onHpChanged" })
 ], Monster.prototype, "maxHp", void 0);
 
 var foreign7 = /*#__PURE__*/Object.freeze({

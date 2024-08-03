@@ -28,7 +28,7 @@ export default class Loading extends Loading_Generate {
 		this.id = TimeUtil.setInterval(() => {
 			if (this.index >= this.ids.length) this.index = 0;
 			this.mImage.imageGuid = this.ids[this.index++];
-		}, 1.5);
+		}, 3);
 	}
 
 	protected onHide(): void {

@@ -605,7 +605,6 @@ export class Utils {
             mw.assetIDChangeIconUrlRequest([icon]).then(() => {
                 try {
                     let assetIconData = mw.getAssetIconDataByAssetID(icon);
-                    console.error(`icon:${icon}`);
                     image.setImageByAssetIconData(assetIconData);
                     this.assetIconDataMap.set(icon, assetIconData);
                 } catch (error) { }

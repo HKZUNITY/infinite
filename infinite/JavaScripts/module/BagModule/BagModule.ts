@@ -495,6 +495,11 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     private isInitComplete: boolean = false;
     private async initTrigger(): Promise<void> {
         this.getLoading.show();
+        let timeOutId = setTimeout(() => {
+            console.error(`提前加载完成`);
+            this.getLoading.hide();
+            this.getGuideModuleC.startFirst();
+        }, 120 * 1000);
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("04E0E41B");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();
@@ -502,7 +507,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         for (let i = 0; i < parent.length; ++i) {
             // await new Promise<void>(async (resolve: () => void) => {
             let trigger = parent[i] as mw.Trigger;
-            await trigger.asyncReady();
+            // await trigger.asyncReady();
             let bagId = Number(trigger.name.split(`-`)[1]);
             if (isNaN(bagId) || bagId < 0) return;
             let isInitItemSuccessfully = await this.isInitItemSuccessfully(bagId, trigger.worldTransform.position);
@@ -516,6 +521,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             // }, 0.1 * 1000);
             // });
         }
+        clearTimeout(timeOutId);
         this.isInitComplete = true;
         this.getLoading.hide();
         this.getGuideModuleC.startFirst();
@@ -551,8 +557,6 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         bagItemGo.worldTransform.position = new mw.Vector(offset.x + loc.x, offset.y + loc.y, offset.z + loc.z);
         bagItemGo.worldTransform.rotation = new mw.Rotation(bagInfoElement.AssetOffsetRot);
         bagItemGo.worldTransform.scale = bagInfoElement.AssetOffsetSca;
-
-
         let effectGuid: string = "";
         let effectId: number = null;
         switch (bagInfoElement.Type) {
@@ -773,7 +777,6 @@ export class BagPanel extends BagPanel_Generate {
         GameConfig.BagInfo.getAllElement().forEach((value: IBagInfoElement) => {
             let key = value.Type - 1;
             if (key < 0) return;
-            console.error(`key:${key}`);
             if (this.bagIdsMap.has(key)) {
                 this.bagIdsMap.get(key)?.push(value.ID);
             } else {
@@ -1029,7 +1032,7 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
                 break;
         }
         this.mNameTextBlock.text = bagInfoElement?.Name;
-        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>\n提升后的<size=40><b><color=#yellow>血量：${this.getBagModuleC.getAddedHpByUsing(this.bagId)}，攻击力：${this.getBagModuleC.getAddedAtkByUsing(this.bagId)}</color></b></size>`;
+        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>`;
         let assetId = bagInfoElement?.AssetId;
         Utils.setImageByAssetIconData(this.mIconImage, assetId);
     }

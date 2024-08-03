@@ -49,5 +49,5 @@ export default class GlobalData {
     public static atk: number = 0;
     public static hp: number = 0;
 
-    public static totalBagLen: number = 283;
+    public static totalBagLen: number = 276;
 }

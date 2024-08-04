@@ -2887,14 +2887,14 @@ class Loading extends Loading_Generate$1 {
             if (this.index >= this.ids.length)
                 this.index = 0;
             this.mImage.imageGuid = this.ids[this.index++];
-        }, 3);
+        }, 1.5);
     }
     onHide() {
         TimeUtil.clearInterval(this.id);
     }
     updateBar(value) {
-        this.mTextBlock_1.text = `${((value / GlobalData.totalBagLen) * 100).toFixed(0)}%`;
-        this.mProgressBar.currentValue = value / GlobalData.totalBagLen;
+        this.mTextBlock_1.text = `${((value / 100) * 100).toFixed(0)}%`;
+        this.mProgressBar.currentValue = value / 100;
     }
 }
 
@@ -6830,7 +6830,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
     updateLvExpCoin(lv, exp, coin, addAtk) {
         this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
         this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
-        this.mExpTextBlock.text = `经验：${Math.round(exp)}/${((lv + 1) * 100)}`;
+        this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * 100)}`;
         this.mCoinTextBlock.text = coin + "";
         let atk = Math.round(Utils.getAtk(lv) * addAtk);
         GlobalData.atk = atk;
@@ -6844,7 +6844,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         ColdWeapon.getInstance().updateHitDamage(atk);
     }
     updateCoin(coin) {
-        this.mCoinTextBlock.text = Math.round(coin) + "";
+        this.mCoinTextBlock.text = Math.round(coin).toFixed(0) + "";
     }
     updateMp(curMp, maxMp) {
         this.mMpProgressBar.currentValue = curMp / maxMp;
@@ -9556,7 +9556,7 @@ class GuidePanel extends GuideUI_Generate$1 {
         }
     }
     guide0() {
-        this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, "欢迎来到斗帝都市，我来给你介绍一下所有按钮操作吧。", 0, true);
+        this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, "欢迎来到斗破苍穹乐园，我来给你介绍一下所有按钮操作吧。", 0, true);
     }
     guide1() {
         mw.localToViewport(this.getHudPanel.mVirtualJoystickPanel.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
@@ -10047,7 +10047,6 @@ class BagModuleC extends ModuleC {
     onEnterScene(sceneType) {
         this.initBagData();
         this.initTrigger().then(() => {
-            this.enterScenceUsing();
         });
     }
     enterScenceUsing() {
@@ -10423,9 +10422,11 @@ class BagModuleC extends ModuleC {
         this.getLoading.show();
         let timeOutId = setTimeout(() => {
             console.error(`提前加载完成`);
+            clearTimeout(timeOutId);
             this.getLoading.hide();
+            this.enterScenceUsing();
             this.getGuideModuleC.startFirst();
-        }, 120 * 1000);
+        }, 30 * 1000);
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("04E0E41B");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();
@@ -10443,16 +10444,19 @@ class BagModuleC extends ModuleC {
             trigger.onEnter.add((gameObject) => {
                 this.onEnterTrigger(gameObject, bagId);
             });
-            this.getLoading.updateBar(i + 1);
+            this.getLoading.updateBar((i + 1) * 10);
+            if (i == 9) {
+                clearTimeout(timeOutId);
+                this.getLoading.hide();
+                this.enterScenceUsing();
+                this.getGuideModuleC.startFirst();
+            }
             // setTimeout(() => {
             //     return resolve();
             // }, 0.1 * 1000);
             // });
         }
-        clearTimeout(timeOutId);
         this.isInitComplete = true;
-        this.getLoading.hide();
-        this.getGuideModuleC.startFirst();
         console.error(`加载完成`);
     }
     onEnterTrigger(go, bagId) {

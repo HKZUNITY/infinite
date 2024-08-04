@@ -125,7 +125,7 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 	private guide0(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
-			this.centPos, "欢迎来到斗帝都市，我来给你介绍一下所有按钮操作吧。", 0, true)
+			this.centPos, "欢迎来到斗破苍穹乐园，我来给你介绍一下所有按钮操作吧。", 0, true)
 	}
 
 	private guide1(): void {

@@ -241,7 +241,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 	public updateLvExpCoin(lv: number, exp: number, coin: number, addAtk: number): void {
 		this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
-		this.mExpTextBlock.text = `经验：${Math.round(exp)}/${((lv + 1) * 100)}`;
+		this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * 100)}`;
 		this.mCoinTextBlock.text = coin + "";
 		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;
@@ -257,7 +257,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 	}
 
 	public updateCoin(coin: number): void {
-		this.mCoinTextBlock.text = Math.round(coin) + "";
+		this.mCoinTextBlock.text = Math.round(coin).toFixed(0) + "";
 	}
 
 	public updateMp(curMp: number, maxMp: number): void {

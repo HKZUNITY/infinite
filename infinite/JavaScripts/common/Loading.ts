@@ -28,7 +28,7 @@ export default class Loading extends Loading_Generate {
 		this.id = TimeUtil.setInterval(() => {
 			if (this.index >= this.ids.length) this.index = 0;
 			this.mImage.imageGuid = this.ids[this.index++];
-		}, 3);
+		}, 1.5);
 	}
 
 	protected onHide(): void {
@@ -36,7 +36,7 @@ export default class Loading extends Loading_Generate {
 	}
 
 	public updateBar(value: number): void {
-		this.mTextBlock_1.text = `${((value / GlobalData.totalBagLen) * 100).toFixed(0)}%`;
-		this.mProgressBar.currentValue = value / GlobalData.totalBagLen;
+		this.mTextBlock_1.text = `${((value / 100) * 100).toFixed(0)}%`;
+		this.mProgressBar.currentValue = value / 100;
 	}
 }

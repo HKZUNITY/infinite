@@ -148,7 +148,6 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     protected onEnterScene(sceneType: number): void {
         this.initBagData();
         this.initTrigger().then(() => {
-            this.enterScenceUsing();
         });
     }
 
@@ -503,9 +502,11 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.getLoading.show();
         let timeOutId = setTimeout(() => {
             console.error(`提前加载完成`);
+            clearTimeout(timeOutId);
             this.getLoading.hide();
+            this.enterScenceUsing();
             this.getGuideModuleC.startFirst();
-        }, 120 * 1000);
+        }, 30 * 1000);
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("04E0E41B");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();
@@ -521,16 +522,19 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             trigger.onEnter.add((gameObject: mw.GameObject) => {
                 this.onEnterTrigger(gameObject, bagId);
             });
-            this.getLoading.updateBar(i + 1);
+            this.getLoading.updateBar((i + 1) * 10);
+            if (i == 9) {
+                clearTimeout(timeOutId);
+                this.getLoading.hide();
+                this.enterScenceUsing();
+                this.getGuideModuleC.startFirst();
+            }
             // setTimeout(() => {
             //     return resolve();
             // }, 0.1 * 1000);
             // });
         }
-        clearTimeout(timeOutId);
         this.isInitComplete = true;
-        this.getLoading.hide();
-        this.getGuideModuleC.startFirst();
         console.error(`加载完成`);
     }
 

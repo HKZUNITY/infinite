@@ -4213,7 +4213,7 @@ class TopNoticeComponent2 {
 //Notice提示存在时间
 TopNoticeComponent2.NoticeItemLifeTime = 2;
 //Notice提示最多存在数量
-TopNoticeComponent2.NoticeItemMaxCount = 10;
+TopNoticeComponent2.NoticeItemMaxCount = 5;
 //Notice提示ui垂直间隔
 TopNoticeComponent2.NoticeItemIntervalSpace = 65;
 //Notice提示同类型最多存在数量

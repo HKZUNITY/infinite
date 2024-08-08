@@ -122,7 +122,7 @@ class TopNoticeComponent2 implements NoticeComponent<TopNoticeItem> {
     //Notice提示存在时间
     private static NoticeItemLifeTime = 2;
     //Notice提示最多存在数量
-    private static NoticeItemMaxCount = 10;
+    private static NoticeItemMaxCount = 5;
     //Notice提示ui垂直间隔
     private static NoticeItemIntervalSpace = 65;
     //Notice提示同类型最多存在数量

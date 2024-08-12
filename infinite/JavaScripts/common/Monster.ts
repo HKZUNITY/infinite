@@ -296,7 +296,7 @@ export default class Monster extends Script {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
-            if (this.maxHp > 100000) this.maxHp = 100000;
+            if (this.maxHp > 999999999) this.maxHp = 999999999;
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState.Activate;
@@ -470,7 +470,7 @@ export default class Monster extends Script {
             let hitGo = hitResults[i].gameObject;
             if (hitGo instanceof mw.Character && hitGo?.player) {
                 let targetGameObjectId = hitGo?.gameObjectId;
-                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, this.attackInfo.damages[this.attackIndex]);
+                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / 10));
             }
         }
     }

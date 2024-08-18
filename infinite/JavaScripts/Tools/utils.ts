@@ -522,16 +522,16 @@ export class Utils {
         return playerLevelTxt;
     }
 
-
-
-
     private static locs: mw.Vector[] =
         [
-            new mw.Vector(2800, -6300, 500),
-            new mw.Vector(3000, -8000, 500),
-            new mw.Vector(4500, -6300, 500),
-            new mw.Vector(4500, -8000, 500),
-            new mw.Vector(3700, -7200, 500)
+            new mw.Vector(-4065, 6446, 2000),
+            new mw.Vector(-2596, 7032, 2000),
+            new mw.Vector(-930, 7584, 2000),
+            new mw.Vector(1277, 8205, 2000),
+            new mw.Vector(-6190, 3778, 2000),
+            new mw.Vector(-6496, 1632, 2000),
+            new mw.Vector(-6576, -993, 2000),
+            new mw.Vector(-5775, -2742, 2000),
         ];
     public static getWorldLocation(): mw.Vector {
         return this.locs[this.getRandomInteger(0, this.locs.length - 1)];

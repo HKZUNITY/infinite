@@ -182,8 +182,8 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
                     this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                         if (!this.getBagModuleC.isHasBagId(20023)) {
                             this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                                if (!this.getBagModuleC.isHasBagId(30040)) {
-                                    this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                                if (!this.getBagModuleC.isHasBagId(30007)) {
+                                    this.startGuide(this.getBagModuleC.getBagObVec(30007));
                                 }
                             });
                         }
@@ -195,8 +195,8 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
                 this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                     if (!this.getBagModuleC.isHasBagId(20023)) {
                         this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                            if (!this.getBagModuleC.isHasBagId(20023)) {
-                                this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                            if (!this.getBagModuleC.isHasBagId(30007)) {
+                                this.startGuide(this.getBagModuleC.getBagObVec(30007));
                             }
                         });
                     }
@@ -204,13 +204,13 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             } else {
                 if (!this.getBagModuleC.isHasBagId(20023)) {
                     this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                        if (!this.getBagModuleC.isHasBagId(20023)) {
-                            this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                        if (!this.getBagModuleC.isHasBagId(30007)) {
+                            this.startGuide(this.getBagModuleC.getBagObVec(30007));
                         }
                     });
                 } else {
-                    if (!this.getBagModuleC.isHasBagId(20023)) {
-                        this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                    if (!this.getBagModuleC.isHasBagId(30007)) {
+                        this.startGuide(this.getBagModuleC.getBagObVec(30007));
                     }
                 }
             }

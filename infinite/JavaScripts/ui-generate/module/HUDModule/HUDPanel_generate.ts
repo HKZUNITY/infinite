@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -316,6 +316,20 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mAddCoinButton_Internal
 	}
+	private mDiamondTextBlock_Internal: mw.TextBlock
+	public get mDiamondTextBlock(): mw.TextBlock {
+		if(!this.mDiamondTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/DiamondCanvas/mDiamondTextBlock') as mw.TextBlock
+		}
+		return this.mDiamondTextBlock_Internal
+	}
+	private mAddDiamondButton_Internal: mw.Button
+	public get mAddDiamondButton(): mw.Button {
+		if(!this.mAddDiamondButton_Internal&&this.uiWidgetBase) {
+			this.mAddDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/DiamondCanvas/mAddDiamondButton') as mw.Button
+		}
+		return this.mAddDiamondButton_Internal
+	}
 	private mKillTipCanvas_Internal: mw.Canvas
 	public get mKillTipCanvas(): mw.Canvas {
 		if(!this.mKillTipCanvas_Internal&&this.uiWidgetBase) {
@@ -480,6 +494,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mAddCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mAddDiamondButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mAddDiamondButton");
+		});
+		this.mAddDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		//按钮多语言
 		
 		//文本多语言
@@ -509,6 +529,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mCoinTextBlock)
+		
+	
+		this.initLanguage(this.mDiamondTextBlock)
 		
 	
 		this.initLanguage(this.mKillTipTextBlock1)

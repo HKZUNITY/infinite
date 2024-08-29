@@ -4,6 +4,7 @@
  * TIME: 2023.09.26-13.56.59
  */
 
+import GlobalData from "../../../const/GlobalData";
 import GuideUI_Generate from "../../../ui-generate/module/GuideModule/GuideUI_generate";
 import HUDPanel from "../../HUDModule/ui/HUDPanel";
 import { GuideModuleC } from "../GuideModule";
@@ -143,19 +144,19 @@ export default class GuidePanel extends GuideUI_Generate {
 	private guide3(): void {
 		mw.localToViewport(this.getHudPanel.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size,
-			new mw.Vector2(700, 350), "跳跃按钮，连续点击会进行二段跳，会消耗斗气。", 0, true)
+			new mw.Vector2(700, 350), `跳跃按钮，连续点击会进行二段跳，会消耗${GlobalData.mpStr}。`, 0, true)
 	}
 
 	private guide4(): void {
 		mw.localToViewport(this.getHudPanel.mSprintButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mSprintButton.size,
-			new mw.Vector2(700, 550), "冲刺按钮，可以直接瞬移一段距离，会消耗斗气。", 0, true)
+			new mw.Vector2(700, 550), `冲刺按钮，可以直接瞬移一段距离，会消耗${GlobalData.mpStr}。`, 0, true)
 	}
 
 	private guide5(): void {
 		mw.localToViewport(this.getHudPanel.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size,
-			new mw.Vector2(460, 550), "攻击按钮，连续点击可释放炫酷的连招，会消耗斗气。", 0, true)
+			new mw.Vector2(460, 550), `攻击按钮，连续点击可释放炫酷的连招，会消耗${GlobalData.mpStr}。`, 0, true)
 	}
 
 	private guide6(): void {
@@ -209,7 +210,7 @@ export default class GuidePanel extends GuideUI_Generate {
 	private guide14(): void {
 		mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size,
-			new mw.Vector2(550, 350), "角色属性，血量、斗气，攻击力会随等级提升而提升。", 1, true)
+			new mw.Vector2(550, 350), `角色属性，血量、${GlobalData.mpStr}，攻击力会随等级提升而提升。`, 1, true)
 	}
 
 	private guide15(): void {

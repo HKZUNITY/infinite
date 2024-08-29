@@ -50,4 +50,6 @@ export default class GlobalData {
     public static hp: number = 0;
 
     public static totalBagLen: number = 276;
+
+    public static mpStr: string = `斗气`;
 }

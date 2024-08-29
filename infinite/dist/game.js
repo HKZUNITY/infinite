@@ -856,7 +856,7 @@ var foreign17 = /*#__PURE__*/Object.freeze({
     AssetsConfig: AssetsConfig
 });
 
-const EXCELDATA$d = [["ID", "Name", "Type", "AssetId", "Rarity", "HumanoidSlotType", "OffsetPos", "OffsetRot", "OffsetSca", "ObjId", "AssetOffsetPos", "AssetOffsetRot", "AssetOffsetSca"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "斗技|皮肤|装备|魔兽", 0, null, 0, 0, null, null, null, null, null, null, null], [10001, "悟空法杖", 1, "118140", 0, 0, null, null, null, "118140", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10002, "赛博自来也长枪", 1, "122953", 0, 0, null, null, null, "122953", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10003, "海王双头刀", 1, "118146", 0, 0, null, null, null, "118146", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10004, "美国队长神锤", 1, "152954", 2, 0, null, null, null, "152954", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10005, "毒液斧头", 1, "118143", 0, 0, null, null, null, "118143", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10006, "灭霸斧", 1, "122960", 2, 0, null, null, null, "122960", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10007, "鸣人手里剑", 1, "33861", 1, 0, null, null, null, "33861", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10008, "未来战士黄金剑", 1, "218730", 2, 0, null, null, null, "218730", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10009, "森林哨兵魔法仗", 1, "210791", 0, 0, null, null, null, "210791", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10010, "手枪(索尼克专用)", 1, "221099", 1, 0, null, null, null, "221099", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10011, "信号枪(粉毛怪专用)", 1, "43702", 1, 0, null, null, null, "43702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10012, "刀(纲手专用)", 1, "103067", 1, 0, null, null, null, "103067", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10013, "刀(李洛克专用)", 1, "103080", 1, 0, null, null, null, "103080", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10014, "镰刀(干柿鬼鲛专用)", 1, "103075", 1, 0, null, null, null, "103075", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10015, "镰刀(赛博女孩专用)", 1, "122946", 1, 0, null, null, null, "122946", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10016, "冰封剑(黑寡妇专用)", 1, "31710", 1, 0, null, null, null, "31710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10017, "怪物爪刀", 1, "103069", 1, 0, null, null, null, "103069", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10018, "大砍刀(卡卡西专用)", 1, "122961", 1, 0, null, null, null, "122961", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10019, "法杖(宇智波鼬专用)", 1, "272767", 1, 0, null, null, null, "272767", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10020, "水枪", 1, "166941", 2, 0, null, null, null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10021, "冰钻剑", 1, "31712", 2, 0, null, null, null, "31712", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10022, "屠刀", 1, "118142", 2, 0, null, null, null, "118142", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10023, "蓝色法杖(洛基专用)", 1, "210651", 2, 0, null, null, null, "210651", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10024, "镰刀(太阳神专用)", 1, "121672", 3, 0, null, null, null, "121672", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10025, "恶魔剑(宇智波斑爷专用)", 1, "122956", 3, 0, null, null, null, "122956", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10026, "剑(纳米机器人专用)", 1, "103068", 2, 0, null, null, null, "103068", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10027, "镰刀(死侍专用)", 1, "103083", 2, 0, null, null, null, "103083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10028, "  荧光剑(火山哨兵专用)", 1, "198698", 2, 0, null, null, null, "198698", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10029, "狂热剑(绯红女巫专用)", 1, "29057", 2, 0, null, null, null, "29057", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10030, "充气锤子", 1, "272130", 1, 0, null, null, null, "272130", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10031, "木法杖(毒液蜘蛛侠专用)", 1, "300436", 3, 0, null, null, null, "300436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10032, "瓜子盾", 1, "121541", 0, 0, null, null, null, "121541", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10033, "盾(浩克专用)", 1, "122950", 3, 0, null, null, null, "122950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10034, "终极冰环剑", 1, "31734", 3, 0, null, null, null, "31734", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10035, "散弹喷枪(雏田专用)", 1, "155702", 3, 0, null, null, null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10036, "火枪(路飞专用)", 1, "122726", 3, 0, null, null, null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10037, "紫光剑(佐助专用)", 1, "297029", 3, 0, null, null, null, "297029", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10038, "激光枪(天神专用)", 1, "222534", 3, 0, null, null, null, "222534", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10039, "剑(金刚狼专用)", 1, "269895", 3, 0, null, null, null, "269895", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10040, "激光枪(钢铁侠专用)", 1, "122720", 3, 0, null, null, null, "122720", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20001, "狐耳少女", 2, "361906", 3, 0, null, null, null, "65710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20002, "邪恶使者", 2, "357571", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20003, "长款大衣女", 2, "357567", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20004, "海绵宝宝", 2, "357566", 3, 0, null, null, null, "63711", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20005, "钢铁侠", 2, "357563", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20006, "灭霸", 2, "357556", 3, 0, null, null, null, "112568", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20007, "刺猬小子", 2, "357555", 3, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20008, "邪恶使者", 2, "351891", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20009, "蓝衣男", 2, "351680", 3, 0, null, null, null, "127800", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20010, "黑衣男", 2, "351598", 3, 0, null, null, null, "224168", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20011, "毁灭战士", 2, "351597", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20012, "雷神", 2, "357570", 2, 0, null, null, null, "111768", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20013, "黑寡妇", 2, "357568", 2, 0, null, null, null, "111240", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20014, "可爱女", 2, "351500", 2, 0, null, null, null, "269652", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20015, "丸子头女", 2, "351497", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20016, "西方神女", 2, "351405", 3, 0, null, null, null, "64410", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20017, "黑裙少女", 2, "351404", 3, 0, null, null, null, "128834", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20018, "短发女", 2, "351026", 2, 0, null, null, null, "115849", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20019, "旗袍女", 2, "351025", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20020, "披风男", 2, "351024", 1, 0, null, null, null, "96576", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20021, "长发女", 2, "351004", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20022, "双马尾女", 2, "350987", 1, 0, null, null, null, "59857", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20023, "长发短裙女", 2, "350973", 1, 0, null, null, null, "63648", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20024, "双马尾女", 2, "350959", 0, 0, null, null, null, "248351", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20025, "双马尾女", 2, "350958", 0, 0, null, null, null, "64774", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20026, "百褶裙女孩", 2, "350756", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20027, "短发时尚女", 2, "350752", 0, 0, null, null, null, "111241", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20028, "长马尾女孩", 2, "350746", 1, 0, null, null, null, "121948", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20029, "长耳女", 2, "350744", 1, 0, null, null, null, "64458", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20030, "风衣长发女", 2, "350739", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20031, "恶魔角女", 2, "350738", 1, 0, null, null, null, "64305", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20032, "和服女", 2, "350568", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20033, "发卡女", 2, "350318", 1, 0, null, null, null, "181365", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20034, "女仆套装女", 2, "350569", 2, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20035, "帽子女", 2, "350314", 1, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20036, "魔法女孩", 2, "350260", 1, 0, null, null, null, "111088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20037, "长裙女", 2, "349270", 2, 0, null, null, null, "124880", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20038, "杀手女", 2, "347528", 3, 0, null, null, null, "137518", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20039, "巫医", 2, "145319", 3, 0, null, null, null, "119773", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20040, "长腿妈妈", 2, "143403", 2, 0, null, null, null, "119229", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20041, "玄魁", 2, "143402", 2, 0, null, null, null, "121882", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20042, "邪恶女巫", 2, "143401", 2, 0, null, null, null, "119745", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20043, "小丑女", 2, "143400", 1, 0, null, null, null, "63539", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20044, "万圣节女", 2, "143399", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20045, "屠夫", 2, "143398", 0, 0, null, null, null, "109144", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20046, "魔莱坞学院院长", 2, "143396", 1, 0, null, null, null, "64141", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20047, "迷雾鬼影", 2, "143395", 0, 0, null, null, null, "109058", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20048, "蓝毛怪", 2, "143394", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20049, "狗头毛毛虫", 2, "143390", 1, 0, null, null, null, "118079", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20050, "粉毛怪", 2, "143389", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20051, "索尼克", 2, "143387", 1, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20052, "Rainbow friends", 2, "143385", 3, 0, null, null, null, "119483", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20053, " Enderman", 2, "143384", 3, 0, null, null, null, "119112", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20054, "Bunzo bunny", 2, "143383", 3, 0, null, null, null, "120575", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20055, "宇智波佐助", 2, "143236", 2, 0, null, null, null, "65780", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20056, "长门", 2, "143233", 2, 0, null, null, null, "122779", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20057, "宇智波鼬", 2, "143231", 2, 0, null, null, null, "122779", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20058, "宇智波带土", 2, "143230", 2, 0, null, null, null, "122779", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20059, "宇智波斑", 2, "143229", 2, 0, null, null, null, "129936", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20060, "小樱", 2, "143227", 1, 0, null, null, null, "111519", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20061, "悟空", 2, "142932", 0, 0, null, null, null, "66554", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20062, "鸣人", 2, "142925", 1, 0, null, null, null, "66414", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20063, "洛克李", 2, "142924", 0, 0, null, null, null, "116791", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20064, "路飞", 2, "142922", 2, 0, null, null, null, "121533", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20065, "索隆", 2, "142923", 1, 0, null, null, null, "75457", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20066, "卡卡西", 2, "142920", 1, 0, null, null, null, "116791", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20067, "干柿鬼鲛", 2, "142917", 1, 0, null, null, null, "122779", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20068, "飞段", 2, "142916", 0, 0, null, null, null, "122779", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20069, "大蛇丸", 2, "142915", 1, 0, null, null, null, "122919", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20070, "雏田", 2, "142913", 0, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20071, "蜘蛛侠", 2, "142907", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20072, "鹰眼", 2, "142906", 2, 0, null, null, null, "111403", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20073, "蚁人", 2, "142905", 2, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20074, "万磁王", 2, "142904", 2, 0, null, null, null, "111356", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20075, "死侍", 2, "142903", 2, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20076, "神奇女侠", 2, "142902", 1, 0, null, null, null, "125737", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20077, "闪电侠", 2, "142901", 2, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20078, "奇异博士", 2, "142900", 1, 0, null, null, null, "111612", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20079, "灭霸", 2, "142899", 3, 0, null, null, null, "112568", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20080, "绿巨人", 2, "142897", 2, 0, null, null, null, "75457", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20081, "绿灯侠", 2, "142896", 2, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20082, "洛基", 2, "142895", 1, 0, null, null, null, "111356", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20083, "雷神", 2, "142894", 2, 0, null, null, null, "111768", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20084, "外星人", 2, "142880", 3, 0, null, null, null, "75457", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20085, "兔女郎", 2, "142879", 2, 0, null, null, null, "111516", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20086, "天神", 2, "142310", 3, 0, null, null, null, "111282", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20087, "新娘", 2, "142274", 1, 0, null, null, null, "60077", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20088, "哨兵冰", 2, "142272", 1, 0, null, null, null, "129087", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20089, "兔人装", 2, "142138", 0, 0, null, null, null, "64709", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20090, "猫人装", 2, "142137", 0, 0, null, null, null, "63868", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20091, "鸡人装", 2, "142136", 0, 0, null, null, null, "129334", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20092, "海绵宝宝装", 2, "142135", 0, 0, null, null, null, "63711", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20093, "回声战士", 2, "141606", 3, 0, null, null, null, "63292", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20094, "成都五彩熊", 2, "141156", 1, 0, null, null, null, "126679", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20095, "中年冥神", 2, "141147", 2, 0, null, null, null, "119393", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20096, "毒液", 2, "142886", 1, 0, null, null, null, "75457", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20097, "旗袍女", 2, "351025", 0, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20098, "萝莉女", 2, "350740", 0, 0, null, null, null, "64559", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20099, "长款大衣女", 2, "349215", 0, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20100, "恶灵骑士", 2, "142887", 3, 0, null, null, null, "111161", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30001, "狐狸尾巴", 3, "226476", 3, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226476", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30002, "尾巴", 3, "136172", 1, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "136172", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30003, "尾巴", 3, "136173", 0, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "136173", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30004, "尾巴", 3, "136179", 3, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "136179", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30005, "孔雀尾巴", 3, "292600", 1, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "292600", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30006, "甜糕尾巴 ", 3, "215996", 1, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "215996", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30007, "海蓝尾巴", 3, "212598", 1, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "212598", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30008, "尾巴", 3, "136174", 2, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "136174", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30009, "橙子尾巴", 3, "212761", 2, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "212761", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30010, "樱桃尾巴", 3, "212911", 2, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "212911", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30011, "狐狸耳朵", 3, "226479", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226479", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30012, "狐狸飞行斗技", 3, "295508", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "295508", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30013, "挥动的围巾", 3, "295506", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "295506", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30014, "双层飞行斗技", 3, "334814", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "334814", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30015, "飞行斗技", 3, "135840", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "135840", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30016, "飞行斗技", 3, "135848", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "135848", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30017, "飞行斗技", 3, "135851", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "135851", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30018, "火焰飞行斗技", 3, "223877", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "223877", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30019, "飞行斗技", 3, "42803", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42803", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30020, "飞行斗技", 3, "42808", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42808", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30021, "飞行斗技", 3, "42806", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42806", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30022, "飞行斗技", 3, "42810", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42810", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30023, "飞行斗技", 3, "42819", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42819", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30024, "飞行斗技", 3, "42807", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42807", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30025, "飞行斗技", 3, "42809", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42809", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30026, "飞行斗技", 3, "42811", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42811", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30027, "飞行斗技", 3, "42812", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42812", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30028, "飞行斗技", 3, "42813", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42813", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30029, "飞行斗技", 3, "42814", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42814", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30030, "飞行斗技", 3, "42815", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42815", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30031, "飞行斗技", 3, "42817", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42817", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30032, "飞行斗技", 3, "42819", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42819", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30033, "飞行斗技", 3, "42820", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42820", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30034, "飞行斗技", 3, "42824", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42824", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30035, "飞行斗技", 3, "42826", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42826", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30036, "飞行斗技", 3, "42827", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42827", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30037, "飞行斗技", 3, "42804", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42804", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30038, "飞行斗技", 3, "42805", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42805", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30039, "飞行斗技", 3, "42816", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42816", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30040, "飞行斗技", 3, "42818", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42818", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30041, "飞行斗技", 3, "42821", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42821", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30042, "飞行斗技", 3, "42822", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42822", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30043, "飞行斗技", 3, "42823", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42823", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30044, "飞行斗技", 3, "42825", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42825", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30045, "飞行斗技", 3, "42831", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42831", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30046, "飞行斗技", 3, "42832", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42832", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30047, "飞行斗技", 3, "42830", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42830", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30048, "飞行斗技", 3, "42828", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42828", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30049, "飞行斗技", 3, "136957", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136957", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30050, "飞行斗技", 3, "136958", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136958", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30051, "飞行斗技", 3, "136959", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136959", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30052, "飞行斗技", 3, "136960", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136960", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30053, "飞行斗技", 3, "136961", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136961", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30054, "飞行斗技", 3, "136962", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136962", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30055, "飞行斗技", 3, "136963", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136963", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30056, "飞行斗技", 3, "136964", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136964", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30057, "飞行斗技", 3, "136965", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136965", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30058, "飞行斗技", 3, "136966", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136966", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30059, "飞行斗技", 3, "145902", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "145902", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30060, "飞行斗技", 3, "145903", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "145903", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30061, "飞行斗技", 3, "145904", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "145904", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30062, "飞行斗技", 3, "145905", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145905", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30063, "飞行斗技", 3, "145906", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145906", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30064, "飞行斗技", 3, "145907", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145907", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30065, "飞行斗技", 3, "145908", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145908", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30066, "飞行斗技", 3, "145909", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145909", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30067, "飞行斗技", 3, "145910", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "145910", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30068, "飞行斗技", 3, "145911", 1, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145911", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30069, "飞行斗技", 3, "145912", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145912", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30070, "飞行斗技", 3, "145913", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145913", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30071, "飞行斗技", 3, "177589", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "177589", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30072, "飞行斗技", 3, "375788", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "375788", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30073, "飞行斗技", 3, "178438", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "178438", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30074, "飞行斗技", 3, "211666", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "211666", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30075, "飞行斗技", 3, "211667", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "211667", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30076, "眼镜", 3, "324491", 3, 1, new mw.Vector(0, -1, 2), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "324491", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30077, "嘻哈眼镜", 3, "197016", 2, 1, new mw.Vector(0, -1, 4), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "197016", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30078, "100眼镜", 3, "264631", 1, 1, new mw.Vector(0, 10, 7), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "264631", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, null, " "], [30079, "眼镜", 3, "209387", 1, 1, new mw.Vector(0, 4, 4), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "209387", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30080, "眼镜", 3, "324333", 0, 1, new mw.Vector(0, -2, 3), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "324333", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30081, "眼镜鸭舌帽", 3, "266331", 2, 0, new mw.Vector(0, 5, 15), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "324333", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30082, "拍照机器人", 3, "292313", 3, 26, new mw.Vector(1, -10, -1), new mw.Vector(110, -45, 55), new mw.Vector(0.4, 0.4, 0.4), "292313", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.4, 0.4, 0.4)], [30083, "面纱", 3, "269783", 3, 1, new mw.Vector(0, 14, -4), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8), "269783", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8)], [30084, "大剑", 3, "186519", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "186519", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30085, "天使剑", 3, "20971", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "20971", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30086, "重剑", 3, "300435", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "300435", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30087, "狂热剑", 3, "29057", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "29057", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30088, "淬毒剑", 3, "29047", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "29047", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30089, "红晶剑", 3, "122952", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "122952", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30090, "天使剑", 3, "122955", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "122955", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30091, "恶魔剑", 3, "122956", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "122956", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30092, "黄金剑", 3, "218730", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "218730", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30093, "紫光剑", 3, "297029", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "297029", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30094, "断重剑", 3, "300434", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "300434", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30095, "单手刀", 3, "334208", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "334208", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30096, "  荧光剑", 3, "198698", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(0, 10, 0), new mw.Vector(1, 1, 1), "198698", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30097, "水枪", 3, "122716", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "122716", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30098, "火枪", 3, "122726", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "122726", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30099, "手枪", 3, "155696", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "155696", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30100, "激光枪", 3, "222534", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "222534", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30101, "喷火枪", 3, "226213", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "226213", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30102, "霰弹枪", 3, "226214", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "226214", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30103, "加特林", 3, "223966", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "223966", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30104, "火箭发射器", 3, "226826", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "226826", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30105, "狙击枪枪身", 3, "318663", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "318663", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30106, "魔兽", 3, "152380", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152380", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30107, "魔兽", 3, "152381", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152381", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30108, "魔兽", 3, "152382", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152382", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30109, "魔兽", 3, "152383", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152383", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30110, "魔兽", 3, "152384", 3, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152384", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30111, "魔兽", 3, "152385", 2, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152385", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30112, "魔兽", 3, "152386", 2, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152386", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30113, "魔兽", 3, "152387", 3, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152387", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30114, "魔兽", 3, "152388", 2, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152388", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30115, "魔兽", 3, "152389", 0, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152389", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30116, "魔兽", 3, "152390", 0, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152390", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30117, "魔兽", 3, "152391", 0, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152391", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30118, "魔兽", 3, "152392", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152392", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30119, "魔兽", 3, "152392", 0, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152392", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30120, "魔兽", 3, "152394", 2, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152394", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30121, "魔兽", 3, "152395", 3, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152395", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30122, "魔兽", 3, "152404", 3, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152404", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30123, "魔兽", 3, "152409", 2, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152409", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30124, "可爱西方龙", 3, "152259", 0, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "152259", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30125, "龙摆件", 3, "292574", 2, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "292574", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30126, "帝王龙", 3, "192533", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192533", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30127, "地狱龙", 3, "192420", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192420", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30128, "糖果龙", 3, "191950", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30129, "武士龙", 3, "191852", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191852", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40001, "蛇女", 4, "328236", 3, 0, null, null, null, "328236", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40002, "络新妇", 4, "338436", 3, 0, null, null, null, "338436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40003, "大蜘蛛", 4, "328291", 3, 0, null, null, null, "328291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40004, "小型抱脸紫蜘蛛", 4, "340103", 3, 0, null, null, null, "340103", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40005, "小型抱脸红蜘蛛", 4, "340104", 3, 0, null, null, null, "340104", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40006, "小型抱脸绿蜘蛛", 4, "340105", 3, 0, null, null, null, "340105", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40007, "小型抱脸蓝蜘蛛", 4, "340106", 3, 0, null, null, null, "340106", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)]];
+const EXCELDATA$d = [["ID", "Name", "Type", "AssetId", "Rarity", "HumanoidSlotType", "OffsetPos", "OffsetRot", "OffsetSca", "ObjId", "AssetOffsetPos", "AssetOffsetRot", "AssetOffsetSca"], ["", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "斗技|皮肤|装备|魔兽", 0, null, 0, 0, null, null, null, null, null, null, null], [10001, "悟空法杖", 1, "118140", 0, 0, null, null, null, "118140", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10002, "赛博自来也长枪", 1, "122953", 0, 0, null, null, null, "122953", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10003, "海王双头刀", 1, "118146", 0, 0, null, null, null, "118146", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10004, "美国队长神锤", 1, "152954", 2, 0, null, null, null, "152954", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10005, "毒液斧头", 1, "118143", 0, 0, null, null, null, "118143", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10006, "灭霸斧", 1, "122960", 2, 0, null, null, null, "122960", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10007, "鸣人手里剑", 1, "33861", 1, 0, null, null, null, "33861", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10008, "未来战士黄金剑", 1, "218730", 2, 0, null, null, null, "218730", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10009, "森林哨兵魔法仗", 1, "210791", 0, 0, null, null, null, "210791", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10010, "手枪(索尼克专用)", 1, "221099", 1, 0, null, null, null, "221099", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10011, "信号枪(粉毛怪专用)", 1, "43702", 1, 0, null, null, null, "43702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10012, "刀(纲手专用)", 1, "103067", 1, 0, null, null, null, "103067", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10013, "刀(李洛克专用)", 1, "103080", 1, 0, null, null, null, "103080", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10014, "镰刀(干柿鬼鲛专用)", 1, "103075", 1, 0, null, null, null, "103075", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10015, "镰刀(赛博女孩专用)", 1, "122946", 1, 0, null, null, null, "122946", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10016, "冰封剑(黑寡妇专用)", 1, "31710", 1, 0, null, null, null, "31710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10017, "怪物爪刀", 1, "103069", 1, 0, null, null, null, "103069", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10018, "大砍刀(卡卡西专用)", 1, "122961", 1, 0, null, null, null, "122961", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10019, "法杖(宇智波鼬专用)", 1, "272767", 1, 0, null, null, null, "272767", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10020, "水枪", 1, "166941", 2, 0, null, null, null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10021, "冰钻剑", 1, "31712", 2, 0, null, null, null, "31712", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10022, "屠刀", 1, "118142", 2, 0, null, null, null, "118142", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10023, "蓝色法杖(洛基专用)", 1, "210651", 2, 0, null, null, null, "210651", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10024, "镰刀(太阳神专用)", 1, "121672", 3, 0, null, null, null, "121672", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10025, "恶魔剑(宇智波斑爷专用)", 1, "122956", 3, 0, null, null, null, "122956", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10026, "剑(纳米机器人专用)", 1, "103068", 2, 0, null, null, null, "103068", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10027, "镰刀(死侍专用)", 1, "103083", 2, 0, null, null, null, "103083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10028, "  荧光剑(火山哨兵专用)", 1, "198698", 2, 0, null, null, null, "198698", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10029, "狂热剑(绯红女巫专用)", 1, "29057", 2, 0, null, null, null, "29057", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10030, "充气锤子", 1, "272130", 1, 0, null, null, null, "272130", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10031, "木法杖(毒液蜘蛛侠专用)", 1, "300436", 3, 0, null, null, null, "300436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10032, "瓜子盾", 1, "121541", 0, 0, null, null, null, "121541", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10033, "盾(浩克专用)", 1, "122950", 3, 0, null, null, null, "122950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10034, "终极冰环剑", 1, "31734", 3, 0, null, null, null, "31734", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10035, "散弹喷枪(雏田专用)", 1, "155702", 3, 0, null, null, null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10036, "火枪(路飞专用)", 1, "122726", 3, 0, null, null, null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10037, "紫光剑(佐助专用)", 1, "297029", 3, 0, null, null, null, "297029", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10038, "激光枪(天神专用)", 1, "222534", 3, 0, null, null, null, "222534", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10039, "剑(金刚狼专用)", 1, "269895", 3, 0, null, null, null, "269895", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [10040, "激光枪(钢铁侠专用)", 1, "122720", 3, 0, null, null, null, "122720", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20001, "狐耳少女", 2, "361906", 3, 0, null, null, null, "65710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20002, "邪恶使者", 2, "357571", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20003, "长款大衣女", 2, "357567", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20004, "海绵宝宝", 2, "357566", 3, 0, null, null, null, "63711", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20005, "钢铁侠", 2, "357563", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20006, "灭霸", 2, "357556", 3, 0, null, null, null, "112568", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20007, "刺猬小子", 2, "357555", 3, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20008, "邪恶使者", 2, "351891", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20009, "蓝衣男", 2, "351680", 3, 0, null, null, null, "127800", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20010, "黑衣男", 2, "351598", 3, 0, null, null, null, "224168", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20011, "毁灭战士", 2, "351597", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20012, "雷神", 2, "357570", 2, 0, null, null, null, "111768", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20013, "黑寡妇", 2, "357568", 2, 0, null, null, null, "111240", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20014, "可爱女", 2, "351500", 2, 0, null, null, null, "269652", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20015, "丸子头女", 2, "351497", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20016, "西方神女", 2, "351405", 3, 0, null, null, null, "64410", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20017, "黑裙少女", 2, "351404", 3, 0, null, null, null, "128834", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20018, "短发女", 2, "351026", 2, 0, null, null, null, "115849", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20019, "旗袍女", 2, "351025", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20020, "披风男", 2, "351024", 1, 0, null, null, null, "96576", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20021, "长发女", 2, "351004", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20022, "双马尾女", 2, "350987", 1, 0, null, null, null, "59857", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20023, "长发短裙女", 2, "350973", 1, 0, null, null, null, "63648", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20024, "双马尾女", 2, "350959", 0, 0, null, null, null, "248351", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20025, "双马尾女", 2, "350958", 0, 0, null, null, null, "64774", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20026, "百褶裙女孩", 2, "350756", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20027, "短发时尚女", 2, "350752", 0, 0, null, null, null, "111241", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20028, "长马尾女孩", 2, "350746", 1, 0, null, null, null, "121948", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20029, "长耳女", 2, "350744", 1, 0, null, null, null, "64458", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20030, "风衣长发女", 2, "350739", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20031, "恶魔角女", 2, "350738", 1, 0, null, null, null, "64305", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20032, "和服女", 2, "350568", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20033, "发卡女", 2, "350318", 1, 0, null, null, null, "181365", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20034, "女仆套装女", 2, "350569", 2, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20035, "帽子女", 2, "350314", 1, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20036, "魔法女孩", 2, "350260", 1, 0, null, null, null, "111088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20037, "长裙女", 2, "349270", 2, 0, null, null, null, "124880", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20038, "杀手女", 2, "347528", 3, 0, null, null, null, "137518", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20039, "巫医", 2, "145319", 3, 0, null, null, null, "119773", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20040, "长腿妈妈", 2, "143403", 2, 0, null, null, null, "119229", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20041, "玄魁", 2, "143402", 2, 0, null, null, null, "121882", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20042, "邪恶女巫", 2, "143401", 2, 0, null, null, null, "119745", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20043, "小丑女", 2, "143400", 1, 0, null, null, null, "63539", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20044, "万圣节女", 2, "143399", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20045, "屠夫", 2, "143398", 0, 0, null, null, null, "109144", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20046, "魔莱坞学院院长", 2, "143396", 1, 0, null, null, null, "64141", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20047, "迷雾鬼影", 2, "143395", 0, 0, null, null, null, "109058", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20048, "蓝毛怪", 2, "143394", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20049, "狗头毛毛虫", 2, "143390", 1, 0, null, null, null, "118079", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20050, "粉毛怪", 2, "143389", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20051, "索尼克", 2, "143387", 1, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [20052, "Rainbow friends", 2, "143385", 3, 0, null, null, null, "119483", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30001, "狐狸尾巴", 3, "226476", 3, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226476", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30002, "狐狸耳朵", 3, "226479", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226479", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30003, "狐狸飞行斗技", 3, "295508", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "295508", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30004, "挥动的围巾", 3, "295506", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "295506", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30005, "双层飞行斗技", 3, "334814", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "334814", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30006, "火焰飞行斗技", 3, "223877", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "223877", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30007, "飞行斗技", 3, "42818", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42818", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30008, "眼镜", 3, "324491", 3, 1, new mw.Vector(0, -1, 2), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "324491", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30009, "拍照机器人", 3, "292313", 3, 26, new mw.Vector(1, -10, -1), new mw.Vector(110, -45, 55), new mw.Vector(0.4, 0.4, 0.4), "292313", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.4, 0.4, 0.4)], [30010, "面纱", 3, "269783", 3, 1, new mw.Vector(0, 14, -4), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8), "269783", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8)], [30011, "火箭发射器", 3, "226826", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "226826", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30012, "狙击枪枪身", 3, "318663", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "318663", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5)], [30013, "可爱西方龙", 3, "152259", 0, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "152259", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30014, "龙摆件", 3, "292574", 2, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "292574", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30015, "帝王龙", 3, "192533", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192533", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30016, "地狱龙", 3, "192420", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192420", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30017, "糖果龙", 3, "191950", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30018, "武士龙", 3, "191852", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191852", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30019, "蛇女", 4, "328236", 3, 0, null, null, null, "328236", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30020, "络新妇", 4, "338436", 3, 0, null, null, null, "338436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30021, "大蜘蛛", 4, "328291", 3, 0, null, null, null, "328291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30022, "魔兽", 3, "152380", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152380", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30023, "魔兽", 3, "152381", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152381", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30024, "魔兽", 3, "152382", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152382", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30025, "魔兽", 3, "152383", 1, 20, new mw.Vector(0, 0, 30), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2), "152383", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.2, 0.2, 0.2)], [30026, "飞行斗技", 3, "42806", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42806", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30027, "飞行斗技", 3, "42810", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42810", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30028, "飞行斗技", 3, "42819", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42819", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30029, "飞行斗技", 3, "42807", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42807", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30030, "飞行斗技", 3, "42809", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42809", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30031, "大剑", 3, "186519", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "186519", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [30032, "天使剑", 3, "20971", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "20971", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40004, "小型抱脸紫蜘蛛", 4, "340103", 3, 0, null, null, null, "340103", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40005, "小型抱脸红蜘蛛", 4, "340104", 3, 0, null, null, null, "340104", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40006, "小型抱脸绿蜘蛛", 4, "340105", 3, 0, null, null, null, "340105", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)], [40007, "小型抱脸蓝蜘蛛", 4, "340106", 3, 0, null, null, null, "340106", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1)]];
 class BagInfoConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$d);
@@ -928,7 +928,7 @@ var foreign24 = /*#__PURE__*/Object.freeze({
     DressProgressConfig: DressProgressConfig
 });
 
-const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "MoveSpeed", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", ["0CD6E9E6"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", ["0CD6E9E6"], ["336664", "336668"], ["336669"], 250, "336816", ["336673", "336670", "336672"], [1, 0.95, 1.2], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["384353", "101411", "297932"], [new mw.Vector(170, 0, -50), new mw.Vector(200, 0, -120), new mw.Vector(100, 0, -125)], [new mw.Vector(0, -60, 0), new mw.Vector(0, 30, 10), new mw.Vector(0, 0, 0)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1), new mw.Vector(0.55, 1, 1)]], [3, "蜘蛛精", ["0CD6E9E6"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0.55, 1, 1), new mw.Vector(1, 1, 1)]], [4, "龙", ["0CD6E9E6"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1, 1, 1), new mw.Vector(1, 1, 1)]], [5, "丧尸", ["0CD6E9E6"], ["284991", "268599"], ["285740", "269161", "285826"], 150, "-1", ["285210"], [0.55], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["31260"], [new mw.Vector(5, 0, 0)], [new mw.Vector(0, -30, 180)], [new mw.Vector(1, 1, 1)]], [6, "角色", ["0CD6E9E6"], ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]], [7, "蛇女", ["314F5569"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 100, 0)], [600], [new mw.Vector(100, 100, 200)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(2, 1.6, 2)]], [8, "蜘蛛精", ["314F5569"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 100, 0), new mw.Vector(0, 100, 0)], [600, 600], [new mw.Vector(100, 100, 200), new mw.Vector(100, 100, 200)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1.1, 2, 2), new mw.Vector(2, 2, 2)]], [9, "龙", ["314F5569"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 100, 0), new mw.Vector(0, 100, 0)], [600, 600], [new mw.Vector(100, 100, 200), new mw.Vector(100, 100, 200)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(2, 2, 2), new mw.Vector(2, 2, 2)]]];
+const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "MoveSpeed", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", ["3E882EFC"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", ["3E882EFC"], ["336664", "336668"], ["336669"], 250, "336816", ["336673", "336670", "336672"], [1, 0.95, 1.2], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["384353", "101411", "297932"], [new mw.Vector(170, 0, -50), new mw.Vector(200, 0, -120), new mw.Vector(100, 0, -125)], [new mw.Vector(0, -60, 0), new mw.Vector(0, 30, 10), new mw.Vector(0, 0, 0)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1), new mw.Vector(0.55, 1, 1)]], [3, "蜘蛛精", ["3E882EFC"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0.55, 1, 1), new mw.Vector(1, 1, 1)]], [4, "龙", ["3E882EFC"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1, 1, 1), new mw.Vector(1, 1, 1)]], [5, "丧尸", ["3E882EFC"], ["284991", "268599"], ["285740", "269161", "285826"], 150, "-1", ["285210"], [0.55], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["31260"], [new mw.Vector(5, 0, 0)], [new mw.Vector(0, -30, 180)], [new mw.Vector(1, 1, 1)]], [6, "角色", ["3E882EFC"], ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]]];
 class MonsterInfoConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$7);
@@ -1012,7 +1012,7 @@ var foreign32 = /*#__PURE__*/Object.freeze({
     TaskConfig: TaskConfig
 });
 
-const EXCELDATA = [["id", "TriggerGuid", "ModelGuid"], ["", "", ""], [1, "02EC2335", "14DAF24C"]];
+const EXCELDATA = [["id", "TriggerGuid", "ModelGuid"], ["", "", ""], [1, "02EC2335", "14DAF24C"], [2, "1686B162", "1FF9CDFC"], [3, "1CD5126B", "2D3CA1CB"]];
 class TrampolineConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA);
@@ -1438,6 +1438,7 @@ GlobalData.targetEffectGuid = GameConfig.Assets.getElement(22).Guid;
 GlobalData.atk = 0;
 GlobalData.hp = 0;
 GlobalData.totalBagLen = 276;
+GlobalData.mpStr = `斗气`;
 
 var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -1465,7 +1466,7 @@ class Console {
     }
 }
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Console
 });
@@ -2143,7 +2144,7 @@ var PrefabEvent;
     initEvent();
 })(PrefabEvent || (PrefabEvent = {}));
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; }
 });
@@ -2704,11 +2705,14 @@ class Utils {
     }
 }
 Utils.locs = [
-    new mw.Vector(2800, -6300, 500),
-    new mw.Vector(3000, -8000, 500),
-    new mw.Vector(4500, -6300, 500),
-    new mw.Vector(4500, -8000, 500),
-    new mw.Vector(3700, -7200, 500)
+    new mw.Vector(-4065, 6446, 2000),
+    new mw.Vector(-2596, 7032, 2000),
+    new mw.Vector(-930, 7584, 2000),
+    new mw.Vector(1277, 8205, 2000),
+    new mw.Vector(-6190, 3778, 2000),
+    new mw.Vector(-6496, 1632, 2000),
+    new mw.Vector(-6576, -993, 2000),
+    new mw.Vector(-5775, -2742, 2000),
 ];
 Utils.boss = [
     "219915",
@@ -2784,7 +2788,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Tween: Tween$2,
     Utils: Utils,
@@ -2796,7 +2800,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -2855,7 +2859,7 @@ Loading_Generate = __decorate([
 ], Loading_Generate);
 var Loading_Generate$1 = Loading_Generate;
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Loading_Generate$1
 });
@@ -2908,7 +2912,7 @@ var foreign6 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -2965,7 +2969,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -2975,7 +2979,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -3021,7 +3025,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -4460,7 +4464,7 @@ __decorate([
     mw.Property({ replicated: true, onChanged: "client_OnChangeCharGuid" })
 ], WeaponData.prototype, "charGuid", void 0);
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AnimationInfo: AnimationInfo$1,
     NodeInfo: NodeInfo,
@@ -4536,7 +4540,7 @@ class SkillRectCheck {
 }
 SkillRectCheck.showRect = true;
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SkillRectCheck: SkillRectCheck
 });
@@ -4736,7 +4740,7 @@ class WeaponManager extends WeaponManagerSvr {
 WeaponManager._Instance = null;
 WeaponManager.GetInstance();
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponManager: WeaponManager
 });
@@ -4882,7 +4886,7 @@ class ColdWeapon {
     }
 }
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColdWeapon: ColdWeapon
 });
@@ -5027,7 +5031,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -5037,7 +5041,7 @@ var foreign86 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.34
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5153,7 +5157,7 @@ BagInfoPanel_Generate = __decorate([
 ], BagInfoPanel_Generate);
 var BagInfoPanel_Generate$1 = BagInfoPanel_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign96 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagInfoPanel_Generate$1
 });
@@ -5163,7 +5167,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5245,7 +5249,7 @@ BagItem_Generate = __decorate([
 ], BagItem_Generate);
 var BagItem_Generate$1 = BagItem_Generate;
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagItem_Generate$1
 });
@@ -5255,7 +5259,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5341,7 +5345,7 @@ BagPanel_Generate = __decorate([
 ], BagPanel_Generate);
 var BagPanel_Generate$1 = BagPanel_Generate;
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagPanel_Generate$1
 });
@@ -5351,7 +5355,7 @@ var foreign97 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5407,7 +5411,7 @@ BagTab_Generate = __decorate([
 ], BagTab_Generate);
 var BagTab_Generate$1 = BagTab_Generate;
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagTab_Generate$1
 });
@@ -5417,7 +5421,7 @@ var foreign98 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5487,7 +5491,7 @@ AdsTipsPanel_Generate = __decorate([
 ], AdsTipsPanel_Generate);
 var AdsTipsPanel_Generate$1 = AdsTipsPanel_Generate;
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdsTipsPanel_Generate$1
 });
@@ -5723,6 +5727,7 @@ class PlayerModuleC extends ModuleC {
     }
     onEnterScene(sceneType) {
         this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
+        this.getHudModuleC.updateDiamond(this.data.diamond);
     }
     net_onPlayerAtkSelf(damage, hitPoint) {
         let fontColor = Utils.randomColor();
@@ -5773,6 +5778,13 @@ class PlayerModuleC extends ModuleC {
     saveCoin(value) {
         this.getHudModuleC.updateCoin(this.data.coin + value);
         this.server.net_saveCoin(value);
+    }
+    saveDiamond(value) {
+        this.getHudModuleC.updateDiamond(this.data.diamond + value);
+        this.server.net_saveDiamond(value);
+    }
+    get getDiamond() {
+        return this.data.diamond;
     }
     /**
      * 更新金币
@@ -5991,7 +6003,7 @@ class ObjPool {
     }
 }
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjPool: ObjPool,
     get ObjectPoolServices () { return ObjectPoolServices; }
@@ -6002,7 +6014,7 @@ var foreign87 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -6058,7 +6070,7 @@ OnlineRewardPanel_Generate = __decorate([
 ], OnlineRewardPanel_Generate);
 var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
 
-var foreign103 = /*#__PURE__*/Object.freeze({
+var foreign104 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardPanel_Generate$1
 });
@@ -6068,7 +6080,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -6335,6 +6347,18 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mAddCoinButton_Internal;
     }
+    get mDiamondTextBlock() {
+        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/DiamondCanvas/mDiamondTextBlock');
+        }
+        return this.mDiamondTextBlock_Internal;
+    }
+    get mAddDiamondButton() {
+        if (!this.mAddDiamondButton_Internal && this.uiWidgetBase) {
+            this.mAddDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/DiamondCanvas/mAddDiamondButton');
+        }
+        return this.mAddDiamondButton_Internal;
+    }
     get mKillTipCanvas() {
         if (!this.mKillTipCanvas_Internal && this.uiWidgetBase) {
             this.mKillTipCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mKillTipCanvas');
@@ -6454,6 +6478,10 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mAddCoinButton");
         });
         this.mAddCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mAddDiamondButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mAddDiamondButton");
+        });
+        this.mAddDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
         this.initLanguage(this.mOnlineRewardTextBlock);
@@ -6465,6 +6493,7 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.mExpTextBlock);
         this.initLanguage(this.mInvincibleTextBlock);
         this.initLanguage(this.mCoinTextBlock);
+        this.initLanguage(this.mDiamondTextBlock);
         this.initLanguage(this.mKillTipTextBlock1);
         this.initLanguage(this.mKillTipTextBlock2);
         this.initLanguage(this.mKillTipTextBlock3);
@@ -6504,7 +6533,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign100 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -6514,7 +6543,7 @@ var foreign100 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6580,7 +6609,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign101 = /*#__PURE__*/Object.freeze({
+var foreign102 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -6676,6 +6705,9 @@ class HUDPanel extends HUDPanel_Generate$1 {
         });
         this.mAddCoinButton.onClicked.add(() => {
             this.getHudModuleC.onAddCoinAction.call();
+        });
+        this.mAddDiamondButton.onClicked.add(() => {
+            this.getHudModuleC.onAddDiamondAction.call();
         });
         this.mAdsButton.onClicked.add(() => {
             this.getHudModuleC.onAdsAction.call();
@@ -6844,11 +6876,14 @@ class HUDPanel extends HUDPanel_Generate$1 {
         ColdWeapon.getInstance().updateHitDamage(atk);
     }
     updateCoin(coin) {
-        this.mCoinTextBlock.text = Math.round(coin).toFixed(0) + "";
+        this.mCoinTextBlock.text = `${Math.round(coin)}`;
+    }
+    updateDiamond(diamond) {
+        this.mDiamondTextBlock.text = `${diamond}`;
     }
     updateMp(curMp, maxMp) {
         this.mMpProgressBar.currentValue = curMp / maxMp;
-        this.mMpTextBlock.text = `斗气：${curMp}/${maxMp}`;
+        this.mMpTextBlock.text = `${GlobalData.mpStr}：${curMp}/${maxMp}`;
     }
     updateHp(curHp, maxHp) {
         if (curHp < 0)
@@ -6868,8 +6903,8 @@ class HUDPanel extends HUDPanel_Generate$1 {
     atk(index) {
         this.mAtkButton.onPressed.add(() => {
             if (this.getHudModuleC.getMp < 5) {
-                Notice.showDownNotice(`斗气不足`);
-                Notice.showDownNotice(`升级增加斗气储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
                 return;
             }
             if (this.curInputIndex != -1)
@@ -7689,8 +7724,10 @@ class HUDModuleC extends ModuleC {
         this.onOpenRankAction = new Action();
         this.onHomeAction = new Action();
         this.onAddCoinAction = new Action();
+        this.onAddDiamondAction = new Action();
         this.onAdsAction = new Action();
         this.onInvincibleAction = new Action1();
+        this.onOpenRingSoulAction = new Action();
         /**全局UI点击音效唯一标识 */
         this.uiClickSoundId = null;
         this.lv = 0;
@@ -7812,6 +7849,16 @@ class HUDModuleC extends ModuleC {
                 this.getPlayerModuleC.saveCoin(10000);
             }
         });
+        this.onAddDiamondAction.add(() => {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.saveDiamond(1);
+                }, "免费领取1颗钻石", "取消", "免费领取");
+            }
+            else {
+                this.getPlayerModuleC.saveDiamond(1);
+            }
+        });
         this.onAdsAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
@@ -7890,6 +7937,9 @@ class HUDModuleC extends ModuleC {
     }
     updateCoin(coin) {
         this.getHudPanel.updateCoin(coin);
+    }
+    updateDiamond(diamond) {
+        this.getHudPanel.updateDiamond(diamond);
     }
     updateHp(curHp) {
         this.curHp = curHp;
@@ -8039,8 +8089,8 @@ class HUDModuleC extends ModuleC {
         if (!this.isCanSprint)
             return;
         if (!this.isHaveMp(10)) {
-            Notice.showDownNotice(`斗气不足`);
-            Notice.showDownNotice(`升级增加斗气储量`);
+            Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+            Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
             return;
         }
         this.isCanSprint = false;
@@ -8089,15 +8139,15 @@ class HUDModuleC extends ModuleC {
         this.currentJumpTime++;
         if (this.currentJumpTime == 1) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`斗气不足`);
-                Notice.showDownNotice(`升级增加斗气储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
                 return;
             }
         }
         if (this.currentJumpTime == 2) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`斗气不足`);
-                Notice.showDownNotice(`升级增加斗气储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
                 return;
             }
             PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.secondJumpAniID, 1);
@@ -8340,7 +8390,7 @@ __decorate([
     Decorator.persistence()
 ], TaskData.prototype, "weeklyTasks", void 0);
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Task: Task,
     TaskData: TaskData,
@@ -8353,7 +8403,7 @@ var foreign70 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -8462,7 +8512,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign110 = /*#__PURE__*/Object.freeze({
+var foreign114 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -8843,7 +8893,7 @@ class TaskItem {
     }
 }
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel
 });
@@ -9254,7 +9304,7 @@ class TaskModuleC extends ModuleC {
     }
 }
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleC
 });
@@ -9328,7 +9378,7 @@ var foreign42 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.34
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -9434,7 +9484,7 @@ GuideUI_Generate = __decorate([
 ], GuideUI_Generate);
 var GuideUI_Generate$1 = GuideUI_Generate;
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuideUI_Generate$1
 });
@@ -9568,15 +9618,15 @@ class GuidePanel extends GuideUI_Generate$1 {
     }
     guide3() {
         mw.localToViewport(this.getHudPanel.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size, new mw.Vector2(700, 350), "跳跃按钮，连续点击会进行二段跳，会消耗斗气。", 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size, new mw.Vector2(700, 350), `跳跃按钮，连续点击会进行二段跳，会消耗${GlobalData.mpStr}。`, 0, true);
     }
     guide4() {
         mw.localToViewport(this.getHudPanel.mSprintButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mSprintButton.size, new mw.Vector2(700, 550), "冲刺按钮，可以直接瞬移一段距离，会消耗斗气。", 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mSprintButton.size, new mw.Vector2(700, 550), `冲刺按钮，可以直接瞬移一段距离，会消耗${GlobalData.mpStr}。`, 0, true);
     }
     guide5() {
         mw.localToViewport(this.getHudPanel.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size, new mw.Vector2(460, 550), "攻击按钮，连续点击可释放炫酷的连招，会消耗斗气。", 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size, new mw.Vector2(460, 550), `攻击按钮，连续点击可释放炫酷的连招，会消耗${GlobalData.mpStr}。`, 0, true);
     }
     guide6() {
         mw.localToViewport(this.getHudPanel.mMusicButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
@@ -9612,7 +9662,7 @@ class GuidePanel extends GuideUI_Generate$1 {
     }
     guide14() {
         mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size, new mw.Vector2(550, 350), "角色属性，血量、斗气，攻击力会随等级提升而提升。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size, new mw.Vector2(550, 350), `角色属性，血量、${GlobalData.mpStr}，攻击力会随等级提升而提升。`, 1, true);
     }
     guide15() {
         mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
@@ -9850,8 +9900,8 @@ class GuideModuleC extends ModuleC {
                     this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                         if (!this.getBagModuleC.isHasBagId(20023)) {
                             this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                                if (!this.getBagModuleC.isHasBagId(30040)) {
-                                    this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                                if (!this.getBagModuleC.isHasBagId(30007)) {
+                                    this.startGuide(this.getBagModuleC.getBagObVec(30007));
                                 }
                             });
                         }
@@ -9864,8 +9914,8 @@ class GuideModuleC extends ModuleC {
                 this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                     if (!this.getBagModuleC.isHasBagId(20023)) {
                         this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                            if (!this.getBagModuleC.isHasBagId(20023)) {
-                                this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                            if (!this.getBagModuleC.isHasBagId(30007)) {
+                                this.startGuide(this.getBagModuleC.getBagObVec(30007));
                             }
                         });
                     }
@@ -9874,14 +9924,14 @@ class GuideModuleC extends ModuleC {
             else {
                 if (!this.getBagModuleC.isHasBagId(20023)) {
                     this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                        if (!this.getBagModuleC.isHasBagId(20023)) {
-                            this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                        if (!this.getBagModuleC.isHasBagId(30007)) {
+                            this.startGuide(this.getBagModuleC.getBagObVec(30007));
                         }
                     });
                 }
                 else {
-                    if (!this.getBagModuleC.isHasBagId(20023)) {
-                        this.startGuide(this.getBagModuleC.getBagObVec(30040));
+                    if (!this.getBagModuleC.isHasBagId(30007)) {
+                        this.startGuide(this.getBagModuleC.getBagObVec(30007));
                     }
                 }
             }
@@ -10426,7 +10476,7 @@ class BagModuleC extends ModuleC {
             this.getLoading.hide();
             this.enterScenceUsing();
             this.getGuideModuleC.startFirst();
-        }, 30 * 1000);
+        }, 1 * 1000);
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("0F4AC706");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();
@@ -11601,7 +11651,7 @@ __decorate([
     Decorator.noReply()
 ], TaskModuleS.prototype, "net_resetWeeklyTask", null);
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleS
 });
@@ -11611,6 +11661,7 @@ class PlayerData extends Subdata {
         super(...arguments);
         this.exp = 0;
         this.coin = 0;
+        this.diamond = 0;
         this.playerLv = 0;
         this.playerHeight = 0;
         this.playerKill = 0;
@@ -11618,6 +11669,7 @@ class PlayerData extends Subdata {
     initDefaultData() {
         this.exp = 0;
         this.coin = 10000;
+        this.diamond = 0;
         this.playerLv = 0;
         this.playerHeight = 0;
         this.playerKill = 0;
@@ -11652,6 +11704,10 @@ class PlayerData extends Subdata {
         this.coin += value;
         this.save(true);
     }
+    saveDiamond(value) {
+        this.diamond += value;
+        this.save(true);
+    }
     refashLv(lv) {
         this.playerLv += lv;
         this.save(true);
@@ -11676,6 +11732,9 @@ __decorate([
 ], PlayerData.prototype, "coin", void 0);
 __decorate([
     Decorator.persistence()
+], PlayerData.prototype, "diamond", void 0);
+__decorate([
+    Decorator.persistence()
 ], PlayerData.prototype, "playerLv", void 0);
 __decorate([
     Decorator.persistence()
@@ -11694,7 +11753,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -11760,7 +11819,7 @@ PlayerLifebar_Generate = __decorate([
 ], PlayerLifebar_Generate);
 var PlayerLifebar_Generate$1 = PlayerLifebar_Generate;
 
-var foreign104 = /*#__PURE__*/Object.freeze({
+var foreign105 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar_Generate$1
 });
@@ -12130,6 +12189,9 @@ class PlayerModuleS extends ModuleS {
     net_saveCoin(value) {
         this.currentData.saveCoin(value);
     }
+    net_saveDiamond(value) {
+        this.currentData.saveDiamond(value);
+    }
     /**
      * 更新金币
      * @param player
@@ -12179,6 +12241,9 @@ class PlayerModuleS extends ModuleS {
 __decorate([
     Decorator.noReply()
 ], PlayerModuleS.prototype, "net_saveCoin", null);
+__decorate([
+    Decorator.noReply()
+], PlayerModuleS.prototype, "net_saveDiamond", null);
 __decorate([
     Decorator.noReply()
 ], PlayerModuleS.prototype, "net_saveCoinAndExp", null);
@@ -12331,7 +12396,7 @@ var foreign3 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -12383,7 +12448,7 @@ EnemyLifebar_Generate = __decorate([
 ], EnemyLifebar_Generate);
 var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: EnemyLifebar_Generate$1
 });
@@ -13293,7 +13358,7 @@ var foreign13 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2024.08.29-23.35.33
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -13354,7 +13419,7 @@ TestPanel_Generate = __decorate([
 ], TestPanel_Generate);
 var TestPanel_Generate$1 = TestPanel_Generate;
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel_Generate$1
 });
@@ -13472,7 +13537,7 @@ var foreign47 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -13640,7 +13705,7 @@ WorldRankPanel_Generate = __decorate([
 ], WorldRankPanel_Generate);
 var WorldRankPanel_Generate$1 = WorldRankPanel_Generate;
 
-var foreign115 = /*#__PURE__*/Object.freeze({
+var foreign119 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankPanel_Generate$1
 });
@@ -14048,6 +14113,856 @@ var foreign63 = /*#__PURE__*/Object.freeze({
     WorldRankModuleC: WorldRankModuleC
 });
 
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/RingSoulModule/RingSoulItem.ui
+ * TIME: 2024.08.29-23.35.34
+ */
+let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
+    get mMainCanvas() {
+        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
+            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
+        }
+        return this.mMainCanvas_Internal;
+    }
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/BgImage/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mUpButton() {
+        if (!this.mUpButton_Internal && this.uiWidgetBase) {
+            this.mUpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton');
+        }
+        return this.mUpButton_Internal;
+    }
+    get mUpTextBlock() {
+        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton/mUpTextBlock');
+        }
+        return this.mUpTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mUpButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mUpButton");
+        });
+        this.mUpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mUpTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+RingSoulItem_Generate = __decorate([
+    UIBind('UI/module/RingSoulModule/RingSoulItem.ui')
+], RingSoulItem_Generate);
+var RingSoulItem_Generate$1 = RingSoulItem_Generate;
+
+var foreign107 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RingSoulItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
+ * TIME: 2024.08.29-23.35.34
+ */
+let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mArrowsCanvas() {
+        if (!this.mArrowsCanvas_Internal && this.uiWidgetBase) {
+            this.mArrowsCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas');
+        }
+        return this.mArrowsCanvas_Internal;
+    }
+    get mArrowsImage() {
+        if (!this.mArrowsImage_Internal && this.uiWidgetBase) {
+            this.mArrowsImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mArrowsImage');
+        }
+        return this.mArrowsImage_Internal;
+    }
+    get mCostTextBlock() {
+        if (!this.mCostTextBlock_Internal && this.uiWidgetBase) {
+            this.mCostTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mCostTextBlock');
+        }
+        return this.mCostTextBlock_Internal;
+    }
+    get mUpTextBlock() {
+        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mUpTextBlock');
+        }
+        return this.mUpTextBlock_Internal;
+    }
+    get mIconCanvas() {
+        if (!this.mIconCanvas_Internal && this.uiWidgetBase) {
+            this.mIconCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas');
+        }
+        return this.mIconCanvas_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mNameTextBlock() {
+        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mNameTextBlock');
+        }
+        return this.mNameTextBlock_Internal;
+    }
+    get mHasTextBlock() {
+        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
+            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mHasTextBlock');
+        }
+        return this.mHasTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mCostTextBlock);
+        this.initLanguage(this.mUpTextBlock);
+        this.initLanguage(this.mNameTextBlock);
+        this.initLanguage(this.mHasTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+RingSoulItemChild_Generate = __decorate([
+    UIBind('UI/module/RingSoulModule/RingSoulItemChild.ui')
+], RingSoulItemChild_Generate);
+var RingSoulItemChild_Generate$1 = RingSoulItemChild_Generate;
+
+var foreign106 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RingSoulItemChild_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/RingSoulModule/RingSoulPanel.ui
+ * TIME: 2024.08.29-23.35.34
+ */
+let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    get mContentCanvas() {
+        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
+            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/ScrollBox/mContentCanvas');
+        }
+        return this.mContentCanvas_Internal;
+    }
+    get mMainCanvas() {
+        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
+            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
+        }
+        return this.mMainCanvas_Internal;
+    }
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/BgImage/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mUpButton() {
+        if (!this.mUpButton_Internal && this.uiWidgetBase) {
+            this.mUpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton');
+        }
+        return this.mUpButton_Internal;
+    }
+    get mUpTextBlock() {
+        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton/mUpTextBlock');
+        }
+        return this.mUpTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mUpButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mUpButton");
+        });
+        this.mUpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mUpTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+RingSoulPanel_Generate = __decorate([
+    UIBind('UI/module/RingSoulModule/RingSoulPanel.ui')
+], RingSoulPanel_Generate);
+var RingSoulPanel_Generate$1 = RingSoulPanel_Generate;
+
+var foreign108 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RingSoulPanel_Generate$1
+});
+
+const ringSoulNames = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
+const figureStrs = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+const costDiamonds = [10, 20, 30, 50, 100, 1000];
+const upSound = "169179";
+const ringSoulIconColors = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#FFD700FF"];
+const ringSoulPrefabIds = [
+    "322A7FF14588209BBD4B5DAF37D38FA2",
+    "F89DFCA24FEC54C1F4CFBEAB9D4FF27A",
+    "6CEAFD0A4DAA30D8FB89E49C5B28CD3F",
+    "C5944BA6404AC45A865163BBCC3766DD",
+    "19F4724F4E312B74233E1FA76EB9EEA9",
+    "7C36BC974D5F9E55375E31BA8161C366"
+];
+const ringSoulSlots = [23, 23, 23, 23, 23, 23, 23, 23, 23, 12];
+const ringSoulOffsetPoss = [
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(60, 0, 250)
+];
+const ringSoulOffsetRots = [
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, -60, 0)
+];
+const ringSoulOffsetScls = [
+    new mw.Vector(0.3, 0.3, 0.3),
+    new mw.Vector(0.4, 0.4, 0.4),
+    new mw.Vector(0.55, 0.55, 0.55),
+    new mw.Vector(0.7, 0.7, 0.7),
+    new mw.Vector(0.9, 0.9, 0.9),
+    new mw.Vector(1.2, 1.2, 1.2),
+    new mw.Vector(1.5, 1.5, 1.5),
+    new mw.Vector(1.9, 1.9, 1.9),
+    new mw.Vector(2.3, 2.3, 2.3),
+    new mw.Vector(2.5, 2.5, 2.5)
+];
+const showRingSoulTweenTime = 0.8;
+const hideRingSoulTweenTime = 0.5;
+const showRingSoulTweenIntervalTime = 0.6;
+const hideRingSoulTweenIntervalTime = 0.25;
+class RingSoulGo {
+    constructor() {
+        this.ringSoulIndex = 0;
+        this.go = null;
+        this.isInitRingSoulTween = false;
+        this.showRingSoulTween = null;
+        this.hideRingSoulTween = null;
+    }
+    initRingSoulTween() {
+        if (!this.go)
+            return;
+        if (this.isInitRingSoulTween) {
+            this.startShowRingSoul();
+            return;
+        }
+        this.isInitRingSoulTween = true;
+        let scaleValue = this.go.localTransform.scale.x;
+        this.showRingSoulTween = new mw.Tween({ scale: 0 })
+            .to({ scale: scaleValue }, showRingSoulTweenTime * 1000)
+            .onStart(() => {
+            this.go.localTransform.scale = mw.Vector.zero;
+            this.go.setVisibility(true);
+        })
+            .onUpdate((v) => {
+            this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
+        });
+        this.hideRingSoulTween = new mw.Tween({ scale: scaleValue })
+            .to({ scale: 0 }, hideRingSoulTweenTime * 1000)
+            .onStart(() => {
+            this.go.localTransform.scale = new mw.Vector(scaleValue, scaleValue, scaleValue);
+        })
+            .onUpdate((v) => {
+            this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
+        })
+            .onComplete(() => {
+            this.go.setVisibility(false);
+        });
+        this.startShowRingSoul();
+    }
+    startShowRingSoul() {
+        if (this.showRingSoulTween) {
+            this.showRingSoulTween.stop();
+            this.showRingSoulTween.start();
+        }
+    }
+    startHideRingSoul() {
+        if (this.hideRingSoulTween) {
+            this.hideRingSoulTween.stop();
+            this.hideRingSoulTween.start();
+        }
+    }
+}
+let RingSoul = class RingSoul extends Script {
+    constructor() {
+        super(...arguments);
+        this.playerId = 0;
+        this.ringSoulStrs = "";
+        this.isOnRingSoul = true;
+        this.player = null;
+        this.ringSoulMap = new Map();
+    }
+    get getPlayer() {
+        if (this.player == null) {
+            this.player = Player.getPlayer(this.playerId);
+        }
+        return this.player;
+    }
+    async initPlayer() {
+        if (!this.player) {
+            this.player = await Player.asyncGetPlayer(this.playerId);
+            console.error(`playerId = ${this.playerId}"的玩家 "${this.player ? "角色初始化完成" : "角色初始化失败"}`);
+        }
+    }
+    async updateRingSoul() {
+        if (!this.player)
+            await this.initPlayer();
+        if (!this.player)
+            return;
+        if (!this.ringSoulStrs || this.ringSoulStrs.length == 0)
+            return;
+        let ringSoulStrs = this.ringSoulStrs.split(`|`);
+        if (!ringSoulStrs || ringSoulStrs.length == 0)
+            return;
+        for (let i = 0; i < ringSoulStrs.length; ++i) {
+            if (!ringSoulStrs[i] || ringSoulStrs[i].length == 0)
+                continue;
+            let ringSoul = ringSoulStrs[i].split(`-`);
+            if (!ringSoul || ringSoul.length < 2)
+                continue;
+            let key = Number(ringSoul[0]);
+            let ringSoulIndex = Number(ringSoul[1]);
+            let ringSoulGo = null;
+            if (this.ringSoulMap.has(key)) {
+                ringSoulGo = this.ringSoulMap.get(key);
+                if (ringSoulGo.ringSoulIndex == ringSoulIndex)
+                    continue;
+                ringSoulGo.ringSoulIndex = ringSoulIndex;
+                if (ringSoulGo.go) {
+                    GameObjPool.despawn(ringSoulGo.go);
+                    ringSoulGo.go.setVisibility(false);
+                }
+            }
+            else {
+                ringSoulGo = new RingSoulGo();
+                if (ringSoulGo.ringSoulIndex == ringSoulIndex)
+                    continue;
+                ringSoulGo.ringSoulIndex = ringSoulIndex;
+            }
+            let go = await GameObjPool.asyncSpawn(ringSoulPrefabIds[ringSoulIndex - 1], mwext.GameObjPoolSourceType.Prefab);
+            await go.asyncReady();
+            this.getPlayer.character.attachToSlot(go, ringSoulSlots[key - 1]);
+            go.localTransform.position = ringSoulOffsetPoss[key - 1];
+            go.localTransform.rotation = ringSoulOffsetRots[key - 1];
+            go.localTransform.scale = ringSoulOffsetScls[key - 1];
+            ringSoulGo.go = go;
+            ringSoulGo.initRingSoulTween();
+            this.ringSoulMap.set(key, ringSoulGo);
+        }
+    }
+    async updateRingSoulState() {
+        if (!this.ringSoulMap || this.ringSoulMap.size == 0)
+            return;
+        if (this.isOnRingSoul) {
+            this.startShowRingSoulByIndex(1);
+            for (let i = 2; i <= 10; ++i) {
+                if (!this.ringSoulMap.has(i))
+                    continue;
+                let ringSoulGo = this.ringSoulMap.get(i);
+                await new Promise((resolve) => {
+                    setTimeout(() => {
+                        ringSoulGo.startShowRingSoul();
+                        return resolve();
+                    }, showRingSoulTweenIntervalTime * 1000);
+                });
+            }
+        }
+        else {
+            this.startHideRingSoulByIndex(1);
+            for (let i = 2; i <= 10; ++i) {
+                if (!this.ringSoulMap.has(i))
+                    continue;
+                let ringSoulGo = this.ringSoulMap.get(i);
+                await new Promise((resolve) => {
+                    setTimeout(() => {
+                        ringSoulGo.startHideRingSoul();
+                        return resolve();
+                    }, hideRingSoulTweenIntervalTime * 1000);
+                });
+            }
+        }
+    }
+    startShowRingSoulByIndex(index) {
+        if (!this.ringSoulMap.has(index))
+            return;
+        let ringSoulGo = this.ringSoulMap.get(index);
+        ringSoulGo.startShowRingSoul();
+    }
+    startHideRingSoulByIndex(index) {
+        if (!this.ringSoulMap.has(index))
+            return;
+        let ringSoulGo = this.ringSoulMap.get(index);
+        ringSoulGo.startHideRingSoul();
+    }
+};
+__decorate([
+    mw.Property({ replicated: true, onChanged: "initPlayer" })
+], RingSoul.prototype, "playerId", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "updateRingSoul" })
+], RingSoul.prototype, "ringSoulStrs", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "updateRingSoulState" })
+], RingSoul.prototype, "isOnRingSoul", void 0);
+RingSoul = __decorate([
+    Component
+], RingSoul);
+class RingSoulModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.hudModuleC = null;
+        this.ringSoulPanel = null;
+        this.ringSoul = {};
+        this.isOnRingSoul = true;
+    }
+    get getHudModuleC() {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+    get getRingSoulPanel() {
+        if (this.ringSoulPanel == null) {
+            this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
+        }
+        return this.ringSoulPanel;
+    }
+    onStart() {
+        InputUtil.onKeyDown(mw.Keys.P, () => {
+            // Event.dispatchToServer("RingSoul");
+            this.getRingSoulPanel.show();
+        });
+        InputUtil.onKeyDown(mw.Keys.I, () => {
+            this.onOffRingSoul(true);
+        });
+        InputUtil.onKeyDown(mw.Keys.O, () => {
+            this.onOffRingSoul(false);
+        });
+        this.getHudModuleC.onOpenRingSoulAction.add(() => {
+            this.getRingSoulPanel.show();
+        });
+    }
+    onEnterScene(sceneType) {
+        this.initRingSoulData();
+    }
+    initRingSoulData() {
+        this.ringSoul = this.data.ringSoul;
+    }
+    getIsHasRingSoul(key) {
+        return MapEx.has(this.ringSoul, key);
+    }
+    getRingSoulIndex(key) {
+        if (MapEx.has(this.ringSoul, key)) {
+            return MapEx.get(this.ringSoul, key);
+        }
+        return 0;
+    }
+    setRingSoulIndex(key, value) {
+        MapEx.set(this.ringSoul, key, value);
+        this.server.net_setRingSoulIndex(key, value);
+    }
+    onOffRingSoul(isOnRingSoul) {
+        if (this.isOnRingSoul == isOnRingSoul) {
+            this.isOnRingSoul ? Notice.showDownNotice(`已开启`) : Notice.showDownNotice(`已关闭`);
+            return;
+        }
+        if (MapEx.count(this.ringSoul) == 0)
+            return;
+        this.isOnRingSoul = isOnRingSoul;
+        this.server.net_onOffRingSoul(isOnRingSoul);
+    }
+}
+class RingSoulModuleS extends ModuleS {
+    constructor() {
+        super(...arguments);
+        this.ringSoulMap = new Map();
+    }
+    onStart() {
+    }
+    onPlayerEnterGame(player) {
+        this.initRingSoul(player);
+    }
+    initRingSoul(player) {
+        let playerId = player.playerId;
+        let ringSoul = player.character.addComponent(RingSoul, true);
+        ringSoul.playerId = playerId;
+        this.ringSoulMap.set(playerId, ringSoul);
+        let ringSoulData = DataCenterS.getData(player, RingSoulData).ringSoul;
+        console.error(`ringSoulData = ${JSON.stringify(ringSoulData)}`);
+        if (MapEx.count(ringSoulData) > 0) {
+            let ringSoulStrs = "";
+            MapEx.forEach(ringSoulData, (key, value) => {
+                ringSoulStrs += `${key}-${value}|`;
+            });
+            ringSoul.ringSoulStrs = ringSoulStrs;
+        }
+    }
+    net_setRingSoulIndex(key, value) {
+        let playerId = this.currentPlayerId;
+        this.currentData.setRingSoulIndex(key, value);
+        if (!this.ringSoulMap.has(playerId))
+            return;
+        let ringSoul = this.ringSoulMap.get(playerId);
+        ringSoul.ringSoulStrs = `${key}-${value}`;
+    }
+    net_onOffRingSoul(isOnRingSoul) {
+        let playerId = this.currentPlayerId;
+        if (!this.ringSoulMap.has(playerId))
+            return;
+        let ringSoul = this.ringSoulMap.get(playerId);
+        if (ringSoul.isOnRingSoul != isOnRingSoul)
+            ringSoul.isOnRingSoul = isOnRingSoul;
+    }
+}
+class RingSoulData extends Subdata {
+    constructor() {
+        super(...arguments);
+        this.ringSoul = {};
+    }
+    setRingSoulIndex(key, value) {
+        MapEx.set(this.ringSoul, key, value);
+        this.save(true);
+    }
+}
+__decorate([
+    Decorator.persistence()
+], RingSoulData.prototype, "ringSoul", void 0);
+class RingSoulPanel extends RingSoulPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.ringSoulModuleC = null;
+        this.playerModuleC = null;
+        this.adTipsPanel = null;
+        this.ringSoulItems = [];
+        this.ringSoulPage = 0;
+        this.ringSoulIndex = 0;
+        this.ringSoulItemChilds = [];
+    }
+    get getRingSoulModuleC() {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    get getAdTipsPanel() {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        for (let i = 1; i <= 9; ++i) {
+            let ringSoulItem = mw.UIService.create(RingSoulItem);
+            ringSoulItem.setRingSoulItemData(i);
+            this.ringSoulItems.push(ringSoulItem);
+            this.mContentCanvas.addChild(ringSoulItem.uiObject);
+        }
+        this.setRingSoulItemData(10);
+    }
+    setRingSoulItemData(ringSoulPage) {
+        this.ringSoulPage = ringSoulPage;
+        this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
+        for (let i = 1; i <= 6; ++i) {
+            let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
+            ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
+            this.ringSoulItemChilds.push(ringSoulItemChild);
+            this.mCanvas.addChild(ringSoulItemChild.uiObject);
+        }
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+        this.mUpButton.onClicked.add(this.addUpButton.bind(this));
+    }
+    addCloseButton() {
+        this.hide();
+    }
+    addUpButton() {
+        if (this.ringSoulPage <= 0) {
+            Notice.showDownNotice(`联系作者修复`);
+            return;
+        }
+        if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
+            Notice.showDownNotice(`已满级`);
+            return;
+        }
+        let lv = this.getPlayerModuleC.getLv;
+        if (lv < this.ringSoulPage * 10) {
+            Notice.showDownNotice(`等级不足`);
+            return;
+        }
+        let diamond = this.getPlayerModuleC.getDiamond;
+        console.error(`costDiamonds[this.ringSoulIndex ]:${costDiamonds[this.ringSoulIndex]}`);
+        if (diamond >= costDiamonds[this.ringSoulIndex]) {
+            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
+            this.ringSoulIndex++;
+            this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
+            this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
+            SoundService.playSound(upSound);
+        }
+        else {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.saveDiamond(1);
+                }, "免费领取1颗钻石", "取消", "免费领取");
+            }
+            else {
+                this.getPlayerModuleC.saveDiamond(1);
+            }
+        }
+    }
+}
+class RingSoulItem extends RingSoulItem_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.ringSoulModuleC = null;
+        this.playerModuleC = null;
+        this.adTipsPanel = null;
+        this.ringSoulPage = 0;
+        this.ringSoulIndex = 0;
+        this.ringSoulItemChilds = [];
+    }
+    get getRingSoulModuleC() {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    get getAdTipsPanel() {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel;
+    }
+    onStart() {
+        this.bindButton();
+    }
+    bindButton() {
+        this.mUpButton.onClicked.add(this.addUpButton.bind(this));
+    }
+    addUpButton() {
+        if (this.ringSoulPage <= 0) {
+            Notice.showDownNotice(`联系作者修复`);
+            return;
+        }
+        if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
+            Notice.showDownNotice(`已满级`);
+            return;
+        }
+        let lv = this.getPlayerModuleC.getLv;
+        if (lv < this.ringSoulPage * 10) {
+            Notice.showDownNotice(`等级不足`);
+            return;
+        }
+        let diamond = this.getPlayerModuleC.getDiamond;
+        console.error(`costDiamonds[this.ringSoulIndex]:${costDiamonds[this.ringSoulIndex]}`);
+        if (diamond >= costDiamonds[this.ringSoulIndex]) {
+            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
+            this.ringSoulIndex++;
+            this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
+            this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
+            SoundService.playSound(upSound);
+        }
+        else {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.saveDiamond(1);
+                }, "免费领取1颗钻石", "取消", "免费领取");
+            }
+            else {
+                this.getPlayerModuleC.saveDiamond(1);
+            }
+        }
+    }
+    setRingSoulItemData(ringSoulPage) {
+        this.ringSoulPage = ringSoulPage;
+        this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
+        for (let i = 1; i <= 5; ++i) {
+            let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
+            ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
+            this.ringSoulItemChilds.push(ringSoulItemChild);
+            this.mCanvas.addChild(ringSoulItemChild.uiObject);
+        }
+    }
+}
+class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.playerModuleC = null;
+        this.isHas = false;
+        this.ringSoulIndex = 0;
+        this.ringSoulIndex_Self = 0;
+        this.ringSoulPage = 0;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    onStart() {
+    }
+    setRingSoulItemChildData(ringSoulIndex, ringSoulIndex_Self, ringSoulPage) {
+        this.ringSoulPage = ringSoulPage;
+        this.ringSoulIndex_Self = ringSoulIndex_Self;
+        this.ringSoulIndex = ringSoulIndex;
+        this.isHas = ringSoulIndex <= this.ringSoulIndex_Self;
+        this.mIconImage.setImageColorByHex(ringSoulIconColors[this.ringSoulIndex - 1]);
+        this.updateUI();
+    }
+    updateUI() {
+        let lv = this.getPlayerModuleC.getLv;
+        this.mNameTextBlock.text = `第${figureStrs[this.ringSoulPage - 1]}魂环\n${ringSoulNames[this.ringSoulIndex - 1]}魂环`;
+        if (this.isHas) {
+            this.mHasTextBlock.visibility = mw.SlateVisibility.Collapsed;
+            this.mCostTextBlock.visibility = mw.SlateVisibility.Collapsed;
+            this.mUpTextBlock.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mHasTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mCostTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mUpTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `可解锁` : `${this.ringSoulPage * 10}可解锁`;
+            this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulIndex - 1]}</size></color>钻石`;
+        }
+    }
+    setRingSoulItemChildDataByIndex(ringSoulIndex_Self) {
+        this.ringSoulIndex_Self = ringSoulIndex_Self;
+        this.isHas = this.ringSoulIndex <= this.ringSoulIndex_Self;
+        this.updateUI();
+    }
+}
+
 let GameLauncher = class GameLauncher extends mw.Script {
     constructor() {
         super(...arguments);
@@ -14101,6 +15016,7 @@ let GameLauncher = class GameLauncher extends mw.Script {
         ModuleService.registerModule(GuideModuleS, GuideModuleC, GuideData);
         ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
         ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);
+        ModuleService.registerModule(RingSoulModuleS, RingSoulModuleC, RingSoulData);
     }
     /**------------------------------------------- 客户端 ------------------------------------------------ */
     /**客户端的OnStart */
@@ -14688,7 +15604,7 @@ __decorate([
     Decorator.persistence()
 ], ShopData.prototype, "useWeaponId", void 0);
 
-var foreign65 = /*#__PURE__*/Object.freeze({
+var foreign66 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopData
 });
@@ -14825,7 +15741,7 @@ class TouchData {
     }
 }
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputManagers: InputManagers,
     TouchData: TouchData
@@ -14836,7 +15752,7 @@ var foreign85 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.33
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -14926,7 +15842,7 @@ NPCHead_Generate = __decorate([
 ], NPCHead_Generate);
 var NPCHead_Generate$1 = NPCHead_Generate;
 
-var foreign106 = /*#__PURE__*/Object.freeze({
+var foreign110 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NPCHead_Generate$1
 });
@@ -14936,7 +15852,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.33
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -15004,7 +15920,7 @@ CostPanel_Generate = __decorate([
 ], CostPanel_Generate);
 var CostPanel_Generate$1 = CostPanel_Generate;
 
-var foreign105 = /*#__PURE__*/Object.freeze({
+var foreign109 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel_Generate$1
 });
@@ -15046,7 +15962,7 @@ class CostPanel extends CostPanel_Generate$1 {
     }
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel
 });
@@ -15056,7 +15972,7 @@ var foreign68 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.33
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -15167,7 +16083,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign108 = /*#__PURE__*/Object.freeze({
+var foreign112 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -15329,7 +16245,7 @@ class ShopItem {
     }
 }
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel
 });
@@ -15710,7 +16626,7 @@ class ShopModuleC extends ModuleC {
     }
 }
 
-var foreign66 = /*#__PURE__*/Object.freeze({
+var foreign67 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleC
 });
@@ -15765,7 +16681,7 @@ __decorate([
     Decorator.noReply()
 ], ShopModuleS.prototype, "net_saveUseWeaponId", null);
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleS
 });
@@ -16340,7 +17256,7 @@ var TrampolineRescourse;
     TrampolineRescourse["Roll"] = "14736";
 })(TrampolineRescourse || (TrampolineRescourse = {}));
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType$1; },
     OBB: OBB,
@@ -16495,7 +17411,7 @@ var ListenerEventsType;
     ListenerEventsType["ServerToAllClient_HideJumpRecordUI"] = "ServerToAllClient_HideJumpRecordUI";
 })(ListenerEventsType || (ListenerEventsType = {}));
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType; },
     default: P_Game_Trampoline
@@ -17160,7 +18076,7 @@ __decorate([
     RemoteFunction(mw.Client, mw.Multicast)
 ], WeaponClient.prototype, "client_PlayEffect", null);
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponClient: WeaponClient
 });
@@ -17288,7 +18204,7 @@ __decorate([
     RemoteFunction(mw.Server)
 ], WeaponServer.prototype, "server_setChar", null);
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponServer: WeaponServer
 });
@@ -17316,7 +18232,7 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Weapon$1
 });
@@ -17326,7 +18242,7 @@ var foreign79 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -17435,7 +18351,7 @@ OnlineRewardItem_Generate = __decorate([
 ], OnlineRewardItem_Generate);
 var OnlineRewardItem_Generate$1 = OnlineRewardItem_Generate;
 
-var foreign102 = /*#__PURE__*/Object.freeze({
+var foreign103 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardItem_Generate$1
 });
@@ -17445,7 +18361,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.33
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -17526,7 +18442,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign107 = /*#__PURE__*/Object.freeze({
+var foreign111 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -17536,7 +18452,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.33
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -17626,7 +18542,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign109 = /*#__PURE__*/Object.freeze({
+var foreign113 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -17636,7 +18552,7 @@ var foreign109 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -17681,7 +18597,7 @@ ImpactRadiusWindow_Generate = __decorate([
 ], ImpactRadiusWindow_Generate);
 var ImpactRadiusWindow_Generate$1 = ImpactRadiusWindow_Generate;
 
-var foreign111 = /*#__PURE__*/Object.freeze({
+var foreign115 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ImpactRadiusWindow_Generate$1
 });
@@ -17691,7 +18607,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -17756,7 +18672,7 @@ JumpRecordUI_Generate = __decorate([
 ], JumpRecordUI_Generate);
 var JumpRecordUI_Generate$1 = JumpRecordUI_Generate;
 
-var foreign112 = /*#__PURE__*/Object.freeze({
+var foreign116 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpRecordUI_Generate$1
 });
@@ -17766,7 +18682,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -17840,7 +18756,7 @@ RankItem_Generate = __decorate([
 ], RankItem_Generate);
 var RankItem_Generate$1 = RankItem_Generate;
 
-var foreign113 = /*#__PURE__*/Object.freeze({
+var foreign117 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankItem_Generate$1
 });
@@ -17850,7 +18766,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2024.08.29-23.35.34
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -17910,7 +18826,7 @@ WorldRankItem_Generate = __decorate([
 ], WorldRankItem_Generate);
 var WorldRankItem_Generate$1 = WorldRankItem_Generate;
 
-var foreign114 = /*#__PURE__*/Object.freeze({
+var foreign118 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankItem_Generate$1
 });
@@ -17980,57 +18896,60 @@ const MWModuleMap = {
      'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign62,
      '2909A3E141653B96AD1695BB3D9FD3E7': foreign63,
      '459EAC1C45A11267216B289C90BC7AC5': foreign64,
-     '0E7769194FC879692CDC4E91F3CA47D3': foreign65,
-     'EE9111164BB56CAF9589D28E0A80DCB7': foreign66,
-     'B9E68E6F47D05B8922EB89976547D0ED': foreign67,
-     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign68,
-     'B0214F354FA856A04434CB862696C501': foreign69,
-     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign70,
-     'C2A63B424C2C17C9DE3395B59BA9444C': foreign71,
-     '4CA21C094DAD2346E120EFBEA3D7736C': foreign72,
-     'E8535D714F5BFEC20EF595B175FA24BD': foreign73,
-     '1884D48A4EBB982234611D9DD0E1A853': foreign74,
-     '0568B98E45100A88DECA3E894117DA12': foreign75,
-     'B557F99E4E5DD1260BBC268B1579FDF6': foreign76,
-     '4A4C950D496FFCD7471A22924E8F3AE4': foreign77,
-     '586A140B4F5148B73C6201AF3EDA5701': foreign78,
-     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign79,
-     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign80,
-     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign81,
-     'E76AEC2E4B56116E911A1B86036607DC': foreign82,
-     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign83,
-     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign84,
-     'B6D27EAC444C85D1D925F986D613D5B3': foreign85,
-     'EFFEC0C44629992590058E96821DF5A4': foreign86,
-     'C21422064060FC0412F08EAAD527453E': foreign87,
-     'E08DC42B45A65EE74232E6B7819467BF': foreign88,
-     '9A29CFAC457713D31702BF919B762966': foreign89,
-     '4244ACB14A814AA70C452CB4CFEBB75D': foreign90,
-     'FAAB758A46290493F8E43BA2B90FE5D8': foreign91,
-     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign92,
-     '2C5FEBB74325C7CDDE604EB4590142F0': foreign93,
-     '9F6B6A8C43A7F31DDB111384318E84E0': foreign94,
-     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign95,
-     '4017F2464551598B868EECA194CC198A': foreign96,
-     '38D734224F75800856A0C69917B88EF8': foreign97,
-     '2987FCF94860A2648A6FA88D34EFA05A': foreign98,
-     'CEE46C5B4475EE568570CBA41D68EE0C': foreign99,
-     '51FD3899419F676C5D82C682439BFAFE': foreign100,
-     '92FA042A4FD4838557550FAACC252FDF': foreign101,
-     'FFAA0B1841347CE8BB80ED8EA9335519': foreign102,
-     '0EE04F42462FE0DADBF4668AD079F570': foreign103,
-     'D84A334C40B33A813552FF903364539E': foreign104,
-     '075AF2584F411C88705182871B9DFB78': foreign105,
-     '137112BE4F0726F6AD61EFBED47C639E': foreign106,
-     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign107,
-     '0D1CAB354779E284B6E58B91C82ABE07': foreign108,
-     '0C684B0C46414ED7D11529BA94FD6935': foreign109,
-     '10B4E9EA45C85246C9717EA276C7774B': foreign110,
-     '26DC6E0D40A865057A807DADF4A80DCB': foreign111,
-     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign112,
-     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign113,
-     '368482014D69E4E894C63192B0F17B63': foreign114,
-     '265FA5C440300C2875B6699C5F8B36C7': foreign115,
+     '0E7769194FC879692CDC4E91F3CA47D3': foreign66,
+     'EE9111164BB56CAF9589D28E0A80DCB7': foreign67,
+     'B9E68E6F47D05B8922EB89976547D0ED': foreign68,
+     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign69,
+     'B0214F354FA856A04434CB862696C501': foreign70,
+     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign71,
+     'C2A63B424C2C17C9DE3395B59BA9444C': foreign72,
+     '4CA21C094DAD2346E120EFBEA3D7736C': foreign73,
+     'E8535D714F5BFEC20EF595B175FA24BD': foreign74,
+     '1884D48A4EBB982234611D9DD0E1A853': foreign75,
+     '0568B98E45100A88DECA3E894117DA12': foreign76,
+     'B557F99E4E5DD1260BBC268B1579FDF6': foreign77,
+     '4A4C950D496FFCD7471A22924E8F3AE4': foreign78,
+     '586A140B4F5148B73C6201AF3EDA5701': foreign79,
+     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign80,
+     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign81,
+     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign82,
+     'E76AEC2E4B56116E911A1B86036607DC': foreign83,
+     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign84,
+     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign85,
+     'B6D27EAC444C85D1D925F986D613D5B3': foreign86,
+     'EFFEC0C44629992590058E96821DF5A4': foreign87,
+     'C21422064060FC0412F08EAAD527453E': foreign88,
+     'E08DC42B45A65EE74232E6B7819467BF': foreign89,
+     '9A29CFAC457713D31702BF919B762966': foreign90,
+     '4244ACB14A814AA70C452CB4CFEBB75D': foreign91,
+     'FAAB758A46290493F8E43BA2B90FE5D8': foreign92,
+     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign93,
+     '2C5FEBB74325C7CDDE604EB4590142F0': foreign94,
+     '9F6B6A8C43A7F31DDB111384318E84E0': foreign95,
+     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign96,
+     '4017F2464551598B868EECA194CC198A': foreign97,
+     '38D734224F75800856A0C69917B88EF8': foreign98,
+     '2987FCF94860A2648A6FA88D34EFA05A': foreign99,
+     'CEE46C5B4475EE568570CBA41D68EE0C': foreign100,
+     '51FD3899419F676C5D82C682439BFAFE': foreign101,
+     '92FA042A4FD4838557550FAACC252FDF': foreign102,
+     'FFAA0B1841347CE8BB80ED8EA9335519': foreign103,
+     '0EE04F42462FE0DADBF4668AD079F570': foreign104,
+     'D84A334C40B33A813552FF903364539E': foreign105,
+     '51DC73A84B35897D52C83693B7DD046D': foreign106,
+     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign107,
+     'D184468C4590DA86174C9FB293C6F14A': foreign108,
+     '075AF2584F411C88705182871B9DFB78': foreign109,
+     '137112BE4F0726F6AD61EFBED47C639E': foreign110,
+     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign111,
+     '0D1CAB354779E284B6E58B91C82ABE07': foreign112,
+     '0C684B0C46414ED7D11529BA94FD6935': foreign113,
+     '10B4E9EA45C85246C9717EA276C7774B': foreign114,
+     '26DC6E0D40A865057A807DADF4A80DCB': foreign115,
+     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign116,
+     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign117,
+     '368482014D69E4E894C63192B0F17B63': foreign118,
+     '265FA5C440300C2875B6699C5F8B36C7': foreign119,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign2 || {}, "JavaScripts/common/Boss"],
@@ -18096,57 +19015,60 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign62 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
 [foreign63 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
 [foreign64 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
-[foreign65 || {}, "JavaScripts/module/ShopModule/ShopData"],
-[foreign66 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
-[foreign67 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
-[foreign68 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
-[foreign69 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
-[foreign70 || {}, "JavaScripts/module/TaskModule/TaskData"],
-[foreign71 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
-[foreign72 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
-[foreign73 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
-[foreign74 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
-[foreign75 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
-[foreign76 || {}, "JavaScripts/Prefabs/PrefabEvent"],
-[foreign77 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
-[foreign78 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
-[foreign79 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
-[foreign80 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
-[foreign81 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
-[foreign82 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
-[foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
-[foreign84 || {}, "JavaScripts/Tools/Console"],
-[foreign85 || {}, "JavaScripts/Tools/InputManager"],
-[foreign86 || {}, "JavaScripts/Tools/MapEx"],
-[foreign87 || {}, "JavaScripts/Tools/ObjectPool"],
-[foreign88 || {}, "JavaScripts/Tools/utils"],
-[foreign89 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
-[foreign90 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
-[foreign91 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign92 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign93 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
-[foreign94 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
-[foreign95 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
-[foreign96 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
-[foreign97 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
-[foreign98 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
-[foreign99 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
-[foreign100 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign101 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign102 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
-[foreign103 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
-[foreign104 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
-[foreign105 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
-[foreign106 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
-[foreign107 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign108 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign109 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign110 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign111 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
-[foreign112 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
-[foreign113 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
-[foreign114 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
-[foreign115 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
+[foreign66 || {}, "JavaScripts/module/ShopModule/ShopData"],
+[foreign67 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
+[foreign68 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
+[foreign69 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
+[foreign70 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
+[foreign71 || {}, "JavaScripts/module/TaskModule/TaskData"],
+[foreign72 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
+[foreign73 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
+[foreign74 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
+[foreign75 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
+[foreign76 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
+[foreign77 || {}, "JavaScripts/Prefabs/PrefabEvent"],
+[foreign78 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
+[foreign79 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
+[foreign80 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
+[foreign81 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
+[foreign82 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
+[foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
+[foreign84 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
+[foreign85 || {}, "JavaScripts/Tools/Console"],
+[foreign86 || {}, "JavaScripts/Tools/InputManager"],
+[foreign87 || {}, "JavaScripts/Tools/MapEx"],
+[foreign88 || {}, "JavaScripts/Tools/ObjectPool"],
+[foreign89 || {}, "JavaScripts/Tools/utils"],
+[foreign90 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
+[foreign91 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
+[foreign92 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign93 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign94 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
+[foreign95 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
+[foreign96 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
+[foreign97 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
+[foreign98 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
+[foreign99 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
+[foreign100 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
+[foreign101 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign102 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign103 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
+[foreign104 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
+[foreign105 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
+[foreign106 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
+[foreign107 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
+[foreign108 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
+[foreign109 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
+[foreign110 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
+[foreign111 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign112 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign113 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign114 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign115 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
+[foreign116 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
+[foreign117 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
+[foreign118 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
+[foreign119 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

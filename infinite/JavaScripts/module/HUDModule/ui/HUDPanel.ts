@@ -65,6 +65,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mAddCoinButton.onClicked.add(() => {
 			this.getHudModuleC.onAddCoinAction.call();
 		});
+		this.mAddDiamondButton.onClicked.add(() => {
+			this.getHudModuleC.onAddDiamondAction.call();
+		});
 		this.mAdsButton.onClicked.add(() => {
 			this.getHudModuleC.onAdsAction.call();
 		});
@@ -257,12 +260,16 @@ export default class HUDPanel extends HUDPanel_Generate {
 	}
 
 	public updateCoin(coin: number): void {
-		this.mCoinTextBlock.text = Math.round(coin).toFixed(0) + "";
+		this.mCoinTextBlock.text = `${Math.round(coin)}`
+	}
+
+	public updateDiamond(diamond: number): void {
+		this.mDiamondTextBlock.text = `${diamond}`;
 	}
 
 	public updateMp(curMp: number, maxMp: number): void {
 		this.mMpProgressBar.currentValue = curMp / maxMp;
-		this.mMpTextBlock.text = `斗气：${curMp}/${maxMp}`;
+		this.mMpTextBlock.text = `${GlobalData.mpStr}：${curMp}/${maxMp}`;
 	}
 
 	public updateHp(curHp: number, maxHp: number): void {
@@ -285,8 +292,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 	private atk(index: number): void {
 		this.mAtkButton.onPressed.add(() => {
 			if (this.getHudModuleC.getMp < 5) {
-				Notice.showDownNotice(`斗气不足`);
-				Notice.showDownNotice(`升级增加斗气储量`);
+				Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+				Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
 				return;
 			}
 			if (this.curInputIndex != -1) return;

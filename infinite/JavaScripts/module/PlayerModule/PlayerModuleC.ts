@@ -40,6 +40,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
 
     protected onEnterScene(sceneType: number): void {
         this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
+        this.getHudModuleC.updateDiamond(this.data.diamond);
     }
 
     public net_onPlayerAtkSelf(damage: number, hitPoint: mw.Vector): void {
@@ -100,6 +101,15 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     public saveCoin(value: number): void {
         this.getHudModuleC.updateCoin(this.data.coin + value);
         this.server.net_saveCoin(value);
+    }
+
+    public saveDiamond(value: number): void {
+        this.getHudModuleC.updateDiamond(this.data.diamond + value);
+        this.server.net_saveDiamond(value);
+    }
+
+    public get getDiamond(): number {
+        return this.data.diamond;
     }
 
     /**

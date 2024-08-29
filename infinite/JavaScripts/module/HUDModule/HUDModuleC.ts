@@ -76,8 +76,10 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onOpenRankAction: Action = new Action();
     public onHomeAction: Action = new Action();
     public onAddCoinAction: Action = new Action();
+    public onAddDiamondAction: Action = new Action();
     public onAdsAction: Action = new Action();
     public onInvincibleAction: Action1<boolean> = new Action1();
+    public onOpenRingSoulAction: Action = new Action();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
@@ -117,6 +119,15 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
                 }, "免费领取10000金币", "取消", "免费领取");
             } else {
                 this.getPlayerModuleC.saveCoin(10000);
+            }
+        });
+        this.onAddDiamondAction.add(() => {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.saveDiamond(1);
+                }, "免费领取1颗钻石", "取消", "免费领取");
+            } else {
+                this.getPlayerModuleC.saveDiamond(1);
             }
         });
 
@@ -210,6 +221,10 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public updateCoin(coin: number): void {
         this.getHudPanel.updateCoin(coin);
     }
+    public updateDiamond(diamond: number): void {
+        this.getHudPanel.updateDiamond(diamond);
+    }
+
     private maxHp: number = -1;
     private curHp: number = -1;
     public updateHp(curHp: number): void {
@@ -384,8 +399,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     private sprint(): void {
         if (!this.isCanSprint) return;
         if (!this.isHaveMp(10)) {
-            Notice.showDownNotice(`斗气不足`);
-            Notice.showDownNotice(`升级增加斗气储量`);
+            Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+            Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
             return;
         }
         this.isCanSprint = false;
@@ -446,15 +461,15 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.currentJumpTime++;
         if (this.currentJumpTime == 1) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`斗气不足`);
-                Notice.showDownNotice(`升级增加斗气储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
                 return;
             }
         }
         if (this.currentJumpTime == 2) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`斗气不足`);
-                Notice.showDownNotice(`升级增加斗气储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
                 return;
             }
             PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.secondJumpAniID, 1)

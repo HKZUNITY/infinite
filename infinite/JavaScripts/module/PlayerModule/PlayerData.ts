@@ -9,6 +9,9 @@ export default class PlayerData extends Subdata {
     public coin: number = 0;
 
     @Decorator.persistence()
+    public diamond: number = 0;
+
+    @Decorator.persistence()
     public playerLv: number = 0;
 
     @Decorator.persistence()
@@ -20,6 +23,7 @@ export default class PlayerData extends Subdata {
     protected initDefaultData(): void {
         this.exp = 0;
         this.coin = 10000;
+        this.diamond = 0;
 
         this.playerLv = 0;
         this.playerHeight = 0;
@@ -59,6 +63,11 @@ export default class PlayerData extends Subdata {
 
     public saveCoin(value: number): void {
         this.coin += value;
+        this.save(true);
+    }
+
+    public saveDiamond(value: number): void {
+        this.diamond += value;
         this.save(true);
     }
 

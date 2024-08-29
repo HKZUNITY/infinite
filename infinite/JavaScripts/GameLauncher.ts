@@ -12,6 +12,7 @@ import PlayerModuleC from "./module/PlayerModule/PlayerModuleC";
 import PlayerModuleS from "./module/PlayerModule/PlayerModuleS";
 import { WorldRankModuleC } from "./module/RankModule/WorldRankModuleC";
 import { WorldRankModuleS } from "./module/RankModule/WorldRankModuleS";
+import { RingSoulData, RingSoulModuleC, RingSoulModuleS } from "./module/RingSoulModule/RingSoulModule";
 import { TaskData } from "./module/TaskModule/TaskData";
 import TaskModuleC from "./module/TaskModule/TaskModuleC";
 import TaskModuleS from "./module/TaskModule/TaskModuleS";
@@ -76,6 +77,7 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(GuideModuleS, GuideModuleC, GuideData);
         ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
         ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);
+        ModuleService.registerModule(RingSoulModuleS, RingSoulModuleC, RingSoulData);
     }
 
     /**------------------------------------------- 客户端 ------------------------------------------------ */

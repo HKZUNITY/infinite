@@ -292,6 +292,11 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         this.currentData.saveCoin(value);
     }
 
+    @Decorator.noReply()
+    public net_saveDiamond(value: number): void {
+        this.currentData.saveDiamond(value);
+    }
+
     /**
      * 更新金币
      * @param player 

@@ -506,7 +506,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             this.getLoading.hide();
             this.enterScenceUsing();
             this.getGuideModuleC.startFirst();
-        }, 30 * 1000);
+        }, 1 * 1000);
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("0F4AC706");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();

@@ -71,6 +71,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mAdsButton.onClicked.add(() => {
 			this.getHudModuleC.onAdsAction.call();
 		});
+		this.mRingSoulButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenRingSoulAction.call();
+		});
 		let isInvincible: boolean = false;
 		this.mInvincibleTextBlock.text = "已关闭防御";
 		this.mInvincibleButton.onClicked.add(() => {
@@ -82,6 +85,11 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mOnlineRewardButton.pressedImageGuid = "193281";
 		this.mOnlineRewardButton.disableImageGuid = "193281";
 		this.bindMusicButton();
+
+		this.mOnOffRingSoulTextBlock.text = "开魂环";
+		this.mOnOffRingSoulButton.onClicked.add(() => {
+			this.getHudModuleC.onOnOffRingSoulAction.call();
+		});
 	}
 
 	/**
@@ -90,6 +98,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 	private initUI(): void {
 		this.initRedPointTween();
 		this.initTaskTween();
+		this.initRedPointTween_RingSou();
 		this.initKillTipItems();
 		this.initDeadCountDown();
 		this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
@@ -552,6 +561,61 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mOnlineRewardTextBlock.text = text;
 	}
 
+	//#endregion
+
+	//#region RingSoul
+	private redPointTween1_RingSou: mw.Tween<any> = null;
+	private redPointTween2_RingSou: mw.Tween<any> = null;
+
+	private initRedPointTween_RingSou(): void {
+		this.redPointTween1_RingSou = new mw.Tween({ value: 0.8 })
+			.to({ value: 1.2 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(0.8);
+			})
+			.onUpdate((v) => {
+				this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween2_RingSou.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween2_RingSou = new mw.Tween({ value: 1.2 })
+			.to({ value: 0.8 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(1.2);
+			})
+			.onUpdate((v) => {
+				this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween1_RingSou.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween1_RingSou.start();
+
+		let onOffRingSoulTween1 = new mw.Tween({ angle: 0 })
+			.to({ angle: 360 }, 2 * 1000)
+			.onUpdate((v) => {
+				this.mOnOffRingSoulButton.renderTransformAngle = v.angle;
+			})
+			.onComplete(() => {
+				onOffRingSoulTween2.start();
+			});
+
+		let onOffRingSoulTween2 = new mw.Tween({ angle: 0 })
+			.to({ angle: 360 }, 2 * 1000)
+			.onUpdate((v) => {
+				this.mOnOffRingSoulButton.renderTransformAngle = v.angle;
+			})
+			.onComplete(() => {
+				onOffRingSoulTween1.start();
+			});
+
+		onOffRingSoulTween1.start();
+	}
 	//#endregion
 	//#endregion
 }

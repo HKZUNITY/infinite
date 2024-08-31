@@ -34,7 +34,7 @@ export class WorldRankItem {
 		if (lv == 0) {
 			this.mLvTextBlock.text = "暂无";
 		} else {
-			this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
+			this.mLvTextBlock.text = Utils.getLvText(lv);
 		}
 		this.mRankTextBlock.outlineColor = color;
 		this.mNameTextBlock.outlineColor = color;

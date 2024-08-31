@@ -119,6 +119,9 @@ export default class GuidePanel extends GuideUI_Generate {
 			case 16:
 				this.guide16();
 				break;
+			case 17:
+				this.guide_1();
+				break;
 			// 可以继续增加无数步
 			default:
 				this.hide();
@@ -126,7 +129,13 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 	private guide0(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
-			this.centPos, "欢迎来到斗破苍穹乐园，我来给你介绍一下所有按钮操作吧。", 0, true)
+			this.centPos, "欢迎来到\n我的魂环无限升级\n我来给你介绍一下所有按钮操作吧。", 0, true)
+	}
+
+	private guide_1(): void {
+		mw.localToViewport(this.getHudPanel.mRingSoulButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size,
+			new mw.Vector2(730, 150), "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到\n十万年级别，\n第十环可以达到百万年级别", 1, true)
 	}
 
 	private guide1(): void {
@@ -174,31 +183,31 @@ export default class GuidePanel extends GuideUI_Generate {
 	private guide8(): void {
 		mw.localToViewport(this.getHudPanel.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mShopButton.size,
-			new mw.Vector2(900, 300), "斗技功法按钮，提升等级最快的办法就是在斗帝都市寻找斗技、功法。", 1, true)
+			new mw.Vector2(900, 300), "背包按钮，提升等级最快的办法就是在地图中寻找武魂、职业、魂骨、宠物。", 1, true)
 	}
 
 	private guide9(): void {
 		mw.localToViewport(this.getHudPanel.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mRankButton.size,
-			new mw.Vector2(250, 0), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗帝都市的排名是多少吧。", 1, true)
+			new mw.Vector2(250, 0), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗罗大陆的排名是多少吧。", 1, true)
 	}
 
 	private guide10(): void {
 		mw.localToViewport(this.getHudPanel.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size,
-			new mw.Vector2(730, 150), "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到斗圣。", 1, true)
+			new mw.Vector2(730, 150), "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到封号斗罗。", 1, true)
 	}
 
 	private guide11(): void {
 		mw.localToViewport(this.getHudPanel.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mTaskButton.size,
-			new mw.Vector2(550, 150), "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到斗帝。", 1, true)
+			new mw.Vector2(550, 150), "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到神级。", 1, true)
 	}
 
 	private guide12(): void {
 		mw.localToViewport(this.getHudPanel.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size,
-			new mw.Vector2(600, 150), "福利多多，最快提升等级的办法，无限升级，成为斗帝的捷径。", 1, true)
+			new mw.Vector2(600, 150), "福利多多，最快提升等级的办法，无限升级，成为神级的捷径。", 1, true)
 	}
 
 	private guide13(): void {
@@ -216,12 +225,18 @@ export default class GuidePanel extends GuideUI_Generate {
 	private guide15(): void {
 		mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size,
-			new mw.Vector2(550, 350), "可快速增加金币直接购买斗技功法。", 1, true)
+			new mw.Vector2(550, 350), "可快速增加金币直接购买武魂、魂骨。", 1, true)
 	}
 
 	private guide16(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
-			this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找斗技、功法。", 0, true)
+			this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", 0, true)
+	}
+
+	public guide_First(): void {
+		mw.localToViewport(this.getHudPanel.mRingSoulButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size,
+			new mw.Vector2(730, 150), "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", 1, true)
 	}
 
 	/**

@@ -51,6 +51,8 @@ export default class TaskPanel extends TaskPanel_Generate {
 
 	protected onShow(...params: any[]): void {
 		this.canUpdate = true;
+		this.mDailyTaskBox.scrollOffset = 0;
+		this.mWeekTaskBox.scrollOffset = 0;
 		Utils.openUITween(
 			this.rootCanvas,
 			null,
@@ -91,7 +93,6 @@ export default class TaskPanel extends TaskPanel_Generate {
 		dailyTaskDataMap.forEach((value, key) => {
 			let dailyTaskItem = ObjectPoolServices.getPool(TaskItem).spawn();
 			dailyTaskItem.initTaskItemData(key, value);
-			// console.error(`dailyTaskItem.isGet:${dailyTaskItem.isGet}`);
 			if (dailyTaskItem.isGet) {
 				this.mDailyTaskCanvas.addChild(dailyTaskItem.taskItem);
 				dailyTaskItem.taskItem.size = new mw.Vector2(556, 94);
@@ -101,8 +102,6 @@ export default class TaskPanel extends TaskPanel_Generate {
 			this.dailyTaskItemsMap.set(key, dailyTaskItem);
 		});
 		this.addDailyTaskCanvas();
-		// this.mCanvas_dailytask.size = new mw.Vector(this.mCanvas_dailytask.size.x,
-		// 	dailyTaskDataMap.size * Globaldata.dailyItemY);
 	}
 
 	private addDailyTaskCanvas(): void {
@@ -163,8 +162,6 @@ export default class TaskPanel extends TaskPanel_Generate {
 			this.weeklyTaskItemsMap.set(key, weeklyTaskItem);
 		});
 		this.addWeekTaskCanvas();
-		// this.mCanvas_weektask.size = new mw.Vector(this.mCanvas_weektask.size.x,
-		// 	weeklyTaskDataMap.size * Globaldata.weeklyItemY);
 	}
 
 	private addWeekTaskCanvas(): void {
@@ -194,8 +191,6 @@ export default class TaskPanel extends TaskPanel_Generate {
 			this.mRecycleCanvas.addChild(dailyTaskItem.taskItem);
 			this.dailyTaskItemsMap.delete(vipTaskType);
 			this.mDailyTaskBox.scrollOffset = 0;
-			// this.mCanvas_dailytask.size = new mw.Vector(this.mCanvas_dailytask.size.x,
-			// 	this.dailyTaskItemsMap.size * Globaldata.dailyItemY);
 			if (this.dailyTaskItemsMap.size <= 0) {
 				this.mDailyTaskDoneTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
 			}
@@ -206,8 +201,6 @@ export default class TaskPanel extends TaskPanel_Generate {
 			this.mRecycleCanvas.addChild(weeklyTaskItem.taskItem);
 			this.weeklyTaskItemsMap.delete(vipTaskType);
 			this.mWeekTaskBox.scrollOffset = 0;
-			// this.mCanvas_weektask.size = new mw.Vector(this.mCanvas_weektask.size.x,
-			// 	this.weeklyTaskItemsMap.size * Globaldata.weeklyItemY);
 			if (this.weeklyTaskItemsMap.size <= 0) {
 				this.mWeekTaskDoneTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
 			}
@@ -221,7 +214,6 @@ export default class TaskPanel extends TaskPanel_Generate {
 			this.mRecycleCanvas.addChild(value.taskItem);
 			this.dailyTaskItemsMap.delete(key);
 		});
-		// this.mCanvas_dailytask.size = new mw.Vector(this.mCanvas_dailytask.size.x, 0);
 		this.mDailyTaskBox.scrollOffset = 0;
 		this.dailyTaskItemsMap.clear();
 	}
@@ -233,7 +225,6 @@ export default class TaskPanel extends TaskPanel_Generate {
 			this.mRecycleCanvas.addChild(value.taskItem);
 			this.weeklyTaskItemsMap.delete(key);
 		});
-		// this.mCanvas_dailytask.size = new mw.Vector(this.mCanvas_dailytask.size.x, 0);
 		this.mWeekTaskBox.scrollOffset = 0;
 		this.weeklyTaskItemsMap.clear();
 	}
@@ -297,6 +288,8 @@ class TaskItem {
 	public mCoinTextBlock: mw.TextBlock = undefined;
 	public mExpCanvas: mw.Canvas = undefined;
 	public mExpTextBlock: mw.TextBlock = undefined;
+	public mDiamondCanvas: mw.Canvas = undefined;
+	public mDiamondTextBlock: mw.TextBlock = undefined;
 	public mFinishButton: mw.Button = undefined;
 	public mUnfinishTextBlock: mw.TextBlock = undefined;
 
@@ -311,6 +304,9 @@ class TaskItem {
 
 		this.mExpCanvas = this.taskItem.findChildByPath("RootCanvas/mExpCanvas") as mw.Canvas;
 		this.mExpTextBlock = this.taskItem.findChildByPath("RootCanvas/mExpCanvas/mExpTextBlock") as mw.TextBlock;
+
+		this.mDiamondCanvas = this.taskItem.findChildByPath("RootCanvas/mDiamondCanvas") as mw.Canvas;
+		this.mDiamondTextBlock = this.taskItem.findChildByPath("RootCanvas/mDiamondCanvas/mDiamondTextBlock") as mw.TextBlock;
 
 		this.mFinishButton = this.taskItem.findChildByPath("RootCanvas/mFinishButton") as mw.Button;
 		this.mUnfinishTextBlock = this.taskItem.findChildByPath("RootCanvas/mUnfinishTextBlock") as mw.TextBlock;
@@ -340,8 +336,12 @@ class TaskItem {
 		this.mNameTextBlock.text = StringUtil.format(this.vIPTaskElement.Name, this.task.progress, this.vIPTaskElement.TragetNum);
 		this.mCoinTextBlock.text = this.vIPTaskElement.Coin.toString();
 		this.mExpTextBlock.text = this.vIPTaskElement.Exp.toString();
+		this.mDiamondTextBlock.text = this.vIPTaskElement.Diamond.toString();
 		if (this.vIPTaskElement.Exp == 0 || this.vIPTaskElement.Exp == null) {
 			this.mExpCanvas.visibility = mw.SlateVisibility.Collapsed;
+		}
+		if (this.vIPTaskElement.Diamond == 0 || this.vIPTaskElement.Diamond == null) {
+			this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
 		}
 		this.mFinishButton.onClicked.add(() => {
 			Event.dispatchToLocal("PlayButtonClick");

@@ -49,7 +49,7 @@ export default class GlobalData {
     public static atk: number = 0;
     public static hp: number = 0;
 
-    public static totalBagLen: number = 276;
+    public static totalBagLen: number = 129;
 
-    public static mpStr: string = `斗气`;
+    public static mpStr: string = `魂力`;
 }

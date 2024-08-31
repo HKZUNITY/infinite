@@ -80,6 +80,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onAdsAction: Action = new Action();
     public onInvincibleAction: Action1<boolean> = new Action1();
     public onOpenRingSoulAction: Action = new Action();
+    public onOnOffRingSoulAction: Action = new Action();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {

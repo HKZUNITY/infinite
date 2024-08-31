@@ -2,7 +2,7 @@ import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import { Utils } from "../../Tools/utils";
 import { Notice } from "../../common/notice/Notice";
 import GlobalData from "../../const/GlobalData";
-import { BagModuleC } from '../BagModule/BagModule';
+import { BagInfoPanel, BagModuleC } from '../BagModule/BagModule';
 import GuidePanel from "./ui/GuidePanel";
 
 export class GuideData extends Subdata {
@@ -40,7 +40,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
-    private totalStep: number = 16;
+    private totalStep: number = 17;
     private curStep: number = -1;
     public onNextStepAction: Action = new Action();
 
@@ -182,8 +182,14 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
                     this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                         if (!this.getBagModuleC.isHasBagId(20023)) {
                             this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                                if (!this.getBagModuleC.isHasBagId(30007)) {
-                                    this.startGuide(this.getBagModuleC.getBagObVec(30007));
+                                if (!this.getBagModuleC.isHasBagId(30001)) {
+                                    this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
+                                        if (!this.getBagModuleC.isHasBagId(20053)) {
+                                            this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
+                                                this.first();
+                                            });
+                                        }
+                                    });
                                 }
                             });
                         }
@@ -195,8 +201,14 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
                 this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                     if (!this.getBagModuleC.isHasBagId(20023)) {
                         this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                            if (!this.getBagModuleC.isHasBagId(30007)) {
-                                this.startGuide(this.getBagModuleC.getBagObVec(30007));
+                            if (!this.getBagModuleC.isHasBagId(30001)) {
+                                this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
+                                    if (!this.getBagModuleC.isHasBagId(20053)) {
+                                        this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
+                                            this.first();
+                                        });
+                                    }
+                                });
                             }
                         });
                     }
@@ -204,17 +216,45 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             } else {
                 if (!this.getBagModuleC.isHasBagId(20023)) {
                     this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
-                        if (!this.getBagModuleC.isHasBagId(30007)) {
-                            this.startGuide(this.getBagModuleC.getBagObVec(30007));
+                        if (!this.getBagModuleC.isHasBagId(30001)) {
+                            this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
+                                if (!this.getBagModuleC.isHasBagId(20053)) {
+                                    this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
+                                        this.first();
+                                    });
+                                }
+                            });
                         }
                     });
                 } else {
-                    if (!this.getBagModuleC.isHasBagId(30007)) {
-                        this.startGuide(this.getBagModuleC.getBagObVec(30007));
+                    if (!this.getBagModuleC.isHasBagId(30001)) {
+                        this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
+                            if (!this.getBagModuleC.isHasBagId(20053)) {
+                                this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
+                                    this.first();
+                                });
+                            }
+                        });
+                    } else {
+                        if (!this.getBagModuleC.isHasBagId(20053)) {
+                            this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
+                                this.first();
+                            });
+                        }
                     }
                 }
             }
         }
+    }
+
+    public first(): void {
+        TimeUtil.delaySecond(5).then(() => {
+            if (mw.UIService.getUI(BagInfoPanel, false).visible) mw.UIService.hide(BagInfoPanel);
+            Event.dispatchToLocal("First");
+            TimeUtil.delaySecond(5).then(() => {
+                this.getGuidePanel.guide_First();
+            });
+        });
     }
 }
 

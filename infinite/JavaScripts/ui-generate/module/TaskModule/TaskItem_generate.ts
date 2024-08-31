@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.08.29-23.35.33
+ * TIME: 2024.09.01-00.10.28
  */
  
 @UIBind('UI/module/TaskModule/TaskItem.ui')
@@ -42,6 +42,20 @@ export default class TaskItem_Generate extends UIScript {
 			this.mExpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mExpCanvas/mExpTextBlock') as mw.TextBlock
 		}
 		return this.mExpTextBlock_Internal
+	}
+	private mDiamondCanvas_Internal: mw.Canvas
+	public get mDiamondCanvas(): mw.Canvas {
+		if(!this.mDiamondCanvas_Internal&&this.uiWidgetBase) {
+			this.mDiamondCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDiamondCanvas') as mw.Canvas
+		}
+		return this.mDiamondCanvas_Internal
+	}
+	private mDiamondTextBlock_Internal: mw.TextBlock
+	public get mDiamondTextBlock(): mw.TextBlock {
+		if(!this.mDiamondTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDiamondCanvas/mDiamondTextBlock') as mw.TextBlock
+		}
+		return this.mDiamondTextBlock_Internal
 	}
 	private mFinishButton_Internal: mw.Button
 	public get mFinishButton(): mw.Button {
@@ -87,6 +101,9 @@ export default class TaskItem_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mExpTextBlock)
+		
+	
+		this.initLanguage(this.mDiamondTextBlock)
 		
 	
 		this.initLanguage(this.mUnfinishTextBlock)

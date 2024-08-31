@@ -1,11 +1,13 @@
 ﻿import { Notice } from "../../common/notice/Notice";
 import GlobalData from "../../const/GlobalData";
 import { MapEx } from "../../Tools/MapEx";
+import { Utils } from "../../Tools/utils";
 import RingSoulItem_Generate from "../../ui-generate/module/RingSoulModule/RingSoulItem_generate";
 import RingSoulItemChild_Generate from "../../ui-generate/module/RingSoulModule/RingSoulItemChild_generate";
 import RingSoulPanel_Generate from "../../ui-generate/module/RingSoulModule/RingSoulPanel_generate";
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
 import HUDModuleC from "../HUDModule/HUDModuleC";
+import HUDPanel from "../HUDModule/ui/HUDPanel";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 
 const ringSoulNames: string[] = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
@@ -21,7 +23,15 @@ const ringSoulPrefabIds: string[] = [
     "19F4724F4E312B74233E1FA76EB9EEA9",
     "7C36BC974D5F9E55375E31BA8161C366"
 ]
-const ringSoulSlots: number[] = [23, 23, 23, 23, 23, 23, 23, 23, 23, 12];
+const ringSoulPrefabIdss: string[] = [
+    "7C36BC974D5F9E55375E31BA8161C366",
+    "92667F8849C7C04147E532A769D4C810",
+    "76F94448413EFBCDE982F6AD77A82674",
+    "E441096546A41ADCE42B85979BEE09CE",
+    "3944E8254E94BA46BAE85D9C37DAB6A7",
+    "12901F834472C74D86A077A1D286D75E"
+]
+const ringSoulSlots: number[] = [23, 23, 23, 23, 23, 23, 23, 23, 23, 23];
 const ringSoulOffsetPoss: mw.Vector[] = [
     new mw.Vector(0, 0, 30),
     new mw.Vector(0, 0, 30),
@@ -32,7 +42,7 @@ const ringSoulOffsetPoss: mw.Vector[] = [
     new mw.Vector(0, 0, 30),
     new mw.Vector(0, 0, 30),
     new mw.Vector(0, 0, 30),
-    new mw.Vector(60, 0, 250)
+    new mw.Vector(-100, 0, 320)
 ];
 const ringSoulOffsetRots: mw.Rotation[] = [
     new mw.Rotation(0, 0, 0),
@@ -44,7 +54,7 @@ const ringSoulOffsetRots: mw.Rotation[] = [
     new mw.Rotation(0, 0, 0),
     new mw.Rotation(0, 0, 0),
     new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, -60, 0)
+    new mw.Rotation(0, 65, 0)
 ];
 const ringSoulOffsetScls: mw.Vector[] = [
     new mw.Vector(0.3, 0.3, 0.3),
@@ -58,9 +68,9 @@ const ringSoulOffsetScls: mw.Vector[] = [
     new mw.Vector(2.3, 2.3, 2.3),
     new mw.Vector(2.5, 2.5, 2.5)
 ];
-const showRingSoulTweenTime: number = 0.8;
+const showRingSoulTweenTime: number = 0.6;
 const hideRingSoulTweenTime: number = 0.5;
-const showRingSoulTweenIntervalTime: number = 0.6;
+const showRingSoulTweenIntervalTime: number = 0.3;
 const hideRingSoulTweenIntervalTime: number = 0.25;
 
 export class RingSoulGo {
@@ -169,7 +179,9 @@ export default class RingSoul extends Script {
                 if (ringSoulGo.ringSoulIndex == ringSoulIndex) continue;
                 ringSoulGo.ringSoulIndex = ringSoulIndex;
             }
-            let go = await GameObjPool.asyncSpawn(ringSoulPrefabIds[ringSoulIndex - 1], mwext.GameObjPoolSourceType.Prefab);
+            let go = await GameObjPool.asyncSpawn(
+                (key != 10) ? ringSoulPrefabIds[ringSoulIndex - 1] : ringSoulPrefabIdss[ringSoulIndex - 1],
+                mwext.GameObjPoolSourceType.Prefab);
             await go.asyncReady();
             this.getPlayer.character.attachToSlot(go, ringSoulSlots[key - 1]);
             go.localTransform.position = ringSoulOffsetPoss[key - 1];
@@ -181,32 +193,69 @@ export default class RingSoul extends Script {
         }
     }
 
+    // public async updateRingSoulState(): Promise<void> {
+    //     if (!this.ringSoulMap || this.ringSoulMap.size == 0) return;
+    //     if (this.isOnRingSoul) {
+    //         this.startShowRingSoulByIndex(1);
+    //         for (let i = 2; i <= 10; ++i) {
+    //             if (!this.ringSoulMap.has(i)) continue;
+    //             let ringSoulGo = this.ringSoulMap.get(i);
+    //             await new Promise<void>((resolve: () => void) => {
+    //                 setTimeout(() => {
+    //                     ringSoulGo.startShowRingSoul();
+    //                     return resolve();
+    //                 }, showRingSoulTweenIntervalTime * 1000);
+    //             });
+    //         }
+    //     } else {
+    //         this.startHideRingSoulByIndex(1);
+    //         for (let i = 2; i <= 10; ++i) {
+    //             if (!this.ringSoulMap.has(i)) continue;
+    //             let ringSoulGo = this.ringSoulMap.get(i);
+    //             await new Promise<void>((resolve: () => void) => {
+    //                 setTimeout(() => {
+    //                     ringSoulGo.startHideRingSoul();
+    //                     return resolve();
+    //                 }, hideRingSoulTweenIntervalTime * 1000);
+    //             });
+    //         }
+    //     }
+    // }
+
     public async updateRingSoulState(): Promise<void> {
         if (!this.ringSoulMap || this.ringSoulMap.size == 0) return;
-        if (this.isOnRingSoul) {
-            this.startShowRingSoulByIndex(1);
-            for (let i = 2; i <= 10; ++i) {
-                if (!this.ringSoulMap.has(i)) continue;
-                let ringSoulGo = this.ringSoulMap.get(i);
-                await new Promise<void>((resolve: () => void) => {
-                    setTimeout(() => {
-                        ringSoulGo.startShowRingSoul();
-                        return resolve();
-                    }, showRingSoulTweenIntervalTime * 1000);
-                });
-            }
-        } else {
-            this.startHideRingSoulByIndex(1);
-            for (let i = 2; i <= 10; ++i) {
-                if (!this.ringSoulMap.has(i)) continue;
-                let ringSoulGo = this.ringSoulMap.get(i);
-                await new Promise<void>((resolve: () => void) => {
-                    setTimeout(() => {
-                        ringSoulGo.startHideRingSoul();
-                        return resolve();
-                    }, hideRingSoulTweenIntervalTime * 1000);
-                });
-            }
+        await this.OffRingSoul();
+        await TimeUtil.delaySecond(1);
+        await this.OnRingSoul();
+    }
+
+    private async OffRingSoul(): Promise<void> {
+        console.error(`关闭`)
+        this.startHideRingSoulByIndex(1);
+        for (let i = 2; i <= 10; ++i) {
+            if (!this.ringSoulMap.has(i)) continue;
+            let ringSoulGo = this.ringSoulMap.get(i);
+            await new Promise<void>((resolve: () => void) => {
+                setTimeout(() => {
+                    ringSoulGo.startHideRingSoul();
+                    return resolve();
+                }, hideRingSoulTweenIntervalTime * 1000);
+            });
+        }
+    }
+
+    private async OnRingSoul(): Promise<void> {
+        console.error(`打开`)
+        this.startShowRingSoulByIndex(1);
+        for (let i = 2; i <= 10; ++i) {
+            if (!this.ringSoulMap.has(i)) continue;
+            let ringSoulGo = this.ringSoulMap.get(i);
+            await new Promise<void>((resolve: () => void) => {
+                setTimeout(() => {
+                    ringSoulGo.startShowRingSoul();
+                    return resolve();
+                }, showRingSoulTweenIntervalTime * 1000);
+            });
         }
     }
 
@@ -245,20 +294,21 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
             // Event.dispatchToServer("RingSoul");
             this.getRingSoulPanel.show();
         });
-        InputUtil.onKeyDown(mw.Keys.I, () => {
-            this.onOffRingSoul(true);
-        });
         InputUtil.onKeyDown(mw.Keys.O, () => {
-            this.onOffRingSoul(false);
+            this.onOffRingSoul();
         });
 
         this.getHudModuleC.onOpenRingSoulAction.add(() => {
             this.getRingSoulPanel.show();
         });
+        this.getHudModuleC.onOnOffRingSoulAction.add(() => {
+            this.onOffRingSoul();
+        });
     }
 
     protected onEnterScene(sceneType: number): void {
         this.initRingSoulData();
+        this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
     }
 
     private ringSoul: MapEx.MapExClass<number> = {};
@@ -282,15 +332,21 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
         this.server.net_setRingSoulIndex(key, value);
     }
 
-    private isOnRingSoul: boolean = true;
-    public onOffRingSoul(isOnRingSoul: boolean): void {
-        if (this.isOnRingSoul == isOnRingSoul) {
-            this.isOnRingSoul ? Notice.showDownNotice(`已开启`) : Notice.showDownNotice(`已关闭`);
+    private isCanOnRingSoul: boolean = true;
+    public onOffRingSoul(): void {
+        if (MapEx.count(this.ringSoul) == 0) {
+            Notice.showDownNotice(`还未获取魂环`);
             return;
         }
-        if (MapEx.count(this.ringSoul) == 0) return;
-        this.isOnRingSoul = isOnRingSoul;
-        this.server.net_onOffRingSoul(isOnRingSoul);
+        if (!this.isCanOnRingSoul) {
+            Notice.showDownNotice(`15秒冷却`);
+            return;
+        }
+        this.isCanOnRingSoul = false;
+        TimeUtil.delaySecond(15).then(() => {
+            this.isCanOnRingSoul = true;
+        });
+        this.server.net_onOffRingSoul();
     }
 }
 
@@ -329,11 +385,11 @@ export class RingSoulModuleS extends ModuleS<RingSoulModuleC, RingSoulData> {
         ringSoul.ringSoulStrs = `${key}-${value}`;
     }
 
-    public net_onOffRingSoul(isOnRingSoul: boolean): void {
+    public net_onOffRingSoul(): void {
         let playerId = this.currentPlayerId;
         if (!this.ringSoulMap.has(playerId)) return;
         let ringSoul = this.ringSoulMap.get(playerId);
-        if (ringSoul.isOnRingSoul != isOnRingSoul) ringSoul.isOnRingSoul = isOnRingSoul;
+        ringSoul.isOnRingSoul = !ringSoul.isOnRingSoul;
     }
 }
 
@@ -368,6 +424,13 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
             this.adTipsPanel = mw.UIService.create(AdTipsPanel);
         }
         return this.adTipsPanel
+    }
+    private hudPanel: HUDPanel = null;
+    private get getHudPanel(): HUDPanel {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
     }
 
     protected onStart(): void {
@@ -407,7 +470,7 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
     }
 
     private addCloseButton(): void {
-        this.hide();
+        this.hideTween();
     }
 
     private addUpButton(): void {
@@ -435,6 +498,7 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
             SoundService.playSound(upSound);
+            Notice.showDownNotice(`锻造成功`);
         } else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
@@ -444,6 +508,26 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
                 this.getPlayerModuleC.saveDiamond(1);
             }
         }
+    }
+
+    protected onShow(...params: any[]): void {
+        Utils.openUITween(
+            this.rootCanvas,
+            () => {
+                this.getHudPanel.hide();
+            },
+            null
+        );
+    }
+
+    public hideTween(): void {
+        Utils.closeUITween(
+            this.rootCanvas,
+            null,
+            () => {
+                this.hide();
+                this.getHudPanel.show();
+            });
     }
 }
 
@@ -476,6 +560,16 @@ export class RingSoulItem extends RingSoulItem_Generate {
 
     private bindButton(): void {
         this.mUpButton.onClicked.add(this.addUpButton.bind(this));
+        Event.addLocalListener("First", () => {
+            if (this.ringSoulPage == 1 && this.ringSoulIndex == 0) {
+                this.ringSoulIndex++;
+                this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
+                this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
+                SoundService.playSound(upSound);
+                Notice.showDownNotice(`恭喜你完成新手引导`);
+                Notice.showDownNotice(`奖励第一魂环 十年魂环`);
+            }
+        });
     }
 
     private addUpButton(): void {
@@ -503,6 +597,7 @@ export class RingSoulItem extends RingSoulItem_Generate {
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
             SoundService.playSound(upSound);
+            Notice.showDownNotice(`锻造成功`);
         } else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
@@ -566,7 +661,7 @@ export class RingSoulItemChild extends RingSoulItemChild_Generate {
             this.mHasTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mCostTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mUpTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `可解锁` : `${this.ringSoulPage * 10}可解锁`;
+            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `级可解锁` : `${this.ringSoulPage * 10}级可解锁`;
             this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulIndex - 1]}</size></color>钻石`;
         }
     }

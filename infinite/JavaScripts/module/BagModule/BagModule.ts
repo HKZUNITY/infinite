@@ -506,15 +506,13 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             this.getLoading.hide();
             this.enterScenceUsing();
             this.getGuideModuleC.startFirst();
-        }, 1 * 1000);
+        }, 10 * 1000);
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("0F4AC706");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();
         console.error(`${parent?.length}`);
         for (let i = 0; i < parent.length; ++i) {
-            // await new Promise<void>(async (resolve: () => void) => {
             let trigger = parent[i] as mw.Trigger;
-            // await trigger.asyncReady();
             let bagId = Number(trigger.name.split(`-`)[1]);
             if (isNaN(bagId) || bagId < 0) return;
             let isInitItemSuccessfully = await this.isInitItemSuccessfully(bagId, trigger.worldTransform.position);
@@ -529,13 +527,38 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                 this.enterScenceUsing();
                 this.getGuideModuleC.startFirst();
             }
-            // setTimeout(() => {
-            //     return resolve();
-            // }, 0.1 * 1000);
-            // });
         }
         this.isInitComplete = true;
         console.error(`加载完成`);
+
+        /**
+          let name: Map<string, number[]> = new Map<string, number[]>();
+        for (let i = 0; i < parent.length; ++i) {
+            let n = parent[i].name.split(`-`);
+            if (name.has(n[0])) {
+                name.get(n[0]).push(Number(n[1]));
+            } else {
+                name.set(n[0], [Number(n[1])]);
+            }
+        }
+
+        let weapon = name.get("Weapon");
+        for (let i = 10001; i <= 10040; ++i) {
+            if (!weapon.includes(i)) console.error(`weapon:${i}`);
+        }
+        let skin = name.get("Skin");
+        for (let i = 20001; i <= 20052; ++i) {
+            if (!skin.includes(i)) console.error(`skin:${i}`);
+        }
+        let equip = name.get("Equip");
+        for (let i = 30001; i <= 30029; ++i) {
+            if (!equip.includes(i)) console.error(`equip:${i}`);
+        }
+        let pet = name.get("Pet");
+        for (let i = 40001; i <= 40007; ++i) {
+            if (!pet.includes(i)) console.error(`pet:${i}`);
+        }
+         */
     }
 
     private onEnterTrigger(go: mw.GameObject, bagId: number): void {

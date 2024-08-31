@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.08.29-23.35.33
+ * TIME: 2024.09.01-00.10.28
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -63,6 +63,27 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mSprintButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mSprintCanvas/mSprintButton') as mw.Button
 		}
 		return this.mSprintButton_Internal
+	}
+	private mOnOffRingSoulCanvas_Internal: mw.Canvas
+	public get mOnOffRingSoulCanvas(): mw.Canvas {
+		if(!this.mOnOffRingSoulCanvas_Internal&&this.uiWidgetBase) {
+			this.mOnOffRingSoulCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mOnOffRingSoulCanvas') as mw.Canvas
+		}
+		return this.mOnOffRingSoulCanvas_Internal
+	}
+	private mOnOffRingSoulButton_Internal: mw.Button
+	public get mOnOffRingSoulButton(): mw.Button {
+		if(!this.mOnOffRingSoulButton_Internal&&this.uiWidgetBase) {
+			this.mOnOffRingSoulButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mOnOffRingSoulCanvas/mOnOffRingSoulButton') as mw.Button
+		}
+		return this.mOnOffRingSoulButton_Internal
+	}
+	private mOnOffRingSoulTextBlock_Internal: mw.TextBlock
+	public get mOnOffRingSoulTextBlock(): mw.TextBlock {
+		if(!this.mOnOffRingSoulTextBlock_Internal&&this.uiWidgetBase) {
+			this.mOnOffRingSoulTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mOnOffRingSoulCanvas/mOnOffRingSoulTextBlock') as mw.TextBlock
+		}
+		return this.mOnOffRingSoulTextBlock_Internal
 	}
 	private mShopButton_Internal: mw.Button
 	public get mShopButton(): mw.Button {
@@ -140,6 +161,20 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mHomeButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/HomeCanvas/mHomeButton') as mw.Button
 		}
 		return this.mHomeButton_Internal
+	}
+	private mRingSoulButton_Internal: mw.Button
+	public get mRingSoulButton(): mw.Button {
+		if(!this.mRingSoulButton_Internal&&this.uiWidgetBase) {
+			this.mRingSoulButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RingSoulCanvas/mRingSoulButton') as mw.Button
+		}
+		return this.mRingSoulButton_Internal
+	}
+	private mRingSoulPointImage_Internal: mw.Image
+	public get mRingSoulPointImage(): mw.Image {
+		if(!this.mRingSoulPointImage_Internal&&this.uiWidgetBase) {
+			this.mRingSoulPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RingSoulCanvas/mRingSoulPointImage') as mw.Image
+		}
+		return this.mRingSoulPointImage_Internal
 	}
 	private mMusicCanvas_Internal: mw.Canvas
 	public get mMusicCanvas(): mw.Canvas {
@@ -410,6 +445,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mSprintButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mOnOffRingSoulButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mOnOffRingSoulButton");
+		});
+		this.mOnOffRingSoulButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mShopButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mShopButton");
 		});
@@ -458,6 +499,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mHomeButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mRingSoulButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mRingSoulButton");
+		});
+		this.mRingSoulButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseMusicBtn.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
 		});
@@ -504,6 +551,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
+		this.initLanguage(this.mOnOffRingSoulTextBlock)
+		
+	
 		this.initLanguage(this.mOnlineRewardTextBlock)
 		
 	
@@ -567,6 +617,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RingSoulCanvas/RingSoulTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/InvincibleCanvas/InvincibleTextBlock") as any);

@@ -275,10 +275,13 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData> {
         let taskElement = GameConfig.Task.getElement(taskId);
         let rewardExp = taskElement.Exp;
         let rewardCoin = taskElement.Coin;
+        let rewardDiamond = taskElement.Diamond;
         Console.error("[奖励经验：" + rewardExp + "][奖励金币：" + rewardCoin + "]");
         Notice.showDownNotice("奖励金币：" + rewardCoin);
         Notice.showDownNotice("奖励经验：" + rewardExp);
+        Notice.showDownNotice("奖励钻石：" + rewardDiamond);
         this.getPlayerModuleC.saveCoinAndExp(rewardCoin, rewardExp);
+        this.getPlayerModuleC.saveDiamond(rewardDiamond);
     }
 
     /**重置每日任务 */

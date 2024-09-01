@@ -3,6 +3,7 @@ import { SpawnManager } from '../../../Modified027Editor/ModifiedSpawn';
 import Console from "../../../Tools/Console";
 import { Notice } from '../../../common/notice/Notice';
 import { IColdWeaponElement } from "../../../config/ColdWeapon";
+import GlobalData from '../../../const/GlobalData';
 import { PrefabEvent } from "../../PrefabEvent";
 import { SkillRectCheck } from "./SkillRectCheck";
 import Weapon from "./Weapon";
@@ -90,7 +91,7 @@ export class ColdWeapon {
      */
     public attack(index: number) {
         if (!this._weapon) {
-            Notice.showDownNotice(`还未装备斗技,去寻找斗技`);
+            Notice.showDownNotice(`还未装备${GlobalData.atkStr},去寻找${GlobalData.atkStr}`);
             return;
         }
         this.isPlaying = true;

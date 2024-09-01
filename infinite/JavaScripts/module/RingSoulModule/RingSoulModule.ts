@@ -290,6 +290,7 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
     }
 
     protected onStart(): void {
+        this.initRingSoulData();
         InputUtil.onKeyDown(mw.Keys.P, () => {
             // Event.dispatchToServer("RingSoul");
             this.getRingSoulPanel.show();
@@ -304,16 +305,13 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
         this.getHudModuleC.onOnOffRingSoulAction.add(() => {
             this.onOffRingSoul();
         });
-    }
-
-    protected onEnterScene(sceneType: number): void {
-        this.initRingSoulData();
         this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
     }
 
     private ringSoul: MapEx.MapExClass<number> = {};
     private initRingSoulData(): void {
         this.ringSoul = this.data.ringSoul;
+        console.error(`this.ringSoul:${JSON.stringify(this.ringSoul)}`)
     }
 
     public getIsHasRingSoul(key: number): boolean {
@@ -659,6 +657,7 @@ export class RingSoulItemChild extends RingSoulItemChild_Generate {
         this.ringSoulPage = ringSoulPage;
         this.ringSoulIndex_Self = ringSoulIndex_Self;
         this.ringSoulIndex = ringSoulIndex;
+        // console.error(`ringSoulIndex:${ringSoulIndex} this.ringSoulIndex_Self:${this.ringSoulIndex_Self}`)
         this.isHas = ringSoulIndex <= this.ringSoulIndex_Self;
         this.mIconImage.setImageColorByHex(ringSoulIconColors[this.ringSoulIndex - 1]);
         this.updateUI();

@@ -1439,6 +1439,7 @@ GlobalData.atk = 0;
 GlobalData.hp = 0;
 GlobalData.totalBagLen = 129;
 GlobalData.mpStr = `魂力`;
+GlobalData.atkStr = `武魂`;
 
 var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -4865,7 +4866,7 @@ class ColdWeapon {
      */
     attack(index) {
         if (!this._weapon) {
-            Notice.showDownNotice(`还未装备斗技,去寻找斗技`);
+            Notice.showDownNotice(`还未装备${GlobalData.atkStr},去寻找${GlobalData.atkStr}`);
             return;
         }
         this.isPlaying = true;
@@ -8430,6 +8431,7 @@ class RingSoulModuleC extends ModuleC {
         return this.ringSoulPanel;
     }
     onStart() {
+        this.initRingSoulData();
         InputUtil.onKeyDown(mw.Keys.P, () => {
             // Event.dispatchToServer("RingSoul");
             this.getRingSoulPanel.show();
@@ -8443,13 +8445,11 @@ class RingSoulModuleC extends ModuleC {
         this.getHudModuleC.onOnOffRingSoulAction.add(() => {
             this.onOffRingSoul();
         });
-    }
-    onEnterScene(sceneType) {
-        this.initRingSoulData();
         this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
     }
     initRingSoulData() {
         this.ringSoul = this.data.ringSoul;
+        console.error(`this.ringSoul:${JSON.stringify(this.ringSoul)}`);
     }
     getIsHasRingSoul(key) {
         return MapEx.has(this.ringSoul, key);
@@ -8771,6 +8771,7 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
         this.ringSoulPage = ringSoulPage;
         this.ringSoulIndex_Self = ringSoulIndex_Self;
         this.ringSoulIndex = ringSoulIndex;
+        // console.error(`ringSoulIndex:${ringSoulIndex} this.ringSoulIndex_Self:${this.ringSoulIndex_Self}`)
         this.isHas = ringSoulIndex <= this.ringSoulIndex_Self;
         this.mIconImage.setImageColorByHex(ringSoulIconColors[this.ringSoulIndex - 1]);
         this.updateUI();

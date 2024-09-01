@@ -52,4 +52,5 @@ export default class GlobalData {
     public static totalBagLen: number = 129;
 
     public static mpStr: string = `魂力`;
+    public static atkStr: string = `武魂`;
 }

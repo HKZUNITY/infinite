@@ -8408,6 +8408,7 @@ __decorate([
 RingSoul = __decorate([
     Component
 ], RingSoul);
+var RingSoul$1 = RingSoul;
 class RingSoulModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -8796,6 +8797,18 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
         this.updateUI();
     }
 }
+
+var foreign65 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    RingSoulData: RingSoulData,
+    RingSoulGo: RingSoulGo,
+    RingSoulItem: RingSoulItem,
+    RingSoulItemChild: RingSoulItemChild,
+    RingSoulModuleC: RingSoulModuleC,
+    RingSoulModuleS: RingSoulModuleS,
+    RingSoulPanel: RingSoulPanel,
+    default: RingSoul$1
+});
 
 class HUDModuleC extends ModuleC {
     constructor() {
@@ -19451,6 +19464,7 @@ const MWModuleMap = {
      'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign62,
      '2909A3E141653B96AD1695BB3D9FD3E7': foreign63,
      '459EAC1C45A11267216B289C90BC7AC5': foreign64,
+     '8B404A71482B2B7A44BB8A85E26C05E7': foreign65,
      '0E7769194FC879692CDC4E91F3CA47D3': foreign66,
      'EE9111164BB56CAF9589D28E0A80DCB7': foreign67,
      'B9E68E6F47D05B8922EB89976547D0ED': foreign68,
@@ -19571,6 +19585,7 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign62 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
 [foreign63 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
 [foreign64 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
+[foreign65 || {}, "JavaScripts/module/RingSoulModule/RingSoulModule"],
 [foreign66 || {}, "JavaScripts/module/ShopModule/ShopData"],
 [foreign67 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
 [foreign68 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],

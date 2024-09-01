@@ -1,3 +1,4 @@
+import GlobalData from "../../const/GlobalData";
 import Console from "../../Tools/Console";
 import { Utils } from "../../Tools/utils";
 
@@ -58,7 +59,7 @@ export default class PlayerData extends Subdata {
     }
 
     public getLvUpExp(): number {
-        return (this.playerLv + 1) * 100;
+        return (this.playerLv + 1) * GlobalData.upgradeExpMultiple;
     }
 
     public saveCoin(value: number): void {

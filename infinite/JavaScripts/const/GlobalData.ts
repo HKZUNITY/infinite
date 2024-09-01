@@ -53,4 +53,17 @@ export default class GlobalData {
 
     public static mpStr: string = `魂力`;
     public static atkStr: string = `武魂`;
+    public static weaponStr: string = `武魂`;
+    public static skinStr: string = `魂师`;
+    public static equipStr: string = `魂骨`;
+    public static petStr: string = `魂兽`;
+
+    public static rarityStr1: string = `普通`;
+    public static rarityStr2: string = "稀有";
+    public static rarityStr3: string = "史诗";
+    public static rarityStr4: string = "传说";
+
+    public static upgradeExpMultiple: number = 500;
+    public static monsterHurt: number = 200;
+    public static attackMp: number = 1;
 }

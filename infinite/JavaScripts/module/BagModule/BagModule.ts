@@ -188,7 +188,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setUsingWeaponId(weaponId: number): boolean {
         if (this.usingWeaponId == weaponId) {
-            Notice.showDownNotice("武器使用中");
+            Notice.showDownNotice(`${GlobalData.weaponStr}使用中`);
             return false;
         }
         this.usingWeaponId = weaponId;
@@ -199,7 +199,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setUsingSkinId(skinId: number): boolean {
         if (this.usingSkinId == skinId) {
-            Notice.showDownNotice("皮肤穿戴中");
+            Notice.showDownNotice(`${GlobalData.skinStr}使用中`);
             return false;
         }
         this.usingSkinId = skinId;
@@ -220,7 +220,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setUsingEquipId(key: number, bagId: number): boolean {
         if (MapEx.has(this.usingEquipIds, key) && MapEx.get(this.usingEquipIds, key) == bagId) {
-            Notice.showDownNotice("装备中");
+            Notice.showDownNotice(`${GlobalData.equipStr}装备中`);
             return false;
         }
         MapEx.set(this.usingEquipIds, key, bagId);
@@ -239,7 +239,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setUsingPetId(petId: number): boolean {
         if (this.usingPetId == petId) {
-            Notice.showDownNotice("宠物跟随中");
+            Notice.showDownNotice(`${GlobalData.petStr}跟随中`);
             return false;
         }
         this.usingPetId = petId;
@@ -1044,16 +1044,16 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
         let rarityStr: string = "";
         switch (bagInfoElement.Rarity) {
             case 0:
-                rarityStr = "黄阶";
+                rarityStr = GlobalData.rarityStr1;
                 break;
             case 1:
-                rarityStr = "玄阶";
+                rarityStr = GlobalData.rarityStr2;
                 break;
             case 2:
-                rarityStr = "地阶";
+                rarityStr = GlobalData.rarityStr3;
                 break;
             case 3:
-                rarityStr = "天阶";
+                rarityStr = GlobalData.rarityStr4;
                 break;
             default:
                 break;
@@ -1061,19 +1061,19 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
         let bagTypeStr: string = "";
         switch (bagInfoElement.Type) {
             case 1:
-                bagTypeStr = "武器";
+                bagTypeStr = GlobalData.weaponStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
             case 2:
-                bagTypeStr = "皮肤";
+                bagTypeStr = GlobalData.skinStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
             case 3:
-                bagTypeStr = "装备";
+                bagTypeStr = GlobalData.equipStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
             case 4:
-                bagTypeStr = "宠物";
+                bagTypeStr = GlobalData.petStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
             default:

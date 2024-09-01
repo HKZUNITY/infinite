@@ -3,6 +3,7 @@ import { Utils } from "../../Tools/utils";
 import { ExplosiveCoins } from "../../common/ExplosiveCoins";
 import { FlyText } from "../../common/FlyText";
 import { Notice } from "../../common/notice/Notice";
+import GlobalData from "../../const/GlobalData";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import TaskModuleC from "../TaskModule/TaskModuleC";
 import PlayerData from "./PlayerData";
@@ -134,7 +135,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     }
 
     public getLvUpExp(): number {
-        return (this.data.playerLv + 1) * 100;
+        return (this.data.playerLv + 1) * GlobalData.upgradeExpMultiple;
     }
 
     public isInvincible(isInvincible: boolean): void {

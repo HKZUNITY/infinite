@@ -1440,6 +1440,17 @@ GlobalData.hp = 0;
 GlobalData.totalBagLen = 129;
 GlobalData.mpStr = `魂力`;
 GlobalData.atkStr = `武魂`;
+GlobalData.weaponStr = `武魂`;
+GlobalData.skinStr = `魂师`;
+GlobalData.equipStr = `魂骨`;
+GlobalData.petStr = `魂兽`;
+GlobalData.rarityStr1 = `普通`;
+GlobalData.rarityStr2 = "稀有";
+GlobalData.rarityStr3 = "史诗";
+GlobalData.rarityStr4 = "传说";
+GlobalData.upgradeExpMultiple = 500;
+GlobalData.monsterHurt = 200;
+GlobalData.attackMp = 1;
 
 var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -5859,7 +5870,7 @@ class PlayerModuleC extends ModuleC {
         this.saveCoinAndExp(0, exp);
     }
     getLvUpExp() {
-        return (this.data.playerLv + 1) * 100;
+        return (this.data.playerLv + 1) * GlobalData.upgradeExpMultiple;
     }
     isInvincible(isInvincible) {
         this.server.net_isInvincible(isInvincible);
@@ -6964,8 +6975,8 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     updateLvExpCoin(lv, exp, coin, addAtk) {
         this.mLvTextBlock.text = `等级 ${Utils.getLvText(lv)}`;
-        this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
-        this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * 100)}`;
+        this.mExpProgressBar.currentValue = exp / ((lv + 1) * GlobalData.upgradeExpMultiple);
+        this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
         this.mCoinTextBlock.text = coin + "";
         let atk = Math.round(Utils.getAtk(lv) * addAtk);
         GlobalData.atk = atk;
@@ -9004,7 +9015,7 @@ class HUDModuleC extends ModuleC {
             Console.error("isOpenHUD =" + isOpenHUD);
         });
         Event.addLocalListener("AttackMp", () => {
-            this.isHaveMp(5);
+            this.isHaveMp(GlobalData.attackMp);
         });
     }
     onEnterScene(sceneType) {
@@ -11315,7 +11326,7 @@ class BagModuleC extends ModuleC {
     }
     setUsingWeaponId(weaponId) {
         if (this.usingWeaponId == weaponId) {
-            Notice.showDownNotice("武器使用中");
+            Notice.showDownNotice(`${GlobalData.weaponStr}使用中`);
             return false;
         }
         this.usingWeaponId = weaponId;
@@ -11325,7 +11336,7 @@ class BagModuleC extends ModuleC {
     }
     setUsingSkinId(skinId) {
         if (this.usingSkinId == skinId) {
-            Notice.showDownNotice("皮肤穿戴中");
+            Notice.showDownNotice(`${GlobalData.skinStr}使用中`);
             return false;
         }
         this.usingSkinId = skinId;
@@ -11345,7 +11356,7 @@ class BagModuleC extends ModuleC {
     }
     setUsingEquipId(key, bagId) {
         if (MapEx.has(this.usingEquipIds, key) && MapEx.get(this.usingEquipIds, key) == bagId) {
-            Notice.showDownNotice("装备中");
+            Notice.showDownNotice(`${GlobalData.equipStr}装备中`);
             return false;
         }
         MapEx.set(this.usingEquipIds, key, bagId);
@@ -11362,7 +11373,7 @@ class BagModuleC extends ModuleC {
     }
     setUsingPetId(petId) {
         if (this.usingPetId == petId) {
-            Notice.showDownNotice("宠物跟随中");
+            Notice.showDownNotice(`${GlobalData.petStr}跟随中`);
             return false;
         }
         this.usingPetId = petId;
@@ -12172,34 +12183,34 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
         let rarityStr = "";
         switch (bagInfoElement.Rarity) {
             case 0:
-                rarityStr = "黄阶";
+                rarityStr = GlobalData.rarityStr1;
                 break;
             case 1:
-                rarityStr = "玄阶";
+                rarityStr = GlobalData.rarityStr2;
                 break;
             case 2:
-                rarityStr = "地阶";
+                rarityStr = GlobalData.rarityStr3;
                 break;
             case 3:
-                rarityStr = "天阶";
+                rarityStr = GlobalData.rarityStr4;
                 break;
         }
         let bagTypeStr = "";
         switch (bagInfoElement.Type) {
             case 1:
-                bagTypeStr = "武器";
+                bagTypeStr = GlobalData.weaponStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
             case 2:
-                bagTypeStr = "皮肤";
+                bagTypeStr = GlobalData.skinStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
             case 3:
-                bagTypeStr = "装备";
+                bagTypeStr = GlobalData.equipStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
             case 4:
-                bagTypeStr = "宠物";
+                bagTypeStr = GlobalData.petStr;
                 this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
                 break;
         }
@@ -12906,7 +12917,7 @@ class PlayerData extends Subdata {
         }
     }
     getLvUpExp() {
-        return (this.playerLv + 1) * 100;
+        return (this.playerLv + 1) * GlobalData.upgradeExpMultiple;
     }
     saveCoin(value) {
         this.coin += value;
@@ -13935,8 +13946,14 @@ class Monster extends Script {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
-            if (this.maxHp > 999999999)
-                this.maxHp = 999999999;
+            if (this.monsterId == 5 || this.monsterId == 6) {
+                if (this.maxHp > 99999)
+                    this.maxHp = 99999;
+            }
+            else {
+                if (this.maxHp > 999999999)
+                    this.maxHp = 999999999;
+            }
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled)
                 this.getMonster.ragdollEnabled = false;
@@ -14093,7 +14110,7 @@ class Monster extends Script {
             let hitGo = hitResults[i].gameObject;
             if (hitGo instanceof mw.Character && hitGo?.player) {
                 let targetGameObjectId = hitGo?.gameObjectId;
-                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / 10));
+                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
             }
         }
     }

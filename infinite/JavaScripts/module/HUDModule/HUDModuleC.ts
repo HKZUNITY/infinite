@@ -164,7 +164,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         });
 
         Event.addLocalListener("AttackMp", () => {
-            this.isHaveMp(5);
+            this.isHaveMp(GlobalData.attackMp);
         });
     }
 

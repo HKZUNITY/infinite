@@ -252,8 +252,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 	public updateLvExpCoin(lv: number, exp: number, coin: number, addAtk: number): void {
 		this.mLvTextBlock.text = `等级 ${Utils.getLvText(lv)}`;
-		this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
-		this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * 100)}`;
+		this.mExpProgressBar.currentValue = exp / ((lv + 1) * GlobalData.upgradeExpMultiple);
+		this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
 		this.mCoinTextBlock.text = coin + "";
 		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;

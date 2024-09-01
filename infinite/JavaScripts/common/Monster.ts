@@ -1,4 +1,5 @@
 ﻿import { GameConfig } from "../config/GameConfig";
+import GlobalData from "../const/GlobalData";
 import PlayerModuleS from "../module/PlayerModule/PlayerModuleS";
 import { PrefabEvent } from "../Prefabs/PrefabEvent";
 import { Utils } from "../Tools/utils";
@@ -297,7 +298,11 @@ export default class Monster extends Script {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
-            if (this.maxHp > 999999999) this.maxHp = 999999999;
+            if (this.monsterId == 5 || this.monsterId == 6) {
+                if (this.maxHp > 99999) this.maxHp = 99999;
+            } else {
+                if (this.maxHp > 999999999) this.maxHp = 999999999;
+            }
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState.Activate;
@@ -471,7 +476,7 @@ export default class Monster extends Script {
             let hitGo = hitResults[i].gameObject;
             if (hitGo instanceof mw.Character && hitGo?.player) {
                 let targetGameObjectId = hitGo?.gameObjectId;
-                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / 10));
+                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
             }
         }
     }

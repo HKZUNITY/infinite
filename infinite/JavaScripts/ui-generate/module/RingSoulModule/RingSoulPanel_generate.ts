@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.49
  */
  
 @UIBind('UI/module/RingSoulModule/RingSoulPanel.ui')
@@ -50,6 +50,20 @@ export default class RingSoulPanel_Generate extends UIScript {
 		}
 		return this.mUpTextBlock_Internal
 	}
+	private mDiamondTextBlock_Internal: mw.TextBlock
+	public get mDiamondTextBlock(): mw.TextBlock {
+		if(!this.mDiamondTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/DiamondCanvas/mDiamondTextBlock') as mw.TextBlock
+		}
+		return this.mDiamondTextBlock_Internal
+	}
+	private mAddDiamondButton_Internal: mw.Button
+	public get mAddDiamondButton(): mw.Button {
+		if(!this.mAddDiamondButton_Internal&&this.uiWidgetBase) {
+			this.mAddDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/DiamondCanvas/mAddDiamondButton') as mw.Button
+		}
+		return this.mAddDiamondButton_Internal
+	}
 
 
 	protected onAwake() {
@@ -75,11 +89,20 @@ export default class RingSoulPanel_Generate extends UIScript {
 		this.mUpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mAddDiamondButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mAddDiamondButton");
+		});
+		this.mAddDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		//按钮多语言
 		
 		//文本多语言
 		
 		this.initLanguage(this.mUpTextBlock)
+		
+	
+		this.initLanguage(this.mDiamondTextBlock)
 		
 	
 		//文本多语言

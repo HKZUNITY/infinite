@@ -9,6 +9,7 @@ import AdTipsPanel from '../AdsModule/ui/AdTipsPanel';
 import { BagModuleC } from '../BagModule/BagModule';
 import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
+import { RingSoulPanel } from '../RingSoulModule/RingSoulModule';
 import TaskModuleC from "../TaskModule/TaskModuleC";
 import HUDModuleS from "./HUDModuleS";
 import HUDPanel from "./ui/HUDPanel";
@@ -41,6 +42,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.hudPanel = mw.UIService.getUI(HUDPanel);
         }
         return this.hudPanel;
+    }
+    private ringSoulPanel: RingSoulPanel = null;
+    private get getRingSoulPanel(): RingSoulPanel {
+        if (!this.ringSoulPanel) {
+            this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
+        }
+        return this.ringSoulPanel;
     }
     private adTipsPanel: AdTipsPanel = null;
     private get getAdTipsPanel(): AdTipsPanel {
@@ -224,6 +232,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     }
     public updateDiamond(diamond: number): void {
         this.getHudPanel.updateDiamond(diamond);
+        this.getRingSoulPanel.updateDiamond(diamond);
     }
 
     private maxHp: number = -1;

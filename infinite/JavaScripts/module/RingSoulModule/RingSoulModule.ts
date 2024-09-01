@@ -432,6 +432,13 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
         }
         return this.hudPanel;
     }
+    private hudModuleC: HUDModuleC = null;
+    private get getHudModuleC(): HUDModuleC {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
 
     protected onStart(): void {
         this.initUI();
@@ -467,6 +474,9 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
     private bindButton(): void {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
         this.mUpButton.onClicked.add(this.addUpButton.bind(this));
+        this.mAddDiamondButton.onClicked.add(() => {
+            this.getHudModuleC.onAddDiamondAction.call();
+        });
     }
 
     private addCloseButton(): void {
@@ -508,6 +518,10 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
                 this.getPlayerModuleC.saveDiamond(1);
             }
         }
+    }
+
+    public updateDiamond(diamond: number): void {
+        this.mDiamondTextBlock.text = `${diamond}`;
     }
 
     protected onShow(...params: any[]): void {

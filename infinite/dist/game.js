@@ -2700,6 +2700,15 @@ class Utils {
             });
         }
     }
+    static getPathIndex(length) {
+        if (this.pathIndex <= length - 1)
+            return this.pathIndex++;
+        if (this.pathIndex >= length) {
+            this.pathIndex = 0;
+            return this.pathIndex;
+        }
+        return this.getRandomInteger(0, length - 1);
+    }
 }
 /**
 * 得到等级名字
@@ -2771,6 +2780,7 @@ Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云
 Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.assetIconDataMap = new Map();
+Utils.pathIndex = 0;
 /**贝塞尔曲线 */
 function cubicBezier(p1x, p1y, p2x, p2y) {
     const ZERO_LIMIT = 1e-6;
@@ -2828,7 +2838,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Tween: Tween$2,
     Utils: Utils,
@@ -2840,7 +2850,7 @@ var foreign89 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -2899,7 +2909,7 @@ Loading_Generate = __decorate([
 ], Loading_Generate);
 var Loading_Generate$1 = Loading_Generate;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Loading_Generate$1
 });
@@ -2952,7 +2962,7 @@ var foreign6 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -3009,7 +3019,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -3019,7 +3029,7 @@ var foreign92 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -3065,7 +3075,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -5071,7 +5081,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -5081,7 +5091,7 @@ var foreign87 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5197,7 +5207,7 @@ BagInfoPanel_Generate = __decorate([
 ], BagInfoPanel_Generate);
 var BagInfoPanel_Generate$1 = BagInfoPanel_Generate;
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagInfoPanel_Generate$1
 });
@@ -5207,7 +5217,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5289,7 +5299,7 @@ BagItem_Generate = __decorate([
 ], BagItem_Generate);
 var BagItem_Generate$1 = BagItem_Generate;
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagItem_Generate$1
 });
@@ -5299,7 +5309,7 @@ var foreign97 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5385,7 +5395,7 @@ BagPanel_Generate = __decorate([
 ], BagPanel_Generate);
 var BagPanel_Generate$1 = BagPanel_Generate;
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagPanel_Generate$1
 });
@@ -5395,7 +5405,7 @@ var foreign98 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5451,7 +5461,7 @@ BagTab_Generate = __decorate([
 ], BagTab_Generate);
 var BagTab_Generate$1 = BagTab_Generate;
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagTab_Generate$1
 });
@@ -5461,7 +5471,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5531,7 +5541,7 @@ AdsTipsPanel_Generate = __decorate([
 ], AdsTipsPanel_Generate);
 var AdsTipsPanel_Generate$1 = AdsTipsPanel_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign96 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdsTipsPanel_Generate$1
 });
@@ -6043,7 +6053,7 @@ class ObjPool {
     }
 }
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjPool: ObjPool,
     get ObjectPoolServices () { return ObjectPoolServices; }
@@ -6054,7 +6064,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -6110,7 +6120,7 @@ OnlineRewardPanel_Generate = __decorate([
 ], OnlineRewardPanel_Generate);
 var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
 
-var foreign104 = /*#__PURE__*/Object.freeze({
+var foreign105 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardPanel_Generate$1
 });
@@ -6120,7 +6130,7 @@ var foreign104 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -6613,7 +6623,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign101 = /*#__PURE__*/Object.freeze({
+var foreign102 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -6623,7 +6633,7 @@ var foreign101 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6689,7 +6699,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign102 = /*#__PURE__*/Object.freeze({
+var foreign103 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -6952,7 +6962,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         AccountService.fillAvatar(this.mRoleIconImage);
     }
     updateLvExpCoin(lv, exp, coin, addAtk) {
-        this.mLvTextBlock.text = Utils.getLvText(lv) + " 等级Lv." + lv;
+        this.mLvTextBlock.text = `等级 ${Utils.getLvText(lv)}`;
         this.mExpProgressBar.currentValue = exp / ((lv + 1) * 100);
         this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * 100)}`;
         this.mCoinTextBlock.text = coin + "";
@@ -7831,6 +7841,962 @@ var foreign51 = /*#__PURE__*/Object.freeze({
     OnlineRewardModuleC: OnlineRewardModuleC
 });
 
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/RingSoulModule/RingSoulItem.ui
+ * TIME: 2024.09.01-12.20.48
+ */
+let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
+    get mMainCanvas() {
+        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
+            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
+        }
+        return this.mMainCanvas_Internal;
+    }
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/BgImage/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mUpButton() {
+        if (!this.mUpButton_Internal && this.uiWidgetBase) {
+            this.mUpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton');
+        }
+        return this.mUpButton_Internal;
+    }
+    get mUpTextBlock() {
+        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton/mUpTextBlock');
+        }
+        return this.mUpTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mUpButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mUpButton");
+        });
+        this.mUpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mUpTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+RingSoulItem_Generate = __decorate([
+    UIBind('UI/module/RingSoulModule/RingSoulItem.ui')
+], RingSoulItem_Generate);
+var RingSoulItem_Generate$1 = RingSoulItem_Generate;
+
+var foreign108 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RingSoulItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
+ * TIME: 2024.09.01-12.20.49
+ */
+let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mArrowsCanvas() {
+        if (!this.mArrowsCanvas_Internal && this.uiWidgetBase) {
+            this.mArrowsCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas');
+        }
+        return this.mArrowsCanvas_Internal;
+    }
+    get mArrowsImage() {
+        if (!this.mArrowsImage_Internal && this.uiWidgetBase) {
+            this.mArrowsImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mArrowsImage');
+        }
+        return this.mArrowsImage_Internal;
+    }
+    get mCostTextBlock() {
+        if (!this.mCostTextBlock_Internal && this.uiWidgetBase) {
+            this.mCostTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mCostTextBlock');
+        }
+        return this.mCostTextBlock_Internal;
+    }
+    get mUpTextBlock() {
+        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mUpTextBlock');
+        }
+        return this.mUpTextBlock_Internal;
+    }
+    get mIconCanvas() {
+        if (!this.mIconCanvas_Internal && this.uiWidgetBase) {
+            this.mIconCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas');
+        }
+        return this.mIconCanvas_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mNameTextBlock() {
+        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mNameTextBlock');
+        }
+        return this.mNameTextBlock_Internal;
+    }
+    get mHasTextBlock() {
+        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
+            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mHasTextBlock');
+        }
+        return this.mHasTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mCostTextBlock);
+        this.initLanguage(this.mUpTextBlock);
+        this.initLanguage(this.mNameTextBlock);
+        this.initLanguage(this.mHasTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+RingSoulItemChild_Generate = __decorate([
+    UIBind('UI/module/RingSoulModule/RingSoulItemChild.ui')
+], RingSoulItemChild_Generate);
+var RingSoulItemChild_Generate$1 = RingSoulItemChild_Generate;
+
+var foreign107 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RingSoulItemChild_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/RingSoulModule/RingSoulPanel.ui
+ * TIME: 2024.09.01-12.20.49
+ */
+let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    get mContentCanvas() {
+        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
+            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/ScrollBox/mContentCanvas');
+        }
+        return this.mContentCanvas_Internal;
+    }
+    get mMainCanvas() {
+        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
+            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
+        }
+        return this.mMainCanvas_Internal;
+    }
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/BgImage/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mUpButton() {
+        if (!this.mUpButton_Internal && this.uiWidgetBase) {
+            this.mUpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton');
+        }
+        return this.mUpButton_Internal;
+    }
+    get mUpTextBlock() {
+        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton/mUpTextBlock');
+        }
+        return this.mUpTextBlock_Internal;
+    }
+    get mDiamondTextBlock() {
+        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/DiamondCanvas/mDiamondTextBlock');
+        }
+        return this.mDiamondTextBlock_Internal;
+    }
+    get mAddDiamondButton() {
+        if (!this.mAddDiamondButton_Internal && this.uiWidgetBase) {
+            this.mAddDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/DiamondCanvas/mAddDiamondButton');
+        }
+        return this.mAddDiamondButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mUpButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mUpButton");
+        });
+        this.mUpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mAddDiamondButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mAddDiamondButton");
+        });
+        this.mAddDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mUpTextBlock);
+        this.initLanguage(this.mDiamondTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+RingSoulPanel_Generate = __decorate([
+    UIBind('UI/module/RingSoulModule/RingSoulPanel.ui')
+], RingSoulPanel_Generate);
+var RingSoulPanel_Generate$1 = RingSoulPanel_Generate;
+
+var foreign109 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: RingSoulPanel_Generate$1
+});
+
+const ringSoulNames = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
+const figureStrs = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+const costDiamonds = [10, 20, 30, 50, 100, 1000];
+const upSound = "169179";
+const ringSoulIconColors = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#FFD700FF"];
+const ringSoulPrefabIds = [
+    "322A7FF14588209BBD4B5DAF37D38FA2",
+    "F89DFCA24FEC54C1F4CFBEAB9D4FF27A",
+    "6CEAFD0A4DAA30D8FB89E49C5B28CD3F",
+    "C5944BA6404AC45A865163BBCC3766DD",
+    "19F4724F4E312B74233E1FA76EB9EEA9",
+    "7C36BC974D5F9E55375E31BA8161C366"
+];
+const ringSoulPrefabIdss = [
+    "7C36BC974D5F9E55375E31BA8161C366",
+    "92667F8849C7C04147E532A769D4C810",
+    "76F94448413EFBCDE982F6AD77A82674",
+    "E441096546A41ADCE42B85979BEE09CE",
+    "3944E8254E94BA46BAE85D9C37DAB6A7",
+    "12901F834472C74D86A077A1D286D75E"
+];
+const ringSoulSlots = [23, 23, 23, 23, 23, 23, 23, 23, 23, 23];
+const ringSoulOffsetPoss = [
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(0, 0, 30),
+    new mw.Vector(-100, 0, 320)
+];
+const ringSoulOffsetRots = [
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 0, 0),
+    new mw.Rotation(0, 65, 0)
+];
+const ringSoulOffsetScls = [
+    new mw.Vector(0.3, 0.3, 0.3),
+    new mw.Vector(0.4, 0.4, 0.4),
+    new mw.Vector(0.55, 0.55, 0.55),
+    new mw.Vector(0.7, 0.7, 0.7),
+    new mw.Vector(0.9, 0.9, 0.9),
+    new mw.Vector(1.2, 1.2, 1.2),
+    new mw.Vector(1.5, 1.5, 1.5),
+    new mw.Vector(1.9, 1.9, 1.9),
+    new mw.Vector(2.3, 2.3, 2.3),
+    new mw.Vector(2.5, 2.5, 2.5)
+];
+const showRingSoulTweenTime = 0.6;
+const hideRingSoulTweenTime = 0.5;
+const showRingSoulTweenIntervalTime = 0.3;
+const hideRingSoulTweenIntervalTime = 0.25;
+class RingSoulGo {
+    constructor() {
+        this.ringSoulIndex = 0;
+        this.go = null;
+        this.isInitRingSoulTween = false;
+        this.showRingSoulTween = null;
+        this.hideRingSoulTween = null;
+    }
+    initRingSoulTween() {
+        if (!this.go)
+            return;
+        if (this.isInitRingSoulTween) {
+            this.startShowRingSoul();
+            return;
+        }
+        this.isInitRingSoulTween = true;
+        let scaleValue = this.go.localTransform.scale.x;
+        this.showRingSoulTween = new mw.Tween({ scale: 0 })
+            .to({ scale: scaleValue }, showRingSoulTweenTime * 1000)
+            .onStart(() => {
+            this.go.localTransform.scale = mw.Vector.zero;
+            this.go.setVisibility(true);
+        })
+            .onUpdate((v) => {
+            this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
+        });
+        this.hideRingSoulTween = new mw.Tween({ scale: scaleValue })
+            .to({ scale: 0 }, hideRingSoulTweenTime * 1000)
+            .onStart(() => {
+            this.go.localTransform.scale = new mw.Vector(scaleValue, scaleValue, scaleValue);
+        })
+            .onUpdate((v) => {
+            this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
+        })
+            .onComplete(() => {
+            this.go.setVisibility(false);
+        });
+        this.startShowRingSoul();
+    }
+    startShowRingSoul() {
+        if (this.showRingSoulTween) {
+            this.showRingSoulTween.stop();
+            this.showRingSoulTween.start();
+        }
+    }
+    startHideRingSoul() {
+        if (this.hideRingSoulTween) {
+            this.hideRingSoulTween.stop();
+            this.hideRingSoulTween.start();
+        }
+    }
+}
+let RingSoul = class RingSoul extends Script {
+    constructor() {
+        super(...arguments);
+        this.playerId = 0;
+        this.ringSoulStrs = "";
+        this.isOnRingSoul = true;
+        this.player = null;
+        this.ringSoulMap = new Map();
+    }
+    get getPlayer() {
+        if (this.player == null) {
+            this.player = Player.getPlayer(this.playerId);
+        }
+        return this.player;
+    }
+    async initPlayer() {
+        if (!this.player) {
+            this.player = await Player.asyncGetPlayer(this.playerId);
+            console.error(`playerId = ${this.playerId}"的玩家 "${this.player ? "角色初始化完成" : "角色初始化失败"}`);
+        }
+    }
+    async updateRingSoul() {
+        if (!this.player)
+            await this.initPlayer();
+        if (!this.player)
+            return;
+        if (!this.ringSoulStrs || this.ringSoulStrs.length == 0)
+            return;
+        let ringSoulStrs = this.ringSoulStrs.split(`|`);
+        if (!ringSoulStrs || ringSoulStrs.length == 0)
+            return;
+        for (let i = 0; i < ringSoulStrs.length; ++i) {
+            if (!ringSoulStrs[i] || ringSoulStrs[i].length == 0)
+                continue;
+            let ringSoul = ringSoulStrs[i].split(`-`);
+            if (!ringSoul || ringSoul.length < 2)
+                continue;
+            let key = Number(ringSoul[0]);
+            let ringSoulIndex = Number(ringSoul[1]);
+            let ringSoulGo = null;
+            if (this.ringSoulMap.has(key)) {
+                ringSoulGo = this.ringSoulMap.get(key);
+                if (ringSoulGo.ringSoulIndex == ringSoulIndex)
+                    continue;
+                ringSoulGo.ringSoulIndex = ringSoulIndex;
+                if (ringSoulGo.go) {
+                    GameObjPool.despawn(ringSoulGo.go);
+                    ringSoulGo.go.setVisibility(false);
+                }
+            }
+            else {
+                ringSoulGo = new RingSoulGo();
+                if (ringSoulGo.ringSoulIndex == ringSoulIndex)
+                    continue;
+                ringSoulGo.ringSoulIndex = ringSoulIndex;
+            }
+            let go = await GameObjPool.asyncSpawn((key != 10) ? ringSoulPrefabIds[ringSoulIndex - 1] : ringSoulPrefabIdss[ringSoulIndex - 1], mwext.GameObjPoolSourceType.Prefab);
+            await go.asyncReady();
+            this.getPlayer.character.attachToSlot(go, ringSoulSlots[key - 1]);
+            go.localTransform.position = ringSoulOffsetPoss[key - 1];
+            go.localTransform.rotation = ringSoulOffsetRots[key - 1];
+            go.localTransform.scale = ringSoulOffsetScls[key - 1];
+            ringSoulGo.go = go;
+            ringSoulGo.initRingSoulTween();
+            this.ringSoulMap.set(key, ringSoulGo);
+        }
+    }
+    // public async updateRingSoulState(): Promise<void> {
+    //     if (!this.ringSoulMap || this.ringSoulMap.size == 0) return;
+    //     if (this.isOnRingSoul) {
+    //         this.startShowRingSoulByIndex(1);
+    //         for (let i = 2; i <= 10; ++i) {
+    //             if (!this.ringSoulMap.has(i)) continue;
+    //             let ringSoulGo = this.ringSoulMap.get(i);
+    //             await new Promise<void>((resolve: () => void) => {
+    //                 setTimeout(() => {
+    //                     ringSoulGo.startShowRingSoul();
+    //                     return resolve();
+    //                 }, showRingSoulTweenIntervalTime * 1000);
+    //             });
+    //         }
+    //     } else {
+    //         this.startHideRingSoulByIndex(1);
+    //         for (let i = 2; i <= 10; ++i) {
+    //             if (!this.ringSoulMap.has(i)) continue;
+    //             let ringSoulGo = this.ringSoulMap.get(i);
+    //             await new Promise<void>((resolve: () => void) => {
+    //                 setTimeout(() => {
+    //                     ringSoulGo.startHideRingSoul();
+    //                     return resolve();
+    //                 }, hideRingSoulTweenIntervalTime * 1000);
+    //             });
+    //         }
+    //     }
+    // }
+    async updateRingSoulState() {
+        if (!this.ringSoulMap || this.ringSoulMap.size == 0)
+            return;
+        await this.OffRingSoul();
+        await TimeUtil.delaySecond(1);
+        await this.OnRingSoul();
+    }
+    async OffRingSoul() {
+        console.error(`关闭`);
+        this.startHideRingSoulByIndex(1);
+        for (let i = 2; i <= 10; ++i) {
+            if (!this.ringSoulMap.has(i))
+                continue;
+            let ringSoulGo = this.ringSoulMap.get(i);
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    ringSoulGo.startHideRingSoul();
+                    return resolve();
+                }, hideRingSoulTweenIntervalTime * 1000);
+            });
+        }
+    }
+    async OnRingSoul() {
+        console.error(`打开`);
+        this.startShowRingSoulByIndex(1);
+        for (let i = 2; i <= 10; ++i) {
+            if (!this.ringSoulMap.has(i))
+                continue;
+            let ringSoulGo = this.ringSoulMap.get(i);
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    ringSoulGo.startShowRingSoul();
+                    return resolve();
+                }, showRingSoulTweenIntervalTime * 1000);
+            });
+        }
+    }
+    startShowRingSoulByIndex(index) {
+        if (!this.ringSoulMap.has(index))
+            return;
+        let ringSoulGo = this.ringSoulMap.get(index);
+        ringSoulGo.startShowRingSoul();
+    }
+    startHideRingSoulByIndex(index) {
+        if (!this.ringSoulMap.has(index))
+            return;
+        let ringSoulGo = this.ringSoulMap.get(index);
+        ringSoulGo.startHideRingSoul();
+    }
+};
+__decorate([
+    mw.Property({ replicated: true, onChanged: "initPlayer" })
+], RingSoul.prototype, "playerId", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "updateRingSoul" })
+], RingSoul.prototype, "ringSoulStrs", void 0);
+__decorate([
+    mw.Property({ replicated: true, onChanged: "updateRingSoulState" })
+], RingSoul.prototype, "isOnRingSoul", void 0);
+RingSoul = __decorate([
+    Component
+], RingSoul);
+class RingSoulModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.hudModuleC = null;
+        this.ringSoulPanel = null;
+        this.ringSoul = {};
+        this.isCanOnRingSoul = true;
+    }
+    get getHudModuleC() {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+    get getRingSoulPanel() {
+        if (this.ringSoulPanel == null) {
+            this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
+        }
+        return this.ringSoulPanel;
+    }
+    onStart() {
+        InputUtil.onKeyDown(mw.Keys.P, () => {
+            // Event.dispatchToServer("RingSoul");
+            this.getRingSoulPanel.show();
+        });
+        InputUtil.onKeyDown(mw.Keys.O, () => {
+            this.onOffRingSoul();
+        });
+        this.getHudModuleC.onOpenRingSoulAction.add(() => {
+            this.getRingSoulPanel.show();
+        });
+        this.getHudModuleC.onOnOffRingSoulAction.add(() => {
+            this.onOffRingSoul();
+        });
+    }
+    onEnterScene(sceneType) {
+        this.initRingSoulData();
+        this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
+    }
+    initRingSoulData() {
+        this.ringSoul = this.data.ringSoul;
+    }
+    getIsHasRingSoul(key) {
+        return MapEx.has(this.ringSoul, key);
+    }
+    getRingSoulIndex(key) {
+        if (MapEx.has(this.ringSoul, key)) {
+            return MapEx.get(this.ringSoul, key);
+        }
+        return 0;
+    }
+    setRingSoulIndex(key, value) {
+        MapEx.set(this.ringSoul, key, value);
+        this.server.net_setRingSoulIndex(key, value);
+    }
+    onOffRingSoul() {
+        if (MapEx.count(this.ringSoul) == 0) {
+            Notice.showDownNotice(`还未获取魂环`);
+            return;
+        }
+        if (!this.isCanOnRingSoul) {
+            Notice.showDownNotice(`15秒冷却`);
+            return;
+        }
+        this.isCanOnRingSoul = false;
+        TimeUtil.delaySecond(15).then(() => {
+            this.isCanOnRingSoul = true;
+        });
+        this.server.net_onOffRingSoul();
+    }
+}
+class RingSoulModuleS extends ModuleS {
+    constructor() {
+        super(...arguments);
+        this.ringSoulMap = new Map();
+    }
+    onStart() {
+    }
+    onPlayerEnterGame(player) {
+        this.initRingSoul(player);
+    }
+    initRingSoul(player) {
+        let playerId = player.playerId;
+        let ringSoul = player.character.addComponent(RingSoul, true);
+        ringSoul.playerId = playerId;
+        this.ringSoulMap.set(playerId, ringSoul);
+        let ringSoulData = DataCenterS.getData(player, RingSoulData).ringSoul;
+        console.error(`ringSoulData = ${JSON.stringify(ringSoulData)}`);
+        if (MapEx.count(ringSoulData) > 0) {
+            let ringSoulStrs = "";
+            MapEx.forEach(ringSoulData, (key, value) => {
+                ringSoulStrs += `${key}-${value}|`;
+            });
+            ringSoul.ringSoulStrs = ringSoulStrs;
+        }
+    }
+    net_setRingSoulIndex(key, value) {
+        let playerId = this.currentPlayerId;
+        this.currentData.setRingSoulIndex(key, value);
+        if (!this.ringSoulMap.has(playerId))
+            return;
+        let ringSoul = this.ringSoulMap.get(playerId);
+        ringSoul.ringSoulStrs = `${key}-${value}`;
+    }
+    net_onOffRingSoul() {
+        let playerId = this.currentPlayerId;
+        if (!this.ringSoulMap.has(playerId))
+            return;
+        let ringSoul = this.ringSoulMap.get(playerId);
+        ringSoul.isOnRingSoul = !ringSoul.isOnRingSoul;
+    }
+}
+class RingSoulData extends Subdata {
+    constructor() {
+        super(...arguments);
+        this.ringSoul = {};
+    }
+    setRingSoulIndex(key, value) {
+        MapEx.set(this.ringSoul, key, value);
+        this.save(true);
+    }
+}
+__decorate([
+    Decorator.persistence()
+], RingSoulData.prototype, "ringSoul", void 0);
+class RingSoulPanel extends RingSoulPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.ringSoulModuleC = null;
+        this.playerModuleC = null;
+        this.adTipsPanel = null;
+        this.hudPanel = null;
+        this.hudModuleC = null;
+        this.ringSoulItems = [];
+        this.ringSoulPage = 0;
+        this.ringSoulIndex = 0;
+        this.ringSoulItemChilds = [];
+    }
+    get getRingSoulModuleC() {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    get getAdTipsPanel() {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel;
+    }
+    get getHudPanel() {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    get getHudModuleC() {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        for (let i = 1; i <= 9; ++i) {
+            let ringSoulItem = mw.UIService.create(RingSoulItem);
+            ringSoulItem.setRingSoulItemData(i);
+            this.ringSoulItems.push(ringSoulItem);
+            this.mContentCanvas.addChild(ringSoulItem.uiObject);
+        }
+        this.setRingSoulItemData(10);
+    }
+    setRingSoulItemData(ringSoulPage) {
+        this.ringSoulPage = ringSoulPage;
+        this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
+        for (let i = 1; i <= 6; ++i) {
+            let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
+            ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
+            this.ringSoulItemChilds.push(ringSoulItemChild);
+            this.mCanvas.addChild(ringSoulItemChild.uiObject);
+        }
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+        this.mUpButton.onClicked.add(this.addUpButton.bind(this));
+        this.mAddDiamondButton.onClicked.add(() => {
+            this.getHudModuleC.onAddDiamondAction.call();
+        });
+    }
+    addCloseButton() {
+        this.hideTween();
+    }
+    addUpButton() {
+        if (this.ringSoulPage <= 0) {
+            Notice.showDownNotice(`联系作者修复`);
+            return;
+        }
+        if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
+            Notice.showDownNotice(`已满级`);
+            return;
+        }
+        let lv = this.getPlayerModuleC.getLv;
+        if (lv < this.ringSoulPage * 10) {
+            Notice.showDownNotice(`等级不足`);
+            return;
+        }
+        let diamond = this.getPlayerModuleC.getDiamond;
+        console.error(`costDiamonds[this.ringSoulIndex ]:${costDiamonds[this.ringSoulIndex]}`);
+        if (diamond >= costDiamonds[this.ringSoulIndex]) {
+            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
+            this.ringSoulIndex++;
+            this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
+            this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
+            SoundService.playSound(upSound);
+            Notice.showDownNotice(`锻造成功`);
+        }
+        else {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.saveDiamond(1);
+                }, "免费领取1颗钻石", "取消", "免费领取");
+            }
+            else {
+                this.getPlayerModuleC.saveDiamond(1);
+            }
+        }
+    }
+    updateDiamond(diamond) {
+        this.mDiamondTextBlock.text = `${diamond}`;
+    }
+    onShow(...params) {
+        Utils.openUITween(this.rootCanvas, () => {
+            this.getHudPanel.hide();
+        }, null);
+    }
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+            this.getHudPanel.show();
+        });
+    }
+}
+class RingSoulItem extends RingSoulItem_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.ringSoulModuleC = null;
+        this.playerModuleC = null;
+        this.adTipsPanel = null;
+        this.ringSoulPage = 0;
+        this.ringSoulIndex = 0;
+        this.ringSoulItemChilds = [];
+    }
+    get getRingSoulModuleC() {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    get getAdTipsPanel() {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel;
+    }
+    onStart() {
+        this.bindButton();
+    }
+    bindButton() {
+        this.mUpButton.onClicked.add(this.addUpButton.bind(this));
+        Event.addLocalListener("First", () => {
+            if (this.ringSoulPage == 1 && this.ringSoulIndex == 0) {
+                this.ringSoulIndex++;
+                this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
+                this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
+                SoundService.playSound(upSound);
+                Notice.showDownNotice(`恭喜你完成新手引导`);
+                Notice.showDownNotice(`奖励第一魂环 十年魂环`);
+            }
+        });
+    }
+    addUpButton() {
+        if (this.ringSoulPage <= 0) {
+            Notice.showDownNotice(`联系作者修复`);
+            return;
+        }
+        if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
+            Notice.showDownNotice(`已满级`);
+            return;
+        }
+        let lv = this.getPlayerModuleC.getLv;
+        if (lv < this.ringSoulPage * 10) {
+            Notice.showDownNotice(`等级不足`);
+            return;
+        }
+        let diamond = this.getPlayerModuleC.getDiamond;
+        console.error(`costDiamonds[this.ringSoulIndex]:${costDiamonds[this.ringSoulIndex]}`);
+        if (diamond >= costDiamonds[this.ringSoulIndex]) {
+            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
+            this.ringSoulIndex++;
+            this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
+            this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
+            SoundService.playSound(upSound);
+            Notice.showDownNotice(`锻造成功`);
+        }
+        else {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    this.getPlayerModuleC.saveDiamond(1);
+                }, "免费领取1颗钻石", "取消", "免费领取");
+            }
+            else {
+                this.getPlayerModuleC.saveDiamond(1);
+            }
+        }
+    }
+    setRingSoulItemData(ringSoulPage) {
+        this.ringSoulPage = ringSoulPage;
+        this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
+        for (let i = 1; i <= 5; ++i) {
+            let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
+            ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
+            this.ringSoulItemChilds.push(ringSoulItemChild);
+            this.mCanvas.addChild(ringSoulItemChild.uiObject);
+        }
+    }
+}
+class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.playerModuleC = null;
+        this.isHas = false;
+        this.ringSoulIndex = 0;
+        this.ringSoulIndex_Self = 0;
+        this.ringSoulPage = 0;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    onStart() {
+    }
+    setRingSoulItemChildData(ringSoulIndex, ringSoulIndex_Self, ringSoulPage) {
+        this.ringSoulPage = ringSoulPage;
+        this.ringSoulIndex_Self = ringSoulIndex_Self;
+        this.ringSoulIndex = ringSoulIndex;
+        this.isHas = ringSoulIndex <= this.ringSoulIndex_Self;
+        this.mIconImage.setImageColorByHex(ringSoulIconColors[this.ringSoulIndex - 1]);
+        this.updateUI();
+    }
+    updateUI() {
+        let lv = this.getPlayerModuleC.getLv;
+        this.mNameTextBlock.text = `第${figureStrs[this.ringSoulPage - 1]}魂环\n${ringSoulNames[this.ringSoulIndex - 1]}魂环`;
+        if (this.isHas) {
+            this.mHasTextBlock.visibility = mw.SlateVisibility.Collapsed;
+            this.mCostTextBlock.visibility = mw.SlateVisibility.Collapsed;
+            this.mUpTextBlock.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mHasTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mCostTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mUpTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `级可解锁` : `${this.ringSoulPage * 10}级可解锁`;
+            this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulIndex - 1]}</size></color>钻石`;
+        }
+    }
+    setRingSoulItemChildDataByIndex(ringSoulIndex_Self) {
+        this.ringSoulIndex_Self = ringSoulIndex_Self;
+        this.isHas = this.ringSoulIndex <= this.ringSoulIndex_Self;
+        this.updateUI();
+    }
+}
+
 class HUDModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -7838,6 +8804,7 @@ class HUDModuleC extends ModuleC {
         this.taskModuleC = null;
         this.playerModuleC = null;
         this.hudPanel = null;
+        this.ringSoulPanel = null;
         this.adTipsPanel = null;
         this.bagModuleC = null;
         /**跳跃事件 */
@@ -7934,6 +8901,12 @@ class HUDModuleC extends ModuleC {
             this.hudPanel = mw.UIService.getUI(HUDPanel);
         }
         return this.hudPanel;
+    }
+    get getRingSoulPanel() {
+        if (!this.ringSoulPanel) {
+            this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
+        }
+        return this.ringSoulPanel;
     }
     get getAdTipsPanel() {
         if (!this.adTipsPanel) {
@@ -8077,6 +9050,7 @@ class HUDModuleC extends ModuleC {
     }
     updateDiamond(diamond) {
         this.getHudPanel.updateDiamond(diamond);
+        this.getRingSoulPanel.updateDiamond(diamond);
     }
     updateHp(curHp) {
         this.curHp = curHp;
@@ -8540,7 +9514,7 @@ var foreign71 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -8649,7 +9623,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign114 = /*#__PURE__*/Object.freeze({
+var foreign115 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -9517,7 +10491,7 @@ var foreign42 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -9623,7 +10597,7 @@ GuideUI_Generate = __decorate([
 ], GuideUI_Generate);
 var GuideUI_Generate$1 = GuideUI_Generate;
 
-var foreign100 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuideUI_Generate$1
 });
@@ -9740,6 +10714,9 @@ class GuidePanel extends GuideUI_Generate$1 {
                 this.guide16();
                 break;
             case 17:
+                this.guide17();
+                break;
+            case 18:
                 this.guide_1();
                 break;
             // 可以继续增加无数步
@@ -9815,6 +10792,10 @@ class GuidePanel extends GuideUI_Generate$1 {
         this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加金币直接购买武魂、魂骨。", 1, true);
     }
     guide16() {
+        mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加钻石锻造魂环。", 1, true);
+    }
+    guide17() {
         this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", 0, true);
     }
     guide_First() {
@@ -9909,7 +10890,7 @@ class GuideModuleC extends ModuleC {
         super(...arguments);
         this.guidePanel = null;
         this.bagModuleC = null;
-        this.totalStep = 17;
+        this.totalStep = 18;
         this.curStep = -1;
         this.onNextStepAction = new Action();
         /**引导目标点特效ID */
@@ -10124,7 +11105,7 @@ class GuideModuleC extends ModuleC {
                 mw.UIService.hide(BagInfoPanel);
             Event.dispatchToLocal("First");
             TimeUtil.delaySecond(5).then(() => {
-                this.getGuidePanel.guide_First();
+                this.getGuidePanel.guideByStep(18);
             });
         });
     }
@@ -11966,7 +12947,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -12032,7 +13013,7 @@ PlayerLifebar_Generate = __decorate([
 ], PlayerLifebar_Generate);
 var PlayerLifebar_Generate$1 = PlayerLifebar_Generate;
 
-var foreign105 = /*#__PURE__*/Object.freeze({
+var foreign106 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar_Generate$1
 });
@@ -12609,7 +13590,7 @@ var foreign3 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -12661,7 +13642,7 @@ EnemyLifebar_Generate = __decorate([
 ], EnemyLifebar_Generate);
 var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: EnemyLifebar_Generate$1
 });
@@ -13065,7 +14046,7 @@ class Monster extends Script {
         TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => { this.randomAttack_S(); });
     }
     getRandomTargetPoint_S() {
-        let targetVector = this.pathVectors[this.randomInt(0, this.pathVectors.length - 1)];
+        let targetVector = this.pathVectors[Utils.getPathIndex(this.pathVectors.length)];
         let targetPos = Navigation.getRandomReachablePointInRadius(targetVector, 500);
         return (!targetPos) ? targetVector : targetPos;
     }
@@ -13571,7 +14552,7 @@ var foreign13 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.09.01-00.10.27
+ * TIME: 2024.09.01-12.20.48
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -13632,7 +14613,7 @@ TestPanel_Generate = __decorate([
 ], TestPanel_Generate);
 var TestPanel_Generate$1 = TestPanel_Generate;
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel_Generate$1
 });
@@ -13750,7 +14731,7 @@ var foreign47 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.49
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -13918,7 +14899,7 @@ WorldRankPanel_Generate = __decorate([
 ], WorldRankPanel_Generate);
 var WorldRankPanel_Generate$1 = WorldRankPanel_Generate;
 
-var foreign119 = /*#__PURE__*/Object.freeze({
+var foreign120 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankPanel_Generate$1
 });
@@ -14325,932 +15306,6 @@ var foreign63 = /*#__PURE__*/Object.freeze({
     get RankType () { return RankType; },
     WorldRankModuleC: WorldRankModuleC
 });
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/RingSoulModule/RingSoulItem.ui
- * TIME: 2024.09.01-00.10.28
- */
-let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
-    get mMainCanvas() {
-        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
-            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
-        }
-        return this.mMainCanvas_Internal;
-    }
-    get mCanvas() {
-        if (!this.mCanvas_Internal && this.uiWidgetBase) {
-            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/BgImage/mCanvas');
-        }
-        return this.mCanvas_Internal;
-    }
-    get mUpButton() {
-        if (!this.mUpButton_Internal && this.uiWidgetBase) {
-            this.mUpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton');
-        }
-        return this.mUpButton_Internal;
-    }
-    get mUpTextBlock() {
-        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
-            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton/mUpTextBlock');
-        }
-        return this.mUpTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mUpButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mUpButton");
-        });
-        this.mUpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mUpTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-RingSoulItem_Generate = __decorate([
-    UIBind('UI/module/RingSoulModule/RingSoulItem.ui')
-], RingSoulItem_Generate);
-var RingSoulItem_Generate$1 = RingSoulItem_Generate;
-
-var foreign107 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: RingSoulItem_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
- * TIME: 2024.09.01-00.10.28
- */
-let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
-    get mCanvas() {
-        if (!this.mCanvas_Internal && this.uiWidgetBase) {
-            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas');
-        }
-        return this.mCanvas_Internal;
-    }
-    get mArrowsCanvas() {
-        if (!this.mArrowsCanvas_Internal && this.uiWidgetBase) {
-            this.mArrowsCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas');
-        }
-        return this.mArrowsCanvas_Internal;
-    }
-    get mArrowsImage() {
-        if (!this.mArrowsImage_Internal && this.uiWidgetBase) {
-            this.mArrowsImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mArrowsImage');
-        }
-        return this.mArrowsImage_Internal;
-    }
-    get mCostTextBlock() {
-        if (!this.mCostTextBlock_Internal && this.uiWidgetBase) {
-            this.mCostTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mCostTextBlock');
-        }
-        return this.mCostTextBlock_Internal;
-    }
-    get mUpTextBlock() {
-        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
-            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mArrowsCanvas/mUpTextBlock');
-        }
-        return this.mUpTextBlock_Internal;
-    }
-    get mIconCanvas() {
-        if (!this.mIconCanvas_Internal && this.uiWidgetBase) {
-            this.mIconCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas');
-        }
-        return this.mIconCanvas_Internal;
-    }
-    get mIconImage() {
-        if (!this.mIconImage_Internal && this.uiWidgetBase) {
-            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mIconImage');
-        }
-        return this.mIconImage_Internal;
-    }
-    get mNameTextBlock() {
-        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
-            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mNameTextBlock');
-        }
-        return this.mNameTextBlock_Internal;
-    }
-    get mHasTextBlock() {
-        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
-            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCanvas/mIconCanvas/mHasTextBlock');
-        }
-        return this.mHasTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mCostTextBlock);
-        this.initLanguage(this.mUpTextBlock);
-        this.initLanguage(this.mNameTextBlock);
-        this.initLanguage(this.mHasTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-RingSoulItemChild_Generate = __decorate([
-    UIBind('UI/module/RingSoulModule/RingSoulItemChild.ui')
-], RingSoulItemChild_Generate);
-var RingSoulItemChild_Generate$1 = RingSoulItemChild_Generate;
-
-var foreign106 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: RingSoulItemChild_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.09.01-00.10.28
- */
-let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
-    }
-    get mContentCanvas() {
-        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
-            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/ScrollBox/mContentCanvas');
-        }
-        return this.mContentCanvas_Internal;
-    }
-    get mMainCanvas() {
-        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
-            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas');
-        }
-        return this.mMainCanvas_Internal;
-    }
-    get mCanvas() {
-        if (!this.mCanvas_Internal && this.uiWidgetBase) {
-            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/BgImage/mCanvas');
-        }
-        return this.mCanvas_Internal;
-    }
-    get mUpButton() {
-        if (!this.mUpButton_Internal && this.uiWidgetBase) {
-            this.mUpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton');
-        }
-        return this.mUpButton_Internal;
-    }
-    get mUpTextBlock() {
-        if (!this.mUpTextBlock_Internal && this.uiWidgetBase) {
-            this.mUpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/mUpButton/mUpTextBlock');
-        }
-        return this.mUpTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mUpButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mUpButton");
-        });
-        this.mUpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mUpTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-RingSoulPanel_Generate = __decorate([
-    UIBind('UI/module/RingSoulModule/RingSoulPanel.ui')
-], RingSoulPanel_Generate);
-var RingSoulPanel_Generate$1 = RingSoulPanel_Generate;
-
-var foreign108 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: RingSoulPanel_Generate$1
-});
-
-const ringSoulNames = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
-const figureStrs = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-const costDiamonds = [10, 20, 30, 50, 100, 1000];
-const upSound = "169179";
-const ringSoulIconColors = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#FFD700FF"];
-const ringSoulPrefabIds = [
-    "322A7FF14588209BBD4B5DAF37D38FA2",
-    "F89DFCA24FEC54C1F4CFBEAB9D4FF27A",
-    "6CEAFD0A4DAA30D8FB89E49C5B28CD3F",
-    "C5944BA6404AC45A865163BBCC3766DD",
-    "19F4724F4E312B74233E1FA76EB9EEA9",
-    "7C36BC974D5F9E55375E31BA8161C366"
-];
-const ringSoulPrefabIdss = [
-    "7C36BC974D5F9E55375E31BA8161C366",
-    "92667F8849C7C04147E532A769D4C810",
-    "76F94448413EFBCDE982F6AD77A82674",
-    "E441096546A41ADCE42B85979BEE09CE",
-    "3944E8254E94BA46BAE85D9C37DAB6A7",
-    "12901F834472C74D86A077A1D286D75E"
-];
-const ringSoulSlots = [23, 23, 23, 23, 23, 23, 23, 23, 23, 23];
-const ringSoulOffsetPoss = [
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(0, 0, 30),
-    new mw.Vector(-100, 0, 320)
-];
-const ringSoulOffsetRots = [
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 0, 0),
-    new mw.Rotation(0, 65, 0)
-];
-const ringSoulOffsetScls = [
-    new mw.Vector(0.3, 0.3, 0.3),
-    new mw.Vector(0.4, 0.4, 0.4),
-    new mw.Vector(0.55, 0.55, 0.55),
-    new mw.Vector(0.7, 0.7, 0.7),
-    new mw.Vector(0.9, 0.9, 0.9),
-    new mw.Vector(1.2, 1.2, 1.2),
-    new mw.Vector(1.5, 1.5, 1.5),
-    new mw.Vector(1.9, 1.9, 1.9),
-    new mw.Vector(2.3, 2.3, 2.3),
-    new mw.Vector(2.5, 2.5, 2.5)
-];
-const showRingSoulTweenTime = 0.5;
-const hideRingSoulTweenTime = 0.5;
-const showRingSoulTweenIntervalTime = 0.25;
-const hideRingSoulTweenIntervalTime = 0.25;
-class RingSoulGo {
-    constructor() {
-        this.ringSoulIndex = 0;
-        this.go = null;
-        this.isInitRingSoulTween = false;
-        this.showRingSoulTween = null;
-        this.hideRingSoulTween = null;
-    }
-    initRingSoulTween() {
-        if (!this.go)
-            return;
-        if (this.isInitRingSoulTween) {
-            this.startShowRingSoul();
-            return;
-        }
-        this.isInitRingSoulTween = true;
-        let scaleValue = this.go.localTransform.scale.x;
-        this.showRingSoulTween = new mw.Tween({ scale: 0 })
-            .to({ scale: scaleValue }, showRingSoulTweenTime * 1000)
-            .onStart(() => {
-            this.go.localTransform.scale = mw.Vector.zero;
-            this.go.setVisibility(true);
-        })
-            .onUpdate((v) => {
-            this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
-        });
-        this.hideRingSoulTween = new mw.Tween({ scale: scaleValue })
-            .to({ scale: 0 }, hideRingSoulTweenTime * 1000)
-            .onStart(() => {
-            this.go.localTransform.scale = new mw.Vector(scaleValue, scaleValue, scaleValue);
-        })
-            .onUpdate((v) => {
-            this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
-        })
-            .onComplete(() => {
-            this.go.setVisibility(false);
-        });
-        this.startShowRingSoul();
-    }
-    startShowRingSoul() {
-        if (this.showRingSoulTween) {
-            this.showRingSoulTween.stop();
-            this.showRingSoulTween.start();
-        }
-    }
-    startHideRingSoul() {
-        if (this.hideRingSoulTween) {
-            this.hideRingSoulTween.stop();
-            this.hideRingSoulTween.start();
-        }
-    }
-}
-let RingSoul = class RingSoul extends Script {
-    constructor() {
-        super(...arguments);
-        this.playerId = 0;
-        this.ringSoulStrs = "";
-        this.isOnRingSoul = true;
-        this.player = null;
-        this.ringSoulMap = new Map();
-    }
-    get getPlayer() {
-        if (this.player == null) {
-            this.player = Player.getPlayer(this.playerId);
-        }
-        return this.player;
-    }
-    async initPlayer() {
-        if (!this.player) {
-            this.player = await Player.asyncGetPlayer(this.playerId);
-            console.error(`playerId = ${this.playerId}"的玩家 "${this.player ? "角色初始化完成" : "角色初始化失败"}`);
-        }
-    }
-    async updateRingSoul() {
-        if (!this.player)
-            await this.initPlayer();
-        if (!this.player)
-            return;
-        if (!this.ringSoulStrs || this.ringSoulStrs.length == 0)
-            return;
-        let ringSoulStrs = this.ringSoulStrs.split(`|`);
-        if (!ringSoulStrs || ringSoulStrs.length == 0)
-            return;
-        for (let i = 0; i < ringSoulStrs.length; ++i) {
-            if (!ringSoulStrs[i] || ringSoulStrs[i].length == 0)
-                continue;
-            let ringSoul = ringSoulStrs[i].split(`-`);
-            if (!ringSoul || ringSoul.length < 2)
-                continue;
-            let key = Number(ringSoul[0]);
-            let ringSoulIndex = Number(ringSoul[1]);
-            let ringSoulGo = null;
-            if (this.ringSoulMap.has(key)) {
-                ringSoulGo = this.ringSoulMap.get(key);
-                if (ringSoulGo.ringSoulIndex == ringSoulIndex)
-                    continue;
-                ringSoulGo.ringSoulIndex = ringSoulIndex;
-                if (ringSoulGo.go) {
-                    GameObjPool.despawn(ringSoulGo.go);
-                    ringSoulGo.go.setVisibility(false);
-                }
-            }
-            else {
-                ringSoulGo = new RingSoulGo();
-                if (ringSoulGo.ringSoulIndex == ringSoulIndex)
-                    continue;
-                ringSoulGo.ringSoulIndex = ringSoulIndex;
-            }
-            let go = await GameObjPool.asyncSpawn((key != 10) ? ringSoulPrefabIds[ringSoulIndex - 1] : ringSoulPrefabIdss[ringSoulIndex - 1], mwext.GameObjPoolSourceType.Prefab);
-            await go.asyncReady();
-            this.getPlayer.character.attachToSlot(go, ringSoulSlots[key - 1]);
-            go.localTransform.position = ringSoulOffsetPoss[key - 1];
-            go.localTransform.rotation = ringSoulOffsetRots[key - 1];
-            go.localTransform.scale = ringSoulOffsetScls[key - 1];
-            ringSoulGo.go = go;
-            ringSoulGo.initRingSoulTween();
-            this.ringSoulMap.set(key, ringSoulGo);
-        }
-    }
-    // public async updateRingSoulState(): Promise<void> {
-    //     if (!this.ringSoulMap || this.ringSoulMap.size == 0) return;
-    //     if (this.isOnRingSoul) {
-    //         this.startShowRingSoulByIndex(1);
-    //         for (let i = 2; i <= 10; ++i) {
-    //             if (!this.ringSoulMap.has(i)) continue;
-    //             let ringSoulGo = this.ringSoulMap.get(i);
-    //             await new Promise<void>((resolve: () => void) => {
-    //                 setTimeout(() => {
-    //                     ringSoulGo.startShowRingSoul();
-    //                     return resolve();
-    //                 }, showRingSoulTweenIntervalTime * 1000);
-    //             });
-    //         }
-    //     } else {
-    //         this.startHideRingSoulByIndex(1);
-    //         for (let i = 2; i <= 10; ++i) {
-    //             if (!this.ringSoulMap.has(i)) continue;
-    //             let ringSoulGo = this.ringSoulMap.get(i);
-    //             await new Promise<void>((resolve: () => void) => {
-    //                 setTimeout(() => {
-    //                     ringSoulGo.startHideRingSoul();
-    //                     return resolve();
-    //                 }, hideRingSoulTweenIntervalTime * 1000);
-    //             });
-    //         }
-    //     }
-    // }
-    async updateRingSoulState() {
-        if (!this.ringSoulMap || this.ringSoulMap.size == 0)
-            return;
-        await this.OffRingSoul();
-        await TimeUtil.delaySecond(1);
-        await this.OnRingSoul();
-    }
-    async OffRingSoul() {
-        console.error(`关闭`);
-        this.startHideRingSoulByIndex(1);
-        for (let i = 2; i <= 10; ++i) {
-            if (!this.ringSoulMap.has(i))
-                continue;
-            let ringSoulGo = this.ringSoulMap.get(i);
-            await new Promise((resolve) => {
-                setTimeout(() => {
-                    ringSoulGo.startHideRingSoul();
-                    return resolve();
-                }, hideRingSoulTweenIntervalTime * 1000);
-            });
-        }
-    }
-    async OnRingSoul() {
-        console.error(`打开`);
-        this.startShowRingSoulByIndex(1);
-        for (let i = 2; i <= 10; ++i) {
-            if (!this.ringSoulMap.has(i))
-                continue;
-            let ringSoulGo = this.ringSoulMap.get(i);
-            await new Promise((resolve) => {
-                setTimeout(() => {
-                    ringSoulGo.startShowRingSoul();
-                    return resolve();
-                }, showRingSoulTweenIntervalTime * 1000);
-            });
-        }
-    }
-    startShowRingSoulByIndex(index) {
-        if (!this.ringSoulMap.has(index))
-            return;
-        let ringSoulGo = this.ringSoulMap.get(index);
-        ringSoulGo.startShowRingSoul();
-    }
-    startHideRingSoulByIndex(index) {
-        if (!this.ringSoulMap.has(index))
-            return;
-        let ringSoulGo = this.ringSoulMap.get(index);
-        ringSoulGo.startHideRingSoul();
-    }
-};
-__decorate([
-    mw.Property({ replicated: true, onChanged: "initPlayer" })
-], RingSoul.prototype, "playerId", void 0);
-__decorate([
-    mw.Property({ replicated: true, onChanged: "updateRingSoul" })
-], RingSoul.prototype, "ringSoulStrs", void 0);
-__decorate([
-    mw.Property({ replicated: true, onChanged: "updateRingSoulState" })
-], RingSoul.prototype, "isOnRingSoul", void 0);
-RingSoul = __decorate([
-    Component
-], RingSoul);
-class RingSoulModuleC extends ModuleC {
-    constructor() {
-        super(...arguments);
-        this.hudModuleC = null;
-        this.ringSoulPanel = null;
-        this.ringSoul = {};
-        this.isCanOnRingSoul = true;
-    }
-    get getHudModuleC() {
-        if (!this.hudModuleC) {
-            this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        }
-        return this.hudModuleC;
-    }
-    get getRingSoulPanel() {
-        if (this.ringSoulPanel == null) {
-            this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
-        }
-        return this.ringSoulPanel;
-    }
-    onStart() {
-        InputUtil.onKeyDown(mw.Keys.P, () => {
-            // Event.dispatchToServer("RingSoul");
-            this.getRingSoulPanel.show();
-        });
-        InputUtil.onKeyDown(mw.Keys.O, () => {
-            this.onOffRingSoul();
-        });
-        this.getHudModuleC.onOpenRingSoulAction.add(() => {
-            this.getRingSoulPanel.show();
-        });
-        this.getHudModuleC.onOnOffRingSoulAction.add(() => {
-            this.onOffRingSoul();
-        });
-    }
-    onEnterScene(sceneType) {
-        this.initRingSoulData();
-        this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
-    }
-    initRingSoulData() {
-        this.ringSoul = this.data.ringSoul;
-    }
-    getIsHasRingSoul(key) {
-        return MapEx.has(this.ringSoul, key);
-    }
-    getRingSoulIndex(key) {
-        if (MapEx.has(this.ringSoul, key)) {
-            return MapEx.get(this.ringSoul, key);
-        }
-        return 0;
-    }
-    setRingSoulIndex(key, value) {
-        MapEx.set(this.ringSoul, key, value);
-        this.server.net_setRingSoulIndex(key, value);
-    }
-    onOffRingSoul() {
-        if (MapEx.count(this.ringSoul) == 0) {
-            Notice.showDownNotice(`还未获取魂环`);
-            return;
-        }
-        if (!this.isCanOnRingSoul) {
-            Notice.showDownNotice(`15秒冷却`);
-            return;
-        }
-        this.isCanOnRingSoul = false;
-        TimeUtil.delaySecond(15).then(() => {
-            this.isCanOnRingSoul = true;
-        });
-        this.server.net_onOffRingSoul();
-    }
-}
-class RingSoulModuleS extends ModuleS {
-    constructor() {
-        super(...arguments);
-        this.ringSoulMap = new Map();
-    }
-    onStart() {
-    }
-    onPlayerEnterGame(player) {
-        this.initRingSoul(player);
-    }
-    initRingSoul(player) {
-        let playerId = player.playerId;
-        let ringSoul = player.character.addComponent(RingSoul, true);
-        ringSoul.playerId = playerId;
-        this.ringSoulMap.set(playerId, ringSoul);
-        let ringSoulData = DataCenterS.getData(player, RingSoulData).ringSoul;
-        console.error(`ringSoulData = ${JSON.stringify(ringSoulData)}`);
-        if (MapEx.count(ringSoulData) > 0) {
-            let ringSoulStrs = "";
-            MapEx.forEach(ringSoulData, (key, value) => {
-                ringSoulStrs += `${key}-${value}|`;
-            });
-            ringSoul.ringSoulStrs = ringSoulStrs;
-        }
-    }
-    net_setRingSoulIndex(key, value) {
-        let playerId = this.currentPlayerId;
-        this.currentData.setRingSoulIndex(key, value);
-        if (!this.ringSoulMap.has(playerId))
-            return;
-        let ringSoul = this.ringSoulMap.get(playerId);
-        ringSoul.ringSoulStrs = `${key}-${value}`;
-    }
-    net_onOffRingSoul() {
-        let playerId = this.currentPlayerId;
-        if (!this.ringSoulMap.has(playerId))
-            return;
-        let ringSoul = this.ringSoulMap.get(playerId);
-        ringSoul.isOnRingSoul = !ringSoul.isOnRingSoul;
-    }
-}
-class RingSoulData extends Subdata {
-    constructor() {
-        super(...arguments);
-        this.ringSoul = {};
-    }
-    setRingSoulIndex(key, value) {
-        MapEx.set(this.ringSoul, key, value);
-        this.save(true);
-    }
-}
-__decorate([
-    Decorator.persistence()
-], RingSoulData.prototype, "ringSoul", void 0);
-class RingSoulPanel extends RingSoulPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.ringSoulModuleC = null;
-        this.playerModuleC = null;
-        this.adTipsPanel = null;
-        this.hudPanel = null;
-        this.ringSoulItems = [];
-        this.ringSoulPage = 0;
-        this.ringSoulIndex = 0;
-        this.ringSoulItemChilds = [];
-    }
-    get getRingSoulModuleC() {
-        if (!this.ringSoulModuleC) {
-            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
-        }
-        return this.ringSoulModuleC;
-    }
-    get getPlayerModuleC() {
-        if (!this.playerModuleC) {
-            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        }
-        return this.playerModuleC;
-    }
-    get getAdTipsPanel() {
-        if (!this.adTipsPanel) {
-            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
-        }
-        return this.adTipsPanel;
-    }
-    get getHudPanel() {
-        if (!this.hudPanel) {
-            this.hudPanel = mw.UIService.getUI(HUDPanel);
-        }
-        return this.hudPanel;
-    }
-    onStart() {
-        this.initUI();
-        this.bindButton();
-    }
-    initUI() {
-        for (let i = 1; i <= 9; ++i) {
-            let ringSoulItem = mw.UIService.create(RingSoulItem);
-            ringSoulItem.setRingSoulItemData(i);
-            this.ringSoulItems.push(ringSoulItem);
-            this.mContentCanvas.addChild(ringSoulItem.uiObject);
-        }
-        this.setRingSoulItemData(10);
-    }
-    setRingSoulItemData(ringSoulPage) {
-        this.ringSoulPage = ringSoulPage;
-        this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
-        for (let i = 1; i <= 6; ++i) {
-            let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
-            ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
-            this.ringSoulItemChilds.push(ringSoulItemChild);
-            this.mCanvas.addChild(ringSoulItemChild.uiObject);
-        }
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
-        this.mUpButton.onClicked.add(this.addUpButton.bind(this));
-    }
-    addCloseButton() {
-        this.hideTween();
-    }
-    addUpButton() {
-        if (this.ringSoulPage <= 0) {
-            Notice.showDownNotice(`联系作者修复`);
-            return;
-        }
-        if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
-            Notice.showDownNotice(`已满级`);
-            return;
-        }
-        let lv = this.getPlayerModuleC.getLv;
-        if (lv < this.ringSoulPage * 10) {
-            Notice.showDownNotice(`等级不足`);
-            return;
-        }
-        let diamond = this.getPlayerModuleC.getDiamond;
-        console.error(`costDiamonds[this.ringSoulIndex ]:${costDiamonds[this.ringSoulIndex]}`);
-        if (diamond >= costDiamonds[this.ringSoulIndex]) {
-            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
-            this.ringSoulIndex++;
-            this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
-            this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
-            SoundService.playSound(upSound);
-            Notice.showDownNotice(`锻造成功`);
-        }
-        else {
-            if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
-            }
-            else {
-                this.getPlayerModuleC.saveDiamond(1);
-            }
-        }
-    }
-    onShow(...params) {
-        Utils.openUITween(this.rootCanvas, () => {
-            this.getHudPanel.hide();
-        }, null);
-    }
-    hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, () => {
-            this.hide();
-            this.getHudPanel.show();
-        });
-    }
-}
-class RingSoulItem extends RingSoulItem_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.ringSoulModuleC = null;
-        this.playerModuleC = null;
-        this.adTipsPanel = null;
-        this.ringSoulPage = 0;
-        this.ringSoulIndex = 0;
-        this.ringSoulItemChilds = [];
-    }
-    get getRingSoulModuleC() {
-        if (!this.ringSoulModuleC) {
-            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
-        }
-        return this.ringSoulModuleC;
-    }
-    get getPlayerModuleC() {
-        if (!this.playerModuleC) {
-            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        }
-        return this.playerModuleC;
-    }
-    get getAdTipsPanel() {
-        if (!this.adTipsPanel) {
-            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
-        }
-        return this.adTipsPanel;
-    }
-    onStart() {
-        this.bindButton();
-    }
-    bindButton() {
-        this.mUpButton.onClicked.add(this.addUpButton.bind(this));
-        Event.addLocalListener("First", () => {
-            if (this.ringSoulPage == 1 && this.ringSoulIndex == 0) {
-                this.ringSoulIndex++;
-                this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
-                this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
-                SoundService.playSound(upSound);
-                Notice.showDownNotice(`恭喜你完成新手引导`);
-                Notice.showDownNotice(`奖励第一魂环 十年魂环`);
-            }
-        });
-    }
-    addUpButton() {
-        if (this.ringSoulPage <= 0) {
-            Notice.showDownNotice(`联系作者修复`);
-            return;
-        }
-        if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
-            Notice.showDownNotice(`已满级`);
-            return;
-        }
-        let lv = this.getPlayerModuleC.getLv;
-        if (lv < this.ringSoulPage * 10) {
-            Notice.showDownNotice(`等级不足`);
-            return;
-        }
-        let diamond = this.getPlayerModuleC.getDiamond;
-        console.error(`costDiamonds[this.ringSoulIndex]:${costDiamonds[this.ringSoulIndex]}`);
-        if (diamond >= costDiamonds[this.ringSoulIndex]) {
-            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
-            this.ringSoulIndex++;
-            this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
-            this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
-            SoundService.playSound(upSound);
-            Notice.showDownNotice(`锻造成功`);
-        }
-        else {
-            if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
-            }
-            else {
-                this.getPlayerModuleC.saveDiamond(1);
-            }
-        }
-    }
-    setRingSoulItemData(ringSoulPage) {
-        this.ringSoulPage = ringSoulPage;
-        this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
-        for (let i = 1; i <= 5; ++i) {
-            let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
-            ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
-            this.ringSoulItemChilds.push(ringSoulItemChild);
-            this.mCanvas.addChild(ringSoulItemChild.uiObject);
-        }
-    }
-}
-class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.playerModuleC = null;
-        this.isHas = false;
-        this.ringSoulIndex = 0;
-        this.ringSoulIndex_Self = 0;
-        this.ringSoulPage = 0;
-    }
-    get getPlayerModuleC() {
-        if (!this.playerModuleC) {
-            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        }
-        return this.playerModuleC;
-    }
-    onStart() {
-    }
-    setRingSoulItemChildData(ringSoulIndex, ringSoulIndex_Self, ringSoulPage) {
-        this.ringSoulPage = ringSoulPage;
-        this.ringSoulIndex_Self = ringSoulIndex_Self;
-        this.ringSoulIndex = ringSoulIndex;
-        this.isHas = ringSoulIndex <= this.ringSoulIndex_Self;
-        this.mIconImage.setImageColorByHex(ringSoulIconColors[this.ringSoulIndex - 1]);
-        this.updateUI();
-    }
-    updateUI() {
-        let lv = this.getPlayerModuleC.getLv;
-        this.mNameTextBlock.text = `第${figureStrs[this.ringSoulPage - 1]}魂环\n${ringSoulNames[this.ringSoulIndex - 1]}魂环`;
-        if (this.isHas) {
-            this.mHasTextBlock.visibility = mw.SlateVisibility.Collapsed;
-            this.mCostTextBlock.visibility = mw.SlateVisibility.Collapsed;
-            this.mUpTextBlock.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mHasTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mCostTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mUpTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `级可解锁` : `${this.ringSoulPage * 10}级可解锁`;
-            this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulIndex - 1]}</size></color>钻石`;
-        }
-    }
-    setRingSoulItemChildDataByIndex(ringSoulIndex_Self) {
-        this.ringSoulIndex_Self = ringSoulIndex_Self;
-        this.isHas = this.ringSoulIndex <= this.ringSoulIndex_Self;
-        this.updateUI();
-    }
-}
 
 let GameLauncher = class GameLauncher extends mw.Script {
     constructor() {
@@ -16030,7 +16085,7 @@ class TouchData {
     }
 }
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputManagers: InputManagers,
     TouchData: TouchData
@@ -16041,7 +16096,7 @@ var foreign86 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -16131,7 +16186,7 @@ NPCHead_Generate = __decorate([
 ], NPCHead_Generate);
 var NPCHead_Generate$1 = NPCHead_Generate;
 
-var foreign110 = /*#__PURE__*/Object.freeze({
+var foreign111 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NPCHead_Generate$1
 });
@@ -16141,7 +16196,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -16209,7 +16264,7 @@ CostPanel_Generate = __decorate([
 ], CostPanel_Generate);
 var CostPanel_Generate$1 = CostPanel_Generate;
 
-var foreign109 = /*#__PURE__*/Object.freeze({
+var foreign110 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel_Generate$1
 });
@@ -16261,7 +16316,7 @@ var foreign69 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -16372,7 +16427,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign112 = /*#__PURE__*/Object.freeze({
+var foreign113 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -18526,12 +18581,210 @@ var foreign80 = /*#__PURE__*/Object.freeze({
     default: Weapon$1
 });
 
+var FreeCamera_1;
+let FreeCamera = FreeCamera_1 = class FreeCamera extends Script {
+    constructor() {
+        super(...arguments);
+        /** 摄像机锚点移动速度 */
+        this.speed = 500;
+        /** 移动叠加向量 */
+        this._moveDirection = Vector.zero;
+        /** 移动临时位置 */
+        this._moveLoc = Vector.zero;
+        /** 比值用常量 */
+        this.VECTOR_ZERO = Vector.zero;
+        /** 是否处于自由视角状态 */
+        this.isFreeCamera = false;
+        this.isFirstChange = true;
+    }
+    onStart() {
+        this.init();
+    }
+    async init() {
+        if (SystemUtil.isServer())
+            return;
+        await (await Player.asyncGetLocalPlayer()).character.asyncReady();
+        this.freeCamera = await GameObject.asyncSpawn("Camera");
+        this.freeCamera.springArm.localTransform = Transform.identity;
+        // Config
+        this.freeCamera.upAngleLimit = 89.9;
+        this.freeCamera.downAngleLimit = 89.9;
+        this.freeCamera.localTransform = Transform.identity;
+        this.freeCamera.springArm.localTransform = Transform.identity;
+        this.freeCamera.springArm.length = 0;
+        this.freeCamera.springArm.collisionEnabled = false;
+        InputUtil.onKeyDown(Keys.F8, () => {
+            if (this.isFreeCamera) {
+                this.exitFreeCamera();
+            }
+            else {
+                this.enterFreeCamera();
+            }
+        });
+        InputUtil.onKeyDown(Keys.NumPadNine, () => {
+            this.freeCamera.springArm.worldTransform.position = Player.localPlayer.character.worldTransform.position.clone();
+            this._moveLoc = this.freeCamera.springArm.worldTransform.position.clone();
+        });
+        Event.addLocalListener(FreeCamera_1.EVENTS_JOYSTICK_INPUT, (dir) => {
+            if (this.freeCamera) {
+                const forward = this.freeCamera.worldTransform.clone().getForwardVector().clone();
+                const right = this.freeCamera.worldTransform.clone().getRightVector().clone();
+                this._moveDirection.set(forward.multiply(dir.y).add(right.multiply(dir.x)));
+                Vector.add(this._moveLoc, this._moveDirection.normalized.multiply(this.speed * 0.02), this._moveLoc);
+                this.freeCamera.springArm.worldTransform.position = this._moveLoc;
+                // 避免重复使用
+                if (this.useUpdate)
+                    this.useUpdate = false;
+            }
+        });
+        KeyActionManager.instance.add([Keys.W, Keys.S, Keys.A, Keys.D, Keys.E, Keys.Q]);
+    }
+    /**
+     * 切换至自由视角摄像机（暂未提供触屏控制方式）
+     */
+    enterFreeCamera() {
+        if (!this.originCamera) {
+            this.originCamera = Camera.currentCamera;
+        }
+        if (this.isFirstChange) {
+            this.freeCamera.springArm.worldTransform.position = Player.localPlayer.character.worldTransform.position.clone();
+            this._moveLoc = this.freeCamera.springArm.worldTransform.position.clone();
+            this.isFirstChange = false;
+        }
+        Camera.switch(this.freeCamera, 0);
+        this.originCamera.springArm.useControllerRotation = false;
+        this.freeCamera.springArm.useControllerRotation = true;
+        Player.localPlayer.character.movementEnabled = false;
+        this.isFreeCamera = true;
+        this.useUpdate = true;
+    }
+    /**
+     * 退出自由视角摄像机
+     */
+    exitFreeCamera() {
+        if (!this.isFreeCamera)
+            return;
+        Camera.switch(this.originCamera, 0);
+        this.originCamera.springArm.useControllerRotation = true;
+        this.freeCamera.springArm.useControllerRotation = false;
+        Player.localPlayer.character.movementEnabled = true;
+        this.isFreeCamera = false;
+        this.useUpdate = false;
+    }
+    onUpdate(dt) {
+        // 监听按键并叠加控制锚点位移的向量
+        if (KeyActionManager.instance.isPress(Keys.W)) {
+            // 将三维向量压缩至二维使用
+            const forward = this.freeCamera.worldTransform.clone().getForwardVector().clone();
+            this._moveDirection.x += forward.x;
+            this._moveDirection.y += forward.y;
+        }
+        if (KeyActionManager.instance.isPress(Keys.S)) {
+            const back = this.freeCamera.worldTransform.clone().getForwardVector().clone().multiply(-1);
+            this._moveDirection.x += back.x;
+            this._moveDirection.y += back.y;
+        }
+        if (KeyActionManager.instance.isPress(Keys.A)) {
+            const left = this.freeCamera.worldTransform.clone().getRightVector().clone().multiply(-1);
+            this._moveDirection.x += left.x;
+            this._moveDirection.y += left.y;
+        }
+        if (KeyActionManager.instance.isPress(Keys.D)) {
+            const right = this.freeCamera.worldTransform.clone().getRightVector().clone();
+            this._moveDirection.x += right.x;
+            this._moveDirection.y += right.y;
+        }
+        if (KeyActionManager.instance.isPress(Keys.E)) {
+            this._moveDirection.z += 1;
+        }
+        if (KeyActionManager.instance.isPress(Keys.Q)) {
+            this._moveDirection.z -= 1;
+        }
+        // 为锚点设置叠加后向量，实现无限制位移
+        if (!this._moveDirection.equals(this.VECTOR_ZERO)) {
+            Vector.add(this._moveLoc, this._moveDirection.normalized.multiply(this.speed * dt), this._moveLoc);
+            this.freeCamera.springArm.worldTransform.position = this._moveLoc;
+            this._moveDirection.x = 0;
+            this._moveDirection.y = 0;
+            this._moveDirection.z = 0;
+        }
+    }
+};
+FreeCamera.EVENTS_JOYSTICK_INPUT = "FreeCamera.EVENTS_JOYSTICK_INPUT";
+FreeCamera = FreeCamera_1 = __decorate([
+    Component
+], FreeCamera);
+var FreeCamera$1 = FreeCamera;
+/**
+ * 按键状态管理器
+ */
+class KeyActionManager {
+    constructor() {
+        /** 初始化标记 */
+        this.isReady = false;
+        /** 按下状态表 */
+        this._actionStates = new Map;
+        this._btnStates = new Map;
+    }
+    static get instance() {
+        if (!KeyActionManager._instance) {
+            KeyActionManager._instance = new KeyActionManager();
+        }
+        return KeyActionManager._instance;
+    }
+    /**
+     * 检测按键是否被按下，无延迟（需要在update中调用，留意性能开销）
+     * @param action 项目内按键操作枚举
+     * @returns 是否被按下
+     */
+    isPress(action) {
+        if (action instanceof mw.Button) {
+            return this._btnStates.get(action.guid);
+        }
+        else {
+            return this._actionStates.get(action);
+        }
+    }
+    /**
+     * 为指定按钮添加状态监听
+     * @param btn 需要监听状态的按钮
+     */
+    add(btn) {
+        // 初始化按下状态 并设定状态改变监听
+        if (btn instanceof Button) {
+            this._btnStates.set(btn.guid, false);
+            btn.onPressed.add(() => {
+                this._btnStates.set(btn.guid, true);
+            });
+            btn.onReleased.add(() => {
+                this._btnStates.set(btn.guid, false);
+            });
+        }
+        else {
+            btn.forEach(element => {
+                this._actionStates.set(element, false);
+                InputUtil.onKeyDown(element, () => {
+                    this._actionStates.set(element, true);
+                });
+                InputUtil.onKeyUp(element, () => {
+                    this._actionStates.set(element, false);
+                });
+            });
+        }
+    }
+}
+
+var foreign86 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: FreeCamera$1
+});
+
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -18640,7 +18893,7 @@ OnlineRewardItem_Generate = __decorate([
 ], OnlineRewardItem_Generate);
 var OnlineRewardItem_Generate$1 = OnlineRewardItem_Generate;
 
-var foreign103 = /*#__PURE__*/Object.freeze({
+var foreign104 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardItem_Generate$1
 });
@@ -18650,7 +18903,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -18731,7 +18984,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign111 = /*#__PURE__*/Object.freeze({
+var foreign112 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -18741,7 +18994,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -18844,7 +19097,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign113 = /*#__PURE__*/Object.freeze({
+var foreign114 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -18854,7 +19107,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -18899,7 +19152,7 @@ ImpactRadiusWindow_Generate = __decorate([
 ], ImpactRadiusWindow_Generate);
 var ImpactRadiusWindow_Generate$1 = ImpactRadiusWindow_Generate;
 
-var foreign115 = /*#__PURE__*/Object.freeze({
+var foreign116 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ImpactRadiusWindow_Generate$1
 });
@@ -18909,7 +19162,7 @@ var foreign115 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -18974,7 +19227,7 @@ JumpRecordUI_Generate = __decorate([
 ], JumpRecordUI_Generate);
 var JumpRecordUI_Generate$1 = JumpRecordUI_Generate;
 
-var foreign116 = /*#__PURE__*/Object.freeze({
+var foreign117 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpRecordUI_Generate$1
 });
@@ -18984,7 +19237,7 @@ var foreign116 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.48
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -19058,7 +19311,7 @@ RankItem_Generate = __decorate([
 ], RankItem_Generate);
 var RankItem_Generate$1 = RankItem_Generate;
 
-var foreign117 = /*#__PURE__*/Object.freeze({
+var foreign118 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankItem_Generate$1
 });
@@ -19068,7 +19321,7 @@ var foreign117 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.09.01-00.10.28
+ * TIME: 2024.09.01-12.20.49
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -19128,7 +19381,7 @@ WorldRankItem_Generate = __decorate([
 ], WorldRankItem_Generate);
 var WorldRankItem_Generate$1 = WorldRankItem_Generate;
 
-var foreign118 = /*#__PURE__*/Object.freeze({
+var foreign119 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankItem_Generate$1
 });
@@ -19218,40 +19471,41 @@ const MWModuleMap = {
      'E76AEC2E4B56116E911A1B86036607DC': foreign83,
      '767E3E464F5CFA8DE7DBE19AE45B874D': foreign84,
      'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign85,
-     'B6D27EAC444C85D1D925F986D613D5B3': foreign86,
-     'EFFEC0C44629992590058E96821DF5A4': foreign87,
-     'C21422064060FC0412F08EAAD527453E': foreign88,
-     'E08DC42B45A65EE74232E6B7819467BF': foreign89,
-     '9A29CFAC457713D31702BF919B762966': foreign90,
-     '4244ACB14A814AA70C452CB4CFEBB75D': foreign91,
-     'FAAB758A46290493F8E43BA2B90FE5D8': foreign92,
-     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign93,
-     '2C5FEBB74325C7CDDE604EB4590142F0': foreign94,
-     '9F6B6A8C43A7F31DDB111384318E84E0': foreign95,
-     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign96,
-     '4017F2464551598B868EECA194CC198A': foreign97,
-     '38D734224F75800856A0C69917B88EF8': foreign98,
-     '2987FCF94860A2648A6FA88D34EFA05A': foreign99,
-     'CEE46C5B4475EE568570CBA41D68EE0C': foreign100,
-     '51FD3899419F676C5D82C682439BFAFE': foreign101,
-     '92FA042A4FD4838557550FAACC252FDF': foreign102,
-     'FFAA0B1841347CE8BB80ED8EA9335519': foreign103,
-     '0EE04F42462FE0DADBF4668AD079F570': foreign104,
-     'D84A334C40B33A813552FF903364539E': foreign105,
-     '51DC73A84B35897D52C83693B7DD046D': foreign106,
-     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign107,
-     'D184468C4590DA86174C9FB293C6F14A': foreign108,
-     '075AF2584F411C88705182871B9DFB78': foreign109,
-     '137112BE4F0726F6AD61EFBED47C639E': foreign110,
-     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign111,
-     '0D1CAB354779E284B6E58B91C82ABE07': foreign112,
-     '0C684B0C46414ED7D11529BA94FD6935': foreign113,
-     '10B4E9EA45C85246C9717EA276C7774B': foreign114,
-     '26DC6E0D40A865057A807DADF4A80DCB': foreign115,
-     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign116,
-     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign117,
-     '368482014D69E4E894C63192B0F17B63': foreign118,
-     '265FA5C440300C2875B6699C5F8B36C7': foreign119,
+     '72BDC1A847C3175B60A8E7B540400F62': foreign86,
+     'B6D27EAC444C85D1D925F986D613D5B3': foreign87,
+     'EFFEC0C44629992590058E96821DF5A4': foreign88,
+     'C21422064060FC0412F08EAAD527453E': foreign89,
+     'E08DC42B45A65EE74232E6B7819467BF': foreign90,
+     '9A29CFAC457713D31702BF919B762966': foreign91,
+     '4244ACB14A814AA70C452CB4CFEBB75D': foreign92,
+     'FAAB758A46290493F8E43BA2B90FE5D8': foreign93,
+     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign94,
+     '2C5FEBB74325C7CDDE604EB4590142F0': foreign95,
+     '9F6B6A8C43A7F31DDB111384318E84E0': foreign96,
+     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign97,
+     '4017F2464551598B868EECA194CC198A': foreign98,
+     '38D734224F75800856A0C69917B88EF8': foreign99,
+     '2987FCF94860A2648A6FA88D34EFA05A': foreign100,
+     'CEE46C5B4475EE568570CBA41D68EE0C': foreign101,
+     '51FD3899419F676C5D82C682439BFAFE': foreign102,
+     '92FA042A4FD4838557550FAACC252FDF': foreign103,
+     'FFAA0B1841347CE8BB80ED8EA9335519': foreign104,
+     '0EE04F42462FE0DADBF4668AD079F570': foreign105,
+     'D84A334C40B33A813552FF903364539E': foreign106,
+     '51DC73A84B35897D52C83693B7DD046D': foreign107,
+     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign108,
+     'D184468C4590DA86174C9FB293C6F14A': foreign109,
+     '075AF2584F411C88705182871B9DFB78': foreign110,
+     '137112BE4F0726F6AD61EFBED47C639E': foreign111,
+     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign112,
+     '0D1CAB354779E284B6E58B91C82ABE07': foreign113,
+     '0C684B0C46414ED7D11529BA94FD6935': foreign114,
+     '10B4E9EA45C85246C9717EA276C7774B': foreign115,
+     '26DC6E0D40A865057A807DADF4A80DCB': foreign116,
+     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign117,
+     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign118,
+     '368482014D69E4E894C63192B0F17B63': foreign119,
+     '265FA5C440300C2875B6699C5F8B36C7': foreign120,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign2 || {}, "JavaScripts/common/Boss"],
@@ -19337,40 +19591,41 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
 [foreign84 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
 [foreign85 || {}, "JavaScripts/Tools/Console"],
-[foreign86 || {}, "JavaScripts/Tools/InputManager"],
-[foreign87 || {}, "JavaScripts/Tools/MapEx"],
-[foreign88 || {}, "JavaScripts/Tools/ObjectPool"],
-[foreign89 || {}, "JavaScripts/Tools/utils"],
-[foreign90 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
-[foreign91 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
-[foreign92 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign93 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign94 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
-[foreign95 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
-[foreign96 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
-[foreign97 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
-[foreign98 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
-[foreign99 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
-[foreign100 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
-[foreign101 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign102 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign103 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
-[foreign104 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
-[foreign105 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
-[foreign106 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
-[foreign107 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
-[foreign108 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
-[foreign109 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
-[foreign110 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
-[foreign111 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign112 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign113 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign114 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign115 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
-[foreign116 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
-[foreign117 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
-[foreign118 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
-[foreign119 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
+[foreign86 || {}, "JavaScripts/Tools/FreeCamera"],
+[foreign87 || {}, "JavaScripts/Tools/InputManager"],
+[foreign88 || {}, "JavaScripts/Tools/MapEx"],
+[foreign89 || {}, "JavaScripts/Tools/ObjectPool"],
+[foreign90 || {}, "JavaScripts/Tools/utils"],
+[foreign91 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
+[foreign92 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
+[foreign93 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign94 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign95 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
+[foreign96 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
+[foreign97 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
+[foreign98 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
+[foreign99 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
+[foreign100 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
+[foreign101 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
+[foreign102 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign103 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign104 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
+[foreign105 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
+[foreign106 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
+[foreign107 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
+[foreign108 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
+[foreign109 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
+[foreign110 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
+[foreign111 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
+[foreign112 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign113 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign114 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign115 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign116 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
+[foreign117 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
+[foreign118 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
+[foreign119 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
+[foreign120 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

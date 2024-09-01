@@ -664,6 +664,16 @@ export class Utils {
             });
         }
     }
+
+    private static pathIndex: number = 0;
+    public static getPathIndex(length: number): number {
+        if (this.pathIndex <= length - 1) return this.pathIndex++;
+        if (this.pathIndex >= length) {
+            this.pathIndex = 0
+            return this.pathIndex;
+        }
+        return this.getRandomInteger(0, length - 1);
+    }
 }
 
 /**贝塞尔曲线 */

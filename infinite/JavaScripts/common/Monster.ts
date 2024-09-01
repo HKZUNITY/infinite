@@ -1,6 +1,7 @@
 ﻿import { GameConfig } from "../config/GameConfig";
 import PlayerModuleS from "../module/PlayerModule/PlayerModuleS";
 import { PrefabEvent } from "../Prefabs/PrefabEvent";
+import { Utils } from "../Tools/utils";
 import EnemyLifebar_Generate from "../ui-generate/common/EnemyLifebar_generate";
 
 export enum MonsterState {
@@ -434,7 +435,7 @@ export default class Monster extends Script {
     }
 
     private getRandomTargetPoint_S(): mw.Vector {
-        let targetVector = this.pathVectors[this.randomInt(0, this.pathVectors.length - 1)];
+        let targetVector = this.pathVectors[Utils.getPathIndex(this.pathVectors.length)];
         let targetPos = Navigation.getRandomReachablePointInRadius(targetVector, 500);
         return (!targetPos) ? targetVector : targetPos;
     }

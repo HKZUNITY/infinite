@@ -120,6 +120,9 @@ export default class GuidePanel extends GuideUI_Generate {
 				this.guide16();
 				break;
 			case 17:
+				this.guide17();
+				break;
+			case 18:
 				this.guide_1();
 				break;
 			// 可以继续增加无数步
@@ -229,6 +232,12 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 
 	private guide16(): void {
+		mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size,
+			new mw.Vector2(550, 350), "可快速增加钻石锻造魂环。", 1, true)
+	}
+
+	private guide17(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
 			this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", 0, true)
 	}

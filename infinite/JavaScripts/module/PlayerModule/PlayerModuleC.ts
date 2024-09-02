@@ -40,8 +40,10 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     }
 
     protected onEnterScene(sceneType: number): void {
-        this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
-        this.getHudModuleC.updateDiamond(this.data.diamond);
+        this.coin = this.data.coin;
+        this.diamond = this.data.diamond;
+        this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.coin, true);
+        this.getHudModuleC.updateDiamond(this.diamond);
     }
 
     public net_onPlayerAtkSelf(damage: number, hitPoint: mw.Vector): void {
@@ -80,7 +82,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     }
 
     public getCoin(): number {
-        return this.data.coin;
+        return this.coin;
     }
 
     public get getLv(): number {
@@ -99,18 +101,22 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     //     this.server.net_saveKill(value);
     // }
 
+    private coin: number = 0;
     public saveCoin(value: number): void {
-        this.getHudModuleC.updateCoin(this.data.coin + value);
+        this.coin += value;
+        this.getHudModuleC.updateCoin(this.coin);
         this.server.net_saveCoin(value);
     }
 
+    private diamond: number = 0;
     public saveDiamond(value: number): void {
-        this.getHudModuleC.updateDiamond(this.data.diamond + value);
+        this.diamond += value;
+        this.getHudModuleC.updateDiamond(this.diamond);
         this.server.net_saveDiamond(value);
     }
 
     public get getDiamond(): number {
-        return this.data.diamond;
+        return this.diamond;
     }
 
     /**

@@ -5762,6 +5762,17 @@ class PlayerModuleC extends ModuleC {
         super(...arguments);
         this.hudModuleC = null;
         this.taskModuleC = null;
+        // public saveLevel(value: number): void {
+        //     this.server.net_saveLv(value);
+        // }
+        // public saveHeight(value: number): void {
+        //     this.server.net_saveHeight(value);
+        // }
+        // public saveKill(value: number): void {
+        //     this.server.net_saveKill(value);
+        // }
+        this.coin = 0;
+        this.diamond = 0;
     }
     get getHudModuleC() {
         if (!this.hudModuleC) {
@@ -5788,8 +5799,10 @@ class PlayerModuleC extends ModuleC {
         // });
     }
     onEnterScene(sceneType) {
-        this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.data.coin, true);
-        this.getHudModuleC.updateDiamond(this.data.diamond);
+        this.coin = this.data.coin;
+        this.diamond = this.data.diamond;
+        this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.coin, true);
+        this.getHudModuleC.updateDiamond(this.diamond);
     }
     net_onPlayerAtkSelf(damage, hitPoint) {
         let fontColor = Utils.randomColor();
@@ -5823,30 +5836,23 @@ class PlayerModuleC extends ModuleC {
         this.getHudModuleC.updateHp(curHp);
     }
     getCoin() {
-        return this.data.coin;
+        return this.coin;
     }
     get getLv() {
         return this.data.playerLv;
     }
-    // public saveLevel(value: number): void {
-    //     this.server.net_saveLv(value);
-    // }
-    // public saveHeight(value: number): void {
-    //     this.server.net_saveHeight(value);
-    // }
-    // public saveKill(value: number): void {
-    //     this.server.net_saveKill(value);
-    // }
     saveCoin(value) {
-        this.getHudModuleC.updateCoin(this.data.coin + value);
+        this.coin += value;
+        this.getHudModuleC.updateCoin(this.coin);
         this.server.net_saveCoin(value);
     }
     saveDiamond(value) {
-        this.getHudModuleC.updateDiamond(this.data.diamond + value);
+        this.diamond += value;
+        this.getHudModuleC.updateDiamond(this.diamond);
         this.server.net_saveDiamond(value);
     }
     get getDiamond() {
-        return this.data.diamond;
+        return this.diamond;
     }
     /**
      * 更新金币

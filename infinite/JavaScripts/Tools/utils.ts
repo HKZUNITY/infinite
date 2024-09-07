@@ -511,7 +511,7 @@ export class Utils {
             case 15:
                 return `${lv}级 神王`;
             default:
-                if (lv >= 150) return `${lv}级 神王`;
+                if (lv >= 150) return `${lv}级 万古仙帝`;
         }
     }
 

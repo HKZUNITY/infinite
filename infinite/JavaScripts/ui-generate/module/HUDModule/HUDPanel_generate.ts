@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.07-15.43.08
+ * TIME: 2024.09.07-16.39.05
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -162,6 +162,13 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mSignInButton_Internal
 	}
+	private mSignInImage_Internal: mw.Image
+	public get mSignInImage(): mw.Image {
+		if(!this.mSignInImage_Internal&&this.uiWidgetBase) {
+			this.mSignInImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SignInCanvas/mSignInImage') as mw.Image
+		}
+		return this.mSignInImage_Internal
+	}
 	private mAdsButton_Internal: mw.Button
 	public get mAdsButton(): mw.Button {
 		if(!this.mAdsButton_Internal&&this.uiWidgetBase) {
@@ -175,6 +182,13 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ArkCanvas/mArkButton') as mw.Button
 		}
 		return this.mArkButton_Internal
+	}
+	private mArkImage_Internal: mw.Image
+	public get mArkImage(): mw.Image {
+		if(!this.mArkImage_Internal&&this.uiWidgetBase) {
+			this.mArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ArkCanvas/mArkImage') as mw.Image
+		}
+		return this.mArkImage_Internal
 	}
 	private mGetButton_Internal: mw.Button
 	public get mGetButton(): mw.Button {

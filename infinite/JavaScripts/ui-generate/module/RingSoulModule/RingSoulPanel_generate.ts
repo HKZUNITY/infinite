@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.09.07-15.43.09
+ * TIME: 2024.09.07-16.39.05
  */
  
 @UIBind('UI/module/RingSoulModule/RingSoulPanel.ui')

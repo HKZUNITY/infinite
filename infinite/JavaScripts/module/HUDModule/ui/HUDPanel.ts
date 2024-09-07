@@ -108,6 +108,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.initRedPointTween();
 		this.initTaskTween();
 		this.initRedPointTween_RingSou();
+		this.initRedPointTween_SignIn();
+		this.initRedPointTween_Ark();
 		this.initKillTipItems();
 		this.initDeadCountDown();
 		this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
@@ -624,6 +626,76 @@ export default class HUDPanel extends HUDPanel_Generate {
 			});
 
 		onOffRingSoulTween1.start();
+	}
+	//#endregion
+
+	//#region SignIn
+	private redPointTween1_SignIn: mw.Tween<any> = null;
+	private redPointTween2_SignIn: mw.Tween<any> = null;
+
+	private initRedPointTween_SignIn(): void {
+		this.redPointTween1_SignIn = new mw.Tween({ value: 0.8 })
+			.to({ value: 1.2 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mSignInImage.renderScale = mw.Vector2.one.multiply(0.8);
+			})
+			.onUpdate((v) => {
+				this.mSignInImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween2_SignIn.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween2_SignIn = new mw.Tween({ value: 1.2 })
+			.to({ value: 0.8 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mSignInImage.renderScale = mw.Vector2.one.multiply(1.2);
+			})
+			.onUpdate((v) => {
+				this.mSignInImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween1_SignIn.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween1_SignIn.start();
+	}
+	//#endregion
+
+	//#region Ark
+	private redPointTween1_Ark: mw.Tween<any> = null;
+	private redPointTween2_Ark: mw.Tween<any> = null;
+
+	private initRedPointTween_Ark(): void {
+		this.redPointTween1_Ark = new mw.Tween({ value: 0.8 })
+			.to({ value: 1.2 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mArkImage.renderScale = mw.Vector2.one.multiply(0.8);
+			})
+			.onUpdate((v) => {
+				this.mArkImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween2_Ark.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween2_Ark = new mw.Tween({ value: 1.2 })
+			.to({ value: 0.8 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mArkImage.renderScale = mw.Vector2.one.multiply(1.2);
+			})
+			.onUpdate((v) => {
+				this.mArkImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween1_Ark.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween1_Ark.start();
 	}
 	//#endregion
 	//#endregion

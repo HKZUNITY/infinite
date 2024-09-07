@@ -1,5 +1,6 @@
 import { update } from "./common/notice/Tween";
 import GlobalData from "./const/GlobalData";
+import { ArkData, ArkModuleC, ArkModuleS } from "./module/ArkModule/ArkModule";
 import { BagData, BagModuleC, BagModuleS } from "./module/BagModule/BagModule";
 import { GuideData, GuideModuleC, GuideModuleS } from "./module/GuideModule/GuideModule";
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
@@ -13,6 +14,7 @@ import PlayerModuleS from "./module/PlayerModule/PlayerModuleS";
 import { WorldRankModuleC } from "./module/RankModule/WorldRankModuleC";
 import { WorldRankModuleS } from "./module/RankModule/WorldRankModuleS";
 import { RingSoulData, RingSoulModuleC, RingSoulModuleS } from "./module/RingSoulModule/RingSoulModule";
+import { SignInData, SignInModuleC, SignInModuleS } from "./module/SignInModule/SignInModule";
 import { TaskData } from "./module/TaskModule/TaskData";
 import TaskModuleC from "./module/TaskModule/TaskModuleC";
 import TaskModuleS from "./module/TaskModule/TaskModuleS";
@@ -78,6 +80,8 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(WorldRankModuleS, WorldRankModuleC, null);
         ModuleService.registerModule(OnlineRewardModuleS, OnlineRewardModuleC, OnlineRewardData);
         ModuleService.registerModule(RingSoulModuleS, RingSoulModuleC, RingSoulData);
+        ModuleService.registerModule(SignInModuleS, SignInModuleC, SignInData);
+        ModuleService.registerModule(ArkModuleS, ArkModuleC, ArkData);
     }
 
     /**------------------------------------------- 客户端 ------------------------------------------------ */

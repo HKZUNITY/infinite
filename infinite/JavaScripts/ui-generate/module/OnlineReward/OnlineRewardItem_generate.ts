@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.09.01-12.20.48
+ * TIME: 2024.09.07-15.43.08
  */
  
 @UIBind('UI/module/OnlineReward/OnlineRewardItem.ui')

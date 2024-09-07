@@ -2,6 +2,7 @@ import { Utils } from "../../Tools/utils";
 import GlobalData from "../../const/GlobalData";
 import OnlineRewardData from "../OnlineRewardModule/OnlineRewardData";
 import { OnlineRewardModuleS } from "../OnlineRewardModule/OnlineRewardModuleS";
+import { SignInModuleS } from "../SignInModule/SignInModule";
 import { TaskData, TaskItemType } from "./TaskData";
 import TaskModuleC from "./TaskModuleC";
 
@@ -13,6 +14,13 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
         }
         return this.onlineRewardsModuleS;
     }
+    private signInModuleS: SignInModuleS = null;
+    private get getSignInModuleS(): SignInModuleS {
+        if (!this.signInModuleS) {
+            this.signInModuleS = ModuleService.getModule(SignInModuleS);
+        }
+        return this.signInModuleS;
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
@@ -23,6 +31,7 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
         this.checkResetTask_onEnterGame(player, 0);
         this.getClient(player).net_getServerTaskData(new Date().getTime());
         this.getOnlineRewardsModuleS.getServerOnlineRewardData(player);
+        this.getSignInModuleS.syncInitSignIn(player);
     }
 
     protected onPlayerLeft(player: mw.Player): void {
@@ -71,6 +80,7 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
     public resetAllPlayersWeeklyTask(): void {
         this.playerTaskMap.forEach((player: mw.Player) => {
             DataCenterS.getData(player, TaskData).resetWeeklyTask();
+            this.getSignInModuleS.syncResetSignInData(player);
         });
         this.getAllClient().net_resetWeeklyTask();
     }
@@ -171,6 +181,7 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
         if (seconds >= 86400 * 7) {
             //超过一周
             DataCenterS.getData(player, TaskData).resetWeeklyTask();
+            this.getSignInModuleS.resetSignInData(player);
         } else {
             //不超过一周
             //判断两个时间戳是否在同一周
@@ -181,16 +192,19 @@ export default class TaskModuleS extends ModuleS<TaskModuleC, TaskData> {
                 if (latWhatDay == "1" && lastSecondss < weeklyRefreshTime * 3600) {
                     if ((currentWhatDay == "1" && currentSecondss >= weeklyRefreshTime * 3600) || currentWhatDay != "1") {
                         DataCenterS.getData(player, TaskData).resetWeeklyTask();
+                        this.getSignInModuleS.resetSignInData(player);
                     }
                 }
             } else {
                 //不同一周
                 if (latWhatDay == "1" && lastSecondss >= 0 && lastSecondss < weeklyRefreshTime * 3600 && currentWhatDay == "1" && currentSecondss >= 0 && currentSecondss < weeklyRefreshTime * 3600) {
                     DataCenterS.getData(player, TaskData).resetWeeklyTask();
+                    this.getSignInModuleS.resetSignInData(player);
                 }
                 if (((latWhatDay == "1" && lastSecondss >= weeklyRefreshTime * 3600 && lastSecondss < 24 * 3600) || (latWhatDay != "1"))
                     && ((currentWhatDay == "1" && currentSecondss >= weeklyRefreshTime * 3600 && currentSecondss < 24 * 3600) || (currentWhatDay != "1"))) {
                     DataCenterS.getData(player, TaskData).resetWeeklyTask();
+                    this.getSignInModuleS.resetSignInData(player);
                 }
             }
         }

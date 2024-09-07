@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.01-12.20.48
+ * TIME: 2024.09.07-15.43.08
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -85,13 +85,6 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mOnOffRingSoulTextBlock_Internal
 	}
-	private mShopButton_Internal: mw.Button
-	public get mShopButton(): mw.Button {
-		if(!this.mShopButton_Internal&&this.uiWidgetBase) {
-			this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ShopCanvas/mShopButton') as mw.Button
-		}
-		return this.mShopButton_Internal
-	}
 	private mPlayerButton_Internal: mw.Button
 	public get mPlayerButton(): mw.Button {
 		if(!this.mPlayerButton_Internal&&this.uiWidgetBase) {
@@ -105,6 +98,27 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mMusicButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/MusicCanvas/mMusicButton') as mw.Button
 		}
 		return this.mMusicButton_Internal
+	}
+	private mHomeButton_Internal: mw.Button
+	public get mHomeButton(): mw.Button {
+		if(!this.mHomeButton_Internal&&this.uiWidgetBase) {
+			this.mHomeButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/HomeCanvas/mHomeButton') as mw.Button
+		}
+		return this.mHomeButton_Internal
+	}
+	private mShopButton_Internal: mw.Button
+	public get mShopButton(): mw.Button {
+		if(!this.mShopButton_Internal&&this.uiWidgetBase) {
+			this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ShopCanvas/mShopButton') as mw.Button
+		}
+		return this.mShopButton_Internal
+	}
+	private mRankButton_Internal: mw.Button
+	public get mRankButton(): mw.Button {
+		if(!this.mRankButton_Internal&&this.uiWidgetBase) {
+			this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RankCanvas/mRankButton') as mw.Button
+		}
+		return this.mRankButton_Internal
 	}
 	private mOnlineRewardButton_Internal: mw.Button
 	public get mOnlineRewardButton(): mw.Button {
@@ -141,12 +155,12 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mTaskPointImage_Internal
 	}
-	private mRankButton_Internal: mw.Button
-	public get mRankButton(): mw.Button {
-		if(!this.mRankButton_Internal&&this.uiWidgetBase) {
-			this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RankCanvas/mRankButton') as mw.Button
+	private mSignInButton_Internal: mw.Button
+	public get mSignInButton(): mw.Button {
+		if(!this.mSignInButton_Internal&&this.uiWidgetBase) {
+			this.mSignInButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SignInCanvas/mSignInButton') as mw.Button
 		}
-		return this.mRankButton_Internal
+		return this.mSignInButton_Internal
 	}
 	private mAdsButton_Internal: mw.Button
 	public get mAdsButton(): mw.Button {
@@ -155,12 +169,19 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mAdsButton_Internal
 	}
-	private mHomeButton_Internal: mw.Button
-	public get mHomeButton(): mw.Button {
-		if(!this.mHomeButton_Internal&&this.uiWidgetBase) {
-			this.mHomeButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/HomeCanvas/mHomeButton') as mw.Button
+	private mArkButton_Internal: mw.Button
+	public get mArkButton(): mw.Button {
+		if(!this.mArkButton_Internal&&this.uiWidgetBase) {
+			this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ArkCanvas/mArkButton') as mw.Button
 		}
-		return this.mHomeButton_Internal
+		return this.mArkButton_Internal
+	}
+	private mGetButton_Internal: mw.Button
+	public get mGetButton(): mw.Button {
+		if(!this.mGetButton_Internal&&this.uiWidgetBase) {
+			this.mGetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/GetCanvas/mGetButton') as mw.Button
+		}
+		return this.mGetButton_Internal
 	}
 	private mRingSoulButton_Internal: mw.Button
 	public get mRingSoulButton(): mw.Button {
@@ -451,12 +472,6 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mOnOffRingSoulButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
-		this.mShopButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mShopButton");
-		});
-		this.mShopButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-		
-	
 		this.mPlayerButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mPlayerButton");
 		});
@@ -467,6 +482,24 @@ export default class HUDPanel_Generate extends UIScript {
 			Event.dispatchToLocal("PlayButtonClick", "mMusicButton");
 		});
 		this.mMusicButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mHomeButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mHomeButton");
+		});
+		this.mHomeButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mShopButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mShopButton");
+		});
+		this.mShopButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mRankButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mRankButton");
+		});
+		this.mRankButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mOnlineRewardButton.onClicked.add(()=>{
@@ -481,10 +514,10 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mTaskButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
-		this.mRankButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mRankButton");
+		this.mSignInButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mSignInButton");
 		});
-		this.mRankButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		this.mSignInButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mAdsButton.onClicked.add(()=>{
@@ -493,10 +526,16 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mAdsButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
-		this.mHomeButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mHomeButton");
+		this.mArkButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mArkButton");
 		});
-		this.mHomeButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		this.mArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mGetButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mGetButton");
+		});
+		this.mGetButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mRingSoulButton.onClicked.add(()=>{
@@ -598,25 +637,34 @@ export default class HUDPanel_Generate extends UIScript {
 	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ShopCanvas/ShopTextBlock") as any);
-		
-	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/PlayerCanvas/ShopTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/MusicCanvas/MusicTextBlock") as any);
 		
 	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/TaskCanvas/TaskTextBlock") as any);
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ShopCanvas/ShopTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RankCanvas/RankTextBlock") as any);
 		
 	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/TaskCanvas/TaskTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/SignInCanvas/SignInTextBlock") as any);
+		
+	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/AdsCanvas/AdsTextBlock") as any);
 		
 	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock") as any);
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ArkCanvas/ArkTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/GetCanvas/GetTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RingSoulCanvas/RingSoulTextBlock") as any);

@@ -12,7 +12,18 @@ import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 
 const ringSoulNames: string[] = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
 const figureStrs: string[] = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-const costDiamonds: number[] = [10, 20, 30, 50, 100, 1000];
+const costDiamonds: number[][] = [
+    [8, 28, 38, 58, 108],
+    [18, 38, 58, 108, 198],
+    [28, 48, 88, 158, 298],
+    [38, 58, 108, 198, 398],
+    [48, 88, 158, 298, 498],
+    [58, 108, 198, 398, 598],
+    [88, 158, 298, 498, 698],
+    [108, 198, 398, 598, 798],
+    [158, 298, 498, 698, 898],
+    [198, 398, 598, 798, 998, 1998],
+];
 const upSound: string = "169179";
 const ringSoulIconColors: string[] = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#FFD700FF"];
 const ringSoulPrefabIds: string[] = [
@@ -499,9 +510,9 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
         }
 
         let diamond = this.getPlayerModuleC.getDiamond;
-        console.error(`costDiamonds[this.ringSoulIndex ]:${costDiamonds[this.ringSoulIndex]}`);
-        if (diamond >= costDiamonds[this.ringSoulIndex]) {
-            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
+        console.error(`costDiamonds[this.ringSoulIndex ]:${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex]}`);
+        if (diamond >= costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex]) {
+            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex]);
             this.ringSoulIndex++;
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
@@ -602,9 +613,9 @@ export class RingSoulItem extends RingSoulItem_Generate {
         }
 
         let diamond = this.getPlayerModuleC.getDiamond;
-        console.error(`costDiamonds[this.ringSoulIndex]:${costDiamonds[this.ringSoulIndex]}`);
-        if (diamond >= costDiamonds[this.ringSoulIndex]) {
-            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulIndex]);
+        console.error(`costDiamonds[this.ringSoulIndex]:${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex]}`);
+        if (diamond >= costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex]) {
+            this.getPlayerModuleC.saveDiamond(-costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex]);
             this.ringSoulIndex++;
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
@@ -675,7 +686,7 @@ export class RingSoulItemChild extends RingSoulItemChild_Generate {
             this.mCostTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mUpTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `级可解锁` : `${this.ringSoulPage * 10}级可解锁`;
-            this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulIndex - 1]}</size></color>钻石`;
+            this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex - 1]}</size></color><size=15>钻石</size>`;
         }
     }
 

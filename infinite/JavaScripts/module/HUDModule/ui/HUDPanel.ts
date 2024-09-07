@@ -90,6 +90,15 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mOnOffRingSoulButton.onClicked.add(() => {
 			this.getHudModuleC.onOnOffRingSoulAction.call();
 		});
+		this.mArkButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenArkAction.call();
+		});
+		this.mSignInButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenSignInAction.call();
+		});
+		this.mGetButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenGetAction.call();
+		});
 	}
 
 	/**

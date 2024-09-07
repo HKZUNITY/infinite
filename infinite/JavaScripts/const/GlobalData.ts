@@ -66,4 +66,14 @@ export default class GlobalData {
     public static upgradeExpMultiple: number = 500;
     public static monsterHurt: number = 200;
     public static attackMp: number = 1;
+
+    public static pathStrMap: Map<number, string> = new Map<number, string>(
+        [
+            [1, "1C38507C"],
+            [2, "0120DDB3"],
+            [3, "08B26B13"],
+            [4, "33AD2F92"],
+            [5, "098050A0"]
+        ]
+    );
 }

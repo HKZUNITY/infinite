@@ -1451,6 +1451,13 @@ GlobalData.rarityStr4 = "传说";
 GlobalData.upgradeExpMultiple = 500;
 GlobalData.monsterHurt = 200;
 GlobalData.attackMp = 1;
+GlobalData.pathStrMap = new Map([
+    [1, "1C38507C"],
+    [2, "0120DDB3"],
+    [3, "08B26B13"],
+    [4, "33AD2F92"],
+    [5, "098050A0"]
+]);
 
 var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -13727,6 +13734,7 @@ class Monster extends Script {
         this.monsterId = 0;
         this.hp = 0;
         this.maxHp = 0;
+        this.monsterType = 1;
         // @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
         this.moveSpeed = 450;
         // @mw.Property({ displayName: "pathVectors", group: "Info", tooltip: "pathVectors" })
@@ -13767,6 +13775,9 @@ class Monster extends Script {
     }
     get getMonsterHeight() {
         return this.getMonster.collisionExtent.z;
+    }
+    get getMonsterPostion() {
+        return this.getMonster.worldTransform.position;
     }
     get getMonsterWidth() {
         if (this.monsterWidth == 0) {
@@ -13814,9 +13825,9 @@ class Monster extends Script {
         this.moveSpeed = monsterElement?.MoveSpeed;
     }
     async initPaths(pathStr = null) {
-        if (!pathStr || pathStr.length == 0)
-            pathStr = GameConfig.MonsterInfo.getElement(this.monsterId)?.PathStr;
-        let pathParent = await mw.GameObject.asyncFindGameObjectById(pathStr[this.randomInt(0, pathStr.length - 1)]);
+        // if (!pathStr || pathStr.length == 0) pathStr = GameConfig.MonsterInfo.getElement(this.monsterId)?.PathStr;
+        // let pathParent = await mw.GameObject.asyncFindGameObjectById(pathStr[this.randomInt(0, pathStr.length - 1)]);
+        let pathParent = await mw.GameObject.asyncFindGameObjectById(GlobalData.pathStrMap.get(this.monsterType));
         this.pathVectors.length = 0;
         pathParent?.getChildren().forEach((child) => {
             this.pathVectors.push(child.worldTransform.position);
@@ -13946,19 +13957,34 @@ class Monster extends Script {
         this.chasePlayerMap.clear();
     }
     rebirth_S() {
-        let rebirthEffect = EffectService.playAtPosition("146786", this.getMonster.worldTransform.position, { loopCount: 0, scale: mw.Vector.one.multiply(2) });
+        let rebirthEffectPos = new mw.Vector(this.getMonsterPostion.x, this.getMonsterPostion.y, this.getMonsterPostion.z - this.getMonsterHeight / 2);
+        let rebirthEffect = EffectService.playAtPosition("142948", rebirthEffectPos, { loopCount: 0 });
         // this.initPaths();
         TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
-            if (this.monsterId == 5 || this.monsterId == 6) {
-                if (this.maxHp > 99999)
-                    this.maxHp = 99999;
-            }
-            else {
-                if (this.maxHp > 999999999)
-                    this.maxHp = 999999999;
+            switch (this.monsterType) {
+                case 1:
+                    if (this.maxHp > 99999)
+                        this.maxHp = 99999;
+                    break;
+                case 2:
+                    if (this.maxHp > 999999)
+                        this.maxHp = 999999;
+                    break;
+                case 3:
+                    if (this.maxHp > 9999999)
+                        this.maxHp = 9999999;
+                    break;
+                case 4:
+                    if (this.maxHp > 99999999)
+                        this.maxHp = 99999999;
+                    break;
+                case 5:
+                    if (this.maxHp > 999999999)
+                        this.maxHp = 999999999;
+                    break;
             }
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled)
@@ -14204,6 +14230,9 @@ __decorate([
 __decorate([
     mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp", replicated: true, onChanged: "onHpChanged" })
 ], Monster.prototype, "maxHp", void 0);
+__decorate([
+    mw.Property({ displayName: "monsterType", group: "Info", tooltip: "monsterType" })
+], Monster.prototype, "monsterType", void 0);
 
 var foreign7 = /*#__PURE__*/Object.freeze({
     __proto__: null,

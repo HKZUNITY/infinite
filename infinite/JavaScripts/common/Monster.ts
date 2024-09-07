@@ -52,6 +52,8 @@ export default class Monster extends Script {
     private hp: number = 0;
     @mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp", replicated: true, onChanged: "onHpChanged" })
     private maxHp: number = 0;
+    @mw.Property({ displayName: "monsterType", group: "Info", tooltip: "monsterType" })
+    private monsterType: number = 1;
     // @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
     private moveSpeed: number = 450;
     // @mw.Property({ displayName: "pathVectors", group: "Info", tooltip: "pathVectors" })
@@ -85,6 +87,10 @@ export default class Monster extends Script {
 
     private get getMonsterHeight(): number {
         return this.getMonster.collisionExtent.z;
+    }
+
+    private get getMonsterPostion(): mw.Vector {
+        return this.getMonster.worldTransform.position;
     }
 
     private monsterWidth: number = 0;
@@ -136,8 +142,9 @@ export default class Monster extends Script {
     }
 
     private async initPaths(pathStr: string[] = null): Promise<void> {
-        if (!pathStr || pathStr.length == 0) pathStr = GameConfig.MonsterInfo.getElement(this.monsterId)?.PathStr;
-        let pathParent = await mw.GameObject.asyncFindGameObjectById(pathStr[this.randomInt(0, pathStr.length - 1)]);
+        // if (!pathStr || pathStr.length == 0) pathStr = GameConfig.MonsterInfo.getElement(this.monsterId)?.PathStr;
+        // let pathParent = await mw.GameObject.asyncFindGameObjectById(pathStr[this.randomInt(0, pathStr.length - 1)]);
+        let pathParent = await mw.GameObject.asyncFindGameObjectById(GlobalData.pathStrMap.get(this.monsterType));
         this.pathVectors.length = 0;
         pathParent?.getChildren().forEach((child: mw.GameObject) => {
             this.pathVectors.push(child.worldTransform.position);
@@ -289,20 +296,36 @@ export default class Monster extends Script {
     }
 
     private rebirth_S(): void {
+        let rebirthEffectPos = new mw.Vector(this.getMonsterPostion.x, this.getMonsterPostion.y, this.getMonsterPostion.z - this.getMonsterHeight / 2);
         let rebirthEffect = EffectService.playAtPosition(
-            "146786", this.getMonster.worldTransform.position,
-            { loopCount: 0, scale: mw.Vector.one.multiply(2) }
+            "142948", rebirthEffectPos,
+            { loopCount: 0 }
         );
         // this.initPaths();
         TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
-            if (this.monsterId == 5 || this.monsterId == 6) {
-                if (this.maxHp > 99999) this.maxHp = 99999;
-            } else {
-                if (this.maxHp > 999999999) this.maxHp = 999999999;
+            switch (this.monsterType) {
+                case 1:
+                    if (this.maxHp > 99999) this.maxHp = 99999;
+                    break;
+                case 2:
+                    if (this.maxHp > 999999) this.maxHp = 999999;
+                    break;
+                case 3:
+                    if (this.maxHp > 9999999) this.maxHp = 9999999;
+                    break;
+                case 4:
+                    if (this.maxHp > 99999999) this.maxHp = 99999999;
+                    break;
+                case 5:
+                    if (this.maxHp > 999999999) this.maxHp = 999999999;
+                    break;
+                default:
+                    break;
             }
+
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState.Activate;

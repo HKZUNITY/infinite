@@ -15740,7 +15740,7 @@ rewardDiamond.set("6NLoNBXFml10001IF", { icon: "103215", rewardCount: 100, price
 rewardDiamond.set("7yf8F2pRWKp0001IG", { icon: "103217", rewardCount: 600, price: 598, itemPos: new mw.Vector2(178, 320) });
 rewardDiamond.set("5CKKkBYJLYY0001IH", { icon: "103218", rewardCount: 1000, price: 998, itemPos: new mw.Vector2(422, 320) });
 rewardDiamond.set("8PjQmjn1Git0001II", { icon: "103221", rewardCount: 1088, price: 600, itemPos: new mw.Vector2(750, 0) });
-rewardDiamond.set("5A48hyUteGr0001J1", { icon: "103218", rewardCount: 13888, price: 8888, itemPos: new mw.Vector2(750, 320) });
+rewardDiamond.set("5A48hyUteGr0001J1", { icon: "103218", rewardCount: 10880, price: 6800, itemPos: new mw.Vector2(750, 320) });
 const firstRewardKey = "8PjQmjn1Git0001II";
 const secondRewardKey = "5A48hyUteGr0001J1";
 const arkIcon = "312541";

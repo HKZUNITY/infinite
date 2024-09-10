@@ -11,8 +11,10 @@ const rewardDiamond: Map<string, { icon: string, rewardCount: number, price: num
 rewardDiamond.set("6NLoNBXFml10001IF", { icon: "103215", rewardCount: 100, price: 98, itemPos: new mw.Vector2(300, 0) });
 rewardDiamond.set("7yf8F2pRWKp0001IG", { icon: "103217", rewardCount: 600, price: 598, itemPos: new mw.Vector2(178, 320) });
 rewardDiamond.set("5CKKkBYJLYY0001IH", { icon: "103218", rewardCount: 1000, price: 998, itemPos: new mw.Vector2(422, 320) });
-rewardDiamond.set("8PjQmjn1Git0001II", { icon: "103221", rewardCount: 1088, price: 600, itemPos: new mw.Vector2(680, 70) });
+rewardDiamond.set("8PjQmjn1Git0001II", { icon: "103221", rewardCount: 1088, price: 600, itemPos: new mw.Vector2(750, 0) });
+rewardDiamond.set("5A48hyUteGr0001J1", { icon: "103218", rewardCount: 13888, price: 8888, itemPos: new mw.Vector2(750, 320) });
 const firstRewardKey: string = "8PjQmjn1Git0001II";
+const secondRewardKey: string = "5A48hyUteGr0001J1";
 const arkIcon: string = "312541";
 
 export class ArkItem extends ArkItem_Generate {
@@ -34,7 +36,7 @@ export class ArkItem extends ArkItem_Generate {
 
     private addClickButton(): void {
         this.getArkModuleC.placeOrder(this.commodityId, () => {
-            if (this.commodityId == firstRewardKey) {
+            if (this.commodityId == firstRewardKey || this.commodityId == secondRewardKey) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
                 this.mHasTextBlock.text = `今日已售空`;
             }
@@ -48,9 +50,9 @@ export class ArkItem extends ArkItem_Generate {
     }
 
     private updateUI(): void {
-        if (this.commodityId == firstRewardKey) {
+        if (this.commodityId == firstRewardKey || this.commodityId == secondRewardKey) {
             this.mDayTextBlock.text = `每天限购一次`;
-            if (this.getArkModuleC.isFirst) {
+            if (this.getArkModuleC.isFirst || this.getArkModuleC.isSecond) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
             } else {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
@@ -106,10 +108,10 @@ export class ArkPanel extends ArkPanel_Generate {
             let arkItem = mw.UIService.create(ArkItem);
             arkItem.initArkItem(key);
             this.mCanvas.addChild(arkItem.uiObject);
-            if (key == firstRewardKey) {
-                arkItem.uiObject.size = arkItem.uiObject.size.multiply(1.6);
-                arkItem.uiObject.renderScale = mw.Vector2.one.multiply(1.6);
-            }
+            // if (key == firstRewardKey) {
+            //     arkItem.uiObject.size = arkItem.uiObject.size.multiply(1.6);
+            //     arkItem.uiObject.renderScale = mw.Vector2.one.multiply(1.6);
+            // }
             arkItem.uiObject.position = value.itemPos;
             this.arkItems.push(arkItem);
         });
@@ -144,8 +146,16 @@ export class ArkData extends Subdata {
     @Decorator.persistence()
     public lastDayStr: string = "";
 
-    public setLastDayStr(day: string): void {
+    @Decorator.persistence()
+    public secondDayStr: string = "";
+
+    public setFirstLastDayStr(day: string): void {
         this.lastDayStr = day;
+        this.save(true);
+    }
+
+    public setSecondLastDayStr(day: string): void {
+        this.secondDayStr = day;
         this.save(true);
     }
 }
@@ -197,7 +207,8 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
     }
 
     protected onEnterScene(sceneType: number): void {
-        this.lastDayStr = this.data.lastDayStr;
+        this.firstLastDayStr = this.data.lastDayStr;
+        this.secondLastDayStr = this.data.secondDayStr;
     }
 
     private addArkUpdate(amount: number): void {
@@ -211,15 +222,25 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
     }
 
+    private isCanContinueClick: boolean = true;
     public placeOrder(commodityId: string, buySuccessCallback: () => void): void {
-        if (commodityId == firstRewardKey && !this.isFirst) {
+        if ((commodityId == firstRewardKey && !this.isFirst) || (commodityId == secondRewardKey && !this.isSecond)) {
             Notice.showDownNotice(`今日已售空`);
             Notice.showDownNotice(`明日再来`);
             console.error(`今日已售空`);
             return;
         }
+        if (!this.isCanContinueClick) {
+            Notice.showDownNotice(`3秒冷却`);
+            return;
+        }
+        this.isCanContinueClick = false;
+        TimeUtil.delaySecond(3).then(() => {
+            this.isCanContinueClick = true;
+        });
         if (mw.SystemUtil.isPIE) {
-            if (commodityId == firstRewardKey) this.setLastDayStr();
+            if (commodityId == firstRewardKey) this.setFirstLastDayStr();
+            if (commodityId == secondRewardKey) this.setSecondLastDayStr();
             if (buySuccessCallback) buySuccessCallback();
             let rewardCount = rewardDiamond.get(commodityId).rewardCount;
             Notice.showDownNotice(`钻石+${rewardCount}`);
@@ -228,7 +249,8 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             mw.PurchaseService.placeOrder(commodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();//刷新代币数量
                 if (status != 200) return;
-                if (commodityId == firstRewardKey) this.setLastDayStr();
+                if (commodityId == firstRewardKey) this.setFirstLastDayStr();
+                if (commodityId == secondRewardKey) this.setSecondLastDayStr();
                 if (buySuccessCallback) buySuccessCallback();
             });
         }
@@ -243,13 +265,23 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
     }
 
     public get isFirst(): boolean {
-        return this.lastDayStr != Utils.getDay();
+        return this.firstLastDayStr != Utils.getDay();
     }
 
-    private lastDayStr: string = "";
-    public async setLastDayStr(): Promise<void> {
-        this.lastDayStr = Utils.getDay();
-        this.server.net_setLastDayStr(this.lastDayStr);
+    public get isSecond(): boolean {
+        return this.secondLastDayStr != Utils.getDay();
+    }
+
+    private firstLastDayStr: string = "";
+    public async setFirstLastDayStr(): Promise<void> {
+        this.firstLastDayStr = Utils.getDay();
+        this.server.net_setFirstLastDayStr(this.firstLastDayStr);
+    }
+
+    private secondLastDayStr: string = "";
+    public async setSecondLastDayStr(): Promise<void> {
+        this.secondLastDayStr = Utils.getDay();
+        this.server.net_setSecondLastDayStr(this.secondLastDayStr);
     }
 
     private addOpenGiftBagPanel(): void {
@@ -312,8 +344,12 @@ export class ArkModuleS extends ModuleS<ArkModuleC, ArkData> {
         confirmOrder(true);//调用这个方法表示确认收货成功
     }
 
-    public net_setLastDayStr(day: string): void {
-        this.currentData.setLastDayStr(day);
+    public net_setFirstLastDayStr(day: string): void {
+        this.currentData.setFirstLastDayStr(day);
+    }
+
+    public net_setSecondLastDayStr(day: string): void {
+        this.currentData.setSecondLastDayStr(day);
     }
 
     public net_getGiftBag(coodStr: string): void {

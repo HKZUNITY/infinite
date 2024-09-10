@@ -9,6 +9,7 @@ import AdTipsPanel from '../AdsModule/ui/AdTipsPanel';
 import { BagModuleC } from '../BagModule/BagModule';
 import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
+import { WorldConfigData } from '../RankModule/PlayerPropData';
 import { RingSoulPanel } from '../RingSoulModule/RingSoulModule';
 import TaskModuleC from "../TaskModule/TaskModuleC";
 import HUDModuleS from "./HUDModuleS";
@@ -88,7 +89,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onAdsAction: Action = new Action();
     public onInvincibleAction: Action1<boolean> = new Action1();
     public onOpenRingSoulAction: Action = new Action();
-    public onOnOffRingSoulAction: Action = new Action();
+    public onOnOffRingSoulAction: Action1<boolean> = new Action1<boolean>();
     public onOpenSignInAction: Action = new Action();
     public onOpenArkAction: Action = new Action();
     public onOpenGetAction: Action = new Action();
@@ -554,6 +555,11 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.getHudPanel.mMusicText.text = this.bgmMusics[this.currentBgmIndex - 1].Annotation;
     }
     //#endregion
+
+    public net_syncWorldConfigData(worldConfigDatas: WorldConfigData[]): void {
+        if (!worldConfigDatas || worldConfigDatas.length == 0) return;
+        Utils.setWorldConfigData(worldConfigDatas);
+    }
 }
 
 export class KillTipData {

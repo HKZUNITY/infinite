@@ -27,14 +27,14 @@ export class WorldRankItem {
 	 * @param lv 
 	 * @returns 
 	 */
-	public setData(isSelf: boolean, rank: number, name: string, lv: number): void {
+	public async setData(isSelf: boolean, rank: number, name: string, lv: number, userId: string): Promise<void> {
 		let color = (isSelf) ? new mw.LinearColor(1, 0, 1, 1) : mw.LinearColor.black;
 		this.mRankTextBlock.text = rank.toString();
 		this.mNameTextBlock.text = name;
 		if (lv == 0) {
 			this.mLvTextBlock.text = "暂无";
 		} else {
-			this.mLvTextBlock.text = Utils.getLvText(lv);
+			this.mLvTextBlock.text = await Utils.getLvText(lv, userId);
 		}
 		this.mRankTextBlock.outlineColor = color;
 		this.mNameTextBlock.outlineColor = color;
@@ -77,14 +77,14 @@ export class RankItem {
 	 * @param lv 
 	 * @returns 
 	 */
-	public setData(isSelf: boolean, rank: number, name: string, lv: number, height: number, kill: number): void {
+	public async setData(isSelf: boolean, rank: number, name: string, lv: number, height: number, kill: number, userId: string): Promise<void> {
 		let color = (isSelf) ? new mw.LinearColor(1, 0, 1, 1) : mw.LinearColor.black;
 		this.mRankTextBlock.text = rank.toString();
 		this.mNameTextBlock.text = name;
 		if (lv == 0) {
 			this.mLvTextBlock.text = "暂无";
 		} else {
-			this.mLvTextBlock.text = Utils.getLvText(lv);
+			this.mLvTextBlock.text = await Utils.getLvText(lv, userId);
 		}
 		if (height == 0) {
 			this.mHeightTextBlock.text = "暂无";
@@ -206,18 +206,18 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 	private refreshRoomRankPanel(playerDatas_CR: PlayerData_CSR[], curPlayerIndex: number): void {
 		if (playerDatas_CR.length >= this.roomItems.length) {
 			for (let i = 0; i < this.roomItems.length; ++i) {
-				this.roomItems[i].setData((i == curPlayerIndex), i + 1, playerDatas_CR[i].playerName, playerDatas_CR[i].playerLv, playerDatas_CR[i].playerHeight, playerDatas_CR[i].playerKill);
+				this.roomItems[i].setData((i == curPlayerIndex), i + 1, playerDatas_CR[i].playerName, playerDatas_CR[i].playerLv, playerDatas_CR[i].playerHeight, playerDatas_CR[i].playerKill, playerDatas_CR[i].userId);
 			}
 			for (let i = this.roomItems.length; i < playerDatas_CR.length; ++i) {
 				let roomItem = ObjectPoolServices.getPool(RankItem).spawn();
-				roomItem.setData((i == curPlayerIndex), i + 1, playerDatas_CR[i].playerName, playerDatas_CR[i].playerLv, playerDatas_CR[i].playerHeight, playerDatas_CR[i].playerKill);
+				roomItem.setData((i == curPlayerIndex), i + 1, playerDatas_CR[i].playerName, playerDatas_CR[i].playerLv, playerDatas_CR[i].playerHeight, playerDatas_CR[i].playerKill, playerDatas_CR[i].userId);
 				this.mRoomContent.addChild(roomItem.rankItem);
 				roomItem.rankItem.size = new mw.Vector2(1200, 100);
 				this.roomItems.push(roomItem);
 			}
 		} else {
 			for (let i = 0; i < playerDatas_CR.length; ++i) {
-				this.roomItems[i].setData((i == curPlayerIndex), i + 1, playerDatas_CR[i].playerName, playerDatas_CR[i].playerLv, playerDatas_CR[i].playerHeight, playerDatas_CR[i].playerKill);
+				this.roomItems[i].setData((i == curPlayerIndex), i + 1, playerDatas_CR[i].playerName, playerDatas_CR[i].playerLv, playerDatas_CR[i].playerHeight, playerDatas_CR[i].playerKill, playerDatas_CR[i].userId);
 			}
 			for (let i = playerDatas_CR.length; i < this.roomItems.length; ++i) {
 				this.roomItems[i].recycle();
@@ -231,18 +231,18 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 	private refreshWorldRankPanel(worldDatas_C: PlayerData_CSW[], curPlayerWorldIndex: number): void {
 		if (worldDatas_C.length >= this.worldItems.length) {
 			for (let i = 0; i < this.worldItems.length; ++i) {
-				this.worldItems[i].setData((i == curPlayerWorldIndex), i + 1, worldDatas_C[i].playerName, worldDatas_C[i].playerLv);
+				this.worldItems[i].setData((i == curPlayerWorldIndex), i + 1, worldDatas_C[i].playerName, worldDatas_C[i].playerLv, worldDatas_C[i].userId);
 			}
 			for (let i = this.worldItems.length; i < worldDatas_C.length; ++i) {
 				let worldItem = ObjectPoolServices.getPool(WorldRankItem).spawn();
-				worldItem.setData((i == curPlayerWorldIndex), i + 1, worldDatas_C[i].playerName, worldDatas_C[i].playerLv);
+				worldItem.setData((i == curPlayerWorldIndex), i + 1, worldDatas_C[i].playerName, worldDatas_C[i].playerLv, worldDatas_C[i].userId);
 				this.mWorldContent.addChild(worldItem.worldRankItem);
 				worldItem.worldRankItem.size = new mw.Vector2(1200, 100);
 				this.worldItems.push(worldItem);
 			}
 		} else {
 			for (let i = 0; i < worldDatas_C.length; i++) {
-				this.worldItems[i].setData((i == curPlayerWorldIndex), i + 1, worldDatas_C[i].playerName, worldDatas_C[i].playerLv);
+				this.worldItems[i].setData((i == curPlayerWorldIndex), i + 1, worldDatas_C[i].playerName, worldDatas_C[i].playerLv, worldDatas_C[i].userId);
 			}
 			for (let i = worldDatas_C.length; i < this.worldItems.length; i++) {
 				this.worldItems[i].recycle();

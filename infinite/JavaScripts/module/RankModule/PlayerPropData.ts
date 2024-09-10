@@ -25,3 +25,9 @@ export class PlayerData_CSW {
         this.playerLv = lv;
     }
 }
+
+export class WorldConfigData {
+    public userId: string = "";
+    public titleName: string = "";
+    public test: string = "";
+}

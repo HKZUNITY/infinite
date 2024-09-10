@@ -62,12 +62,12 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         }
     }
 
-    public net_updateLvExpAndCoin(isAddLv: boolean, coin: number = 0): void {
+    public async net_updateLvExpAndCoin(isAddLv: boolean, coin: number = 0): Promise<void> {
         let playerLv = this.data.playerLv;
         this.getHudModuleC.updateLvExpCoin(playerLv, this.data.exp, this.data.coin, isAddLv);
         if (coin > 0) Notice.showDownNotice(`获得${coin}金币`);
         if (isAddLv) {
-            Notice.showDownNotice("等级提升至 " + Utils.getLvText(playerLv) + " Lv." + playerLv);
+            Notice.showDownNotice("等级提升至 " + await Utils.getLvText(playerLv, this.localPlayer.userId) + " Lv." + playerLv);
             this.getTaskModuleC.upLv(playerLv);
         }
     }

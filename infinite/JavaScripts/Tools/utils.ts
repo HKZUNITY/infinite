@@ -1,3 +1,4 @@
+import { WorldConfigData } from "../module/RankModule/PlayerPropData";
 import Console from "./Console";
 
 export class Tween<T> extends mw.Tween<T> { }
@@ -474,7 +475,7 @@ export class Utils {
     //     return lvText;
     // }
 
-    public static getLvText(lv: number): string {
+    public static async getLvText(lv: number, userId: string): Promise<string> {
         let level = Math.floor(lv / 10);
         switch (level) {
             case 0:
@@ -510,8 +511,15 @@ export class Utils {
                 return `${lv}级 超神巅峰`;
             case 15:
                 return `${lv}级 神王`;
+            case 16:
+                return `${lv}级 万古仙帝`;
             default:
-                if (lv >= 150) return `${lv}级 万古仙帝`;
+                if (level >= 17) {
+                    let titleName: string = await this.getTitleNameByUserId(userId);
+                    console.error(`titleName:${titleName}`);
+                    if (titleName == "-1") titleName = "万古仙帝";
+                    return `${lv}级 ${titleName}`;
+                }
         }
     }
 
@@ -673,6 +681,25 @@ export class Utils {
             return this.pathIndex;
         }
         return this.getRandomInteger(0, length - 1);
+    }
+
+    private static worldConfigDataMap: Map<string, WorldConfigData> = new Map<string, WorldConfigData>();
+    public static async getTitleNameByUserId(userId: string): Promise<string> {
+        if (!this.worldConfigDataMap || this.worldConfigDataMap.size == 0) {
+            await TimeUtil.delaySecond(10);
+        }
+        if (this.worldConfigDataMap.has(userId)) {
+            if (this.worldConfigDataMap.get(userId).titleName != "-1") {
+                return this.worldConfigDataMap.get(userId).titleName;
+            }
+        }
+        return "-1";
+    }
+
+    public static setWorldConfigData(worldConfigDatas: WorldConfigData[]): void {
+        for (let i = 0; i < worldConfigDatas.length; ++i) {
+            this.worldConfigDataMap.set(worldConfigDatas[i].userId, worldConfigDatas[i]);
+        }
     }
 }
 

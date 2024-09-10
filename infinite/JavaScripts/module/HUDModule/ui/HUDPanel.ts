@@ -11,6 +11,7 @@ import { Notice } from "../../../common/notice/Notice";
 import GlobalData from "../../../const/GlobalData";
 import HUDPanel_Generate from "../../../ui-generate/module/HUDModule/HUDPanel_generate";
 import KillTipItem_Generate from "../../../ui-generate/module/HUDModule/KillTipItem_generate";
+import { RingSoulModuleC } from "../../RingSoulModule/RingSoulModule";
 import HUDModuleC, { KillTipData, KillTipType } from "../HUDModuleC";
 
 export default class HUDPanel extends HUDPanel_Generate {
@@ -20,6 +21,13 @@ export default class HUDPanel extends HUDPanel_Generate {
 			this.hudModuleC = ModuleService.getModule(HUDModuleC);
 		}
 		return this.hudModuleC;
+	}
+	private ringSoulModuleC: RingSoulModuleC = null;
+	private get getRingSoulModuleC(): RingSoulModuleC {
+		if (!this.ringSoulModuleC) {
+			this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+		}
+		return this.ringSoulModuleC;
 	}
 
 	/** 
@@ -86,9 +94,21 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mOnlineRewardButton.disableImageGuid = "193281";
 		this.bindMusicButton();
 
-		this.mOnOffRingSoulTextBlock.text = "开魂环";
+		let isOpenRingSoul: boolean = true;
+		this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? "收起" : "开启";
 		this.mOnOffRingSoulButton.onClicked.add(() => {
-			this.getHudModuleC.onOnOffRingSoulAction.call();
+			if (!this.getRingSoulModuleC.isCanOpenRingSoul) return;
+			if (!this.isCanOnRingSoul) {
+				Notice.showDownNotice(`5秒冷却`);
+				return;
+			}
+			this.isCanOnRingSoul = false;
+			TimeUtil.delaySecond(5).then(() => {
+				this.isCanOnRingSoul = true;
+			});
+			isOpenRingSoul = !isOpenRingSoul;
+			this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? "收起" : "开启";
+			this.getHudModuleC.onOnOffRingSoulAction.call(isOpenRingSoul);
 		});
 		this.mArkButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenArkAction.call();
@@ -100,6 +120,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 			this.getHudModuleC.onOpenGetAction.call();
 		});
 	}
+
+	private isCanOnRingSoul: boolean = true;
 
 	/**
 	 * 初始化UI
@@ -261,8 +283,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 		AccountService.fillAvatar(this.mRoleIconImage);
 	}
 
-	public updateLvExpCoin(lv: number, exp: number, coin: number, addAtk: number): void {
-		this.mLvTextBlock.text = `等级 ${Utils.getLvText(lv)}`;
+	public async updateLvExpCoin(lv: number, exp: number, coin: number, addAtk: number): Promise<void> {
+		this.mLvTextBlock.text = `等级 ${await Utils.getLvText(lv, Player.localPlayer.userId)}`;
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * GlobalData.upgradeExpMultiple);
 		this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
 		this.mCoinTextBlock.text = coin + "";

@@ -1,12 +1,20 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import { Utils } from "../../Tools/utils";
+import { WorldConfigData } from '../RankModule/PlayerPropData';
 import HUDModuleC from "./HUDModuleC";
 
 export default class HUDModuleS extends ModuleS<HUDModuleC, null> {
+    protected onAwake(): void {
+        this.initWorldConfigDatas();
+    }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
+    }
+
+    protected onPlayerEnterGame(player: mw.Player): void {
+        this.syncWorldConfigData(player);
     }
 
     //#region 冲刺
@@ -97,4 +105,20 @@ export default class HUDModuleS extends ModuleS<HUDModuleC, null> {
         SoundService.play3DSound(stompingSoundId, this.currentPlayer.character);
     }
     //#endregion 
+
+    private worldConfigDatas: WorldConfigData[] = [];
+    private async initWorldConfigDatas(): Promise<void> {
+        this.worldConfigDatas = (await this.getCustomdata("WorldConfigData")) as WorldConfigData[];
+    }
+
+    private async syncWorldConfigData(player: mw.Player): Promise<void> {
+        if (!this.worldConfigDatas || this.worldConfigDatas.length == 0) await this.initWorldConfigDatas();
+        this.getClient(player).net_syncWorldConfigData(this.worldConfigDatas);
+    }
+
+    public async getCustomdata(key: string): Promise<any> {
+        let data = null;
+        data = await GeneralManager.asyncRpcGetData(key);
+        return data;
+    }
 }

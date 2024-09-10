@@ -235,9 +235,7 @@ export default class RingSoul extends Script {
 
     public async updateRingSoulState(): Promise<void> {
         if (!this.ringSoulMap || this.ringSoulMap.size == 0) return;
-        await this.OffRingSoul();
-        await TimeUtil.delaySecond(1);
-        await this.OnRingSoul();
+        this.isOnRingSoul ? await this.OnRingSoul() : await this.OffRingSoul();
     }
 
     private async OffRingSoul(): Promise<void> {
@@ -306,16 +304,11 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
             // Event.dispatchToServer("RingSoul");
             this.getRingSoulPanel.show();
         });
-        InputUtil.onKeyDown(mw.Keys.O, () => {
-            this.onOffRingSoul();
-        });
 
         this.getHudModuleC.onOpenRingSoulAction.add(() => {
             this.getRingSoulPanel.show();
         });
-        this.getHudModuleC.onOnOffRingSoulAction.add(() => {
-            this.onOffRingSoul();
-        });
+        this.getHudModuleC.onOnOffRingSoulAction.add(this.onOffRingSoul.bind(this));
         this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
     }
 
@@ -327,6 +320,14 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
 
     public getIsHasRingSoul(key: number): boolean {
         return MapEx.has(this.ringSoul, key);
+    }
+
+    public get isCanOpenRingSoul(): boolean {
+        if (MapEx.count(this.ringSoul) == 0) {
+            Notice.showDownNotice(`还未获取魂环`);
+            return false;
+        }
+        return true;
     }
 
     public getRingSoulIndex(key: number): number {
@@ -341,21 +342,8 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
         this.server.net_setRingSoulIndex(key, value);
     }
 
-    private isCanOnRingSoul: boolean = true;
-    public onOffRingSoul(): void {
-        if (MapEx.count(this.ringSoul) == 0) {
-            Notice.showDownNotice(`还未获取魂环`);
-            return;
-        }
-        if (!this.isCanOnRingSoul) {
-            Notice.showDownNotice(`15秒冷却`);
-            return;
-        }
-        this.isCanOnRingSoul = false;
-        TimeUtil.delaySecond(15).then(() => {
-            this.isCanOnRingSoul = true;
-        });
-        this.server.net_onOffRingSoul();
+    public onOffRingSoul(isOpenRingSoul: boolean): void {
+        this.server.net_onOffRingSoul(isOpenRingSoul);
     }
 }
 
@@ -394,11 +382,11 @@ export class RingSoulModuleS extends ModuleS<RingSoulModuleC, RingSoulData> {
         ringSoul.ringSoulStrs = `${key}-${value}`;
     }
 
-    public net_onOffRingSoul(): void {
+    public net_onOffRingSoul(isOpenRingSoul: boolean): void {
         let playerId = this.currentPlayerId;
         if (!this.ringSoulMap.has(playerId)) return;
         let ringSoul = this.ringSoulMap.get(playerId);
-        ringSoul.isOnRingSoul = !ringSoul.isOnRingSoul;
+        ringSoul.isOnRingSoul = isOpenRingSoul;
     }
 }
 

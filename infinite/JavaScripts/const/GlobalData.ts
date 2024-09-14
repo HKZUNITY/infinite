@@ -79,5 +79,5 @@ export default class GlobalData {
 
     public static signInDays: number = 7;
 
-    public static gameName: string = `斗神大陆（开学继承神位）`;
+    public static gameName: string = `斗神大陆(黑悟空神位来袭)`;
 }

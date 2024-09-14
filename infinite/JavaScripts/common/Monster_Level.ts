@@ -324,14 +324,14 @@ export default class Monster_Level extends Script {
             { loopCount: 0 }
         );
         // this.initPaths();
-        TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
+        TimeUtil.delaySecond(this.randomFloat(1, 3)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState.Activate;
             await this.playIdleAni_S();
-            TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
+            TimeUtil.delaySecond(this.randomFloat(1, 3)).then(() => this.startNavigateTo_S());
         });
     }
 

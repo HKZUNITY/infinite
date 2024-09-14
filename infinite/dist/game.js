@@ -385,7 +385,7 @@ class RpcStance {
 }
 PlayerManagerExtesion.init();
 
-var foreign38 = /*#__PURE__*/Object.freeze({
+var foreign39 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerManagerExtesion: PlayerManagerExtesion
 });
@@ -488,7 +488,7 @@ SpawnManager.deleteDic = new Map([
     ["14197", true],
 ]);
 
-var foreign39 = /*#__PURE__*/Object.freeze({
+var foreign40 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SpawnManager: SpawnManager
 });
@@ -684,7 +684,7 @@ class GeneralManager {
     }
 }
 
-var foreign40 = /*#__PURE__*/Object.freeze({
+var foreign41 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     GeneralManager: GeneralManager
 });
@@ -815,7 +815,7 @@ ConfigBase.TAG_MAINLANGUAGE = 'MainLanguage'; //主语言tag
 ConfigBase.TAG_CHILDLANGUAGE = 'ChildLanguage'; //子语言tag
 ConfigBase.languageIndex = 0;
 
-var foreign23 = /*#__PURE__*/Object.freeze({
+var foreign24 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ConfigBase: ConfigBase
 });
@@ -827,7 +827,7 @@ class ActionConfig extends ConfigBase {
     }
 }
 
-var foreign16 = /*#__PURE__*/Object.freeze({
+var foreign17 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ActionConfig: ActionConfig
 });
@@ -839,7 +839,7 @@ class AdsConfig extends ConfigBase {
     }
 }
 
-var foreign17 = /*#__PURE__*/Object.freeze({
+var foreign18 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AdsConfig: AdsConfig
 });
@@ -851,7 +851,7 @@ class AssetsConfig extends ConfigBase {
     }
 }
 
-var foreign18 = /*#__PURE__*/Object.freeze({
+var foreign19 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AssetsConfig: AssetsConfig
 });
@@ -863,7 +863,7 @@ class BagInfoConfig extends ConfigBase {
     }
 }
 
-var foreign19 = /*#__PURE__*/Object.freeze({
+var foreign20 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     BagInfoConfig: BagInfoConfig
 });
@@ -875,7 +875,7 @@ class CoinConfig extends ConfigBase {
     }
 }
 
-var foreign20 = /*#__PURE__*/Object.freeze({
+var foreign21 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     CoinConfig: CoinConfig
 });
@@ -887,7 +887,7 @@ class ColdWeaponConfig extends ConfigBase {
     }
 }
 
-var foreign21 = /*#__PURE__*/Object.freeze({
+var foreign22 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColdWeaponConfig: ColdWeaponConfig
 });
@@ -899,7 +899,7 @@ class ColorConfig extends ConfigBase {
     }
 }
 
-var foreign22 = /*#__PURE__*/Object.freeze({
+var foreign23 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColorConfig: ColorConfig
 });
@@ -911,7 +911,7 @@ class DressDataConfig extends ConfigBase {
     }
 }
 
-var foreign24 = /*#__PURE__*/Object.freeze({
+var foreign25 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     DressDataConfig: DressDataConfig
 });
@@ -923,7 +923,7 @@ class DressProgressConfig extends ConfigBase {
     }
 }
 
-var foreign25 = /*#__PURE__*/Object.freeze({
+var foreign26 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     DressProgressConfig: DressProgressConfig
 });
@@ -935,7 +935,7 @@ class MonsterInfoConfig extends ConfigBase {
     }
 }
 
-var foreign27 = /*#__PURE__*/Object.freeze({
+var foreign28 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     MonsterInfoConfig: MonsterInfoConfig
 });
@@ -947,7 +947,7 @@ class MusicConfig extends ConfigBase {
     }
 }
 
-var foreign28 = /*#__PURE__*/Object.freeze({
+var foreign29 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     MusicConfig: MusicConfig
 });
@@ -959,7 +959,7 @@ class NPCConfig extends ConfigBase {
     }
 }
 
-var foreign29 = /*#__PURE__*/Object.freeze({
+var foreign30 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     NPCConfig: NPCConfig
 });
@@ -971,7 +971,7 @@ class OnlineRewardsConfig extends ConfigBase {
     }
 }
 
-var foreign30 = /*#__PURE__*/Object.freeze({
+var foreign31 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardsConfig: OnlineRewardsConfig
 });
@@ -983,7 +983,7 @@ class QuickEmojiConfig extends ConfigBase {
     }
 }
 
-var foreign31 = /*#__PURE__*/Object.freeze({
+var foreign32 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     QuickEmojiConfig: QuickEmojiConfig
 });
@@ -995,7 +995,7 @@ class QuickTalkConfig extends ConfigBase {
     }
 }
 
-var foreign32 = /*#__PURE__*/Object.freeze({
+var foreign33 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     QuickTalkConfig: QuickTalkConfig
 });
@@ -1007,7 +1007,7 @@ class TaskConfig extends ConfigBase {
     }
 }
 
-var foreign33 = /*#__PURE__*/Object.freeze({
+var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TaskConfig: TaskConfig
 });
@@ -1019,7 +1019,7 @@ class TrampolineConfig extends ConfigBase {
     }
 }
 
-var foreign34 = /*#__PURE__*/Object.freeze({
+var foreign35 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TrampolineConfig: TrampolineConfig
 });
@@ -1077,7 +1077,7 @@ class GameConfig {
 }
 GameConfig.configMap = new Map();
 
-var foreign26 = /*#__PURE__*/Object.freeze({
+var foreign27 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     GameConfig: GameConfig
 });
@@ -1459,9 +1459,9 @@ GlobalData.pathStrMap = new Map([
     [5, "098050A0"]
 ]);
 GlobalData.signInDays = 7;
-GlobalData.gameName = `斗神大陆（开学继承神位）`;
+GlobalData.gameName = `斗神大陆(黑悟空神位来袭)`;
 
-var foreign35 = /*#__PURE__*/Object.freeze({
+var foreign36 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GlobalData
 });
@@ -1487,7 +1487,7 @@ class Console {
     }
 }
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Console
 });
@@ -2165,7 +2165,7 @@ var PrefabEvent;
     initEvent();
 })(PrefabEvent || (PrefabEvent = {}));
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; }
 });
@@ -2805,7 +2805,13 @@ Utils.locs = [
     new mw.Vector(-4065, 6446, 2000),
     new mw.Vector(-2596, 7032, 2000),
     new mw.Vector(-930, 7584, 2000),
-    new mw.Vector(1277, 8205, 2000)
+    new mw.Vector(1277, 8205, 2000),
+    new mw.Vector(-3479, 6635, 2000),
+    new mw.Vector(-3836, 6980, 2000),
+    new mw.Vector(-4255, 7299, 2000),
+    new mw.Vector(-3640, 7440, 2000),
+    new mw.Vector(-3106, 7545, 2000),
+    new mw.Vector(-4459, 6234, 2000)
 ];
 Utils.boss = [
     "219915",
@@ -2883,7 +2889,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Tween: Tween$2,
     Utils: Utils,
@@ -2954,7 +2960,7 @@ Loading_Generate = __decorate([
 ], Loading_Generate);
 var Loading_Generate$1 = Loading_Generate;
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Loading_Generate$1
 });
@@ -2997,7 +3003,7 @@ class Loading extends Loading_Generate$1 {
     }
 }
 
-var foreign6 = /*#__PURE__*/Object.freeze({
+var foreign7 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Loading
 });
@@ -3064,7 +3070,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -3120,7 +3126,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -3852,7 +3858,7 @@ const add = TWEEN.add.bind(TWEEN);
 const remove = TWEEN.remove.bind(TWEEN);
 const update = TWEEN.update.bind(TWEEN);
 
-var foreign11 = /*#__PURE__*/Object.freeze({
+var foreign12 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Easing: Easing,
     Group: Group,
@@ -4030,7 +4036,7 @@ class WorldUIPool {
     }
 }
 
-var foreign12 = /*#__PURE__*/Object.freeze({
+var foreign13 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     UIElementPool: UIElementPool,
     UIPool: UIPool,
@@ -4062,7 +4068,7 @@ var updater;
     };
 })(updater || (updater = {}));
 
-var foreign13 = /*#__PURE__*/Object.freeze({
+var foreign14 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get updater () { return updater; }
 });
@@ -4351,7 +4357,7 @@ class TopNoticeItem extends TopNoticeItem_Generate$1 {
     }
 }
 
-var foreign10 = /*#__PURE__*/Object.freeze({
+var foreign11 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Notice: Notice
 });
@@ -4559,7 +4565,7 @@ __decorate([
     mw.Property({ replicated: true, onChanged: "client_OnChangeCharGuid" })
 ], WeaponData.prototype, "charGuid", void 0);
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AnimationInfo: AnimationInfo$2,
     NodeInfo: NodeInfo,
@@ -4635,7 +4641,7 @@ class SkillRectCheck {
 }
 SkillRectCheck.showRect = true;
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SkillRectCheck: SkillRectCheck
 });
@@ -4835,7 +4841,7 @@ class WeaponManager extends WeaponManagerSvr {
 WeaponManager._Instance = null;
 WeaponManager.GetInstance();
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponManager: WeaponManager
 });
@@ -4981,7 +4987,7 @@ class ColdWeapon {
     }
 }
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColdWeapon: ColdWeapon
 });
@@ -5126,7 +5132,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -5252,7 +5258,7 @@ BagInfoPanel_Generate = __decorate([
 ], BagInfoPanel_Generate);
 var BagInfoPanel_Generate$1 = BagInfoPanel_Generate;
 
-var foreign112 = /*#__PURE__*/Object.freeze({
+var foreign113 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagInfoPanel_Generate$1
 });
@@ -5344,7 +5350,7 @@ BagItem_Generate = __decorate([
 ], BagItem_Generate);
 var BagItem_Generate$1 = BagItem_Generate;
 
-var foreign113 = /*#__PURE__*/Object.freeze({
+var foreign114 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagItem_Generate$1
 });
@@ -5440,7 +5446,7 @@ BagPanel_Generate = __decorate([
 ], BagPanel_Generate);
 var BagPanel_Generate$1 = BagPanel_Generate;
 
-var foreign114 = /*#__PURE__*/Object.freeze({
+var foreign115 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagPanel_Generate$1
 });
@@ -5506,7 +5512,7 @@ BagTab_Generate = __decorate([
 ], BagTab_Generate);
 var BagTab_Generate$1 = BagTab_Generate;
 
-var foreign115 = /*#__PURE__*/Object.freeze({
+var foreign116 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagTab_Generate$1
 });
@@ -5586,7 +5592,7 @@ AdsTipsPanel_Generate = __decorate([
 ], AdsTipsPanel_Generate);
 var AdsTipsPanel_Generate$1 = AdsTipsPanel_Generate;
 
-var foreign108 = /*#__PURE__*/Object.freeze({
+var foreign109 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdsTipsPanel_Generate$1
 });
@@ -5642,7 +5648,7 @@ LevelItem_Generate = __decorate([
 ], LevelItem_Generate);
 var LevelItem_Generate$1 = LevelItem_Generate;
 
-var foreign119 = /*#__PURE__*/Object.freeze({
+var foreign120 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LevelItem_Generate$1
 });
@@ -5698,7 +5704,7 @@ LevelPanel_Generate = __decorate([
 ], LevelPanel_Generate);
 var LevelPanel_Generate$1 = LevelPanel_Generate;
 
-var foreign120 = /*#__PURE__*/Object.freeze({
+var foreign121 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LevelPanel_Generate$1
 });
@@ -5888,6 +5894,15 @@ __decorate([
     Decorator.noReply()
 ], LevelModuleS.prototype, "net_startLevel", null);
 
+var foreign52 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    LevelData: LevelData,
+    LevelItem: LevelItem,
+    LevelModuleC: LevelModuleC,
+    LevelModuleS: LevelModuleS,
+    LevelPanel: LevelPanel
+});
+
 class FlyText {
     constructor() {
         this._uiWidget = null;
@@ -5979,7 +5994,7 @@ class FlyText {
     }
 }
 
-var foreign5 = /*#__PURE__*/Object.freeze({
+var foreign6 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     FlyText: FlyText
 });
@@ -6082,7 +6097,7 @@ class ExplosiveCoins {
     }
 }
 
-var foreign4 = /*#__PURE__*/Object.freeze({
+var foreign5 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ExplosiveCoins: ExplosiveCoins
 });
@@ -6216,7 +6231,7 @@ class PlayerModuleC extends ModuleC {
     }
 }
 
-var foreign58 = /*#__PURE__*/Object.freeze({
+var foreign59 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerModuleC
 });
@@ -6401,7 +6416,7 @@ class ObjPool {
     }
 }
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjPool: ObjPool,
     get ObjectPoolServices () { return ObjectPoolServices; }
@@ -6468,7 +6483,7 @@ OnlineRewardPanel_Generate = __decorate([
 ], OnlineRewardPanel_Generate);
 var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
 
-var foreign122 = /*#__PURE__*/Object.freeze({
+var foreign123 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardPanel_Generate$1
 });
@@ -7016,7 +7031,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign117 = /*#__PURE__*/Object.freeze({
+var foreign118 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -7092,7 +7107,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign118 = /*#__PURE__*/Object.freeze({
+var foreign119 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -7170,7 +7185,7 @@ RingSoulItem_Generate = __decorate([
 ], RingSoulItem_Generate);
 var RingSoulItem_Generate$1 = RingSoulItem_Generate;
 
-var foreign125 = /*#__PURE__*/Object.freeze({
+var foreign126 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItem_Generate$1
 });
@@ -7277,7 +7292,7 @@ RingSoulItemChild_Generate = __decorate([
 ], RingSoulItemChild_Generate);
 var RingSoulItemChild_Generate$1 = RingSoulItemChild_Generate;
 
-var foreign124 = /*#__PURE__*/Object.freeze({
+var foreign125 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItemChild_Generate$1
 });
@@ -7388,7 +7403,7 @@ RingSoulPanel_Generate = __decorate([
 ], RingSoulPanel_Generate);
 var RingSoulPanel_Generate$1 = RingSoulPanel_Generate;
 
-var foreign126 = /*#__PURE__*/Object.freeze({
+var foreign127 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulPanel_Generate$1
 });
@@ -8052,7 +8067,7 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
     }
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RingSoulData: RingSoulData,
     RingSoulGo: RingSoulGo,
@@ -8759,7 +8774,7 @@ class KillTipItem extends KillTipItem_Generate$1 {
     }
 }
 
-var foreign50 = /*#__PURE__*/Object.freeze({
+var foreign51 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     KillTipItem: KillTipItem,
     default: HUDPanel
@@ -9172,7 +9187,7 @@ class OnlineRewardItem {
     }
 }
 
-var foreign56 = /*#__PURE__*/Object.freeze({
+var foreign57 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardItem: OnlineRewardItem,
     OnlineRewardPanel: OnlineRewardPanel
@@ -9289,7 +9304,7 @@ var OnlineRewardItemState;
     OnlineRewardItemState[OnlineRewardItemState["getReward"] = 2] = "getReward";
 })(OnlineRewardItemState || (OnlineRewardItemState = {}));
 
-var foreign54 = /*#__PURE__*/Object.freeze({
+var foreign55 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get OnlineRewardItemState () { return OnlineRewardItemState; },
     OnlineRewardModuleC: OnlineRewardModuleC
@@ -9844,7 +9859,7 @@ var KillTipType;
     KillTipType[KillTipType["revenge"] = 3] = "revenge";
 })(KillTipType || (KillTipType = {}));
 
-var foreign48 = /*#__PURE__*/Object.freeze({
+var foreign49 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     KillTipData: KillTipData,
     get KillTipType () { return KillTipType; },
@@ -10015,7 +10030,7 @@ __decorate([
     Decorator.persistence()
 ], TaskData.prototype, "weeklyTasks", void 0);
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Task: Task,
     TaskData: TaskData,
@@ -10137,7 +10152,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign134 = /*#__PURE__*/Object.freeze({
+var foreign135 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -10517,7 +10532,7 @@ class TaskItem {
     }
 }
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel
 });
@@ -10931,7 +10946,7 @@ class TaskModuleC extends ModuleC {
     }
 }
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleC
 });
@@ -10995,7 +11010,7 @@ class AdTipsPanel extends AdsTipsPanel_Generate$1 {
     }
 }
 
-var foreign43 = /*#__PURE__*/Object.freeze({
+var foreign44 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdTipsPanel
 });
@@ -11111,7 +11126,7 @@ GuideUI_Generate = __decorate([
 ], GuideUI_Generate);
 var GuideUI_Generate$1 = GuideUI_Generate;
 
-var foreign116 = /*#__PURE__*/Object.freeze({
+var foreign117 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuideUI_Generate$1
 });
@@ -11400,7 +11415,7 @@ class GuidePanel extends GuideUI_Generate$1 {
     }
 }
 
-var foreign47 = /*#__PURE__*/Object.freeze({
+var foreign48 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuidePanel
 });
@@ -11664,7 +11679,7 @@ __decorate([
     Decorator.noReply()
 ], GuideModuleS.prototype, "net_onCompleted", null);
 
-var foreign46 = /*#__PURE__*/Object.freeze({
+var foreign47 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     GuideData: GuideData,
     GuideModuleC: GuideModuleC,
@@ -12740,7 +12755,7 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
     }
 }
 
-var foreign45 = /*#__PURE__*/Object.freeze({
+var foreign46 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     BagData: BagData,
     BagInfoPanel: BagInfoPanel,
@@ -12783,7 +12798,7 @@ class WorldConfigData {
     }
 }
 
-var foreign64 = /*#__PURE__*/Object.freeze({
+var foreign65 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerData_CSR: PlayerData_CSR,
     PlayerData_CSW: PlayerData_CSW,
@@ -13075,7 +13090,7 @@ __decorate([
     Decorator.noReply()
 ], WorldRankModuleS.prototype, "net_onEnterScene", null);
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WorldRankModuleS: WorldRankModuleS
 });
@@ -13136,7 +13151,7 @@ __decorate([
     Decorator.persistence()
 ], OnlineRewardData.prototype, "isGetRewards", void 0);
 
-var foreign53 = /*#__PURE__*/Object.freeze({
+var foreign54 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardData
 });
@@ -13181,7 +13196,7 @@ __decorate([
     Decorator.noReply()
 ], OnlineRewardModuleS.prototype, "net_saveIsGetRewards", null);
 
-var foreign55 = /*#__PURE__*/Object.freeze({
+var foreign56 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardModuleS: OnlineRewardModuleS
 });
@@ -13304,7 +13319,7 @@ SignInItem_Generate = __decorate([
 ], SignInItem_Generate);
 var SignInItem_Generate$1 = SignInItem_Generate;
 
-var foreign131 = /*#__PURE__*/Object.freeze({
+var foreign132 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInItem_Generate$1
 });
@@ -13376,7 +13391,7 @@ SignInPanel_Generate = __decorate([
 ], SignInPanel_Generate);
 var SignInPanel_Generate$1 = SignInPanel_Generate;
 
-var foreign132 = /*#__PURE__*/Object.freeze({
+var foreign133 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInPanel_Generate$1
 });
@@ -13656,7 +13671,7 @@ class SignInModuleS extends ModuleS {
     }
 }
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SignInData: SignInData,
     SignInItem: SignInItem,
@@ -13884,7 +13899,7 @@ __decorate([
     Decorator.noReply()
 ], TaskModuleS.prototype, "net_resetWeeklyTask", null);
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleS
 });
@@ -13976,7 +13991,7 @@ __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "playerKill", void 0);
 
-var foreign57 = /*#__PURE__*/Object.freeze({
+var foreign58 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerData
 });
@@ -14052,7 +14067,7 @@ PlayerLifebar_Generate = __decorate([
 ], PlayerLifebar_Generate);
 var PlayerLifebar_Generate$1 = PlayerLifebar_Generate;
 
-var foreign123 = /*#__PURE__*/Object.freeze({
+var foreign124 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar_Generate$1
 });
@@ -14149,7 +14164,7 @@ PlayerLifebar = __decorate([
 ], PlayerLifebar);
 var PlayerLifebar$1 = PlayerLifebar;
 
-var foreign60 = /*#__PURE__*/Object.freeze({
+var foreign61 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar$1
 });
@@ -14515,7 +14530,7 @@ class PlayerDataS {
     }
 }
 
-var foreign59 = /*#__PURE__*/Object.freeze({
+var foreign60 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerModuleS
 });
@@ -14649,6 +14664,40 @@ var foreign3 = /*#__PURE__*/Object.freeze({
     default: Coin$1
 });
 
+let Dance = class Dance extends Script {
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        if (mw.SystemUtil.isClient()) {
+            let xifang = this.gameObject;
+            xifang.setDescription(["327879"]);
+            xifang.asyncReady().then(() => {
+                let a = xifang.loadAnimation("306307");
+                a.loop = 0;
+                a.play();
+            });
+        }
+    }
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    onUpdate(dt) {
+    }
+    /** 脚本被销毁时最后一帧执行完调用此函数 */
+    onDestroy() {
+    }
+};
+Dance = __decorate([
+    Component
+], Dance);
+var Dance$1 = Dance;
+
+var foreign4 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: Dance$1
+});
+
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
@@ -14706,7 +14755,7 @@ EnemyLifebar_Generate = __decorate([
 ], EnemyLifebar_Generate);
 var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign96 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: EnemyLifebar_Generate$1
 });
@@ -15260,7 +15309,7 @@ __decorate([
     mw.Property({ displayName: "monsterType", group: "Info", tooltip: "monsterType" })
 ], Monster.prototype, "monsterType", void 0);
 
-var foreign7 = /*#__PURE__*/Object.freeze({
+var foreign8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AnimationInfo: AnimationInfo$1,
     AttackEffectInfo: AttackEffectInfo$1,
@@ -15570,7 +15619,7 @@ class Monster_Level extends Script {
         let rebirthEffectPos = new mw.Vector(this.getMonsterPostion.x, this.getMonsterPostion.y, this.getMonsterPostion.z - this.getMonsterHeight / 2);
         let rebirthEffect = EffectService.playAtPosition("142948", rebirthEffectPos, { loopCount: 0 });
         // this.initPaths();
-        TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
+        TimeUtil.delaySecond(this.randomFloat(1, 3)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.hp = this.maxHp;
@@ -15578,7 +15627,7 @@ class Monster_Level extends Script {
                 this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState.Activate;
             await this.playIdleAni_S();
-            TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
+            TimeUtil.delaySecond(this.randomFloat(1, 3)).then(() => this.startNavigateTo_S());
         });
     }
     updateChasePlayer(targetGuid, damage) {
@@ -15822,7 +15871,7 @@ __decorate([
     mw.Property({ displayName: "levelIndex", group: "Info", tooltip: "levelIndex" })
 ], Monster_Level.prototype, "levelIndex", void 0);
 
-var foreign8 = /*#__PURE__*/Object.freeze({
+var foreign9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AnimationInfo: AnimationInfo,
     AttackEffectInfo: AttackEffectInfo,
@@ -16108,7 +16157,7 @@ MyClearDayNight = MyClearDayNight_1 = __decorate([
 ], MyClearDayNight);
 var MyClearDayNight$1 = MyClearDayNight;
 
-var foreign9 = /*#__PURE__*/Object.freeze({
+var foreign10 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MyClearDayNight$1
 });
@@ -16195,7 +16244,7 @@ class ObjImpulseS extends ModuleS {
     }
 }
 
-var foreign14 = /*#__PURE__*/Object.freeze({
+var foreign15 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjImpulseC: ObjImpulseC,
     ObjImpulseS: ObjImpulseS
@@ -16267,7 +16316,7 @@ TestPanel_Generate = __decorate([
 ], TestPanel_Generate);
 var TestPanel_Generate$1 = TestPanel_Generate;
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel_Generate$1
 });
@@ -16307,7 +16356,7 @@ class TestPanel extends TestPanel_Generate$1 {
     }
 }
 
-var foreign15 = /*#__PURE__*/Object.freeze({
+var foreign16 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel
 });
@@ -16436,7 +16485,7 @@ ArkItem_Generate = __decorate([
 ], ArkItem_Generate);
 var ArkItem_Generate$1 = ArkItem_Generate;
 
-var foreign109 = /*#__PURE__*/Object.freeze({
+var foreign110 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ArkItem_Generate$1
 });
@@ -16533,7 +16582,7 @@ ArkPanel_Generate = __decorate([
 ], ArkPanel_Generate);
 var ArkPanel_Generate$1 = ArkPanel_Generate;
 
-var foreign110 = /*#__PURE__*/Object.freeze({
+var foreign111 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ArkPanel_Generate$1
 });
@@ -16622,7 +16671,7 @@ GiftBagPanel_Generate = __decorate([
 ], GiftBagPanel_Generate);
 var GiftBagPanel_Generate$1 = GiftBagPanel_Generate;
 
-var foreign111 = /*#__PURE__*/Object.freeze({
+var foreign112 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GiftBagPanel_Generate$1
 });
@@ -17012,7 +17061,7 @@ class GiftBagPanel extends GiftBagPanel_Generate$1 {
 class GiftBagData {
 }
 
-var foreign44 = /*#__PURE__*/Object.freeze({
+var foreign45 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ArkData: ArkData,
     ArkItem: ArkItem,
@@ -17106,7 +17155,7 @@ __decorate([
     Decorator.noReply()
 ], HUDModuleS.prototype, "net_playStompingEffectAndSound", null);
 
-var foreign49 = /*#__PURE__*/Object.freeze({
+var foreign50 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDModuleS
 });
@@ -17284,7 +17333,7 @@ WorldRankPanel_Generate = __decorate([
 ], WorldRankPanel_Generate);
 var WorldRankPanel_Generate$1 = WorldRankPanel_Generate;
 
-var foreign139 = /*#__PURE__*/Object.freeze({
+var foreign140 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankPanel_Generate$1
 });
@@ -17522,7 +17571,7 @@ var ShowCanvasType;
     ShowCanvasType[ShowCanvasType["World"] = 2] = "World";
 })(ShowCanvasType || (ShowCanvasType = {}));
 
-var foreign65 = /*#__PURE__*/Object.freeze({
+var foreign66 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RankItem: RankItem,
     get ShowCanvasType () { return ShowCanvasType; },
@@ -17686,7 +17735,7 @@ var RankType;
     RankType[RankType["Kill"] = 3] = "Kill";
 })(RankType || (RankType = {}));
 
-var foreign66 = /*#__PURE__*/Object.freeze({
+var foreign67 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get RankType () { return RankType; },
     WorldRankModuleC: WorldRankModuleC
@@ -17784,7 +17833,7 @@ GameLauncher = __decorate([
 ], GameLauncher);
 var GameLauncher$1 = GameLauncher;
 
-var foreign36 = /*#__PURE__*/Object.freeze({
+var foreign37 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GameLauncher$1
 });
@@ -17954,7 +18003,7 @@ const cameraSystemConfig = {
     cameraDownLimitAngle: -40,
 };
 
-var foreign37 = /*#__PURE__*/Object.freeze({
+var foreign38 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get CameraModifid () { return CameraModifid; },
     ModifiedCameraSystem: ModifiedCameraSystem
@@ -18048,7 +18097,7 @@ var foreign37 = /*#__PURE__*/Object.freeze({
 //     WeaponSet1 = 4,
 // }
 
-var foreign41 = /*#__PURE__*/Object.freeze({
+var foreign42 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
@@ -18059,7 +18108,7 @@ var foreign41 = /*#__PURE__*/Object.freeze({
 //     }
 // }
 
-var foreign42 = /*#__PURE__*/Object.freeze({
+var foreign43 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
@@ -18139,7 +18188,7 @@ __decorate([
     Decorator.noReply()
 ], ObjImpulseModuleS.prototype, "net_addImpulseToObj", null);
 
-var foreign52 = /*#__PURE__*/Object.freeze({
+var foreign53 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjImpulseModuleC: ObjImpulseModuleC,
     ObjImpulseModuleS: ObjImpulseModuleS
@@ -18164,7 +18213,7 @@ __decorate([
     Decorator.persistence()
 ], PropData.prototype, "props", void 0);
 
-var foreign61 = /*#__PURE__*/Object.freeze({
+var foreign62 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropData: PropData
 });
@@ -18219,7 +18268,7 @@ class PropModuleC extends ModuleC {
     }
 }
 
-var foreign62 = /*#__PURE__*/Object.freeze({
+var foreign63 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropModuleC: PropModuleC
 });
@@ -18302,7 +18351,7 @@ class PropModuleS extends ModuleS {
     }
 }
 
-var foreign63 = /*#__PURE__*/Object.freeze({
+var foreign64 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropModuleS: PropModuleS
 });
@@ -18336,7 +18385,7 @@ __decorate([
     Decorator.persistence()
 ], ShopData.prototype, "useWeaponId", void 0);
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopData
 });
@@ -18473,7 +18522,7 @@ class TouchData {
     }
 }
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputManagers: InputManagers,
     TouchData: TouchData
@@ -18574,7 +18623,7 @@ NPCHead_Generate = __decorate([
 ], NPCHead_Generate);
 var NPCHead_Generate$1 = NPCHead_Generate;
 
-var foreign128 = /*#__PURE__*/Object.freeze({
+var foreign129 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NPCHead_Generate$1
 });
@@ -18652,7 +18701,7 @@ CostPanel_Generate = __decorate([
 ], CostPanel_Generate);
 var CostPanel_Generate$1 = CostPanel_Generate;
 
-var foreign127 = /*#__PURE__*/Object.freeze({
+var foreign128 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel_Generate$1
 });
@@ -18694,7 +18743,7 @@ class CostPanel extends CostPanel_Generate$1 {
     }
 }
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel
 });
@@ -18815,7 +18864,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign130 = /*#__PURE__*/Object.freeze({
+var foreign131 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -18977,7 +19026,7 @@ class ShopItem {
     }
 }
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel
 });
@@ -19358,7 +19407,7 @@ class ShopModuleC extends ModuleC {
     }
 }
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleC
 });
@@ -19413,7 +19462,7 @@ __decorate([
     Decorator.noReply()
 ], ShopModuleS.prototype, "net_saveUseWeaponId", null);
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleS
 });
@@ -19988,7 +20037,7 @@ var TrampolineRescourse;
     TrampolineRescourse["Roll"] = "14736";
 })(TrampolineRescourse || (TrampolineRescourse = {}));
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType$1; },
     OBB: OBB,
@@ -20143,7 +20192,7 @@ var ListenerEventsType;
     ListenerEventsType["ServerToAllClient_HideJumpRecordUI"] = "ServerToAllClient_HideJumpRecordUI";
 })(ListenerEventsType || (ListenerEventsType = {}));
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType; },
     default: P_Game_Trampoline
@@ -20808,7 +20857,7 @@ __decorate([
     RemoteFunction(mw.Client, mw.Multicast)
 ], WeaponClient.prototype, "client_PlayEffect", null);
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponClient: WeaponClient
 });
@@ -20936,7 +20985,7 @@ __decorate([
     RemoteFunction(mw.Server)
 ], WeaponServer.prototype, "server_setChar", null);
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponServer: WeaponServer
 });
@@ -20964,7 +21013,7 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Weapon$1
 });
@@ -21162,7 +21211,7 @@ class KeyActionManager {
     }
 }
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FreeCamera$1
 });
@@ -21218,7 +21267,7 @@ WorldTips_1_Generate = __decorate([
 ], WorldTips_1_Generate);
 var WorldTips_1_Generate$1 = WorldTips_1_Generate;
 
-var foreign100 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_1_Generate$1
 });
@@ -21275,7 +21324,7 @@ WorldTips_2_Generate = __decorate([
 ], WorldTips_2_Generate);
 var WorldTips_2_Generate$1 = WorldTips_2_Generate;
 
-var foreign101 = /*#__PURE__*/Object.freeze({
+var foreign102 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_2_Generate$1
 });
@@ -21332,7 +21381,7 @@ WorldTips_3_Generate = __decorate([
 ], WorldTips_3_Generate);
 var WorldTips_3_Generate$1 = WorldTips_3_Generate;
 
-var foreign102 = /*#__PURE__*/Object.freeze({
+var foreign103 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_3_Generate$1
 });
@@ -21388,7 +21437,7 @@ WorldTips_4_Generate = __decorate([
 ], WorldTips_4_Generate);
 var WorldTips_4_Generate$1 = WorldTips_4_Generate;
 
-var foreign103 = /*#__PURE__*/Object.freeze({
+var foreign104 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_4_Generate$1
 });
@@ -21445,7 +21494,7 @@ WorldTips_5_Generate = __decorate([
 ], WorldTips_5_Generate);
 var WorldTips_5_Generate$1 = WorldTips_5_Generate;
 
-var foreign104 = /*#__PURE__*/Object.freeze({
+var foreign105 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_5_Generate$1
 });
@@ -21501,7 +21550,7 @@ WorldTips_6_Generate = __decorate([
 ], WorldTips_6_Generate);
 var WorldTips_6_Generate$1 = WorldTips_6_Generate;
 
-var foreign105 = /*#__PURE__*/Object.freeze({
+var foreign106 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_6_Generate$1
 });
@@ -21558,7 +21607,7 @@ WorldTips_7_Generate = __decorate([
 ], WorldTips_7_Generate);
 var WorldTips_7_Generate$1 = WorldTips_7_Generate;
 
-var foreign106 = /*#__PURE__*/Object.freeze({
+var foreign107 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_7_Generate$1
 });
@@ -21615,7 +21664,7 @@ WorldTips_Generate = __decorate([
 ], WorldTips_Generate);
 var WorldTips_Generate$1 = WorldTips_Generate;
 
-var foreign107 = /*#__PURE__*/Object.freeze({
+var foreign108 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_Generate$1
 });
@@ -21734,7 +21783,7 @@ OnlineRewardItem_Generate = __decorate([
 ], OnlineRewardItem_Generate);
 var OnlineRewardItem_Generate$1 = OnlineRewardItem_Generate;
 
-var foreign121 = /*#__PURE__*/Object.freeze({
+var foreign122 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardItem_Generate$1
 });
@@ -21825,7 +21874,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign129 = /*#__PURE__*/Object.freeze({
+var foreign130 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -21938,7 +21987,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign133 = /*#__PURE__*/Object.freeze({
+var foreign134 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -21993,7 +22042,7 @@ ImpactRadiusWindow_Generate = __decorate([
 ], ImpactRadiusWindow_Generate);
 var ImpactRadiusWindow_Generate$1 = ImpactRadiusWindow_Generate;
 
-var foreign135 = /*#__PURE__*/Object.freeze({
+var foreign136 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ImpactRadiusWindow_Generate$1
 });
@@ -22068,7 +22117,7 @@ JumpRecordUI_Generate = __decorate([
 ], JumpRecordUI_Generate);
 var JumpRecordUI_Generate$1 = JumpRecordUI_Generate;
 
-var foreign136 = /*#__PURE__*/Object.freeze({
+var foreign137 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpRecordUI_Generate$1
 });
@@ -22152,7 +22201,7 @@ RankItem_Generate = __decorate([
 ], RankItem_Generate);
 var RankItem_Generate$1 = RankItem_Generate;
 
-var foreign137 = /*#__PURE__*/Object.freeze({
+var foreign138 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankItem_Generate$1
 });
@@ -22222,7 +22271,7 @@ WorldRankItem_Generate = __decorate([
 ], WorldRankItem_Generate);
 var WorldRankItem_Generate$1 = WorldRankItem_Generate;
 
-var foreign138 = /*#__PURE__*/Object.freeze({
+var foreign139 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankItem_Generate$1
 });
@@ -22231,280 +22280,284 @@ const MWModuleMap = {
      '738E4D7F44C7C0B09C12568779EB6311': foreign1,
      'CAEB1D4D4B26D23309475CB6ABC705FF': foreign2,
      '4E58E1F74D170E7844703989BEAAAA5E': foreign3,
-     'FE0E257049372D737A7147BB187DCF9D': foreign4,
-     'BBF08FB04B2BC21BFA7B24A49D6BFFED': foreign5,
-     '99A29C87465171BECD966683DD195FE0': foreign6,
-     '6B09362247562626D5F89CA6E5CBD2DE': foreign7,
-     '722259704E530E29CFA29BA8A6165A28': foreign8,
-     '9071A44341F25CBC61BDCBAD7161E56F': foreign9,
-     '270556244439107F7C1C129B130B4C47': foreign10,
-     'B6E614EE4CFBEB1B622980B130DC3F41': foreign11,
-     '34FB71B54A1B9B1C1F7CCE98D36B76F9': foreign12,
-     '94FD08FD4489B96A203DD4875A6DAE3D': foreign13,
-     '27F920A249B4AA531A747DA49D25C4E6': foreign14,
-     '43674F054738789E61CB6A9D24EE590F': foreign15,
-     '2F6F07C34BE76735F7D5408693891AE6': foreign16,
-     'FF1563F84F41F36FE9A229AB3FA4739E': foreign17,
-     '571F192B48797F8B0AC20484A439B218': foreign18,
-     'CE85D5AF40F840E427ACC89239133201': foreign19,
-     '5360682948009480CB3B60967C1E9C4E': foreign20,
-     '4147C7DC4379F10CBF039FA1F424CF30': foreign21,
-     '330670174B886285E8E931AAC1F11A68': foreign22,
-     'B3F5CA5F4E3728010D4EE3A71ED406BE': foreign23,
-     '99C4E5454A40C61FC427EDB862680EA4': foreign24,
-     'D4C04F604802C1AE6095B19172F0E134': foreign25,
-     'EC8FA87B49BED23F0082059847D749D1': foreign26,
-     '159AA1104B1A8006C1E3109EEA075240': foreign27,
-     '0482D8294ED7C6B824EE8FB76F64DEA8': foreign28,
-     '336F8CF342D195E83F025D88E0E67CF5': foreign29,
-     '3989B718464F7D8E96063AAE1F443A7D': foreign30,
-     '8993132B4D482CC3AA66F6A0752D0F7E': foreign31,
-     'A68C8DC74CEA5473AC1B588046967037': foreign32,
-     'E917F8F14087A4C3A90C02A252449FCE': foreign33,
-     'BC04C6D045DE92D9606AD08AA7EB662B': foreign34,
-     '64D56E5E4A8131A6306241891C5A946D': foreign35,
-     'A834984646C10B036247BD86BF004ED4': foreign36,
-     'DBE391E64014FDD145AE40820C98022A': foreign37,
-     '2E44AD5F4B7B17FDBCFF8BBD2D111CBA': foreign38,
-     'D052578E42FD39068783C5AD26441B43': foreign39,
-     '65D5A02D481CBAC84C7FF6A8300290FF': foreign40,
-     'ED23BBF34B5F0FD622DB9E8B204BB63A': foreign41,
-     '6C7F83344D08B83F8B1C4998A4C54AE8': foreign42,
-     '7FA339B44DB59B14F8FA579AFC4E95F1': foreign43,
-     'C0133F294A4AE4099D7DE2A507F71913': foreign44,
-     '5B9D28AD4F69E4EDA1ED0193610394D6': foreign45,
-     '1DB810E549C51B0CF92803A3CA567A9F': foreign46,
-     'AD997E3440FDBF90C217EEB5AE82C019': foreign47,
-     'FD862E054AB9D48653FA0EA16B234198': foreign48,
-     '11907A164C7CB34C30CA6D959138FC0F': foreign49,
-     '3CD445AB4C6DC67B35D60DA472014379': foreign50,
-     '0F95A3C34E76FB1EC85217AAE2F7D8ED': foreign52,
-     '68E90BBE443B0F584B447BB6471F9698': foreign53,
-     '0BF71D314247D4EE9739E385C563DF47': foreign54,
-     '57E0650848E7948CD2BAE083B45540F9': foreign55,
-     '6ECF455744EA2C8A66C15CBE0F9D4732': foreign56,
-     'B5ED482B492E893B56A1FD98DB7F2BD8': foreign57,
-     'EBD3FCE849D367C6A0336B9A451A5330': foreign58,
-     '302392054A313F839CE35097B9BB635F': foreign59,
-     'FFB257A546DFC37AAC922E8047B291CA': foreign60,
-     'B0AE81964A685F8B31B8DFA7B392849D': foreign61,
-     '1669FAF94795EF1ACBA7FE9C800B117B': foreign62,
-     '165F15B348A03E72BD290BB61AC4BF8B': foreign63,
-     '357E9DA2462F9CE7CF4B43B0AA9DC354': foreign64,
-     'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign65,
-     '2909A3E141653B96AD1695BB3D9FD3E7': foreign66,
-     '459EAC1C45A11267216B289C90BC7AC5': foreign67,
-     '8B404A71482B2B7A44BB8A85E26C05E7': foreign68,
-     '0E7769194FC879692CDC4E91F3CA47D3': foreign69,
-     'EE9111164BB56CAF9589D28E0A80DCB7': foreign70,
-     'B9E68E6F47D05B8922EB89976547D0ED': foreign71,
-     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign72,
-     'B0214F354FA856A04434CB862696C501': foreign73,
-     '37558D484E7E3EEB7CF50F83FF516D01': foreign74,
-     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign75,
-     'C2A63B424C2C17C9DE3395B59BA9444C': foreign76,
-     '4CA21C094DAD2346E120EFBEA3D7736C': foreign77,
-     'E8535D714F5BFEC20EF595B175FA24BD': foreign78,
-     '1884D48A4EBB982234611D9DD0E1A853': foreign79,
-     '0568B98E45100A88DECA3E894117DA12': foreign80,
-     'B557F99E4E5DD1260BBC268B1579FDF6': foreign81,
-     '4A4C950D496FFCD7471A22924E8F3AE4': foreign82,
-     '586A140B4F5148B73C6201AF3EDA5701': foreign83,
-     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign84,
-     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign85,
-     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign86,
-     'E76AEC2E4B56116E911A1B86036607DC': foreign87,
-     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign88,
-     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign89,
-     '72BDC1A847C3175B60A8E7B540400F62': foreign90,
-     'B6D27EAC444C85D1D925F986D613D5B3': foreign91,
-     'EFFEC0C44629992590058E96821DF5A4': foreign92,
-     'C21422064060FC0412F08EAAD527453E': foreign93,
-     'E08DC42B45A65EE74232E6B7819467BF': foreign94,
-     '9A29CFAC457713D31702BF919B762966': foreign95,
-     '4244ACB14A814AA70C452CB4CFEBB75D': foreign96,
-     'FAAB758A46290493F8E43BA2B90FE5D8': foreign97,
-     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign98,
-     '2C5FEBB74325C7CDDE604EB4590142F0': foreign99,
-     '2DC073C94D179CA85319478F3C46B3F5': foreign100,
-     'D4EDE83847B2782F3A5116BF65D6C435': foreign101,
-     'D359A7694332F95931151EB588C1AF5E': foreign102,
-     'FF86E530405894648CE968B30C525E68': foreign103,
-     '4EEC08894BAC06915772E5B74249D323': foreign104,
-     'B22F1A0D4F964B7A07C054991CAEEB19': foreign105,
-     'F2A5C8E04849C54D927A978574E27E4F': foreign106,
-     'AC60C05B4C542CC8914005A59DEB58FA': foreign107,
-     '9F6B6A8C43A7F31DDB111384318E84E0': foreign108,
-     'EAB0F5684D052B2B639F49AF734B6428': foreign109,
-     'E295F53E4A850B613CDDF19BE7BA2152': foreign110,
-     'ED85D676440DC49934CD7F8884E0F392': foreign111,
-     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign112,
-     '4017F2464551598B868EECA194CC198A': foreign113,
-     '38D734224F75800856A0C69917B88EF8': foreign114,
-     '2987FCF94860A2648A6FA88D34EFA05A': foreign115,
-     'CEE46C5B4475EE568570CBA41D68EE0C': foreign116,
-     '51FD3899419F676C5D82C682439BFAFE': foreign117,
-     '92FA042A4FD4838557550FAACC252FDF': foreign118,
-     '97EB0171476F91CD15A883839DACE05F': foreign119,
-     '4CB823DD4201B2F6C9133CA164CC27C1': foreign120,
-     'FFAA0B1841347CE8BB80ED8EA9335519': foreign121,
-     '0EE04F42462FE0DADBF4668AD079F570': foreign122,
-     'D84A334C40B33A813552FF903364539E': foreign123,
-     '51DC73A84B35897D52C83693B7DD046D': foreign124,
-     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign125,
-     'D184468C4590DA86174C9FB293C6F14A': foreign126,
-     '075AF2584F411C88705182871B9DFB78': foreign127,
-     '137112BE4F0726F6AD61EFBED47C639E': foreign128,
-     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign129,
-     '0D1CAB354779E284B6E58B91C82ABE07': foreign130,
-     '533234054C42D87B47A4BE88C2587EC9': foreign131,
-     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign132,
-     '0C684B0C46414ED7D11529BA94FD6935': foreign133,
-     '10B4E9EA45C85246C9717EA276C7774B': foreign134,
-     '26DC6E0D40A865057A807DADF4A80DCB': foreign135,
-     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign136,
-     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign137,
-     '368482014D69E4E894C63192B0F17B63': foreign138,
-     '265FA5C440300C2875B6699C5F8B36C7': foreign139,
+     'E9D99BD14CFC77C10DFAE18A8FB74C5A': foreign4,
+     'FE0E257049372D737A7147BB187DCF9D': foreign5,
+     'BBF08FB04B2BC21BFA7B24A49D6BFFED': foreign6,
+     '99A29C87465171BECD966683DD195FE0': foreign7,
+     '6B09362247562626D5F89CA6E5CBD2DE': foreign8,
+     '722259704E530E29CFA29BA8A6165A28': foreign9,
+     '9071A44341F25CBC61BDCBAD7161E56F': foreign10,
+     '270556244439107F7C1C129B130B4C47': foreign11,
+     'B6E614EE4CFBEB1B622980B130DC3F41': foreign12,
+     '34FB71B54A1B9B1C1F7CCE98D36B76F9': foreign13,
+     '94FD08FD4489B96A203DD4875A6DAE3D': foreign14,
+     '27F920A249B4AA531A747DA49D25C4E6': foreign15,
+     '43674F054738789E61CB6A9D24EE590F': foreign16,
+     '2F6F07C34BE76735F7D5408693891AE6': foreign17,
+     'FF1563F84F41F36FE9A229AB3FA4739E': foreign18,
+     '571F192B48797F8B0AC20484A439B218': foreign19,
+     'CE85D5AF40F840E427ACC89239133201': foreign20,
+     '5360682948009480CB3B60967C1E9C4E': foreign21,
+     '4147C7DC4379F10CBF039FA1F424CF30': foreign22,
+     '330670174B886285E8E931AAC1F11A68': foreign23,
+     'B3F5CA5F4E3728010D4EE3A71ED406BE': foreign24,
+     '99C4E5454A40C61FC427EDB862680EA4': foreign25,
+     'D4C04F604802C1AE6095B19172F0E134': foreign26,
+     'EC8FA87B49BED23F0082059847D749D1': foreign27,
+     '159AA1104B1A8006C1E3109EEA075240': foreign28,
+     '0482D8294ED7C6B824EE8FB76F64DEA8': foreign29,
+     '336F8CF342D195E83F025D88E0E67CF5': foreign30,
+     '3989B718464F7D8E96063AAE1F443A7D': foreign31,
+     '8993132B4D482CC3AA66F6A0752D0F7E': foreign32,
+     'A68C8DC74CEA5473AC1B588046967037': foreign33,
+     'E917F8F14087A4C3A90C02A252449FCE': foreign34,
+     'BC04C6D045DE92D9606AD08AA7EB662B': foreign35,
+     '64D56E5E4A8131A6306241891C5A946D': foreign36,
+     'A834984646C10B036247BD86BF004ED4': foreign37,
+     'DBE391E64014FDD145AE40820C98022A': foreign38,
+     '2E44AD5F4B7B17FDBCFF8BBD2D111CBA': foreign39,
+     'D052578E42FD39068783C5AD26441B43': foreign40,
+     '65D5A02D481CBAC84C7FF6A8300290FF': foreign41,
+     'ED23BBF34B5F0FD622DB9E8B204BB63A': foreign42,
+     '6C7F83344D08B83F8B1C4998A4C54AE8': foreign43,
+     '7FA339B44DB59B14F8FA579AFC4E95F1': foreign44,
+     'C0133F294A4AE4099D7DE2A507F71913': foreign45,
+     '5B9D28AD4F69E4EDA1ED0193610394D6': foreign46,
+     '1DB810E549C51B0CF92803A3CA567A9F': foreign47,
+     'AD997E3440FDBF90C217EEB5AE82C019': foreign48,
+     'FD862E054AB9D48653FA0EA16B234198': foreign49,
+     '11907A164C7CB34C30CA6D959138FC0F': foreign50,
+     '3CD445AB4C6DC67B35D60DA472014379': foreign51,
+     '83D94B2C4BAC128653321D91B6B11A9F': foreign52,
+     '0F95A3C34E76FB1EC85217AAE2F7D8ED': foreign53,
+     '68E90BBE443B0F584B447BB6471F9698': foreign54,
+     '0BF71D314247D4EE9739E385C563DF47': foreign55,
+     '57E0650848E7948CD2BAE083B45540F9': foreign56,
+     '6ECF455744EA2C8A66C15CBE0F9D4732': foreign57,
+     'B5ED482B492E893B56A1FD98DB7F2BD8': foreign58,
+     'EBD3FCE849D367C6A0336B9A451A5330': foreign59,
+     '302392054A313F839CE35097B9BB635F': foreign60,
+     'FFB257A546DFC37AAC922E8047B291CA': foreign61,
+     'B0AE81964A685F8B31B8DFA7B392849D': foreign62,
+     '1669FAF94795EF1ACBA7FE9C800B117B': foreign63,
+     '165F15B348A03E72BD290BB61AC4BF8B': foreign64,
+     '357E9DA2462F9CE7CF4B43B0AA9DC354': foreign65,
+     'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign66,
+     '2909A3E141653B96AD1695BB3D9FD3E7': foreign67,
+     '459EAC1C45A11267216B289C90BC7AC5': foreign68,
+     '8B404A71482B2B7A44BB8A85E26C05E7': foreign69,
+     '0E7769194FC879692CDC4E91F3CA47D3': foreign70,
+     'EE9111164BB56CAF9589D28E0A80DCB7': foreign71,
+     'B9E68E6F47D05B8922EB89976547D0ED': foreign72,
+     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign73,
+     'B0214F354FA856A04434CB862696C501': foreign74,
+     '37558D484E7E3EEB7CF50F83FF516D01': foreign75,
+     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign76,
+     'C2A63B424C2C17C9DE3395B59BA9444C': foreign77,
+     '4CA21C094DAD2346E120EFBEA3D7736C': foreign78,
+     'E8535D714F5BFEC20EF595B175FA24BD': foreign79,
+     '1884D48A4EBB982234611D9DD0E1A853': foreign80,
+     '0568B98E45100A88DECA3E894117DA12': foreign81,
+     'B557F99E4E5DD1260BBC268B1579FDF6': foreign82,
+     '4A4C950D496FFCD7471A22924E8F3AE4': foreign83,
+     '586A140B4F5148B73C6201AF3EDA5701': foreign84,
+     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign85,
+     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign86,
+     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign87,
+     'E76AEC2E4B56116E911A1B86036607DC': foreign88,
+     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign89,
+     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign90,
+     '72BDC1A847C3175B60A8E7B540400F62': foreign91,
+     'B6D27EAC444C85D1D925F986D613D5B3': foreign92,
+     'EFFEC0C44629992590058E96821DF5A4': foreign93,
+     'C21422064060FC0412F08EAAD527453E': foreign94,
+     'E08DC42B45A65EE74232E6B7819467BF': foreign95,
+     '9A29CFAC457713D31702BF919B762966': foreign96,
+     '4244ACB14A814AA70C452CB4CFEBB75D': foreign97,
+     'FAAB758A46290493F8E43BA2B90FE5D8': foreign98,
+     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign99,
+     '2C5FEBB74325C7CDDE604EB4590142F0': foreign100,
+     '2DC073C94D179CA85319478F3C46B3F5': foreign101,
+     'D4EDE83847B2782F3A5116BF65D6C435': foreign102,
+     'D359A7694332F95931151EB588C1AF5E': foreign103,
+     'FF86E530405894648CE968B30C525E68': foreign104,
+     '4EEC08894BAC06915772E5B74249D323': foreign105,
+     'B22F1A0D4F964B7A07C054991CAEEB19': foreign106,
+     'F2A5C8E04849C54D927A978574E27E4F': foreign107,
+     'AC60C05B4C542CC8914005A59DEB58FA': foreign108,
+     '9F6B6A8C43A7F31DDB111384318E84E0': foreign109,
+     'EAB0F5684D052B2B639F49AF734B6428': foreign110,
+     'E295F53E4A850B613CDDF19BE7BA2152': foreign111,
+     'ED85D676440DC49934CD7F8884E0F392': foreign112,
+     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign113,
+     '4017F2464551598B868EECA194CC198A': foreign114,
+     '38D734224F75800856A0C69917B88EF8': foreign115,
+     '2987FCF94860A2648A6FA88D34EFA05A': foreign116,
+     'CEE46C5B4475EE568570CBA41D68EE0C': foreign117,
+     '51FD3899419F676C5D82C682439BFAFE': foreign118,
+     '92FA042A4FD4838557550FAACC252FDF': foreign119,
+     '97EB0171476F91CD15A883839DACE05F': foreign120,
+     '4CB823DD4201B2F6C9133CA164CC27C1': foreign121,
+     'FFAA0B1841347CE8BB80ED8EA9335519': foreign122,
+     '0EE04F42462FE0DADBF4668AD079F570': foreign123,
+     'D84A334C40B33A813552FF903364539E': foreign124,
+     '51DC73A84B35897D52C83693B7DD046D': foreign125,
+     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign126,
+     'D184468C4590DA86174C9FB293C6F14A': foreign127,
+     '075AF2584F411C88705182871B9DFB78': foreign128,
+     '137112BE4F0726F6AD61EFBED47C639E': foreign129,
+     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign130,
+     '0D1CAB354779E284B6E58B91C82ABE07': foreign131,
+     '533234054C42D87B47A4BE88C2587EC9': foreign132,
+     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign133,
+     '0C684B0C46414ED7D11529BA94FD6935': foreign134,
+     '10B4E9EA45C85246C9717EA276C7774B': foreign135,
+     '26DC6E0D40A865057A807DADF4A80DCB': foreign136,
+     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign137,
+     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign138,
+     '368482014D69E4E894C63192B0F17B63': foreign139,
+     '265FA5C440300C2875B6699C5F8B36C7': foreign140,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign2 || {}, "JavaScripts/common/Boss"],
 [foreign3 || {}, "JavaScripts/common/Coin"],
-[foreign4 || {}, "JavaScripts/common/ExplosiveCoins"],
-[foreign5 || {}, "JavaScripts/common/FlyText"],
-[foreign6 || {}, "JavaScripts/common/Loading"],
-[foreign7 || {}, "JavaScripts/common/Monster"],
-[foreign8 || {}, "JavaScripts/common/Monster_Level"],
-[foreign9 || {}, "JavaScripts/common/MyClearDayNight"],
-[foreign10 || {}, "JavaScripts/common/notice/Notice"],
-[foreign11 || {}, "JavaScripts/common/notice/Tween"],
-[foreign12 || {}, "JavaScripts/common/notice/UIPool"],
-[foreign13 || {}, "JavaScripts/common/notice/Updater"],
-[foreign14 || {}, "JavaScripts/common/ObjImpulse"],
-[foreign15 || {}, "JavaScripts/common/TestPanel"],
-[foreign16 || {}, "JavaScripts/config/Action"],
-[foreign17 || {}, "JavaScripts/config/Ads"],
-[foreign18 || {}, "JavaScripts/config/Assets"],
-[foreign19 || {}, "JavaScripts/config/BagInfo"],
-[foreign20 || {}, "JavaScripts/config/Coin"],
-[foreign21 || {}, "JavaScripts/config/ColdWeapon"],
-[foreign22 || {}, "JavaScripts/config/Color"],
-[foreign23 || {}, "JavaScripts/config/ConfigBase"],
-[foreign24 || {}, "JavaScripts/config/DressData"],
-[foreign25 || {}, "JavaScripts/config/DressProgress"],
-[foreign26 || {}, "JavaScripts/config/GameConfig"],
-[foreign27 || {}, "JavaScripts/config/MonsterInfo"],
-[foreign28 || {}, "JavaScripts/config/Music"],
-[foreign29 || {}, "JavaScripts/config/NPC"],
-[foreign30 || {}, "JavaScripts/config/OnlineRewards"],
-[foreign31 || {}, "JavaScripts/config/QuickEmoji"],
-[foreign32 || {}, "JavaScripts/config/QuickTalk"],
-[foreign33 || {}, "JavaScripts/config/Task"],
-[foreign34 || {}, "JavaScripts/config/Trampoline"],
-[foreign35 || {}, "JavaScripts/const/GlobalData"],
-[foreign36 || {}, "JavaScripts/GameLauncher"],
-[foreign37 || {}, "JavaScripts/Modified027Editor/ModifiedCamera"],
-[foreign38 || {}, "JavaScripts/Modified027Editor/ModifiedPlayer"],
-[foreign39 || {}, "JavaScripts/Modified027Editor/ModifiedSpawn"],
-[foreign40 || {}, "JavaScripts/Modified027Editor/ModifiedStaticAPI"],
-[foreign41 || {}, "JavaScripts/module/AdsModule/AdsModuleC"],
-[foreign42 || {}, "JavaScripts/module/AdsModule/AdsModuleS"],
-[foreign43 || {}, "JavaScripts/module/AdsModule/ui/AdTipsPanel"],
-[foreign44 || {}, "JavaScripts/module/ArkModule/ArkModule"],
-[foreign45 || {}, "JavaScripts/module/BagModule/BagModule"],
-[foreign46 || {}, "JavaScripts/module/GuideModule/GuideModule"],
-[foreign47 || {}, "JavaScripts/module/GuideModule/ui/GuidePanel"],
-[foreign48 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
-[foreign49 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
-[foreign50 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
-[foreign52 || {}, "JavaScripts/module/ObjImpulseModule/ObjImpulseModule"],
-[foreign53 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardData"],
-[foreign54 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleC"],
-[foreign55 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleS"],
-[foreign56 || {}, "JavaScripts/module/OnlineRewardModule/ui/OnlineRewardPanel"],
-[foreign57 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
-[foreign58 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
-[foreign59 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
-[foreign60 || {}, "JavaScripts/module/PlayerModule/ui/PlayerLifebar"],
-[foreign61 || {}, "JavaScripts/module/PropModule/PropData"],
-[foreign62 || {}, "JavaScripts/module/PropModule/PropModuleC"],
-[foreign63 || {}, "JavaScripts/module/PropModule/PropModuleS"],
-[foreign64 || {}, "JavaScripts/module/RankModule/PlayerPropData"],
-[foreign65 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
-[foreign66 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
-[foreign67 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
-[foreign68 || {}, "JavaScripts/module/RingSoulModule/RingSoulModule"],
-[foreign69 || {}, "JavaScripts/module/ShopModule/ShopData"],
-[foreign70 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
-[foreign71 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
-[foreign72 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
-[foreign73 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
-[foreign74 || {}, "JavaScripts/module/SignInModule/SignInModule"],
-[foreign75 || {}, "JavaScripts/module/TaskModule/TaskData"],
-[foreign76 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
-[foreign77 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
-[foreign78 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
-[foreign79 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
-[foreign80 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
-[foreign81 || {}, "JavaScripts/Prefabs/PrefabEvent"],
-[foreign82 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
-[foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
-[foreign84 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
-[foreign85 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
-[foreign86 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
-[foreign87 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
-[foreign88 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
-[foreign89 || {}, "JavaScripts/Tools/Console"],
-[foreign90 || {}, "JavaScripts/Tools/FreeCamera"],
-[foreign91 || {}, "JavaScripts/Tools/InputManager"],
-[foreign92 || {}, "JavaScripts/Tools/MapEx"],
-[foreign93 || {}, "JavaScripts/Tools/ObjectPool"],
-[foreign94 || {}, "JavaScripts/Tools/utils"],
-[foreign95 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
-[foreign96 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
-[foreign97 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign98 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign99 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
-[foreign100 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_1_generate"],
-[foreign101 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_2_generate"],
-[foreign102 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_3_generate"],
-[foreign103 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_4_generate"],
-[foreign104 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_5_generate"],
-[foreign105 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_6_generate"],
-[foreign106 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_7_generate"],
-[foreign107 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_generate"],
-[foreign108 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
-[foreign109 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkItem_generate"],
-[foreign110 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkPanel_generate"],
-[foreign111 || {}, "JavaScripts/ui-generate/module/ArkModule/GiftBagPanel_generate"],
-[foreign112 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
-[foreign113 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
-[foreign114 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
-[foreign115 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
-[foreign116 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
-[foreign117 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign118 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign119 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelItem_generate"],
-[foreign120 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelPanel_generate"],
-[foreign121 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
-[foreign122 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
-[foreign123 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
-[foreign124 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
-[foreign125 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
-[foreign126 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
-[foreign127 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
-[foreign128 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
-[foreign129 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign130 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign131 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
-[foreign132 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
-[foreign133 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign134 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign135 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
-[foreign136 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
-[foreign137 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
-[foreign138 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
-[foreign139 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
+[foreign4 || {}, "JavaScripts/common/Dance"],
+[foreign5 || {}, "JavaScripts/common/ExplosiveCoins"],
+[foreign6 || {}, "JavaScripts/common/FlyText"],
+[foreign7 || {}, "JavaScripts/common/Loading"],
+[foreign8 || {}, "JavaScripts/common/Monster"],
+[foreign9 || {}, "JavaScripts/common/Monster_Level"],
+[foreign10 || {}, "JavaScripts/common/MyClearDayNight"],
+[foreign11 || {}, "JavaScripts/common/notice/Notice"],
+[foreign12 || {}, "JavaScripts/common/notice/Tween"],
+[foreign13 || {}, "JavaScripts/common/notice/UIPool"],
+[foreign14 || {}, "JavaScripts/common/notice/Updater"],
+[foreign15 || {}, "JavaScripts/common/ObjImpulse"],
+[foreign16 || {}, "JavaScripts/common/TestPanel"],
+[foreign17 || {}, "JavaScripts/config/Action"],
+[foreign18 || {}, "JavaScripts/config/Ads"],
+[foreign19 || {}, "JavaScripts/config/Assets"],
+[foreign20 || {}, "JavaScripts/config/BagInfo"],
+[foreign21 || {}, "JavaScripts/config/Coin"],
+[foreign22 || {}, "JavaScripts/config/ColdWeapon"],
+[foreign23 || {}, "JavaScripts/config/Color"],
+[foreign24 || {}, "JavaScripts/config/ConfigBase"],
+[foreign25 || {}, "JavaScripts/config/DressData"],
+[foreign26 || {}, "JavaScripts/config/DressProgress"],
+[foreign27 || {}, "JavaScripts/config/GameConfig"],
+[foreign28 || {}, "JavaScripts/config/MonsterInfo"],
+[foreign29 || {}, "JavaScripts/config/Music"],
+[foreign30 || {}, "JavaScripts/config/NPC"],
+[foreign31 || {}, "JavaScripts/config/OnlineRewards"],
+[foreign32 || {}, "JavaScripts/config/QuickEmoji"],
+[foreign33 || {}, "JavaScripts/config/QuickTalk"],
+[foreign34 || {}, "JavaScripts/config/Task"],
+[foreign35 || {}, "JavaScripts/config/Trampoline"],
+[foreign36 || {}, "JavaScripts/const/GlobalData"],
+[foreign37 || {}, "JavaScripts/GameLauncher"],
+[foreign38 || {}, "JavaScripts/Modified027Editor/ModifiedCamera"],
+[foreign39 || {}, "JavaScripts/Modified027Editor/ModifiedPlayer"],
+[foreign40 || {}, "JavaScripts/Modified027Editor/ModifiedSpawn"],
+[foreign41 || {}, "JavaScripts/Modified027Editor/ModifiedStaticAPI"],
+[foreign42 || {}, "JavaScripts/module/AdsModule/AdsModuleC"],
+[foreign43 || {}, "JavaScripts/module/AdsModule/AdsModuleS"],
+[foreign44 || {}, "JavaScripts/module/AdsModule/ui/AdTipsPanel"],
+[foreign45 || {}, "JavaScripts/module/ArkModule/ArkModule"],
+[foreign46 || {}, "JavaScripts/module/BagModule/BagModule"],
+[foreign47 || {}, "JavaScripts/module/GuideModule/GuideModule"],
+[foreign48 || {}, "JavaScripts/module/GuideModule/ui/GuidePanel"],
+[foreign49 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
+[foreign50 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
+[foreign51 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
+[foreign52 || {}, "JavaScripts/module/LevelModule/LevelModule"],
+[foreign53 || {}, "JavaScripts/module/ObjImpulseModule/ObjImpulseModule"],
+[foreign54 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardData"],
+[foreign55 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleC"],
+[foreign56 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleS"],
+[foreign57 || {}, "JavaScripts/module/OnlineRewardModule/ui/OnlineRewardPanel"],
+[foreign58 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
+[foreign59 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
+[foreign60 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
+[foreign61 || {}, "JavaScripts/module/PlayerModule/ui/PlayerLifebar"],
+[foreign62 || {}, "JavaScripts/module/PropModule/PropData"],
+[foreign63 || {}, "JavaScripts/module/PropModule/PropModuleC"],
+[foreign64 || {}, "JavaScripts/module/PropModule/PropModuleS"],
+[foreign65 || {}, "JavaScripts/module/RankModule/PlayerPropData"],
+[foreign66 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
+[foreign67 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
+[foreign68 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
+[foreign69 || {}, "JavaScripts/module/RingSoulModule/RingSoulModule"],
+[foreign70 || {}, "JavaScripts/module/ShopModule/ShopData"],
+[foreign71 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
+[foreign72 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
+[foreign73 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
+[foreign74 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
+[foreign75 || {}, "JavaScripts/module/SignInModule/SignInModule"],
+[foreign76 || {}, "JavaScripts/module/TaskModule/TaskData"],
+[foreign77 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
+[foreign78 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
+[foreign79 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
+[foreign80 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
+[foreign81 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
+[foreign82 || {}, "JavaScripts/Prefabs/PrefabEvent"],
+[foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
+[foreign84 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
+[foreign85 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
+[foreign86 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
+[foreign87 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
+[foreign88 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
+[foreign89 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
+[foreign90 || {}, "JavaScripts/Tools/Console"],
+[foreign91 || {}, "JavaScripts/Tools/FreeCamera"],
+[foreign92 || {}, "JavaScripts/Tools/InputManager"],
+[foreign93 || {}, "JavaScripts/Tools/MapEx"],
+[foreign94 || {}, "JavaScripts/Tools/ObjectPool"],
+[foreign95 || {}, "JavaScripts/Tools/utils"],
+[foreign96 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
+[foreign97 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
+[foreign98 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign99 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign100 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
+[foreign101 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_1_generate"],
+[foreign102 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_2_generate"],
+[foreign103 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_3_generate"],
+[foreign104 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_4_generate"],
+[foreign105 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_5_generate"],
+[foreign106 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_6_generate"],
+[foreign107 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_7_generate"],
+[foreign108 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_generate"],
+[foreign109 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
+[foreign110 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkItem_generate"],
+[foreign111 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkPanel_generate"],
+[foreign112 || {}, "JavaScripts/ui-generate/module/ArkModule/GiftBagPanel_generate"],
+[foreign113 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
+[foreign114 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
+[foreign115 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
+[foreign116 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
+[foreign117 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
+[foreign118 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign119 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign120 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelItem_generate"],
+[foreign121 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelPanel_generate"],
+[foreign122 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
+[foreign123 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
+[foreign124 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
+[foreign125 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
+[foreign126 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
+[foreign127 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
+[foreign128 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
+[foreign129 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
+[foreign130 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign131 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign132 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
+[foreign133 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
+[foreign134 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign135 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign136 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
+[foreign137 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
+[foreign138 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
+[foreign139 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
+[foreign140 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

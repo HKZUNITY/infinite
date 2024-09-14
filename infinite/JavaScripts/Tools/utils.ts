@@ -576,7 +576,13 @@ export class Utils {
             new mw.Vector(-4065, 6446, 2000),
             new mw.Vector(-2596, 7032, 2000),
             new mw.Vector(-930, 7584, 2000),
-            new mw.Vector(1277, 8205, 2000)
+            new mw.Vector(1277, 8205, 2000),
+            new mw.Vector(-3479, 6635, 2000),
+            new mw.Vector(-3836, 6980, 2000),
+            new mw.Vector(-4255, 7299, 2000),
+            new mw.Vector(-3640, 7440, 2000),
+            new mw.Vector(-3106, 7545, 2000),
+            new mw.Vector(-4459, 6234, 2000)
         ];
     public static getWorldLocation(): mw.Vector {
         return this.locs[this.getRandomInteger(0, this.locs.length - 1)];

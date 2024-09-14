@@ -5,6 +5,7 @@ import { BagData, BagModuleC, BagModuleS } from "./module/BagModule/BagModule";
 import { GuideData, GuideModuleC, GuideModuleS } from "./module/GuideModule/GuideModule";
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
 import HUDModuleS from "./module/HUDModule/HUDModuleS";
+import { LevelData, LevelModuleC, LevelModuleS } from "./module/LevelModule/LevelModule";
 import OnlineRewardData from "./module/OnlineRewardModule/OnlineRewardData";
 import { OnlineRewardModuleC } from "./module/OnlineRewardModule/OnlineRewardModuleC";
 import { OnlineRewardModuleS } from "./module/OnlineRewardModule/OnlineRewardModuleS";
@@ -82,6 +83,7 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(RingSoulModuleS, RingSoulModuleC, RingSoulData);
         ModuleService.registerModule(SignInModuleS, SignInModuleC, SignInData);
         ModuleService.registerModule(ArkModuleS, ArkModuleC, ArkData);
+        ModuleService.registerModule(LevelModuleS, LevelModuleC, LevelData);
     }
 
     /**------------------------------------------- 客户端 ------------------------------------------------ */

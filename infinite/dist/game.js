@@ -385,7 +385,7 @@ class RpcStance {
 }
 PlayerManagerExtesion.init();
 
-var foreign37 = /*#__PURE__*/Object.freeze({
+var foreign38 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerManagerExtesion: PlayerManagerExtesion
 });
@@ -488,7 +488,7 @@ SpawnManager.deleteDic = new Map([
     ["14197", true],
 ]);
 
-var foreign38 = /*#__PURE__*/Object.freeze({
+var foreign39 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SpawnManager: SpawnManager
 });
@@ -684,7 +684,7 @@ class GeneralManager {
     }
 }
 
-var foreign39 = /*#__PURE__*/Object.freeze({
+var foreign40 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     GeneralManager: GeneralManager
 });
@@ -815,7 +815,7 @@ ConfigBase.TAG_MAINLANGUAGE = 'MainLanguage'; //主语言tag
 ConfigBase.TAG_CHILDLANGUAGE = 'ChildLanguage'; //子语言tag
 ConfigBase.languageIndex = 0;
 
-var foreign22 = /*#__PURE__*/Object.freeze({
+var foreign23 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ConfigBase: ConfigBase
 });
@@ -827,7 +827,7 @@ class ActionConfig extends ConfigBase {
     }
 }
 
-var foreign15 = /*#__PURE__*/Object.freeze({
+var foreign16 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ActionConfig: ActionConfig
 });
@@ -839,7 +839,7 @@ class AdsConfig extends ConfigBase {
     }
 }
 
-var foreign16 = /*#__PURE__*/Object.freeze({
+var foreign17 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AdsConfig: AdsConfig
 });
@@ -851,7 +851,7 @@ class AssetsConfig extends ConfigBase {
     }
 }
 
-var foreign17 = /*#__PURE__*/Object.freeze({
+var foreign18 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AssetsConfig: AssetsConfig
 });
@@ -863,7 +863,7 @@ class BagInfoConfig extends ConfigBase {
     }
 }
 
-var foreign18 = /*#__PURE__*/Object.freeze({
+var foreign19 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     BagInfoConfig: BagInfoConfig
 });
@@ -875,7 +875,7 @@ class CoinConfig extends ConfigBase {
     }
 }
 
-var foreign19 = /*#__PURE__*/Object.freeze({
+var foreign20 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     CoinConfig: CoinConfig
 });
@@ -887,7 +887,7 @@ class ColdWeaponConfig extends ConfigBase {
     }
 }
 
-var foreign20 = /*#__PURE__*/Object.freeze({
+var foreign21 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColdWeaponConfig: ColdWeaponConfig
 });
@@ -899,7 +899,7 @@ class ColorConfig extends ConfigBase {
     }
 }
 
-var foreign21 = /*#__PURE__*/Object.freeze({
+var foreign22 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColorConfig: ColorConfig
 });
@@ -911,7 +911,7 @@ class DressDataConfig extends ConfigBase {
     }
 }
 
-var foreign23 = /*#__PURE__*/Object.freeze({
+var foreign24 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     DressDataConfig: DressDataConfig
 });
@@ -923,19 +923,19 @@ class DressProgressConfig extends ConfigBase {
     }
 }
 
-var foreign24 = /*#__PURE__*/Object.freeze({
+var foreign25 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     DressProgressConfig: DressProgressConfig
 });
 
-const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "MoveSpeed", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", ["3E882EFC"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", ["3E882EFC"], ["336664", "336668"], ["336669"], 250, "336816", ["336673", "336670", "336672"], [1, 0.95, 1.2], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["384353", "101411", "297932"], [new mw.Vector(170, 0, -50), new mw.Vector(200, 0, -120), new mw.Vector(100, 0, -125)], [new mw.Vector(0, -60, 0), new mw.Vector(0, 30, 10), new mw.Vector(0, 0, 0)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1), new mw.Vector(0.55, 1, 1)]], [3, "蜘蛛精", ["3E882EFC"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0.55, 1, 1), new mw.Vector(1, 1, 1)]], [4, "龙", ["3E882EFC"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1, 1, 1), new mw.Vector(1, 1, 1)]], [5, "丧尸", ["3E882EFC"], ["284991", "268599"], ["285740", "269161", "285826"], 150, "-1", ["285210"], [0.55], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["31260"], [new mw.Vector(5, 0, 0)], [new mw.Vector(0, -30, 180)], [new mw.Vector(1, 1, 1)]], [6, "角色", ["3E882EFC"], ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]]];
+const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "MoveSpeed", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", ["3E882EFC"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", ["3E882EFC"], ["336664", "336668"], ["336669"], 250, "336816", ["336673", "336670", "336672"], [1, 0.95, 1.2], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["384353", "101411", "297932"], [new mw.Vector(170, 0, -50), new mw.Vector(200, 0, -120), new mw.Vector(100, 0, -125)], [new mw.Vector(0, -60, 0), new mw.Vector(0, 30, 10), new mw.Vector(0, 0, 0)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1), new mw.Vector(0.55, 1, 1)]], [3, "蜘蛛精", ["3E882EFC"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0.55, 1, 1), new mw.Vector(1, 1, 1)]], [4, "龙", ["3E882EFC"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1, 1, 1), new mw.Vector(1, 1, 1)]], [5, "丧尸", ["3E882EFC"], ["284991", "268599"], ["285740", "269161", "285826"], 150, "-1", ["285210"], [0.55], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["31260"], [new mw.Vector(5, 0, 0)], [new mw.Vector(0, -30, 180)], [new mw.Vector(1, 1, 1)]], [6, "角色", ["3E882EFC"], ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]], [7, "角色", ["3E882EFC"], ["-1"], ["-1"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]]];
 class MonsterInfoConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$7);
     }
 }
 
-var foreign26 = /*#__PURE__*/Object.freeze({
+var foreign27 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     MonsterInfoConfig: MonsterInfoConfig
 });
@@ -947,7 +947,7 @@ class MusicConfig extends ConfigBase {
     }
 }
 
-var foreign27 = /*#__PURE__*/Object.freeze({
+var foreign28 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     MusicConfig: MusicConfig
 });
@@ -959,7 +959,7 @@ class NPCConfig extends ConfigBase {
     }
 }
 
-var foreign28 = /*#__PURE__*/Object.freeze({
+var foreign29 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     NPCConfig: NPCConfig
 });
@@ -971,7 +971,7 @@ class OnlineRewardsConfig extends ConfigBase {
     }
 }
 
-var foreign29 = /*#__PURE__*/Object.freeze({
+var foreign30 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardsConfig: OnlineRewardsConfig
 });
@@ -983,7 +983,7 @@ class QuickEmojiConfig extends ConfigBase {
     }
 }
 
-var foreign30 = /*#__PURE__*/Object.freeze({
+var foreign31 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     QuickEmojiConfig: QuickEmojiConfig
 });
@@ -995,7 +995,7 @@ class QuickTalkConfig extends ConfigBase {
     }
 }
 
-var foreign31 = /*#__PURE__*/Object.freeze({
+var foreign32 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     QuickTalkConfig: QuickTalkConfig
 });
@@ -1007,7 +1007,7 @@ class TaskConfig extends ConfigBase {
     }
 }
 
-var foreign32 = /*#__PURE__*/Object.freeze({
+var foreign33 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TaskConfig: TaskConfig
 });
@@ -1019,7 +1019,7 @@ class TrampolineConfig extends ConfigBase {
     }
 }
 
-var foreign33 = /*#__PURE__*/Object.freeze({
+var foreign34 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     TrampolineConfig: TrampolineConfig
 });
@@ -1077,7 +1077,7 @@ class GameConfig {
 }
 GameConfig.configMap = new Map();
 
-var foreign25 = /*#__PURE__*/Object.freeze({
+var foreign26 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     GameConfig: GameConfig
 });
@@ -1461,7 +1461,7 @@ GlobalData.pathStrMap = new Map([
 GlobalData.signInDays = 7;
 GlobalData.gameName = `斗神大陆（开学继承神位）`;
 
-var foreign34 = /*#__PURE__*/Object.freeze({
+var foreign35 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GlobalData
 });
@@ -1487,7 +1487,7 @@ class Console {
     }
 }
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Console
 });
@@ -2165,7 +2165,7 @@ var PrefabEvent;
     initEvent();
 })(PrefabEvent || (PrefabEvent = {}));
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; }
 });
@@ -2883,7 +2883,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Tween: Tween$2,
     Utils: Utils,
@@ -2895,7 +2895,7 @@ var foreign92 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -2954,7 +2954,7 @@ Loading_Generate = __decorate([
 ], Loading_Generate);
 var Loading_Generate$1 = Loading_Generate;
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign96 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Loading_Generate$1
 });
@@ -3007,7 +3007,7 @@ var foreign6 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -3064,7 +3064,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -3074,7 +3074,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -3120,7 +3120,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -3852,7 +3852,7 @@ const add = TWEEN.add.bind(TWEEN);
 const remove = TWEEN.remove.bind(TWEEN);
 const update = TWEEN.update.bind(TWEEN);
 
-var foreign10 = /*#__PURE__*/Object.freeze({
+var foreign11 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Easing: Easing,
     Group: Group,
@@ -4030,7 +4030,7 @@ class WorldUIPool {
     }
 }
 
-var foreign11 = /*#__PURE__*/Object.freeze({
+var foreign12 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     UIElementPool: UIElementPool,
     UIPool: UIPool,
@@ -4062,7 +4062,7 @@ var updater;
     };
 })(updater || (updater = {}));
 
-var foreign12 = /*#__PURE__*/Object.freeze({
+var foreign13 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get updater () { return updater; }
 });
@@ -4351,7 +4351,7 @@ class TopNoticeItem extends TopNoticeItem_Generate$1 {
     }
 }
 
-var foreign9 = /*#__PURE__*/Object.freeze({
+var foreign10 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Notice: Notice
 });
@@ -4434,7 +4434,7 @@ class NodeInfo {
 /**
  * 所有节点信息
  */
-let AnimationInfo$1 = class AnimationInfo {
+let AnimationInfo$2 = class AnimationInfo {
     constructor() {
         /** 战斗待机动画 */
         this.charFightIdelAniId = "";
@@ -4503,7 +4503,7 @@ class WeaponData extends WeaponPreDefine {
         this.animationInfo = [];
         this.animationJsons.forEach(e => {
             let info = JSON.parse(e);
-            let newInfo = new AnimationInfo$1();
+            let newInfo = new AnimationInfo$2();
             if (info) {
                 Object.keys(info).forEach(e => {
                     if (info[e] instanceof Object) {
@@ -4559,9 +4559,9 @@ __decorate([
     mw.Property({ replicated: true, onChanged: "client_OnChangeCharGuid" })
 ], WeaponData.prototype, "charGuid", void 0);
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    AnimationInfo: AnimationInfo$1,
+    AnimationInfo: AnimationInfo$2,
     NodeInfo: NodeInfo,
     get NodeType () { return NodeType; },
     WeaponData: WeaponData,
@@ -4635,7 +4635,7 @@ class SkillRectCheck {
 }
 SkillRectCheck.showRect = true;
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SkillRectCheck: SkillRectCheck
 });
@@ -4835,7 +4835,7 @@ class WeaponManager extends WeaponManagerSvr {
 WeaponManager._Instance = null;
 WeaponManager.GetInstance();
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponManager: WeaponManager
 });
@@ -4981,7 +4981,7 @@ class ColdWeapon {
     }
 }
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColdWeapon: ColdWeapon
 });
@@ -5126,7 +5126,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -5136,7 +5136,7 @@ var foreign90 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5252,7 +5252,7 @@ BagInfoPanel_Generate = __decorate([
 ], BagInfoPanel_Generate);
 var BagInfoPanel_Generate$1 = BagInfoPanel_Generate;
 
-var foreign110 = /*#__PURE__*/Object.freeze({
+var foreign112 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagInfoPanel_Generate$1
 });
@@ -5262,7 +5262,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5344,7 +5344,7 @@ BagItem_Generate = __decorate([
 ], BagItem_Generate);
 var BagItem_Generate$1 = BagItem_Generate;
 
-var foreign111 = /*#__PURE__*/Object.freeze({
+var foreign113 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagItem_Generate$1
 });
@@ -5354,7 +5354,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5440,7 +5440,7 @@ BagPanel_Generate = __decorate([
 ], BagPanel_Generate);
 var BagPanel_Generate$1 = BagPanel_Generate;
 
-var foreign112 = /*#__PURE__*/Object.freeze({
+var foreign114 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagPanel_Generate$1
 });
@@ -5450,7 +5450,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5506,7 +5506,7 @@ BagTab_Generate = __decorate([
 ], BagTab_Generate);
 var BagTab_Generate$1 = BagTab_Generate;
 
-var foreign113 = /*#__PURE__*/Object.freeze({
+var foreign115 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagTab_Generate$1
 });
@@ -5516,7 +5516,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5586,10 +5586,307 @@ AdsTipsPanel_Generate = __decorate([
 ], AdsTipsPanel_Generate);
 var AdsTipsPanel_Generate$1 = AdsTipsPanel_Generate;
 
-var foreign106 = /*#__PURE__*/Object.freeze({
+var foreign108 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdsTipsPanel_Generate$1
 });
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LevelModule/LevelItem.ui
+ * TIME: 2024.09.14-19.51.00
+ */
+let LevelItem_Generate = class LevelItem_Generate extends UIScript {
+    get mLevelTextBlock() {
+        if (!this.mLevelTextBlock_Internal && this.uiWidgetBase) {
+            this.mLevelTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mLevelTextBlock');
+        }
+        return this.mLevelTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mLevelTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LevelItem_Generate = __decorate([
+    UIBind('UI/module/LevelModule/LevelItem.ui')
+], LevelItem_Generate);
+var LevelItem_Generate$1 = LevelItem_Generate;
+
+var foreign119 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LevelItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LevelModule/LevelPanel.ui
+ * TIME: 2024.09.14-19.51.00
+ */
+let LevelPanel_Generate = class LevelPanel_Generate extends UIScript {
+    get mLevelTextBlock() {
+        if (!this.mLevelTextBlock_Internal && this.uiWidgetBase) {
+            this.mLevelTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LevelBgImage/mLevelTextBlock');
+        }
+        return this.mLevelTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mLevelTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LevelPanel_Generate = __decorate([
+    UIBind('UI/module/LevelModule/LevelPanel.ui')
+], LevelPanel_Generate);
+var LevelPanel_Generate$1 = LevelPanel_Generate;
+
+var foreign120 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LevelPanel_Generate$1
+});
+
+class LevelData extends Subdata {
+    constructor() {
+        super(...arguments);
+        this.levels = {};
+    }
+    setLevel(key, value) {
+        MapEx.set(this.levels, key, value);
+        this.save(true);
+    }
+    addLevel(key) {
+        let level = 1;
+        if (MapEx.has(this.levels, key)) {
+            level = MapEx.get(this.levels, key);
+        }
+        level += 1;
+        MapEx.set(this.levels, key, level);
+        this.save(true);
+    }
+}
+__decorate([
+    Decorator.persistence()
+], LevelData.prototype, "levels", void 0);
+const transferMap = new Map();
+transferMap.set(1, { triggerIds: ["19DDCA11"], worldUIIds: ["34DE2A28"], targetLoc: new mw.Vector(-4065, 6446, 2000), name: "新手村" });
+transferMap.set(2, { triggerIds: ["3E8FFFFB"], worldUIIds: ["361F265D"], targetLoc: new mw.Vector(-5260, -3226, 1700), name: "中级狩猎场" });
+transferMap.set(3, { triggerIds: ["0CEEF058"], worldUIIds: ["18EED1DD"], targetLoc: new mw.Vector(3246, -19119, 1700), name: "高级狩猎场" });
+transferMap.set(4, { triggerIds: ["1849DDD5"], worldUIIds: ["2789D9BE"], targetLoc: new mw.Vector(-9170, -9478, 400), name: "10万年魂兽" });
+transferMap.set(5, { triggerIds: ["3FDFD371"], worldUIIds: ["27AE1609"], targetLoc: new mw.Vector(-9687, 9475, 4200), name: "神级狩猎场" });
+class LevelPanel extends LevelPanel_Generate$1 {
+    onStart() {
+    }
+    updateLevelTextBlock(key, level) {
+        this.mLevelTextBlock.text = `${level}级\n${levelMap.get(key).name}`;
+        this.show();
+    }
+}
+class LevelItem extends LevelItem_Generate$1 {
+    onStart() {
+    }
+    updateLevelTextBlock(name) {
+        this.mLevelTextBlock.text = `${name}`;
+    }
+}
+const levelMap = new Map();
+levelMap.set(1, { triggers: ["0531B54C"], worldUIIds: ["081A5D07"], name: "黑悟空" });
+class LevelModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.levelPanel = null;
+        this.levels = {};
+    }
+    get getLevelPanel() {
+        if (!this.levelPanel) {
+            this.levelPanel = mw.UIService.getUI(LevelPanel);
+        }
+        return this.levelPanel;
+    }
+    onStart() {
+    }
+    onEnterScene(sceneType) {
+        this.levels = this.data.levels;
+        this.initTransfer();
+    }
+    setLevel(key, value) {
+        if (MapEx.has(this.levels, key)) {
+            MapEx.get(this.levels, key);
+        }
+        MapEx.set(this.levels, key, value);
+        this.server.net_setLevel(key, value);
+    }
+    getLevel(key) {
+        if (MapEx.has(this.levels, key)) {
+            return MapEx.get(this.levels, key);
+        }
+        return 0;
+    }
+    net_startLevel(key, level) {
+        this.getLevelPanel.updateLevelTextBlock(key, level);
+    }
+    hideLevelPanel() {
+        // this.getLevelPanel.hide();//TODO
+    }
+    initTransfer() {
+        transferMap.forEach((value, key) => {
+            value.triggerIds.forEach((triggerId) => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then((go) => {
+                    let trigger = go;
+                    trigger.onEnter.add((character) => {
+                        if (character.gameObjectId != this.localPlayer.character.gameObjectId)
+                            return;
+                        this.localPlayer.character.worldTransform.position = value.targetLoc;
+                    });
+                });
+            });
+            value.worldUIIds.forEach((worldId) => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
+                    let worldUI = v;
+                    let levelItem = mw.UIService.create(LevelItem);
+                    levelItem.updateLevelTextBlock(value.name);
+                    worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+                });
+            });
+        });
+        levelMap.forEach((value, key) => {
+            value.triggers.forEach((triggerId) => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then((v) => {
+                    v.onEnter.add((char) => {
+                        if (this.localPlayer.character.gameObjectId != char.gameObjectId)
+                            return;
+                        this.server.net_startLevel(key);
+                    });
+                });
+            });
+            value.worldUIIds.forEach((worldId) => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
+                    let worldUI = v;
+                    let levelItem = mw.UIService.create(LevelItem);
+                    levelItem.updateLevelTextBlock(`${value.name}关卡`);
+                    worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+                });
+            });
+        });
+    }
+}
+const triggerParent = "264D6FAD";
+class LevelModuleS extends ModuleS {
+    constructor() {
+        super(...arguments);
+        this.triggers = [];
+    }
+    onStart() {
+        this.initTrigger();
+    }
+    net_setLevel(key, value) {
+        this.currentData.setLevel(key, value);
+    }
+    initTrigger() {
+        mw.GameObject.asyncFindGameObjectById(triggerParent).then((value) => {
+            value.getChildren().forEach((v) => {
+                this.triggers.push(v);
+            });
+        });
+    }
+    getTrigger() {
+        let players = Player.getAllPlayers();
+        for (let i = 0; i < this.triggers.length; ++i) {
+            let isHas = false;
+            for (let j = 0; j < players.length; ++j) {
+                if (this.triggers[i].checkInArea(players[j].character)) {
+                    isHas = true;
+                    break;
+                }
+            }
+            if (!isHas) {
+                return this.triggers[i];
+            }
+        }
+        return null;
+    }
+    net_startLevel(key) {
+        console.error(`wfz - key:${key}`);
+        let player = this.currentPlayer;
+        let trigger = this.getTrigger();
+        if (!trigger)
+            return;
+        let levels = DataCenterS.getData(player, LevelData).levels;
+        let level = (MapEx.has(levels, key)) ? MapEx.get(levels, key) : 1;
+        player.character.worldTransform.position = trigger.worldTransform.position;
+        Event.dispatchToLocal(`InitMonster`, Number(trigger.name.split(`_`)[1]), level);
+        this.getClient(player).net_startLevel(key, level);
+    }
+    startLevel(player, key) {
+        DataCenterS.getData(player, LevelData).addLevel(key);
+        let levels = DataCenterS.getData(player, LevelData).levels;
+        let level = (MapEx.has(levels, key)) ? MapEx.get(levels, key) : 1;
+        this.getClient(player).net_startLevel(key, level);
+    }
+}
+__decorate([
+    Decorator.noReply()
+], LevelModuleS.prototype, "net_setLevel", null);
+__decorate([
+    Decorator.noReply()
+], LevelModuleS.prototype, "net_startLevel", null);
 
 class FlyText {
     constructor() {
@@ -5919,7 +6216,7 @@ class PlayerModuleC extends ModuleC {
     }
 }
 
-var foreign56 = /*#__PURE__*/Object.freeze({
+var foreign58 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerModuleC
 });
@@ -6104,7 +6401,7 @@ class ObjPool {
     }
 }
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjPool: ObjPool,
     get ObjectPoolServices () { return ObjectPoolServices; }
@@ -6115,7 +6412,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -6171,7 +6468,7 @@ OnlineRewardPanel_Generate = __decorate([
 ], OnlineRewardPanel_Generate);
 var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
 
-var foreign118 = /*#__PURE__*/Object.freeze({
+var foreign122 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardPanel_Generate$1
 });
@@ -6181,7 +6478,7 @@ var foreign118 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -6719,7 +7016,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign115 = /*#__PURE__*/Object.freeze({
+var foreign117 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -6729,7 +7026,7 @@ var foreign115 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6795,7 +7092,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign116 = /*#__PURE__*/Object.freeze({
+var foreign118 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -6805,7 +7102,7 @@ var foreign116 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
     get mMainCanvas() {
@@ -6873,7 +7170,7 @@ RingSoulItem_Generate = __decorate([
 ], RingSoulItem_Generate);
 var RingSoulItem_Generate$1 = RingSoulItem_Generate;
 
-var foreign121 = /*#__PURE__*/Object.freeze({
+var foreign125 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItem_Generate$1
 });
@@ -6883,7 +7180,7 @@ var foreign121 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
     get mCanvas() {
@@ -6980,7 +7277,7 @@ RingSoulItemChild_Generate = __decorate([
 ], RingSoulItemChild_Generate);
 var RingSoulItemChild_Generate$1 = RingSoulItemChild_Generate;
 
-var foreign120 = /*#__PURE__*/Object.freeze({
+var foreign124 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItemChild_Generate$1
 });
@@ -6990,7 +7287,7 @@ var foreign120 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -7091,7 +7388,7 @@ RingSoulPanel_Generate = __decorate([
 ], RingSoulPanel_Generate);
 var RingSoulPanel_Generate$1 = RingSoulPanel_Generate;
 
-var foreign122 = /*#__PURE__*/Object.freeze({
+var foreign126 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulPanel_Generate$1
 });
@@ -7755,7 +8052,7 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
     }
 }
 
-var foreign66 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RingSoulData: RingSoulData,
     RingSoulGo: RingSoulGo,
@@ -8462,7 +8759,7 @@ class KillTipItem extends KillTipItem_Generate$1 {
     }
 }
 
-var foreign49 = /*#__PURE__*/Object.freeze({
+var foreign50 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     KillTipItem: KillTipItem,
     default: HUDPanel
@@ -8875,7 +9172,7 @@ class OnlineRewardItem {
     }
 }
 
-var foreign54 = /*#__PURE__*/Object.freeze({
+var foreign56 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardItem: OnlineRewardItem,
     OnlineRewardPanel: OnlineRewardPanel
@@ -8992,7 +9289,7 @@ var OnlineRewardItemState;
     OnlineRewardItemState[OnlineRewardItemState["getReward"] = 2] = "getReward";
 })(OnlineRewardItemState || (OnlineRewardItemState = {}));
 
-var foreign52 = /*#__PURE__*/Object.freeze({
+var foreign54 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get OnlineRewardItemState () { return OnlineRewardItemState; },
     OnlineRewardModuleC: OnlineRewardModuleC
@@ -9008,6 +9305,7 @@ class HUDModuleC extends ModuleC {
         this.ringSoulPanel = null;
         this.adTipsPanel = null;
         this.bagModuleC = null;
+        this.levelModuleC = null;
         /**跳跃事件 */
         this.onJumpAction = new Action();
         /**打开HUD事件 */
@@ -9123,6 +9421,12 @@ class HUDModuleC extends ModuleC {
         }
         return this.bagModuleC;
     }
+    get getLevelModuleC() {
+        if (!this.levelModuleC) {
+            this.levelModuleC = ModuleService.getModule(LevelModuleC);
+        }
+        return this.levelModuleC;
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
         this.initDatas();
@@ -9151,6 +9455,7 @@ class HUDModuleC extends ModuleC {
         });
         this.onHomeAction.add(() => {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
+            this.getLevelModuleC.hideLevelPanel();
         });
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
@@ -9539,7 +9844,7 @@ var KillTipType;
     KillTipType[KillTipType["revenge"] = 3] = "revenge";
 })(KillTipType || (KillTipType = {}));
 
-var foreign47 = /*#__PURE__*/Object.freeze({
+var foreign48 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     KillTipData: KillTipData,
     get KillTipType () { return KillTipType; },
@@ -9710,7 +10015,7 @@ __decorate([
     Decorator.persistence()
 ], TaskData.prototype, "weeklyTasks", void 0);
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Task: Task,
     TaskData: TaskData,
@@ -9723,7 +10028,7 @@ var foreign73 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -9832,7 +10137,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign130 = /*#__PURE__*/Object.freeze({
+var foreign134 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -10212,7 +10517,7 @@ class TaskItem {
     }
 }
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel
 });
@@ -10626,7 +10931,7 @@ class TaskModuleC extends ModuleC {
     }
 }
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleC
 });
@@ -10690,7 +10995,7 @@ class AdTipsPanel extends AdsTipsPanel_Generate$1 {
     }
 }
 
-var foreign42 = /*#__PURE__*/Object.freeze({
+var foreign43 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdTipsPanel
 });
@@ -10700,7 +11005,7 @@ var foreign42 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -10806,7 +11111,7 @@ GuideUI_Generate = __decorate([
 ], GuideUI_Generate);
 var GuideUI_Generate$1 = GuideUI_Generate;
 
-var foreign114 = /*#__PURE__*/Object.freeze({
+var foreign116 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuideUI_Generate$1
 });
@@ -11095,7 +11400,7 @@ class GuidePanel extends GuideUI_Generate$1 {
     }
 }
 
-var foreign46 = /*#__PURE__*/Object.freeze({
+var foreign47 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuidePanel
 });
@@ -11359,7 +11664,7 @@ __decorate([
     Decorator.noReply()
 ], GuideModuleS.prototype, "net_onCompleted", null);
 
-var foreign45 = /*#__PURE__*/Object.freeze({
+var foreign46 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     GuideData: GuideData,
     GuideModuleC: GuideModuleC,
@@ -12435,7 +12740,7 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
     }
 }
 
-var foreign44 = /*#__PURE__*/Object.freeze({
+var foreign45 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     BagData: BagData,
     BagInfoPanel: BagInfoPanel,
@@ -12478,7 +12783,7 @@ class WorldConfigData {
     }
 }
 
-var foreign62 = /*#__PURE__*/Object.freeze({
+var foreign64 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerData_CSR: PlayerData_CSR,
     PlayerData_CSW: PlayerData_CSW,
@@ -12770,7 +13075,7 @@ __decorate([
     Decorator.noReply()
 ], WorldRankModuleS.prototype, "net_onEnterScene", null);
 
-var foreign65 = /*#__PURE__*/Object.freeze({
+var foreign67 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WorldRankModuleS: WorldRankModuleS
 });
@@ -12831,7 +13136,7 @@ __decorate([
     Decorator.persistence()
 ], OnlineRewardData.prototype, "isGetRewards", void 0);
 
-var foreign51 = /*#__PURE__*/Object.freeze({
+var foreign53 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardData
 });
@@ -12876,7 +13181,7 @@ __decorate([
     Decorator.noReply()
 ], OnlineRewardModuleS.prototype, "net_saveIsGetRewards", null);
 
-var foreign53 = /*#__PURE__*/Object.freeze({
+var foreign55 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardModuleS: OnlineRewardModuleS
 });
@@ -12886,7 +13191,7 @@ var foreign53 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let SignInItem_Generate = class SignInItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -12999,7 +13304,7 @@ SignInItem_Generate = __decorate([
 ], SignInItem_Generate);
 var SignInItem_Generate$1 = SignInItem_Generate;
 
-var foreign127 = /*#__PURE__*/Object.freeze({
+var foreign131 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInItem_Generate$1
 });
@@ -13009,7 +13314,7 @@ var foreign127 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInPanel.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let SignInPanel_Generate = class SignInPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -13071,7 +13376,7 @@ SignInPanel_Generate = __decorate([
 ], SignInPanel_Generate);
 var SignInPanel_Generate$1 = SignInPanel_Generate;
 
-var foreign128 = /*#__PURE__*/Object.freeze({
+var foreign132 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInPanel_Generate$1
 });
@@ -13351,7 +13656,7 @@ class SignInModuleS extends ModuleS {
     }
 }
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SignInData: SignInData,
     SignInItem: SignInItem,
@@ -13579,7 +13884,7 @@ __decorate([
     Decorator.noReply()
 ], TaskModuleS.prototype, "net_resetWeeklyTask", null);
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleS
 });
@@ -13671,7 +13976,7 @@ __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "playerKill", void 0);
 
-var foreign55 = /*#__PURE__*/Object.freeze({
+var foreign57 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerData
 });
@@ -13681,7 +13986,7 @@ var foreign55 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -13747,7 +14052,7 @@ PlayerLifebar_Generate = __decorate([
 ], PlayerLifebar_Generate);
 var PlayerLifebar_Generate$1 = PlayerLifebar_Generate;
 
-var foreign119 = /*#__PURE__*/Object.freeze({
+var foreign123 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar_Generate$1
 });
@@ -13844,7 +14149,7 @@ PlayerLifebar = __decorate([
 ], PlayerLifebar);
 var PlayerLifebar$1 = PlayerLifebar;
 
-var foreign58 = /*#__PURE__*/Object.freeze({
+var foreign60 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar$1
 });
@@ -13855,6 +14160,7 @@ class PlayerModuleS extends ModuleS {
         this.worldModuleS = null;
         this.taskModuleS = null;
         this.bagModuleS = null;
+        this.levelModuleS = null;
         this.allPlayerMap = new Map();
         /**存储所有玩家的生命数据 */
         this.playerLifeMap = new Map();
@@ -13876,6 +14182,12 @@ class PlayerModuleS extends ModuleS {
             this.bagModuleS = ModuleService.getModule(BagModuleS);
         }
         return this.bagModuleS;
+    }
+    get getLevelModuleS() {
+        if (!this.levelModuleS) {
+            this.levelModuleS = ModuleService.getModule(LevelModuleS);
+        }
+        return this.levelModuleS;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -13951,6 +14263,24 @@ class PlayerModuleS extends ModuleS {
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
         names.push(Utils.randomNpcName(monsterId));
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
+    }
+    /**
+     * 玩家击杀敌人
+     * @param senderGuid
+     * @param hp
+     */
+    playerKillEnemy_Level(senderGuid, hp, monsterId, key) {
+        if (!this.allPlayerMap.has(senderGuid))
+            return;
+        let sendPlayer = this.allPlayerMap.get(senderGuid);
+        this.saveKill(sendPlayer, 1);
+        this.addExpAndCoin(sendPlayer, hp);
+        // this.getTaskModuleS.killMonster(sendPlayer, monsterId);//TODO
+        let names = [];
+        names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
+        names.push(Utils.randomNpcName(monsterId));
+        this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
+        this.getLevelModuleS.startLevel(sendPlayer, key);
     }
     playerAtkEnemyFlyText(senderGuid, hitPoint, damage) {
         if (!this.allPlayerMap.has(senderGuid))
@@ -14185,7 +14515,7 @@ class PlayerDataS {
     }
 }
 
-var foreign57 = /*#__PURE__*/Object.freeze({
+var foreign59 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerModuleS
 });
@@ -14324,7 +14654,7 @@ var foreign3 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -14376,17 +14706,17 @@ EnemyLifebar_Generate = __decorate([
 ], EnemyLifebar_Generate);
 var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: EnemyLifebar_Generate$1
 });
 
-var MonsterState;
+var MonsterState$1;
 (function (MonsterState) {
     MonsterState[MonsterState["Inactivation"] = 0] = "Inactivation";
     MonsterState[MonsterState["Activate"] = 1] = "Activate";
-})(MonsterState || (MonsterState = {}));
-class AnimationInfo {
+})(MonsterState$1 || (MonsterState$1 = {}));
+let AnimationInfo$1 = class AnimationInfo {
     constructor() {
         // @mw.Property({ displayName: "idleAnimation", group: "AnimationInfo", tooltip: "idleAnimation" })
         this.idles = [];
@@ -14397,8 +14727,8 @@ class AnimationInfo {
         // @mw.Property({ displayName: "dieAnimation", group: "AnimationInfo", tooltip: "dieAnimation" })
         this.die = "";
     }
-}
-class AttackInfo {
+};
+let AttackInfo$1 = class AttackInfo {
     constructor() {
         // @mw.Property({ displayName: "attackTimePoint", group: "AttackInfo", tooltip: "attackTimePoint" })
         this.attackTimePoints = [];
@@ -14411,8 +14741,8 @@ class AttackInfo {
         // @mw.Property({ displayName: "damage", group: "AttackInfo", tooltip: "damage" })
         this.damages = [];
     }
-}
-class AttackEffectInfo {
+};
+let AttackEffectInfo$1 = class AttackEffectInfo {
     constructor() {
         // @mw.Property({ displayName: "effectId", group: "AttackEffectInfo", tooltip: "effectId" })
         this.effectIds = [];
@@ -14423,7 +14753,7 @@ class AttackEffectInfo {
         // @mw.Property({ displayName: "effectScale", group: "AttackEffectInfo", tooltip: "effectScale" })
         this.effectScales = [];
     }
-}
+};
 class Monster extends Script {
     constructor() {
         super(...arguments);
@@ -14436,13 +14766,13 @@ class Monster extends Script {
         // @mw.Property({ displayName: "pathVectors", group: "Info", tooltip: "pathVectors" })
         this.pathVectors = [mw.Vector.zero];
         // @mw.Property({ displayName: "animationInfo", group: "Info", tooltip: "animationInfo" })
-        this.animationInfo = new AnimationInfo();
+        this.animationInfo = new AnimationInfo$1();
         // @mw.Property({ displayName: "attackInfo", group: "Info", tooltip: "attackInfo" })
-        this.attackInfo = new AttackInfo();
+        this.attackInfo = new AttackInfo$1();
         // @mw.Property({ displayName: "attackEffectInfo", group: "Info", tooltip: "attackEffectInfo" })
-        this.attackEffectInfo = new AttackEffectInfo();
+        this.attackEffectInfo = new AttackEffectInfo$1();
         this.monster = null;
-        this.monsterState = MonsterState.Inactivation;
+        this.monsterState = MonsterState$1.Inactivation;
         this.monsterWidth = 0;
         this.cubeLifebar = null;
         this.cubeLifebarWidget = null;
@@ -14610,7 +14940,7 @@ class Monster extends Script {
     }
     playerAtkEnemy_S(senderGuid, targetGuid, damage, hitPoint) {
         // console.error(`this.getMonster.gameObjectId:${this.getMonster.gameObjectId} targetGuid:${targetGuid}`);
-        if (this.getMonster.gameObjectId != targetGuid || this.getMonsterState == MonsterState.Inactivation)
+        if (this.getMonster.gameObjectId != targetGuid || this.getMonsterState == MonsterState$1.Inactivation)
             return;
         if (this.hp <= 0) {
             this.hp = 0;
@@ -14645,7 +14975,7 @@ class Monster extends Script {
         TimeUtil.delaySecond(dieTime).then(() => { this.rebirth_S(); });
     }
     dieReset_S() {
-        this.setMonsterState = MonsterState.Inactivation;
+        this.setMonsterState = MonsterState$1.Inactivation;
         Navigation.stopNavigateTo(this.getMonster);
         Navigation.stopFollow(this.getMonster);
         this.isFollowing = false;
@@ -14685,7 +15015,7 @@ class Monster extends Script {
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled)
                 this.getMonster.ragdollEnabled = false;
-            this.setMonsterState = MonsterState.Activate;
+            this.setMonsterState = MonsterState$1.Activate;
             await this.playIdleAni_S();
             TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
         });
@@ -14728,7 +15058,7 @@ class Monster extends Script {
         this.hp = this.maxHp;
         await this.getMonster.asyncReady();
         this.getMonster.maxWalkSpeed = this.moveSpeed;
-        this.setMonsterState = MonsterState.Activate;
+        this.setMonsterState = MonsterState$1.Activate;
         this.isFollowing = false;
         this.isNavigateToing = false;
         TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => { this.playIdleAni_S(); });
@@ -14743,7 +15073,7 @@ class Monster extends Script {
         TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => this.startNavigateTo_S());
     }
     async startNavigateTo_S() {
-        if (this.getMonsterState != MonsterState.Activate)
+        if (this.getMonsterState != MonsterState$1.Activate)
             return;
         await this.playMoveAni_S();
         let targetPlayer = this.getChasePlayerByMaxDamage();
@@ -14808,6 +15138,565 @@ class Monster extends Script {
         let targetVector = this.pathVectors[Utils.getPathIndex(this.pathVectors.length)];
         let targetPos = Navigation.getRandomReachablePointInRadius(targetVector, 500);
         return (!targetPos) ? targetVector : targetPos;
+    }
+    async randomAttack_S() {
+        if (this.getMonsterState != MonsterState$1.Activate)
+            return;
+        this.attackIndex = this.randomInt(0, this.animationInfo.attacks.length - 1);
+        let attackAni = await this.playAtkAni_S();
+        let attackTime = attackAni.length;
+        TimeUtil.delaySecond(this.attackInfo.attackTimePoints[this.attackIndex]).then(() => { this.randomAttackCheck_S(); });
+        TimeUtil.delaySecond(attackTime).then(() => { this.playIdleAni_S(); });
+        TimeUtil.delaySecond(attackTime + this.randomInt(1, 3)).then(() => this.startNavigateTo_S());
+    }
+    randomAttackCheck_S() {
+        if (this.getMonsterState != MonsterState$1.Activate)
+            return;
+        this.attackEffect_S();
+        let monsterPos = this.getMonster.worldTransform.position;
+        let attackOffset = this.attackInfo.attackOffsets[this.attackIndex];
+        let startForwardOffset = this.getMonster.worldTransform.getForwardVector().multiply(attackOffset.y);
+        let start = new mw.Vector(monsterPos.x + startForwardOffset.x + attackOffset.x, monsterPos.y + startForwardOffset.y, monsterPos.z + startForwardOffset.z + attackOffset.z);
+        let endForwardOffset = this.getMonster.worldTransform.getForwardVector().multiply(this.attackInfo.attackLengths[this.attackIndex]);
+        let end = new mw.Vector(monsterPos.x + endForwardOffset.x, monsterPos.y + endForwardOffset.y, monsterPos.z + endForwardOffset.z);
+        let hitResults = mw.PhysicsService.boxTraceMulti(start, end, this.attackInfo.attackSizes[this.attackIndex], mw.Rotation.zero, { objectsToIgnore: [this.getMonster] }, {});
+        if (mw.SystemUtil.isPIE)
+            Event.dispatchToAllClient("DrawDebug", start, end, this.attackInfo.attackSizes[this.attackIndex]);
+        if (!hitResults || hitResults.length == 0)
+            return;
+        for (let i = 0; i < hitResults.length; ++i) {
+            let hitGo = hitResults[i].gameObject;
+            if (hitGo instanceof mw.Character && hitGo?.player) {
+                let targetGameObjectId = hitGo?.gameObjectId;
+                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
+            }
+        }
+    }
+    attackEffect_S() {
+        let monsterPos = this.getMonster.worldTransform.position;
+        let effectOffset = this.attackEffectInfo.posOffsets[this.attackIndex];
+        let monsterRot = this.getMonster.worldTransform.rotation;
+        let effectLocalOffset = monsterRot.rotateVector(effectOffset);
+        let effectPos = new mw.Vector(monsterPos.x + effectLocalOffset.x, monsterPos.y + effectLocalOffset.y, monsterPos.z + effectLocalOffset.z);
+        let rotOffset = this.attackEffectInfo.rotOffsets[this.attackIndex];
+        let constructorRot = new mw.Rotation(this.getMonster.worldTransform.getForwardVector(), mw.Vector.up);
+        let effectRot = new mw.Rotation(constructorRot.x + rotOffset.x, constructorRot.y + rotOffset.y, constructorRot.z + rotOffset.z);
+        EffectService.playAtPosition(this.attackEffectInfo.effectIds[this.attackIndex], effectPos, {
+            loopCount: 1,
+            rotation: effectRot,
+            scale: this.attackEffectInfo.effectScales[this.attackIndex]
+        });
+    }
+    onUpdate_S(dt) {
+    }
+    async playIdleAni_S() {
+        let idle = this.animationInfo.idles[this.randomInt(0, this.animationInfo.idles.length - 1)];
+        await this.asyncDownloadAsset(idle);
+        if (this.getMonsterState != MonsterState$1.Activate)
+            return;
+        let idleAni = this.getMonster.loadAnimation(idle);
+        idleAni.loop = 0;
+        idleAni.play();
+    }
+    async playMoveAni_S() {
+        let move = this.animationInfo.moves[this.randomInt(0, this.animationInfo.moves.length - 1)];
+        await this.asyncDownloadAsset(move);
+        if (this.getMonsterState != MonsterState$1.Activate)
+            return;
+        let moveAni = this.getMonster.loadAnimation(move);
+        moveAni.loop = 0;
+        moveAni.play();
+    }
+    async playAtkAni_S() {
+        await this.asyncDownloadAsset(this.animationInfo.attacks[this.attackIndex]);
+        if (this.getMonsterState != MonsterState$1.Activate)
+            return null;
+        let attackAni = this.getMonster.loadAnimation(this.animationInfo.attacks[this.attackIndex]);
+        attackAni.play();
+        return attackAni;
+    }
+    async playDieAni_S() {
+        let die = this.animationInfo.die;
+        if (die != "-1") {
+            await this.asyncDownloadAsset(die);
+            let dieAni = this.getMonster.loadAnimation(die);
+            dieAni.play();
+            return dieAni;
+        }
+        return null;
+    }
+    randomInt(min, max) {
+        if (min > max) {
+            let temp = min;
+            min = max;
+            max = temp;
+        }
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    randomFloat(min, max) {
+        if (min > max) {
+            let temp = min;
+            min = max;
+            max = temp;
+        }
+        return Number((Math.random() * (max - min) + min).toFixed(1));
+    }
+    async asyncDownloadAsset(InAssetId) {
+        if (!mw.AssetUtil.assetLoaded(InAssetId)) {
+            await mw.AssetUtil.asyncDownloadAsset(InAssetId);
+        }
+    }
+}
+__decorate([
+    mw.Property({ displayName: "monsterId", group: "Info", tooltip: "monsterId" })
+], Monster.prototype, "monsterId", void 0);
+__decorate([
+    mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
+], Monster.prototype, "hp", void 0);
+__decorate([
+    mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp", replicated: true, onChanged: "onHpChanged" })
+], Monster.prototype, "maxHp", void 0);
+__decorate([
+    mw.Property({ displayName: "monsterType", group: "Info", tooltip: "monsterType" })
+], Monster.prototype, "monsterType", void 0);
+
+var foreign7 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    AnimationInfo: AnimationInfo$1,
+    AttackEffectInfo: AttackEffectInfo$1,
+    AttackInfo: AttackInfo$1,
+    get MonsterState () { return MonsterState$1; },
+    default: Monster
+});
+
+var MonsterState;
+(function (MonsterState) {
+    MonsterState[MonsterState["Inactivation"] = 0] = "Inactivation";
+    MonsterState[MonsterState["Activate"] = 1] = "Activate";
+})(MonsterState || (MonsterState = {}));
+class AnimationInfo {
+    constructor() {
+        // @mw.Property({ displayName: "idleAnimation", group: "AnimationInfo", tooltip: "idleAnimation" })
+        this.idles = [];
+        // @mw.Property({ displayName: "moveAnimation", group: "AnimationInfo", tooltip: "moveAnimation" })
+        this.moves = [];
+        // @mw.Property({ displayName: "attackAnimation", group: "AnimationInfo", tooltip: "attackAnimation" })
+        this.attacks = [];
+        // @mw.Property({ displayName: "dieAnimation", group: "AnimationInfo", tooltip: "dieAnimation" })
+        this.die = "";
+    }
+}
+class AttackInfo {
+    constructor() {
+        // @mw.Property({ displayName: "attackTimePoint", group: "AttackInfo", tooltip: "attackTimePoint" })
+        this.attackTimePoints = [];
+        // @mw.Property({ displayName: "forwardOffset", group: "AttackInfo", tooltip: "forwardOffset" })
+        this.attackOffsets = [];
+        // @mw.Property({ displayName: "attackRange", group: "AttackInfo", tooltip: "attackRange" })
+        this.attackLengths = [];
+        // @mw.Property({ displayName: "attackSize", group: "AttackInfo", tooltip: "attackSize" })
+        this.attackSizes = [];
+        // @mw.Property({ displayName: "damage", group: "AttackInfo", tooltip: "damage" })
+        this.damages = [];
+    }
+}
+class AttackEffectInfo {
+    constructor() {
+        // @mw.Property({ displayName: "effectId", group: "AttackEffectInfo", tooltip: "effectId" })
+        this.effectIds = [];
+        // @mw.Property({ displayName: "effectPos", group: "AttackEffectInfo", tooltip: "effectPos" })
+        this.posOffsets = [];
+        // @mw.Property({ displayName: "effectRot", group: "AttackEffectInfo", tooltip: "effectRot" })
+        this.rotOffsets = [];
+        // @mw.Property({ displayName: "effectScale", group: "AttackEffectInfo", tooltip: "effectScale" })
+        this.effectScales = [];
+    }
+}
+class Monster_Level extends Script {
+    constructor() {
+        super(...arguments);
+        this.monsterId = 0;
+        this.hp = 0;
+        this.maxHp = 0;
+        this.levelType = 1;
+        this.levelIndex = 1;
+        // @mw.Property({ displayName: "moveSpeed", group: "Info", tooltip: "moveSpeed" })
+        this.moveSpeed = 450;
+        // @mw.Property({ displayName: "pathVectors", group: "Info", tooltip: "pathVectors" })
+        // private pathVectors: mw.Vector[] = [mw.Vector.zero];
+        // @mw.Property({ displayName: "animationInfo", group: "Info", tooltip: "animationInfo" })
+        this.animationInfo = new AnimationInfo();
+        // @mw.Property({ displayName: "attackInfo", group: "Info", tooltip: "attackInfo" })
+        this.attackInfo = new AttackInfo();
+        // @mw.Property({ displayName: "attackEffectInfo", group: "Info", tooltip: "attackEffectInfo" })
+        this.attackEffectInfo = new AttackEffectInfo();
+        this.monster = null;
+        this.monsterState = MonsterState.Inactivation;
+        this.monsterWidth = 0;
+        this.cubeLifebar = null;
+        this.cubeLifebarWidget = null;
+        this.isInitLifebar = false;
+        this.preHp = 0;
+        this.playerModuleS = null;
+        this.level = 1;
+        this.chasePlayerMap = new Map();
+        this.isFollowing = false;
+        this.isNavigateToing = false;
+        // private getRandomTargetPoint_S(): mw.Vector {
+        //     let targetVector = this.pathVectors[Utils.getPathIndex(this.pathVectors.length)];
+        //     let targetPos = Navigation.getRandomReachablePointInRadius(targetVector, 500);
+        //     return (!targetPos) ? targetVector : targetPos;
+        // }
+        this.attackIndex = 0;
+    }
+    onStart() {
+        this.onStart_CS();
+    }
+    get getMonster() {
+        if (!this.monster) {
+            this.monster = this.gameObject;
+        }
+        return this.monster;
+    }
+    get getMonsterState() {
+        return this.monsterState;
+    }
+    set setMonsterState(value) {
+        this.monsterState = value;
+    }
+    get getMonsterHeight() {
+        return this.getMonster.collisionExtent.z;
+    }
+    get getMonsterPostion() {
+        return this.getMonster.worldTransform.position;
+    }
+    get getMonsterWidth() {
+        if (this.monsterWidth == 0) {
+            this.monsterWidth = this.getMonster.collisionExtent.x > this.getMonster.collisionExtent.y ?
+                this.getMonster.collisionExtent.x : this.getMonster.collisionExtent.y;
+        }
+        console.error(`this.monsterWidth:${this.monsterWidth}`);
+        return this.monsterWidth + 10;
+    }
+    async onStart_CS() {
+        await this.initCharacter();
+        await this.initConfig();
+        if (mw.SystemUtil.isClient()) {
+            this.onStart_C();
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onStart_S();
+        }
+    }
+    async initCharacter() {
+        await ModuleService.ready();
+        this.monster = this.gameObject;
+        this.monster.collisionWithOtherCharacterEnabled = false;
+    }
+    async initConfig() {
+        let monsterElement = GameConfig.MonsterInfo.getElement(this.monsterId);
+        if (!monsterElement)
+            return;
+        await this.initPaths(monsterElement?.PathStr);
+        this.animationInfo.idles = monsterElement?.Idles;
+        this.animationInfo.moves = monsterElement?.Moves;
+        this.animationInfo.attacks = monsterElement?.Attacks;
+        this.animationInfo.die = monsterElement?.Die;
+        this.attackInfo.attackTimePoints = monsterElement?.AttackTimePoints;
+        this.attackInfo.attackOffsets = monsterElement?.AttackOffsets;
+        this.attackInfo.attackLengths = monsterElement?.AttackLengths;
+        this.attackInfo.attackSizes = monsterElement?.AttackSizes;
+        this.attackInfo.damages = monsterElement?.Damages;
+        this.attackEffectInfo.effectIds = monsterElement?.EffectIds;
+        this.attackEffectInfo.posOffsets = monsterElement?.EffectPosOffsets;
+        monsterElement?.EffectRotOffsets?.forEach((value) => {
+            this.attackEffectInfo.rotOffsets.push(new mw.Rotation(value));
+        });
+        this.attackEffectInfo.effectScales = monsterElement?.EffectScales;
+        this.moveSpeed = monsterElement?.MoveSpeed;
+    }
+    async initPaths(pathStr = null) {
+        // if (!pathStr || pathStr.length == 0) pathStr = GameConfig.MonsterInfo.getElement(this.monsterId)?.PathStr;
+        // let pathParent = await mw.GameObject.asyncFindGameObjectById(pathStr[this.randomInt(0, pathStr.length - 1)]);
+        // let pathParent = await mw.GameObject.asyncFindGameObjectById(this.pathParentStr);
+        // this.pathVectors.length = 0;
+        // pathParent?.getChildren().forEach((child: mw.GameObject) => {
+        //     this.pathVectors.push(child.worldTransform.position);
+        // });
+    }
+    onUpdate(dt) {
+        if (mw.SystemUtil.isClient()) {
+            this.onUpdate_C(dt);
+        }
+        else if (mw.SystemUtil.isServer()) {
+            this.onUpdate_S(dt);
+        }
+    }
+    async onStart_C() {
+        this.useUpdate = false;
+        this.initEvent_C();
+        this.preHp = Math.floor(this.maxHp);
+        this.initLifebar();
+    }
+    initEvent_C() {
+        Event.addServerListener("DrawDebug", this.bindDrawDebug_C.bind(this));
+    }
+    bindDrawDebug_C(start, end, halfSize) {
+        // console.error(`DrawDebug`);
+        mw.PhysicsService.boxTraceMulti(start, end, halfSize, mw.Rotation.zero, { objectsToIgnore: [this.getMonster] }, {
+            isDrawDebug: mw.SystemUtil.isPIE,
+            duration: 1,
+            traceColor: mw.LinearColor.red,
+            hitColor: mw.LinearColor.green,
+            thickness: 3
+        });
+    }
+    async initLifebar() {
+        this.cubeLifebar = UIService.create(EnemyLifebar_Generate$1);
+        this.cubeLifebarWidget = await mw.GameObject.asyncSpawn("UIWidget", {
+            replicates: false
+        });
+        this.cubeLifebarWidget.setTargetUIWidget(this.cubeLifebar.uiWidgetBase);
+        this.cubeLifebarWidget.widgetSpace = mw.WidgetSpaceMode.OverheadUI;
+        this.getMonster.attachToSlot(this.cubeLifebarWidget, mw.HumanoidSlotType.Rings);
+        this.cubeLifebarWidget.occlusionEnable = false;
+        this.cubeLifebarWidget.scaledByDistanceEnable = true;
+        this.cubeLifebarWidget.hideByDistanceEnable = true;
+        this.cubeLifebarWidget.headUIMaxVisibleDistance = 10000;
+        this.isInitLifebar = true;
+        this.onHpChanged();
+    }
+    onHpChanged() {
+        if (!this.isInitLifebar)
+            return;
+        if (this.preHp <= 0)
+            this.preHp = Math.floor(this.maxHp);
+        let damage = this.preHp - this.hp;
+        if (damage > 0)
+            this.preHp = this.hp;
+        this.cubeLifebar.mLifebarProgressBar.percent = this.hp / this.maxHp;
+        this.cubeLifebar.mHpTextBlock.text = `${Math.floor(this.hp)}/${Math.floor(this.maxHp)}`;
+        if (this.hp <= 0) {
+            if (this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(false);
+            }
+        }
+        else if (this.hp >= this.maxHp) {
+            if (!this.cubeLifebarWidget.getVisibility()) {
+                this.cubeLifebarWidget.setVisibility(true);
+            }
+        }
+    }
+    onUpdate_C(dt) {
+    }
+    get getPlayerModuleS() {
+        if (this.playerModuleS == null) {
+            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
+        }
+        return this.playerModuleS;
+    }
+    async onStart_S() {
+        this.useUpdate = false;
+        this.initEvent_S();
+        await this.activate_S();
+    }
+    initEvent_S() {
+        PrefabEvent.PrefabEvtFight.onHit(this.playerAtkEnemy_S.bind(this));
+        Event.addLocalListener(`InitMonster`, (index, level) => {
+            if (this.levelIndex != index)
+                return;
+            this.level = level;
+            this.calculateMaxHp();
+            EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
+            this.hp = this.maxHp;
+            if (this.getMonster.ragdollEnabled)
+                this.getMonster.ragdollEnabled = false;
+            this.setMonsterState = MonsterState.Activate;
+            this.playIdleAni_S().then(() => {
+                TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
+            });
+        });
+    }
+    playerAtkEnemy_S(senderGuid, targetGuid, damage, hitPoint) {
+        // console.error(`this.getMonster.gameObjectId:${this.getMonster.gameObjectId} targetGuid:${targetGuid}`);
+        if (this.getMonster.gameObjectId != targetGuid || this.getMonsterState == MonsterState.Inactivation)
+            return;
+        if (this.hp <= 0) {
+            this.hp = 0;
+            return;
+        }
+        this.updateChasePlayer(senderGuid, damage);
+        let tmpHp = this.hp - damage;
+        if (tmpHp > 0) {
+            this.hp = tmpHp;
+        }
+        else {
+            this.hp = 0;
+            this.die_S();
+            this.level++;
+            this.getPlayerModuleS.playerKillEnemy_Level(senderGuid, this.maxHp, this.monsterId, this.levelType);
+            this.calculateMaxHp();
+        }
+        this.getPlayerModuleS.playerAtkEnemyFlyText(senderGuid, hitPoint, damage);
+    }
+    async die_S() {
+        this.dieReset_S();
+        //die effect
+        let dieAni = await this.playDieAni_S();
+        let dieTime = 0;
+        if (dieAni) {
+            dieTime = dieAni.length;
+        }
+        else {
+            dieTime = 1;
+            this.getMonster?.currentAnimation?.stop();
+            if (!this.getMonster.ragdollEnabled)
+                this.getMonster.ragdollEnabled = true;
+        }
+        TimeUtil.delaySecond(dieTime).then(() => { this.rebirth_S(); });
+    }
+    dieReset_S() {
+        this.setMonsterState = MonsterState.Inactivation;
+        Navigation.stopNavigateTo(this.getMonster);
+        Navigation.stopFollow(this.getMonster);
+        this.isFollowing = false;
+        this.isNavigateToing = false;
+        this.chasePlayerMap.clear();
+    }
+    calculateMaxHp() {
+        this.maxHp = this.level * 1000;
+    }
+    rebirth_S() {
+        let rebirthEffectPos = new mw.Vector(this.getMonsterPostion.x, this.getMonsterPostion.y, this.getMonsterPostion.z - this.getMonsterHeight / 2);
+        let rebirthEffect = EffectService.playAtPosition("142948", rebirthEffectPos, { loopCount: 0 });
+        // this.initPaths();
+        TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
+            EffectService.stop(rebirthEffect);
+            EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
+            this.hp = this.maxHp;
+            if (this.getMonster.ragdollEnabled)
+                this.getMonster.ragdollEnabled = false;
+            this.setMonsterState = MonsterState.Activate;
+            await this.playIdleAni_S();
+            TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
+        });
+    }
+    updateChasePlayer(targetGuid, damage) {
+        // console.error(`targetGuid:${targetGuid} damage:${damage}`);
+        let totalDamage = 0;
+        if (this.chasePlayerMap.has(targetGuid)) {
+            totalDamage = this.chasePlayerMap.get(targetGuid);
+        }
+        totalDamage += damage;
+        this.chasePlayerMap.set(targetGuid, totalDamage);
+        this.fromNavigateToToFollow();
+    }
+    deleteChasePlayer(targetGuid) {
+        if (!this.chasePlayerMap.has(targetGuid))
+            return;
+        this.chasePlayerMap.delete(targetGuid);
+    }
+    getChasePlayerByMaxDamage() {
+        if (!this.chasePlayerMap || this.chasePlayerMap.size == 0)
+            return null;
+        let maxDamage = 0;
+        let targetGuid = null;
+        this.chasePlayerMap.forEach((value, key) => {
+            if (value > maxDamage) {
+                maxDamage = value;
+                targetGuid = key;
+            }
+        });
+        let targetPlayer = null;
+        Player.getAllPlayers().forEach((value) => {
+            if (value.character.gameObjectId == targetGuid) {
+                targetPlayer = value;
+            }
+        });
+        return targetPlayer;
+    }
+    async activate_S() {
+        this.hp = this.maxHp;
+        this.getMonster.setDescription([(this.randomInt(1, 2) == 1) ? "349155DA41E2A30CBEFE26B14F964436" : "FEB031744ECC57E59F33B1AEFA7A6A07"]);
+        await this.getMonster.asyncReady();
+        this.getMonster.maxWalkSpeed = this.moveSpeed;
+        this.setMonsterState = MonsterState.Activate;
+        this.isFollowing = false;
+        this.isNavigateToing = false;
+        // TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => { this.playIdleAni_S(); });
+        // TimeUtil.delaySecond(this.randomInt(5, 15)).then(() => this.startNavigateTo_S());
+    }
+    async fromNavigateToToFollow() {
+        if (this.isFollowing || !this.isNavigateToing)
+            return;
+        Navigation.stopNavigateTo(this.getMonster);
+        this.isNavigateToing = false;
+        await this.playIdleAni_S();
+        TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => this.startNavigateTo_S());
+    }
+    async startNavigateTo_S() {
+        if (this.getMonsterState != MonsterState.Activate)
+            return;
+        await this.playMoveAni_S();
+        let targetPlayer = this.getChasePlayerByMaxDamage();
+        targetPlayer ? this.chasePlayerNavigateTo_S(targetPlayer) : this.randomNavigateTo_S();
+    }
+    randomNavigateTo_S() {
+        this.isNavigateToing = true;
+        // Navigation.navigateTo(this.getMonster,
+        //     this.getRandomTargetPoint_S(),
+        //     0, () => {
+        //         // console.error(`随机寻路成功`);
+        //         this.randomNavigateToComplete_S();
+        //     }, () => {
+        //         // console.error(`随机寻路失败`);
+        //     });
+        this.randomNavigateToComplete_S();
+    }
+    async randomNavigateToComplete_S() {
+        this.isNavigateToing = false;
+        await this.playIdleAni_S();
+        TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => { this.randomAttack_S(); });
+    }
+    chasePlayerNavigateTo_S(targetPlayer) {
+        let dis = mw.Vector.distance(this.getMonster.worldTransform.position, targetPlayer.character.worldTransform.position);
+        console.error(`dis:${dis}`);
+        if (dis > this.getMonsterWidth) {
+            this.directChasePlayerNavigateTo_S(targetPlayer);
+        }
+        else {
+            this.directRandomAttack_S(targetPlayer);
+        }
+    }
+    directChasePlayerNavigateTo_S(targetPlayer) {
+        let isFollowSuccess = Navigation.follow(this.getMonster, targetPlayer.character, 0, () => {
+            // console.error(`追踪寻路成功 dis = ${mw.Vector.distance(this.getMonster.worldTransform.position,
+            //     targetPlayer.character.worldTransform.position)}`);
+            this.chasePlayerNavigateToComplete_S(targetPlayer);
+        }, () => {
+            // console.error(`追踪寻路失败`);
+            this.deleteChasePlayer(targetPlayer.character.gameObjectId);
+            this.chasePlayerNavigateToComplete_S(targetPlayer);
+        });
+        // console.error(`isFollowSuccess: ${isFollowSuccess}`);
+        if (isFollowSuccess) {
+            this.isFollowing = true;
+            return;
+        }
+        this.deleteChasePlayer(targetPlayer.character.gameObjectId);
+        this.chasePlayerNavigateToComplete_S(targetPlayer);
+    }
+    async directRandomAttack_S(targetPlayer) {
+        await this.playIdleAni_S();
+        this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
+        TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => { this.randomAttack_S(); });
+    }
+    async chasePlayerNavigateToComplete_S(targetPlayer) {
+        Navigation.stopFollow(this.getMonster);
+        this.isFollowing = false;
+        await this.playIdleAni_S();
+        this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
+        TimeUtil.delaySecond(this.randomFloat(0.5, 1)).then(() => { this.randomAttack_S(); });
     }
     async randomAttack_S() {
         if (this.getMonsterState != MonsterState.Activate)
@@ -14919,24 +15808,27 @@ class Monster extends Script {
 }
 __decorate([
     mw.Property({ displayName: "monsterId", group: "Info", tooltip: "monsterId" })
-], Monster.prototype, "monsterId", void 0);
+], Monster_Level.prototype, "monsterId", void 0);
 __decorate([
     mw.Property({ displayName: "hp", group: "Info", tooltip: "hp", replicated: true, onChanged: "onHpChanged" })
-], Monster.prototype, "hp", void 0);
+], Monster_Level.prototype, "hp", void 0);
 __decorate([
     mw.Property({ displayName: "maxHp", group: "Info", tooltip: "maxHp", replicated: true, onChanged: "onHpChanged" })
-], Monster.prototype, "maxHp", void 0);
+], Monster_Level.prototype, "maxHp", void 0);
 __decorate([
-    mw.Property({ displayName: "monsterType", group: "Info", tooltip: "monsterType" })
-], Monster.prototype, "monsterType", void 0);
+    mw.Property({ displayName: "levelType", group: "Info", tooltip: "levelType" })
+], Monster_Level.prototype, "levelType", void 0);
+__decorate([
+    mw.Property({ displayName: "levelIndex", group: "Info", tooltip: "levelIndex" })
+], Monster_Level.prototype, "levelIndex", void 0);
 
-var foreign7 = /*#__PURE__*/Object.freeze({
+var foreign8 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AnimationInfo: AnimationInfo,
     AttackEffectInfo: AttackEffectInfo,
     AttackInfo: AttackInfo,
     get MonsterState () { return MonsterState; },
-    default: Monster
+    default: Monster_Level
 });
 
 var MyClearDayNight_1;
@@ -15216,7 +16108,7 @@ MyClearDayNight = MyClearDayNight_1 = __decorate([
 ], MyClearDayNight);
 var MyClearDayNight$1 = MyClearDayNight;
 
-var foreign8 = /*#__PURE__*/Object.freeze({
+var foreign9 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: MyClearDayNight$1
 });
@@ -15303,7 +16195,7 @@ class ObjImpulseS extends ModuleS {
     }
 }
 
-var foreign13 = /*#__PURE__*/Object.freeze({
+var foreign14 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjImpulseC: ObjImpulseC,
     ObjImpulseS: ObjImpulseS
@@ -15314,7 +16206,7 @@ var foreign13 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -15375,7 +16267,7 @@ TestPanel_Generate = __decorate([
 ], TestPanel_Generate);
 var TestPanel_Generate$1 = TestPanel_Generate;
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel_Generate$1
 });
@@ -15415,7 +16307,7 @@ class TestPanel extends TestPanel_Generate$1 {
     }
 }
 
-var foreign14 = /*#__PURE__*/Object.freeze({
+var foreign15 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel
 });
@@ -15425,7 +16317,7 @@ var foreign14 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkItem.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let ArkItem_Generate = class ArkItem_Generate extends UIScript {
     get mIconImage() {
@@ -15544,7 +16436,7 @@ ArkItem_Generate = __decorate([
 ], ArkItem_Generate);
 var ArkItem_Generate$1 = ArkItem_Generate;
 
-var foreign107 = /*#__PURE__*/Object.freeze({
+var foreign109 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ArkItem_Generate$1
 });
@@ -15554,7 +16446,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -15641,7 +16533,7 @@ ArkPanel_Generate = __decorate([
 ], ArkPanel_Generate);
 var ArkPanel_Generate$1 = ArkPanel_Generate;
 
-var foreign108 = /*#__PURE__*/Object.freeze({
+var foreign110 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ArkPanel_Generate$1
 });
@@ -15651,7 +16543,7 @@ var foreign108 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/GiftBagPanel.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let GiftBagPanel_Generate = class GiftBagPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -15730,7 +16622,7 @@ GiftBagPanel_Generate = __decorate([
 ], GiftBagPanel_Generate);
 var GiftBagPanel_Generate$1 = GiftBagPanel_Generate;
 
-var foreign109 = /*#__PURE__*/Object.freeze({
+var foreign111 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GiftBagPanel_Generate$1
 });
@@ -16120,7 +17012,7 @@ class GiftBagPanel extends GiftBagPanel_Generate$1 {
 class GiftBagData {
 }
 
-var foreign43 = /*#__PURE__*/Object.freeze({
+var foreign44 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ArkData: ArkData,
     ArkItem: ArkItem,
@@ -16214,7 +17106,7 @@ __decorate([
     Decorator.noReply()
 ], HUDModuleS.prototype, "net_playStompingEffectAndSound", null);
 
-var foreign48 = /*#__PURE__*/Object.freeze({
+var foreign49 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDModuleS
 });
@@ -16224,7 +17116,7 @@ var foreign48 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -16392,7 +17284,7 @@ WorldRankPanel_Generate = __decorate([
 ], WorldRankPanel_Generate);
 var WorldRankPanel_Generate$1 = WorldRankPanel_Generate;
 
-var foreign135 = /*#__PURE__*/Object.freeze({
+var foreign139 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankPanel_Generate$1
 });
@@ -16630,7 +17522,7 @@ var ShowCanvasType;
     ShowCanvasType[ShowCanvasType["World"] = 2] = "World";
 })(ShowCanvasType || (ShowCanvasType = {}));
 
-var foreign63 = /*#__PURE__*/Object.freeze({
+var foreign65 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RankItem: RankItem,
     get ShowCanvasType () { return ShowCanvasType; },
@@ -16794,7 +17686,7 @@ var RankType;
     RankType[RankType["Kill"] = 3] = "Kill";
 })(RankType || (RankType = {}));
 
-var foreign64 = /*#__PURE__*/Object.freeze({
+var foreign66 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get RankType () { return RankType; },
     WorldRankModuleC: WorldRankModuleC
@@ -16856,6 +17748,7 @@ let GameLauncher = class GameLauncher extends mw.Script {
         ModuleService.registerModule(RingSoulModuleS, RingSoulModuleC, RingSoulData);
         ModuleService.registerModule(SignInModuleS, SignInModuleC, SignInData);
         ModuleService.registerModule(ArkModuleS, ArkModuleC, ArkData);
+        ModuleService.registerModule(LevelModuleS, LevelModuleC, LevelData);
     }
     /**------------------------------------------- 客户端 ------------------------------------------------ */
     /**客户端的OnStart */
@@ -16891,7 +17784,7 @@ GameLauncher = __decorate([
 ], GameLauncher);
 var GameLauncher$1 = GameLauncher;
 
-var foreign35 = /*#__PURE__*/Object.freeze({
+var foreign36 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GameLauncher$1
 });
@@ -17061,7 +17954,7 @@ const cameraSystemConfig = {
     cameraDownLimitAngle: -40,
 };
 
-var foreign36 = /*#__PURE__*/Object.freeze({
+var foreign37 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get CameraModifid () { return CameraModifid; },
     ModifiedCameraSystem: ModifiedCameraSystem
@@ -17155,7 +18048,7 @@ var foreign36 = /*#__PURE__*/Object.freeze({
 //     WeaponSet1 = 4,
 // }
 
-var foreign40 = /*#__PURE__*/Object.freeze({
+var foreign41 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
@@ -17166,7 +18059,7 @@ var foreign40 = /*#__PURE__*/Object.freeze({
 //     }
 // }
 
-var foreign41 = /*#__PURE__*/Object.freeze({
+var foreign42 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
@@ -17246,7 +18139,7 @@ __decorate([
     Decorator.noReply()
 ], ObjImpulseModuleS.prototype, "net_addImpulseToObj", null);
 
-var foreign50 = /*#__PURE__*/Object.freeze({
+var foreign52 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjImpulseModuleC: ObjImpulseModuleC,
     ObjImpulseModuleS: ObjImpulseModuleS
@@ -17271,7 +18164,7 @@ __decorate([
     Decorator.persistence()
 ], PropData.prototype, "props", void 0);
 
-var foreign59 = /*#__PURE__*/Object.freeze({
+var foreign61 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropData: PropData
 });
@@ -17326,7 +18219,7 @@ class PropModuleC extends ModuleC {
     }
 }
 
-var foreign60 = /*#__PURE__*/Object.freeze({
+var foreign62 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropModuleC: PropModuleC
 });
@@ -17409,7 +18302,7 @@ class PropModuleS extends ModuleS {
     }
 }
 
-var foreign61 = /*#__PURE__*/Object.freeze({
+var foreign63 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropModuleS: PropModuleS
 });
@@ -17443,7 +18336,7 @@ __decorate([
     Decorator.persistence()
 ], ShopData.prototype, "useWeaponId", void 0);
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopData
 });
@@ -17580,7 +18473,7 @@ class TouchData {
     }
 }
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputManagers: InputManagers,
     TouchData: TouchData
@@ -17591,7 +18484,7 @@ var foreign89 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -17681,7 +18574,7 @@ NPCHead_Generate = __decorate([
 ], NPCHead_Generate);
 var NPCHead_Generate$1 = NPCHead_Generate;
 
-var foreign124 = /*#__PURE__*/Object.freeze({
+var foreign128 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NPCHead_Generate$1
 });
@@ -17691,7 +18584,7 @@ var foreign124 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -17759,7 +18652,7 @@ CostPanel_Generate = __decorate([
 ], CostPanel_Generate);
 var CostPanel_Generate$1 = CostPanel_Generate;
 
-var foreign123 = /*#__PURE__*/Object.freeze({
+var foreign127 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel_Generate$1
 });
@@ -17801,7 +18694,7 @@ class CostPanel extends CostPanel_Generate$1 {
     }
 }
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel
 });
@@ -17811,7 +18704,7 @@ var foreign70 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -17922,7 +18815,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign126 = /*#__PURE__*/Object.freeze({
+var foreign130 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -18084,7 +18977,7 @@ class ShopItem {
     }
 }
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel
 });
@@ -18465,7 +19358,7 @@ class ShopModuleC extends ModuleC {
     }
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleC
 });
@@ -18520,7 +19413,7 @@ __decorate([
     Decorator.noReply()
 ], ShopModuleS.prototype, "net_saveUseWeaponId", null);
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleS
 });
@@ -19095,7 +19988,7 @@ var TrampolineRescourse;
     TrampolineRescourse["Roll"] = "14736";
 })(TrampolineRescourse || (TrampolineRescourse = {}));
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType$1; },
     OBB: OBB,
@@ -19250,7 +20143,7 @@ var ListenerEventsType;
     ListenerEventsType["ServerToAllClient_HideJumpRecordUI"] = "ServerToAllClient_HideJumpRecordUI";
 })(ListenerEventsType || (ListenerEventsType = {}));
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType; },
     default: P_Game_Trampoline
@@ -19297,7 +20190,7 @@ class WeaponClient extends WeaponData {
         this.animationInfo = [];
         this.animationJsons.forEach(e => {
             let info = JSON.parse(e);
-            let newInfo = new AnimationInfo$1();
+            let newInfo = new AnimationInfo$2();
             if (info) {
                 Object.keys(info).forEach(e => {
                     if (info[e] instanceof Object) {
@@ -19915,7 +20808,7 @@ __decorate([
     RemoteFunction(mw.Client, mw.Multicast)
 ], WeaponClient.prototype, "client_PlayEffect", null);
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponClient: WeaponClient
 });
@@ -20043,7 +20936,7 @@ __decorate([
     RemoteFunction(mw.Server)
 ], WeaponServer.prototype, "server_setChar", null);
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponServer: WeaponServer
 });
@@ -20071,7 +20964,7 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Weapon$1
 });
@@ -20269,7 +21162,7 @@ class KeyActionManager {
     }
 }
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FreeCamera$1
 });
@@ -20279,7 +21172,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_1.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let WorldTips_1_Generate = class WorldTips_1_Generate extends UIScript {
     get mTextBlock() {
@@ -20325,7 +21218,7 @@ WorldTips_1_Generate = __decorate([
 ], WorldTips_1_Generate);
 var WorldTips_1_Generate$1 = WorldTips_1_Generate;
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_1_Generate$1
 });
@@ -20335,7 +21228,7 @@ var foreign98 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_2.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let WorldTips_2_Generate = class WorldTips_2_Generate extends UIScript {
     get mTextBlock() {
@@ -20382,7 +21275,7 @@ WorldTips_2_Generate = __decorate([
 ], WorldTips_2_Generate);
 var WorldTips_2_Generate$1 = WorldTips_2_Generate;
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_2_Generate$1
 });
@@ -20392,7 +21285,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_3.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let WorldTips_3_Generate = class WorldTips_3_Generate extends UIScript {
     get mTextBlock() {
@@ -20439,7 +21332,7 @@ WorldTips_3_Generate = __decorate([
 ], WorldTips_3_Generate);
 var WorldTips_3_Generate$1 = WorldTips_3_Generate;
 
-var foreign100 = /*#__PURE__*/Object.freeze({
+var foreign102 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_3_Generate$1
 });
@@ -20449,7 +21342,7 @@ var foreign100 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_4.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let WorldTips_4_Generate = class WorldTips_4_Generate extends UIScript {
     get mTextBlock() {
@@ -20495,7 +21388,7 @@ WorldTips_4_Generate = __decorate([
 ], WorldTips_4_Generate);
 var WorldTips_4_Generate$1 = WorldTips_4_Generate;
 
-var foreign101 = /*#__PURE__*/Object.freeze({
+var foreign103 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_4_Generate$1
 });
@@ -20505,7 +21398,7 @@ var foreign101 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_5.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let WorldTips_5_Generate = class WorldTips_5_Generate extends UIScript {
     get mTextBlock() {
@@ -20552,7 +21445,7 @@ WorldTips_5_Generate = __decorate([
 ], WorldTips_5_Generate);
 var WorldTips_5_Generate$1 = WorldTips_5_Generate;
 
-var foreign102 = /*#__PURE__*/Object.freeze({
+var foreign104 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_5_Generate$1
 });
@@ -20562,7 +21455,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_6.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let WorldTips_6_Generate = class WorldTips_6_Generate extends UIScript {
     get mTextBlock() {
@@ -20608,7 +21501,7 @@ WorldTips_6_Generate = __decorate([
 ], WorldTips_6_Generate);
 var WorldTips_6_Generate$1 = WorldTips_6_Generate;
 
-var foreign103 = /*#__PURE__*/Object.freeze({
+var foreign105 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_6_Generate$1
 });
@@ -20618,7 +21511,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_7.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.51.00
  */
 let WorldTips_7_Generate = class WorldTips_7_Generate extends UIScript {
     get mTextBlock() {
@@ -20665,7 +21558,7 @@ WorldTips_7_Generate = __decorate([
 ], WorldTips_7_Generate);
 var WorldTips_7_Generate$1 = WorldTips_7_Generate;
 
-var foreign104 = /*#__PURE__*/Object.freeze({
+var foreign106 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_7_Generate$1
 });
@@ -20675,7 +21568,7 @@ var foreign104 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
 let WorldTips_Generate = class WorldTips_Generate extends UIScript {
     get mTextBlock() {
@@ -20722,7 +21615,7 @@ WorldTips_Generate = __decorate([
 ], WorldTips_Generate);
 var WorldTips_Generate$1 = WorldTips_Generate;
 
-var foreign105 = /*#__PURE__*/Object.freeze({
+var foreign107 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_Generate$1
 });
@@ -20732,7 +21625,7 @@ var foreign105 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -20841,7 +21734,7 @@ OnlineRewardItem_Generate = __decorate([
 ], OnlineRewardItem_Generate);
 var OnlineRewardItem_Generate$1 = OnlineRewardItem_Generate;
 
-var foreign117 = /*#__PURE__*/Object.freeze({
+var foreign121 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardItem_Generate$1
 });
@@ -20851,7 +21744,7 @@ var foreign117 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -20932,7 +21825,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign125 = /*#__PURE__*/Object.freeze({
+var foreign129 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -20942,7 +21835,7 @@ var foreign125 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -21045,7 +21938,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign129 = /*#__PURE__*/Object.freeze({
+var foreign133 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -21055,7 +21948,7 @@ var foreign129 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -21100,7 +21993,7 @@ ImpactRadiusWindow_Generate = __decorate([
 ], ImpactRadiusWindow_Generate);
 var ImpactRadiusWindow_Generate$1 = ImpactRadiusWindow_Generate;
 
-var foreign131 = /*#__PURE__*/Object.freeze({
+var foreign135 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ImpactRadiusWindow_Generate$1
 });
@@ -21110,7 +22003,7 @@ var foreign131 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -21175,7 +22068,7 @@ JumpRecordUI_Generate = __decorate([
 ], JumpRecordUI_Generate);
 var JumpRecordUI_Generate$1 = JumpRecordUI_Generate;
 
-var foreign132 = /*#__PURE__*/Object.freeze({
+var foreign136 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpRecordUI_Generate$1
 });
@@ -21185,7 +22078,7 @@ var foreign132 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -21259,7 +22152,7 @@ RankItem_Generate = __decorate([
 ], RankItem_Generate);
 var RankItem_Generate$1 = RankItem_Generate;
 
-var foreign133 = /*#__PURE__*/Object.freeze({
+var foreign137 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankItem_Generate$1
 });
@@ -21269,7 +22162,7 @@ var foreign133 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.09.07-16.39.05
+ * TIME: 2024.09.14-19.51.00
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -21329,7 +22222,7 @@ WorldRankItem_Generate = __decorate([
 ], WorldRankItem_Generate);
 var WorldRankItem_Generate$1 = WorldRankItem_Generate;
 
-var foreign134 = /*#__PURE__*/Object.freeze({
+var foreign138 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankItem_Generate$1
 });
@@ -21342,134 +22235,137 @@ const MWModuleMap = {
      'BBF08FB04B2BC21BFA7B24A49D6BFFED': foreign5,
      '99A29C87465171BECD966683DD195FE0': foreign6,
      '6B09362247562626D5F89CA6E5CBD2DE': foreign7,
-     '9071A44341F25CBC61BDCBAD7161E56F': foreign8,
-     '270556244439107F7C1C129B130B4C47': foreign9,
-     'B6E614EE4CFBEB1B622980B130DC3F41': foreign10,
-     '34FB71B54A1B9B1C1F7CCE98D36B76F9': foreign11,
-     '94FD08FD4489B96A203DD4875A6DAE3D': foreign12,
-     '27F920A249B4AA531A747DA49D25C4E6': foreign13,
-     '43674F054738789E61CB6A9D24EE590F': foreign14,
-     '2F6F07C34BE76735F7D5408693891AE6': foreign15,
-     'FF1563F84F41F36FE9A229AB3FA4739E': foreign16,
-     '571F192B48797F8B0AC20484A439B218': foreign17,
-     'CE85D5AF40F840E427ACC89239133201': foreign18,
-     '5360682948009480CB3B60967C1E9C4E': foreign19,
-     '4147C7DC4379F10CBF039FA1F424CF30': foreign20,
-     '330670174B886285E8E931AAC1F11A68': foreign21,
-     'B3F5CA5F4E3728010D4EE3A71ED406BE': foreign22,
-     '99C4E5454A40C61FC427EDB862680EA4': foreign23,
-     'D4C04F604802C1AE6095B19172F0E134': foreign24,
-     'EC8FA87B49BED23F0082059847D749D1': foreign25,
-     '159AA1104B1A8006C1E3109EEA075240': foreign26,
-     '0482D8294ED7C6B824EE8FB76F64DEA8': foreign27,
-     '336F8CF342D195E83F025D88E0E67CF5': foreign28,
-     '3989B718464F7D8E96063AAE1F443A7D': foreign29,
-     '8993132B4D482CC3AA66F6A0752D0F7E': foreign30,
-     'A68C8DC74CEA5473AC1B588046967037': foreign31,
-     'E917F8F14087A4C3A90C02A252449FCE': foreign32,
-     'BC04C6D045DE92D9606AD08AA7EB662B': foreign33,
-     '64D56E5E4A8131A6306241891C5A946D': foreign34,
-     'A834984646C10B036247BD86BF004ED4': foreign35,
-     'DBE391E64014FDD145AE40820C98022A': foreign36,
-     '2E44AD5F4B7B17FDBCFF8BBD2D111CBA': foreign37,
-     'D052578E42FD39068783C5AD26441B43': foreign38,
-     '65D5A02D481CBAC84C7FF6A8300290FF': foreign39,
-     'ED23BBF34B5F0FD622DB9E8B204BB63A': foreign40,
-     '6C7F83344D08B83F8B1C4998A4C54AE8': foreign41,
-     '7FA339B44DB59B14F8FA579AFC4E95F1': foreign42,
-     'C0133F294A4AE4099D7DE2A507F71913': foreign43,
-     '5B9D28AD4F69E4EDA1ED0193610394D6': foreign44,
-     '1DB810E549C51B0CF92803A3CA567A9F': foreign45,
-     'AD997E3440FDBF90C217EEB5AE82C019': foreign46,
-     'FD862E054AB9D48653FA0EA16B234198': foreign47,
-     '11907A164C7CB34C30CA6D959138FC0F': foreign48,
-     '3CD445AB4C6DC67B35D60DA472014379': foreign49,
-     '0F95A3C34E76FB1EC85217AAE2F7D8ED': foreign50,
-     '68E90BBE443B0F584B447BB6471F9698': foreign51,
-     '0BF71D314247D4EE9739E385C563DF47': foreign52,
-     '57E0650848E7948CD2BAE083B45540F9': foreign53,
-     '6ECF455744EA2C8A66C15CBE0F9D4732': foreign54,
-     'B5ED482B492E893B56A1FD98DB7F2BD8': foreign55,
-     'EBD3FCE849D367C6A0336B9A451A5330': foreign56,
-     '302392054A313F839CE35097B9BB635F': foreign57,
-     'FFB257A546DFC37AAC922E8047B291CA': foreign58,
-     'B0AE81964A685F8B31B8DFA7B392849D': foreign59,
-     '1669FAF94795EF1ACBA7FE9C800B117B': foreign60,
-     '165F15B348A03E72BD290BB61AC4BF8B': foreign61,
-     '357E9DA2462F9CE7CF4B43B0AA9DC354': foreign62,
-     'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign63,
-     '2909A3E141653B96AD1695BB3D9FD3E7': foreign64,
-     '459EAC1C45A11267216B289C90BC7AC5': foreign65,
-     '8B404A71482B2B7A44BB8A85E26C05E7': foreign66,
-     '0E7769194FC879692CDC4E91F3CA47D3': foreign67,
-     'EE9111164BB56CAF9589D28E0A80DCB7': foreign68,
-     'B9E68E6F47D05B8922EB89976547D0ED': foreign69,
-     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign70,
-     'B0214F354FA856A04434CB862696C501': foreign71,
-     '37558D484E7E3EEB7CF50F83FF516D01': foreign72,
-     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign73,
-     'C2A63B424C2C17C9DE3395B59BA9444C': foreign74,
-     '4CA21C094DAD2346E120EFBEA3D7736C': foreign75,
-     'E8535D714F5BFEC20EF595B175FA24BD': foreign76,
-     '1884D48A4EBB982234611D9DD0E1A853': foreign77,
-     '0568B98E45100A88DECA3E894117DA12': foreign78,
-     'B557F99E4E5DD1260BBC268B1579FDF6': foreign79,
-     '4A4C950D496FFCD7471A22924E8F3AE4': foreign80,
-     '586A140B4F5148B73C6201AF3EDA5701': foreign81,
-     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign82,
-     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign83,
-     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign84,
-     'E76AEC2E4B56116E911A1B86036607DC': foreign85,
-     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign86,
-     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign87,
-     '72BDC1A847C3175B60A8E7B540400F62': foreign88,
-     'B6D27EAC444C85D1D925F986D613D5B3': foreign89,
-     'EFFEC0C44629992590058E96821DF5A4': foreign90,
-     'C21422064060FC0412F08EAAD527453E': foreign91,
-     'E08DC42B45A65EE74232E6B7819467BF': foreign92,
-     '9A29CFAC457713D31702BF919B762966': foreign93,
-     '4244ACB14A814AA70C452CB4CFEBB75D': foreign94,
-     'FAAB758A46290493F8E43BA2B90FE5D8': foreign95,
-     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign96,
-     '2C5FEBB74325C7CDDE604EB4590142F0': foreign97,
-     '2DC073C94D179CA85319478F3C46B3F5': foreign98,
-     'D4EDE83847B2782F3A5116BF65D6C435': foreign99,
-     'D359A7694332F95931151EB588C1AF5E': foreign100,
-     'FF86E530405894648CE968B30C525E68': foreign101,
-     '4EEC08894BAC06915772E5B74249D323': foreign102,
-     'B22F1A0D4F964B7A07C054991CAEEB19': foreign103,
-     'F2A5C8E04849C54D927A978574E27E4F': foreign104,
-     'AC60C05B4C542CC8914005A59DEB58FA': foreign105,
-     '9F6B6A8C43A7F31DDB111384318E84E0': foreign106,
-     'EAB0F5684D052B2B639F49AF734B6428': foreign107,
-     'E295F53E4A850B613CDDF19BE7BA2152': foreign108,
-     'ED85D676440DC49934CD7F8884E0F392': foreign109,
-     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign110,
-     '4017F2464551598B868EECA194CC198A': foreign111,
-     '38D734224F75800856A0C69917B88EF8': foreign112,
-     '2987FCF94860A2648A6FA88D34EFA05A': foreign113,
-     'CEE46C5B4475EE568570CBA41D68EE0C': foreign114,
-     '51FD3899419F676C5D82C682439BFAFE': foreign115,
-     '92FA042A4FD4838557550FAACC252FDF': foreign116,
-     'FFAA0B1841347CE8BB80ED8EA9335519': foreign117,
-     '0EE04F42462FE0DADBF4668AD079F570': foreign118,
-     'D84A334C40B33A813552FF903364539E': foreign119,
-     '51DC73A84B35897D52C83693B7DD046D': foreign120,
-     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign121,
-     'D184468C4590DA86174C9FB293C6F14A': foreign122,
-     '075AF2584F411C88705182871B9DFB78': foreign123,
-     '137112BE4F0726F6AD61EFBED47C639E': foreign124,
-     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign125,
-     '0D1CAB354779E284B6E58B91C82ABE07': foreign126,
-     '533234054C42D87B47A4BE88C2587EC9': foreign127,
-     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign128,
-     '0C684B0C46414ED7D11529BA94FD6935': foreign129,
-     '10B4E9EA45C85246C9717EA276C7774B': foreign130,
-     '26DC6E0D40A865057A807DADF4A80DCB': foreign131,
-     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign132,
-     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign133,
-     '368482014D69E4E894C63192B0F17B63': foreign134,
-     '265FA5C440300C2875B6699C5F8B36C7': foreign135,
+     '722259704E530E29CFA29BA8A6165A28': foreign8,
+     '9071A44341F25CBC61BDCBAD7161E56F': foreign9,
+     '270556244439107F7C1C129B130B4C47': foreign10,
+     'B6E614EE4CFBEB1B622980B130DC3F41': foreign11,
+     '34FB71B54A1B9B1C1F7CCE98D36B76F9': foreign12,
+     '94FD08FD4489B96A203DD4875A6DAE3D': foreign13,
+     '27F920A249B4AA531A747DA49D25C4E6': foreign14,
+     '43674F054738789E61CB6A9D24EE590F': foreign15,
+     '2F6F07C34BE76735F7D5408693891AE6': foreign16,
+     'FF1563F84F41F36FE9A229AB3FA4739E': foreign17,
+     '571F192B48797F8B0AC20484A439B218': foreign18,
+     'CE85D5AF40F840E427ACC89239133201': foreign19,
+     '5360682948009480CB3B60967C1E9C4E': foreign20,
+     '4147C7DC4379F10CBF039FA1F424CF30': foreign21,
+     '330670174B886285E8E931AAC1F11A68': foreign22,
+     'B3F5CA5F4E3728010D4EE3A71ED406BE': foreign23,
+     '99C4E5454A40C61FC427EDB862680EA4': foreign24,
+     'D4C04F604802C1AE6095B19172F0E134': foreign25,
+     'EC8FA87B49BED23F0082059847D749D1': foreign26,
+     '159AA1104B1A8006C1E3109EEA075240': foreign27,
+     '0482D8294ED7C6B824EE8FB76F64DEA8': foreign28,
+     '336F8CF342D195E83F025D88E0E67CF5': foreign29,
+     '3989B718464F7D8E96063AAE1F443A7D': foreign30,
+     '8993132B4D482CC3AA66F6A0752D0F7E': foreign31,
+     'A68C8DC74CEA5473AC1B588046967037': foreign32,
+     'E917F8F14087A4C3A90C02A252449FCE': foreign33,
+     'BC04C6D045DE92D9606AD08AA7EB662B': foreign34,
+     '64D56E5E4A8131A6306241891C5A946D': foreign35,
+     'A834984646C10B036247BD86BF004ED4': foreign36,
+     'DBE391E64014FDD145AE40820C98022A': foreign37,
+     '2E44AD5F4B7B17FDBCFF8BBD2D111CBA': foreign38,
+     'D052578E42FD39068783C5AD26441B43': foreign39,
+     '65D5A02D481CBAC84C7FF6A8300290FF': foreign40,
+     'ED23BBF34B5F0FD622DB9E8B204BB63A': foreign41,
+     '6C7F83344D08B83F8B1C4998A4C54AE8': foreign42,
+     '7FA339B44DB59B14F8FA579AFC4E95F1': foreign43,
+     'C0133F294A4AE4099D7DE2A507F71913': foreign44,
+     '5B9D28AD4F69E4EDA1ED0193610394D6': foreign45,
+     '1DB810E549C51B0CF92803A3CA567A9F': foreign46,
+     'AD997E3440FDBF90C217EEB5AE82C019': foreign47,
+     'FD862E054AB9D48653FA0EA16B234198': foreign48,
+     '11907A164C7CB34C30CA6D959138FC0F': foreign49,
+     '3CD445AB4C6DC67B35D60DA472014379': foreign50,
+     '0F95A3C34E76FB1EC85217AAE2F7D8ED': foreign52,
+     '68E90BBE443B0F584B447BB6471F9698': foreign53,
+     '0BF71D314247D4EE9739E385C563DF47': foreign54,
+     '57E0650848E7948CD2BAE083B45540F9': foreign55,
+     '6ECF455744EA2C8A66C15CBE0F9D4732': foreign56,
+     'B5ED482B492E893B56A1FD98DB7F2BD8': foreign57,
+     'EBD3FCE849D367C6A0336B9A451A5330': foreign58,
+     '302392054A313F839CE35097B9BB635F': foreign59,
+     'FFB257A546DFC37AAC922E8047B291CA': foreign60,
+     'B0AE81964A685F8B31B8DFA7B392849D': foreign61,
+     '1669FAF94795EF1ACBA7FE9C800B117B': foreign62,
+     '165F15B348A03E72BD290BB61AC4BF8B': foreign63,
+     '357E9DA2462F9CE7CF4B43B0AA9DC354': foreign64,
+     'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign65,
+     '2909A3E141653B96AD1695BB3D9FD3E7': foreign66,
+     '459EAC1C45A11267216B289C90BC7AC5': foreign67,
+     '8B404A71482B2B7A44BB8A85E26C05E7': foreign68,
+     '0E7769194FC879692CDC4E91F3CA47D3': foreign69,
+     'EE9111164BB56CAF9589D28E0A80DCB7': foreign70,
+     'B9E68E6F47D05B8922EB89976547D0ED': foreign71,
+     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign72,
+     'B0214F354FA856A04434CB862696C501': foreign73,
+     '37558D484E7E3EEB7CF50F83FF516D01': foreign74,
+     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign75,
+     'C2A63B424C2C17C9DE3395B59BA9444C': foreign76,
+     '4CA21C094DAD2346E120EFBEA3D7736C': foreign77,
+     'E8535D714F5BFEC20EF595B175FA24BD': foreign78,
+     '1884D48A4EBB982234611D9DD0E1A853': foreign79,
+     '0568B98E45100A88DECA3E894117DA12': foreign80,
+     'B557F99E4E5DD1260BBC268B1579FDF6': foreign81,
+     '4A4C950D496FFCD7471A22924E8F3AE4': foreign82,
+     '586A140B4F5148B73C6201AF3EDA5701': foreign83,
+     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign84,
+     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign85,
+     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign86,
+     'E76AEC2E4B56116E911A1B86036607DC': foreign87,
+     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign88,
+     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign89,
+     '72BDC1A847C3175B60A8E7B540400F62': foreign90,
+     'B6D27EAC444C85D1D925F986D613D5B3': foreign91,
+     'EFFEC0C44629992590058E96821DF5A4': foreign92,
+     'C21422064060FC0412F08EAAD527453E': foreign93,
+     'E08DC42B45A65EE74232E6B7819467BF': foreign94,
+     '9A29CFAC457713D31702BF919B762966': foreign95,
+     '4244ACB14A814AA70C452CB4CFEBB75D': foreign96,
+     'FAAB758A46290493F8E43BA2B90FE5D8': foreign97,
+     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign98,
+     '2C5FEBB74325C7CDDE604EB4590142F0': foreign99,
+     '2DC073C94D179CA85319478F3C46B3F5': foreign100,
+     'D4EDE83847B2782F3A5116BF65D6C435': foreign101,
+     'D359A7694332F95931151EB588C1AF5E': foreign102,
+     'FF86E530405894648CE968B30C525E68': foreign103,
+     '4EEC08894BAC06915772E5B74249D323': foreign104,
+     'B22F1A0D4F964B7A07C054991CAEEB19': foreign105,
+     'F2A5C8E04849C54D927A978574E27E4F': foreign106,
+     'AC60C05B4C542CC8914005A59DEB58FA': foreign107,
+     '9F6B6A8C43A7F31DDB111384318E84E0': foreign108,
+     'EAB0F5684D052B2B639F49AF734B6428': foreign109,
+     'E295F53E4A850B613CDDF19BE7BA2152': foreign110,
+     'ED85D676440DC49934CD7F8884E0F392': foreign111,
+     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign112,
+     '4017F2464551598B868EECA194CC198A': foreign113,
+     '38D734224F75800856A0C69917B88EF8': foreign114,
+     '2987FCF94860A2648A6FA88D34EFA05A': foreign115,
+     'CEE46C5B4475EE568570CBA41D68EE0C': foreign116,
+     '51FD3899419F676C5D82C682439BFAFE': foreign117,
+     '92FA042A4FD4838557550FAACC252FDF': foreign118,
+     '97EB0171476F91CD15A883839DACE05F': foreign119,
+     '4CB823DD4201B2F6C9133CA164CC27C1': foreign120,
+     'FFAA0B1841347CE8BB80ED8EA9335519': foreign121,
+     '0EE04F42462FE0DADBF4668AD079F570': foreign122,
+     'D84A334C40B33A813552FF903364539E': foreign123,
+     '51DC73A84B35897D52C83693B7DD046D': foreign124,
+     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign125,
+     'D184468C4590DA86174C9FB293C6F14A': foreign126,
+     '075AF2584F411C88705182871B9DFB78': foreign127,
+     '137112BE4F0726F6AD61EFBED47C639E': foreign128,
+     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign129,
+     '0D1CAB354779E284B6E58B91C82ABE07': foreign130,
+     '533234054C42D87B47A4BE88C2587EC9': foreign131,
+     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign132,
+     '0C684B0C46414ED7D11529BA94FD6935': foreign133,
+     '10B4E9EA45C85246C9717EA276C7774B': foreign134,
+     '26DC6E0D40A865057A807DADF4A80DCB': foreign135,
+     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign136,
+     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign137,
+     '368482014D69E4E894C63192B0F17B63': foreign138,
+     '265FA5C440300C2875B6699C5F8B36C7': foreign139,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign2 || {}, "JavaScripts/common/Boss"],
@@ -21478,134 +22374,137 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign5 || {}, "JavaScripts/common/FlyText"],
 [foreign6 || {}, "JavaScripts/common/Loading"],
 [foreign7 || {}, "JavaScripts/common/Monster"],
-[foreign8 || {}, "JavaScripts/common/MyClearDayNight"],
-[foreign9 || {}, "JavaScripts/common/notice/Notice"],
-[foreign10 || {}, "JavaScripts/common/notice/Tween"],
-[foreign11 || {}, "JavaScripts/common/notice/UIPool"],
-[foreign12 || {}, "JavaScripts/common/notice/Updater"],
-[foreign13 || {}, "JavaScripts/common/ObjImpulse"],
-[foreign14 || {}, "JavaScripts/common/TestPanel"],
-[foreign15 || {}, "JavaScripts/config/Action"],
-[foreign16 || {}, "JavaScripts/config/Ads"],
-[foreign17 || {}, "JavaScripts/config/Assets"],
-[foreign18 || {}, "JavaScripts/config/BagInfo"],
-[foreign19 || {}, "JavaScripts/config/Coin"],
-[foreign20 || {}, "JavaScripts/config/ColdWeapon"],
-[foreign21 || {}, "JavaScripts/config/Color"],
-[foreign22 || {}, "JavaScripts/config/ConfigBase"],
-[foreign23 || {}, "JavaScripts/config/DressData"],
-[foreign24 || {}, "JavaScripts/config/DressProgress"],
-[foreign25 || {}, "JavaScripts/config/GameConfig"],
-[foreign26 || {}, "JavaScripts/config/MonsterInfo"],
-[foreign27 || {}, "JavaScripts/config/Music"],
-[foreign28 || {}, "JavaScripts/config/NPC"],
-[foreign29 || {}, "JavaScripts/config/OnlineRewards"],
-[foreign30 || {}, "JavaScripts/config/QuickEmoji"],
-[foreign31 || {}, "JavaScripts/config/QuickTalk"],
-[foreign32 || {}, "JavaScripts/config/Task"],
-[foreign33 || {}, "JavaScripts/config/Trampoline"],
-[foreign34 || {}, "JavaScripts/const/GlobalData"],
-[foreign35 || {}, "JavaScripts/GameLauncher"],
-[foreign36 || {}, "JavaScripts/Modified027Editor/ModifiedCamera"],
-[foreign37 || {}, "JavaScripts/Modified027Editor/ModifiedPlayer"],
-[foreign38 || {}, "JavaScripts/Modified027Editor/ModifiedSpawn"],
-[foreign39 || {}, "JavaScripts/Modified027Editor/ModifiedStaticAPI"],
-[foreign40 || {}, "JavaScripts/module/AdsModule/AdsModuleC"],
-[foreign41 || {}, "JavaScripts/module/AdsModule/AdsModuleS"],
-[foreign42 || {}, "JavaScripts/module/AdsModule/ui/AdTipsPanel"],
-[foreign43 || {}, "JavaScripts/module/ArkModule/ArkModule"],
-[foreign44 || {}, "JavaScripts/module/BagModule/BagModule"],
-[foreign45 || {}, "JavaScripts/module/GuideModule/GuideModule"],
-[foreign46 || {}, "JavaScripts/module/GuideModule/ui/GuidePanel"],
-[foreign47 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
-[foreign48 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
-[foreign49 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
-[foreign50 || {}, "JavaScripts/module/ObjImpulseModule/ObjImpulseModule"],
-[foreign51 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardData"],
-[foreign52 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleC"],
-[foreign53 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleS"],
-[foreign54 || {}, "JavaScripts/module/OnlineRewardModule/ui/OnlineRewardPanel"],
-[foreign55 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
-[foreign56 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
-[foreign57 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
-[foreign58 || {}, "JavaScripts/module/PlayerModule/ui/PlayerLifebar"],
-[foreign59 || {}, "JavaScripts/module/PropModule/PropData"],
-[foreign60 || {}, "JavaScripts/module/PropModule/PropModuleC"],
-[foreign61 || {}, "JavaScripts/module/PropModule/PropModuleS"],
-[foreign62 || {}, "JavaScripts/module/RankModule/PlayerPropData"],
-[foreign63 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
-[foreign64 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
-[foreign65 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
-[foreign66 || {}, "JavaScripts/module/RingSoulModule/RingSoulModule"],
-[foreign67 || {}, "JavaScripts/module/ShopModule/ShopData"],
-[foreign68 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
-[foreign69 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
-[foreign70 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
-[foreign71 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
-[foreign72 || {}, "JavaScripts/module/SignInModule/SignInModule"],
-[foreign73 || {}, "JavaScripts/module/TaskModule/TaskData"],
-[foreign74 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
-[foreign75 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
-[foreign76 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
-[foreign77 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
-[foreign78 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
-[foreign79 || {}, "JavaScripts/Prefabs/PrefabEvent"],
-[foreign80 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
-[foreign81 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
-[foreign82 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
-[foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
-[foreign84 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
-[foreign85 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
-[foreign86 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
-[foreign87 || {}, "JavaScripts/Tools/Console"],
-[foreign88 || {}, "JavaScripts/Tools/FreeCamera"],
-[foreign89 || {}, "JavaScripts/Tools/InputManager"],
-[foreign90 || {}, "JavaScripts/Tools/MapEx"],
-[foreign91 || {}, "JavaScripts/Tools/ObjectPool"],
-[foreign92 || {}, "JavaScripts/Tools/utils"],
-[foreign93 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
-[foreign94 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
-[foreign95 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign96 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign97 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
-[foreign98 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_1_generate"],
-[foreign99 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_2_generate"],
-[foreign100 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_3_generate"],
-[foreign101 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_4_generate"],
-[foreign102 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_5_generate"],
-[foreign103 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_6_generate"],
-[foreign104 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_7_generate"],
-[foreign105 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_generate"],
-[foreign106 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
-[foreign107 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkItem_generate"],
-[foreign108 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkPanel_generate"],
-[foreign109 || {}, "JavaScripts/ui-generate/module/ArkModule/GiftBagPanel_generate"],
-[foreign110 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
-[foreign111 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
-[foreign112 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
-[foreign113 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
-[foreign114 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
-[foreign115 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign116 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign117 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
-[foreign118 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
-[foreign119 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
-[foreign120 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
-[foreign121 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
-[foreign122 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
-[foreign123 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
-[foreign124 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
-[foreign125 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign126 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign127 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
-[foreign128 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
-[foreign129 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign130 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign131 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
-[foreign132 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
-[foreign133 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
-[foreign134 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
-[foreign135 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
+[foreign8 || {}, "JavaScripts/common/Monster_Level"],
+[foreign9 || {}, "JavaScripts/common/MyClearDayNight"],
+[foreign10 || {}, "JavaScripts/common/notice/Notice"],
+[foreign11 || {}, "JavaScripts/common/notice/Tween"],
+[foreign12 || {}, "JavaScripts/common/notice/UIPool"],
+[foreign13 || {}, "JavaScripts/common/notice/Updater"],
+[foreign14 || {}, "JavaScripts/common/ObjImpulse"],
+[foreign15 || {}, "JavaScripts/common/TestPanel"],
+[foreign16 || {}, "JavaScripts/config/Action"],
+[foreign17 || {}, "JavaScripts/config/Ads"],
+[foreign18 || {}, "JavaScripts/config/Assets"],
+[foreign19 || {}, "JavaScripts/config/BagInfo"],
+[foreign20 || {}, "JavaScripts/config/Coin"],
+[foreign21 || {}, "JavaScripts/config/ColdWeapon"],
+[foreign22 || {}, "JavaScripts/config/Color"],
+[foreign23 || {}, "JavaScripts/config/ConfigBase"],
+[foreign24 || {}, "JavaScripts/config/DressData"],
+[foreign25 || {}, "JavaScripts/config/DressProgress"],
+[foreign26 || {}, "JavaScripts/config/GameConfig"],
+[foreign27 || {}, "JavaScripts/config/MonsterInfo"],
+[foreign28 || {}, "JavaScripts/config/Music"],
+[foreign29 || {}, "JavaScripts/config/NPC"],
+[foreign30 || {}, "JavaScripts/config/OnlineRewards"],
+[foreign31 || {}, "JavaScripts/config/QuickEmoji"],
+[foreign32 || {}, "JavaScripts/config/QuickTalk"],
+[foreign33 || {}, "JavaScripts/config/Task"],
+[foreign34 || {}, "JavaScripts/config/Trampoline"],
+[foreign35 || {}, "JavaScripts/const/GlobalData"],
+[foreign36 || {}, "JavaScripts/GameLauncher"],
+[foreign37 || {}, "JavaScripts/Modified027Editor/ModifiedCamera"],
+[foreign38 || {}, "JavaScripts/Modified027Editor/ModifiedPlayer"],
+[foreign39 || {}, "JavaScripts/Modified027Editor/ModifiedSpawn"],
+[foreign40 || {}, "JavaScripts/Modified027Editor/ModifiedStaticAPI"],
+[foreign41 || {}, "JavaScripts/module/AdsModule/AdsModuleC"],
+[foreign42 || {}, "JavaScripts/module/AdsModule/AdsModuleS"],
+[foreign43 || {}, "JavaScripts/module/AdsModule/ui/AdTipsPanel"],
+[foreign44 || {}, "JavaScripts/module/ArkModule/ArkModule"],
+[foreign45 || {}, "JavaScripts/module/BagModule/BagModule"],
+[foreign46 || {}, "JavaScripts/module/GuideModule/GuideModule"],
+[foreign47 || {}, "JavaScripts/module/GuideModule/ui/GuidePanel"],
+[foreign48 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
+[foreign49 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
+[foreign50 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
+[foreign52 || {}, "JavaScripts/module/ObjImpulseModule/ObjImpulseModule"],
+[foreign53 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardData"],
+[foreign54 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleC"],
+[foreign55 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleS"],
+[foreign56 || {}, "JavaScripts/module/OnlineRewardModule/ui/OnlineRewardPanel"],
+[foreign57 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
+[foreign58 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
+[foreign59 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
+[foreign60 || {}, "JavaScripts/module/PlayerModule/ui/PlayerLifebar"],
+[foreign61 || {}, "JavaScripts/module/PropModule/PropData"],
+[foreign62 || {}, "JavaScripts/module/PropModule/PropModuleC"],
+[foreign63 || {}, "JavaScripts/module/PropModule/PropModuleS"],
+[foreign64 || {}, "JavaScripts/module/RankModule/PlayerPropData"],
+[foreign65 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
+[foreign66 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
+[foreign67 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
+[foreign68 || {}, "JavaScripts/module/RingSoulModule/RingSoulModule"],
+[foreign69 || {}, "JavaScripts/module/ShopModule/ShopData"],
+[foreign70 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
+[foreign71 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
+[foreign72 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
+[foreign73 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
+[foreign74 || {}, "JavaScripts/module/SignInModule/SignInModule"],
+[foreign75 || {}, "JavaScripts/module/TaskModule/TaskData"],
+[foreign76 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
+[foreign77 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
+[foreign78 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
+[foreign79 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
+[foreign80 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
+[foreign81 || {}, "JavaScripts/Prefabs/PrefabEvent"],
+[foreign82 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
+[foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
+[foreign84 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
+[foreign85 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
+[foreign86 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
+[foreign87 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
+[foreign88 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
+[foreign89 || {}, "JavaScripts/Tools/Console"],
+[foreign90 || {}, "JavaScripts/Tools/FreeCamera"],
+[foreign91 || {}, "JavaScripts/Tools/InputManager"],
+[foreign92 || {}, "JavaScripts/Tools/MapEx"],
+[foreign93 || {}, "JavaScripts/Tools/ObjectPool"],
+[foreign94 || {}, "JavaScripts/Tools/utils"],
+[foreign95 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
+[foreign96 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
+[foreign97 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign98 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign99 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
+[foreign100 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_1_generate"],
+[foreign101 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_2_generate"],
+[foreign102 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_3_generate"],
+[foreign103 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_4_generate"],
+[foreign104 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_5_generate"],
+[foreign105 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_6_generate"],
+[foreign106 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_7_generate"],
+[foreign107 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_generate"],
+[foreign108 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
+[foreign109 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkItem_generate"],
+[foreign110 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkPanel_generate"],
+[foreign111 || {}, "JavaScripts/ui-generate/module/ArkModule/GiftBagPanel_generate"],
+[foreign112 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
+[foreign113 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
+[foreign114 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
+[foreign115 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
+[foreign116 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
+[foreign117 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign118 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign119 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelItem_generate"],
+[foreign120 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelPanel_generate"],
+[foreign121 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
+[foreign122 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
+[foreign123 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
+[foreign124 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
+[foreign125 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
+[foreign126 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
+[foreign127 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
+[foreign128 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
+[foreign129 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign130 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign131 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
+[foreign132 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
+[foreign133 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign134 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign135 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
+[foreign136 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
+[foreign137 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
+[foreign138 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
+[foreign139 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

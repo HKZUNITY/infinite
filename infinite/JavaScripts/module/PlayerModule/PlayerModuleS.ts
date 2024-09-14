@@ -4,6 +4,7 @@ import Console from "../../Tools/Console";
 import { Utils } from "../../Tools/utils";
 import GlobalData from "../../const/GlobalData";
 import { BagModuleS } from '../BagModule/BagModule';
+import { LevelModuleS } from '../LevelModule/LevelModule';
 import { WorldRankModuleS } from "../RankModule/WorldRankModuleS";
 import TaskModuleS from "../TaskModule/TaskModuleS";
 import PlayerData from "./PlayerData";
@@ -32,6 +33,14 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             this.bagModuleS = ModuleService.getModule(BagModuleS);
         }
         return this.bagModuleS;
+    }
+
+    private levelModuleS: LevelModuleS = null;
+    private get getLevelModuleS(): LevelModuleS {
+        if (!this.levelModuleS) {
+            this.levelModuleS = ModuleService.getModule(LevelModuleS);
+        }
+        return this.levelModuleS;
     }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
@@ -107,6 +116,24 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
         names.push(Utils.randomNpcName(monsterId));
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
+    }
+
+    /**
+     * 玩家击杀敌人
+     * @param senderGuid 
+     * @param hp 
+     */
+    public playerKillEnemy_Level(senderGuid: string, hp: number, monsterId: number, key: number): void {
+        if (!this.allPlayerMap.has(senderGuid)) return;
+        let sendPlayer = this.allPlayerMap.get(senderGuid);
+        this.saveKill(sendPlayer, 1);
+        this.addExpAndCoin(sendPlayer, hp);
+        // this.getTaskModuleS.killMonster(sendPlayer, monsterId);//TODO
+        let names: string[] = [];
+        names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
+        names.push(Utils.randomNpcName(monsterId));
+        this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
+        this.getLevelModuleS.startLevel(sendPlayer, key);
     }
 
     public playerAtkEnemyFlyText(senderGuid: string, hitPoint: mw.Vector, damage: number): void {

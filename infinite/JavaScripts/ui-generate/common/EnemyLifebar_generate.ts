@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.09.07-16.39.04
+ * TIME: 2024.09.14-19.50.59
  */
  
 @UIBind('UI/common/EnemyLifebar.ui')

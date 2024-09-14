@@ -7,6 +7,7 @@ import { IMusicElement } from "../../config/Music";
 import GlobalData from "../../const/GlobalData";
 import AdTipsPanel from '../AdsModule/ui/AdTipsPanel';
 import { BagModuleC } from '../BagModule/BagModule';
+import { LevelModuleC } from '../LevelModule/LevelModule';
 import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 import { WorldConfigData } from '../RankModule/PlayerPropData';
@@ -64,6 +65,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.bagModuleC = ModuleService.getModule(BagModuleC);
         }
         return this.bagModuleC;
+    }
+    private levelModuleC: LevelModuleC = null;
+    private get getLevelModuleC(): LevelModuleC {
+        if (!this.levelModuleC) {
+            this.levelModuleC = ModuleService.getModule(LevelModuleC);
+        }
+        return this.levelModuleC;
     }
     /**跳跃事件 */
     public onJumpAction: Action = new Action();
@@ -124,6 +132,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         });
         this.onHomeAction.add(() => {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
+            this.getLevelModuleC.hideLevelPanel();
         });
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {

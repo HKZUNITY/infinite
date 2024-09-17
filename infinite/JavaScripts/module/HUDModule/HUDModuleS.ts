@@ -5,7 +5,7 @@ import HUDModuleC from "./HUDModuleC";
 
 export default class HUDModuleS extends ModuleS<HUDModuleC, null> {
     protected onAwake(): void {
-        this.initWorldConfigDatas();
+        // this.initWorldConfigDatas();
     }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
@@ -112,7 +112,8 @@ export default class HUDModuleS extends ModuleS<HUDModuleC, null> {
     }
 
     private async syncWorldConfigData(player: mw.Player): Promise<void> {
-        if (!this.worldConfigDatas || this.worldConfigDatas.length == 0) await this.initWorldConfigDatas();
+        // if (!this.worldConfigDatas || this.worldConfigDatas.length == 0)
+        await this.initWorldConfigDatas();
         this.getClient(player).net_syncWorldConfigData(this.worldConfigDatas);
     }
 

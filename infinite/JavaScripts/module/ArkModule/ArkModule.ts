@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GeneralManager } from "../../Modified027Editor/ModifiedStaticAPI";
 import { Utils } from "../../Tools/utils";
 import ArkItem_Generate from "../../ui-generate/module/ArkModule/ArkItem_generate";
 import ArkPanel_Generate from "../../ui-generate/module/ArkModule/ArkPanel_generate";
@@ -139,6 +140,10 @@ export class ArkPanel extends ArkPanel_Generate {
                 this.hide();
                 this.getHudPanel.show();
             });
+    }
+
+    public updateUserIdTextBlock(str: string): void {
+        this.mUserIdTextBlock.text = `${str}:${Player.localPlayer.userId}`;
     }
 }
 
@@ -326,12 +331,20 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             Notice.showDownNotice(`领取失败`);
         }
     }
+
+    public net_syncArkStr(str: string): void {
+        this.getArkPanel.updateUserIdTextBlock(str);
+    }
 }
 
 
 export class ArkModuleS extends ModuleS<ArkModuleC, ArkData> {
     protected onStart(): void {
         this.bindAction();
+    }
+
+    protected onPlayerEnterGame(player: mw.Player): void {
+        this.syncArkStr(player);
     }
 
     private bindAction(): void {
@@ -358,6 +371,17 @@ export class ArkModuleS extends ModuleS<ArkModuleC, ArkData> {
         PurchaseService.redeemGiftCode(player, coodStr, (result) => {
             this.getClient(player).net_getGiftBag((result.status == 200 || result.status == 1), result.message);
         });
+    }
+
+    private async syncArkStr(player: mw.Player): Promise<void> {
+        let str: string = await this.getCustomdata("WorldArkStr");
+        this.getClient(player).net_syncArkStr(str);
+    }
+
+    public async getCustomdata(key: string): Promise<any> {
+        let data = null;
+        data = await GeneralManager.asyncRpcGetData(key);
+        return data;
     }
 }
 

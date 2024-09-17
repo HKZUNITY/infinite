@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
  
 @UIBind('UI/module/ArkModule/ArkPanel.ui')
@@ -21,6 +21,13 @@ export default class ArkPanel_Generate extends UIScript {
 			this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas') as mw.Canvas
 		}
 		return this.mCanvas_Internal
+	}
+	private mUserIdTextBlock_Internal: mw.TextBlock
+	public get mUserIdTextBlock(): mw.TextBlock {
+		if(!this.mUserIdTextBlock_Internal&&this.uiWidgetBase) {
+			this.mUserIdTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mUserIdTextBlock') as mw.TextBlock
+		}
+		return this.mUserIdTextBlock_Internal
 	}
 	private mArkCanvas_Internal: mw.Canvas
 	public get mArkCanvas(): mw.Canvas {
@@ -81,6 +88,9 @@ export default class ArkPanel_Generate extends UIScript {
 		//文本多语言
 		
 		this.initLanguage(this.mTitleTextBlock)
+		
+	
+		this.initLanguage(this.mUserIdTextBlock)
 		
 	
 		this.initLanguage(this.mArkCountTextBlock)

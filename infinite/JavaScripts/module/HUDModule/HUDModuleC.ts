@@ -137,19 +137,19 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveCoin(10000);
-                }, "免费领取10000金币", "取消", "免费领取");
+                    this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
+                }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
             } else {
-                this.getPlayerModuleC.saveCoin(10000);
+                this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
             }
         });
         this.onAddDiamondAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
+                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             } else {
-                this.getPlayerModuleC.saveDiamond(1);
+                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
         });
 

@@ -553,6 +553,7 @@ export default class Monster_Level extends Script {
         if (this.getMonsterState != MonsterState.Activate) return null;
         let attackAni = this.getMonster.loadAnimation(this.animationInfo.attacks[this.attackIndex]);
         attackAni.play();
+        if (this.randomInt(1, 10) >= 7) SoundService.play3DSound((this.randomInt(1, 2) == 1) ? "431490" : "431500", this.getMonster);
         return attackAni;
     }
 

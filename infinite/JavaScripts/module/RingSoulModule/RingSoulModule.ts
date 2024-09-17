@@ -509,10 +509,10 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
         } else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
+                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             } else {
-                this.getPlayerModuleC.saveDiamond(1);
+                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
         }
     }
@@ -612,10 +612,10 @@ export class RingSoulItem extends RingSoulItem_Generate {
         } else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
+                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             } else {
-                this.getPlayerModuleC.saveDiamond(1);
+                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
         }
     }

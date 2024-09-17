@@ -122,6 +122,7 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
                     (v as mw.Trigger).onEnter.add((char: mw.Character) => {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId) return;
                         this.server.net_startLevel(key);
+                        SoundService.play3DSound("431480", this.localPlayer.character);
                     });
                 });
             });

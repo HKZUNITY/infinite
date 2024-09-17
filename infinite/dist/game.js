@@ -1460,6 +1460,8 @@ GlobalData.pathStrMap = new Map([
 ]);
 GlobalData.signInDays = 7;
 GlobalData.gameName = `斗神大陆(黑悟空神位来袭)`;
+GlobalData.addCoinCount = 10000;
+GlobalData.addDiamondCount = 5;
 
 var foreign36 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -2901,7 +2903,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -3013,7 +3015,7 @@ var foreign7 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -3080,7 +3082,7 @@ var foreign98 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -5142,7 +5144,7 @@ var foreign93 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5268,7 +5270,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5360,7 +5362,7 @@ var foreign114 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5456,7 +5458,7 @@ var foreign115 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5522,7 +5524,7 @@ var foreign116 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5602,7 +5604,7 @@ var foreign109 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let LevelItem_Generate = class LevelItem_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -5658,7 +5660,7 @@ var foreign120 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let LevelPanel_Generate = class LevelPanel_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -5819,6 +5821,7 @@ class LevelModuleC extends ModuleC {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId)
                             return;
                         this.server.net_startLevel(key);
+                        SoundService.play3DSound("431480", this.localPlayer.character);
                     });
                 });
             });
@@ -6427,7 +6430,7 @@ var foreign94 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -6493,7 +6496,7 @@ var foreign123 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -7041,7 +7044,7 @@ var foreign118 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -7117,7 +7120,7 @@ var foreign119 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.18
  */
 let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
     get mMainCanvas() {
@@ -7195,7 +7198,7 @@ var foreign126 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.18
  */
 let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
     get mCanvas() {
@@ -7302,7 +7305,7 @@ var foreign125 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.18
  */
 let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -7905,11 +7908,11 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
         else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
+                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             }
             else {
-                this.getPlayerModuleC.saveDiamond(1);
+                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
         }
     }
@@ -7999,11 +8002,11 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
         else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
+                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             }
             else {
-                this.getPlayerModuleC.saveDiamond(1);
+                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
         }
     }
@@ -9475,21 +9478,21 @@ class HUDModuleC extends ModuleC {
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveCoin(10000);
-                }, "免费领取10000金币", "取消", "免费领取");
+                    this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
+                }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
             }
             else {
-                this.getPlayerModuleC.saveCoin(10000);
+                this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
             }
         });
         this.onAddDiamondAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.saveDiamond(1);
-                }, "免费领取1颗钻石", "取消", "免费领取");
+                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             }
             else {
-                this.getPlayerModuleC.saveDiamond(1);
+                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
         });
         this.onAdsAction.add(() => {
@@ -10043,7 +10046,7 @@ var foreign76 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -11020,7 +11023,7 @@ var foreign44 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -12113,9 +12116,9 @@ class BagModuleC extends ModuleC {
                 }
             }
         }, () => {
-            let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * 10000;
+            let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * GlobalData.addCoinCount;
             if (price < 0 || isNaN(price))
-                price = 10000;
+                price = GlobalData.addCoinCount;
             let hasCoin = this.getPlayerModuleC.getCoin();
             if (hasCoin >= price) {
                 this.getPlayerModuleC.saveCoin(-price);
@@ -12130,11 +12133,11 @@ class BagModuleC extends ModuleC {
                 Notice.showDownNotice("金币不足");
                 if (GlobalData.isOpenIAA) {
                     this.getAdTipsPanel.showRewardAd(() => {
-                        this.getPlayerModuleC.saveCoin(10000);
-                    }, "免费领取10000金币", "取消", "免费领取");
+                        this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
+                    }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
                 }
                 else {
-                    this.getPlayerModuleC.saveCoin(10000);
+                    this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                 }
             }
         }, () => {
@@ -12695,7 +12698,7 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
         this.useCallBack = useCallBack;
         this.priceCallBack = priceCallBack;
         this.adsCallBack = adsCallBack;
-        let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * 10000;
+        let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * GlobalData.addCoinCount;
         this.mPreceTextBlock.text = `${price}金币购买`;
         this.show();
     }
@@ -13206,7 +13209,7 @@ var foreign56 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let SignInItem_Generate = class SignInItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -13329,7 +13332,7 @@ var foreign132 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let SignInPanel_Generate = class SignInPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -14001,7 +14004,7 @@ var foreign58 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -14703,7 +14706,7 @@ var foreign4 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -15821,6 +15824,8 @@ class Monster_Level extends Script {
             return null;
         let attackAni = this.getMonster.loadAnimation(this.animationInfo.attacks[this.attackIndex]);
         attackAni.play();
+        if (this.randomInt(1, 10) >= 7)
+            SoundService.play3DSound((this.randomInt(1, 2) == 1) ? "431490" : "431500", this.getMonster);
         return attackAni;
     }
     async playDieAni_S() {
@@ -16255,7 +16260,7 @@ var foreign15 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -16366,7 +16371,7 @@ var foreign16 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let ArkItem_Generate = class ArkItem_Generate extends UIScript {
     get mIconImage() {
@@ -16495,7 +16500,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -16509,6 +16514,12 @@ let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
             this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas');
         }
         return this.mCanvas_Internal;
+    }
+    get mUserIdTextBlock() {
+        if (!this.mUserIdTextBlock_Internal && this.uiWidgetBase) {
+            this.mUserIdTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mUserIdTextBlock');
+        }
+        return this.mUserIdTextBlock_Internal;
     }
     get mArkCanvas() {
         if (!this.mArkCanvas_Internal && this.uiWidgetBase) {
@@ -16556,6 +16567,7 @@ let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
         //按钮多语言
         //文本多语言
         this.initLanguage(this.mTitleTextBlock);
+        this.initLanguage(this.mUserIdTextBlock);
         this.initLanguage(this.mArkCountTextBlock);
         //文本多语言
     }
@@ -16592,7 +16604,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/GiftBagPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let GiftBagPanel_Generate = class GiftBagPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -16791,6 +16803,9 @@ class ArkPanel extends ArkPanel_Generate$1 {
             this.getHudPanel.show();
         });
     }
+    updateUserIdTextBlock(str) {
+        this.mUserIdTextBlock.text = `${str}:${Player.localPlayer.userId}`;
+    }
 }
 class ArkData extends Subdata {
     constructor() {
@@ -16977,10 +16992,16 @@ class ArkModuleC extends ModuleC {
             Notice.showDownNotice(`领取失败`);
         }
     }
+    net_syncArkStr(str) {
+        this.getArkPanel.updateUserIdTextBlock(str);
+    }
 }
 class ArkModuleS extends ModuleS {
     onStart() {
         this.bindAction();
+    }
+    onPlayerEnterGame(player) {
+        this.syncArkStr(player);
     }
     bindAction() {
         mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
@@ -17002,6 +17023,15 @@ class ArkModuleS extends ModuleS {
         PurchaseService.redeemGiftCode(player, coodStr, (result) => {
             this.getClient(player).net_getGiftBag((result.status == 200 || result.status == 1), result.message);
         });
+    }
+    async syncArkStr(player) {
+        let str = await this.getCustomdata("WorldArkStr");
+        this.getClient(player).net_syncArkStr(str);
+    }
+    async getCustomdata(key) {
+        let data = null;
+        data = await GeneralManager.asyncRpcGetData(key);
+        return data;
     }
 }
 class GiftBagPanel extends GiftBagPanel_Generate$1 {
@@ -17083,7 +17113,7 @@ class HUDModuleS extends ModuleS {
         this.worldConfigDatas = [];
     }
     onAwake() {
-        this.initWorldConfigDatas();
+        // this.initWorldConfigDatas();
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -17135,8 +17165,8 @@ class HUDModuleS extends ModuleS {
         this.worldConfigDatas = (await this.getCustomdata("WorldConfigData"));
     }
     async syncWorldConfigData(player) {
-        if (!this.worldConfigDatas || this.worldConfigDatas.length == 0)
-            await this.initWorldConfigDatas();
+        // if (!this.worldConfigDatas || this.worldConfigDatas.length == 0)
+        await this.initWorldConfigDatas();
         this.getClient(player).net_syncWorldConfigData(this.worldConfigDatas);
     }
     async getCustomdata(key) {
@@ -17165,7 +17195,7 @@ var foreign50 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.18
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -18533,7 +18563,7 @@ var foreign92 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -18633,7 +18663,7 @@ var foreign129 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -18753,7 +18783,7 @@ var foreign73 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -21221,7 +21251,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_1.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_1_Generate = class WorldTips_1_Generate extends UIScript {
     get mTextBlock() {
@@ -21277,7 +21307,7 @@ var foreign101 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_2.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_2_Generate = class WorldTips_2_Generate extends UIScript {
     get mTextBlock() {
@@ -21334,7 +21364,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_3.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_3_Generate = class WorldTips_3_Generate extends UIScript {
     get mTextBlock() {
@@ -21391,7 +21421,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_4.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_4_Generate = class WorldTips_4_Generate extends UIScript {
     get mTextBlock() {
@@ -21447,7 +21477,7 @@ var foreign104 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_5.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_5_Generate = class WorldTips_5_Generate extends UIScript {
     get mTextBlock() {
@@ -21504,7 +21534,7 @@ var foreign105 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_6.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_6_Generate = class WorldTips_6_Generate extends UIScript {
     get mTextBlock() {
@@ -21560,7 +21590,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_7.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_7_Generate = class WorldTips_7_Generate extends UIScript {
     get mTextBlock() {
@@ -21617,7 +21647,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips.ui
- * TIME: 2024.09.14-19.50.59
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldTips_Generate = class WorldTips_Generate extends UIScript {
     get mTextBlock() {
@@ -21674,7 +21704,7 @@ var foreign108 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -21793,7 +21823,7 @@ var foreign122 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -21884,7 +21914,7 @@ var foreign130 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -21997,7 +22027,7 @@ var foreign134 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -22052,7 +22082,7 @@ var foreign136 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -22127,7 +22157,7 @@ var foreign137 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -22211,7 +22241,7 @@ var foreign138 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.09.14-19.51.00
+ * TIME: 2024.09.17-19.33.17
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {

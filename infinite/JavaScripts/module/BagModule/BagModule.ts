@@ -417,8 +417,8 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                     }
                 }
             }, () => {
-                let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * 10000;
-                if (price < 0 || isNaN(price)) price = 10000;
+                let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * GlobalData.addCoinCount;
+                if (price < 0 || isNaN(price)) price = GlobalData.addCoinCount;
                 let hasCoin = this.getPlayerModuleC.getCoin();
                 if (hasCoin >= price) {
                     this.getPlayerModuleC.saveCoin(-price);
@@ -431,10 +431,10 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                     Notice.showDownNotice("金币不足");
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
-                            this.getPlayerModuleC.saveCoin(10000);
-                        }, "免费领取10000金币", "取消", "免费领取");
+                            this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
+                        }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
                     } else {
-                        this.getPlayerModuleC.saveCoin(10000);
+                        this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                     }
                 }
             }, () => {
@@ -1027,7 +1027,7 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
         this.useCallBack = useCallBack;
         this.priceCallBack = priceCallBack;
         this.adsCallBack = adsCallBack;
-        let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * 10000;
+        let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * GlobalData.addCoinCount;
         this.mPreceTextBlock.text = `${price}金币购买`;
         this.show();
     }

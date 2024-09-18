@@ -253,16 +253,18 @@ export default class Monster_Level extends Script {
     private initEvent_S(): void {
         PrefabEvent.PrefabEvtFight.onHit(this.playerAtkEnemy_S.bind(this));
 
-        Event.addLocalListener(`InitMonster`, (index: number, level: number) => {
+        Event.addLocalListener(`InitMonster`, (index: number, level: number, lv: number) => {
             if (this.levelIndex != index) return;
             this.level = level;
+            this.lv = lv;
             this.calculateMaxHp();
             EffectService.playOnGameObject("142750", this.getMonster, { slotType: mw.HumanoidSlotType.Root });
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
+            this.getMonster.setDescription([(this.randomInt(1, 2) == 1) ? "5E4EA6214690891A8428C08D8CF69868" : "FEB031744ECC57E59F33B1AEFA7A6A07"]);
             this.setMonsterState = MonsterState.Activate;
             this.playIdleAni_S().then(() => {
-                TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
+                TimeUtil.delaySecond(this.randomInt(1, 2)).then(() => this.startNavigateTo_S());
             });
         });
     }
@@ -281,9 +283,7 @@ export default class Monster_Level extends Script {
         } else {
             this.hp = 0;
             this.die_S();
-            this.level++;
             this.getPlayerModuleS.playerKillEnemy_Level(senderGuid, this.maxHp, this.monsterId, this.levelType);
-            this.calculateMaxHp();
         }
         this.getPlayerModuleS.playerAtkEnemyFlyText(senderGuid, hitPoint, damage);
     }
@@ -300,7 +300,7 @@ export default class Monster_Level extends Script {
             this.getMonster?.currentAnimation?.stop();
             if (!this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = true;
         }
-        TimeUtil.delaySecond(dieTime).then(() => { this.rebirth_S(); });
+        // TimeUtil.delaySecond(dieTime).then(() => { this.rebirth_S(); });
     }
 
     private dieReset_S(): void {
@@ -313,8 +313,9 @@ export default class Monster_Level extends Script {
     }
 
     private level: number = 1;
+    private lv: number = 1;
     private calculateMaxHp(): void {
-        this.maxHp = this.level * 1000;
+        this.maxHp = this.level * 1000 * this.lv;
     }
 
     private rebirth_S(): void {
@@ -373,7 +374,7 @@ export default class Monster_Level extends Script {
 
     private async activate_S(): Promise<void> {
         this.hp = this.maxHp;
-        this.getMonster.setDescription([(this.randomInt(1, 2) == 1) ? "349155DA41E2A30CBEFE26B14F964436" : "FEB031744ECC57E59F33B1AEFA7A6A07"]);
+        this.getMonster.setDescription([(this.randomInt(1, 2) == 1) ? "5E4EA6214690891A8428C08D8CF69868" : "FEB031744ECC57E59F33B1AEFA7A6A07"]);
         await this.getMonster.asyncReady();
         this.getMonster.maxWalkSpeed = this.moveSpeed;
         this.setMonsterState = MonsterState.Activate;
@@ -501,7 +502,7 @@ export default class Monster_Level extends Script {
             let hitGo = hitResults[i].gameObject;
             if (hitGo instanceof mw.Character && hitGo?.player) {
                 let targetGameObjectId = hitGo?.gameObjectId;
-                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
+                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round((this.level * this.lv) / 10));
             }
         }
     }

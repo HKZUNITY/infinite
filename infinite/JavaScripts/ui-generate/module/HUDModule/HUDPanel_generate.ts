@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.17-19.33.17
+ * TIME: 2024.09.18-23.47.29
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -372,6 +372,27 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mInvincibleTextBlock_Internal
 	}
+	private mUpLvButton_Internal: mw.Button
+	public get mUpLvButton(): mw.Button {
+		if(!this.mUpLvButton_Internal&&this.uiWidgetBase) {
+			this.mUpLvButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mUpLvButton') as mw.Button
+		}
+		return this.mUpLvButton_Internal
+	}
+	private mUpExpFlipBook_Internal: mw.FlipBook
+	public get mUpExpFlipBook(): mw.FlipBook {
+		if(!this.mUpExpFlipBook_Internal&&this.uiWidgetBase) {
+			this.mUpExpFlipBook_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/UpExpCanvas/mUpExpFlipBook') as mw.FlipBook
+		}
+		return this.mUpExpFlipBook_Internal
+	}
+	private mUpExpButton_Internal: mw.Button
+	public get mUpExpButton(): mw.Button {
+		if(!this.mUpExpButton_Internal&&this.uiWidgetBase) {
+			this.mUpExpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/UpExpCanvas/mUpExpButton') as mw.Button
+		}
+		return this.mUpExpButton_Internal
+	}
 	private mCoinTextBlock_Internal: mw.TextBlock
 	public get mCoinTextBlock(): mw.TextBlock {
 		if(!this.mCoinTextBlock_Internal&&this.uiWidgetBase) {
@@ -588,6 +609,18 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mInvincibleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mUpLvButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mUpLvButton");
+		});
+		this.mUpLvButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mUpExpButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mUpExpButton");
+		});
+		this.mUpExpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mAddCoinButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mAddCoinButton");
 		});
@@ -685,6 +718,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/InvincibleCanvas/InvincibleTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/UpExpCanvas/UpExpTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock") as any);

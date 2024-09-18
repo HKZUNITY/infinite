@@ -1,6 +1,7 @@
 import { SpawnManager } from '../../../Modified027Editor/ModifiedSpawn';
 import Console from "../../../Tools/Console";
 import { Utils } from "../../../Tools/utils";
+import { GameConfig } from '../../../config/GameConfig';
 import GlobalData from "../../../const/GlobalData";
 import PlayerLifebar_Generate from "../../../ui-generate/module/PlayerModule/PlayerLifebar_generate";
 
@@ -14,10 +15,15 @@ export default class PlayerLifebar extends mw.Script {
     public playerName: string = "";
     @mw.Property({ replicated: true, onChanged: "onLevelChange" })
     public playerLevel: number = -1;
+    @mw.Property({ replicated: true, onChanged: "onUsePet" })
+    public bagId: number = -1;
     @mw.Property({ replicated: true, onChanged: "onInvincible" })
     public isInvincible: boolean = false;
     public get getIsInvincible(): boolean {
         return this.isInvincible;
+    }
+    public get getBagId(): number {
+        return this.bagId;
     }
     private _hpBarUI: PlayerLifebar_Generate;
     private _hpBarWidget: mw.UIWidget;
@@ -28,6 +34,12 @@ export default class PlayerLifebar extends mw.Script {
         if (SystemUtil.isClient()) {
             Console.log("初始化Player血条UI");
             this.init();
+        }
+    }
+
+    protected onUpdate(dt: number): void {
+        if (mw.SystemUtil.isClient()) {
+            this.onUpdateC(dt);
         }
     }
 
@@ -76,8 +88,78 @@ export default class PlayerLifebar extends mw.Script {
         }
     }
 
+    private pet: mw.Character = null;
+    private petIdleId: string = null;
+    private petMoveId: string = null;
+    private async onUsePet(): Promise<void> {
+        if (this.bagId == -1) {
+            if (!this.pet) return;
+            GameObjPool.despawn(this.pet);
+            this.pet = null;
+            this.useUpdate = false;
+        } else {
+            let bagInfoElement = GameConfig.BagInfo.getElement(this.bagId);
+            if (!bagInfoElement) return;
+            this.pet = await mw.GameObject.asyncFindGameObjectById("32291CF5") as mw.Character;
+            let loc = this.character.worldTransform.position;
+            this.pet.worldTransform.position = new mw.Vector(loc.x, loc.y, loc.z + 500);
+            // this.pet.setDescription(["25C7285B430582310D2253AE5524C6B4"]);
+            // this.pet.description.base.wholeBody = bagInfoElement.AssetId;
+            this.petIdleId = bagInfoElement.Idle;
+            this.petMoveId = bagInfoElement.Move;
+            this.useUpdate = false;
+        }
+    }
+
+    private frameCount: number = 0;
+    private maxFrameCount: number = 1;
+    private onUpdateC(dt: number): void {
+        this.frameCount++;
+        if (this.frameCount < this.maxFrameCount) return;
+        this.frameCount = 0;
+        this.updateMove();
+    }
+
+    private curPetDir: mw.Vector = mw.Vector.zero;
+    private targetLoc: mw.Vector = mw.Vector.zero;
+    private targetDistance: number = 0;
+    private petAnimation: mw.Animation = null;
+    private updateMove(): void {
+        if (!this.pet || !this.character || !this.petMoveId || !this.petIdleId) return;
+        this.targetLoc = this.character.worldTransform.position;
+        this.targetDistance = Math.sqrt(
+            Math.pow(this.pet.worldTransform.position.x - this.targetLoc.x, 2) +
+            Math.pow(this.pet.worldTransform.position.y - this.targetLoc.y, 2)
+        );
+        if (this.targetDistance > 200) {
+            this.curPetDir = this.targetLoc.clone().add(this.targetLoc.clone().subtract(this.pet.worldTransform.position.clone()))
+            this.pet.lookAt(this.curPetDir);
+            this.pet.addMovement(mw.Vector.forward);
+
+            console.error(`A`);
+            if (this.petAnimation && this.petAnimation?.assetId == this.petMoveId) {
+                console.error(`B`);
+            } else {
+                this.petAnimation = this.pet.loadAnimation(this.petMoveId);
+                this.petAnimation.loop = 0;
+                this.petAnimation.play();
+                console.error(`C`);
+            }
+        } else {
+            if (this.petAnimation && this.petAnimation?.assetId == this.petIdleId) {
+                console.error(`D`);
+            } else {
+                this.petAnimation = this.pet.loadAnimation(this.petIdleId);
+                this.petAnimation.loop = 0;
+                this.petAnimation.play();
+                console.error(`E`);
+            }
+        }
+    }
+
     protected onDestroy(): void {
         this._hpBarUI?.destroy();
         this._hpBarWidget?.destroy();
+        if (this.pet) GameObjPool.despawn(this.pet);
     }
 }

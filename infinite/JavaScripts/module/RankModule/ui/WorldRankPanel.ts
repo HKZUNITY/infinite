@@ -1,3 +1,4 @@
+import GlobalData from "../../../const/GlobalData";
 import { ObjectPoolServices } from "../../../Tools/ObjectPool";
 import { Utils } from "../../../Tools/utils";
 import WorldRankPanel_Generate from "../../../ui-generate/module/WorldRank/WorldRankPanel_generate";
@@ -168,7 +169,7 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 		this.currentShowCanvas = ShowCanvasType.World;
 		this.mRoomCanvas.visibility = mw.SlateVisibility.Collapsed;
 		this.mWorldCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-		this.mRankDesTextBlock.text = "全服前100名\n段位 Lv.等级排行。";
+		this.mRankDesTextBlock.text = `全服前${500}名\n段位 Lv.等级排行。`;
 		this.mTitleTextBlock.text = "全服排行榜";
 	}
 

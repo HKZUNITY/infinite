@@ -37,6 +37,11 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         // InputUtil.onKeyDown(mw.Keys.NumPadNine, () => {
         //     this.saveKill(1);
         // });
+        this.initAction();
+    }
+
+    private initAction(): void {
+        this.getHudModuleC.onOnOffUpExpAction.add(this.addOnOffUpExp.bind(this));
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -44,6 +49,10 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         this.diamond = this.data.diamond;
         this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.coin, true);
         this.getHudModuleC.updateDiamond(this.diamond);
+    }
+
+    protected onUpdate(dt: number): void {
+        this.updateUpExp(dt);
     }
 
     public net_onPlayerAtkSelf(damage: number, hitPoint: mw.Vector): void {
@@ -150,5 +159,27 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
 
     public net_killTip(killerUserId: string, killerName: string, killedUserId: string, killedName: string): void {
         this.getHudModuleC.killTip(killerUserId, killerName, killedUserId, killedName);
+    }
+
+    private isOnUpExp: boolean = false;
+    private addOnOffUpExp(isOn: boolean): void {
+        this.isOnUpExp = isOn;
+    }
+
+    private upExpTimer: number = 0;
+    private upExpTime: number = 1;
+    private updateUpExp(dt: number): void {
+        if (!this.isOnUpExp) return;
+        this.upExpTimer += dt;
+        if (this.upExpTimer < this.upExpTime) return
+        this.upExpTimer = 0;
+        this.upExp();
+    }
+
+    private upExp(): void {
+        let exp = Math.round(this.getLvUpExp() / 60);
+        this.saveCoinAndExp(0, exp);
+        let fontColor: mw.LinearColor[] = Utils.randomColor();
+        FlyText.instance.showFlyText(`Exp+${exp}`, this.localPlayer.character.worldTransform.position, fontColor[0], fontColor[1]);
     }
 }

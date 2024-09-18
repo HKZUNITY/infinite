@@ -79,6 +79,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mAdsButton.onClicked.add(() => {
 			this.getHudModuleC.onAdsAction.call();
 		});
+		this.mUpLvButton.onClicked.add(() => {
+			this.getHudModuleC.onAdsAction.call();
+		});
 		this.mRingSoulButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenRingSoulAction.call();
 		});
@@ -119,6 +122,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mGetButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenGetAction.call();
 		});
+		this.mUpExpButton.onClicked.add(() => {
+			this.getHudModuleC.onOnOffUpExpAction.call(true);
+		})
 	}
 
 	private isCanOnRingSoul: boolean = true;

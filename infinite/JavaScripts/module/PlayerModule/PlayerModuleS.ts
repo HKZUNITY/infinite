@@ -375,6 +375,12 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         SoundService.play3DSound("169179", player.character, 1, 10, { radius: 500, falloffDistance: 1200 });
         EffectService.playOnGameObject("142750", player.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 1 });
     }
+
+    public usePet(player: mw.Player, bagId: number): void {
+        if (!this.playerLifeMap.has(player.playerId)) return;
+        if (this.playerLifeMap.get(player.playerId).playerLifebar.getBagId == bagId) return;
+        this.playerLifeMap.get(player.playerId).playerLifebar.bagId = bagId;
+    }
 }
 
 class PlayerDataS {

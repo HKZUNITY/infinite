@@ -6,6 +6,7 @@ import { GameConfig } from "../../config/GameConfig";
 import { IMusicElement } from "../../config/Music";
 import GlobalData from "../../const/GlobalData";
 import AdTipsPanel from '../AdsModule/ui/AdTipsPanel';
+import UpPanel from '../AdsModule/ui/UpPanel';
 import { BagModuleC } from '../BagModule/BagModule';
 import { LevelModuleC } from '../LevelModule/LevelModule';
 import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
@@ -59,6 +60,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         }
         return this.adTipsPanel
     }
+    private upPanel: UpPanel = null;
+    private get getUpPanel(): UpPanel {
+        if (!this.upPanel) {
+            this.upPanel = mw.UIService.create(UpPanel);
+        }
+        return this.upPanel
+    }
     private bagModuleC: BagModuleC = null;
     private get getBagModuleC(): BagModuleC {
         if (!this.bagModuleC) {
@@ -101,6 +109,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onOpenSignInAction: Action = new Action();
     public onOpenArkAction: Action = new Action();
     public onOpenGetAction: Action = new Action();
+    public onOnOffUpExpAction: Action1<boolean> = new Action1<boolean>();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
@@ -154,13 +163,22 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         });
 
         this.onAdsAction.add(() => {
-            if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd(() => {
-                    this.getPlayerModuleC.adsUpLv();
-                }, "等级免费提升一级", "取消", "免费领取");
-            } else {
+            this.getUpPanel.showRewardAd(() => {
                 this.getPlayerModuleC.adsUpLv();
-            }
+            }, () => {
+                if (this.getPlayerModuleC.getDiamond >= GlobalData.addDiamondCount) {
+                    this.getPlayerModuleC.saveDiamond(-GlobalData.addDiamondCount);
+                    this.getPlayerModuleC.adsUpLv();
+                } else {
+                    if (GlobalData.isOpenIAA) {
+                        this.getAdTipsPanel.showRewardAd(() => {
+                            this.getPlayerModuleC.adsUpLv();
+                        }, "等级免费提升一级", "取消", "免费领取");
+                    } else {
+                        this.getPlayerModuleC.adsUpLv();
+                    }
+                }
+            }, `升级等级`, `使用${GlobalData.addDiamondCount}个钻石\n提升等级`, `直接提升等级`, ``, `免费升级`, `确定`);
         });
 
         this.onInvincibleAction.add((isInvincible: boolean) => {

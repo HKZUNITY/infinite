@@ -154,6 +154,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     private enterScenceUsing(): void {
         if (this.usingWeaponId > 0) this.useWeapon(this.usingWeaponId);
         if (this.usingSkinId > 0) this.useSkin(GameConfig.BagInfo.getElement(this.usingSkinId)?.AssetId);
+        // if (this.usingPetId > 0) this.usePet(this.usingPetId);
     }
 
     private bagIds: number[] = [];
@@ -246,6 +247,13 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.server.net_setUsingPetId(petId);
         this.updateHpByUsing();
         return true;
+    }
+
+    public resetUsingPet(): void {
+        this.usingPetId = -1;
+        this.server.net_setUsingPetId(this.usingPetId);
+        this.updateHpByUsing();
+        this.usePet(this.usingPetId);
     }
 
     private updateHpByUsing(): void {
@@ -463,8 +471,10 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                 Notice.showDownNotice("装备成功");
                 break;
             case 4:
-                // if (!this.setUsingEquipId(bagInfoElement.Type, bagId)) return;
-                Notice.showDownNotice("功能暂未开放,敬请期待");
+                Notice.showDownNotice(`功能明天开放，敬请期待`);
+                // if (!this.setUsingPetId(bagId)) return;
+                // this.usePet(bagId);
+                // Notice.showDownNotice("跟随成功");
                 break;
             default:
                 break;
@@ -495,6 +505,10 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.localPlayer.character.description.advance.slotAndDecoration
             .slot[bagInfoElement.HumanoidSlotType].decoration.add(bagInfoElement.AssetId, relativeTransform);
         this.localPlayer.character.asyncReady().then(() => { this.localPlayer.character.syncDescription(false, true); });
+    }
+
+    private usePet(bagId: number): void {
+        this.server.net_usePet(bagId);
     }
 
     private isInitComplete: boolean = false;
@@ -649,25 +663,30 @@ export class BagModuleS extends ModuleS<BagModuleC, BagData> {
 
     }
 
+    @Decorator.noReply()
     public net_setBagId(bagId: number): void {
         this.currentData.setBagId(bagId);
     }
 
+    @Decorator.noReply()
     public net_setUsingWeaponId(weaponId: number): void {
         this.currentData.setUsingWeaponId(weaponId);
         this.updateHpByUsing(this.currentPlayer);
     }
 
+    @Decorator.noReply()
     public net_setUsingSkinId(skinId: number): void {
         this.currentData.setUsingSkinId(skinId);
         this.updateHpByUsing(this.currentPlayer);
     }
 
+    @Decorator.noReply()
     public net_setUsingEquipId(key: number, bagId: number): void {
         this.currentData.setUsingEquipId(key, bagId);
         this.updateHpByUsing(this.currentPlayer);
     }
 
+    @Decorator.noReply()
     public net_setUsingPetId(petId: number): void {
         this.currentData.setUsingPetId(petId);
         this.updateHpByUsing(this.currentPlayer);
@@ -701,6 +720,11 @@ export class BagModuleS extends ModuleS<BagModuleC, BagData> {
         let totalHp = weaponHp + skinHp + equipHp + petHp + 1;
         if (totalHp == 0) totalHp = 1;
         return totalHp;
+    }
+
+    @Decorator.noReply()
+    public net_usePet(bagId: number): void {
+        this.getPlayerModuleS.usePet(this.currentPlayer, bagId);
     }
 }
 
@@ -760,7 +784,9 @@ export class BagPanel extends BagPanel_Generate {
                     Notice.showDownNotice(`卸下成功`);
                     break;
                 case 3:
-                    Notice.showDownNotice(`功能暂未开放，敬请期待`);
+                    // Notice.showDownNotice(`丢掉宠物成功`);
+                    // this.getBagModuleC.resetUsingPet();
+                    Notice.showDownNotice(`功能明天开放，敬请期待`);
                     break;
                 default:
                     break;

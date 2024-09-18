@@ -707,6 +707,12 @@ export class Utils {
             this.worldConfigDataMap.set(worldConfigDatas[i].userId, worldConfigDatas[i]);
         }
     }
+
+    public static async asyncDownloadAsset(InAssetId: string): Promise<void> {
+        if (!mw.AssetUtil.assetLoaded(InAssetId)) {
+            await mw.AssetUtil.asyncDownloadAsset(InAssetId);
+        }
+    }
 }
 
 /**贝塞尔曲线 */

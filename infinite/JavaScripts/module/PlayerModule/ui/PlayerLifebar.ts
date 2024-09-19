@@ -100,14 +100,18 @@ export default class PlayerLifebar extends mw.Script {
         } else {
             let bagInfoElement = GameConfig.BagInfo.getElement(this.bagId);
             if (!bagInfoElement) return;
-            this.pet = await mw.GameObject.asyncFindGameObjectById("32291CF5") as mw.Character;
+            if (!this.pet) {
+                this.pet = await GameObjPool.asyncSpawn("Character") as mw.Character;
+                await this.pet.asyncReady();
+            }
             let loc = this.character.worldTransform.position;
             this.pet.worldTransform.position = new mw.Vector(loc.x, loc.y, loc.z + 500);
-            // this.pet.setDescription(["25C7285B430582310D2253AE5524C6B4"]);
-            // this.pet.description.base.wholeBody = bagInfoElement.AssetId;
-            this.petIdleId = bagInfoElement.Idle;
-            this.petMoveId = bagInfoElement.Move;
-            this.useUpdate = false;
+            Utils.asyncDownloadAsset(bagInfoElement.AssetId).then(() => {
+                this.pet.setDescription([bagInfoElement.AssetId]);
+                this.petIdleId = bagInfoElement.Idle;
+                this.petMoveId = bagInfoElement.Move;
+                this.useUpdate = true;
+            });
         }
     }
 
@@ -131,7 +135,7 @@ export default class PlayerLifebar extends mw.Script {
             Math.pow(this.pet.worldTransform.position.x - this.targetLoc.x, 2) +
             Math.pow(this.pet.worldTransform.position.y - this.targetLoc.y, 2)
         );
-        if (this.targetDistance > 200) {
+        if (this.targetDistance > 300 && this.targetDistance <= 2000) {
             this.curPetDir = this.targetLoc.clone().add(this.targetLoc.clone().subtract(this.pet.worldTransform.position.clone()))
             this.pet.lookAt(this.curPetDir);
             this.pet.addMovement(mw.Vector.forward);
@@ -140,26 +144,30 @@ export default class PlayerLifebar extends mw.Script {
             if (this.petAnimation && this.petAnimation?.assetId == this.petMoveId) {
                 console.error(`B`);
             } else {
-                this.petAnimation = this.pet.loadAnimation(this.petMoveId);
-                this.petAnimation.loop = 0;
-                this.petAnimation.play();
-                console.error(`C`);
+                Utils.asyncDownloadAsset(this.petMoveId).then(() => {
+                    this.petAnimation = this.pet.loadAnimation(this.petMoveId);
+                    this.petAnimation.loop = 0;
+                    this.petAnimation.play();
+                    console.error(`C`);
+                });
             }
         } else {
             if (this.petAnimation && this.petAnimation?.assetId == this.petIdleId) {
                 console.error(`D`);
             } else {
-                this.petAnimation = this.pet.loadAnimation(this.petIdleId);
-                this.petAnimation.loop = 0;
-                this.petAnimation.play();
-                console.error(`E`);
+                Utils.asyncDownloadAsset(this.petIdleId).then(() => {
+                    this.petAnimation = this.pet.loadAnimation(this.petIdleId);
+                    this.petAnimation.loop = 0;
+                    this.petAnimation.play();
+                    console.error(`E`);
+                })
             }
         }
     }
 
     protected onDestroy(): void {
+        if (this.pet) GameObjPool.despawn(this.pet);
         this._hpBarUI?.destroy();
         this._hpBarWidget?.destroy();
-        if (this.pet) GameObjPool.despawn(this.pet);
     }
 }

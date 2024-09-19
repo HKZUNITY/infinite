@@ -154,7 +154,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     private enterScenceUsing(): void {
         if (this.usingWeaponId > 0) this.useWeapon(this.usingWeaponId);
         if (this.usingSkinId > 0) this.useSkin(GameConfig.BagInfo.getElement(this.usingSkinId)?.AssetId);
-        // if (this.usingPetId > 0) this.usePet(this.usingPetId);
+        if (this.usingPetId > 0) this.usePet(this.usingPetId);
     }
 
     private bagIds: number[] = [];
@@ -471,10 +471,10 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                 Notice.showDownNotice("装备成功");
                 break;
             case 4:
-                Notice.showDownNotice(`功能明天开放，敬请期待`);
-                // if (!this.setUsingPetId(bagId)) return;
-                // this.usePet(bagId);
-                // Notice.showDownNotice("跟随成功");
+                // Notice.showDownNotice(`功能明天开放，敬请期待`);
+                if (!this.setUsingPetId(bagId)) return;
+                this.usePet(bagId);
+                Notice.showDownNotice("跟随成功");
                 break;
             default:
                 break;
@@ -784,9 +784,9 @@ export class BagPanel extends BagPanel_Generate {
                     Notice.showDownNotice(`卸下成功`);
                     break;
                 case 3:
-                    // Notice.showDownNotice(`丢掉宠物成功`);
-                    // this.getBagModuleC.resetUsingPet();
-                    Notice.showDownNotice(`功能明天开放，敬请期待`);
+                    Notice.showDownNotice(`丢掉宠物成功`);
+                    this.getBagModuleC.resetUsingPet();
+                    // Notice.showDownNotice(`功能明天开放，敬请期待`);
                     break;
                 default:
                     break;

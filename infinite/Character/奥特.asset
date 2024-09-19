@@ -1,0 +1,5 @@
+﻿{
+	"CustomType": "shape|uppercloth|gloves|hair|shoe|slots|lowercloth",
+	"CustomData": "{\r\n\t\"data\": [ 11469055, 1 ],\r\n\t\"assetId\": [\r\n\t\t\"5636351\",\r\n\t\t\"64542\",\r\n\t\t\"6357247\",\r\n\t\t\"64554\",\r\n\t\t\"7078143\",\r\n\t\t\"64551\",\r\n\t\t\"7799039\",\r\n\t\t\"64541\",\r\n\t\t\"10682623\",\r\n\t\t\"92724\",\r\n\t\t\"11075839\",\r\n\t\t\"64546\",\r\n\t\t\"255\",\r\n\t\t\"161675\"\r\n\t],\r\n\t\"littleEndian\": 1,\r\n\t\"basicStance\": \"234423\",\r\n\t\"version\": \"2.4\"\r\n}",
+	"CustomSlot": "{\r\n\t\"skeletonName\": \"MW_Skeleton\",\r\n\t\"saveSlotArray\": [],\r\n\t\"saveAttachmentArray\": [\r\n\t\t\"334208$16$2.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000\"\r\n\t],\r\n\t\"bIsGeneratedInRuntime\": 0,\r\n\t\"version\": 1\r\n}"
+}

@@ -12,9 +12,9 @@ const rewardDiamond: Map<string, { icon: string, rewardCount: number, price: num
 rewardDiamond.set("6NLoNBXFml10001IF", { icon: "103215", rewardCount: 100, price: 98, itemPos: new mw.Vector2(300, 0) });
 rewardDiamond.set("7yf8F2pRWKp0001IG", { icon: "103217", rewardCount: 600, price: 598, itemPos: new mw.Vector2(178, 320) });
 rewardDiamond.set("5CKKkBYJLYY0001IH", { icon: "103218", rewardCount: 1000, price: 998, itemPos: new mw.Vector2(422, 320) });
-rewardDiamond.set("8PjQmjn1Git0001II", { icon: "103221", rewardCount: 1088, price: 600, itemPos: new mw.Vector2(750, 0) });
+rewardDiamond.set("8PjQmjn1Git0001II", { icon: "103221", rewardCount: 1000, price: 600, itemPos: new mw.Vector2(750, 0) });
 rewardDiamond.set("5A48hyUteGr0001J1", { icon: "103218", rewardCount: 10880, price: 6800, itemPos: new mw.Vector2(750, 320) });
-const firstRewardKey: string = "8PjQmjn1Git0001II";
+// const firstRewardKey: string = "8PjQmjn1Git0001II";
 const secondRewardKey: string = "5A48hyUteGr0001J1";
 const arkIcon: string = "312541";
 
@@ -37,7 +37,7 @@ export class ArkItem extends ArkItem_Generate {
 
     private addClickButton(): void {
         this.getArkModuleC.placeOrder(this.commodityId, () => {
-            if (this.commodityId == firstRewardKey || this.commodityId == secondRewardKey) {
+            if (this.commodityId == secondRewardKey) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
                 this.mHasTextBlock.text = `今日已售空`;
             }
@@ -51,9 +51,9 @@ export class ArkItem extends ArkItem_Generate {
     }
 
     private updateUI(): void {
-        if (this.commodityId == firstRewardKey || this.commodityId == secondRewardKey) {
+        if (this.commodityId == secondRewardKey) {
             this.mDayTextBlock.text = `每天限购一次`;
-            if (this.getArkModuleC.isFirst || this.getArkModuleC.isSecond) {
+            if (this.getArkModuleC.isSecond) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
             } else {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
@@ -109,10 +109,6 @@ export class ArkPanel extends ArkPanel_Generate {
             let arkItem = mw.UIService.create(ArkItem);
             arkItem.initArkItem(key);
             this.mCanvas.addChild(arkItem.uiObject);
-            // if (key == firstRewardKey) {
-            //     arkItem.uiObject.size = arkItem.uiObject.size.multiply(1.6);
-            //     arkItem.uiObject.renderScale = mw.Vector2.one.multiply(1.6);
-            // }
             arkItem.uiObject.position = value.itemPos;
             this.arkItems.push(arkItem);
         });
@@ -229,7 +225,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
 
     private isCanContinueClick: boolean = true;
     public placeOrder(commodityId: string, buySuccessCallback: () => void): void {
-        if ((commodityId == firstRewardKey && !this.isFirst) || (commodityId == secondRewardKey && !this.isSecond)) {
+        if ((commodityId == secondRewardKey && !this.isSecond)) {
             Notice.showDownNotice(`今日已售空`);
             Notice.showDownNotice(`明日再来`);
             console.error(`今日已售空`);
@@ -244,7 +240,6 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             this.isCanContinueClick = true;
         });
         if (mw.SystemUtil.isPIE) {
-            if (commodityId == firstRewardKey) this.setFirstLastDayStr();
             if (commodityId == secondRewardKey) this.setSecondLastDayStr();
             if (buySuccessCallback) buySuccessCallback();
             let rewardCount = rewardDiamond.get(commodityId).rewardCount;
@@ -254,7 +249,6 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             mw.PurchaseService.placeOrder(commodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();//刷新代币数量
                 if (status != 200) return;
-                if (commodityId == firstRewardKey) this.setFirstLastDayStr();
                 if (commodityId == secondRewardKey) this.setSecondLastDayStr();
                 if (buySuccessCallback) buySuccessCallback();
             });
@@ -267,10 +261,6 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         let rewardCount = rewardDiamond.get(commodityId).rewardCount;
         Notice.showDownNotice(`钻石+${rewardCount}`);
         this.getPlayerModuleC.saveDiamond(rewardCount);
-    }
-
-    public get isFirst(): boolean {
-        return this.firstLastDayStr != Utils.getDay();
     }
 
     public get isSecond(): boolean {

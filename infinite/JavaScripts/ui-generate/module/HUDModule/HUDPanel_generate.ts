@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.18-23.47.29
+ * TIME: 2024.09.20-20.02.03
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -358,17 +358,24 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mExpTextBlock_Internal
 	}
+	private mInvincibleCanvas_Internal: mw.Canvas
+	public get mInvincibleCanvas(): mw.Canvas {
+		if(!this.mInvincibleCanvas_Internal&&this.uiWidgetBase) {
+			this.mInvincibleCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas') as mw.Canvas
+		}
+		return this.mInvincibleCanvas_Internal
+	}
 	private mInvincibleButton_Internal: mw.Button
 	public get mInvincibleButton(): mw.Button {
 		if(!this.mInvincibleButton_Internal&&this.uiWidgetBase) {
-			this.mInvincibleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/InvincibleCanvas/mInvincibleButton') as mw.Button
+			this.mInvincibleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas/mInvincibleButton') as mw.Button
 		}
 		return this.mInvincibleButton_Internal
 	}
 	private mInvincibleTextBlock_Internal: mw.TextBlock
 	public get mInvincibleTextBlock(): mw.TextBlock {
 		if(!this.mInvincibleTextBlock_Internal&&this.uiWidgetBase) {
-			this.mInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/InvincibleCanvas/mInvincibleTextBlock') as mw.TextBlock
+			this.mInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas/mInvincibleTextBlock') as mw.TextBlock
 		}
 		return this.mInvincibleTextBlock_Internal
 	}
@@ -717,7 +724,7 @@ export default class HUDPanel_Generate extends UIScript {
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RingSoulCanvas/RingSoulTextBlock") as any);
 		
 	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/InvincibleCanvas/InvincibleTextBlock") as any);
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/mInvincibleCanvas/InvincibleTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/UpExpCanvas/UpExpTextBlock") as any);

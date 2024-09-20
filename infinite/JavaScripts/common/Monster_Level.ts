@@ -315,7 +315,7 @@ export default class Monster_Level extends Script {
     private level: number = 1;
     private lv: number = 1;
     private calculateMaxHp(): void {
-        this.maxHp = this.level * 1000 * this.lv;
+        this.maxHp = this.level * (1000 + this.lv);
     }
 
     private rebirth_S(): void {

@@ -127,6 +127,11 @@ export default class HUDPanel extends HUDPanel_Generate {
 		})
 	}
 
+	public updateInvincibleCanvasState(visibility: boolean): void {
+		Utils.setWidgetVisibility(this.mInvincibleCanvas, visibility ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+		this.mInvincibleTextBlock.text = visibility ? "已开启防御" : "已关闭防御";
+	}
+
 	private isCanOnRingSoul: boolean = true;
 
 	/**

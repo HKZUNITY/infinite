@@ -153,7 +153,11 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         return (this.data.playerLv + 1) * GlobalData.upgradeExpMultiple;
     }
 
+    private invincible: boolean = false;
     public isInvincible(isInvincible: boolean): void {
+        if (this.invincible == isInvincible) return;
+        Notice.showDownNotice(isInvincible ? "已开启防御" : "已关闭防御");
+        this.invincible = isInvincible;
         this.server.net_isInvincible(isInvincible);
     }
 

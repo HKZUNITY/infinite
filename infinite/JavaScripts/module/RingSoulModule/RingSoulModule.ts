@@ -510,6 +510,7 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                    Notice.showDownNotice(`成功获得钻石 +${GlobalData.addDiamondCount}`);
                 }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             } else {
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
@@ -612,6 +613,7 @@ export class RingSoulItem extends RingSoulItem_Generate {
         } else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
+                    Notice.showDownNotice(`成功获得钻石 +${GlobalData.addDiamondCount}`);
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                 }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             } else {

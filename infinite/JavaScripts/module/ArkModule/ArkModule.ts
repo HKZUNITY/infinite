@@ -1,5 +1,6 @@
 ﻿import { Notice } from "../../common/notice/Notice";
 import { GeneralManager } from "../../Modified027Editor/ModifiedStaticAPI";
+import { MapEx } from "../../Tools/MapEx";
 import { Utils } from "../../Tools/utils";
 import ArkItem_Generate from "../../ui-generate/module/ArkModule/ArkItem_generate";
 import ArkPanel_Generate from "../../ui-generate/module/ArkModule/ArkPanel_generate";
@@ -8,14 +9,13 @@ import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 
-const rewardDiamond: Map<string, { icon: string, rewardCount: number, price: number, itemPos: mw.Vector2 }> = new Map<string, { icon: string, rewardCount: number, price: number, itemPos: mw.Vector2 }>();
-rewardDiamond.set("6NLoNBXFml10001IF", { icon: "103215", rewardCount: 100, price: 98, itemPos: new mw.Vector2(300, 0) });
-rewardDiamond.set("7yf8F2pRWKp0001IG", { icon: "103217", rewardCount: 600, price: 598, itemPos: new mw.Vector2(178, 320) });
-rewardDiamond.set("5CKKkBYJLYY0001IH", { icon: "103218", rewardCount: 1000, price: 998, itemPos: new mw.Vector2(422, 320) });
-rewardDiamond.set("8PjQmjn1Git0001II", { icon: "103221", rewardCount: 1000, price: 600, itemPos: new mw.Vector2(750, 0) });
-rewardDiamond.set("5A48hyUteGr0001J1", { icon: "103218", rewardCount: 10880, price: 6800, itemPos: new mw.Vector2(750, 320) });
-// const firstRewardKey: string = "8PjQmjn1Git0001II";
-const secondRewardKey: string = "5A48hyUteGr0001J1";
+const rewardDiamond: Map<string, { isLimit: boolean, icon: string, rewardCount: number, price: number, itemPos: mw.Vector2 }> = new Map<string, { isLimit: boolean, icon: string, rewardCount: number, price: number, itemPos: mw.Vector2 }>();
+rewardDiamond.set("4R8o2Ca4XZM0001M5", { isLimit: false, icon: "103215", rewardCount: 100, price: 100, itemPos: new mw.Vector2(178, 0) });
+rewardDiamond.set("4kDVCA92LDZ0001M6", { isLimit: false, icon: "103217", rewardCount: 600, price: 600, itemPos: new mw.Vector2(422, 0) });
+rewardDiamond.set("ASo9Gdekb5M0001M7", { isLimit: false, icon: "103218", rewardCount: 1000, price: 1000, itemPos: new mw.Vector2(750, 0) });
+rewardDiamond.set("30A0419vSs50001M8", { isLimit: true, icon: "103221", rewardCount: 1000, price: 600, itemPos: new mw.Vector2(178, 320) });
+rewardDiamond.set("6ye4kcgqLtk0001M9", { isLimit: true, icon: "103218", rewardCount: 3000, price: 1800, itemPos: new mw.Vector2(422, 320) });
+rewardDiamond.set("2tt47nQ6Txb0001MA", { isLimit: true, icon: "103218", rewardCount: 10800, price: 6800, itemPos: new mw.Vector2(750, 320) });
 const arkIcon: string = "312541";
 
 export class ArkItem extends ArkItem_Generate {
@@ -37,7 +37,7 @@ export class ArkItem extends ArkItem_Generate {
 
     private addClickButton(): void {
         this.getArkModuleC.placeOrder(this.commodityId, () => {
-            if (this.commodityId == secondRewardKey) {
+            if (rewardDiamond.get(this.commodityId).isLimit) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
                 this.mHasTextBlock.text = `今日已售空`;
             }
@@ -51,9 +51,9 @@ export class ArkItem extends ArkItem_Generate {
     }
 
     private updateUI(): void {
-        if (this.commodityId == secondRewardKey) {
+        if (rewardDiamond.get(this.commodityId).isLimit) {
             this.mDayTextBlock.text = `每天限购一次`;
-            if (this.getArkModuleC.isSecond) {
+            if (!this.getArkModuleC.isBuy(this.commodityId)) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
             } else {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
@@ -150,14 +150,25 @@ export class ArkData extends Subdata {
     @Decorator.persistence()
     public secondDayStr: string = "";
 
-    public setFirstLastDayStr(day: string): void {
-        this.lastDayStr = day;
+    @Decorator.persistence()
+    public isLimitStrs: MapEx.MapExClass<string> = {};
+
+    @Decorator.persistence()
+    public isGetGiftBags: MapEx.MapExClass<boolean> = {};
+
+    public setLimitStr(key: string, day: string): void {
+        MapEx.set(this.isLimitStrs, key, day);
         this.save(true);
     }
 
-    public setSecondLastDayStr(day: string): void {
-        this.secondDayStr = day;
+    public setGetGiftBag(key: string, isGet: boolean): void {
+        MapEx.set(this.isGetGiftBags, key, isGet);
         this.save(true);
+    }
+
+    public isGetGiftBag(key: string): boolean {
+        if (!this.isGetGiftBags || MapEx.count(this.isGetGiftBags) == 0) return false;
+        return MapEx.has(this.isGetGiftBags, key);
     }
 }
 
@@ -208,8 +219,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
     }
 
     protected onEnterScene(sceneType: number): void {
-        this.firstLastDayStr = this.data.lastDayStr;
-        this.secondLastDayStr = this.data.secondDayStr;
+        this.isLimitStrs = this.data.isLimitStrs;
     }
 
     private addArkUpdate(amount: number): void {
@@ -225,10 +235,8 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
 
     private isCanContinueClick: boolean = true;
     public placeOrder(commodityId: string, buySuccessCallback: () => void): void {
-        if ((commodityId == secondRewardKey && !this.isSecond)) {
-            Notice.showDownNotice(`今日已售空`);
-            Notice.showDownNotice(`明日再来`);
-            console.error(`今日已售空`);
+        if (rewardDiamond.get(commodityId).isLimit && this.isBuy(commodityId)) {
+            Notice.showDownNotice(`今日已售空,请更换其他商品购买`);
             return;
         }
         if (!this.isCanContinueClick) {
@@ -240,7 +248,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             this.isCanContinueClick = true;
         });
         if (mw.SystemUtil.isPIE) {
-            if (commodityId == secondRewardKey) this.setSecondLastDayStr();
+            if (rewardDiamond.get(commodityId).isLimit) this.setLimitStr(commodityId);
             if (buySuccessCallback) buySuccessCallback();
             let rewardCount = rewardDiamond.get(commodityId).rewardCount;
             Notice.showDownNotice(`钻石+${rewardCount}`);
@@ -249,7 +257,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             mw.PurchaseService.placeOrder(commodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();//刷新代币数量
                 if (status != 200) return;
-                if (commodityId == secondRewardKey) this.setSecondLastDayStr();
+                if (rewardDiamond.get(commodityId).isLimit) this.setLimitStr(commodityId);
                 if (buySuccessCallback) buySuccessCallback();
             });
         }
@@ -263,20 +271,18 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         this.getPlayerModuleC.saveDiamond(rewardCount);
     }
 
-    public get isSecond(): boolean {
-        return this.secondLastDayStr != Utils.getDay();
+    public isBuy(key: string): boolean {
+        if (MapEx.has(this.isLimitStrs, key)) {
+            return MapEx.get(this.isLimitStrs, key) == Utils.getDay();
+        }
+        return false;
     }
 
-    private firstLastDayStr: string = "";
-    public async setFirstLastDayStr(): Promise<void> {
-        this.firstLastDayStr = Utils.getDay();
-        this.server.net_setFirstLastDayStr(this.firstLastDayStr);
-    }
-
-    private secondLastDayStr: string = "";
-    public async setSecondLastDayStr(): Promise<void> {
-        this.secondLastDayStr = Utils.getDay();
-        this.server.net_setSecondLastDayStr(this.secondLastDayStr);
+    private isLimitStrs: MapEx.MapExClass<string> = {};
+    public setLimitStr(key: string): void {
+        let lastDayStr = Utils.getDay();
+        MapEx.set(this.isLimitStrs, key, lastDayStr);
+        this.server.net_setLimitStr(key, lastDayStr);
     }
 
     private addOpenGiftBagPanel(): void {
@@ -291,23 +297,21 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         }
         this.isCanGetGiftBag = false;
         TimeUtil.delaySecond(3).then(() => { this.isCanGetGiftBag = true; });
-        if (mw.SystemUtil.isPIE) {
-            Notice.showDownNotice(`领取成功`);
-            // giftBagData:{"diamond":50,"lv":1} 
-        } else {
-            this.server.net_getGiftBag(coodStr);
-        }
+        this.server.net_getGiftBag(coodStr);
     }
 
-    public net_getGiftBag(isSuccess: boolean, messageJson: string): void {
-        if (isSuccess) {
+    public net_getGiftBag(giftBagCood: GiftBagCood, messageJson: string): void {
+        if (giftBagCood == GiftBagCood.Success) {
             Notice.showDownNotice(`兑换成功`);
             let message = JSON.parse(messageJson);
             let giftBagData = message as GiftBagData;
-            Notice.showDownNotice(`钻石+${giftBagData.diamond}`);
-            this.getPlayerModuleC.saveDiamond(giftBagData.diamond);
 
-            if (giftBagData.lv > 0) {
+            if (giftBagData?.diamond && giftBagData?.diamond > 0) {
+                Notice.showDownNotice(`钻石+${giftBagData.diamond}`);
+                this.getPlayerModuleC.saveDiamond(giftBagData.diamond);
+            }
+
+            if (giftBagData?.lv && giftBagData?.lv > 0) {
                 Notice.showDownNotice(`等级+${giftBagData.lv}`);
                 this.getPlayerModuleC.adsUpLv();
                 for (let i = 1; i < giftBagData.lv; ++i) {
@@ -316,9 +320,11 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
                     });
                 }
             }
-        } else {
+        } else if (giftBagCood == GiftBagCood.Fail) {
             Notice.showDownNotice(`礼包兑换码错误`);
             Notice.showDownNotice(`领取失败`);
+        } else if (giftBagCood == GiftBagCood.Exchanged) {
+            Notice.showDownNotice(`已兑换，无需重复兑换`);
         }
     }
 
@@ -326,7 +332,6 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         this.getArkPanel.updateUserIdTextBlock(str);
     }
 }
-
 
 export class ArkModuleS extends ModuleS<ArkModuleC, ArkData> {
     protected onStart(): void {
@@ -347,20 +352,47 @@ export class ArkModuleS extends ModuleS<ArkModuleC, ArkData> {
         confirmOrder(true);//调用这个方法表示确认收货成功
     }
 
-    public net_setFirstLastDayStr(day: string): void {
-        this.currentData.setFirstLastDayStr(day);
+    @Decorator.noReply()
+    public net_setLimitStr(key: string, day: string): void {
+        this.currentData.setLimitStr(key, day);
     }
 
-    public net_setSecondLastDayStr(day: string): void {
-        this.currentData.setSecondLastDayStr(day);
-    }
-
+    @Decorator.noReply()
     public net_getGiftBag(coodStr: string): void {
-        console.error(`ArkModuleS net_getGiftBag coodStr: ${coodStr}`);
+        // console.error(`ArkModuleS net_getGiftBag coodStr: ${coodStr}`);
         let player = this.currentPlayer;
-        PurchaseService.redeemGiftCode(player, coodStr, (result) => {
-            this.getClient(player).net_getGiftBag((result.status == 200 || result.status == 1), result.message);
-        });
+        if (coodStr.length == 6) {
+            let isGetGiftBag = DataCenterS.getData(player, ArkData).isGetGiftBag(coodStr);
+            if (isGetGiftBag) {
+                this.getClient(player).net_getGiftBag(GiftBagCood.Exchanged, null);
+            } else {
+                this.getCustomdata("WorldGiftBag").then((value: any) => {
+                    if (!value) {
+                        this.getClient(player).net_getGiftBag(GiftBagCood.Fail, null);
+                        return;
+                    }
+                    let giftBagDatas: GiftBagData[] = value as GiftBagData[];
+                    // console.error(`giftBagDatas:${JSON.stringify(giftBagDatas)}`);
+                    let giftBagData: GiftBagData = null;
+                    for (let i = 0; i < giftBagDatas.length; ++i) {
+                        if (giftBagDatas[i].coodStr == coodStr) {
+                            giftBagData = giftBagDatas[i];
+                            break;
+                        }
+                    }
+                    if (giftBagData) {
+                        DataCenterS.getData(player, ArkData).setGetGiftBag(coodStr, true);
+                        this.getClient(player).net_getGiftBag(GiftBagCood.Success, JSON.stringify(giftBagData));
+                    } else {
+                        this.getClient(player).net_getGiftBag(GiftBagCood.Fail, null);
+                    }
+                });
+            }
+        } else {
+            PurchaseService.redeemGiftCode(player, coodStr, (result) => {
+                this.getClient(player).net_getGiftBag(((result.status == 200 || result.status == 1) ? GiftBagCood.Success : GiftBagCood.Fail), result.message);
+            });
+        }
     }
 
     private async syncArkStr(player: mw.Player): Promise<void> {
@@ -397,6 +429,7 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
 
     private initUI(): void {
         this.mTitleTextBlock.text = `礼包兑换`;
+        this.mInputTipsTextBlock.text = `请输入作者提供的兑换码\n即可兑换奖励`;
     }
 
     private bindButton(): void {
@@ -441,6 +474,13 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
 }
 
 export class GiftBagData {
+    public coodStr: string;
     public diamond: number;
     public lv: number;
+}
+
+export enum GiftBagCood {
+    Success = 200,
+    Fail = 0,
+    Exchanged = 1000
 }

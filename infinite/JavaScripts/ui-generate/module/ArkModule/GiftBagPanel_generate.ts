@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/GiftBagPanel.ui
- * TIME: 2024.09.20-20.02.03
+ * TIME: 2024.09.21-21.04.40
  */
  
 @UIBind('UI/module/ArkModule/GiftBagPanel.ui')
@@ -21,6 +21,13 @@ export default class GiftBagPanel_Generate extends UIScript {
 			this.mInputBox_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mInputBox') as mw.InputBox
 		}
 		return this.mInputBox_Internal
+	}
+	private mInputTipsTextBlock_Internal: mw.TextBlock
+	public get mInputTipsTextBlock(): mw.TextBlock {
+		if(!this.mInputTipsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mInputTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mInputBox/mInputTipsTextBlock') as mw.TextBlock
+		}
+		return this.mInputTipsTextBlock_Internal
 	}
 	private mGetButton_Internal: mw.Button
 	public get mGetButton(): mw.Button {
@@ -73,6 +80,9 @@ export default class GiftBagPanel_Generate extends UIScript {
 		//文本多语言
 		
 		this.initLanguage(this.mTitleTextBlock)
+		
+	
+		this.initLanguage(this.mInputTipsTextBlock)
 		
 	
 		this.initLanguage(this.mGetTextBlock)

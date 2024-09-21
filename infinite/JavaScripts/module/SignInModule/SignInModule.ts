@@ -246,6 +246,7 @@ export class SignInModuleC extends ModuleC<SignInModuleS, SignInData> {
         if (this.day > day) {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
+                    Notice.showDownNotice(`成功获得今日奖励`);
                     this.getReward(day, succeedCallback);
                 }, `免费领取第${day}天奖励`, `取消`, `领取`);
             } else {

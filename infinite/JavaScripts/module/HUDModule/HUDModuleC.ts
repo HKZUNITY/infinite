@@ -148,35 +148,43 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
+                    Notice.showDownNotice(`成功获得金币+${GlobalData.addCoinCount}`);
                     this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                 }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
             } else {
+                Notice.showDownNotice(`成功获得金币+${GlobalData.addCoinCount}`);
                 this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
             }
         });
         this.onAddDiamondAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
+                    Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                 }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
             } else {
+                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
         });
 
         this.onAdsAction.add(() => {
             this.getUpPanel.showRewardAd(() => {
+                Notice.showDownNotice(`升级成功 等级+${1}`);
                 this.getPlayerModuleC.adsUpLv();
             }, () => {
                 if (this.getPlayerModuleC.getDiamond >= GlobalData.addDiamondCount) {
                     this.getPlayerModuleC.saveDiamond(-GlobalData.addDiamondCount);
                     this.getPlayerModuleC.adsUpLv();
+                    Notice.showDownNotice(`升级成功 等级+${1}`);
                 } else {
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
                             this.getPlayerModuleC.adsUpLv();
+                            Notice.showDownNotice(`升级成功 等级+${1}`);
                         }, "等级免费提升一级", "取消", "免费领取");
                     } else {
+                        Notice.showDownNotice(`升级成功 等级+${1}`);
                         this.getPlayerModuleC.adsUpLv();
                     }
                 }

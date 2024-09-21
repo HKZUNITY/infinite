@@ -416,11 +416,13 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                     Notice.showDownNotice("未获得");
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
+                            Notice.showDownNotice("开始引导");
                             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                             this.getBagInfoPanel.hide();
                             this.getBagPanel.hideTween();
                         }, "带你去免费获得", "取消", "免费获得");
                     } else {
+                        Notice.showDownNotice("开始引导");
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                     }
                 }
@@ -439,13 +441,16 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                     Notice.showDownNotice("金币不足");
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
+                            Notice.showDownNotice("成功获得金币");
                             this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                         }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
                     } else {
+                        Notice.showDownNotice("成功获得金币");
                         this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                     }
                 }
             }, () => {
+                Notice.showDownNotice("开始引导");
                 this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                 this.getBagInfoPanel.hide();
                 this.getBagPanel.hideTween();

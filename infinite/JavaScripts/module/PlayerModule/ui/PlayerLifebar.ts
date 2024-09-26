@@ -140,26 +140,21 @@ export default class PlayerLifebar extends mw.Script {
             this.pet.lookAt(this.curPetDir);
             this.pet.addMovement(mw.Vector.forward);
 
-            console.error(`A`);
             if (this.petAnimation && this.petAnimation?.assetId == this.petMoveId) {
-                console.error(`B`);
             } else {
                 Utils.asyncDownloadAsset(this.petMoveId).then(() => {
                     this.petAnimation = this.pet.loadAnimation(this.petMoveId);
                     this.petAnimation.loop = 0;
                     this.petAnimation.play();
-                    console.error(`C`);
                 });
             }
         } else {
             if (this.petAnimation && this.petAnimation?.assetId == this.petIdleId) {
-                console.error(`D`);
             } else {
                 Utils.asyncDownloadAsset(this.petIdleId).then(() => {
                     this.petAnimation = this.pet.loadAnimation(this.petIdleId);
                     this.petAnimation.loop = 0;
                     this.petAnimation.play();
-                    console.error(`E`);
                 })
             }
         }

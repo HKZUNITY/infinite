@@ -124,7 +124,10 @@ export default class HUDPanel extends HUDPanel_Generate {
 		});
 		this.mUpExpButton.onClicked.add(() => {
 			this.getHudModuleC.onOnOffUpExpAction.call(true);
-		})
+		});
+		this.mNewPeopleButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenNewPeopleAction.call();
+		});
 	}
 
 	public updateInvincibleCanvasState(visibility: boolean): void {
@@ -143,6 +146,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.initRedPointTween_RingSou();
 		this.initRedPointTween_SignIn();
 		this.initRedPointTween_Ark();
+		this.initRedPointTween_NewPeople();
 		this.initKillTipItems();
 		this.initDeadCountDown();
 		this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
@@ -298,7 +302,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mLvTextBlock.text = `等级 ${await Utils.getLvText(lv, Player.localPlayer.userId)}`;
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * GlobalData.upgradeExpMultiple);
 		this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
-		this.mCoinTextBlock.text = coin + "";
+		this.mCoinTextBlock.text = `${Utils.integerUnitConversionStr(Math.round(coin))}`
 		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;
 		this.mAtkTextBlock.text = "攻击力：" + atk;
@@ -313,7 +317,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 	}
 
 	public updateCoin(coin: number): void {
-		this.mCoinTextBlock.text = `${Math.round(coin)}`
+		this.mCoinTextBlock.text = `${Utils.integerUnitConversionStr(Math.round(coin))}`;
 	}
 
 	public updateDiamond(diamond: number): void {
@@ -729,6 +733,41 @@ export default class HUDPanel extends HUDPanel_Generate {
 			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
 
 		this.redPointTween1_Ark.start();
+	}
+	//#endregion
+
+	//#region Ark
+	private redPointTween1_NewPeople: mw.Tween<any> = null;
+	private redPointTween2_NewPeople: mw.Tween<any> = null;
+
+	private initRedPointTween_NewPeople(): void {
+		this.redPointTween1_NewPeople = new mw.Tween({ value: 0.8 })
+			.to({ value: 1.2 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(0.8);
+			})
+			.onUpdate((v) => {
+				this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween2_NewPeople.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween2_NewPeople = new mw.Tween({ value: 1.2 })
+			.to({ value: 0.8 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(1.2);
+			})
+			.onUpdate((v) => {
+				this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween1_NewPeople.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween1_NewPeople.start();
 	}
 	//#endregion
 	//#endregion

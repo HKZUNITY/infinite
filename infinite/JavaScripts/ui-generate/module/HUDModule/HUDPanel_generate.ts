@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.21-21.04.40
+ * TIME: 2024.09.26-20.32.32
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -210,6 +210,20 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mRingSoulPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RingSoulCanvas/mRingSoulPointImage') as mw.Image
 		}
 		return this.mRingSoulPointImage_Internal
+	}
+	private mNewPeopleButton_Internal: mw.Button
+	public get mNewPeopleButton(): mw.Button {
+		if(!this.mNewPeopleButton_Internal&&this.uiWidgetBase) {
+			this.mNewPeopleButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/NewPeopleCanvas/mNewPeopleButton') as mw.Button
+		}
+		return this.mNewPeopleButton_Internal
+	}
+	private mNewPeoplePointImage_Internal: mw.Image
+	public get mNewPeoplePointImage(): mw.Image {
+		if(!this.mNewPeoplePointImage_Internal&&this.uiWidgetBase) {
+			this.mNewPeoplePointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/NewPeopleCanvas/mNewPeoplePointImage') as mw.Image
+		}
+		return this.mNewPeoplePointImage_Internal
 	}
 	private mMusicCanvas_Internal: mw.Canvas
 	public get mMusicCanvas(): mw.Canvas {
@@ -586,6 +600,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mRingSoulButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mNewPeopleButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mNewPeopleButton");
+		});
+		this.mNewPeopleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseMusicBtn.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
 		});
@@ -722,6 +742,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RingSoulCanvas/RingSoulTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/NewPeopleCanvas/NewPeopleTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/mInvincibleCanvas/InvincibleTextBlock") as any);

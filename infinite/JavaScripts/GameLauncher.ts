@@ -6,6 +6,7 @@ import { GuideData, GuideModuleC, GuideModuleS } from "./module/GuideModule/Guid
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
 import HUDModuleS from "./module/HUDModule/HUDModuleS";
 import { LevelData, LevelModuleC, LevelModuleS } from "./module/LevelModule/LevelModule";
+import { NewPeopleData, NewPeopleModuleC, NewPeopleModuleS } from "./module/NewPeopleModule/NewPeopleModule";
 import OnlineRewardData from "./module/OnlineRewardModule/OnlineRewardData";
 import { OnlineRewardModuleC } from "./module/OnlineRewardModule/OnlineRewardModuleC";
 import { OnlineRewardModuleS } from "./module/OnlineRewardModule/OnlineRewardModuleS";
@@ -84,6 +85,7 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(SignInModuleS, SignInModuleC, SignInData);
         ModuleService.registerModule(ArkModuleS, ArkModuleC, ArkData);
         ModuleService.registerModule(LevelModuleS, LevelModuleC, LevelData);
+        ModuleService.registerModule(NewPeopleModuleS, NewPeopleModuleC, NewPeopleData);
     }
 
     /**------------------------------------------- 客户端 ------------------------------------------------ */

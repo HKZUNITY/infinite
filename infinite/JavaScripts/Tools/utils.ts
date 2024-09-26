@@ -516,7 +516,6 @@ export class Utils {
             default:
                 if (level >= 17) {
                     let titleName: string = await this.getTitleNameByUserId(userId);
-                    console.error(`titleName:${titleName}`);
                     if (titleName == "-1") titleName = "万古仙帝";
                     return `${lv}级 ${titleName}`;
                 }
@@ -711,6 +710,26 @@ export class Utils {
     public static async asyncDownloadAsset(InAssetId: string): Promise<void> {
         if (!mw.AssetUtil.assetLoaded(InAssetId)) {
             await mw.AssetUtil.asyncDownloadAsset(InAssetId);
+        }
+    }
+
+    public static integerUnitConversionStr(num: number): string {
+        if (num <= 9999) {
+            return `${num}`;
+        } else {
+            if (num <= 99999999) {
+                return `${(num / 10000).toFixed(2)}万`;
+            } else {
+                if (num <= 999999999999) {
+                    return `${(num / 100000000).toFixed(2)}亿`;
+                } else {
+                    if (num <= 9999999999999999) {
+                        return `${(num / 1000000000000).toFixed(2)}万亿`;
+                    } else {
+                        return `${(num / 10000000000000000).toFixed(2)}亿亿`;
+                    }
+                }
+            }
         }
     }
 }

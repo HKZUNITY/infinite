@@ -4,12 +4,12 @@
 	"foldername": "infinite",
 	"mainScene": 1,
 	"scenePublic": 1,
-	"intro": "修报错",
-	"notes": "修报错",
-	"editorVersion": "v0.37.0.9",
+	"intro": "增加新手礼包功能",
+	"notes": "增加新手礼包功能",
+	"editorVersion": "v0.39.0.4",
 	"parentGameIdentity": "",
 	"parentGameId": "",
-	"extra": "{\"attribute\":2,\"IsHorizontal\":true,\"useAvatar\":1}",
+	"extra": "{\"attribute\":2,\"IsHorizontal\":true,\"useAvatar\":0}",
 	"devEnv": 4,
 	"needToMgs": 0,
 	"attribute": 2,
@@ -31,5 +31,23 @@
 			"type": "Asset_Data_List",
 			"path": "Asset_Data_List"
 		}
-	]
+	],
+	"lightZipIgnore":
+	{
+		"suffixMatches": [
+			".meta",
+			".ts",
+			".ui",
+			".uimap",
+			".mat"
+		],
+		"fullMatches": [
+			"Asset_Data_List"
+		],
+		"prefixMatches": [
+			"AutoBackup/",
+			"JavaScripts/",
+			"Plugins/"
+		]
+	}
 }

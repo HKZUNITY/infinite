@@ -49,7 +49,19 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData> {
         this.getHudModuleC.onOpenTaskAction.add(() => {
             this.getTaskPanel.show();
         });
+        Event.addLocalListener(`RequestNewPeopleGiftBagOnlineTime`, () => {
+            this.sendNewPeopleOnlineTime(TaskItemType.DailyOnlineTime);
+        });
     }
+
+    private sendNewPeopleOnlineTime(vipTaskType: TaskItemType): void {
+        if (vipTaskType != TaskItemType.DailyOnlineTime) return;
+        if (MapEx.has(this.dailyTasks, TaskItemType.DailyOnlineTime)) {
+            let progress = MapEx.get(this.dailyTasks, TaskItemType.DailyOnlineTime).progress;
+            Event.dispatchToLocal(`UpdateNewPeopleGiftBagOnlineTime`, progress);
+        }
+    }
+
     private nowTime: number = 0;
     public net_getServerTaskData(nowTime: number): void {
         this.nowTime = nowTime;
@@ -184,6 +196,7 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData> {
         }
         MapEx.set(this.dailyTasks, vipTaskType, dailTask);
         this.weeklyOnlineTime(vipTaskType);
+        this.sendNewPeopleOnlineTime(vipTaskType);
     }
 
     private executeWeeklyTask(vipTaskType: number, num: number): void {

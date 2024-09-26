@@ -109,6 +109,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onOpenSignInAction: Action = new Action();
     public onOpenArkAction: Action = new Action();
     public onOpenGetAction: Action = new Action();
+    public onOpenNewPeopleAction: Action = new Action();
     public onOnOffUpExpAction: Action1<boolean> = new Action1<boolean>();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */

@@ -11992,6 +11992,9 @@ class GuidePanel extends GuideUI_Generate$1 {
             case 22:
                 this.guide22();
                 break;
+            case 23:
+                this.guide23();
+                break;
             // 可以继续增加无数步
             default:
                 this.hide();
@@ -12066,26 +12069,30 @@ class GuidePanel extends GuideUI_Generate$1 {
         this.cover(this.outViewPos, this.getHudPanel.mGetButton.size, new mw.Vector2(510, 150), "兑换奖励，领取兑换码兑换奖励，钻石+等级。", 1, true);
     }
     guide17() {
-        mw.localToViewport(this.getHudPanel.mRingSoulButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size, new mw.Vector2(310, 150), "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", 1, true);
+        mw.localToViewport(this.getHudPanel.mNewPeopleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mNewPeopleButton.size, new mw.Vector2(310, 150), "新手礼包按钮，领取新手大礼包", 1, true);
     }
     guide18() {
+        mw.localToViewport(this.getHudPanel.mRingSoulButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mRingSoulButton.size, new mw.Vector2(110, 150), "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", 1, true);
+    }
+    guide19() {
         mw.localToViewport(this.getHudPanel.mInvincibleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mInvincibleButton.size, new mw.Vector2(550, 350), "开启防御，不会被队友误伤。", 1, true);
     }
-    guide19() {
+    guide20() {
         mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size, new mw.Vector2(550, 350), `角色属性，血量、${GlobalData.mpStr}，攻击力会随等级提升而提升。`, 1, true);
     }
-    guide20() {
+    guide21() {
         mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加金币直接购买武魂、魂骨。", 1, true);
     }
-    guide21() {
+    guide22() {
         mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加钻石锻造魂环。", 1, true);
     }
-    guide22() {
+    guide23() {
         this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", 0, true);
     }
     /**
@@ -12176,7 +12183,7 @@ class GuideModuleC extends ModuleC {
         super(...arguments);
         this.guidePanel = null;
         this.bagModuleC = null;
-        this.totalStep = 22;
+        this.totalStep = 23;
         this.curStep = -1;
         this.onNextStepAction = new Action();
         /**引导目标点特效ID */
@@ -12391,7 +12398,7 @@ class GuideModuleC extends ModuleC {
                 mw.UIService.hide(BagInfoPanel);
             Event.dispatchToLocal("First");
             TimeUtil.delaySecond(5).then(() => {
-                this.getGuidePanel.guideByStep(17);
+                this.getGuidePanel.guideByStep(18);
             });
         });
     }
@@ -12834,6 +12841,10 @@ class BagModuleC extends ModuleC {
         return Math.round(totalAtk * Utils.getAtk(this.getPlayerModuleC.getLv));
     }
     clickBagItem(bagId, buyComplete) {
+        if (!this.isHasBagId(bagId) && GameConfig.BagInfo.getElement(bagId).GetType == 2) {
+            Notice.showDownNotice(`新手礼包获取`);
+            return;
+        }
         console.warn(`${bagId}`);
         this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId), () => {
             if (this.isHasBagId(bagId)) {
@@ -13341,6 +13352,7 @@ class BagItem extends BagItem_Generate$1 {
         super(...arguments);
         this.bagModuleC = null;
         this.bagId = -1;
+        this.bagInfoElement = null;
     }
     get getBagModuleC() {
         if (!this.bagModuleC) {
@@ -13362,16 +13374,16 @@ class BagItem extends BagItem_Generate$1 {
     }
     setData(bagId) {
         this.bagId = bagId;
-        let bagInfoElement = GameConfig.BagInfo.getElement(bagId);
-        if (!bagInfoElement)
+        this.bagInfoElement = GameConfig.BagInfo.getElement(bagId);
+        if (!this.bagInfoElement)
             return;
         this.setHas();
-        this.setName(bagInfoElement.Name);
-        this.setBgIcon(bagInfoElement.Rarity);
-        this.setIconImage(bagInfoElement.AssetId);
+        this.setName();
+        this.setBgIcon();
+        this.setIconImage();
     }
-    setName(name) {
-        this.mNameTextBlock.text = name;
+    setName() {
+        this.mNameTextBlock.text = this.bagInfoElement.Name;
     }
     setHas() {
         if (this.getBagModuleC.isHasBagId(this.bagId)) {
@@ -13380,16 +13392,21 @@ class BagItem extends BagItem_Generate$1 {
             this.mIconImage.imageColor = mw.LinearColor.white;
         }
         else {
-            this.mHasTextBlock.text = "点击获得";
+            if (this.bagInfoElement.GetType == 2) {
+                this.mHasTextBlock.text = "新手礼包获取";
+            }
+            else {
+                this.mHasTextBlock.text = "点击获得";
+            }
             this.mHasTextBlock_1.text = "未拥有";
             this.mIconImage.imageColor = mw.LinearColor.black;
         }
     }
-    setIconImage(assetId) {
-        Utils.setImageByAssetIconData(this.mIconImage, assetId);
+    setIconImage() {
+        Utils.setImageByAssetIconData(this.mIconImage, this.bagInfoElement.AssetId);
     }
-    setBgIcon(rarity) {
-        this.mBgImage.imageGuid = bagItemBgIcons[rarity];
+    setBgIcon() {
+        this.mBgImage.imageGuid = bagItemBgIcons[this.bagInfoElement.Rarity];
     }
 }
 class BagTab extends BagTab_Generate$1 {
@@ -18486,6 +18503,15 @@ class NewPeopleItem extends NewPeopleItem_Generate$1 {
         this.mRewardTextBlock.text = `在线${onlineMinutes}分钟(${minutes}/${onlineMinutes})`;
     }
 }
+
+var foreign54 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    NewPeopleData: NewPeopleData,
+    NewPeopleItem: NewPeopleItem,
+    NewPeopleModuleC: NewPeopleModuleC,
+    NewPeopleModuleS: NewPeopleModuleS,
+    NewPeoplePanel: NewPeoplePanel
+});
 
 /**
  * AUTO GENERATE BY UI EDITOR.
@@ -23664,6 +23690,7 @@ const MWModuleMap = {
      '11907A164C7CB34C30CA6D959138FC0F': foreign51,
      '3CD445AB4C6DC67B35D60DA472014379': foreign52,
      '83D94B2C4BAC128653321D91B6B11A9F': foreign53,
+     '7D7C982D4709FA67C72375A09BB18ECA': foreign54,
      '0F95A3C34E76FB1EC85217AAE2F7D8ED': foreign55,
      '68E90BBE443B0F584B447BB6471F9698': foreign56,
      '0BF71D314247D4EE9739E385C563DF47': foreign57,
@@ -23810,6 +23837,7 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign51 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
 [foreign52 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
 [foreign53 || {}, "JavaScripts/module/LevelModule/LevelModule"],
+[foreign54 || {}, "JavaScripts/module/NewPeopleModule/NewPeopleModule"],
 [foreign55 || {}, "JavaScripts/module/ObjImpulseModule/ObjImpulseModule"],
 [foreign56 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardData"],
 [foreign57 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleC"],

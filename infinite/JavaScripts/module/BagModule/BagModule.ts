@@ -407,6 +407,10 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     public clickBagItem(bagId: number, buyComplete: () => void): void {
+        if (!this.isHasBagId(bagId) && GameConfig.BagInfo.getElement(bagId).GetType == 2) {
+            Notice.showDownNotice(`新手礼包获取`);
+            return;
+        }
         console.warn(`${bagId}`);
         this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId),
             () => {
@@ -940,18 +944,20 @@ export class BagItem extends BagItem_Generate {
     public get getBagId(): number {
         return this.bagId;
     }
+
+    private bagInfoElement: IBagInfoElement = null;
     public setData(bagId: number): void {
         this.bagId = bagId;
-        let bagInfoElement = GameConfig.BagInfo.getElement(bagId);
-        if (!bagInfoElement) return;
+        this.bagInfoElement = GameConfig.BagInfo.getElement(bagId);
+        if (!this.bagInfoElement) return;
         this.setHas();
-        this.setName(bagInfoElement.Name);
-        this.setBgIcon(bagInfoElement.Rarity);
-        this.setIconImage(bagInfoElement.AssetId);
+        this.setName();
+        this.setBgIcon();
+        this.setIconImage();
     }
 
-    private setName(name: string): void {
-        this.mNameTextBlock.text = name;
+    private setName(): void {
+        this.mNameTextBlock.text = this.bagInfoElement.Name;
     }
 
     public setHas(): void {
@@ -960,18 +966,22 @@ export class BagItem extends BagItem_Generate {
             this.mHasTextBlock_1.text = "已拥有";
             this.mIconImage.imageColor = mw.LinearColor.white;
         } else {
-            this.mHasTextBlock.text = "点击获得";
+            if (this.bagInfoElement.GetType == 2) {
+                this.mHasTextBlock.text = "新手礼包获取";
+            } else {
+                this.mHasTextBlock.text = "点击获得";
+            }
             this.mHasTextBlock_1.text = "未拥有";
             this.mIconImage.imageColor = mw.LinearColor.black;
         }
     }
 
-    private setIconImage(assetId: string): void {
-        Utils.setImageByAssetIconData(this.mIconImage, assetId);
+    private setIconImage(): void {
+        Utils.setImageByAssetIconData(this.mIconImage, this.bagInfoElement.AssetId);
     }
 
-    private setBgIcon(rarity: number): void {
-        this.mBgImage.imageGuid = bagItemBgIcons[rarity];
+    private setBgIcon(): void {
+        this.mBgImage.imageGuid = bagItemBgIcons[this.bagInfoElement.Rarity];
     }
 }
 

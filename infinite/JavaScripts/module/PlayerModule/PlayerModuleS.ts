@@ -123,7 +123,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
      * @param senderGuid 
      * @param hp 
      */
-    public playerKillEnemy_Level(senderGuid: string, hp: number, monsterId: number, key: number): void {
+    public playerKillEnemy_Level(senderGuid: string, hp: number, monsterId: number, key: number, level: number): void {
         if (!this.allPlayerMap.has(senderGuid)) return;
         let sendPlayer = this.allPlayerMap.get(senderGuid);
         this.saveKill(sendPlayer, 1);
@@ -131,7 +131,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         // this.getTaskModuleS.killMonster(sendPlayer, monsterId);//TODO
         let names: string[] = [];
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
-        names.push(Utils.randomNpcName(monsterId));
+        names.push(`${level}级${Utils.randomNpcName(monsterId)}`);
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
         this.getLevelModuleS.startLevel(sendPlayer, key);
     }

@@ -6,6 +6,7 @@ import NewPeoplePanel_Generate from "../../ui-generate/module/NewPeopleModule/Ne
 import { BagModuleC } from "../BagModule/BagModule";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
+import { LevelItem } from "../LevelModule/LevelModule";
 
 const newPeopleGiftDatas: Map<number, { icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }> = new Map<number, { icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }>();
 newPeopleGiftDatas.set(1, { icon: ["209508", "367076"], dayStr: "第一天", name: "金箍棒(粉)+制服女孩", bagId: [10041, 20056], itemPos: new mw.Vector2(30, 27) });
@@ -22,6 +23,8 @@ export class NewPeopleData extends Subdata {
     }
 }
 
+const NewPeopleTriggerMap: Map<number, { triggers: string[], worldUIIds: string[], name: string }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string }>();
+NewPeopleTriggerMap.set(1, { triggers: ["08A7D30E"], worldUIIds: ["272413D6"], name: `新手礼包` });
 export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
     private newPeoplePanel: NewPeoplePanel = null;
     private get getNewPeoplePanel(): NewPeoplePanel {
@@ -63,6 +66,7 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
     private isGetNewPeoples: MapEx.MapExClass<string> = {};
     protected onEnterScene(sceneType: number): void {
         this.isGetNewPeoples = this.data.isGetNewPeoples;
+        this.initTrigger();
     }
 
     public isGetNewPeople(key: number): boolean {
@@ -88,6 +92,7 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
                     Notice.showDownNotice(`在线时间不足${onlineMinutes}分钟`);
                 } else {
                     Notice.showDownNotice(`领取成功`);
+                    Notice.showDownNotice(`打开背包使用`);
                     let bagIds = newPeopleGiftDatas.get(key).bagId;
                     for (let i = 0; i < bagIds.length; ++i) {
                         TimeUtil.delaySecond(i).then(() => {
@@ -103,6 +108,32 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
         } else {
             Notice.showDownNotice(`请第${key}天再来领取`);
         }
+    }
+
+    private initTrigger(): void {
+        NewPeopleTriggerMap.forEach((value: {
+            triggers: string[];
+            worldUIIds: string[];
+            name: string;
+        }, key: number) => {
+            value.triggers.forEach((triggerId: string) => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then((go: mw.GameObject) => {
+                    let trigger = go as mw.Trigger;
+                    trigger.onEnter.add((character: mw.Character) => {
+                        if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
+                        this.getNewPeoplePanel.show();
+                    });
+                });
+            });
+            value.worldUIIds.forEach((worldId: string) => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then((v: mw.GameObject) => {
+                    let worldUI: mw.UIWidget = v as mw.UIWidget;
+                    let levelItem = mw.UIService.create(LevelItem);
+                    levelItem.updateLevelTextBlock(value.name);
+                    worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+                });
+            });
+        });
     }
 }
 

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.26-20.32.32
+ * TIME: 2024.09.27-20.55.55
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -119,6 +119,27 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RankCanvas/mRankButton') as mw.Button
 		}
 		return this.mRankButton_Internal
+	}
+	private mLotteryButton_Internal: mw.Button
+	public get mLotteryButton(): mw.Button {
+		if(!this.mLotteryButton_Internal&&this.uiWidgetBase) {
+			this.mLotteryButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LotteryCanvas/mLotteryButton') as mw.Button
+		}
+		return this.mLotteryButton_Internal
+	}
+	private mLotteryTextBlock_Internal: mw.TextBlock
+	public get mLotteryTextBlock(): mw.TextBlock {
+		if(!this.mLotteryTextBlock_Internal&&this.uiWidgetBase) {
+			this.mLotteryTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LotteryCanvas/mLotteryTextBlock') as mw.TextBlock
+		}
+		return this.mLotteryTextBlock_Internal
+	}
+	private mLotteryPointImage_Internal: mw.Image
+	public get mLotteryPointImage(): mw.Image {
+		if(!this.mLotteryPointImage_Internal&&this.uiWidgetBase) {
+			this.mLotteryPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LotteryCanvas/mLotteryPointImage') as mw.Image
+		}
+		return this.mLotteryPointImage_Internal
 	}
 	private mOnlineRewardButton_Internal: mw.Button
 	public get mOnlineRewardButton(): mw.Button {
@@ -558,6 +579,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mRankButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mLotteryButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mLotteryButton");
+		});
+		this.mLotteryButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mOnlineRewardButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mOnlineRewardButton");
 		});
@@ -665,6 +692,9 @@ export default class HUDPanel_Generate extends UIScript {
 		//文本多语言
 		
 		this.initLanguage(this.mOnOffRingSoulTextBlock)
+		
+	
+		this.initLanguage(this.mLotteryTextBlock)
 		
 	
 		this.initLanguage(this.mOnlineRewardTextBlock)

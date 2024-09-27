@@ -407,9 +407,14 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     public clickBagItem(bagId: number, buyComplete: () => void): void {
-        if (!this.isHasBagId(bagId) && GameConfig.BagInfo.getElement(bagId).GetType == 2) {
-            Notice.showDownNotice(`新手礼包获取`);
-            return;
+        if (!this.isHasBagId(bagId)) {
+            if (GameConfig.BagInfo.getElement(bagId).GetType == 2) {
+                Notice.showDownNotice(`新手礼包获取`);
+                return;
+            } else if (GameConfig.BagInfo.getElement(bagId).GetType == 3) {
+                Notice.showDownNotice(`金币抽奖获取`);
+                return;
+            }
         }
         console.warn(`${bagId}`);
         this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId),
@@ -968,6 +973,8 @@ export class BagItem extends BagItem_Generate {
         } else {
             if (this.bagInfoElement.GetType == 2) {
                 this.mHasTextBlock.text = "新手礼包获取";
+            } else if (this.bagInfoElement.GetType == 3) {
+                this.mHasTextBlock.text = "抽奖获取";
             } else {
                 this.mHasTextBlock.text = "点击获得";
             }

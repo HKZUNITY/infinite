@@ -283,7 +283,7 @@ export default class Monster_Level extends Script {
         } else {
             this.hp = 0;
             this.die_S();
-            this.getPlayerModuleS.playerKillEnemy_Level(senderGuid, this.maxHp, this.monsterId, this.levelType);
+            this.getPlayerModuleS.playerKillEnemy_Level(senderGuid, this.maxHp, 100, this.levelType, this.level);
         }
         this.getPlayerModuleS.playerAtkEnemyFlyText(senderGuid, hitPoint, damage);
     }

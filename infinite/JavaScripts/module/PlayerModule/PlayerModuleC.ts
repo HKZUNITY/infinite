@@ -141,6 +141,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         if (coin < 0 || isNaN(coin)) coin = 0;
         if (exp < 0 || isNaN(exp)) exp = 0;
         if (coin == 0 && exp == 0) return;
+        console.error(`coin:${coin} exp:${exp}`);
         this.server.net_saveCoinAndExp(coin, exp);
     }
 

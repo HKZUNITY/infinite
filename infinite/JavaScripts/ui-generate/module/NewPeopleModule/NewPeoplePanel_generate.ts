@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeoplePanel.ui
- * TIME: 2024.09.26-20.32.32
+ * TIME: 2024.09.27-20.55.55
  */
  
 @UIBind('UI/module/NewPeopleModule/NewPeoplePanel.ui')
@@ -21,6 +21,13 @@ export default class NewPeoplePanel_Generate extends UIScript {
 			this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas') as mw.Canvas
 		}
 		return this.mCanvas_Internal
+	}
+	private mTipsTextBlock_Internal: mw.TextBlock
+	public get mTipsTextBlock(): mw.TextBlock {
+		if(!this.mTipsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTipsTextBlock') as mw.TextBlock
+		}
+		return this.mTipsTextBlock_Internal
 	}
 	private mCloseButton_Internal: mw.Button
 	public get mCloseButton(): mw.Button {
@@ -53,6 +60,9 @@ export default class NewPeoplePanel_Generate extends UIScript {
 		//文本多语言
 		
 		this.initLanguage(this.mTitleTextBlock)
+		
+	
+		this.initLanguage(this.mTipsTextBlock)
 		
 	
 		//文本多语言

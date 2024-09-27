@@ -619,8 +619,8 @@ export class Utils {
                 return "丧尸";
             case 6:
                 return "变异布偶";
-            default:
-                break;
+            case 100:
+                return "黑悟空";
         }
         return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
     }

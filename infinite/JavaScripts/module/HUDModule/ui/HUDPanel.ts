@@ -128,6 +128,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mNewPeopleButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenNewPeopleAction.call();
 		});
+		this.mLotteryButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenLotteryAction.call();
+		});
 	}
 
 	public updateInvincibleCanvasState(visibility: boolean): void {
@@ -147,6 +150,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.initRedPointTween_SignIn();
 		this.initRedPointTween_Ark();
 		this.initRedPointTween_NewPeople();
+		this.initRedPointTween_Lottery();
 		this.initKillTipItems();
 		this.initDeadCountDown();
 		this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
@@ -303,6 +307,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * GlobalData.upgradeExpMultiple);
 		this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
 		this.mCoinTextBlock.text = `${Utils.integerUnitConversionStr(Math.round(coin))}`
+		Event.dispatchToLocal(`UpdateCoinTextBlock`, coin);
 		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;
 		this.mAtkTextBlock.text = "攻击力：" + atk;
@@ -318,6 +323,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 	public updateCoin(coin: number): void {
 		this.mCoinTextBlock.text = `${Utils.integerUnitConversionStr(Math.round(coin))}`;
+		Event.dispatchToLocal(`UpdateCoinTextBlock`, coin);
 	}
 
 	public updateDiamond(diamond: number): void {
@@ -736,7 +742,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 	}
 	//#endregion
 
-	//#region Ark
+	//#region NewPeople
 	private redPointTween1_NewPeople: mw.Tween<any> = null;
 	private redPointTween2_NewPeople: mw.Tween<any> = null;
 
@@ -768,6 +774,41 @@ export default class HUDPanel extends HUDPanel_Generate {
 			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
 
 		this.redPointTween1_NewPeople.start();
+	}
+	//#endregion
+
+	//#region Lottery
+	private redPointTween1_Lottery: mw.Tween<any> = null;
+	private redPointTween2_Lottery: mw.Tween<any> = null;
+
+	private initRedPointTween_Lottery(): void {
+		this.redPointTween1_Lottery = new mw.Tween({ value: 0.8 })
+			.to({ value: 1.2 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(0.8);
+			})
+			.onUpdate((v) => {
+				this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween2_Lottery.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween2_Lottery = new mw.Tween({ value: 1.2 })
+			.to({ value: 0.8 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(1.2);
+			})
+			.onUpdate((v) => {
+				this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween1_Lottery.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween1_Lottery.start();
 	}
 	//#endregion
 	//#endregion

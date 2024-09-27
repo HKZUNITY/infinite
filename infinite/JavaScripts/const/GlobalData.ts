@@ -49,7 +49,7 @@ export default class GlobalData {
     public static atk: number = 0;
     public static hp: number = 0;
 
-    public static totalBagLen: number = 129;
+    public static totalBagLen: number = 144;
 
     public static mpStr: string = `魂力`;
     public static atkStr: string = `武魂`;
@@ -83,4 +83,8 @@ export default class GlobalData {
 
     public static addCoinCount: number = 10000;
     public static addDiamondCount: number = 5;
+
+    public static arkIcon: string = "312541";
+    public static coinIcon: string = "151950";
+    public static diamondIcon: string = "103220";
 }

@@ -559,12 +559,8 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         }
 
         if (lv > 0) {
-            this.getPlayerModuleC.adsUpLv();
-            for (let i = 1; i < lv; ++i) {
-                TimeUtil.delaySecond(i).then(() => {
-                    this.getPlayerModuleC.adsUpLv();
-                });
-            }
+            this.getPlayerModuleC.upLvByCount(lv);
+            Notice.showDownNotice(`等级+${lv}`);
         }
 
         if (bagIds && bagIds.length > 0) {

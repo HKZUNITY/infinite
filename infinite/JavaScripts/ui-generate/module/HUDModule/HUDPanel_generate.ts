@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.27-20.55.55
+ * TIME: 2024.09.28-02.16.45
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -84,6 +84,27 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mOnOffRingSoulTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mOnOffRingSoulCanvas/mOnOffRingSoulTextBlock') as mw.TextBlock
 		}
 		return this.mOnOffRingSoulTextBlock_Internal
+	}
+	private mFlyCanvas_Internal: mw.Canvas
+	public get mFlyCanvas(): mw.Canvas {
+		if(!this.mFlyCanvas_Internal&&this.uiWidgetBase) {
+			this.mFlyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFlyCanvas') as mw.Canvas
+		}
+		return this.mFlyCanvas_Internal
+	}
+	private mFlyButton_Internal: mw.Button
+	public get mFlyButton(): mw.Button {
+		if(!this.mFlyButton_Internal&&this.uiWidgetBase) {
+			this.mFlyButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFlyCanvas/mFlyButton') as mw.Button
+		}
+		return this.mFlyButton_Internal
+	}
+	private mFlyTextBlock_Internal: mw.TextBlock
+	public get mFlyTextBlock(): mw.TextBlock {
+		if(!this.mFlyTextBlock_Internal&&this.uiWidgetBase) {
+			this.mFlyTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFlyCanvas/mFlyTextBlock') as mw.TextBlock
+		}
+		return this.mFlyTextBlock_Internal
 	}
 	private mPlayerButton_Internal: mw.Button
 	public get mPlayerButton(): mw.Button {
@@ -549,6 +570,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mOnOffRingSoulButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mFlyButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mFlyButton");
+		});
+		this.mFlyButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mPlayerButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mPlayerButton");
 		});
@@ -692,6 +719,9 @@ export default class HUDPanel_Generate extends UIScript {
 		//文本多语言
 		
 		this.initLanguage(this.mOnOffRingSoulTextBlock)
+		
+	
+		this.initLanguage(this.mFlyTextBlock)
 		
 	
 		this.initLanguage(this.mLotteryTextBlock)

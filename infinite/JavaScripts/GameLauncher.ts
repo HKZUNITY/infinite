@@ -2,6 +2,7 @@ import { update } from "./common/notice/Tween";
 import GlobalData from "./const/GlobalData";
 import { ArkData, ArkModuleC, ArkModuleS } from "./module/ArkModule/ArkModule";
 import { BagData, BagModuleC, BagModuleS } from "./module/BagModule/BagModule";
+import { FlyData, FlyModuleC, FlyModuleS } from "./module/FlyModule/FlyModule";
 import { GuideData, GuideModuleC, GuideModuleS } from "./module/GuideModule/GuideModule";
 import HUDModuleC from "./module/HUDModule/HUDModuleC";
 import HUDModuleS from "./module/HUDModule/HUDModuleS";
@@ -88,6 +89,7 @@ export default class GameLauncher extends mw.Script {
         ModuleService.registerModule(LevelModuleS, LevelModuleC, LevelData);
         ModuleService.registerModule(NewPeopleModuleS, NewPeopleModuleC, NewPeopleData);
         ModuleService.registerModule(LotteryModuleS, LotteryModuleC, null);
+        ModuleService.registerModule(FlyModuleS, FlyModuleC, FlyData);
     }
 
     /**------------------------------------------- 客户端 ------------------------------------------------ */

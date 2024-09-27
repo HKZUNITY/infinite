@@ -4,6 +4,7 @@ import { Utils } from "../../../Tools/utils";
 import { GameConfig } from '../../../config/GameConfig';
 import GlobalData from "../../../const/GlobalData";
 import PlayerLifebar_Generate from "../../../ui-generate/module/PlayerModule/PlayerLifebar_generate";
+import { flyDataMap } from '../../FlyModule/FlyModule';
 
 @Component
 export default class PlayerLifebar extends mw.Script {
@@ -17,6 +18,8 @@ export default class PlayerLifebar extends mw.Script {
     public playerLevel: number = -1;
     @mw.Property({ replicated: true, onChanged: "onUsePet" })
     public bagId: number = -1;
+    @mw.Property({ replicated: true, onChanged: "onUseFly" })
+    public flyId: number = -1;
     @mw.Property({ replicated: true, onChanged: "onInvincible" })
     public isInvincible: boolean = false;
     public get getIsInvincible(): boolean {
@@ -24,6 +27,9 @@ export default class PlayerLifebar extends mw.Script {
     }
     public get getBagId(): number {
         return this.bagId;
+    }
+    public get getFlyId(): number {
+        return this.flyId;
     }
     private _hpBarUI: PlayerLifebar_Generate;
     private _hpBarWidget: mw.UIWidget;
@@ -160,8 +166,43 @@ export default class PlayerLifebar extends mw.Script {
         }
     }
 
+    private flyJian: mw.GameObject = null;
+    private flyJianAni: mw.Animation = null;
+    private onUseFly(): void {
+        if (this.flyId == -1) {
+            if (this.flyJian) {
+                GameObjPool.despawn(this.flyJian);
+                this.flyJian = null;
+            }
+            if (this.flyJianAni) {
+                this.flyJianAni.stop();
+                this.flyJianAni = null;
+            }
+        } else {
+            if (!this.character) return;
+            if (this.flyJian) {
+                GameObjPool.despawn(this.flyJian);
+                this.flyJian = null;
+            }
+            if (!flyDataMap.has(this.flyId)) return;
+            let flyData = flyDataMap.get(this.flyId);
+            Utils.asyncDownloadAsset(flyData.jianId).then(() => {
+                GameObjPool.asyncSpawn(flyData.jianId).then((go: mw.GameObject) => {
+                    this.flyJian = go;
+                    this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
+                    this.flyJian.localTransform.position = mw.Vector.zero;
+                    this.flyJian.localTransform.rotation = mw.Rotation.zero;
+                    this.flyJianAni = this.character.loadAnimation(flyData.animationId);
+                    this.flyJianAni.loop = 0;
+                    this.flyJianAni.play();
+                });
+            });
+        }
+    }
+
     protected onDestroy(): void {
         if (this.pet) GameObjPool.despawn(this.pet);
+        if (this.flyJian) GameObjPool.despawn(this.flyJian);
         this._hpBarUI?.destroy();
         this._hpBarWidget?.destroy();
     }

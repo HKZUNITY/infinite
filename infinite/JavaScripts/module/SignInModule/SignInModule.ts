@@ -264,17 +264,20 @@ export class SignInModuleC extends ModuleC<SignInModuleS, SignInData> {
         MapEx.set(this.signIn, day, 1);
         this.server.net_setSignIn(day);
         if (succeedCallback) succeedCallback();
+
         Notice.showDownNotice(`成功获取今日奖励`);
+
         let diamond = rewardMap.get(day).rewardDiamond;
-        let lv = rewardMap.get(day).rewardLv;
-        Notice.showDownNotice(`钻石+${diamond} 等级+${lv}`);
-        this.getPlayerModuleC.saveDiamond(diamond);
-        this.getPlayerModuleC.adsUpLv();
-        for (let i = 1; i < lv; ++i) {
-            TimeUtil.delaySecond(i).then(() => {
-                this.getPlayerModuleC.adsUpLv();
-            });
+        if (diamond > 0) {
+            this.getPlayerModuleC.saveDiamond(diamond);
         }
+
+        let lv = rewardMap.get(day).rewardLv;
+        if (lv > 0) {
+            this.getPlayerModuleC.upLvByCount(lv);
+        }
+
+        Notice.showDownNotice(`钻石+${diamond} 等级+${lv}`);
     }
 }
 

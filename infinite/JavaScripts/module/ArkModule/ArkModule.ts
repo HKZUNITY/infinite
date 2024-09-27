@@ -313,12 +313,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
 
             if (giftBagData?.lv && giftBagData?.lv > 0) {
                 Notice.showDownNotice(`等级+${giftBagData.lv}`);
-                this.getPlayerModuleC.adsUpLv();
-                for (let i = 1; i < giftBagData.lv; ++i) {
-                    TimeUtil.delaySecond(i).then(() => {
-                        this.getPlayerModuleC.adsUpLv();
-                    });
-                }
+                this.getPlayerModuleC.upLvByCount(giftBagData.lv);
             }
         } else if (giftBagCood == GiftBagCood.Fail) {
             Notice.showDownNotice(`礼包兑换码错误`);

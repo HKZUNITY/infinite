@@ -11,6 +11,7 @@ import { Notice } from "../../../common/notice/Notice";
 import GlobalData from "../../../const/GlobalData";
 import HUDPanel_Generate from "../../../ui-generate/module/HUDModule/HUDPanel_generate";
 import KillTipItem_Generate from "../../../ui-generate/module/HUDModule/KillTipItem_generate";
+import { FlyModuleC } from "../../FlyModule/FlyModule";
 import { RingSoulModuleC } from "../../RingSoulModule/RingSoulModule";
 import HUDModuleC, { KillTipData, KillTipType } from "../HUDModuleC";
 
@@ -54,9 +55,11 @@ export default class HUDPanel extends HUDPanel_Generate {
 		});
 		this.mJumpButton.onClicked.add(() => {
 			this.getHudModuleC.onJumpAction.call();
+			this.getHudModuleC.onOnOffFlyAction.call(false);
 		});
 		this.mSprintButton.onClicked.add(() => {
 			this.getHudModuleC.onSprintAction.call();
+			this.getHudModuleC.onOnOffFlyAction.call(false);
 		});
 		this.mOnlineRewardButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenOnlineRewardAction.call();
@@ -124,12 +127,16 @@ export default class HUDPanel extends HUDPanel_Generate {
 		});
 		this.mUpExpButton.onClicked.add(() => {
 			this.getHudModuleC.onOnOffUpExpAction.call(true);
+			this.getHudModuleC.onOnOffFlyAction.call(false);
 		});
 		this.mNewPeopleButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenNewPeopleAction.call();
 		});
 		this.mLotteryButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenLotteryAction.call();
+		});
+		this.mFlyButton.onClicked.add(() => {
+			this.getHudModuleC.onOnOffFlyAction.call(true);
 		});
 	}
 
@@ -344,8 +351,10 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 		if (this.mHpProgressBar.currentValue == 1) {
 			this.endDeadCountDown();
+			this.getHudModuleC.onOnOffFlyAction.call(true);
 		} else if (this.mHpProgressBar.currentValue == 0) {
 			this.startDeadCountDown();
+			this.getHudModuleC.onOnOffFlyAction.call(false);
 		}
 	}
 	//#endregion
@@ -360,6 +369,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 				return;
 			}
 			if (this.curInputIndex != -1) return;
+			this.getHudModuleC.onOnOffFlyAction.call(false);
 			ColdWeapon.getInstance().attack(index);
 			this.curInputIndex = index;
 		});

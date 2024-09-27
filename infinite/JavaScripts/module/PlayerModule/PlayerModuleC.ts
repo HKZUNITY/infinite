@@ -154,6 +154,19 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         return (this.data.playerLv + 1) * GlobalData.upgradeExpMultiple;
     }
 
+    public upLvByCount(num: number): void {
+        let lv = this.data.playerLv;
+        let exp: number = 0;
+        for (let i = 1; i <= num; ++i) {
+            exp += this.getLvUpExpByLv(lv + i);
+        }
+        this.saveCoinAndExp(0, exp);
+    }
+
+    public getLvUpExpByLv(lv: number): number {
+        return (lv + 1) * GlobalData.upgradeExpMultiple;
+    }
+
     private invincible: boolean = false;
     public isInvincible(isInvincible: boolean): void {
         if (this.invincible == isInvincible) return;

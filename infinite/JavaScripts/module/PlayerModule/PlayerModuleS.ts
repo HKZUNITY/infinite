@@ -381,6 +381,12 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (this.playerLifeMap.get(player.playerId).playerLifebar.getBagId == bagId) return;
         this.playerLifeMap.get(player.playerId).playerLifebar.bagId = bagId;
     }
+
+    public useFly(player: mw.Player, key: number): void {
+        if (!this.playerLifeMap.has(player.playerId)) return;
+        if (this.playerLifeMap.get(player.playerId).playerLifebar.getFlyId == key) return;
+        this.playerLifeMap.get(player.playerId).playerLifebar.flyId = key;
+    }
 }
 
 class PlayerDataS {

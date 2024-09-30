@@ -355,7 +355,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 		if (this.mHpProgressBar.currentValue == 1) {
 			this.endDeadCountDown();
-			this.getHudModuleC.onOnOffFlyAction.call(true);
+			// this.getHudModuleC.onOnOffFlyAction.call(true);
 		} else if (this.mHpProgressBar.currentValue == 0) {
 			this.startDeadCountDown();
 			this.getHudModuleC.onOnOffFlyAction.call(false);

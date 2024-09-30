@@ -324,7 +324,6 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
     public clickSwordItem(key: number, buySuccessCallback: () => void): void {
         if (this.isHasSwordId(key)) {
             this.setUsingSwordId(key);
-            this.addOnOffSword(true);
         } else {
             let swordData = swordDataMap.get(key);
             if (swordData.diamond <= 0) {
@@ -438,6 +437,11 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
         if (this.usingSwordId == swordId) return;
         this.usingSwordId = swordId;
         this.server.net_setUsingSwordId(this.usingSwordId);
+
+        Notice.showDownNotice(`装备御剑飞行`);
+        this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
+        this.server.net_useFly(this.usingSwordId);
+        this.isFlying = true;
     }
 
     private isFlying: boolean = false;
@@ -445,7 +449,6 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
         if (on) {
             if (this.usingSwordId <= 0) {
                 Notice.showDownNotice(`未装备御剑飞行`);
-                this.defaultOpenBuyPanel();
                 return;
             } else {
                 if (this.isFlying) return;

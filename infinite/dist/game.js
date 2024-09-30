@@ -8444,7 +8444,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mHpTextBlock.text = `血量：${curHp}/${maxHp}`;
         if (this.mHpProgressBar.currentValue == 1) {
             this.endDeadCountDown();
-            this.getHudModuleC.onOnOffFlyAction.call(true);
+            // this.getHudModuleC.onOnOffFlyAction.call(true);
         }
         else if (this.mHpProgressBar.currentValue == 0) {
             this.startDeadCountDown();
@@ -15547,7 +15547,6 @@ class FlyModuleC extends ModuleC {
     clickSwordItem(key, buySuccessCallback) {
         if (this.isHasSwordId(key)) {
             this.setUsingSwordId(key);
-            this.addOnOffSword(true);
         }
         else {
             let swordData = swordDataMap.get(key);
@@ -15666,12 +15665,15 @@ class FlyModuleC extends ModuleC {
             return;
         this.usingSwordId = swordId;
         this.server.net_setUsingSwordId(this.usingSwordId);
+        Notice.showDownNotice(`装备御剑飞行`);
+        this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
+        this.server.net_useFly(this.usingSwordId);
+        this.isFlying = true;
     }
     addOnOffSword(on) {
         if (on) {
             if (this.usingSwordId <= 0) {
                 Notice.showDownNotice(`未装备御剑飞行`);
-                this.defaultOpenBuyPanel();
                 return;
             }
             else {

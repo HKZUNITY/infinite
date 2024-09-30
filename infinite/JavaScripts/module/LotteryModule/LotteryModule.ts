@@ -518,7 +518,6 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
                 case RewardType.Bag:
                     let bagId = lotteryDatas.get(calculateKey).reward;
                     bagIds.push(bagId);
-                    this.getLotteryPanel.updateItemHasState(calculateKey);
                     break;
             }
         }
@@ -527,6 +526,9 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
             this.getLotteryResultPanel.showPanel(calculateKeys);
             TimeUtil.delaySecond(0.1).then(() => {
                 this.getLotteryResultPanel.showPanel(calculateKeys);
+            });
+            calculateKeys.forEach((key: number) => {
+                if (lotteryDatas.get(key).isLimit) this.getLotteryPanel.updateItemHasState(key);
             });
             Notice.showDownNotice(`恭喜中奖`);
         });

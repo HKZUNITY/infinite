@@ -138,6 +138,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mFlyButton.onClicked.add(() => {
 			this.getHudModuleC.onOnOffFlyAction.call(true);
 		});
+		this.mSwordButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenSwordAction.call();
+		});
 	}
 
 	public updateInvincibleCanvasState(visibility: boolean): void {
@@ -335,6 +338,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 	public updateDiamond(diamond: number): void {
 		this.mDiamondTextBlock.text = `${diamond}`;
+		Event.dispatchToLocal(`UpdateDiamondTextBlock`, diamond);
 	}
 
 	public updateMp(curMp: number, maxMp: number): void {

@@ -1,0 +1,5 @@
+﻿{
+	"CustomType": "Character|Shape|Head|Body|MakeupSkinColor|MakeupFace|MakeupBody|Hair|UpperCloth|Gloves|Shoe|Slots|LowerCloth",
+	"CustomData": "{\"data\":[11469055,2],\"assetId\":[\"5636351\",\"292004\",\"6357247\",\"292002\",\"7078143\",\"75663\",\"7799039\",\"66505\",\"10682623\",\"292003\",\"11075839\",\"292001\",\"255\",\"161676\"],\"littleEndian\":1,\"basicStance\":\"30274\",\"version\":\"2.5\"}",
+	"CustomSlot": "{\"skeletonName\":\"MW_Skeleton\",\"saveSlotArray\":[],\"saveAttachmentArray\":[\"8124134E4CBF3FA72E07A7B4EEFCF00D$23$0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000\",\"269895$16$0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000\",\"42804$12$0.000000,0.000000,0.000000|0.000000,89.999992,0.000000|1.000000,1.000000,1.000000\"],\"bIsGeneratedInRuntime\":0,\"version\":1}"
+}

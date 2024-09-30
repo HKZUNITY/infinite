@@ -2935,7 +2935,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.16
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -3047,7 +3047,7 @@ var foreign7 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -3114,7 +3114,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -5176,7 +5176,7 @@ var foreign97 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5302,7 +5302,7 @@ var foreign118 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5394,7 +5394,7 @@ var foreign119 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5490,7 +5490,7 @@ var foreign120 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5556,7 +5556,7 @@ var foreign121 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5636,7 +5636,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/UpPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let UpPanel_Generate = class UpPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5815,7 +5815,7 @@ var foreign45 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelItem.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let LevelItem_Generate = class LevelItem_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -5861,7 +5861,7 @@ LevelItem_Generate = __decorate([
 ], LevelItem_Generate);
 var LevelItem_Generate$1 = LevelItem_Generate;
 
-var foreign125 = /*#__PURE__*/Object.freeze({
+var foreign128 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LevelItem_Generate$1
 });
@@ -5871,7 +5871,7 @@ var foreign125 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let LevelPanel_Generate = class LevelPanel_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -5917,7 +5917,7 @@ LevelPanel_Generate = __decorate([
 ], LevelPanel_Generate);
 var LevelPanel_Generate$1 = LevelPanel_Generate;
 
-var foreign126 = /*#__PURE__*/Object.freeze({
+var foreign129 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LevelPanel_Generate$1
 });
@@ -5927,7 +5927,7 @@ var foreign126 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/UpExpPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
     get mCancleUpExpCanvas() {
@@ -5990,7 +5990,7 @@ UpExpPanel_Generate = __decorate([
 ], UpExpPanel_Generate);
 var UpExpPanel_Generate$1 = UpExpPanel_Generate;
 
-var foreign127 = /*#__PURE__*/Object.freeze({
+var foreign130 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: UpExpPanel_Generate$1
 });
@@ -6000,7 +6000,7 @@ var foreign127 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -6224,6 +6224,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mNewPeoplePointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/NewPeopleCanvas/mNewPeoplePointImage');
         }
         return this.mNewPeoplePointImage_Internal;
+    }
+    get mSwordButton() {
+        if (!this.mSwordButton_Internal && this.uiWidgetBase) {
+            this.mSwordButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SwordCanvas/mSwordButton');
+        }
+        return this.mSwordButton_Internal;
     }
     get mMusicCanvas() {
         if (!this.mMusicCanvas_Internal && this.uiWidgetBase) {
@@ -6538,6 +6544,10 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mNewPeopleButton");
         });
         this.mNewPeopleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mSwordButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mSwordButton");
+        });
+        this.mSwordButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mCloseMusicBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
         });
@@ -6606,6 +6616,7 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/GetCanvas/GetTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RingSoulCanvas/RingSoulTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/NewPeopleCanvas/NewPeopleTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/SwordCanvas/SwordTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/mInvincibleCanvas/InvincibleTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/UpExpCanvas/UpExpTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock"));
@@ -6634,7 +6645,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign123 = /*#__PURE__*/Object.freeze({
+var foreign126 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -6644,7 +6655,7 @@ var foreign123 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6710,7 +6721,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign124 = /*#__PURE__*/Object.freeze({
+var foreign127 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -6720,7 +6731,7 @@ var foreign124 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItem.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
     get mMainCanvas() {
@@ -6788,7 +6799,7 @@ RingSoulItem_Generate = __decorate([
 ], RingSoulItem_Generate);
 var RingSoulItem_Generate$1 = RingSoulItem_Generate;
 
-var foreign136 = /*#__PURE__*/Object.freeze({
+var foreign139 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItem_Generate$1
 });
@@ -6798,7 +6809,7 @@ var foreign136 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
     get mCanvas() {
@@ -6895,7 +6906,7 @@ RingSoulItemChild_Generate = __decorate([
 ], RingSoulItemChild_Generate);
 var RingSoulItemChild_Generate$1 = RingSoulItemChild_Generate;
 
-var foreign137 = /*#__PURE__*/Object.freeze({
+var foreign140 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItemChild_Generate$1
 });
@@ -6905,7 +6916,7 @@ var foreign137 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -7006,7 +7017,7 @@ RingSoulPanel_Generate = __decorate([
 ], RingSoulPanel_Generate);
 var RingSoulPanel_Generate$1 = RingSoulPanel_Generate;
 
-var foreign138 = /*#__PURE__*/Object.freeze({
+var foreign141 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulPanel_Generate$1
 });
@@ -8246,6 +8257,9 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mFlyButton.onClicked.add(() => {
             this.getHudModuleC.onOnOffFlyAction.call(true);
         });
+        this.mSwordButton.onClicked.add(() => {
+            this.getHudModuleC.onOpenSwordAction.call();
+        });
     }
     updateInvincibleCanvasState(visibility) {
         Utils.setWidgetVisibility(this.mInvincibleCanvas, visibility ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
@@ -8414,6 +8428,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     updateDiamond(diamond) {
         this.mDiamondTextBlock.text = `${diamond}`;
+        Event.dispatchToLocal(`UpdateDiamondTextBlock`, diamond);
     }
     updateMp(curMp, maxMp) {
         this.mMpProgressBar.currentValue = curMp / maxMp;
@@ -9515,7 +9530,7 @@ var foreign98 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -9571,7 +9586,7 @@ OnlineRewardPanel_Generate = __decorate([
 ], OnlineRewardPanel_Generate);
 var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
 
-var foreign134 = /*#__PURE__*/Object.freeze({
+var foreign137 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardPanel_Generate$1
 });
@@ -10148,6 +10163,7 @@ class HUDModuleC extends ModuleC {
         this.onOpenGetAction = new Action();
         this.onOpenNewPeopleAction = new Action();
         this.onOpenLotteryAction = new Action();
+        this.onOpenSwordAction = new Action();
         this.onOnOffUpExpAction = new Action1();
         this.onOnOffFlyAction = new Action1();
         /**全局UI点击音效唯一标识 */
@@ -10874,7 +10890,7 @@ var foreign80 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -10983,7 +10999,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign146 = /*#__PURE__*/Object.freeze({
+var foreign149 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -11863,7 +11879,7 @@ var foreign44 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -11969,7 +11985,7 @@ GuideUI_Generate = __decorate([
 ], GuideUI_Generate);
 var GuideUI_Generate$1 = GuideUI_Generate;
 
-var foreign122 = /*#__PURE__*/Object.freeze({
+var foreign125 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuideUI_Generate$1
 });
@@ -12109,6 +12125,9 @@ class GuidePanel extends GuideUI_Generate$1 {
             case 24:
                 this.guide24();
                 break;
+            case 25:
+                this.guide25();
+                break;
             // 可以继续增加无数步
             default:
                 this.hide();
@@ -12179,38 +12198,42 @@ class GuidePanel extends GuideUI_Generate$1 {
         this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size, new mw.Vector2(110, 150), "福利多多，最快提升等级的办法，无限升级，成为神级的捷径。", 1, true);
     }
     guide16() {
+        mw.localToViewport(this.getHudPanel.mSwordButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mSwordButton.size, new mw.Vector2(0, 150), "御剑飞行，装备后可飞行。", 1, true);
+    }
+    guide17() {
         mw.localToViewport(this.getHudPanel.mArkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mArkButton.size, new mw.Vector2(710, 150), "充值钻石，可充值大量钻石快速提升魂环年限、最快达到百万年级别。", 1, true);
     }
-    guide17() {
+    guide18() {
         mw.localToViewport(this.getHudPanel.mGetButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mGetButton.size, new mw.Vector2(510, 150), "兑换奖励，领取兑换码兑换奖励，钻石+等级。", 1, true);
     }
-    guide18() {
+    guide19() {
         mw.localToViewport(this.getHudPanel.mNewPeopleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mNewPeopleButton.size, new mw.Vector2(310, 150), "新手礼包按钮，领取新手大礼包", 1, true);
     }
-    guide19() {
+    guide20() {
         mw.localToViewport(this.getHudPanel.mRingSoulButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mRingSoulButton.size, new mw.Vector2(110, 150), "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", 1, true);
     }
-    guide20() {
+    guide21() {
         mw.localToViewport(this.getHudPanel.mInvincibleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mInvincibleButton.size, new mw.Vector2(550, 350), "开启防御，不会被队友误伤。", 1, true);
     }
-    guide21() {
+    guide22() {
         mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size, new mw.Vector2(550, 350), `角色属性，血量、${GlobalData.mpStr}，攻击力会随等级提升而提升。`, 1, true);
     }
-    guide22() {
+    guide23() {
         mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加金币直接购买武魂、魂骨。", 1, true);
     }
-    guide23() {
+    guide24() {
         mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
         this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加钻石锻造魂环。", 1, true);
     }
-    guide24() {
+    guide25() {
         this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", 0, true);
     }
     /**
@@ -12301,7 +12324,7 @@ class GuideModuleC extends ModuleC {
         super(...arguments);
         this.guidePanel = null;
         this.bagModuleC = null;
-        this.totalStep = 24;
+        this.totalStep = 25;
         this.curStep = -1;
         this.onNextStepAction = new Action();
         /**引导目标点特效ID */
@@ -12516,7 +12539,7 @@ class GuideModuleC extends ModuleC {
                 mw.UIService.hide(BagInfoPanel);
             Event.dispatchToLocal("First");
             TimeUtil.delaySecond(5).then(() => {
-                this.getGuidePanel.guideByStep(19);
+                this.getGuidePanel.guideByStep(20);
             });
         });
     }
@@ -14124,7 +14147,7 @@ var foreign60 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInItem.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let SignInItem_Generate = class SignInItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -14237,7 +14260,7 @@ SignInItem_Generate = __decorate([
 ], SignInItem_Generate);
 var SignInItem_Generate$1 = SignInItem_Generate;
 
-var foreign143 = /*#__PURE__*/Object.freeze({
+var foreign146 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInItem_Generate$1
 });
@@ -14247,7 +14270,7 @@ var foreign143 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let SignInPanel_Generate = class SignInPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -14309,7 +14332,7 @@ SignInPanel_Generate = __decorate([
 ], SignInPanel_Generate);
 var SignInPanel_Generate$1 = SignInPanel_Generate;
 
-var foreign144 = /*#__PURE__*/Object.freeze({
+var foreign147 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInPanel_Generate$1
 });
@@ -14827,7 +14850,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.18
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -14893,48 +14916,597 @@ PlayerLifebar_Generate = __decorate([
 ], PlayerLifebar_Generate);
 var PlayerLifebar_Generate$1 = PlayerLifebar_Generate;
 
-var foreign135 = /*#__PURE__*/Object.freeze({
+var foreign138 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar_Generate$1
 });
 
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/FlyModule/SwordItem.ui
+ * TIME: 2024.09.30-20.30.17
+ */
+let SwordItem_Generate = class SwordItem_Generate extends UIScript {
+    get mNameTextBlock() {
+        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mNameTextBlock');
+        }
+        return this.mNameTextBlock_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mDiamondCanvas() {
+        if (!this.mDiamondCanvas_Internal && this.uiWidgetBase) {
+            this.mDiamondCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas');
+        }
+        return this.mDiamondCanvas_Internal;
+    }
+    get mDiamondIconImage() {
+        if (!this.mDiamondIconImage_Internal && this.uiWidgetBase) {
+            this.mDiamondIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas/DiamondBgImage/mDiamondIconImage');
+        }
+        return this.mDiamondIconImage_Internal;
+    }
+    get mDiamondTextBlock() {
+        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas/DiamondBgImage/mDiamondTextBlock');
+        }
+        return this.mDiamondTextBlock_Internal;
+    }
+    get mArkCanvas() {
+        if (!this.mArkCanvas_Internal && this.uiWidgetBase) {
+            this.mArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas');
+        }
+        return this.mArkCanvas_Internal;
+    }
+    get mArkIconImage() {
+        if (!this.mArkIconImage_Internal && this.uiWidgetBase) {
+            this.mArkIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas/mArkIconImage');
+        }
+        return this.mArkIconImage_Internal;
+    }
+    get mArkTextBlock() {
+        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas/mArkTextBlock');
+        }
+        return this.mArkTextBlock_Internal;
+    }
+    get mHasCanvas() {
+        if (!this.mHasCanvas_Internal && this.uiWidgetBase) {
+            this.mHasCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas');
+        }
+        return this.mHasCanvas_Internal;
+    }
+    get mMaskImage() {
+        if (!this.mMaskImage_Internal && this.uiWidgetBase) {
+            this.mMaskImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskImage');
+        }
+        return this.mMaskImage_Internal;
+    }
+    get mMaskBgImage() {
+        if (!this.mMaskBgImage_Internal && this.uiWidgetBase) {
+            this.mMaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskBgImage');
+        }
+        return this.mMaskBgImage_Internal;
+    }
+    get mHasTextBlock() {
+        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
+            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskBgImage/mHasTextBlock');
+        }
+        return this.mHasTextBlock_Internal;
+    }
+    get mClickButton() {
+        if (!this.mClickButton_Internal && this.uiWidgetBase) {
+            this.mClickButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mClickButton');
+        }
+        return this.mClickButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mClickButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mClickButton");
+        });
+        this.mClickButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mNameTextBlock);
+        this.initLanguage(this.mDiamondTextBlock);
+        this.initLanguage(this.mArkTextBlock);
+        this.initLanguage(this.mHasTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+SwordItem_Generate = __decorate([
+    UIBind('UI/module/FlyModule/SwordItem.ui')
+], SwordItem_Generate);
+var SwordItem_Generate$1 = SwordItem_Generate;
+
+var foreign122 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SwordItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/FlyModule/SwordPanel.ui
+ * TIME: 2024.09.30-20.30.17
+ */
+let SwordPanel_Generate = class SwordPanel_Generate extends UIScript {
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
+    }
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mMoneyCanvas() {
+        if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
+            this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
+        }
+        return this.mMoneyCanvas_Internal;
+    }
+    get mIconDiamondImage() {
+        if (!this.mIconDiamondImage_Internal && this.uiWidgetBase) {
+            this.mIconDiamondImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mIconDiamondImage');
+        }
+        return this.mIconDiamondImage_Internal;
+    }
+    get mDiamondCountTextBlock() {
+        if (!this.mDiamondCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mDiamondCountTextBlock');
+        }
+        return this.mDiamondCountTextBlock_Internal;
+    }
+    get mIconArkImage() {
+        if (!this.mIconArkImage_Internal && this.uiWidgetBase) {
+            this.mIconArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mIconArkImage');
+        }
+        return this.mIconArkImage_Internal;
+    }
+    get mArkCountTextBlock() {
+        if (!this.mArkCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mArkCountTextBlock');
+        }
+        return this.mArkCountTextBlock_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
+        this.initLanguage(this.mDiamondCountTextBlock);
+        this.initLanguage(this.mArkCountTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+SwordPanel_Generate = __decorate([
+    UIBind('UI/module/FlyModule/SwordPanel.ui')
+], SwordPanel_Generate);
+var SwordPanel_Generate$1 = SwordPanel_Generate;
+
+var foreign123 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SwordPanel_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/FlyModule/SwordTipsPanel.ui
+ * TIME: 2024.09.30-20.30.17
+ */
+let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    get mContentTextBlock() {
+        if (!this.mContentTextBlock_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock');
+        }
+        return this.mContentTextBlock_Internal;
+    }
+    get mDiamondButton() {
+        if (!this.mDiamondButton_Internal && this.uiWidgetBase) {
+            this.mDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton');
+        }
+        return this.mDiamondButton_Internal;
+    }
+    get mDiamondTextBlock() {
+        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton/mDiamondTextBlock');
+        }
+        return this.mDiamondTextBlock_Internal;
+    }
+    get mArkButton() {
+        if (!this.mArkButton_Internal && this.uiWidgetBase) {
+            this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton');
+        }
+        return this.mArkButton_Internal;
+    }
+    get mArkTextBlock() {
+        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton/mArkTextBlock');
+        }
+        return this.mArkTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mDiamondButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mDiamondButton");
+        });
+        this.mDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mArkButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mArkButton");
+        });
+        this.mArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mContentTextBlock);
+        this.initLanguage(this.mDiamondTextBlock);
+        this.initLanguage(this.mArkTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+SwordTipsPanel_Generate = __decorate([
+    UIBind('UI/module/FlyModule/SwordTipsPanel.ui')
+], SwordTipsPanel_Generate);
+var SwordTipsPanel_Generate$1 = SwordTipsPanel_Generate;
+
+var foreign124 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SwordTipsPanel_Generate$1
+});
+
+class SwordTipsPanel extends SwordTipsPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.arkCallBack = null;
+        this.diamondCallBack = null;
+        this.closeCallBack = null;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mArkTextBlock.text = `派队币购买`;
+        this.mDiamondTextBlock.text = `钻石购买`;
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addClickButton.bind(this));
+        this.mArkButton.onClicked.add(this.addArkButton.bind(this));
+        this.mDiamondButton.onClicked.add(this.addDiamondButton.bind(this));
+    }
+    addClickButton() {
+        this.hide();
+        if (this.closeCallBack)
+            this.closeCallBack();
+    }
+    addArkButton() {
+        if (this.arkCallBack)
+            this.arkCallBack();
+    }
+    addDiamondButton() {
+        if (this.diamondCallBack)
+            this.diamondCallBack();
+    }
+    showPanel(key, arkCallBack, diamondCallBack, closeCallBack) {
+        let swordData = swordDataMap.get(key);
+        if (swordData.diamond <= 0) {
+            this.mContentTextBlock.text = `消耗 ${swordData.ark}派队币`;
+            this.mDiamondButton.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mContentTextBlock.text = `消耗 ${swordData.diamond}钻石 或\n消耗 ${swordData.ark}派队币`;
+            this.mDiamondButton.visibility = mw.SlateVisibility.Visible;
+        }
+        this.arkCallBack = arkCallBack;
+        this.diamondCallBack = diamondCallBack;
+        this.closeCallBack = closeCallBack;
+        this.show();
+    }
+}
+class SwordItem extends SwordItem_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.flyModuleC = null;
+        this.key = 0;
+    }
+    get getFlyModuleC() {
+        if (!this.flyModuleC) {
+            this.flyModuleC = ModuleService.getModule(FlyModuleC);
+        }
+        return this.flyModuleC;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mDiamondIconImage.imageGuid = GlobalData.diamondIcon;
+        this.mArkIconImage.imageGuid = GlobalData.arkIcon;
+        this.mHasTextBlock.text = `点击获得`;
+    }
+    bindButton() {
+        this.mClickButton.onClicked.add(this.addClickButton.bind(this));
+    }
+    addClickButton() {
+        this.getFlyModuleC.clickSwordItem(this.key, () => {
+            this.buyComplete();
+        });
+    }
+    initItem(key) {
+        this.key = key;
+        let swordData = swordDataMap.get(this.key);
+        let iconStr = swordData.icon.split(`_`);
+        if (iconStr[0] == `mode`) {
+            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
+        }
+        else if (iconStr[0] == `icon`) {
+            this.mIconImage.imageGuid = iconStr[1];
+        }
+        this.mNameTextBlock.text = swordData.name;
+        if (swordData.diamond <= 0) {
+            this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
+            this.mIconImage.position = new mw.Vector2(7, 42);
+            this.mIconImage.size = new mw.Vector2(210, 210);
+        }
+        else {
+            this.mDiamondTextBlock.text = `${swordData.diamond}`;
+            this.mDiamondCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }
+        this.mArkTextBlock.text = `${swordData.ark}`;
+        this.refreshUI();
+    }
+    refreshUI() {
+        if (this.getFlyModuleC.isHasSwordId(this.key)) {
+            this.buyComplete();
+        }
+        else {
+            this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }
+    }
+    buyComplete() {
+        this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
+        this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
+        this.mArkIconImage.visibility = mw.SlateVisibility.Collapsed;
+        this.mArkTextBlock.text = `点击使用`;
+        this.mArkTextBlock.textHorizontalLayout = mw.UITextHorizontalLayout.NoClipping;
+        this.mArkTextBlock.textAlign = mw.TextJustify.Right;
+        this.mIconImage.position = new mw.Vector2(7, 42);
+        this.mIconImage.size = new mw.Vector2(210, 210);
+    }
+}
+class SwordPanel extends SwordPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.hudPanel = null;
+        this.swordItems = [];
+    }
+    get getHudPanel() {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mTitleTextBlock.text = "御剑飞行商城";
+        this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
+        this.mIconArkImage.imageGuid = GlobalData.arkIcon;
+        this.initItem();
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+        Event.addLocalListener(`UpdateDiamondTextBlock`, this.updateDiamondTextBlock.bind(this));
+    }
+    addCloseButton() {
+        this.hideTween();
+    }
+    initItem() {
+        swordDataMap.forEach((value, key) => {
+            let swordItem = mw.UIService.create(SwordItem);
+            swordItem.initItem(key);
+            this.mCanvas.addChild(swordItem.uiObject);
+            this.swordItems.push(swordItem);
+        });
+    }
+    updateArkTextBlock(arkCount) {
+        this.mArkCountTextBlock.text = `${arkCount}`;
+    }
+    updateDiamondTextBlock(diamondCount) {
+        this.mDiamondCountTextBlock.text = `${diamondCount}`;
+    }
+    onShow(...params) {
+        Utils.openUITween(this.rootCanvas, () => {
+            this.getHudPanel.hide();
+        }, null);
+    }
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+            this.getHudPanel.show();
+        });
+    }
+}
 class FlyData extends Subdata {
     constructor() {
         super(...arguments);
         this.flyIds = [];
-        // public setUsingFlyId(flyId: number): void {
-        //     this.usingFlyId = flyId;
-        //     this.save(true);
-        // }
+        this.swordIds = [];
+        this.usingSwordId = 0;
     }
-    // @Decorator.persistence()
-    // public usingFlyId: number = 0;
-    setFlyId(flyId) {
-        if (!this.flyIds.includes(flyId)) {
-            this.flyIds.push(flyId);
+    delFlyId(swordId) {
+        if (!this.swordIds.includes(swordId)) {
+            this.swordIds.push(swordId);
         }
+        this.flyIds.length = 0;
+        this.save(true);
+    }
+    setSwordId(swordId) {
+        if (!this.swordIds.includes(swordId)) {
+            this.swordIds.push(swordId);
+        }
+        this.save(true);
+    }
+    setUsingSwordId(swordId) {
+        if (this.usingSwordId == swordId)
+            return;
+        this.usingSwordId = swordId;
         this.save(true);
     }
 }
 __decorate([
     Decorator.persistence()
 ], FlyData.prototype, "flyIds", void 0);
-const flyDataMap = new Map();
-flyDataMap.set(1, { commodityId: "9SKsZwz8S6X0001O0", characterId: "2E45E725", triggerId: "04BCD921", worldUIId: "2DBB7484", name: `购买\n御剑飞行技能`, skinId: "142921", wingId: "211667", jianId: "CDA48366471D1E2820A362823CC0E991", animationId: "284751" });
+__decorate([
+    Decorator.persistence()
+], FlyData.prototype, "swordIds", void 0);
+__decorate([
+    Decorator.persistence()
+], FlyData.prototype, "usingSwordId", void 0);
+class SwordData {
+}
+const swordTriggerId = "0D77F0C2";
+const swordWorldUIId = "21930ABA";
+const swordDataMap = new Map();
+swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73" });
+swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0" });
+swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D" });
+swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "0F6CADC5", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991" });
+swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "373123C7", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5" });
+swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249" });
 class FlyModuleC extends ModuleC {
     constructor() {
         super(...arguments);
+        this.swordPanel = null;
+        this.swordTipsPanel = null;
         this.hudModuleC = null;
+        this.adTipsPanel = null;
+        this.playerModuleC = null;
         this.flyIds = [];
-        // public getUsingFlyId(): number {
-        //     return this.usingFlyId;
-        // }
-        // public setUsingFlyId(flyId: number): void {
-        //     if (this.usingFlyId == flyId) return;
-        //     this.usingFlyId = flyId;
-        //     this.server.net_setUsingFlyId(this.usingFlyId);
-        // }
+        this.swordIds = [];
+        this.usingSwordId = 0;
         this.isFlying = false;
+        this.isFirst = true;
+    }
+    get getSwordPanel() {
+        if (!this.swordPanel) {
+            this.swordPanel = mw.UIService.getUI(SwordPanel);
+        }
+        return this.swordPanel;
+    }
+    get getSwordTipsPanel() {
+        if (!this.swordTipsPanel) {
+            this.swordTipsPanel = mw.UIService.getUI(SwordTipsPanel);
+        }
+        return this.swordTipsPanel;
     }
     get getHudModuleC() {
         if (!this.hudModuleC) {
@@ -14942,119 +15514,212 @@ class FlyModuleC extends ModuleC {
         }
         return this.hudModuleC;
     }
+    get getAdTipsPanel() {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
         this.bindAction();
     }
     bindAction() {
-        this.getHudModuleC.onOnOffFlyAction.add(this.addOnOffFlyAction.bind(this));
+        this.getHudModuleC.onOpenSwordAction.add(this.addOpenSwordPanel.bind(this));
+        this.getHudModuleC.onOnOffFlyAction.add(this.addOnOffSword.bind(this));
+        mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
     }
-    addOnOffFlyAction(on) {
-        if (on) {
-            if (!this.flyIds || this.flyIds.length == 0) {
-                Notice.showDownNotice(`未获得御剑飞行技能`);
-            }
-            else {
-                this.useFly(1);
-            }
+    addOpenSwordPanel() {
+        this.getSwordPanel.show();
+        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
+    }
+    addArkUpdate(amount) {
+        //刷新逻辑，amount为当前代币数量
+        console.error(`ArkModuleC addArkUpdate amount: ${amount}`);
+        this.getSwordPanel.updateArkTextBlock(amount);
+    }
+    clickSwordItem(key, buySuccessCallback) {
+        if (this.isHasSwordId(key)) {
+            this.setUsingSwordId(key);
+            this.addOnOffSword(true);
         }
         else {
-            if (!this.flyIds || this.flyIds.length == 0)
-                return;
-            this.useFly(-1);
+            let swordData = swordDataMap.get(key);
+            if (swordData.diamond <= 0) {
+                if (mw.SystemUtil.isPIE) {
+                    this.setSwordId(key);
+                    Notice.showDownNotice(`御剑飞行购买成功`);
+                    if (buySuccessCallback)
+                        buySuccessCallback();
+                }
+                else {
+                    mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
+                        mw.PurchaseService.getArkBalance(); //刷新代币数量
+                        if (status != 200)
+                            return;
+                        if (buySuccessCallback)
+                            buySuccessCallback();
+                    });
+                }
+            }
+            else {
+                this.getSwordTipsPanel.showPanel(key, () => {
+                    if (mw.SystemUtil.isPIE) {
+                        this.setSwordId(key);
+                        Notice.showDownNotice(`御剑飞行购买成功`);
+                        if (buySuccessCallback)
+                            buySuccessCallback();
+                        this.getSwordTipsPanel.hide();
+                    }
+                    else {
+                        mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
+                            mw.PurchaseService.getArkBalance(); //刷新代币数量
+                            if (status != 200)
+                                return;
+                            if (buySuccessCallback)
+                                buySuccessCallback();
+                            this.getSwordTipsPanel.hide();
+                        });
+                    }
+                }, () => {
+                    let costDiamond = this.getPlayerModuleC.getDiamond;
+                    if (costDiamond >= swordData.diamond) {
+                        this.getPlayerModuleC.saveDiamond(-swordData.diamond);
+                        this.setSwordId(key);
+                        Notice.showDownNotice(`御剑飞行购买成功`);
+                        this.getSwordTipsPanel.hide();
+                        if (buySuccessCallback)
+                            buySuccessCallback();
+                    }
+                    else {
+                        Notice.showDownNotice(`钻石不足`);
+                        if (GlobalData.isOpenIAA) {
+                            this.getAdTipsPanel.showRewardAd(() => {
+                                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                            }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                        }
+                        else {
+                            Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                            this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                        }
+                    }
+                }, null);
+            }
         }
     }
-    // private usingFlyId: number = 0;
+    net_deliverGoods(commodityId, amount) {
+        swordDataMap.forEach((value, key) => {
+            if (value.commodityId == commodityId) {
+                this.setSwordId(key);
+                Notice.showDownNotice(`御剑飞行购买成功`);
+            }
+        });
+    }
     onEnterScene(sceneType) {
-        this.flyIds = this.data.flyIds;
-        // this.usingFlyId = this.data.usingFlyId;
-        if (this.flyIds && this.flyIds.length > 0) {
+        this.initSwordData();
+        this.initTrigger().then(() => {
             TimeUtil.delaySecond(10).then(() => {
-                this.useFly(this.flyIds[0]);
+                if (this.usingSwordId > 0)
+                    this.addOnOffSword(true);
             });
+        });
+    }
+    ;
+    initSwordData() {
+        this.flyIds = this.data.flyIds;
+        this.swordIds = this.data.swordIds;
+        this.usingSwordId = this.data.usingSwordId;
+        if (this.flyIds && this.flyIds.length > 0) {
+            if (this.flyIds[0] == 1)
+                this.delFlyId();
         }
-        this.initFly();
     }
-    isGetFly(flyId) {
-        return this.flyIds.includes(flyId);
-    }
-    setFlyId(flyId) {
-        if (!this.isGetFly(flyId)) {
-            this.flyIds.push(flyId);
-            this.server.net_setFlyId(flyId);
+    delFlyId() {
+        let swordId = 4;
+        if (!this.swordIds.includes(swordId)) {
+            this.swordIds.push(swordId);
         }
+        if (this.usingSwordId != swordId) {
+            this.usingSwordId = swordId;
+        }
+        this.flyIds.length = 0;
+        this.server.net_delFlyId(swordId);
     }
-    get getIsFlying() {
-        return this.isFlying;
+    setSwordId(swordId) {
+        if (this.swordIds.includes(swordId))
+            return;
+        this.swordIds.push(swordId);
+        this.server.net_setSwordId(swordId);
     }
-    useFly(key) {
-        if (key == 1) {
-            if (this.isFlying)
+    isHasSwordId(swordId) {
+        return this.swordIds.includes(swordId);
+    }
+    setUsingSwordId(swordId) {
+        if (this.usingSwordId == swordId)
+            return;
+        this.usingSwordId = swordId;
+        this.server.net_setUsingSwordId(this.usingSwordId);
+    }
+    addOnOffSword(on) {
+        if (on) {
+            if (this.usingSwordId <= 0) {
+                Notice.showDownNotice(`未装备御剑飞行`);
+                this.defaultOpenBuyPanel();
                 return;
-            this.isFlying = true;
-            this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
+            }
+            else {
+                if (this.isFlying)
+                    return;
+                Notice.showDownNotice(`装备御剑飞行`);
+                this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
+                this.server.net_useFly(this.usingSwordId);
+                this.isFlying = true;
+            }
         }
         else {
             if (!this.isFlying)
                 return;
-            this.isFlying = false;
+            Notice.showDownNotice(`卸下御剑飞行`);
             this.localPlayer.character.changeState(mw.CharacterStateType.Running);
+            this.server.net_useFly(-1);
+            this.isFlying = false;
         }
-        this.server.net_useFly(key);
     }
-    initFly() {
-        flyDataMap.forEach((value, key) => {
-            mw.GameObject.asyncFindGameObjectById(value.characterId).then((go) => {
-                let character = go;
-                character.setDescription([value.skinId]);
-                let ani = character.loadAnimation(value.animationId);
-                ani.loop = 0;
-                ani.play();
-                let relativeTransform1 = new mw.Transform(mw.Vector.zero, mw.Rotation.zero, mw.Vector.one);
-                let relativeTransform2 = new mw.Transform(mw.Vector.zero, new mw.Rotation(0, 0, 90), mw.Vector.one);
-                character.description.advance.slotAndDecoration.slot[mw.HumanoidSlotType.Root].decoration.add(value.jianId, relativeTransform1);
-                character.description.advance.slotAndDecoration.slot[mw.HumanoidSlotType.BackOrnamental].decoration.add(value.wingId, relativeTransform2);
-            });
-            mw.GameObject.asyncFindGameObjectById(value.triggerId).then((go) => {
-                let trigger = go;
-                trigger.onEnter.add((character) => {
-                    if (character.gameObjectId != this.localPlayer.character.gameObjectId)
-                        return;
-                    if (this.isGetFly(key)) {
-                        if (!this.isFlying)
-                            this.useFly(key);
-                    }
-                    else {
-                        Notice.showDownNotice(`未获得御剑飞行技能`);
-                        Notice.showDownNotice(`开始购买`);
-                        if (mw.SystemUtil.isPIE) {
-                            Notice.showDownNotice(`购买成功`);
-                            this.setFlyId(key);
-                            // this.setUsingFlyId(key);
-                            this.useFly(key);
-                        }
-                        mw.PurchaseService.placeOrder(value.commodityId, 1, (status, msg) => {
-                            mw.PurchaseService.getArkBalance(); //刷新代币数量
-                        });
-                    }
-                });
-            });
-            mw.GameObject.asyncFindGameObjectById(value.worldUIId).then((go) => {
-                let worldUI = go;
-                let levelItem = mw.UIService.create(LevelItem);
-                levelItem.updateLevelTextBlock(value.name);
-                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+    defaultOpenBuyPanel() {
+        console.error(`aaaaaaaaaaaaaaaaaaaaaaaaaaaaa`);
+        if (this.isFirst) {
+            this.isFirst = false;
+            return;
+        }
+        this.addOpenSwordPanel();
+    }
+    async initTrigger() {
+        mw.GameObject.asyncFindGameObjectById(swordTriggerId).then((trigger) => {
+            trigger.onEnter.add((character) => {
+                if (character.gameObjectId != this.localPlayer.character.gameObjectId)
+                    return;
+                this.addOpenSwordPanel();
             });
         });
-    }
-    net_deliverGoods(commodityId, amount) {
-        flyDataMap.forEach((value, key) => {
-            if (value.commodityId == commodityId) {
-                Notice.showDownNotice(`购买成功`);
-                this.setFlyId(key);
-                // this.setUsingFlyId(key);
-                this.useFly(key);
-            }
+        mw.GameObject.asyncFindGameObjectById(swordWorldUIId).then((worldUI) => {
+            let levelItem = mw.UIService.create(LevelItem);
+            levelItem.updateLevelTextBlock(`御剑飞行商城`);
+            worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+        });
+        swordDataMap.forEach((swordData) => {
+            GameObject.asyncFindGameObjectById(swordData.npcId).then((character) => {
+                character.setDescription([swordData.skinId]);
+                let animation = character.loadAnimation(swordData.animationId);
+                animation.loop = 0;
+                animation.play();
+            });
         });
     }
 }
@@ -15081,20 +15746,28 @@ class FlyModuleS extends ModuleS {
         this.getClient(playerId).net_deliverGoods(commodityId, amount);
         confirmOrder(true); //调用这个方法表示确认收货成功
     }
-    net_setFlyId(flyId) {
-        this.currentData.setFlyId(flyId);
+    net_delFlyId(swordId) {
+        this.currentData.delFlyId(swordId);
     }
-    // @Decorator.noReply()
-    // public net_setUsingFlyId(flyId: number): void {
-    //     this.currentData.setUsingFlyId(flyId);
-    // }
+    net_setSwordId(swordId) {
+        this.currentData.setSwordId(swordId);
+    }
+    net_setUsingSwordId(swordId) {
+        this.currentData.setUsingSwordId(swordId);
+    }
     net_useFly(key) {
         this.getPlayerModuleS.useFly(this.currentPlayer, key);
     }
 }
 __decorate([
     Decorator.noReply()
-], FlyModuleS.prototype, "net_setFlyId", null);
+], FlyModuleS.prototype, "net_delFlyId", null);
+__decorate([
+    Decorator.noReply()
+], FlyModuleS.prototype, "net_setSwordId", null);
+__decorate([
+    Decorator.noReply()
+], FlyModuleS.prototype, "net_setUsingSwordId", null);
 __decorate([
     Decorator.noReply()
 ], FlyModuleS.prototype, "net_useFly", null);
@@ -15104,7 +15777,11 @@ var foreign48 = /*#__PURE__*/Object.freeze({
     FlyData: FlyData,
     FlyModuleC: FlyModuleC,
     FlyModuleS: FlyModuleS,
-    flyDataMap: flyDataMap
+    SwordData: SwordData,
+    SwordItem: SwordItem,
+    SwordPanel: SwordPanel,
+    SwordTipsPanel: SwordTipsPanel,
+    swordDataMap: swordDataMap
 });
 
 let PlayerLifebar = class PlayerLifebar extends mw.Script {
@@ -15131,6 +15808,8 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
         this.petAnimation = null;
         this.flyJian = null;
         this.flyJianAni = null;
+        this.flyAnimationId = "";
+        this.isFlying = false;
     }
     get getIsInvincible() {
         return this.isInvincible;
@@ -15230,6 +15909,7 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
             return;
         this.frameCount = 0;
         this.updateMove();
+        this.updateFlyAnimation();
     }
     updateMove() {
         if (!this.pet || !this.character || !this.petMoveId || !this.petIdleId)
@@ -15270,7 +15950,9 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
             if (this.flyJianAni) {
                 this.flyJianAni.stop();
                 this.flyJianAni = null;
+                this.flyAnimationId = "";
             }
+            this.isFlying = false;
         }
         else {
             if (!this.character)
@@ -15279,20 +15961,31 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
                 GameObjPool.despawn(this.flyJian);
                 this.flyJian = null;
             }
-            if (!flyDataMap.has(this.flyId))
+            if (!swordDataMap.has(this.flyId))
                 return;
-            let flyData = flyDataMap.get(this.flyId);
-            Utils.asyncDownloadAsset(flyData.jianId).then(() => {
-                GameObjPool.asyncSpawn(flyData.jianId).then((go) => {
+            let flyData = swordDataMap.get(this.flyId);
+            Utils.asyncDownloadAsset(flyData.swordPrefabId).then(() => {
+                GameObjPool.asyncSpawn(flyData.swordPrefabId).then((go) => {
                     this.flyJian = go;
                     this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
                     this.flyJian.localTransform.position = mw.Vector.zero;
                     this.flyJian.localTransform.rotation = mw.Rotation.zero;
-                    this.flyJianAni = this.character.loadAnimation(flyData.animationId);
+                    this.flyAnimationId = flyData.animationId;
+                    this.flyJianAni = this.character.loadAnimation(this.flyAnimationId);
                     this.flyJianAni.loop = 0;
                     this.flyJianAni.play();
                 });
             });
+            this.isFlying = true;
+        }
+    }
+    updateFlyAnimation() {
+        if (!this.isFlying || this.flyId == -1 || !this.flyJianAni)
+            return;
+        if (this.flyJianAni?.assetId != this.flyAnimationId) {
+            this.flyJianAni = this.character.loadAnimation(this.flyAnimationId);
+            this.flyJianAni.loop = 0;
+            this.flyJianAni.play();
         }
     }
     onDestroy() {
@@ -15883,7 +16576,7 @@ var foreign4 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.16
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -17443,7 +18136,7 @@ var foreign15 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.16
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -17554,7 +18247,7 @@ var foreign16 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkItem.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let ArkItem_Generate = class ArkItem_Generate extends UIScript {
     get mIconImage() {
@@ -17683,7 +18376,7 @@ var foreign115 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -17787,7 +18480,7 @@ var foreign116 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/GiftBagPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let GiftBagPanel_Generate = class GiftBagPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -18419,7 +19112,7 @@ var foreign52 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryItem.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.18
  */
 let LotteryItem_Generate = class LotteryItem_Generate extends UIScript {
     get mBgImage() {
@@ -18521,7 +19214,7 @@ LotteryItem_Generate = __decorate([
 ], LotteryItem_Generate);
 var LotteryItem_Generate$1 = LotteryItem_Generate;
 
-var foreign128 = /*#__PURE__*/Object.freeze({
+var foreign131 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LotteryItem_Generate$1
 });
@@ -18531,7 +19224,7 @@ var foreign128 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.18
  */
 let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -18751,7 +19444,7 @@ LotteryPanel_Generate = __decorate([
 ], LotteryPanel_Generate);
 var LotteryPanel_Generate$1 = LotteryPanel_Generate;
 
-var foreign129 = /*#__PURE__*/Object.freeze({
+var foreign132 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LotteryPanel_Generate$1
 });
@@ -18761,7 +19454,7 @@ var foreign129 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultPanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.18
  */
 let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -18946,7 +19639,7 @@ LotteryResultPanel_Generate = __decorate([
 ], LotteryResultPanel_Generate);
 var LotteryResultPanel_Generate$1 = LotteryResultPanel_Generate;
 
-var foreign130 = /*#__PURE__*/Object.freeze({
+var foreign133 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LotteryResultPanel_Generate$1
 });
@@ -19417,7 +20110,6 @@ class LotteryModuleC extends ModuleC {
                 case RewardType.Bag:
                     let bagId = lotteryDatas.get(calculateKey).reward;
                     bagIds.push(bagId);
-                    this.getLotteryPanel.updateItemHasState(calculateKey);
                     break;
             }
         }
@@ -19426,6 +20118,10 @@ class LotteryModuleC extends ModuleC {
             this.getLotteryResultPanel.showPanel(calculateKeys);
             TimeUtil.delaySecond(0.1).then(() => {
                 this.getLotteryResultPanel.showPanel(calculateKeys);
+            });
+            calculateKeys.forEach((key) => {
+                if (lotteryDatas.get(key).isLimit)
+                    this.getLotteryPanel.updateItemHasState(key);
             });
             Notice.showDownNotice(`恭喜中奖`);
         });
@@ -19512,7 +20208,7 @@ var foreign55 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeopleItem.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let NewPeopleItem_Generate = class NewPeopleItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -19673,7 +20369,7 @@ NewPeopleItem_Generate = __decorate([
 ], NewPeopleItem_Generate);
 var NewPeopleItem_Generate$1 = NewPeopleItem_Generate;
 
-var foreign131 = /*#__PURE__*/Object.freeze({
+var foreign134 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NewPeopleItem_Generate$1
 });
@@ -19683,7 +20379,7 @@ var foreign131 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeoplePanel.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let NewPeoplePanel_Generate = class NewPeoplePanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -19752,7 +20448,7 @@ NewPeoplePanel_Generate = __decorate([
 ], NewPeoplePanel_Generate);
 var NewPeoplePanel_Generate$1 = NewPeoplePanel_Generate;
 
-var foreign132 = /*#__PURE__*/Object.freeze({
+var foreign135 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NewPeoplePanel_Generate$1
 });
@@ -20026,7 +20722,7 @@ var foreign56 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -20194,7 +20890,7 @@ WorldRankPanel_Generate = __decorate([
 ], WorldRankPanel_Generate);
 var WorldRankPanel_Generate$1 = WorldRankPanel_Generate;
 
-var foreign151 = /*#__PURE__*/Object.freeze({
+var foreign154 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankPanel_Generate$1
 });
@@ -21403,7 +22099,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -21493,7 +22189,7 @@ NPCHead_Generate = __decorate([
 ], NPCHead_Generate);
 var NPCHead_Generate$1 = NPCHead_Generate;
 
-var foreign140 = /*#__PURE__*/Object.freeze({
+var foreign143 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NPCHead_Generate$1
 });
@@ -21503,7 +22199,7 @@ var foreign140 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -21571,7 +22267,7 @@ CostPanel_Generate = __decorate([
 ], CostPanel_Generate);
 var CostPanel_Generate$1 = CostPanel_Generate;
 
-var foreign139 = /*#__PURE__*/Object.freeze({
+var foreign142 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel_Generate$1
 });
@@ -21623,7 +22319,7 @@ var foreign77 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -21734,7 +22430,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign142 = /*#__PURE__*/Object.freeze({
+var foreign145 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -24091,7 +24787,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_1.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_1_Generate = class WorldTips_1_Generate extends UIScript {
     get mTextBlock() {
@@ -24147,7 +24843,7 @@ var foreign105 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_2.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_2_Generate = class WorldTips_2_Generate extends UIScript {
     get mTextBlock() {
@@ -24204,7 +24900,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_3.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_3_Generate = class WorldTips_3_Generate extends UIScript {
     get mTextBlock() {
@@ -24261,7 +24957,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_4.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_4_Generate = class WorldTips_4_Generate extends UIScript {
     get mTextBlock() {
@@ -24317,7 +25013,7 @@ var foreign108 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_5.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_5_Generate = class WorldTips_5_Generate extends UIScript {
     get mTextBlock() {
@@ -24374,7 +25070,7 @@ var foreign109 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_6.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_6_Generate = class WorldTips_6_Generate extends UIScript {
     get mTextBlock() {
@@ -24430,7 +25126,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_7.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_7_Generate = class WorldTips_7_Generate extends UIScript {
     get mTextBlock() {
@@ -24487,7 +25183,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let WorldTips_Generate = class WorldTips_Generate extends UIScript {
     get mTextBlock() {
@@ -24544,7 +25240,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.09.28-02.16.44
+ * TIME: 2024.09.30-20.30.17
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -24653,7 +25349,7 @@ OnlineRewardItem_Generate = __decorate([
 ], OnlineRewardItem_Generate);
 var OnlineRewardItem_Generate$1 = OnlineRewardItem_Generate;
 
-var foreign133 = /*#__PURE__*/Object.freeze({
+var foreign136 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardItem_Generate$1
 });
@@ -24663,7 +25359,7 @@ var foreign133 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.17
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -24744,7 +25440,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign141 = /*#__PURE__*/Object.freeze({
+var foreign144 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -24754,7 +25450,7 @@ var foreign141 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -24857,7 +25553,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign145 = /*#__PURE__*/Object.freeze({
+var foreign148 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -24867,7 +25563,7 @@ var foreign145 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -24912,7 +25608,7 @@ ImpactRadiusWindow_Generate = __decorate([
 ], ImpactRadiusWindow_Generate);
 var ImpactRadiusWindow_Generate$1 = ImpactRadiusWindow_Generate;
 
-var foreign147 = /*#__PURE__*/Object.freeze({
+var foreign150 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ImpactRadiusWindow_Generate$1
 });
@@ -24922,7 +25618,7 @@ var foreign147 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -24987,7 +25683,7 @@ JumpRecordUI_Generate = __decorate([
 ], JumpRecordUI_Generate);
 var JumpRecordUI_Generate$1 = JumpRecordUI_Generate;
 
-var foreign148 = /*#__PURE__*/Object.freeze({
+var foreign151 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpRecordUI_Generate$1
 });
@@ -24997,7 +25693,7 @@ var foreign148 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -25071,7 +25767,7 @@ RankItem_Generate = __decorate([
 ], RankItem_Generate);
 var RankItem_Generate$1 = RankItem_Generate;
 
-var foreign149 = /*#__PURE__*/Object.freeze({
+var foreign152 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankItem_Generate$1
 });
@@ -25081,7 +25777,7 @@ var foreign149 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.09.28-02.16.45
+ * TIME: 2024.09.30-20.30.18
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -25141,7 +25837,7 @@ WorldRankItem_Generate = __decorate([
 ], WorldRankItem_Generate);
 var WorldRankItem_Generate$1 = WorldRankItem_Generate;
 
-var foreign150 = /*#__PURE__*/Object.freeze({
+var foreign153 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankItem_Generate$1
 });
@@ -25268,36 +25964,39 @@ const MWModuleMap = {
      '4017F2464551598B868EECA194CC198A': foreign119,
      '38D734224F75800856A0C69917B88EF8': foreign120,
      '2987FCF94860A2648A6FA88D34EFA05A': foreign121,
-     'CEE46C5B4475EE568570CBA41D68EE0C': foreign122,
-     '51FD3899419F676C5D82C682439BFAFE': foreign123,
-     '92FA042A4FD4838557550FAACC252FDF': foreign124,
-     '97EB0171476F91CD15A883839DACE05F': foreign125,
-     '4CB823DD4201B2F6C9133CA164CC27C1': foreign126,
-     '8645187F4117038772D699B1E160B075': foreign127,
-     '19ADE23D4CBFC9E493C4E796F692FC19': foreign128,
-     '603E72F745C5AB118A914A9B7158BE42': foreign129,
-     '276281AF45140E4A764B7193EB07F964': foreign130,
-     '7B477BE24A5D7B26F1D36B9DE347D86C': foreign131,
-     '734BD21D40C070408E4722AA727C7AAC': foreign132,
-     'FFAA0B1841347CE8BB80ED8EA9335519': foreign133,
-     '0EE04F42462FE0DADBF4668AD079F570': foreign134,
-     'D84A334C40B33A813552FF903364539E': foreign135,
-     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign136,
-     '51DC73A84B35897D52C83693B7DD046D': foreign137,
-     'D184468C4590DA86174C9FB293C6F14A': foreign138,
-     '075AF2584F411C88705182871B9DFB78': foreign139,
-     '137112BE4F0726F6AD61EFBED47C639E': foreign140,
-     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign141,
-     '0D1CAB354779E284B6E58B91C82ABE07': foreign142,
-     '533234054C42D87B47A4BE88C2587EC9': foreign143,
-     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign144,
-     '0C684B0C46414ED7D11529BA94FD6935': foreign145,
-     '10B4E9EA45C85246C9717EA276C7774B': foreign146,
-     '26DC6E0D40A865057A807DADF4A80DCB': foreign147,
-     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign148,
-     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign149,
-     '368482014D69E4E894C63192B0F17B63': foreign150,
-     '265FA5C440300C2875B6699C5F8B36C7': foreign151,
+     '524BCC62487C082CECA561B07841E717': foreign122,
+     '7A1BDAA348138C0EA4A3A79A331D023B': foreign123,
+     '7DC553CD47B386E860AD1FAB1D5CF9C9': foreign124,
+     'CEE46C5B4475EE568570CBA41D68EE0C': foreign125,
+     '51FD3899419F676C5D82C682439BFAFE': foreign126,
+     '92FA042A4FD4838557550FAACC252FDF': foreign127,
+     '97EB0171476F91CD15A883839DACE05F': foreign128,
+     '4CB823DD4201B2F6C9133CA164CC27C1': foreign129,
+     '8645187F4117038772D699B1E160B075': foreign130,
+     '19ADE23D4CBFC9E493C4E796F692FC19': foreign131,
+     '603E72F745C5AB118A914A9B7158BE42': foreign132,
+     '276281AF45140E4A764B7193EB07F964': foreign133,
+     '7B477BE24A5D7B26F1D36B9DE347D86C': foreign134,
+     '734BD21D40C070408E4722AA727C7AAC': foreign135,
+     'FFAA0B1841347CE8BB80ED8EA9335519': foreign136,
+     '0EE04F42462FE0DADBF4668AD079F570': foreign137,
+     'D84A334C40B33A813552FF903364539E': foreign138,
+     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign139,
+     '51DC73A84B35897D52C83693B7DD046D': foreign140,
+     'D184468C4590DA86174C9FB293C6F14A': foreign141,
+     '075AF2584F411C88705182871B9DFB78': foreign142,
+     '137112BE4F0726F6AD61EFBED47C639E': foreign143,
+     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign144,
+     '0D1CAB354779E284B6E58B91C82ABE07': foreign145,
+     '533234054C42D87B47A4BE88C2587EC9': foreign146,
+     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign147,
+     '0C684B0C46414ED7D11529BA94FD6935': foreign148,
+     '10B4E9EA45C85246C9717EA276C7774B': foreign149,
+     '26DC6E0D40A865057A807DADF4A80DCB': foreign150,
+     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign151,
+     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign152,
+     '368482014D69E4E894C63192B0F17B63': foreign153,
+     '265FA5C440300C2875B6699C5F8B36C7': foreign154,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign2 || {}, "JavaScripts/common/Boss"],
@@ -25420,36 +26119,39 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign119 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
 [foreign120 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
 [foreign121 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
-[foreign122 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
-[foreign123 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign124 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign125 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelItem_generate"],
-[foreign126 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelPanel_generate"],
-[foreign127 || {}, "JavaScripts/ui-generate/module/LevelModule/UpExpPanel_generate"],
-[foreign128 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryItem_generate"],
-[foreign129 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryPanel_generate"],
-[foreign130 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryResultPanel_generate"],
-[foreign131 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeopleItem_generate"],
-[foreign132 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeoplePanel_generate"],
-[foreign133 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
-[foreign134 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
-[foreign135 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
-[foreign136 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
-[foreign137 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
-[foreign138 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
-[foreign139 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
-[foreign140 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
-[foreign141 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign142 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign143 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
-[foreign144 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
-[foreign145 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign146 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign147 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
-[foreign148 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
-[foreign149 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
-[foreign150 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
-[foreign151 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
+[foreign122 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordItem_generate"],
+[foreign123 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordPanel_generate"],
+[foreign124 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordTipsPanel_generate"],
+[foreign125 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
+[foreign126 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign127 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign128 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelItem_generate"],
+[foreign129 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelPanel_generate"],
+[foreign130 || {}, "JavaScripts/ui-generate/module/LevelModule/UpExpPanel_generate"],
+[foreign131 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryItem_generate"],
+[foreign132 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryPanel_generate"],
+[foreign133 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryResultPanel_generate"],
+[foreign134 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeopleItem_generate"],
+[foreign135 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeoplePanel_generate"],
+[foreign136 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
+[foreign137 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
+[foreign138 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
+[foreign139 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
+[foreign140 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
+[foreign141 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
+[foreign142 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
+[foreign143 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
+[foreign144 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign145 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign146 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
+[foreign147 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
+[foreign148 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign149 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign150 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
+[foreign151 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
+[foreign152 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
+[foreign153 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
+[foreign154 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

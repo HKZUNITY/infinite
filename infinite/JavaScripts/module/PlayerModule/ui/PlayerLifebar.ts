@@ -4,7 +4,7 @@ import { Utils } from "../../../Tools/utils";
 import { GameConfig } from '../../../config/GameConfig';
 import GlobalData from "../../../const/GlobalData";
 import PlayerLifebar_Generate from "../../../ui-generate/module/PlayerModule/PlayerLifebar_generate";
-import { flyDataMap } from '../../FlyModule/FlyModule';
+import { swordDataMap } from '../../FlyModule/FlyModule';
 
 @Component
 export default class PlayerLifebar extends mw.Script {
@@ -128,6 +128,7 @@ export default class PlayerLifebar extends mw.Script {
         if (this.frameCount < this.maxFrameCount) return;
         this.frameCount = 0;
         this.updateMove();
+        this.updateFlyAnimation();
     }
 
     private curPetDir: mw.Vector = mw.Vector.zero;
@@ -168,6 +169,8 @@ export default class PlayerLifebar extends mw.Script {
 
     private flyJian: mw.GameObject = null;
     private flyJianAni: mw.Animation = null;
+    private flyAnimationId: string = "";
+    private isFlying: boolean = false;
     private onUseFly(): void {
         if (this.flyId == -1) {
             if (this.flyJian) {
@@ -177,26 +180,40 @@ export default class PlayerLifebar extends mw.Script {
             if (this.flyJianAni) {
                 this.flyJianAni.stop();
                 this.flyJianAni = null;
+                this.flyAnimationId = "";
             }
+            this.isFlying = false;
         } else {
             if (!this.character) return;
             if (this.flyJian) {
                 GameObjPool.despawn(this.flyJian);
                 this.flyJian = null;
             }
-            if (!flyDataMap.has(this.flyId)) return;
-            let flyData = flyDataMap.get(this.flyId);
-            Utils.asyncDownloadAsset(flyData.jianId).then(() => {
-                GameObjPool.asyncSpawn(flyData.jianId).then((go: mw.GameObject) => {
+            if (!swordDataMap.has(this.flyId)) return;
+            let flyData = swordDataMap.get(this.flyId);
+            Utils.asyncDownloadAsset(flyData.swordPrefabId).then(() => {
+                GameObjPool.asyncSpawn(flyData.swordPrefabId).then((go: mw.GameObject) => {
                     this.flyJian = go;
                     this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
                     this.flyJian.localTransform.position = mw.Vector.zero;
                     this.flyJian.localTransform.rotation = mw.Rotation.zero;
-                    this.flyJianAni = this.character.loadAnimation(flyData.animationId);
+
+                    this.flyAnimationId = flyData.animationId;
+                    this.flyJianAni = this.character.loadAnimation(this.flyAnimationId);
                     this.flyJianAni.loop = 0;
                     this.flyJianAni.play();
                 });
             });
+            this.isFlying = true;
+        }
+    }
+
+    private updateFlyAnimation(): void {
+        if (!this.isFlying || this.flyId == -1 || !this.flyJianAni) return;
+        if (this.flyJianAni?.assetId != this.flyAnimationId) {
+            this.flyJianAni = this.character.loadAnimation(this.flyAnimationId);
+            this.flyJianAni.loop = 0;
+            this.flyJianAni.play();
         }
     }
 

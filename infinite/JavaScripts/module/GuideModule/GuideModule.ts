@@ -40,7 +40,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
-    private totalStep: number = 24;
+    private totalStep: number = 25;
     private curStep: number = -1;
     public onNextStepAction: Action = new Action();
 
@@ -252,7 +252,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             if (mw.UIService.getUI(BagInfoPanel, false).visible) mw.UIService.hide(BagInfoPanel);
             Event.dispatchToLocal("First");
             TimeUtil.delaySecond(5).then(() => {
-                this.getGuidePanel.guideByStep(19);
+                this.getGuidePanel.guideByStep(20);
             });
         });
     }

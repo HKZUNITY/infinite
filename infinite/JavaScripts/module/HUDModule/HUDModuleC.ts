@@ -145,9 +145,9 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         });
         this.onHomeAction.add(() => {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
-            this.getLevelModuleC.hideLevelPanel();
-            this.getPlayerModuleC.isInvincible(true);
-            this.getHudPanel.updateInvincibleCanvasState(true);
+            // this.getLevelModuleC.hideLevelPanel();
+            // this.getPlayerModuleC.isInvincible(true);
+            // this.getHudPanel.updateInvincibleCanvasState(true);
         });
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
@@ -212,10 +212,10 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.isHaveMp(GlobalData.attackMp);
         });
 
-        Event.addLocalListener(`arenaState`, (key: number) => {
-            this.getPlayerModuleC.isInvincible(key != 1);
-            this.getHudPanel.updateInvincibleCanvasState(key != 1);
-        });
+        // Event.addLocalListener(`arenaState`, (key: number) => {
+        //     this.getPlayerModuleC.isInvincible(key != 1);
+        //     this.getHudPanel.updateInvincibleCanvasState(key != 1);
+        // });
     }
 
     protected onEnterScene(sceneType: number): void {

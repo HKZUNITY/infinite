@@ -322,6 +322,9 @@ export default class Monster extends Script {
                 case 5:
                     if (this.maxHp > 999999999) this.maxHp = 999999999;
                     break;
+                case 6:
+                    if (this.maxHp > 9999999999) this.maxHp = 9999999999;
+                    break;
                 default:
                     break;
             }
@@ -499,7 +502,11 @@ export default class Monster extends Script {
             let hitGo = hitResults[i].gameObject;
             if (hitGo instanceof mw.Character && hitGo?.player) {
                 let targetGameObjectId = hitGo?.gameObjectId;
-                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
+                if (this.monsterType == 6) {
+                    PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / (GlobalData.monsterHurt * 10)));
+                } else {
+                    PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
+                }
             }
         }
     }

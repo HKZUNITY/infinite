@@ -13,26 +13,26 @@ import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 const ringSoulNames: string[] = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
 const figureStrs: string[] = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 const costDiamonds: number[][] = [
-    [8, 28, 38, 58, 108],
-    [18, 38, 58, 108, 198],
-    [28, 48, 88, 158, 298],
-    [38, 58, 108, 198, 398],
-    [48, 88, 158, 298, 498],
-    [58, 108, 198, 398, 598],
-    [88, 158, 298, 498, 698],
-    [108, 198, 398, 598, 798],
-    [158, 298, 498, 698, 898],
+    [8, 28, 38, 58, 108, 198],
+    [18, 38, 58, 108, 198, 298],
+    [28, 48, 88, 158, 298, 398],
+    [38, 58, 108, 198, 398, 498],
+    [48, 88, 158, 298, 498, 598],
+    [58, 108, 198, 398, 598, 698],
+    [88, 158, 298, 498, 698, 798],
+    [108, 198, 398, 598, 798, 898],
+    [158, 298, 498, 698, 898, 998],
     [198, 398, 598, 798, 998, 1998],
 ];
 const upSound: string = "169179";
-const ringSoulIconColors: string[] = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#FFD700FF"];
+const ringSoulIconColors: string[] = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#00FF00FF"];
 const ringSoulPrefabIds: string[] = [
     "322A7FF14588209BBD4B5DAF37D38FA2",
     "F89DFCA24FEC54C1F4CFBEAB9D4FF27A",
     "6CEAFD0A4DAA30D8FB89E49C5B28CD3F",
     "C5944BA6404AC45A865163BBCC3766DD",
     "19F4724F4E312B74233E1FA76EB9EEA9",
-    "7C36BC974D5F9E55375E31BA8161C366"
+    "0966F94E490464A517EFEB877B7C8892"
 ]
 const ringSoulPrefabIdss: string[] = [
     "7C36BC974D5F9E55375E31BA8161C366",
@@ -628,7 +628,7 @@ export class RingSoulItem extends RingSoulItem_Generate {
     public setRingSoulItemData(ringSoulPage: number): void {
         this.ringSoulPage = ringSoulPage;
         this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
-        for (let i = 1; i <= 5; ++i) {
+        for (let i = 1; i <= 6; ++i) {
             let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
             ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
             this.ringSoulItemChilds.push(ringSoulItemChild);

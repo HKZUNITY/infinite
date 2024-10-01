@@ -1456,7 +1456,8 @@ GlobalData.pathStrMap = new Map([
     [2, "0120DDB3"],
     [3, "08B26B13"],
     [4, "33AD2F92"],
-    [5, "098050A0"]
+    [5, "098050A0"],
+    [6, "0118B262"]
 ]);
 GlobalData.signInDays = 7;
 GlobalData.gameName = `斗神大陆(黑悟空神位来袭)`;
@@ -7403,26 +7404,26 @@ var foreign63 = /*#__PURE__*/Object.freeze({
 const ringSoulNames = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
 const figureStrs = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 const costDiamonds = [
-    [8, 28, 38, 58, 108],
-    [18, 38, 58, 108, 198],
-    [28, 48, 88, 158, 298],
-    [38, 58, 108, 198, 398],
-    [48, 88, 158, 298, 498],
-    [58, 108, 198, 398, 598],
-    [88, 158, 298, 498, 698],
-    [108, 198, 398, 598, 798],
-    [158, 298, 498, 698, 898],
+    [8, 28, 38, 58, 108, 198],
+    [18, 38, 58, 108, 198, 298],
+    [28, 48, 88, 158, 298, 398],
+    [38, 58, 108, 198, 398, 498],
+    [48, 88, 158, 298, 498, 598],
+    [58, 108, 198, 398, 598, 698],
+    [88, 158, 298, 498, 698, 798],
+    [108, 198, 398, 598, 798, 898],
+    [158, 298, 498, 698, 898, 998],
     [198, 398, 598, 798, 998, 1998],
 ];
 const upSound = "169179";
-const ringSoulIconColors = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#FFD700FF"];
+const ringSoulIconColors = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#00FF00FF"];
 const ringSoulPrefabIds = [
     "322A7FF14588209BBD4B5DAF37D38FA2",
     "F89DFCA24FEC54C1F4CFBEAB9D4FF27A",
     "6CEAFD0A4DAA30D8FB89E49C5B28CD3F",
     "C5944BA6404AC45A865163BBCC3766DD",
     "19F4724F4E312B74233E1FA76EB9EEA9",
-    "7C36BC974D5F9E55375E31BA8161C366"
+    "0966F94E490464A517EFEB877B7C8892"
 ];
 const ringSoulPrefabIdss = [
     "7C36BC974D5F9E55375E31BA8161C366",
@@ -8004,7 +8005,7 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
     setRingSoulItemData(ringSoulPage) {
         this.ringSoulPage = ringSoulPage;
         this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
-        for (let i = 1; i <= 5; ++i) {
+        for (let i = 1; i <= 6; ++i) {
             let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
             ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
             this.ringSoulItemChilds.push(ringSoulItemChild);
@@ -9039,8 +9040,8 @@ class LevelItem extends LevelItem_Generate$1 {
 const levelMap = new Map();
 levelMap.set(1, { triggers: ["0531B54C"], worldUIIds: ["081A5D07"], name: `黑悟空关卡`, limitLevel: 38 });
 const arenaMap = new Map();
-arenaMap.set(1, { triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `竞技场`, limitLevel: 66, targetLoc: new mw.Vector(5500, 10500, 2200) });
-arenaMap.set(2, { triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `回城`, limitLevel: 66, targetLoc: new mw.Vector(-4065, 6446, 2000) });
+arenaMap.set(1, { triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `百万年魂兽`, limitLevel: 588, targetLoc: new mw.Vector(5500, 10500, 2200) });
+arenaMap.set(2, { triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `回城`, limitLevel: 588, targetLoc: new mw.Vector(-4065, 6446, 2000) });
 class LevelModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -9150,7 +9151,7 @@ class LevelModuleC extends ModuleC {
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
-                        Event.dispatchToLocal(`arenaState`, key);
+                        // Event.dispatchToLocal(`arenaState`, key);
                     });
                 });
             });
@@ -10293,9 +10294,9 @@ class HUDModuleC extends ModuleC {
         });
         this.onHomeAction.add(() => {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
-            this.getLevelModuleC.hideLevelPanel();
-            this.getPlayerModuleC.isInvincible(true);
-            this.getHudPanel.updateInvincibleCanvasState(true);
+            // this.getLevelModuleC.hideLevelPanel();
+            // this.getPlayerModuleC.isInvincible(true);
+            // this.getHudPanel.updateInvincibleCanvasState(true);
         });
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
@@ -10358,10 +10359,10 @@ class HUDModuleC extends ModuleC {
         Event.addLocalListener("AttackMp", () => {
             this.isHaveMp(GlobalData.attackMp);
         });
-        Event.addLocalListener(`arenaState`, (key) => {
-            this.getPlayerModuleC.isInvincible(key != 1);
-            this.getHudPanel.updateInvincibleCanvasState(key != 1);
-        });
+        // Event.addLocalListener(`arenaState`, (key: number) => {
+        //     this.getPlayerModuleC.isInvincible(key != 1);
+        //     this.getHudPanel.updateInvincibleCanvasState(key != 1);
+        // });
     }
     onEnterScene(sceneType) {
         this.getHudPanel.show();
@@ -17498,6 +17499,10 @@ class Monster extends Script {
                     if (this.maxHp > 999999999)
                         this.maxHp = 999999999;
                     break;
+                case 6:
+                    if (this.maxHp > 9999999999)
+                        this.maxHp = 9999999999;
+                    break;
             }
             this.hp = this.maxHp;
             if (this.getMonster.ragdollEnabled)
@@ -17655,7 +17660,12 @@ class Monster extends Script {
             let hitGo = hitResults[i].gameObject;
             if (hitGo instanceof mw.Character && hitGo?.player) {
                 let targetGameObjectId = hitGo?.gameObjectId;
-                PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
+                if (this.monsterType == 6) {
+                    PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / (GlobalData.monsterHurt * 10)));
+                }
+                else {
+                    PrefabEvent.PrefabEvtFight.hurt(this.getMonster.gameObjectId, targetGameObjectId, Math.round(this.maxHp / GlobalData.monsterHurt));
+                }
             }
         }
     }
@@ -19982,6 +19992,7 @@ class LotteryModuleC extends ModuleC {
     }
     addOpenLotteryPanel() {
         this.getLotteryPanel.show();
+        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
     }
     addUpdateCoinTextBlock(count) {
         this.getLotteryPanel.updateCoinTextBlock(count);

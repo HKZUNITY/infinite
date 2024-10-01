@@ -98,8 +98,8 @@ const levelMap: Map<number, { triggers: string[], worldUIIds: string[], name: st
 levelMap.set(1, { triggers: ["0531B54C"], worldUIIds: ["081A5D07"], name: `黑悟空关卡`, limitLevel: 38 });
 
 const arenaMap: Map<number, { triggers: string[], worldUIIds: string[], name: string, limitLevel: number, targetLoc: mw.Vector }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string, limitLevel: number, targetLoc: mw.Vector }>();
-arenaMap.set(1, { triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `竞技场`, limitLevel: 66, targetLoc: new mw.Vector(5500, 10500, 2200) });
-arenaMap.set(2, { triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `回城`, limitLevel: 66, targetLoc: new mw.Vector(-4065, 6446, 2000) });
+arenaMap.set(1, { triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `百万年魂兽`, limitLevel: 588, targetLoc: new mw.Vector(5500, 10500, 2200) });
+arenaMap.set(2, { triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `回城`, limitLevel: 588, targetLoc: new mw.Vector(-4065, 6446, 2000) });
 export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
     private levelPanel: LevelPanel = null;
     private get getLevelPanel(): LevelPanel {
@@ -209,7 +209,7 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
-                        Event.dispatchToLocal(`arenaState`, key);
+                        // Event.dispatchToLocal(`arenaState`, key);
                     });
                 });
             });

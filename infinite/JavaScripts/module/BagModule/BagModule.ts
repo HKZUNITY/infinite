@@ -414,6 +414,9 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             } else if (GameConfig.BagInfo.getElement(bagId).GetType == 3) {
                 Notice.showDownNotice(`金币抽奖获取`);
                 return;
+            } else if (GameConfig.BagInfo.getElement(bagId).GetType == 4) {
+                Notice.showDownNotice(`请先完成新手引导`);
+                return;
             }
         }
         console.warn(`${bagId}`);
@@ -587,6 +590,14 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             if (!pet.includes(i)) console.error(`pet:${i}`);
         }
          */
+    }
+
+    public onCompleted(bagId: number): void {
+        this.setBagId(bagId);
+        this.getTaskModuleC.pickUpTreasure();
+        this.getBagInfoPanel.showThis(bagId, true, () => {
+            this.use(bagId);
+        }, null, null);
     }
 
     private onEnterTrigger(go: mw.GameObject, bagId: number): void {
@@ -975,6 +986,8 @@ export class BagItem extends BagItem_Generate {
                 this.mHasTextBlock.text = "新手礼包获取";
             } else if (this.bagInfoElement.GetType == 3) {
                 this.mHasTextBlock.text = "抽奖获取";
+            } else if (this.bagInfoElement.GetType == 4) {
+                this.mHasTextBlock.text = "完成新手引导";
             } else {
                 this.mHasTextBlock.text = "点击获得";
             }

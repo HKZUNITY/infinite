@@ -40,7 +40,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
-    private totalStep: number = 25;
+    private totalStep: number = 26;
     private curStep: number = -1;
     public onNextStepAction: Action = new Action();
 
@@ -49,6 +49,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             this.onNextStepAction.add(() => {
                 this.curStep++;
                 if (this.curStep > this.totalStep) {
+                    if (!this.data.isFirst) return;
                     this.onCompleted();
                     return;
                 }
@@ -172,6 +173,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     /**完成新手引导 */
     public onCompleted(): void {
         this.server.net_onCompleted();
+        this.getBagModuleC.onCompleted(20061);
         this.find();
     }
 

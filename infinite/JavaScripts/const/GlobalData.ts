@@ -80,7 +80,7 @@ export default class GlobalData {
 
     public static signInDays: number = 7;
 
-    public static gameName: string = `斗神大陆(黑悟空神位来袭)`;
+    public static gameName: string = `斗神大陆(我的魂环无限升级)`;
 
     public static addCoinCount: number = 10000;
     public static addDiamondCount: number = 5;

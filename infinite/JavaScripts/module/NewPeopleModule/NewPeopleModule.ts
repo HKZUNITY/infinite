@@ -10,7 +10,7 @@ import { LevelItem } from "../LevelModule/LevelModule";
 
 const newPeopleGiftDatas: Map<number, { icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }> = new Map<number, { icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }>();
 newPeopleGiftDatas.set(1, { icon: ["209508", "367076"], dayStr: "第一天", name: "金箍棒(粉)+制服女孩", bagId: [10041, 20056], itemPos: new mw.Vector2(30, 27) });
-newPeopleGiftDatas.set(2, { icon: ["318640", "343523", "313464", "398484"], dayStr: "第二天", name: "昊天锤+唐三\n金箍棒(紫)+小舞姐", bagId: [10043, 20057, 20055, 10042], itemPos: new mw.Vector2(538, 27) });
+newPeopleGiftDatas.set(2, { icon: ["318640", "343523", "313464", "398484"], dayStr: "第二天", name: "昊天锤+唐三\n金箍棒(紫)+蓝银皇", bagId: [10043, 20057, 20055, 10042], itemPos: new mw.Vector2(538, 27) });
 const onlineMinutes: number = 30;
 
 export class NewPeopleData extends Subdata {

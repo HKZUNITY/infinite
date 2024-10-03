@@ -17,7 +17,7 @@ export enum RewardType {
     Bag
 }
 
-const lotteryDatas: Map<number, { isLimit: boolean, ratio: number[], icon: string, name: string, rewardType: RewardType, reward: number, pos: mw.Vector2, bgIcon: string }> = new Map<number, { isLimit: boolean, ratio: number[], icon: string, name: string, rewardType: RewardType, reward: number, pos: mw.Vector2, bgIcon: string }>();
+export const lotteryDatas: Map<number, { isLimit: boolean, ratio: number[], icon: string, name: string, rewardType: RewardType, reward: number, pos: mw.Vector2, bgIcon: string }> = new Map<number, { isLimit: boolean, ratio: number[], icon: string, name: string, rewardType: RewardType, reward: number, pos: mw.Vector2, bgIcon: string }>();
 lotteryDatas.set(1, { isLimit: false, ratio: [1, 500], icon: "icon_404083", name: "空奖-哈哈", rewardType: RewardType.None, reward: 1, pos: new mw.Vector2(0, 0), bgIcon: "181426" });//181426 181425 181424 181423 181420
 lotteryDatas.set(2, { isLimit: false, ratio: [501, 739], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 1, pos: new mw.Vector2(230, 0), bgIcon: "181424" });
 lotteryDatas.set(3, { isLimit: false, ratio: [740, 749], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 108, pos: new mw.Vector2(460, 0), bgIcon: "181423" });

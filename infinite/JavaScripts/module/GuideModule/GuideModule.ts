@@ -255,6 +255,9 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             Event.dispatchToLocal("First");
             TimeUtil.delaySecond(5).then(() => {
                 this.getGuidePanel.guideByStep(20);
+                this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
+                Notice.showDownNotice(`返回新手村`);
+                Notice.showDownNotice(`正式开启你的副本吧`);
             });
         });
     }

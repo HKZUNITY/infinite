@@ -308,7 +308,11 @@ export default class Monster extends Script {
             this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
             switch (this.monsterType) {
                 case 1:
-                    if (this.maxHp > 99999) this.maxHp = 99999;
+                    if (this.monsterId == 5 || this.monsterId == 6) {
+                        if (this.maxHp > 9999) this.maxHp = 9999;
+                    } else {
+                        if (this.maxHp > 99999) this.maxHp = 99999;
+                    }
                     break;
                 case 2:
                     if (this.maxHp > 999999) this.maxHp = 999999;

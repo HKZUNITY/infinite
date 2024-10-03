@@ -1437,7 +1437,7 @@ GlobalData.guideEffectGuid = GameConfig.Assets.getElement(21).Guid;
 GlobalData.targetEffectGuid = GameConfig.Assets.getElement(22).Guid;
 GlobalData.atk = 0;
 GlobalData.hp = 0;
-GlobalData.totalBagLen = 144;
+GlobalData.totalBagLen = 145;
 GlobalData.mpStr = `魂力`;
 GlobalData.atkStr = `武魂`;
 GlobalData.weaponStr = `武魂`;
@@ -12556,6 +12556,9 @@ class GuideModuleC extends ModuleC {
             Event.dispatchToLocal("First");
             TimeUtil.delaySecond(5).then(() => {
                 this.getGuidePanel.guideByStep(20);
+                this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
+                Notice.showDownNotice(`返回新手村`);
+                Notice.showDownNotice(`正式开启你的副本吧`);
             });
         });
     }
@@ -12580,6 +12583,1104 @@ var foreign49 = /*#__PURE__*/Object.freeze({
     GuideData: GuideData,
     GuideModuleC: GuideModuleC,
     GuideModuleS: GuideModuleS
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LotteryModule/LotteryItem.ui
+ * TIME: 2024.09.30-20.30.18
+ */
+let LotteryItem_Generate = class LotteryItem_Generate extends UIScript {
+    get mBgImage() {
+        if (!this.mBgImage_Internal && this.uiWidgetBase) {
+            this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage');
+        }
+        return this.mBgImage_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mRatioTextBlock() {
+        if (!this.mRatioTextBlock_Internal && this.uiWidgetBase) {
+            this.mRatioTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mRatioTextBlock');
+        }
+        return this.mRatioTextBlock_Internal;
+    }
+    get mRewardCanvas() {
+        if (!this.mRewardCanvas_Internal && this.uiWidgetBase) {
+            this.mRewardCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mRewardCanvas');
+        }
+        return this.mRewardCanvas_Internal;
+    }
+    get mRewardTextBlock() {
+        if (!this.mRewardTextBlock_Internal && this.uiWidgetBase) {
+            this.mRewardTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mRewardCanvas/RewardBgImage/mRewardTextBlock');
+        }
+        return this.mRewardTextBlock_Internal;
+    }
+    get mSelectImage() {
+        if (!this.mSelectImage_Internal && this.uiWidgetBase) {
+            this.mSelectImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mSelectImage');
+        }
+        return this.mSelectImage_Internal;
+    }
+    get mHasCanvas() {
+        if (!this.mHasCanvas_Internal && this.uiWidgetBase) {
+            this.mHasCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas');
+        }
+        return this.mHasCanvas_Internal;
+    }
+    get mMaskImage() {
+        if (!this.mMaskImage_Internal && this.uiWidgetBase) {
+            this.mMaskImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas/mMaskImage');
+        }
+        return this.mMaskImage_Internal;
+    }
+    get mMaskBgImage() {
+        if (!this.mMaskBgImage_Internal && this.uiWidgetBase) {
+            this.mMaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas/mMaskBgImage');
+        }
+        return this.mMaskBgImage_Internal;
+    }
+    get mHasTextBlock() {
+        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
+            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas/mMaskBgImage/mHasTextBlock');
+        }
+        return this.mHasTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mRatioTextBlock);
+        this.initLanguage(this.mRewardTextBlock);
+        this.initLanguage(this.mHasTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LotteryItem_Generate = __decorate([
+    UIBind('UI/module/LotteryModule/LotteryItem.ui')
+], LotteryItem_Generate);
+var LotteryItem_Generate$1 = LotteryItem_Generate;
+
+var foreign131 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LotteryItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LotteryModule/LotteryPanel.ui
+ * TIME: 2024.09.30-20.30.18
+ */
+let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
+    }
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mOneArkCanvas() {
+        if (!this.mOneArkCanvas_Internal && this.uiWidgetBase) {
+            this.mOneArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas');
+        }
+        return this.mOneArkCanvas_Internal;
+    }
+    get mOneArkButton() {
+        if (!this.mOneArkButton_Internal && this.uiWidgetBase) {
+            this.mOneArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas/mOneArkButton');
+        }
+        return this.mOneArkButton_Internal;
+    }
+    get mOneArkTextBlock() {
+        if (!this.mOneArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mOneArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas/mOneArkTextBlock');
+        }
+        return this.mOneArkTextBlock_Internal;
+    }
+    get mOneArkTipsTextBlock() {
+        if (!this.mOneArkTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mOneArkTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas/mOneArkTipsTextBlock');
+        }
+        return this.mOneArkTipsTextBlock_Internal;
+    }
+    get mOneCoinCanvas() {
+        if (!this.mOneCoinCanvas_Internal && this.uiWidgetBase) {
+            this.mOneCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas');
+        }
+        return this.mOneCoinCanvas_Internal;
+    }
+    get mOneCoinButton() {
+        if (!this.mOneCoinButton_Internal && this.uiWidgetBase) {
+            this.mOneCoinButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas/mOneCoinButton');
+        }
+        return this.mOneCoinButton_Internal;
+    }
+    get mOneCoinTextBlock() {
+        if (!this.mOneCoinTextBlock_Internal && this.uiWidgetBase) {
+            this.mOneCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas/mOneCoinTextBlock');
+        }
+        return this.mOneCoinTextBlock_Internal;
+    }
+    get mOneCoinTipsTextBlock() {
+        if (!this.mOneCoinTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mOneCoinTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas/mOneCoinTipsTextBlock');
+        }
+        return this.mOneCoinTipsTextBlock_Internal;
+    }
+    get mTenArkCanvas() {
+        if (!this.mTenArkCanvas_Internal && this.uiWidgetBase) {
+            this.mTenArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas');
+        }
+        return this.mTenArkCanvas_Internal;
+    }
+    get mTenArkButton() {
+        if (!this.mTenArkButton_Internal && this.uiWidgetBase) {
+            this.mTenArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas/mTenArkButton');
+        }
+        return this.mTenArkButton_Internal;
+    }
+    get mTenArkTextBlock() {
+        if (!this.mTenArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mTenArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas/mTenArkTextBlock');
+        }
+        return this.mTenArkTextBlock_Internal;
+    }
+    get mTenArkTipsTextBlock() {
+        if (!this.mTenArkTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mTenArkTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas/mTenArkTipsTextBlock');
+        }
+        return this.mTenArkTipsTextBlock_Internal;
+    }
+    get mTenCoinCanvas() {
+        if (!this.mTenCoinCanvas_Internal && this.uiWidgetBase) {
+            this.mTenCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas');
+        }
+        return this.mTenCoinCanvas_Internal;
+    }
+    get mTenCoinButton() {
+        if (!this.mTenCoinButton_Internal && this.uiWidgetBase) {
+            this.mTenCoinButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas/mTenCoinButton');
+        }
+        return this.mTenCoinButton_Internal;
+    }
+    get mTenCoinTextBlock() {
+        if (!this.mTenCoinTextBlock_Internal && this.uiWidgetBase) {
+            this.mTenCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas/mTenCoinTextBlock');
+        }
+        return this.mTenCoinTextBlock_Internal;
+    }
+    get mTenCoinTipsTextBlock() {
+        if (!this.mTenCoinTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mTenCoinTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas/mTenCoinTipsTextBlock');
+        }
+        return this.mTenCoinTipsTextBlock_Internal;
+    }
+    get mMoneyCanvas() {
+        if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
+            this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
+        }
+        return this.mMoneyCanvas_Internal;
+    }
+    get mIconCoinImage() {
+        if (!this.mIconCoinImage_Internal && this.uiWidgetBase) {
+            this.mIconCoinImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mIconCoinImage');
+        }
+        return this.mIconCoinImage_Internal;
+    }
+    get mCoinCountTextBlock() {
+        if (!this.mCoinCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mCoinCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mCoinCountTextBlock');
+        }
+        return this.mCoinCountTextBlock_Internal;
+    }
+    get mIconArkImage() {
+        if (!this.mIconArkImage_Internal && this.uiWidgetBase) {
+            this.mIconArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mIconArkImage');
+        }
+        return this.mIconArkImage_Internal;
+    }
+    get mArkCountTextBlock() {
+        if (!this.mArkCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mArkCountTextBlock');
+        }
+        return this.mArkCountTextBlock_Internal;
+    }
+    get mMaskImage() {
+        if (!this.mMaskImage_Internal && this.uiWidgetBase) {
+            this.mMaskImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMaskImage');
+        }
+        return this.mMaskImage_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mOneArkButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mOneArkButton");
+        });
+        this.mOneArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mOneCoinButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mOneCoinButton");
+        });
+        this.mOneCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mTenArkButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mTenArkButton");
+        });
+        this.mTenArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mTenCoinButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mTenCoinButton");
+        });
+        this.mTenCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
+        this.initLanguage(this.mOneArkTextBlock);
+        this.initLanguage(this.mOneArkTipsTextBlock);
+        this.initLanguage(this.mOneCoinTextBlock);
+        this.initLanguage(this.mOneCoinTipsTextBlock);
+        this.initLanguage(this.mTenArkTextBlock);
+        this.initLanguage(this.mTenArkTipsTextBlock);
+        this.initLanguage(this.mTenCoinTextBlock);
+        this.initLanguage(this.mTenCoinTipsTextBlock);
+        this.initLanguage(this.mCoinCountTextBlock);
+        this.initLanguage(this.mArkCountTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LotteryPanel_Generate = __decorate([
+    UIBind('UI/module/LotteryModule/LotteryPanel.ui')
+], LotteryPanel_Generate);
+var LotteryPanel_Generate$1 = LotteryPanel_Generate;
+
+var foreign132 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LotteryPanel_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LotteryModule/LotteryResultPanel.ui
+ * TIME: 2024.09.30-20.30.18
+ */
+let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UIScript {
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/BgImage/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    get mContentCanvas() {
+        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
+            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas');
+        }
+        return this.mContentCanvas_Internal;
+    }
+    get mImage_0() {
+        if (!this.mImage_0_Internal && this.uiWidgetBase) {
+            this.mImage_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_0');
+        }
+        return this.mImage_0_Internal;
+    }
+    get mTextBlock_0() {
+        if (!this.mTextBlock_0_Internal && this.uiWidgetBase) {
+            this.mTextBlock_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_0/mTextBlock_0');
+        }
+        return this.mTextBlock_0_Internal;
+    }
+    get mImage_1() {
+        if (!this.mImage_1_Internal && this.uiWidgetBase) {
+            this.mImage_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_1');
+        }
+        return this.mImage_1_Internal;
+    }
+    get mTextBlock_1() {
+        if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_1/mTextBlock_1');
+        }
+        return this.mTextBlock_1_Internal;
+    }
+    get mImage_2() {
+        if (!this.mImage_2_Internal && this.uiWidgetBase) {
+            this.mImage_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_2');
+        }
+        return this.mImage_2_Internal;
+    }
+    get mTextBlock_2() {
+        if (!this.mTextBlock_2_Internal && this.uiWidgetBase) {
+            this.mTextBlock_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_2/mTextBlock_2');
+        }
+        return this.mTextBlock_2_Internal;
+    }
+    get mImage_3() {
+        if (!this.mImage_3_Internal && this.uiWidgetBase) {
+            this.mImage_3_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_3');
+        }
+        return this.mImage_3_Internal;
+    }
+    get mTextBlock_3() {
+        if (!this.mTextBlock_3_Internal && this.uiWidgetBase) {
+            this.mTextBlock_3_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_3/mTextBlock_3');
+        }
+        return this.mTextBlock_3_Internal;
+    }
+    get mImage_4() {
+        if (!this.mImage_4_Internal && this.uiWidgetBase) {
+            this.mImage_4_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_4');
+        }
+        return this.mImage_4_Internal;
+    }
+    get mTextBlock_4() {
+        if (!this.mTextBlock_4_Internal && this.uiWidgetBase) {
+            this.mTextBlock_4_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_4/mTextBlock_4');
+        }
+        return this.mTextBlock_4_Internal;
+    }
+    get mImage_5() {
+        if (!this.mImage_5_Internal && this.uiWidgetBase) {
+            this.mImage_5_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_5');
+        }
+        return this.mImage_5_Internal;
+    }
+    get mTextBlock_5() {
+        if (!this.mTextBlock_5_Internal && this.uiWidgetBase) {
+            this.mTextBlock_5_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_5/mTextBlock_5');
+        }
+        return this.mTextBlock_5_Internal;
+    }
+    get mImage_6() {
+        if (!this.mImage_6_Internal && this.uiWidgetBase) {
+            this.mImage_6_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_6');
+        }
+        return this.mImage_6_Internal;
+    }
+    get mTextBlock_6() {
+        if (!this.mTextBlock_6_Internal && this.uiWidgetBase) {
+            this.mTextBlock_6_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_6/mTextBlock_6');
+        }
+        return this.mTextBlock_6_Internal;
+    }
+    get mImage_7() {
+        if (!this.mImage_7_Internal && this.uiWidgetBase) {
+            this.mImage_7_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_7');
+        }
+        return this.mImage_7_Internal;
+    }
+    get mTextBlock_7() {
+        if (!this.mTextBlock_7_Internal && this.uiWidgetBase) {
+            this.mTextBlock_7_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_7/mTextBlock_7');
+        }
+        return this.mTextBlock_7_Internal;
+    }
+    get mImage_8() {
+        if (!this.mImage_8_Internal && this.uiWidgetBase) {
+            this.mImage_8_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_8');
+        }
+        return this.mImage_8_Internal;
+    }
+    get mTextBlock_8() {
+        if (!this.mTextBlock_8_Internal && this.uiWidgetBase) {
+            this.mTextBlock_8_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_8/mTextBlock_8');
+        }
+        return this.mTextBlock_8_Internal;
+    }
+    get mImage_9() {
+        if (!this.mImage_9_Internal && this.uiWidgetBase) {
+            this.mImage_9_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_9');
+        }
+        return this.mImage_9_Internal;
+    }
+    get mTextBlock_9() {
+        if (!this.mTextBlock_9_Internal && this.uiWidgetBase) {
+            this.mTextBlock_9_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_9/mTextBlock_9');
+        }
+        return this.mTextBlock_9_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTextBlock_0);
+        this.initLanguage(this.mTextBlock_1);
+        this.initLanguage(this.mTextBlock_2);
+        this.initLanguage(this.mTextBlock_3);
+        this.initLanguage(this.mTextBlock_4);
+        this.initLanguage(this.mTextBlock_5);
+        this.initLanguage(this.mTextBlock_6);
+        this.initLanguage(this.mTextBlock_7);
+        this.initLanguage(this.mTextBlock_8);
+        this.initLanguage(this.mTextBlock_9);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LotteryResultPanel_Generate = __decorate([
+    UIBind('UI/module/LotteryModule/LotteryResultPanel.ui')
+], LotteryResultPanel_Generate);
+var LotteryResultPanel_Generate$1 = LotteryResultPanel_Generate;
+
+var foreign133 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LotteryResultPanel_Generate$1
+});
+
+var RewardType;
+(function (RewardType) {
+    RewardType[RewardType["None"] = 0] = "None";
+    RewardType[RewardType["Diamond"] = 1] = "Diamond";
+    RewardType[RewardType["Lv"] = 2] = "Lv";
+    RewardType[RewardType["Bag"] = 3] = "Bag";
+})(RewardType || (RewardType = {}));
+const lotteryDatas = new Map();
+lotteryDatas.set(1, { isLimit: false, ratio: [1, 500], icon: "icon_404083", name: "空奖-哈哈", rewardType: RewardType.None, reward: 1, pos: new mw.Vector2(0, 0), bgIcon: "181426" }); //181426 181425 181424 181423 181420
+lotteryDatas.set(2, { isLimit: false, ratio: [501, 739], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 1, pos: new mw.Vector2(230, 0), bgIcon: "181424" });
+lotteryDatas.set(3, { isLimit: false, ratio: [740, 749], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 108, pos: new mw.Vector2(460, 0), bgIcon: "181423" });
+lotteryDatas.set(4, { isLimit: false, ratio: [750, 750], icon: "icon_103217", name: "钻石", rewardType: RewardType.Diamond, reward: 1088, pos: new mw.Vector2(690, 0), bgIcon: "181420" });
+lotteryDatas.set(5, { isLimit: false, ratio: [751, 978], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1, pos: new mw.Vector2(690, 230), bgIcon: "181424" });
+lotteryDatas.set(6, { isLimit: false, ratio: [979, 988], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 108, pos: new mw.Vector2(690, 460), bgIcon: "181423" });
+lotteryDatas.set(7, { isLimit: false, ratio: [989, 989], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1088, pos: new mw.Vector2(460, 460), bgIcon: "181420" });
+lotteryDatas.set(8, { isLimit: true, ratio: [990, 995], icon: "mode_141499", name: "神级魔王", rewardType: RewardType.Bag, reward: 20058, pos: new mw.Vector2(230, 460), bgIcon: "181420" });
+lotteryDatas.set(9, { isLimit: true, ratio: [996, 999], icon: "mode_142921", name: "四代火影", rewardType: RewardType.Bag, reward: 20059, pos: new mw.Vector2(0, 460), bgIcon: "181420" });
+lotteryDatas.set(10, { isLimit: true, ratio: [1000, 1000], icon: "mode_163289", name: "美杜莎女王", rewardType: RewardType.Bag, reward: 20060, pos: new mw.Vector2(0, 230), bgIcon: "181420" });
+const oneCostCoin = 2888888;
+const oneCostArk = 2;
+const tenCostCoin = 28888888;
+const tenCostArk = 20;
+const oneCommodityId = "7I6uNtkFmg00001Nx";
+const tenCommodityId = "6tOZfQYVTV90001Ny";
+class LotteryItem extends LotteryItem_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.lotteryModuleC = null;
+        this.key = 0;
+    }
+    get getLotteryModuleC() {
+        if (!this.lotteryModuleC) {
+            this.lotteryModuleC = ModuleService.getModule(LotteryModuleC);
+        }
+        return this.lotteryModuleC;
+    }
+    onStart() {
+        this.initUI();
+    }
+    initUI() {
+        this.mHasTextBlock.text = `已拥有`;
+        this.onOffUI(false);
+    }
+    initItem(key) {
+        this.key = key;
+        this.updateUI();
+    }
+    updateUI() {
+        let lotteryData = lotteryDatas.get(this.key);
+        this.mBgImage.imageGuid = lotteryData.bgIcon;
+        this.mRewardTextBlock.text = `${lotteryData.name}+${(lotteryData.rewardType == RewardType.Bag) ? 1 : lotteryData.reward}`;
+        let iconStr = lotteryData.icon.split(`_`);
+        if (iconStr[0] == `icon`) {
+            this.mIconImage.imageGuid = iconStr[1];
+        }
+        else if (iconStr[0] == `mode`) {
+            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
+        }
+        if (lotteryData.isLimit && this.getLotteryModuleC.isHas(lotteryData.reward)) {
+            this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }
+        else {
+            this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
+        }
+        this.mRatioTextBlock.text = `中奖概率\n${(((lotteryData.ratio[1] - lotteryData.ratio[0] + 1) / 1000) * 100).toFixed(1)}%`;
+    }
+    onOffUI(on) {
+        this.mSelectImage.visibility = on ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
+    }
+    setHasCanvas(on) {
+        this.mHasCanvas.visibility = on ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
+    }
+}
+class LotteryPanel extends LotteryPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.lotteryModuleC = null;
+        this.lotteryItems = [];
+        this.oneIndex = 0;
+        this.onePeriod = 0;
+        this.preIndex = -1;
+        this.hudPanel = null;
+    }
+    get getLotteryModuleC() {
+        if (!this.lotteryModuleC) {
+            this.lotteryModuleC = ModuleService.getModule(LotteryModuleC);
+        }
+        return this.lotteryModuleC;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mTitleTextBlock.text = `金币抽奖`;
+        this.mIconCoinImage.imageGuid = GlobalData.coinIcon;
+        this.mIconArkImage.imageGuid = GlobalData.arkIcon;
+        this.mOneCoinTextBlock.text = `抽1次`;
+        this.mOneArkTextBlock.text = `抽1次`;
+        this.mTenCoinTextBlock.text = `抽10次`;
+        this.mTenArkTextBlock.text = `抽10次`;
+        this.mOneCoinTipsTextBlock.text = `消耗${oneCostCoin}金币`;
+        this.mOneArkTipsTextBlock.text = `消耗${oneCostArk}派队币`;
+        this.mTenCoinTipsTextBlock.text = `消耗${tenCostCoin}金币`;
+        this.mTenArkTipsTextBlock.text = `消耗${tenCostArk}派队币`;
+        this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
+        this.initItem();
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+        this.mOneCoinButton.onClicked.add(this.addOneCoinButton.bind(this));
+        this.mOneArkButton.onClicked.add(this.addOneArkButton.bind(this));
+        this.mTenCoinButton.onClicked.add(this.addTenCoinButton.bind(this));
+        this.mTenArkButton.onClicked.add(this.addTenArkButton.bind(this));
+    }
+    addOneCoinButton() {
+        this.getLotteryModuleC.oneCoinLottery();
+    }
+    addOneArkButton() {
+        this.getLotteryModuleC.oneArkLottery();
+    }
+    addTenCoinButton() {
+        this.getLotteryModuleC.tenCoinLottery();
+    }
+    addTenArkButton() {
+        this.getLotteryModuleC.tenArkLottery();
+    }
+    addCloseButton() {
+        this.hideTween();
+    }
+    initItem() {
+        lotteryDatas.forEach((value, key) => {
+            let lotteryItem = mw.UIService.create(LotteryItem);
+            lotteryItem.initItem(key);
+            this.mCanvas.addChild(lotteryItem.uiObject);
+            lotteryItem.uiObject.position = value.pos;
+            this.lotteryItems.push(lotteryItem);
+        });
+    }
+    updateCoinTextBlock(count) {
+        this.mCoinCountTextBlock.text = Utils.integerUnitConversionStr(count);
+    }
+    updateArkTextBlock(arkCount) {
+        this.mArkCountTextBlock.text = `${arkCount}`;
+    }
+    updateItemHasState(key) {
+        if (this.lotteryItems.length <= key) {
+            this.lotteryItems[key - 1].setHasCanvas(true);
+        }
+    }
+    startOneLottery(key, complete) {
+        this.mMaskImage.visibility = mw.SlateVisibility.Visible;
+        this.oneIndex = 0;
+        this.onePeriod = 0;
+        let first = TimeUtil.setInterval(() => {
+            if (this.oneIndex >= 10) {
+                this.oneIndex = 0;
+                this.onePeriod++;
+                if (this.onePeriod >= 4) {
+                    SoundService.playSound("120847");
+                    this.updateItemSelectState(this.oneIndex++);
+                    TimeUtil.clearInterval(first);
+                    if (key == 1) {
+                        if (complete)
+                            complete();
+                        this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
+                    }
+                    else {
+                        let second = TimeUtil.setInterval(() => {
+                            if (this.oneIndex >= key) {
+                                TimeUtil.clearInterval(second);
+                                if (complete)
+                                    complete();
+                                this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
+                            }
+                            else {
+                                this.updateItemSelectState(this.oneIndex++);
+                                SoundService.playSound("120847");
+                            }
+                        }, 0.3);
+                    }
+                    return;
+                }
+            }
+            SoundService.playSound("120847");
+            this.updateItemSelectState(this.oneIndex++);
+        }, 0.1);
+    }
+    startTenLottery(key, complete) {
+        this.mMaskImage.visibility = mw.SlateVisibility.Visible;
+        let time = 0;
+        let indexs = Utils.getRandomArr([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 5);
+        for (let i = 0; i < this.lotteryItems.length; ++i) {
+            if (indexs.includes(i)) {
+                this.lotteryItems[i].onOffUI(true);
+            }
+            else {
+                this.lotteryItems[i].onOffUI(false);
+            }
+        }
+        SoundService.playSound("137566");
+        let first = TimeUtil.setInterval(() => {
+            let indexs = Utils.getRandomArr([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 5);
+            for (let i = 0; i < this.lotteryItems.length; ++i) {
+                if (indexs.includes(i)) {
+                    this.lotteryItems[i].onOffUI(true);
+                }
+                else {
+                    this.lotteryItems[i].onOffUI(false);
+                }
+            }
+            SoundService.playSound("137566");
+            time += 0.3;
+            if (time >= 5) {
+                TimeUtil.clearInterval(first);
+                SoundService.playSound("137566");
+                for (let i = 0; i < this.lotteryItems.length; ++i) {
+                    if (key.includes((i + 1))) {
+                        this.lotteryItems[i].onOffUI(true);
+                    }
+                    else {
+                        this.lotteryItems[i].onOffUI(false);
+                    }
+                }
+                if (complete)
+                    complete();
+                this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
+            }
+        }, 0.3);
+    }
+    updateItemSelectState(index) {
+        if (this.preIndex >= 0)
+            this.lotteryItems[this.preIndex].onOffUI(false);
+        this.preIndex = index;
+        this.lotteryItems[this.preIndex].onOffUI(true);
+    }
+    get getHudPanel() {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    onShow(...params) {
+        Utils.openUITween(this.rootCanvas, () => {
+            this.getHudPanel.hide();
+        }, null);
+    }
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+            this.getHudPanel.show();
+        });
+    }
+}
+class LotteryResultPanel extends LotteryResultPanel_Generate$1 {
+    onStart() {
+        this.layer = mw.UILayerMiddle;
+        this.bindButton();
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+    }
+    addCloseButton() {
+        this.hide();
+    }
+    showPanel(keys) {
+        for (let i = 0; i < keys.length; ++i) {
+            this[`mTextBlock_${i}`].text = `${lotteryDatas.get(keys[i]).name} +${lotteryDatas.get(keys[i]).reward}`;
+            this[`mImage_${i}`].visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }
+        for (let i = keys.length; i < 10; ++i) {
+            this[`mImage_${i}`].visibility = mw.SlateVisibility.Collapsed;
+        }
+        this.mContentCanvas.position = mw.Vector2.zero;
+        this.show();
+    }
+}
+const lotteryTriggerMap = new Map();
+lotteryTriggerMap.set(1, { triggers: ["1784616E"], worldUIIds: ["0D23C019"], name: `金币抽奖` });
+class LotteryModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.lotteryPanel = null;
+        this.lotteryResultPanel = null;
+        this.hudModuleC = null;
+        this.playerModuleC = null;
+        this.bagModuleC = null;
+    }
+    get getLotteryPanel() {
+        if (!this.lotteryPanel) {
+            this.lotteryPanel = mw.UIService.getUI(LotteryPanel);
+        }
+        return this.lotteryPanel;
+    }
+    get getLotteryResultPanel() {
+        if (!this.lotteryResultPanel) {
+            this.lotteryResultPanel = mw.UIService.getUI(LotteryResultPanel);
+        }
+        return this.lotteryResultPanel;
+    }
+    get getHudModuleC() {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    get getBagModuleC() {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.initUI();
+        this.initAction();
+    }
+    onEnterScene(sceneType) {
+        this.initTrigger();
+    }
+    initUI() {
+        this.lotteryResultPanel = mw.UIService.getUI(LotteryResultPanel);
+    }
+    initAction() {
+        Event.addLocalListener(`UpdateCoinTextBlock`, this.addUpdateCoinTextBlock.bind(this));
+        mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
+        this.getHudModuleC.onOpenLotteryAction.add(this.addOpenLotteryPanel.bind(this));
+    }
+    addOpenLotteryPanel() {
+        this.getLotteryPanel.show();
+        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
+    }
+    addUpdateCoinTextBlock(count) {
+        this.getLotteryPanel.updateCoinTextBlock(count);
+    }
+    addArkUpdate(amount) {
+        //刷新逻辑，amount为当前代币数量
+        console.error(`ArkModuleC addArkUpdate amount: ${amount}`);
+        this.getLotteryPanel.updateArkTextBlock(amount);
+    }
+    oneCoinLottery() {
+        let coin = this.getPlayerModuleC.getCoin();
+        if (coin >= oneCostCoin) {
+            this.getPlayerModuleC.saveCoin(-oneCostCoin);
+            this.calculateOneLottery();
+        }
+        else {
+            Notice.showDownNotice(`金币不足`);
+            if (mw.SystemUtil.isPIE) {
+                this.calculateOneLottery();
+            }
+            else {
+                mw.PurchaseService.placeOrder(oneCommodityId, 1, (status, msg) => {
+                    mw.PurchaseService.getArkBalance(); //刷新代币数量
+                });
+            }
+        }
+    }
+    oneArkLottery() {
+        if (mw.SystemUtil.isPIE) {
+            this.calculateOneLottery();
+        }
+        else {
+            mw.PurchaseService.placeOrder(oneCommodityId, 1, (status, msg) => {
+                mw.PurchaseService.getArkBalance(); //刷新代币数量
+            });
+        }
+    }
+    tenCoinLottery() {
+        let coin = this.getPlayerModuleC.getCoin();
+        if (coin >= tenCostCoin) {
+            this.getPlayerModuleC.saveCoin(-tenCostCoin);
+            this.calculateTenLottery();
+        }
+        else {
+            Notice.showDownNotice(`金币不足`);
+            if (mw.SystemUtil.isPIE) {
+                this.calculateTenLottery();
+            }
+            else {
+                mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
+                    mw.PurchaseService.getArkBalance(); //刷新代币数量
+                });
+            }
+        }
+    }
+    tenArkLottery() {
+        if (mw.SystemUtil.isPIE) {
+            this.calculateTenLottery();
+        }
+        else {
+            mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
+                mw.PurchaseService.getArkBalance(); //刷新代币数量
+            });
+        }
+    }
+    net_deliverGoods(commodityId, amount) {
+        if (commodityId == oneCommodityId) {
+            this.calculateOneLottery();
+        }
+        else if (commodityId == tenCommodityId) {
+            this.calculateTenLottery();
+        }
+    }
+    calculateOneLottery() {
+        let calculateKey = this.calculateKey();
+        while ((lotteryDatas.get(calculateKey).isLimit) && this.isHas(lotteryDatas.get(calculateKey).reward)) {
+            calculateKey = this.calculateKey();
+        }
+        let diamond = 0;
+        let lv = 0;
+        let bagIds = [];
+        switch (lotteryDatas.get(calculateKey).rewardType) {
+            case RewardType.None:
+                break;
+            case RewardType.Diamond:
+                diamond = lotteryDatas.get(calculateKey).reward;
+                break;
+            case RewardType.Lv:
+                lv = lotteryDatas.get(calculateKey).reward;
+                break;
+            case RewardType.Bag:
+                let bagId = lotteryDatas.get(calculateKey).reward;
+                bagIds.push(bagId);
+                break;
+        }
+        this.getLotteryPanel.startOneLottery(calculateKey, () => {
+            this.saveLottery(diamond, lv, bagIds);
+            this.getLotteryResultPanel.showPanel([calculateKey]);
+            TimeUtil.delaySecond(0.1).then(() => {
+                this.getLotteryResultPanel.showPanel([calculateKey]);
+            });
+            if (lotteryDatas.get(calculateKey).isLimit)
+                this.getLotteryPanel.updateItemHasState(calculateKey);
+            Notice.showDownNotice(`恭喜中奖`);
+        });
+    }
+    calculateTenLottery() {
+        let diamond = 0;
+        let lv = 0;
+        let bagIds = [];
+        let calculateKeys = [];
+        for (let i = 0; i < 10; ++i) {
+            let calculateKey = this.calculateKey();
+            while ((lotteryDatas.get(calculateKey).isLimit) &&
+                (this.isHas(lotteryDatas.get(calculateKey).reward) || bagIds.includes(lotteryDatas.get(calculateKey).reward))) {
+                calculateKey = this.calculateKey();
+            }
+            calculateKeys.push(calculateKey);
+            switch (lotteryDatas.get(calculateKey).rewardType) {
+                case RewardType.None:
+                    break;
+                case RewardType.Diamond:
+                    diamond += lotteryDatas.get(calculateKey).reward;
+                    break;
+                case RewardType.Lv:
+                    lv += lotteryDatas.get(calculateKey).reward;
+                    break;
+                case RewardType.Bag:
+                    let bagId = lotteryDatas.get(calculateKey).reward;
+                    bagIds.push(bagId);
+                    break;
+            }
+        }
+        this.getLotteryPanel.startTenLottery(calculateKeys, () => {
+            this.saveLottery(diamond, lv, bagIds);
+            this.getLotteryResultPanel.showPanel(calculateKeys);
+            TimeUtil.delaySecond(0.1).then(() => {
+                this.getLotteryResultPanel.showPanel(calculateKeys);
+            });
+            calculateKeys.forEach((key) => {
+                if (lotteryDatas.get(key).isLimit)
+                    this.getLotteryPanel.updateItemHasState(key);
+            });
+            Notice.showDownNotice(`恭喜中奖`);
+        });
+    }
+    calculateKey() {
+        let calculateValue = Utils.getRandomInteger(1, 1000);
+        let calculateKey = 1;
+        lotteryDatas.forEach((value, key) => {
+            if (calculateValue >= value.ratio[0] && calculateValue <= value.ratio[1]) {
+                calculateKey = key;
+            }
+        });
+        return calculateKey;
+    }
+    saveLottery(diamond, lv, bagIds) {
+        if (diamond > 0) {
+            Notice.showDownNotice(`获得${diamond}钻石`);
+            this.getPlayerModuleC.saveDiamond(diamond);
+        }
+        if (lv > 0) {
+            this.getPlayerModuleC.upLvByCount(lv);
+            Notice.showDownNotice(`等级+${lv}`);
+        }
+        if (bagIds && bagIds.length > 0) {
+            for (let i = 0; i < bagIds.length; ++i) {
+                this.getBagModuleC.setBagId(bagIds[i]);
+            }
+            Notice.showDownNotice(`打开背包使用`);
+        }
+    }
+    isHas(key) {
+        return this.getBagModuleC.isHasBagId(key);
+    }
+    initTrigger() {
+        lotteryTriggerMap.forEach((value, key) => {
+            value.triggers.forEach((triggerId) => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then((go) => {
+                    let trigger = go;
+                    trigger.onEnter.add((character) => {
+                        if (character.gameObjectId != this.localPlayer.character.gameObjectId)
+                            return;
+                        this.getLotteryPanel.show();
+                    });
+                });
+            });
+            value.worldUIIds.forEach((worldId) => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
+                    let worldUI = v;
+                    let levelItem = mw.UIService.create(LevelItem);
+                    levelItem.updateLevelTextBlock(value.name);
+                    worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+                });
+            });
+        });
+    }
+}
+class LotteryModuleS extends ModuleS {
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.bindAction();
+    }
+    bindAction() {
+        mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
+    }
+    addShipOrder(playerId, orderId, commodityId, amount, confirmOrder) {
+        //根据playerId和commodityId来处理购买逻辑
+        this.getClient(playerId).net_deliverGoods(commodityId, amount);
+        confirmOrder(true); //调用这个方法表示确认收货成功
+    }
+}
+
+var foreign55 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    LotteryItem: LotteryItem,
+    LotteryModuleC: LotteryModuleC,
+    LotteryModuleS: LotteryModuleS,
+    LotteryPanel: LotteryPanel,
+    LotteryResultPanel: LotteryResultPanel,
+    get RewardType () { return RewardType; },
+    lotteryDatas: lotteryDatas
 });
 
 /**
@@ -12720,6 +13821,17 @@ class BagModuleC extends ModuleC {
         this.initBagData();
         this.initTrigger().then(() => {
         });
+        this.updateLotteryData();
+    }
+    updateLotteryData() {
+        for (let i = 8; i <= 10; ++i) {
+            if (this.isHasBagId(lotteryDatas.get(i).reward)) {
+                lotteryDatas.get(i).reward = 20061;
+                lotteryDatas.get(i).icon = `mode_163292`;
+                lotteryDatas.get(i).name = `小舞`;
+                break;
+            }
+        }
     }
     enterScenceUsing() {
         if (this.usingWeaponId > 0)
@@ -17509,8 +18621,14 @@ class Monster extends Script {
             this.maxHp = this.maxHp * (this.randomFloat(1.1, 1.5));
             switch (this.monsterType) {
                 case 1:
-                    if (this.maxHp > 99999)
-                        this.maxHp = 99999;
+                    if (this.monsterId == 5 || this.monsterId == 6) {
+                        if (this.maxHp > 9999)
+                            this.maxHp = 9999;
+                    }
+                    else {
+                        if (this.maxHp > 99999)
+                            this.maxHp = 99999;
+                    }
                     break;
                 case 2:
                     if (this.maxHp > 999999)
@@ -19146,1103 +20264,6 @@ __decorate([
 var foreign52 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDModuleS
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/LotteryModule/LotteryItem.ui
- * TIME: 2024.09.30-20.30.18
- */
-let LotteryItem_Generate = class LotteryItem_Generate extends UIScript {
-    get mBgImage() {
-        if (!this.mBgImage_Internal && this.uiWidgetBase) {
-            this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage');
-        }
-        return this.mBgImage_Internal;
-    }
-    get mIconImage() {
-        if (!this.mIconImage_Internal && this.uiWidgetBase) {
-            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mIconImage');
-        }
-        return this.mIconImage_Internal;
-    }
-    get mRatioTextBlock() {
-        if (!this.mRatioTextBlock_Internal && this.uiWidgetBase) {
-            this.mRatioTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mRatioTextBlock');
-        }
-        return this.mRatioTextBlock_Internal;
-    }
-    get mRewardCanvas() {
-        if (!this.mRewardCanvas_Internal && this.uiWidgetBase) {
-            this.mRewardCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mRewardCanvas');
-        }
-        return this.mRewardCanvas_Internal;
-    }
-    get mRewardTextBlock() {
-        if (!this.mRewardTextBlock_Internal && this.uiWidgetBase) {
-            this.mRewardTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mRewardCanvas/RewardBgImage/mRewardTextBlock');
-        }
-        return this.mRewardTextBlock_Internal;
-    }
-    get mSelectImage() {
-        if (!this.mSelectImage_Internal && this.uiWidgetBase) {
-            this.mSelectImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mSelectImage');
-        }
-        return this.mSelectImage_Internal;
-    }
-    get mHasCanvas() {
-        if (!this.mHasCanvas_Internal && this.uiWidgetBase) {
-            this.mHasCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas');
-        }
-        return this.mHasCanvas_Internal;
-    }
-    get mMaskImage() {
-        if (!this.mMaskImage_Internal && this.uiWidgetBase) {
-            this.mMaskImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas/mMaskImage');
-        }
-        return this.mMaskImage_Internal;
-    }
-    get mMaskBgImage() {
-        if (!this.mMaskBgImage_Internal && this.uiWidgetBase) {
-            this.mMaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas/mMaskBgImage');
-        }
-        return this.mMaskBgImage_Internal;
-    }
-    get mHasTextBlock() {
-        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
-            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mHasCanvas/mMaskBgImage/mHasTextBlock');
-        }
-        return this.mHasTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mRatioTextBlock);
-        this.initLanguage(this.mRewardTextBlock);
-        this.initLanguage(this.mHasTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-LotteryItem_Generate = __decorate([
-    UIBind('UI/module/LotteryModule/LotteryItem.ui')
-], LotteryItem_Generate);
-var LotteryItem_Generate$1 = LotteryItem_Generate;
-
-var foreign131 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: LotteryItem_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/LotteryModule/LotteryPanel.ui
- * TIME: 2024.09.30-20.30.18
- */
-let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
-    get mTitleTextBlock() {
-        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
-            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
-        }
-        return this.mTitleTextBlock_Internal;
-    }
-    get mCanvas() {
-        if (!this.mCanvas_Internal && this.uiWidgetBase) {
-            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas');
-        }
-        return this.mCanvas_Internal;
-    }
-    get mOneArkCanvas() {
-        if (!this.mOneArkCanvas_Internal && this.uiWidgetBase) {
-            this.mOneArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas');
-        }
-        return this.mOneArkCanvas_Internal;
-    }
-    get mOneArkButton() {
-        if (!this.mOneArkButton_Internal && this.uiWidgetBase) {
-            this.mOneArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas/mOneArkButton');
-        }
-        return this.mOneArkButton_Internal;
-    }
-    get mOneArkTextBlock() {
-        if (!this.mOneArkTextBlock_Internal && this.uiWidgetBase) {
-            this.mOneArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas/mOneArkTextBlock');
-        }
-        return this.mOneArkTextBlock_Internal;
-    }
-    get mOneArkTipsTextBlock() {
-        if (!this.mOneArkTipsTextBlock_Internal && this.uiWidgetBase) {
-            this.mOneArkTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneArkCanvas/mOneArkTipsTextBlock');
-        }
-        return this.mOneArkTipsTextBlock_Internal;
-    }
-    get mOneCoinCanvas() {
-        if (!this.mOneCoinCanvas_Internal && this.uiWidgetBase) {
-            this.mOneCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas');
-        }
-        return this.mOneCoinCanvas_Internal;
-    }
-    get mOneCoinButton() {
-        if (!this.mOneCoinButton_Internal && this.uiWidgetBase) {
-            this.mOneCoinButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas/mOneCoinButton');
-        }
-        return this.mOneCoinButton_Internal;
-    }
-    get mOneCoinTextBlock() {
-        if (!this.mOneCoinTextBlock_Internal && this.uiWidgetBase) {
-            this.mOneCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas/mOneCoinTextBlock');
-        }
-        return this.mOneCoinTextBlock_Internal;
-    }
-    get mOneCoinTipsTextBlock() {
-        if (!this.mOneCoinTipsTextBlock_Internal && this.uiWidgetBase) {
-            this.mOneCoinTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneCoinCanvas/mOneCoinTipsTextBlock');
-        }
-        return this.mOneCoinTipsTextBlock_Internal;
-    }
-    get mTenArkCanvas() {
-        if (!this.mTenArkCanvas_Internal && this.uiWidgetBase) {
-            this.mTenArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas');
-        }
-        return this.mTenArkCanvas_Internal;
-    }
-    get mTenArkButton() {
-        if (!this.mTenArkButton_Internal && this.uiWidgetBase) {
-            this.mTenArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas/mTenArkButton');
-        }
-        return this.mTenArkButton_Internal;
-    }
-    get mTenArkTextBlock() {
-        if (!this.mTenArkTextBlock_Internal && this.uiWidgetBase) {
-            this.mTenArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas/mTenArkTextBlock');
-        }
-        return this.mTenArkTextBlock_Internal;
-    }
-    get mTenArkTipsTextBlock() {
-        if (!this.mTenArkTipsTextBlock_Internal && this.uiWidgetBase) {
-            this.mTenArkTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenArkCanvas/mTenArkTipsTextBlock');
-        }
-        return this.mTenArkTipsTextBlock_Internal;
-    }
-    get mTenCoinCanvas() {
-        if (!this.mTenCoinCanvas_Internal && this.uiWidgetBase) {
-            this.mTenCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas');
-        }
-        return this.mTenCoinCanvas_Internal;
-    }
-    get mTenCoinButton() {
-        if (!this.mTenCoinButton_Internal && this.uiWidgetBase) {
-            this.mTenCoinButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas/mTenCoinButton');
-        }
-        return this.mTenCoinButton_Internal;
-    }
-    get mTenCoinTextBlock() {
-        if (!this.mTenCoinTextBlock_Internal && this.uiWidgetBase) {
-            this.mTenCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas/mTenCoinTextBlock');
-        }
-        return this.mTenCoinTextBlock_Internal;
-    }
-    get mTenCoinTipsTextBlock() {
-        if (!this.mTenCoinTipsTextBlock_Internal && this.uiWidgetBase) {
-            this.mTenCoinTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mTenCoinCanvas/mTenCoinTipsTextBlock');
-        }
-        return this.mTenCoinTipsTextBlock_Internal;
-    }
-    get mMoneyCanvas() {
-        if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
-            this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
-        }
-        return this.mMoneyCanvas_Internal;
-    }
-    get mIconCoinImage() {
-        if (!this.mIconCoinImage_Internal && this.uiWidgetBase) {
-            this.mIconCoinImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mIconCoinImage');
-        }
-        return this.mIconCoinImage_Internal;
-    }
-    get mCoinCountTextBlock() {
-        if (!this.mCoinCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mCoinCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mCoinCountTextBlock');
-        }
-        return this.mCoinCountTextBlock_Internal;
-    }
-    get mIconArkImage() {
-        if (!this.mIconArkImage_Internal && this.uiWidgetBase) {
-            this.mIconArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mIconArkImage');
-        }
-        return this.mIconArkImage_Internal;
-    }
-    get mArkCountTextBlock() {
-        if (!this.mArkCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mArkCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mArkCountTextBlock');
-        }
-        return this.mArkCountTextBlock_Internal;
-    }
-    get mMaskImage() {
-        if (!this.mMaskImage_Internal && this.uiWidgetBase) {
-            this.mMaskImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMaskImage');
-        }
-        return this.mMaskImage_Internal;
-    }
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mOneArkButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mOneArkButton");
-        });
-        this.mOneArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mOneCoinButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mOneCoinButton");
-        });
-        this.mOneCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mTenArkButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mTenArkButton");
-        });
-        this.mTenArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mTenCoinButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mTenCoinButton");
-        });
-        this.mTenCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTitleTextBlock);
-        this.initLanguage(this.mOneArkTextBlock);
-        this.initLanguage(this.mOneArkTipsTextBlock);
-        this.initLanguage(this.mOneCoinTextBlock);
-        this.initLanguage(this.mOneCoinTipsTextBlock);
-        this.initLanguage(this.mTenArkTextBlock);
-        this.initLanguage(this.mTenArkTipsTextBlock);
-        this.initLanguage(this.mTenCoinTextBlock);
-        this.initLanguage(this.mTenCoinTipsTextBlock);
-        this.initLanguage(this.mCoinCountTextBlock);
-        this.initLanguage(this.mArkCountTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-LotteryPanel_Generate = __decorate([
-    UIBind('UI/module/LotteryModule/LotteryPanel.ui')
-], LotteryPanel_Generate);
-var LotteryPanel_Generate$1 = LotteryPanel_Generate;
-
-var foreign132 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: LotteryPanel_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/LotteryModule/LotteryResultPanel.ui
- * TIME: 2024.09.30-20.30.18
- */
-let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UIScript {
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/BgImage/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
-    }
-    get mContentCanvas() {
-        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
-            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas');
-        }
-        return this.mContentCanvas_Internal;
-    }
-    get mImage_0() {
-        if (!this.mImage_0_Internal && this.uiWidgetBase) {
-            this.mImage_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_0');
-        }
-        return this.mImage_0_Internal;
-    }
-    get mTextBlock_0() {
-        if (!this.mTextBlock_0_Internal && this.uiWidgetBase) {
-            this.mTextBlock_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_0/mTextBlock_0');
-        }
-        return this.mTextBlock_0_Internal;
-    }
-    get mImage_1() {
-        if (!this.mImage_1_Internal && this.uiWidgetBase) {
-            this.mImage_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_1');
-        }
-        return this.mImage_1_Internal;
-    }
-    get mTextBlock_1() {
-        if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
-            this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_1/mTextBlock_1');
-        }
-        return this.mTextBlock_1_Internal;
-    }
-    get mImage_2() {
-        if (!this.mImage_2_Internal && this.uiWidgetBase) {
-            this.mImage_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_2');
-        }
-        return this.mImage_2_Internal;
-    }
-    get mTextBlock_2() {
-        if (!this.mTextBlock_2_Internal && this.uiWidgetBase) {
-            this.mTextBlock_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_2/mTextBlock_2');
-        }
-        return this.mTextBlock_2_Internal;
-    }
-    get mImage_3() {
-        if (!this.mImage_3_Internal && this.uiWidgetBase) {
-            this.mImage_3_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_3');
-        }
-        return this.mImage_3_Internal;
-    }
-    get mTextBlock_3() {
-        if (!this.mTextBlock_3_Internal && this.uiWidgetBase) {
-            this.mTextBlock_3_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_3/mTextBlock_3');
-        }
-        return this.mTextBlock_3_Internal;
-    }
-    get mImage_4() {
-        if (!this.mImage_4_Internal && this.uiWidgetBase) {
-            this.mImage_4_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_4');
-        }
-        return this.mImage_4_Internal;
-    }
-    get mTextBlock_4() {
-        if (!this.mTextBlock_4_Internal && this.uiWidgetBase) {
-            this.mTextBlock_4_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_4/mTextBlock_4');
-        }
-        return this.mTextBlock_4_Internal;
-    }
-    get mImage_5() {
-        if (!this.mImage_5_Internal && this.uiWidgetBase) {
-            this.mImage_5_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_5');
-        }
-        return this.mImage_5_Internal;
-    }
-    get mTextBlock_5() {
-        if (!this.mTextBlock_5_Internal && this.uiWidgetBase) {
-            this.mTextBlock_5_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_5/mTextBlock_5');
-        }
-        return this.mTextBlock_5_Internal;
-    }
-    get mImage_6() {
-        if (!this.mImage_6_Internal && this.uiWidgetBase) {
-            this.mImage_6_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_6');
-        }
-        return this.mImage_6_Internal;
-    }
-    get mTextBlock_6() {
-        if (!this.mTextBlock_6_Internal && this.uiWidgetBase) {
-            this.mTextBlock_6_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_6/mTextBlock_6');
-        }
-        return this.mTextBlock_6_Internal;
-    }
-    get mImage_7() {
-        if (!this.mImage_7_Internal && this.uiWidgetBase) {
-            this.mImage_7_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_7');
-        }
-        return this.mImage_7_Internal;
-    }
-    get mTextBlock_7() {
-        if (!this.mTextBlock_7_Internal && this.uiWidgetBase) {
-            this.mTextBlock_7_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_7/mTextBlock_7');
-        }
-        return this.mTextBlock_7_Internal;
-    }
-    get mImage_8() {
-        if (!this.mImage_8_Internal && this.uiWidgetBase) {
-            this.mImage_8_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_8');
-        }
-        return this.mImage_8_Internal;
-    }
-    get mTextBlock_8() {
-        if (!this.mTextBlock_8_Internal && this.uiWidgetBase) {
-            this.mTextBlock_8_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_8/mTextBlock_8');
-        }
-        return this.mTextBlock_8_Internal;
-    }
-    get mImage_9() {
-        if (!this.mImage_9_Internal && this.uiWidgetBase) {
-            this.mImage_9_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_9');
-        }
-        return this.mImage_9_Internal;
-    }
-    get mTextBlock_9() {
-        if (!this.mTextBlock_9_Internal && this.uiWidgetBase) {
-            this.mTextBlock_9_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgCanvas/mContentCanvas/mImage_9/mTextBlock_9');
-        }
-        return this.mTextBlock_9_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock_0);
-        this.initLanguage(this.mTextBlock_1);
-        this.initLanguage(this.mTextBlock_2);
-        this.initLanguage(this.mTextBlock_3);
-        this.initLanguage(this.mTextBlock_4);
-        this.initLanguage(this.mTextBlock_5);
-        this.initLanguage(this.mTextBlock_6);
-        this.initLanguage(this.mTextBlock_7);
-        this.initLanguage(this.mTextBlock_8);
-        this.initLanguage(this.mTextBlock_9);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-LotteryResultPanel_Generate = __decorate([
-    UIBind('UI/module/LotteryModule/LotteryResultPanel.ui')
-], LotteryResultPanel_Generate);
-var LotteryResultPanel_Generate$1 = LotteryResultPanel_Generate;
-
-var foreign133 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: LotteryResultPanel_Generate$1
-});
-
-var RewardType;
-(function (RewardType) {
-    RewardType[RewardType["None"] = 0] = "None";
-    RewardType[RewardType["Diamond"] = 1] = "Diamond";
-    RewardType[RewardType["Lv"] = 2] = "Lv";
-    RewardType[RewardType["Bag"] = 3] = "Bag";
-})(RewardType || (RewardType = {}));
-const lotteryDatas = new Map();
-lotteryDatas.set(1, { isLimit: false, ratio: [1, 500], icon: "icon_404083", name: "空奖-哈哈", rewardType: RewardType.None, reward: 1, pos: new mw.Vector2(0, 0), bgIcon: "181426" }); //181426 181425 181424 181423 181420
-lotteryDatas.set(2, { isLimit: false, ratio: [501, 739], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 1, pos: new mw.Vector2(230, 0), bgIcon: "181424" });
-lotteryDatas.set(3, { isLimit: false, ratio: [740, 749], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 108, pos: new mw.Vector2(460, 0), bgIcon: "181423" });
-lotteryDatas.set(4, { isLimit: false, ratio: [750, 750], icon: "icon_103217", name: "钻石", rewardType: RewardType.Diamond, reward: 1088, pos: new mw.Vector2(690, 0), bgIcon: "181420" });
-lotteryDatas.set(5, { isLimit: false, ratio: [751, 978], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1, pos: new mw.Vector2(690, 230), bgIcon: "181424" });
-lotteryDatas.set(6, { isLimit: false, ratio: [979, 988], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 108, pos: new mw.Vector2(690, 460), bgIcon: "181423" });
-lotteryDatas.set(7, { isLimit: false, ratio: [989, 989], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1088, pos: new mw.Vector2(460, 460), bgIcon: "181420" });
-lotteryDatas.set(8, { isLimit: true, ratio: [990, 995], icon: "mode_141499", name: "神级魔王", rewardType: RewardType.Bag, reward: 20058, pos: new mw.Vector2(230, 460), bgIcon: "181420" });
-lotteryDatas.set(9, { isLimit: true, ratio: [996, 999], icon: "mode_142921", name: "四代火影", rewardType: RewardType.Bag, reward: 20059, pos: new mw.Vector2(0, 460), bgIcon: "181420" });
-lotteryDatas.set(10, { isLimit: true, ratio: [1000, 1000], icon: "mode_163289", name: "美杜莎女王", rewardType: RewardType.Bag, reward: 20060, pos: new mw.Vector2(0, 230), bgIcon: "181420" });
-const oneCostCoin = 2888888;
-const oneCostArk = 2;
-const tenCostCoin = 28888888;
-const tenCostArk = 20;
-const oneCommodityId = "7I6uNtkFmg00001Nx";
-const tenCommodityId = "6tOZfQYVTV90001Ny";
-class LotteryItem extends LotteryItem_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.lotteryModuleC = null;
-        this.key = 0;
-    }
-    get getLotteryModuleC() {
-        if (!this.lotteryModuleC) {
-            this.lotteryModuleC = ModuleService.getModule(LotteryModuleC);
-        }
-        return this.lotteryModuleC;
-    }
-    onStart() {
-        this.initUI();
-    }
-    initUI() {
-        this.mHasTextBlock.text = `已拥有`;
-        this.onOffUI(false);
-    }
-    initItem(key) {
-        this.key = key;
-        this.updateUI();
-    }
-    updateUI() {
-        let lotteryData = lotteryDatas.get(this.key);
-        this.mBgImage.imageGuid = lotteryData.bgIcon;
-        this.mRewardTextBlock.text = `${lotteryData.name}+${(lotteryData.rewardType == RewardType.Bag) ? 1 : lotteryData.reward}`;
-        let iconStr = lotteryData.icon.split(`_`);
-        if (iconStr[0] == `icon`) {
-            this.mIconImage.imageGuid = iconStr[1];
-        }
-        else if (iconStr[0] == `mode`) {
-            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
-        }
-        if (lotteryData.isLimit && this.getLotteryModuleC.isHas(lotteryData.reward)) {
-            this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }
-        else {
-            this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-        }
-        this.mRatioTextBlock.text = `中奖概率\n${(((lotteryData.ratio[1] - lotteryData.ratio[0] + 1) / 1000) * 100).toFixed(1)}%`;
-    }
-    onOffUI(on) {
-        this.mSelectImage.visibility = on ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
-    }
-    setHasCanvas(on) {
-        this.mHasCanvas.visibility = on ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
-    }
-}
-class LotteryPanel extends LotteryPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.lotteryModuleC = null;
-        this.lotteryItems = [];
-        this.oneIndex = 0;
-        this.onePeriod = 0;
-        this.preIndex = -1;
-        this.hudPanel = null;
-    }
-    get getLotteryModuleC() {
-        if (!this.lotteryModuleC) {
-            this.lotteryModuleC = ModuleService.getModule(LotteryModuleC);
-        }
-        return this.lotteryModuleC;
-    }
-    onStart() {
-        this.initUI();
-        this.bindButton();
-    }
-    initUI() {
-        this.mTitleTextBlock.text = `金币抽奖`;
-        this.mIconCoinImage.imageGuid = GlobalData.coinIcon;
-        this.mIconArkImage.imageGuid = GlobalData.arkIcon;
-        this.mOneCoinTextBlock.text = `抽1次`;
-        this.mOneArkTextBlock.text = `抽1次`;
-        this.mTenCoinTextBlock.text = `抽10次`;
-        this.mTenArkTextBlock.text = `抽10次`;
-        this.mOneCoinTipsTextBlock.text = `消耗${oneCostCoin}金币`;
-        this.mOneArkTipsTextBlock.text = `消耗${oneCostArk}派队币`;
-        this.mTenCoinTipsTextBlock.text = `消耗${tenCostCoin}金币`;
-        this.mTenArkTipsTextBlock.text = `消耗${tenCostArk}派队币`;
-        this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
-        this.initItem();
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
-        this.mOneCoinButton.onClicked.add(this.addOneCoinButton.bind(this));
-        this.mOneArkButton.onClicked.add(this.addOneArkButton.bind(this));
-        this.mTenCoinButton.onClicked.add(this.addTenCoinButton.bind(this));
-        this.mTenArkButton.onClicked.add(this.addTenArkButton.bind(this));
-    }
-    addOneCoinButton() {
-        this.getLotteryModuleC.oneCoinLottery();
-    }
-    addOneArkButton() {
-        this.getLotteryModuleC.oneArkLottery();
-    }
-    addTenCoinButton() {
-        this.getLotteryModuleC.tenCoinLottery();
-    }
-    addTenArkButton() {
-        this.getLotteryModuleC.tenArkLottery();
-    }
-    addCloseButton() {
-        this.hideTween();
-    }
-    initItem() {
-        lotteryDatas.forEach((value, key) => {
-            let lotteryItem = mw.UIService.create(LotteryItem);
-            lotteryItem.initItem(key);
-            this.mCanvas.addChild(lotteryItem.uiObject);
-            lotteryItem.uiObject.position = value.pos;
-            this.lotteryItems.push(lotteryItem);
-        });
-    }
-    updateCoinTextBlock(count) {
-        this.mCoinCountTextBlock.text = Utils.integerUnitConversionStr(count);
-    }
-    updateArkTextBlock(arkCount) {
-        this.mArkCountTextBlock.text = `${arkCount}`;
-    }
-    updateItemHasState(key) {
-        if (this.lotteryItems.length <= key) {
-            this.lotteryItems[key - 1].setHasCanvas(true);
-        }
-    }
-    startOneLottery(key, complete) {
-        this.mMaskImage.visibility = mw.SlateVisibility.Visible;
-        this.oneIndex = 0;
-        this.onePeriod = 0;
-        let first = TimeUtil.setInterval(() => {
-            if (this.oneIndex >= 10) {
-                this.oneIndex = 0;
-                this.onePeriod++;
-                if (this.onePeriod >= 4) {
-                    SoundService.playSound("120847");
-                    this.updateItemSelectState(this.oneIndex++);
-                    TimeUtil.clearInterval(first);
-                    if (key == 1) {
-                        if (complete)
-                            complete();
-                        this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
-                    }
-                    else {
-                        let second = TimeUtil.setInterval(() => {
-                            if (this.oneIndex >= key) {
-                                TimeUtil.clearInterval(second);
-                                if (complete)
-                                    complete();
-                                this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
-                            }
-                            else {
-                                this.updateItemSelectState(this.oneIndex++);
-                                SoundService.playSound("120847");
-                            }
-                        }, 0.3);
-                    }
-                    return;
-                }
-            }
-            SoundService.playSound("120847");
-            this.updateItemSelectState(this.oneIndex++);
-        }, 0.1);
-    }
-    startTenLottery(key, complete) {
-        this.mMaskImage.visibility = mw.SlateVisibility.Visible;
-        let time = 0;
-        let indexs = Utils.getRandomArr([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 5);
-        for (let i = 0; i < this.lotteryItems.length; ++i) {
-            if (indexs.includes(i)) {
-                this.lotteryItems[i].onOffUI(true);
-            }
-            else {
-                this.lotteryItems[i].onOffUI(false);
-            }
-        }
-        SoundService.playSound("137566");
-        let first = TimeUtil.setInterval(() => {
-            let indexs = Utils.getRandomArr([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 5);
-            for (let i = 0; i < this.lotteryItems.length; ++i) {
-                if (indexs.includes(i)) {
-                    this.lotteryItems[i].onOffUI(true);
-                }
-                else {
-                    this.lotteryItems[i].onOffUI(false);
-                }
-            }
-            SoundService.playSound("137566");
-            time += 0.3;
-            if (time >= 5) {
-                TimeUtil.clearInterval(first);
-                SoundService.playSound("137566");
-                for (let i = 0; i < this.lotteryItems.length; ++i) {
-                    if (key.includes((i + 1))) {
-                        this.lotteryItems[i].onOffUI(true);
-                    }
-                    else {
-                        this.lotteryItems[i].onOffUI(false);
-                    }
-                }
-                if (complete)
-                    complete();
-                this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
-            }
-        }, 0.3);
-    }
-    updateItemSelectState(index) {
-        if (this.preIndex >= 0)
-            this.lotteryItems[this.preIndex].onOffUI(false);
-        this.preIndex = index;
-        this.lotteryItems[this.preIndex].onOffUI(true);
-    }
-    get getHudPanel() {
-        if (!this.hudPanel) {
-            this.hudPanel = mw.UIService.getUI(HUDPanel);
-        }
-        return this.hudPanel;
-    }
-    onShow(...params) {
-        Utils.openUITween(this.rootCanvas, () => {
-            this.getHudPanel.hide();
-        }, null);
-    }
-    hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, () => {
-            this.hide();
-            this.getHudPanel.show();
-        });
-    }
-}
-class LotteryResultPanel extends LotteryResultPanel_Generate$1 {
-    onStart() {
-        this.layer = mw.UILayerMiddle;
-        this.bindButton();
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
-    }
-    addCloseButton() {
-        this.hide();
-    }
-    showPanel(keys) {
-        for (let i = 0; i < keys.length; ++i) {
-            this[`mTextBlock_${i}`].text = `${lotteryDatas.get(keys[i]).name} +${lotteryDatas.get(keys[i]).reward}`;
-            this[`mImage_${i}`].visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }
-        for (let i = keys.length; i < 10; ++i) {
-            this[`mImage_${i}`].visibility = mw.SlateVisibility.Collapsed;
-        }
-        this.mContentCanvas.position = mw.Vector2.zero;
-        this.show();
-    }
-}
-const lotteryTriggerMap = new Map();
-lotteryTriggerMap.set(1, { triggers: ["1784616E"], worldUIIds: ["0D23C019"], name: `金币抽奖` });
-class LotteryModuleC extends ModuleC {
-    constructor() {
-        super(...arguments);
-        this.lotteryPanel = null;
-        this.lotteryResultPanel = null;
-        this.hudModuleC = null;
-        this.playerModuleC = null;
-        this.bagModuleC = null;
-    }
-    get getLotteryPanel() {
-        if (!this.lotteryPanel) {
-            this.lotteryPanel = mw.UIService.getUI(LotteryPanel);
-        }
-        return this.lotteryPanel;
-    }
-    get getLotteryResultPanel() {
-        if (!this.lotteryResultPanel) {
-            this.lotteryResultPanel = mw.UIService.getUI(LotteryResultPanel);
-        }
-        return this.lotteryResultPanel;
-    }
-    get getHudModuleC() {
-        if (!this.hudModuleC) {
-            this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        }
-        return this.hudModuleC;
-    }
-    get getPlayerModuleC() {
-        if (!this.playerModuleC) {
-            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        }
-        return this.playerModuleC;
-    }
-    get getBagModuleC() {
-        if (!this.bagModuleC) {
-            this.bagModuleC = ModuleService.getModule(BagModuleC);
-        }
-        return this.bagModuleC;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.initUI();
-        this.initAction();
-    }
-    onEnterScene(sceneType) {
-        this.initTrigger();
-    }
-    initUI() {
-        this.lotteryResultPanel = mw.UIService.getUI(LotteryResultPanel);
-    }
-    initAction() {
-        Event.addLocalListener(`UpdateCoinTextBlock`, this.addUpdateCoinTextBlock.bind(this));
-        mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
-        this.getHudModuleC.onOpenLotteryAction.add(this.addOpenLotteryPanel.bind(this));
-    }
-    addOpenLotteryPanel() {
-        this.getLotteryPanel.show();
-        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
-    }
-    addUpdateCoinTextBlock(count) {
-        this.getLotteryPanel.updateCoinTextBlock(count);
-    }
-    addArkUpdate(amount) {
-        //刷新逻辑，amount为当前代币数量
-        console.error(`ArkModuleC addArkUpdate amount: ${amount}`);
-        this.getLotteryPanel.updateArkTextBlock(amount);
-    }
-    oneCoinLottery() {
-        let coin = this.getPlayerModuleC.getCoin();
-        if (coin >= oneCostCoin) {
-            this.getPlayerModuleC.saveCoin(-oneCostCoin);
-            this.calculateOneLottery();
-        }
-        else {
-            Notice.showDownNotice(`金币不足`);
-            if (mw.SystemUtil.isPIE) {
-                this.calculateOneLottery();
-            }
-            else {
-                mw.PurchaseService.placeOrder(oneCommodityId, 1, (status, msg) => {
-                    mw.PurchaseService.getArkBalance(); //刷新代币数量
-                });
-            }
-        }
-    }
-    oneArkLottery() {
-        if (mw.SystemUtil.isPIE) {
-            this.calculateOneLottery();
-        }
-        else {
-            mw.PurchaseService.placeOrder(oneCommodityId, 1, (status, msg) => {
-                mw.PurchaseService.getArkBalance(); //刷新代币数量
-            });
-        }
-    }
-    tenCoinLottery() {
-        let coin = this.getPlayerModuleC.getCoin();
-        if (coin >= tenCostCoin) {
-            this.getPlayerModuleC.saveCoin(-tenCostCoin);
-            this.calculateTenLottery();
-        }
-        else {
-            Notice.showDownNotice(`金币不足`);
-            if (mw.SystemUtil.isPIE) {
-                this.calculateTenLottery();
-            }
-            else {
-                mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
-                    mw.PurchaseService.getArkBalance(); //刷新代币数量
-                });
-            }
-        }
-    }
-    tenArkLottery() {
-        if (mw.SystemUtil.isPIE) {
-            this.calculateTenLottery();
-        }
-        else {
-            mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
-                mw.PurchaseService.getArkBalance(); //刷新代币数量
-            });
-        }
-    }
-    net_deliverGoods(commodityId, amount) {
-        if (commodityId == oneCommodityId) {
-            this.calculateOneLottery();
-        }
-        else if (commodityId == tenCommodityId) {
-            this.calculateTenLottery();
-        }
-    }
-    calculateOneLottery() {
-        let calculateKey = this.calculateKey();
-        while ((lotteryDatas.get(calculateKey).isLimit) && this.isHas(lotteryDatas.get(calculateKey).reward)) {
-            calculateKey = this.calculateKey();
-        }
-        let diamond = 0;
-        let lv = 0;
-        let bagIds = [];
-        switch (lotteryDatas.get(calculateKey).rewardType) {
-            case RewardType.None:
-                break;
-            case RewardType.Diamond:
-                diamond = lotteryDatas.get(calculateKey).reward;
-                break;
-            case RewardType.Lv:
-                lv = lotteryDatas.get(calculateKey).reward;
-                break;
-            case RewardType.Bag:
-                let bagId = lotteryDatas.get(calculateKey).reward;
-                bagIds.push(bagId);
-                break;
-        }
-        this.getLotteryPanel.startOneLottery(calculateKey, () => {
-            this.saveLottery(diamond, lv, bagIds);
-            this.getLotteryResultPanel.showPanel([calculateKey]);
-            TimeUtil.delaySecond(0.1).then(() => {
-                this.getLotteryResultPanel.showPanel([calculateKey]);
-            });
-            if (lotteryDatas.get(calculateKey).isLimit)
-                this.getLotteryPanel.updateItemHasState(calculateKey);
-            Notice.showDownNotice(`恭喜中奖`);
-        });
-    }
-    calculateTenLottery() {
-        let diamond = 0;
-        let lv = 0;
-        let bagIds = [];
-        let calculateKeys = [];
-        for (let i = 0; i < 10; ++i) {
-            let calculateKey = this.calculateKey();
-            while ((lotteryDatas.get(calculateKey).isLimit) &&
-                (this.isHas(lotteryDatas.get(calculateKey).reward) || bagIds.includes(lotteryDatas.get(calculateKey).reward))) {
-                calculateKey = this.calculateKey();
-            }
-            calculateKeys.push(calculateKey);
-            switch (lotteryDatas.get(calculateKey).rewardType) {
-                case RewardType.None:
-                    break;
-                case RewardType.Diamond:
-                    diamond += lotteryDatas.get(calculateKey).reward;
-                    break;
-                case RewardType.Lv:
-                    lv += lotteryDatas.get(calculateKey).reward;
-                    break;
-                case RewardType.Bag:
-                    let bagId = lotteryDatas.get(calculateKey).reward;
-                    bagIds.push(bagId);
-                    break;
-            }
-        }
-        this.getLotteryPanel.startTenLottery(calculateKeys, () => {
-            this.saveLottery(diamond, lv, bagIds);
-            this.getLotteryResultPanel.showPanel(calculateKeys);
-            TimeUtil.delaySecond(0.1).then(() => {
-                this.getLotteryResultPanel.showPanel(calculateKeys);
-            });
-            calculateKeys.forEach((key) => {
-                if (lotteryDatas.get(key).isLimit)
-                    this.getLotteryPanel.updateItemHasState(key);
-            });
-            Notice.showDownNotice(`恭喜中奖`);
-        });
-    }
-    calculateKey() {
-        let calculateValue = Utils.getRandomInteger(1, 1000);
-        let calculateKey = 1;
-        lotteryDatas.forEach((value, key) => {
-            if (calculateValue >= value.ratio[0] && calculateValue <= value.ratio[1]) {
-                calculateKey = key;
-            }
-        });
-        return calculateKey;
-    }
-    saveLottery(diamond, lv, bagIds) {
-        if (diamond > 0) {
-            Notice.showDownNotice(`获得${diamond}钻石`);
-            this.getPlayerModuleC.saveDiamond(diamond);
-        }
-        if (lv > 0) {
-            this.getPlayerModuleC.upLvByCount(lv);
-            Notice.showDownNotice(`等级+${lv}`);
-        }
-        if (bagIds && bagIds.length > 0) {
-            for (let i = 0; i < bagIds.length; ++i) {
-                this.getBagModuleC.setBagId(bagIds[i]);
-            }
-            Notice.showDownNotice(`打开背包使用`);
-        }
-    }
-    isHas(key) {
-        return this.getBagModuleC.isHasBagId(key);
-    }
-    initTrigger() {
-        lotteryTriggerMap.forEach((value, key) => {
-            value.triggers.forEach((triggerId) => {
-                mw.GameObject.asyncFindGameObjectById(triggerId).then((go) => {
-                    let trigger = go;
-                    trigger.onEnter.add((character) => {
-                        if (character.gameObjectId != this.localPlayer.character.gameObjectId)
-                            return;
-                        this.getLotteryPanel.show();
-                    });
-                });
-            });
-            value.worldUIIds.forEach((worldId) => {
-                mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
-                    let worldUI = v;
-                    let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(value.name);
-                    worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-                });
-            });
-        });
-    }
-}
-class LotteryModuleS extends ModuleS {
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.bindAction();
-    }
-    bindAction() {
-        mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
-    }
-    addShipOrder(playerId, orderId, commodityId, amount, confirmOrder) {
-        //根据playerId和commodityId来处理购买逻辑
-        this.getClient(playerId).net_deliverGoods(commodityId, amount);
-        confirmOrder(true); //调用这个方法表示确认收货成功
-    }
-}
-
-var foreign55 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    LotteryItem: LotteryItem,
-    LotteryModuleC: LotteryModuleC,
-    LotteryModuleS: LotteryModuleS,
-    LotteryPanel: LotteryPanel,
-    LotteryResultPanel: LotteryResultPanel,
-    get RewardType () { return RewardType; }
 });
 
 /**

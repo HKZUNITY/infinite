@@ -14,6 +14,7 @@ import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
 import { GuideModuleC } from "../GuideModule/GuideModule";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
+import { lotteryDatas } from "../LotteryModule/LotteryModule";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 import PlayerModuleS from "../PlayerModule/PlayerModuleS";
 import TaskModuleC from "../TaskModule/TaskModuleC";
@@ -149,6 +150,18 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.initBagData();
         this.initTrigger().then(() => {
         });
+        this.updateLotteryData();
+    }
+
+    private updateLotteryData(): void {
+        for (let i = 8; i <= 10; ++i) {
+            if (this.isHasBagId(lotteryDatas.get(i).reward)) {
+                lotteryDatas.get(i).reward = 20061;
+                lotteryDatas.get(i).icon = `mode_163292`;
+                lotteryDatas.get(i).name = `小舞`;
+                break;
+            }
+        }
     }
 
     private enterScenceUsing(): void {

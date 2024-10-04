@@ -74,6 +74,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     public async net_updateLvExpAndCoin(isAddLv: boolean, coin: number = 0): Promise<void> {
         let playerLv = this.data.playerLv;
         this.getHudModuleC.updateLvExpCoin(playerLv, this.data.exp, this.data.coin, isAddLv);
+        if (this.data.coin != this.coin) this.coin = this.data.coin;
         if (coin > 0) Notice.showDownNotice(`获得${coin}金币`);
         if (isAddLv) {
             Notice.showDownNotice("等级提升至 " + await Utils.getLvText(playerLv, this.localPlayer.userId) + " Lv." + playerLv);
@@ -141,7 +142,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         if (coin < 0 || isNaN(coin)) coin = 0;
         if (exp < 0 || isNaN(exp)) exp = 0;
         if (coin == 0 && exp == 0) return;
-        console.error(`coin:${coin} exp:${exp}`);
+        if (coin > 0) this.coin += coin;
         this.server.net_saveCoinAndExp(coin, exp);
     }
 
@@ -199,5 +200,14 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         this.saveCoinAndExp(0, exp);
         let fontColor: mw.LinearColor[] = Utils.randomColor();
         FlyText.instance.showFlyText(`Exp+${exp}`, this.localPlayer.character.worldTransform.position, fontColor[0], fontColor[1]);
+    }
+
+    public skill_1(): void {
+        GlobalData.baseSkillDamage = 2;
+        TimeUtil.delaySecond(GlobalData.skillContinue_1 + 1).then(() => {
+            GlobalData.baseSkillDamage = 1;
+        });
+        this.server.net_skill_1();
+        SoundService.playSound(GlobalData.skillSoundId_1);
     }
 }

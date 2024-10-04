@@ -3,6 +3,7 @@ import GlobalData from "../../const/GlobalData";
 import { Utils } from "../../Tools/utils";
 import LotteryItem_Generate from "../../ui-generate/module/LotteryModule/LotteryItem_generate";
 import LotteryPanel_Generate from "../../ui-generate/module/LotteryModule/LotteryPanel_generate";
+import LotteryResultItem_Generate from "../../ui-generate/module/LotteryModule/LotteryResultItem_generate";
 import LotteryResultPanel_Generate from "../../ui-generate/module/LotteryModule/LotteryResultPanel_generate";
 import { BagModuleC } from "../BagModule/BagModule";
 import HUDModuleC from "../HUDModule/HUDModuleC";
@@ -32,8 +33,10 @@ const oneCostCoin: number = 2888888;
 const oneCostArk: number = 2;
 const tenCostCoin: number = 28888888;
 const tenCostArk: number = 20;
+const hundredCostArk: number = 200;
 const oneCommodityId: string = "7I6uNtkFmg00001Nx";
 const tenCommodityId: string = "6tOZfQYVTV90001Ny";
+const hundredCommodityId: string = "3FClUXv0qbL0001Pq";
 
 export class LotteryItem extends LotteryItem_Generate {
     private lotteryModuleC: LotteryModuleC = null;
@@ -108,20 +111,24 @@ export class LotteryPanel extends LotteryPanel_Generate {
         this.mOneArkTextBlock.text = `抽1次`;
         this.mTenCoinTextBlock.text = `抽10次`;
         this.mTenArkTextBlock.text = `抽10次`;
+        this.mHundredArkTextBlock.text = `抽100次`;
         this.mOneCoinTipsTextBlock.text = `消耗${oneCostCoin}金币`;
         this.mOneArkTipsTextBlock.text = `消耗${oneCostArk}派队币`;
         this.mTenCoinTipsTextBlock.text = `消耗${tenCostCoin}金币`;
         this.mTenArkTipsTextBlock.text = `消耗${tenCostArk}派队币`;
+        this.mHundredArkTipsTextBlock.text = `消耗${hundredCostArk}派对币`;
         this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
         this.initItem();
     }
 
+    private isCanContinueClick: boolean = true;
     private bindButton(): void {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
         this.mOneCoinButton.onClicked.add(this.addOneCoinButton.bind(this));
         this.mOneArkButton.onClicked.add(this.addOneArkButton.bind(this));
         this.mTenCoinButton.onClicked.add(this.addTenCoinButton.bind(this));
         this.mTenArkButton.onClicked.add(this.addTenArkButton.bind(this));
+        this.mHundredArkButton.onClicked.add(this.addHundredArkButton.bind(this));
     }
 
     private addOneCoinButton(): void {
@@ -129,6 +136,14 @@ export class LotteryPanel extends LotteryPanel_Generate {
     }
 
     private addOneArkButton(): void {
+        if (!this.isCanContinueClick) {
+            Notice.showDownNotice(`3秒冷却`);
+            return;
+        }
+        this.isCanContinueClick = false;
+        TimeUtil.delaySecond(3).then(() => {
+            this.isCanContinueClick = true;
+        });
         this.getLotteryModuleC.oneArkLottery();
     }
 
@@ -137,7 +152,27 @@ export class LotteryPanel extends LotteryPanel_Generate {
     }
 
     private addTenArkButton(): void {
-        this.getLotteryModuleC.tenArkLottery();
+        if (!this.isCanContinueClick) {
+            Notice.showDownNotice(`3秒冷却`);
+            return;
+        }
+        this.isCanContinueClick = false;
+        TimeUtil.delaySecond(3).then(() => {
+            this.isCanContinueClick = true;
+        });
+        this.getLotteryModuleC.tenArkLottery(true);
+    }
+
+    private addHundredArkButton(): void {
+        if (!this.isCanContinueClick) {
+            Notice.showDownNotice(`3秒冷却`);
+            return;
+        }
+        this.isCanContinueClick = false;
+        TimeUtil.delaySecond(3).then(() => {
+            this.isCanContinueClick = true;
+        });
+        this.getLotteryModuleC.tenArkLottery(false);
     }
 
     private addCloseButton(): void {
@@ -293,6 +328,16 @@ export class LotteryPanel extends LotteryPanel_Generate {
     }
 }
 
+export class LotteryResultItem extends LotteryResultItem_Generate {
+    protected onStart(): void {
+
+    }
+
+    public setTextBlock(key: number): void {
+        this.mTextBlock.text = `${lotteryDatas.get(key).name} +${lotteryDatas.get(key).reward}`;
+    }
+}
+
 export class LotteryResultPanel extends LotteryResultPanel_Generate {
     protected onStart(): void {
         this.layer = mw.UILayerMiddle;
@@ -307,16 +352,40 @@ export class LotteryResultPanel extends LotteryResultPanel_Generate {
         this.hide();
     }
 
-    public showPanel(keys: number[]): void {
-        for (let i = 0; i < keys.length; ++i) {
-            (this[`mTextBlock_${i}`] as mw.TextBlock).text = `${lotteryDatas.get(keys[i]).name} +${lotteryDatas.get(keys[i]).reward}`;
-            (this[`mImage_${i}`] as mw.Image).visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }
-        for (let i = keys.length; i < 10; ++i) {
-            (this[`mImage_${i}`] as mw.Image).visibility = mw.SlateVisibility.Collapsed;
-        }
-        this.mContentCanvas.position = mw.Vector2.zero;
+    private lotteryResultItems: LotteryResultItem[] = [];
+    public showPanel(keys: number[], isOne: boolean): void {
         this.show();
+        if (isOne) {
+            this.mBgImage.size = new mw.Vector(600, 200);
+            this.mBgImage.position = new mw.Vector(this.rootCanvas.size.x / 2 - 300, this.rootCanvas.size.y / 2 - 100);
+            this.mScrollBox.size = new mw.Vector(600, 75);
+            this.mScrollBox.position = new mw.Vector(0, 75);
+        } else {
+            this.mBgImage.size = new mw.Vector(600, 850);
+            this.mBgImage.position = new mw.Vector(this.rootCanvas.size.x / 2 - 300, this.rootCanvas.size.y / 2 - 425);
+            this.mScrollBox.size = new mw.Vector(600, 750);
+            this.mScrollBox.position = new mw.Vector(0, 75);
+        }
+        if (keys.length > this.lotteryResultItems.length) {
+            for (let i = 0; i < this.lotteryResultItems.length; ++i) {
+                this.lotteryResultItems[i].setTextBlock(keys[i]);
+                Utils.setWidgetVisibility(this.lotteryResultItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+            }
+            for (let i = this.lotteryResultItems.length; i < keys.length; ++i) {
+                let lotteryResultItem = mw.UIService.create(LotteryResultItem);
+                lotteryResultItem.setTextBlock(keys[i]);
+                this.mContentCanvas.addChild(lotteryResultItem.uiObject);
+                this.lotteryResultItems.push(lotteryResultItem);
+            }
+        } else {
+            for (let i = 0; i < keys.length; ++i) {
+                this.lotteryResultItems[i].setTextBlock(keys[i]);
+                Utils.setWidgetVisibility(this.lotteryResultItems[i].uiObject, mw.SlateVisibility.SelfHitTestInvisible);
+            }
+            for (let i = keys.length; i < this.lotteryResultItems.length; ++i) {
+                Utils.setWidgetVisibility(this.lotteryResultItems[i].uiObject, mw.SlateVisibility.Collapsed);
+            }
+        }
     }
 }
 
@@ -429,11 +498,11 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         let coin = this.getPlayerModuleC.getCoin();
         if (coin >= tenCostCoin) {
             this.getPlayerModuleC.saveCoin(-tenCostCoin);
-            this.calculateTenLottery();
+            this.calculateTenLottery(true);
         } else {
             Notice.showDownNotice(`金币不足`);
             if (mw.SystemUtil.isPIE) {
-                this.calculateTenLottery();
+                this.calculateTenLottery(true);
             } else {
                 mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
                     mw.PurchaseService.getArkBalance();//刷新代币数量
@@ -442,11 +511,11 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         }
     }
 
-    public tenArkLottery(): void {
+    public tenArkLottery(isTen: boolean): void {
         if (mw.SystemUtil.isPIE) {
-            this.calculateTenLottery();
+            this.calculateTenLottery(isTen);
         } else {
-            mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
+            mw.PurchaseService.placeOrder(isTen ? tenCommodityId : hundredCommodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();//刷新代币数量
             });
         }
@@ -457,7 +526,9 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         if (commodityId == oneCommodityId) {
             this.calculateOneLottery();
         } else if (commodityId == tenCommodityId) {
-            this.calculateTenLottery();
+            this.calculateTenLottery(true);
+        } else if (commodityId == hundredCommodityId) {
+            this.calculateTenLottery(false);
         }
     }
 
@@ -485,22 +556,21 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         }
         this.getLotteryPanel.startOneLottery(calculateKey, () => {
             this.saveLottery(diamond, lv, bagIds);
-            this.getLotteryResultPanel.showPanel([calculateKey]);
-            TimeUtil.delaySecond(0.1).then(() => {
-                this.getLotteryResultPanel.showPanel([calculateKey]);
-            });
+            this.getLotteryResultPanel.showPanel([calculateKey], true);
             if (lotteryDatas.get(calculateKey).isLimit) this.getLotteryPanel.updateItemHasState(calculateKey);
             Notice.showDownNotice(`恭喜中奖`);
         });
     }
 
-    private calculateTenLottery(): void {
+    private calculateTenLottery(isTen: boolean): void {
         let diamond: number = 0;
         let lv: number = 0;
         let bagIds: number[] = [];
         let calculateKeys: number[] = [];
 
-        for (let i = 0; i < 10; ++i) {
+        let len = isTen ? 10 : 100;
+
+        for (let i = 0; i < len; ++i) {
             let calculateKey = this.calculateKey();
             while ((lotteryDatas.get(calculateKey).isLimit) &&
                 (this.isHas(lotteryDatas.get(calculateKey).reward) || bagIds.includes(lotteryDatas.get(calculateKey).reward))) {
@@ -524,10 +594,7 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         }
         this.getLotteryPanel.startTenLottery(calculateKeys, () => {
             this.saveLottery(diamond, lv, bagIds);
-            this.getLotteryResultPanel.showPanel(calculateKeys);
-            TimeUtil.delaySecond(0.1).then(() => {
-                this.getLotteryResultPanel.showPanel(calculateKeys);
-            });
+            this.getLotteryResultPanel.showPanel(calculateKeys, false);
             calculateKeys.forEach((key: number) => {
                 if (lotteryDatas.get(key).isLimit) this.getLotteryPanel.updateItemHasState(key);
             });

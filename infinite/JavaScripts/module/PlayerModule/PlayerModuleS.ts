@@ -353,7 +353,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             this.saveLv(player, this.currentData.playerLv - preLv, this.currentData.playerLv);
             this.playEffectAndSoundToPlayer(player);
         }
-        this.getClient(player).net_updateLvExpAndCoin(isAddLv);
+        this.getClient(player).net_updateLvExpAndCoin(isAddLv, coin);
     }
 
     @Decorator.noReply()
@@ -386,6 +386,20 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (!this.playerLifeMap.has(player.playerId)) return;
         if (this.playerLifeMap.get(player.playerId).playerLifebar.getFlyId == key) return;
         this.playerLifeMap.get(player.playerId).playerLifebar.flyId = key;
+    }
+
+    public net_skill_1(): void {
+        let player = this.currentPlayer;
+        Utils.asyncDownloadAsset(GlobalData.skillAnimation_1).then(() => {
+            player.character.loadAnimation(GlobalData.skillAnimation_1).play();
+            let effectId = EffectService.playOnGameObject(GlobalData.skillEffectId_1, player.character, { slotType: mw.HumanoidSlotType.Root, loopCount: 0, scale: mw.Vector.one.multiply(2) });
+            let smallScale = player.character.worldTransform.scale.clone();
+            player.character.worldTransform.scale = mw.Vector.one.multiply(GlobalData.skillScale_1);
+            TimeUtil.delaySecond(GlobalData.skillContinue_1).then(() => {
+                player.character.worldTransform.scale = smallScale;
+                EffectService.stop(effectId);
+            });
+        });
     }
 }
 

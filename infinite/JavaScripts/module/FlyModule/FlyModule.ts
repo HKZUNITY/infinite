@@ -84,7 +84,16 @@ export class SwordItem extends SwordItem_Generate {
         this.mClickButton.onClicked.add(this.addClickButton.bind(this));
     }
 
+    private isCanContinueClick: boolean = true;
     private addClickButton(): void {
+        if (!this.isCanContinueClick) {
+            Notice.showDownNotice(`3秒冷却`);
+            return;
+        }
+        this.isCanContinueClick = false;
+        TimeUtil.delaySecond(3).then(() => {
+            this.isCanContinueClick = true;
+        });
         this.getFlyModuleC.clickSwordItem(this.key, () => {
             this.buyComplete();
         });

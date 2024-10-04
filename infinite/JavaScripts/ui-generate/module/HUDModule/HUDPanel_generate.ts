@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.09.30-20.30.18
+ * TIME: 2024.10.04-17.29.49
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -105,6 +105,34 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mFlyTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mFlyCanvas/mFlyTextBlock') as mw.TextBlock
 		}
 		return this.mFlyTextBlock_Internal
+	}
+	private mSkillCanvas_1_Internal: mw.Canvas
+	public get mSkillCanvas_1(): mw.Canvas {
+		if(!this.mSkillCanvas_1_Internal&&this.uiWidgetBase) {
+			this.mSkillCanvas_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mSkillCanvas_1') as mw.Canvas
+		}
+		return this.mSkillCanvas_1_Internal
+	}
+	private mSkillMaskButton_1_Internal: mw.MaskButton
+	public get mSkillMaskButton_1(): mw.MaskButton {
+		if(!this.mSkillMaskButton_1_Internal&&this.uiWidgetBase) {
+			this.mSkillMaskButton_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mSkillCanvas_1/mSkillMaskButton_1') as mw.MaskButton
+		}
+		return this.mSkillMaskButton_1_Internal
+	}
+	private mSkillTextBlock_1_Internal: mw.TextBlock
+	public get mSkillTextBlock_1(): mw.TextBlock {
+		if(!this.mSkillTextBlock_1_Internal&&this.uiWidgetBase) {
+			this.mSkillTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mSkillCanvas_1/mSkillTextBlock_1') as mw.TextBlock
+		}
+		return this.mSkillTextBlock_1_Internal
+	}
+	private mSkillCDTextBlock_1_Internal: mw.TextBlock
+	public get mSkillCDTextBlock_1(): mw.TextBlock {
+		if(!this.mSkillCDTextBlock_1_Internal&&this.uiWidgetBase) {
+			this.mSkillCDTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mSkillCanvas_1/mSkillCDTextBlock_1') as mw.TextBlock
+		}
+		return this.mSkillCDTextBlock_1_Internal
 	}
 	private mPlayerButton_Internal: mw.Button
 	public get mPlayerButton(): mw.Button {
@@ -735,6 +763,12 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mFlyTextBlock)
+		
+	
+		this.initLanguage(this.mSkillTextBlock_1)
+		
+	
+		this.initLanguage(this.mSkillCDTextBlock_1)
 		
 	
 		this.initLanguage(this.mLotteryTextBlock)

@@ -33,13 +33,13 @@ export default class PlayerData extends Subdata {
     }
 
     public saveCoinAndExp(coin: number, exp: number): void {
-        this.saveCoin(coin);
+        this.saveCoin(coin, false);
         this.addExp(exp);
         this.save(true);
     }
 
     public saveExpAndCoin(value: number): void {
-        this.saveCoin(value);
+        this.saveCoin(value, false);
         this.addExp(value);
         this.save(true);
     }
@@ -62,9 +62,9 @@ export default class PlayerData extends Subdata {
         return (this.playerLv + 1) * GlobalData.upgradeExpMultiple;
     }
 
-    public saveCoin(value: number): void {
+    public saveCoin(value: number, isAutoSave: boolean = true): void {
         this.coin += value;
-        this.save(true);
+        if (isAutoSave) this.save(true);
     }
 
     public saveDiamond(value: number): void {

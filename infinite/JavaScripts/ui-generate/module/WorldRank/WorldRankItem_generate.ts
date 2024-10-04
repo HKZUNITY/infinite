@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.09.30-20.30.18
+ * TIME: 2024.10.04-17.29.50
  */
  
 @UIBind('UI/module/WorldRank/WorldRankItem.ui')

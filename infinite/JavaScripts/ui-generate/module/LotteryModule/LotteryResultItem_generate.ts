@@ -2,16 +2,16 @@
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips.ui
- * TIME: 2024.10.04-17.29.49
+ * UI: UI/module/LotteryModule/LotteryResultItem.ui
+ * TIME: 2024.10.04-17.29.50
  */
  
-@UIBind('UI/common/WorldTips/WorldTips.ui')
-export default class WorldTips_Generate extends UIScript {
+@UIBind('UI/module/LotteryModule/LotteryResultItem.ui')
+export default class LotteryResultItem_Generate extends UIScript {
 		private mTextBlock_Internal: mw.TextBlock
 	public get mTextBlock(): mw.TextBlock {
 		if(!this.mTextBlock_Internal&&this.uiWidgetBase) {
-			this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock') as mw.TextBlock
+			this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mTextBlock') as mw.TextBlock
 		}
 		return this.mTextBlock_Internal
 	}
@@ -37,9 +37,6 @@ export default class WorldTips_Generate extends UIScript {
 	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TextBlock_1") as any);
-		
-	
 	}
 	
 	/*初始化多语言*/

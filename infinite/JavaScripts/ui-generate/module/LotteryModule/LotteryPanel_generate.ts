@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryPanel.ui
- * TIME: 2024.09.30-20.30.18
+ * TIME: 2024.10.04-17.29.50
  */
  
 @UIBind('UI/module/LotteryModule/LotteryPanel.ui')
@@ -134,6 +134,34 @@ export default class LotteryPanel_Generate extends UIScript {
 		}
 		return this.mTenCoinTipsTextBlock_Internal
 	}
+	private mHundredArkCanvas_Internal: mw.Canvas
+	public get mHundredArkCanvas(): mw.Canvas {
+		if(!this.mHundredArkCanvas_Internal&&this.uiWidgetBase) {
+			this.mHundredArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredArkCanvas') as mw.Canvas
+		}
+		return this.mHundredArkCanvas_Internal
+	}
+	private mHundredArkButton_Internal: mw.Button
+	public get mHundredArkButton(): mw.Button {
+		if(!this.mHundredArkButton_Internal&&this.uiWidgetBase) {
+			this.mHundredArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredArkCanvas/mHundredArkButton') as mw.Button
+		}
+		return this.mHundredArkButton_Internal
+	}
+	private mHundredArkTextBlock_Internal: mw.TextBlock
+	public get mHundredArkTextBlock(): mw.TextBlock {
+		if(!this.mHundredArkTextBlock_Internal&&this.uiWidgetBase) {
+			this.mHundredArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredArkCanvas/mHundredArkTextBlock') as mw.TextBlock
+		}
+		return this.mHundredArkTextBlock_Internal
+	}
+	private mHundredArkTipsTextBlock_Internal: mw.TextBlock
+	public get mHundredArkTipsTextBlock(): mw.TextBlock {
+		if(!this.mHundredArkTipsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mHundredArkTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredArkCanvas/mHundredArkTipsTextBlock') as mw.TextBlock
+		}
+		return this.mHundredArkTipsTextBlock_Internal
+	}
 	private mMoneyCanvas_Internal: mw.Canvas
 	public get mMoneyCanvas(): mw.Canvas {
 		if(!this.mMoneyCanvas_Internal&&this.uiWidgetBase) {
@@ -220,6 +248,12 @@ export default class LotteryPanel_Generate extends UIScript {
 		this.mTenCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mHundredArkButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mHundredArkButton");
+		});
+		this.mHundredArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
 		});
@@ -255,6 +289,12 @@ export default class LotteryPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mTenCoinTipsTextBlock)
+		
+	
+		this.initLanguage(this.mHundredArkTextBlock)
+		
+	
+		this.initLanguage(this.mHundredArkTipsTextBlock)
 		
 	
 		this.initLanguage(this.mCoinCountTextBlock)

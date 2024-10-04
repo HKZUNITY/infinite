@@ -140,7 +140,7 @@ export class ColdWeapon {
             }
             Console.log("使用冷兵器攻击了" + e.gameObjectId);
             // PrefabEvent.PrefabEvtFight.hurt(Player.localPlayer.character.guid, e.guid, this._hitDamage);
-            PrefabEvent.PrefabEvtFight.hit(Player.localPlayer.character.gameObjectId, e.gameObjectId, this._hitDamage, e.worldTransform.position);
+            PrefabEvent.PrefabEvtFight.hit(Player.localPlayer.character.gameObjectId, e.gameObjectId, this._hitDamage * GlobalData.baseSkillDamage, e.worldTransform.position);
         });
     }
 

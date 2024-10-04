@@ -141,6 +141,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mSwordButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenSwordAction.call();
 		});
+		this.initSkill_1();
 	}
 
 	public updateInvincibleCanvasState(visibility: boolean): void {
@@ -322,6 +323,17 @@ export default class HUDPanel extends HUDPanel_Generate {
 		GlobalData.atk = atk;
 		this.mAtkTextBlock.text = "攻击力：" + atk;
 		ColdWeapon.getInstance().updateHitDamage(atk);
+
+		if (!this.isUnlockSkill_1) {
+			if (lv >= GlobalData.skillLvLimit_1) {
+				this.isUnlockSkill_1 = true;
+				this.mSkillCDTextBlock_1.fontSize = 50;
+				this.mSkillCDTextBlock_1.text = ``;
+			} else {
+				this.mSkillCDTextBlock_1.fontSize = 25;
+				this.mSkillCDTextBlock_1.text = `${GlobalData.skillLvLimit_1}级解锁`;
+			}
+		}
 	}
 
 	public updateAtk(lv: number, addAtk: number): void {
@@ -381,6 +393,45 @@ export default class HUDPanel extends HUDPanel_Generate {
 			if (this.curInputIndex != index) return;
 			ColdWeapon.getInstance().endCharge(true);
 			this.curInputIndex = -1;
+		});
+	}
+
+	private isUnlockSkill_1: boolean = false;
+	private skillIsCanAtk_1: boolean = true;
+	private initSkill_1(): void {
+		this.mSkillTextBlock_1.text = `<size=30>${GlobalData.skillName_1}</size>\n<size=15>${GlobalData.skillContinue_1}秒内攻击力翻倍</size>`;
+		this.mSkillMaskButton_1.fanShapedValue = 1;
+		this.mSkillMaskButton_1.clickedDelegate.add(() => {
+			Event.dispatchToLocal("PlayButtonClick", this.mSkillMaskButton_1.name);
+			if (!this.isUnlockSkill_1) {
+				Notice.showDownNotice(`${GlobalData.skillLvLimit_1}级开启${GlobalData.skillName_1}`);
+				return;
+			}
+			if (!this.skillIsCanAtk_1) {
+				Notice.showDownNotice(`技能还没准备好`);
+				return;
+			}
+			this.getHudModuleC.onSkillAction.call((isCakAtk: boolean) => {
+				if (!isCakAtk) return;
+				this.getHudModuleC.onOnOffFlyAction.call(false);
+				new Tween({ fanShapedValue: 0 })
+					.to({ fanShapedValue: 1 }, GlobalData.skillCD_1 * 1000)
+					.onStart(() => {
+						this.mSkillMaskButton_1.fanShapedValue = 0;
+						this.skillIsCanAtk_1 = false;
+						this.mSkillCDTextBlock_1.text = `${GlobalData.skillCD_1}`;
+					})
+					.onUpdate((v) => {
+						this.mSkillMaskButton_1.fanShapedValue = v.fanShapedValue;
+						this.mSkillCDTextBlock_1.text = `${(GlobalData.skillCD_1 * (1 - v.fanShapedValue)).toFixed(0)}`;
+					})
+					.onComplete(() => {
+						this.mSkillMaskButton_1.fanShapedValue = 1;
+						this.skillIsCanAtk_1 = true;
+						this.mSkillCDTextBlock_1.text = ``;
+					})
+					.start();
+			});
 		});
 	}
 	//#endregion

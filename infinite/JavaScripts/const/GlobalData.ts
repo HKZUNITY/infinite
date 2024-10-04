@@ -66,6 +66,16 @@ export default class GlobalData {
     public static upgradeExpMultiple: number = 500;
     public static monsterHurt: number = 200;
     public static attackMp: number = 1;
+    public static skillCD_1: number = 60;
+    public static skillMp_1: number = 100;
+    public static skillLvLimit_1: number = 90;
+    public static skillContinue_1: number = 20;
+    public static skillName_1: string = `杀神领域`;
+    public static baseSkillDamage: number = 1;
+    public static skillSoundId_1: string = `307720`;
+    public static skillEffectId_1: string = `113913`;
+    public static skillAnimation_1: string = "284915";
+    public static skillScale_1: number = 1.8;
 
     public static pathStrMap: Map<number, string> = new Map<number, string>(
         [

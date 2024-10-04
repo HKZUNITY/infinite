@@ -114,6 +114,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onOpenSwordAction: Action = new Action();
     public onOnOffUpExpAction: Action1<boolean> = new Action1<boolean>();
     public onOnOffFlyAction: Action1<boolean> = new Action1<boolean>();
+    public onSkillAction: Action1<(isCanAtk: boolean) => void> = new Action1<(isCanAtk: boolean) => void>();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
@@ -216,6 +217,16 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         //     this.getPlayerModuleC.isInvincible(key != 1);
         //     this.getHudPanel.updateInvincibleCanvasState(key != 1);
         // });
+
+        this.onSkillAction.add((callBack: (isCakAtk: boolean) => void) => {
+            let isHaveMp = this.isHaveMp(GlobalData.skillMp_1);
+            if (callBack) callBack(isHaveMp);
+            if (!isHaveMp) {
+                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                return;
+            }
+            this.getPlayerModuleC.skill_1();
+        });
     }
 
     protected onEnterScene(sceneType: number): void {

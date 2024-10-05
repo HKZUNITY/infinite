@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordPanel.ui
- * TIME: 2024.10.04-17.29.49
+ * TIME: 2024.10.06-00.28.28
  */
  
 @UIBind('UI/module/FlyModule/SwordPanel.ui')
@@ -15,10 +15,17 @@ export default class SwordPanel_Generate extends UIScript {
 		}
 		return this.mTitleTextBlock_Internal
 	}
+	private mScrollBox_Internal: mw.ScrollBox
+	public get mScrollBox(): mw.ScrollBox {
+		if(!this.mScrollBox_Internal&&this.uiWidgetBase) {
+			this.mScrollBox_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mScrollBox') as mw.ScrollBox
+		}
+		return this.mScrollBox_Internal
+	}
 	private mCanvas_Internal: mw.Canvas
 	public get mCanvas(): mw.Canvas {
 		if(!this.mCanvas_Internal&&this.uiWidgetBase) {
-			this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas') as mw.Canvas
+			this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mScrollBox/mCanvas') as mw.Canvas
 		}
 		return this.mCanvas_Internal
 	}

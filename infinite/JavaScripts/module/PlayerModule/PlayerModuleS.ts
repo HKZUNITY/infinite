@@ -67,7 +67,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let sendPlayer = this.allPlayerMap.get(senderGuid);
         let targetPlayer = this.allPlayerMap.get(targetGuid);
         if (this.playerLifeMap.get(targetPlayer.playerId).isDie || this.playerLifeMap.get(sendPlayer.playerId).isDie) return;
-        if (this.playerLifeMap.get(targetPlayer.playerId).playerLifebar.getIsInvincible) {
+        if (this.playerLifeMap.get(targetPlayer.playerId).playerLifebar.getIsInvincible || this.playerLifeMap.get(sendPlayer.playerId).playerLifebar.getIsInvincible) {
             Console.error("已开启队友免伤");
             return;
         }

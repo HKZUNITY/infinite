@@ -10,29 +10,30 @@ import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 
-const ringSoulNames: string[] = ["十年", "百年", "千年", "万年", "十万年", "百万年"];
+const ringSoulNames: string[] = ["十年", "百年", "千年", "万年", "十万年", "百万年", "千万年", "万万年", "亿万年"];
 const figureStrs: string[] = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 const costDiamonds: number[][] = [
-    [8, 28, 38, 58, 108, 198],
-    [18, 38, 58, 108, 198, 298],
-    [28, 48, 88, 158, 298, 398],
-    [38, 58, 108, 198, 398, 498],
-    [48, 88, 158, 298, 498, 598],
-    [58, 108, 198, 398, 598, 698],
-    [88, 158, 298, 498, 698, 798],
-    [108, 198, 398, 598, 798, 898],
-    [158, 298, 498, 698, 898, 998],
-    [198, 398, 598, 798, 998, 1998],
+    [8, 28, 38, 58, 108, 198, 298],
+    [18, 38, 58, 108, 198, 298, 398],
+    [28, 48, 88, 158, 298, 398, 498],
+    [38, 58, 108, 198, 398, 498, 598],
+    [48, 88, 158, 298, 498, 598, 698],
+    [58, 108, 198, 398, 598, 698, 798],
+    [88, 158, 298, 498, 698, 798, 898],
+    [108, 198, 398, 598, 798, 898, 998],
+    [158, 298, 498, 698, 898, 998, 1998],
+    [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998],
 ];
 const upSound: string = "169179";
-const ringSoulIconColors: string[] = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#00FF00FF"];
+const ringSoulIconColors: string[] = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#00FF00FF", "#191970FF", "#FFC0CBFF", "#FFD700FF"];
 const ringSoulPrefabIds: string[] = [
     "322A7FF14588209BBD4B5DAF37D38FA2",
     "F89DFCA24FEC54C1F4CFBEAB9D4FF27A",
     "6CEAFD0A4DAA30D8FB89E49C5B28CD3F",
     "C5944BA6404AC45A865163BBCC3766DD",
     "19F4724F4E312B74233E1FA76EB9EEA9",
-    "0966F94E490464A517EFEB877B7C8892"
+    "0966F94E490464A517EFEB877B7C8892",
+    "BD92397747C1FA1BEE9A1B83F63DE479"
 ]
 const ringSoulPrefabIdss: string[] = [
     "7C36BC974D5F9E55375E31BA8161C366",
@@ -40,7 +41,10 @@ const ringSoulPrefabIdss: string[] = [
     "76F94448413EFBCDE982F6AD77A82674",
     "E441096546A41ADCE42B85979BEE09CE",
     "3944E8254E94BA46BAE85D9C37DAB6A7",
-    "12901F834472C74D86A077A1D286D75E"
+    "12901F834472C74D86A077A1D286D75E",
+    "DE9A8A8140C040DE5FB2F398714DAA15",
+    "E041C96443AE9102CCB9368D643C445D",
+    "BC5FB63A4065EE9A2B04C98E2AA4948D"
 ]
 const ringSoulSlots: number[] = [23, 23, 23, 23, 23, 23, 23, 23, 23, 23];
 const ringSoulOffsetPoss: mw.Vector[] = [
@@ -460,7 +464,7 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
     public setRingSoulItemData(ringSoulPage: number): void {
         this.ringSoulPage = ringSoulPage;
         this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
-        for (let i = 1; i <= 6; ++i) {
+        for (let i = 1; i <= 9; ++i) {
             let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
             ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
             this.ringSoulItemChilds.push(ringSoulItemChild);
@@ -628,7 +632,7 @@ export class RingSoulItem extends RingSoulItem_Generate {
     public setRingSoulItemData(ringSoulPage: number): void {
         this.ringSoulPage = ringSoulPage;
         this.ringSoulIndex = this.getRingSoulModuleC.getRingSoulIndex(this.ringSoulPage);
-        for (let i = 1; i <= 6; ++i) {
+        for (let i = 1; i <= 7; ++i) {
             let ringSoulItemChild = mw.UIService.create(RingSoulItemChild);
             ringSoulItemChild.setRingSoulItemChildData(i, this.ringSoulIndex, ringSoulPage);
             this.ringSoulItemChilds.push(ringSoulItemChild);

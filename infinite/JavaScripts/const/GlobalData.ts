@@ -92,7 +92,7 @@ export default class GlobalData {
 
     public static gameName: string = `斗神大陆(我的魂环无限升级)`;
 
-    public static addCoinCount: number = 10000;
+    public static addCoinCount: number = 1000000;
     public static addDiamondCount: number = 5;
 
     public static arkIcon: string = "312541";

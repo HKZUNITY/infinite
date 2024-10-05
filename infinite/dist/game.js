@@ -1460,7 +1460,7 @@ GlobalData.baseSkillDamage = 1;
 GlobalData.skillSoundId_1 = `307720`;
 GlobalData.skillEffectId_1 = `113913`;
 GlobalData.skillAnimation_1 = "284915";
-GlobalData.skillScale_1 = 1.8;
+GlobalData.skillScale_1 = 1.5;
 GlobalData.pathStrMap = new Map([
     [1, "1C38507C"],
     [2, "0120DDB3"],

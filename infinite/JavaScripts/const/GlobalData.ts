@@ -75,7 +75,7 @@ export default class GlobalData {
     public static skillSoundId_1: string = `307720`;
     public static skillEffectId_1: string = `113913`;
     public static skillAnimation_1: string = "284915";
-    public static skillScale_1: number = 1.8;
+    public static skillScale_1: number = 1.5;
 
     public static pathStrMap: Map<number, string> = new Map<number, string>(
         [

@@ -16796,10 +16796,10 @@ const swordTriggerId = "0D77F0C2";
 const swordWorldUIId = "21930ABA";
 const swordDataMap = new Map();
 swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73" });
-swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0" });
-swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D" });
 swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "0F6CADC5", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991" });
+swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0" });
 swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "373123C7", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5" });
+swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D" });
 swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249" });
 swordDataMap.set(7, { id: 7, name: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A" });
 class FlyModuleC extends ModuleC {

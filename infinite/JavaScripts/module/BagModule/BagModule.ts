@@ -154,13 +154,28 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     private updateLotteryData(): void {
-        for (let i = 8; i <= 10; ++i) {
-            if (this.isHasBagId(lotteryDatas.get(i).reward)) {
-                lotteryDatas.get(i).reward = 20061;
-                lotteryDatas.get(i).icon = `mode_163292`;
-                lotteryDatas.get(i).name = `小舞`;
-                break;
-            }
+        // for (let i = 8; i <= 10; ++i) {
+        //     if (this.isHasBagId(lotteryDatas.get(i).reward)) {
+        //         lotteryDatas.get(i).reward = 20061;
+        //         lotteryDatas.get(i).icon = `mode_163292`;
+        //         lotteryDatas.get(i).name = `小舞`;
+        //         break;
+        //     }
+        // }
+        if (this.isHasBagId(lotteryDatas.get(8).reward)) {
+            lotteryDatas.get(8).reward = 20061;
+            lotteryDatas.get(8).icon = `mode_163292`;
+            lotteryDatas.get(8).name = `小舞`;
+        }
+        if (this.isHasBagId(lotteryDatas.get(9).reward)) {
+            lotteryDatas.get(9).reward = 10044;
+            lotteryDatas.get(9).icon = `mode_151245`;
+            lotteryDatas.get(9).name = `武魂-机甲斩狂风斩(男)`;
+        }
+        if (this.isHasBagId(lotteryDatas.get(10).reward)) {
+            lotteryDatas.get(10).reward = 10045;
+            lotteryDatas.get(10).icon = `mode_151897`;
+            lotteryDatas.get(10).name = `武魂-机甲斩狂风斩(女)`;
         }
     }
 

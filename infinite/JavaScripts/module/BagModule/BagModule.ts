@@ -430,6 +430,9 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             } else if (GameConfig.BagInfo.getElement(bagId).GetType == 4) {
                 Notice.showDownNotice(`请先完成新手引导`);
                 return;
+            } else if (GameConfig.BagInfo.getElement(bagId).GetType == 5) {
+                Notice.showDownNotice(`看广告获得`);
+                return;
             }
         }
         console.warn(`${bagId}`);
@@ -1001,6 +1004,8 @@ export class BagItem extends BagItem_Generate {
                 this.mHasTextBlock.text = "抽奖获取";
             } else if (this.bagInfoElement.GetType == 4) {
                 this.mHasTextBlock.text = "完成新手引导";
+            } else if (this.bagInfoElement.GetType == 5) {
+                this.mHasTextBlock.text = "看广告获得";
             } else {
                 this.mHasTextBlock.text = "点击获得";
             }

@@ -24079,7 +24079,9 @@ let NewScript = class NewScript extends Script {
                 this.getBagModuleC.onCompleted(this.bagId);
             }
             else {
-                this.nextAds();
+                TimeUtil.delaySecond(2).then(() => {
+                    this.nextAds();
+                });
             }
         }, `观看${this.adsCount - this.curAdsCount}次广告\n免费获得`, `取消`, `领取`);
     }

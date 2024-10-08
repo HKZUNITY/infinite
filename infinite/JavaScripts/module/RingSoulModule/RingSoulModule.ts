@@ -364,7 +364,7 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
         MapEx.forEach(this.ringSoul, (key: number, value: number) => {
             rarity += value;
         });
-        return rarity * 0.05;
+        return Number((rarity * 0.05).toFixed(2));
     }
 
     public onOffRingSoul(isOpenRingSoul: boolean): void {
@@ -443,7 +443,7 @@ export class RingSoulData extends Subdata {
         MapEx.forEach(this.ringSoul, (key: number, value: number) => {
             rarity += value;
         });
-        return rarity * 0.05;
+        return Number((rarity * 0.05).toFixed(2));
     }
 }
 

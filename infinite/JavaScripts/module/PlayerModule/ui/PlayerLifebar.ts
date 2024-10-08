@@ -168,6 +168,7 @@ export default class PlayerLifebar extends mw.Script {
     }
 
     private flyJian: mw.GameObject = null;
+    private flyCharacter: mw.Character = null;
     private flyJianAni: mw.Animation = null;
     private flyAnimationId: string = "";
     private isFlying: boolean = false;
@@ -177,6 +178,10 @@ export default class PlayerLifebar extends mw.Script {
                 GameObjPool.despawn(this.flyJian);
                 this.flyJian = null;
             }
+            if (this.flyCharacter) {
+                GameObjPool.despawn(this.flyCharacter);
+                this.flyCharacter = null;
+            }
             if (this.flyJianAni) {
                 this.flyJianAni.stop();
                 this.flyJianAni = null;
@@ -185,19 +190,40 @@ export default class PlayerLifebar extends mw.Script {
             this.isFlying = false;
         } else {
             if (!this.character) return;
+
             if (this.flyJian) {
                 GameObjPool.despawn(this.flyJian);
                 this.flyJian = null;
             }
+
+            if (this.flyCharacter) {
+                GameObjPool.despawn(this.flyCharacter);
+                this.flyCharacter = null;
+            }
+
             if (!swordDataMap.has(this.flyId)) return;
             let flyData = swordDataMap.get(this.flyId);
+
             Utils.asyncDownloadAsset(flyData.swordPrefabId).then(() => {
                 GameObjPool.asyncSpawn(flyData.swordPrefabId).then((go: mw.GameObject) => {
-                    this.flyJian = go;
-                    this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
-                    this.flyJian.localTransform.position = mw.Vector.zero;
-                    this.flyJian.localTransform.rotation = mw.Rotation.zero;
-
+                    if (flyData.isCharacter) {
+                        this.flyCharacter = go as mw.Character;
+                        this.flyCharacter.setCollision(mw.PropertyStatus.Off, true);
+                        this.character.attachToSlot(this.flyCharacter, mw.HumanoidSlotType.Root);
+                        this.flyCharacter.localTransform.scale = mw.Vector.one.multiply(4);
+                        this.flyCharacter.localTransform.position = new mw.Vector(12, 0, 30);
+                        this.flyCharacter.localTransform.rotation = mw.Rotation.zero;
+                        Utils.asyncDownloadAsset(`160628`).then(() => {
+                            let flyCharacterAnimation = this.flyCharacter.loadAnimation(`160628`);//TODO-小龙动画
+                            flyCharacterAnimation.loop = 0;
+                            flyCharacterAnimation.play();
+                        });
+                    } else {
+                        this.flyJian = go;
+                        this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
+                        this.flyJian.localTransform.position = mw.Vector.zero;
+                        this.flyJian.localTransform.rotation = mw.Rotation.zero;
+                    }
                     this.flyAnimationId = flyData.animationId;
                     this.flyJianAni = this.character.loadAnimation(this.flyAnimationId);
                     this.flyJianAni.loop = 0;
@@ -220,6 +246,7 @@ export default class PlayerLifebar extends mw.Script {
     protected onDestroy(): void {
         if (this.pet) GameObjPool.despawn(this.pet);
         if (this.flyJian) GameObjPool.despawn(this.flyJian);
+        if (this.flyCharacter) GameObjPool.despawn(this.flyCharacter);
         this._hpBarUI?.destroy();
         this._hpBarWidget?.destroy();
     }

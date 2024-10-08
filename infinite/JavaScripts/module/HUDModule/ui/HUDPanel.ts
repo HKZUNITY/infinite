@@ -198,7 +198,10 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.clearCountDownInterval();
 		this.deadCountDownInterval = TimeUtil.setInterval(() => {
 			this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
-			if (this.deadCountDown < 0) this.clearCountDownInterval();
+			if (this.deadCountDown < 0) {
+				this.clearCountDownInterval();
+				this.endDeadCountDown();
+			}
 		}, 1);
 	}
 

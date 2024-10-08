@@ -195,7 +195,7 @@ export class SwordPanel extends SwordPanel_Generate {
     }
 
     public updateRarityTextBlock(hpRarity: number, atkRarity: number): void {
-        this.mTotalRarityTextBlock.text = `拥有不佩戴使用加成也生效\n御剑飞行总加成\n血量提升${1 + hpRarity}倍\n攻击力提升${1 + atkRarity}倍`;
+        this.mTotalRarityTextBlock.text = `御剑飞行总加成\n血量提升${1 + hpRarity}倍\n攻击力提升${1 + atkRarity}倍`;
     }
 
     protected onShow(...params: any[]): void {
@@ -256,7 +256,7 @@ export class FlyData extends Subdata {
         this.swordIds.forEach((swordId: number) => {
             hpRarity += swordDataMap.get(swordId).hpRarity;
         });
-        return hpRarity;
+        return Number(hpRarity.toFixed(1));
     }
 
     public get getAtkRarity(): number {
@@ -282,20 +282,26 @@ export class SwordData {
     public swordPrefabId: string;
     public hpRarity: number = 0;
     public atkRarity: number = 0;
+
+    public isCharacter: boolean;
 }
 
 const swordTriggerId: string = "0D77F0C2";
 const swordWorldUIId: string = "21930ABA";
 export const swordDataMap: Map<number, SwordData> = new Map<number, SwordData>();
-swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "0F6CADC5", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "373123C7", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(7, { id: 7, name: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(8, { id: 8, name: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "", skinId: "", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451", hpRarity: 0.1, atkRarity: 0.1 });
-swordDataMap.set(9, { id: 9, name: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274", hpRarity: 0.1, atkRarity: 0.1 });
+swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "0F6CADC5", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0", hpRarity: 0.2, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "373123C7", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5", hpRarity: 0.5, atkRarity: 0.5, isCharacter: false });
+swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D", hpRarity: 0.3, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249", hpRarity: 0.7, atkRarity: 0.6, isCharacter: false });
+swordDataMap.set(7, { id: 7, name: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A", hpRarity: 0.1, atkRarity: 0, isCharacter: false });
+swordDataMap.set(8, { id: 8, name: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "", skinId: "", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(9, { id: 9, name: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(10, { id: 10, name: "御剑_滑板", icon: "mode_172322", diamond: -1, ark: 300, commodityId: "2n1J8tM5rtL0001Q2", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "739C4F7545D25E898D93F89BF0AC4B8A", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(11, { id: 11, name: "御剑_小绿龙", icon: "mode_247654", diamond: -1, ark: 1000, commodityId: "7zMYBoBixh80001Q3", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "01728B2A4C9722493B4703BEBA7E4CF2", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(12, { id: 12, name: "御剑_小蓝龙", icon: "mode_248837", diamond: -1, ark: 1000, commodityId: "AJrYTJFqjFR0001Q4", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "48A6F6E348AAACD86C9269B780CF3BE8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(13, { id: 13, name: "御剑_小火龙", icon: "mode_248730", diamond: -1, ark: 1000, commodityId: "7gMCn89dVTb0001Q5", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "14AF817A43500A7102A057A2D52ECAD8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
 
 export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
     private swordPanel: SwordPanel = null;
@@ -372,6 +378,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
     public clickSwordItem(key: number, buySuccessCallback: () => void): void {
         if (this.isHasSwordId(key)) {
             this.setUsingSwordId(key);
+            this.getSwordPanel.hideTween();
         } else {
             let swordData = swordDataMap.get(key);
             if (swordData.diamond <= 0) {
@@ -489,7 +496,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
         this.swordIds.forEach((swordId: number) => {
             hpRarity += swordDataMap.get(swordId).hpRarity;
         });
-        return hpRarity;
+        return Number(hpRarity.toFixed(1));
     }
 
     public get getAtkRarity(): number {
@@ -498,7 +505,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
         this.swordIds.forEach((swordId: number) => {
             atkRarity += swordDataMap.get(swordId).atkRarity;
         });
-        return atkRarity;
+        return Number(atkRarity.toFixed(1));
     }
 
     public setUsingSwordId(swordId: number): void {

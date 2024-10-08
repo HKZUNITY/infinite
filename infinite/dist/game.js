@@ -2946,7 +2946,7 @@ var foreign100 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -3058,7 +3058,7 @@ var foreign7 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -3125,7 +3125,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -5187,7 +5187,7 @@ var foreign98 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5313,7 +5313,7 @@ var foreign119 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5405,7 +5405,7 @@ var foreign120 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5501,7 +5501,7 @@ var foreign121 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5567,7 +5567,7 @@ var foreign122 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5647,7 +5647,7 @@ var foreign114 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/UpPanel.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let UpPanel_Generate = class UpPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5825,15 +5825,93 @@ var foreign45 = /*#__PURE__*/Object.freeze({
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/LevelModule/LevelItem.ui
- * TIME: 2024.10.06-00.28.27
+ * UI: UI/module/FlyModule/SwordItem.ui
+ * TIME: 2024.10.08-23.13.30
  */
-let LevelItem_Generate = class LevelItem_Generate extends UIScript {
-    get mLevelTextBlock() {
-        if (!this.mLevelTextBlock_Internal && this.uiWidgetBase) {
-            this.mLevelTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mLevelTextBlock');
+let SwordItem_Generate = class SwordItem_Generate extends UIScript {
+    get mNameTextBlock() {
+        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mNameTextBlock');
         }
-        return this.mLevelTextBlock_Internal;
+        return this.mNameTextBlock_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mDiamondCanvas() {
+        if (!this.mDiamondCanvas_Internal && this.uiWidgetBase) {
+            this.mDiamondCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas');
+        }
+        return this.mDiamondCanvas_Internal;
+    }
+    get mDiamondIconImage() {
+        if (!this.mDiamondIconImage_Internal && this.uiWidgetBase) {
+            this.mDiamondIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas/DiamondBgImage/mDiamondIconImage');
+        }
+        return this.mDiamondIconImage_Internal;
+    }
+    get mDiamondTextBlock() {
+        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas/DiamondBgImage/mDiamondTextBlock');
+        }
+        return this.mDiamondTextBlock_Internal;
+    }
+    get mArkCanvas() {
+        if (!this.mArkCanvas_Internal && this.uiWidgetBase) {
+            this.mArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas');
+        }
+        return this.mArkCanvas_Internal;
+    }
+    get mArkIconImage() {
+        if (!this.mArkIconImage_Internal && this.uiWidgetBase) {
+            this.mArkIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas/mArkIconImage');
+        }
+        return this.mArkIconImage_Internal;
+    }
+    get mArkTextBlock() {
+        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas/mArkTextBlock');
+        }
+        return this.mArkTextBlock_Internal;
+    }
+    get mHasCanvas() {
+        if (!this.mHasCanvas_Internal && this.uiWidgetBase) {
+            this.mHasCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas');
+        }
+        return this.mHasCanvas_Internal;
+    }
+    get mMaskImage() {
+        if (!this.mMaskImage_Internal && this.uiWidgetBase) {
+            this.mMaskImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskImage');
+        }
+        return this.mMaskImage_Internal;
+    }
+    get mMaskBgImage() {
+        if (!this.mMaskBgImage_Internal && this.uiWidgetBase) {
+            this.mMaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskBgImage');
+        }
+        return this.mMaskBgImage_Internal;
+    }
+    get mHasTextBlock() {
+        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
+            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskBgImage/mHasTextBlock');
+        }
+        return this.mHasTextBlock_Internal;
+    }
+    get mClickButton() {
+        if (!this.mClickButton_Internal && this.uiWidgetBase) {
+            this.mClickButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mClickButton');
+        }
+        return this.mClickButton_Internal;
+    }
+    get mRarityTextBlock() {
+        if (!this.mRarityTextBlock_Internal && this.uiWidgetBase) {
+            this.mRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mRarityTextBlock');
+        }
+        return this.mRarityTextBlock_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -5844,139 +5922,18 @@ let LevelItem_Generate = class LevelItem_Generate extends UIScript {
     initButtons() {
         //按钮添加点击
         //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mLevelTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-LevelItem_Generate = __decorate([
-    UIBind('UI/module/LevelModule/LevelItem.ui')
-], LevelItem_Generate);
-var LevelItem_Generate$1 = LevelItem_Generate;
-
-var foreign129 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: LevelItem_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/LevelModule/LevelPanel.ui
- * TIME: 2024.10.06-00.28.27
- */
-let LevelPanel_Generate = class LevelPanel_Generate extends UIScript {
-    get mLevelTextBlock() {
-        if (!this.mLevelTextBlock_Internal && this.uiWidgetBase) {
-            this.mLevelTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LevelBgImage/mLevelTextBlock');
-        }
-        return this.mLevelTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mLevelTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-LevelPanel_Generate = __decorate([
-    UIBind('UI/module/LevelModule/LevelPanel.ui')
-], LevelPanel_Generate);
-var LevelPanel_Generate$1 = LevelPanel_Generate;
-
-var foreign130 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: LevelPanel_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/LevelModule/UpExpPanel.ui
- * TIME: 2024.10.06-00.28.27
- */
-let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
-    get mCancleUpExpCanvas() {
-        if (!this.mCancleUpExpCanvas_Internal && this.uiWidgetBase) {
-            this.mCancleUpExpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas');
-        }
-        return this.mCancleUpExpCanvas_Internal;
-    }
-    get mCancleUpExpFlipBook() {
-        if (!this.mCancleUpExpFlipBook_Internal && this.uiWidgetBase) {
-            this.mCancleUpExpFlipBook_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/mCancleUpExpFlipBook');
-        }
-        return this.mCancleUpExpFlipBook_Internal;
-    }
-    get mCancleUpExpButton() {
-        if (!this.mCancleUpExpButton_Internal && this.uiWidgetBase) {
-            this.mCancleUpExpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton');
-        }
-        return this.mCancleUpExpButton_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mCancleUpExpButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCancleUpExpButton");
+        this.mClickButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mClickButton");
         });
-        this.mCancleUpExpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mClickButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mNameTextBlock);
+        this.initLanguage(this.mDiamondTextBlock);
+        this.initLanguage(this.mArkTextBlock);
+        this.initLanguage(this.mHasTextBlock);
+        this.initLanguage(this.mRarityTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/TextBlock_1"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton/TextBlock_2"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -5996,14 +5953,231 @@ let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
         mw.UIService.hideUI(this);
     }
 };
-UpExpPanel_Generate = __decorate([
-    UIBind('UI/module/LevelModule/UpExpPanel.ui')
-], UpExpPanel_Generate);
-var UpExpPanel_Generate$1 = UpExpPanel_Generate;
+SwordItem_Generate = __decorate([
+    UIBind('UI/module/FlyModule/SwordItem.ui')
+], SwordItem_Generate);
+var SwordItem_Generate$1 = SwordItem_Generate;
 
-var foreign131 = /*#__PURE__*/Object.freeze({
+var foreign123 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: UpExpPanel_Generate$1
+    default: SwordItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/FlyModule/SwordPanel.ui
+ * TIME: 2024.10.08-23.13.30
+ */
+let SwordPanel_Generate = class SwordPanel_Generate extends UIScript {
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
+    }
+    get mScrollBox() {
+        if (!this.mScrollBox_Internal && this.uiWidgetBase) {
+            this.mScrollBox_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mScrollBox');
+        }
+        return this.mScrollBox_Internal;
+    }
+    get mCanvas() {
+        if (!this.mCanvas_Internal && this.uiWidgetBase) {
+            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mScrollBox/mCanvas');
+        }
+        return this.mCanvas_Internal;
+    }
+    get mMoneyCanvas() {
+        if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
+            this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
+        }
+        return this.mMoneyCanvas_Internal;
+    }
+    get mIconDiamondImage() {
+        if (!this.mIconDiamondImage_Internal && this.uiWidgetBase) {
+            this.mIconDiamondImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mIconDiamondImage');
+        }
+        return this.mIconDiamondImage_Internal;
+    }
+    get mDiamondCountTextBlock() {
+        if (!this.mDiamondCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mDiamondCountTextBlock');
+        }
+        return this.mDiamondCountTextBlock_Internal;
+    }
+    get mIconArkImage() {
+        if (!this.mIconArkImage_Internal && this.uiWidgetBase) {
+            this.mIconArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mIconArkImage');
+        }
+        return this.mIconArkImage_Internal;
+    }
+    get mArkCountTextBlock() {
+        if (!this.mArkCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mArkCountTextBlock');
+        }
+        return this.mArkCountTextBlock_Internal;
+    }
+    get mTotalRarityTextBlock() {
+        if (!this.mTotalRarityTextBlock_Internal && this.uiWidgetBase) {
+            this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityTextBlock');
+        }
+        return this.mTotalRarityTextBlock_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
+        this.initLanguage(this.mDiamondCountTextBlock);
+        this.initLanguage(this.mArkCountTextBlock);
+        this.initLanguage(this.mTotalRarityTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+SwordPanel_Generate = __decorate([
+    UIBind('UI/module/FlyModule/SwordPanel.ui')
+], SwordPanel_Generate);
+var SwordPanel_Generate$1 = SwordPanel_Generate;
+
+var foreign124 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SwordPanel_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/FlyModule/SwordTipsPanel.ui
+ * TIME: 2024.10.08-23.13.30
+ */
+let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    get mContentTextBlock() {
+        if (!this.mContentTextBlock_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock');
+        }
+        return this.mContentTextBlock_Internal;
+    }
+    get mDiamondButton() {
+        if (!this.mDiamondButton_Internal && this.uiWidgetBase) {
+            this.mDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton');
+        }
+        return this.mDiamondButton_Internal;
+    }
+    get mDiamondTextBlock() {
+        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton/mDiamondTextBlock');
+        }
+        return this.mDiamondTextBlock_Internal;
+    }
+    get mArkButton() {
+        if (!this.mArkButton_Internal && this.uiWidgetBase) {
+            this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton');
+        }
+        return this.mArkButton_Internal;
+    }
+    get mArkTextBlock() {
+        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton/mArkTextBlock');
+        }
+        return this.mArkTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mDiamondButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mDiamondButton");
+        });
+        this.mDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mArkButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mArkButton");
+        });
+        this.mArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mContentTextBlock);
+        this.initLanguage(this.mDiamondTextBlock);
+        this.initLanguage(this.mArkTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+SwordTipsPanel_Generate = __decorate([
+    UIBind('UI/module/FlyModule/SwordTipsPanel.ui')
+], SwordTipsPanel_Generate);
+var SwordTipsPanel_Generate$1 = SwordTipsPanel_Generate;
+
+var foreign125 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SwordTipsPanel_Generate$1
 });
 
 /**
@@ -6011,7 +6185,7 @@ var foreign131 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -6692,7 +6866,7 @@ var foreign127 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6768,7 +6942,7 @@ var foreign128 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
 let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
     get mMainCanvas() {
@@ -6852,7 +7026,7 @@ var foreign141 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
     get mCanvas() {
@@ -6959,7 +7133,7 @@ var foreign142 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -6967,6 +7141,12 @@ let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
             this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
         }
         return this.mCloseButton_Internal;
+    }
+    get mTotalRarityTextBlock() {
+        if (!this.mTotalRarityTextBlock_Internal && this.uiWidgetBase) {
+            this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTotalRarityTextBlock');
+        }
+        return this.mTotalRarityTextBlock_Internal;
     }
     get mContentCanvas() {
         if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
@@ -7039,6 +7219,7 @@ let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
         this.mAddDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mTotalRarityTextBlock);
         this.initLanguage(this.mUpTextBlock);
         this.initLanguage(this.mDiamondTextBlock);
         //文本多语言
@@ -7318,6 +7499,9 @@ class PlayerModuleC extends ModuleC {
     }
     initAction() {
         this.getHudModuleC.onOnOffUpExpAction.add(this.addOnOffUpExp.bind(this));
+        Event.addLocalListener(`SyncDiamondCount`, () => {
+            Event.dispatchToLocal(`UpdateDiamondTextBlock`, this.getDiamond);
+        });
     }
     onEnterScene(sceneType) {
         this.coin = this.data.coin;
@@ -7749,6 +7933,7 @@ class RingSoulModuleC extends ModuleC {
     constructor() {
         super(...arguments);
         this.hudModuleC = null;
+        this.bagModuleC = null;
         this.ringSoulPanel = null;
         this.ringSoul = {};
     }
@@ -7757,6 +7942,12 @@ class RingSoulModuleC extends ModuleC {
             this.hudModuleC = ModuleService.getModule(HUDModuleC);
         }
         return this.hudModuleC;
+    }
+    get getBagModuleC() {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
     }
     get getRingSoulPanel() {
         if (this.ringSoulPanel == null) {
@@ -7772,6 +7963,7 @@ class RingSoulModuleC extends ModuleC {
         });
         this.getHudModuleC.onOpenRingSoulAction.add(() => {
             this.getRingSoulPanel.show();
+            this.getRingSoulPanel.updateRarityTextBlock(this.getRarity);
         });
         this.getHudModuleC.onOnOffRingSoulAction.add(this.onOffRingSoul.bind(this));
         this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
@@ -7799,6 +7991,17 @@ class RingSoulModuleC extends ModuleC {
     setRingSoulIndex(key, value) {
         MapEx.set(this.ringSoul, key, value);
         this.server.net_setRingSoulIndex(key, value);
+        this.getBagModuleC.updateHpByUsing();
+        this.getRingSoulPanel.updateRarityTextBlock(this.getRarity);
+    }
+    get getRarity() {
+        if (!this.ringSoul || MapEx.count(this.ringSoul) == 0)
+            return 0;
+        let rarity = 0;
+        MapEx.forEach(this.ringSoul, (key, value) => {
+            rarity += value;
+        });
+        return Number((rarity * 0.05).toFixed(2));
     }
     onOffRingSoul(isOpenRingSoul) {
         this.server.net_onOffRingSoul(isOpenRingSoul);
@@ -7807,7 +8010,14 @@ class RingSoulModuleC extends ModuleC {
 class RingSoulModuleS extends ModuleS {
     constructor() {
         super(...arguments);
+        this.bagModuleS = null;
         this.ringSoulMap = new Map();
+    }
+    get getBagModuleS() {
+        if (!this.bagModuleS) {
+            this.bagModuleS = ModuleService.getModule(BagModuleS);
+        }
+        return this.bagModuleS;
     }
     onStart() {
     }
@@ -7830,12 +8040,16 @@ class RingSoulModuleS extends ModuleS {
         }
     }
     net_setRingSoulIndex(key, value) {
-        let playerId = this.currentPlayerId;
+        let player = this.currentPlayer;
         this.currentData.setRingSoulIndex(key, value);
-        if (!this.ringSoulMap.has(playerId))
+        if (!this.ringSoulMap.has(player.playerId))
             return;
-        let ringSoul = this.ringSoulMap.get(playerId);
+        let ringSoul = this.ringSoulMap.get(player.playerId);
         ringSoul.ringSoulStrs = `${key}-${value}`;
+        this.getBagModuleS.updateHpByUsing(player);
+    }
+    getRarity(player) {
+        return DataCenterS.getData(player, RingSoulData).getRarity;
     }
     net_onOffRingSoul(isOpenRingSoul) {
         let playerId = this.currentPlayerId;
@@ -7853,6 +8067,15 @@ class RingSoulData extends Subdata {
     setRingSoulIndex(key, value) {
         MapEx.set(this.ringSoul, key, value);
         this.save(true);
+    }
+    get getRarity() {
+        if (!this.ringSoul || MapEx.count(this.ringSoul) == 0)
+            return 0;
+        let rarity = 0;
+        MapEx.forEach(this.ringSoul, (key, value) => {
+            rarity += value;
+        });
+        return Number((rarity * 0.05).toFixed(2));
     }
 }
 __decorate([
@@ -7972,6 +8195,9 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
     }
     updateDiamond(diamond) {
         this.mDiamondTextBlock.text = `${diamond}`;
+    }
+    updateRarityTextBlock(rarity) {
+        this.mTotalRarityTextBlock.text = `总加成：血量提升${1 + rarity}倍，攻击力提升${1 + rarity}倍`;
     }
     onShow(...params) {
         Utils.openUITween(this.rootCanvas, () => {
@@ -8373,8 +8599,10 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.clearCountDownInterval();
         this.deadCountDownInterval = TimeUtil.setInterval(() => {
             this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
-            if (this.deadCountDown < 0)
+            if (this.deadCountDown < 0) {
                 this.clearCountDownInterval();
+                this.endDeadCountDown();
+            }
         }, 1);
     }
     clearCountDownInterval() {
@@ -8984,6 +9212,191 @@ var foreign53 = /*#__PURE__*/Object.freeze({
     default: HUDPanel
 });
 
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LevelModule/LevelItem.ui
+ * TIME: 2024.10.08-23.13.31
+ */
+let LevelItem_Generate = class LevelItem_Generate extends UIScript {
+    get mLevelTextBlock() {
+        if (!this.mLevelTextBlock_Internal && this.uiWidgetBase) {
+            this.mLevelTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mLevelTextBlock');
+        }
+        return this.mLevelTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mLevelTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LevelItem_Generate = __decorate([
+    UIBind('UI/module/LevelModule/LevelItem.ui')
+], LevelItem_Generate);
+var LevelItem_Generate$1 = LevelItem_Generate;
+
+var foreign129 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LevelItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LevelModule/LevelPanel.ui
+ * TIME: 2024.10.08-23.13.31
+ */
+let LevelPanel_Generate = class LevelPanel_Generate extends UIScript {
+    get mLevelTextBlock() {
+        if (!this.mLevelTextBlock_Internal && this.uiWidgetBase) {
+            this.mLevelTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/LevelBgImage/mLevelTextBlock');
+        }
+        return this.mLevelTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mLevelTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LevelPanel_Generate = __decorate([
+    UIBind('UI/module/LevelModule/LevelPanel.ui')
+], LevelPanel_Generate);
+var LevelPanel_Generate$1 = LevelPanel_Generate;
+
+var foreign130 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LevelPanel_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/LevelModule/UpExpPanel.ui
+ * TIME: 2024.10.08-23.13.31
+ */
+let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
+    get mCancleUpExpCanvas() {
+        if (!this.mCancleUpExpCanvas_Internal && this.uiWidgetBase) {
+            this.mCancleUpExpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas');
+        }
+        return this.mCancleUpExpCanvas_Internal;
+    }
+    get mCancleUpExpFlipBook() {
+        if (!this.mCancleUpExpFlipBook_Internal && this.uiWidgetBase) {
+            this.mCancleUpExpFlipBook_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/mCancleUpExpFlipBook');
+        }
+        return this.mCancleUpExpFlipBook_Internal;
+    }
+    get mCancleUpExpButton() {
+        if (!this.mCancleUpExpButton_Internal && this.uiWidgetBase) {
+            this.mCancleUpExpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton');
+        }
+        return this.mCancleUpExpButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCancleUpExpButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCancleUpExpButton");
+        });
+        this.mCancleUpExpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        //文本多语言
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/TextBlock_1"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton/TextBlock_2"));
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+UpExpPanel_Generate = __decorate([
+    UIBind('UI/module/LevelModule/UpExpPanel.ui')
+], UpExpPanel_Generate);
+var UpExpPanel_Generate$1 = UpExpPanel_Generate;
+
+var foreign131 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: UpExpPanel_Generate$1
+});
+
 class PlayerData extends Subdata {
     constructor() {
         super(...arguments);
@@ -9455,6 +9868,618 @@ var foreign54 = /*#__PURE__*/Object.freeze({
     UpExpPanel: UpExpPanel
 });
 
+class SwordTipsPanel extends SwordTipsPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.arkCallBack = null;
+        this.diamondCallBack = null;
+        this.closeCallBack = null;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mArkTextBlock.text = `派队币购买`;
+        this.mDiamondTextBlock.text = `钻石购买`;
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addClickButton.bind(this));
+        this.mArkButton.onClicked.add(this.addArkButton.bind(this));
+        this.mDiamondButton.onClicked.add(this.addDiamondButton.bind(this));
+    }
+    addClickButton() {
+        this.hide();
+        if (this.closeCallBack)
+            this.closeCallBack();
+    }
+    addArkButton() {
+        if (this.arkCallBack)
+            this.arkCallBack();
+    }
+    addDiamondButton() {
+        if (this.diamondCallBack)
+            this.diamondCallBack();
+    }
+    showPanel(key, arkCallBack, diamondCallBack, closeCallBack) {
+        let swordData = swordDataMap.get(key);
+        if (swordData.diamond <= 0) {
+            this.mContentTextBlock.text = `消耗 ${swordData.ark}派队币`;
+            this.mDiamondButton.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mContentTextBlock.text = `消耗 ${swordData.diamond}钻石 或\n消耗 ${swordData.ark}派队币`;
+            this.mDiamondButton.visibility = mw.SlateVisibility.Visible;
+        }
+        this.arkCallBack = arkCallBack;
+        this.diamondCallBack = diamondCallBack;
+        this.closeCallBack = closeCallBack;
+        this.show();
+    }
+}
+class SwordItem extends SwordItem_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.flyModuleC = null;
+        this.isCanContinueClick = true;
+        this.key = 0;
+    }
+    get getFlyModuleC() {
+        if (!this.flyModuleC) {
+            this.flyModuleC = ModuleService.getModule(FlyModuleC);
+        }
+        return this.flyModuleC;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mDiamondIconImage.imageGuid = GlobalData.diamondIcon;
+        this.mArkIconImage.imageGuid = GlobalData.arkIcon;
+        this.mHasTextBlock.text = `点击获得`;
+    }
+    bindButton() {
+        this.mClickButton.onClicked.add(this.addClickButton.bind(this));
+    }
+    addClickButton() {
+        if (!this.isCanContinueClick) {
+            Notice.showDownNotice(`3秒冷却`);
+            return;
+        }
+        this.isCanContinueClick = false;
+        TimeUtil.delaySecond(3).then(() => {
+            this.isCanContinueClick = true;
+        });
+        this.getFlyModuleC.clickSwordItem(this.key, () => {
+            this.buyComplete();
+        });
+    }
+    initItem(key) {
+        this.key = key;
+        let swordData = swordDataMap.get(this.key);
+        let iconStr = swordData.icon.split(`_`);
+        if (iconStr[0] == `mode`) {
+            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
+        }
+        else if (iconStr[0] == `icon`) {
+            this.mIconImage.imageGuid = iconStr[1];
+        }
+        this.mNameTextBlock.text = swordData.name;
+        if (swordData.diamond <= 0) {
+            this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
+            this.mIconImage.position = new mw.Vector2(7, 42);
+            this.mIconImage.size = new mw.Vector2(210, 210);
+        }
+        else {
+            this.mDiamondTextBlock.text = `${swordData.diamond}`;
+            this.mDiamondCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }
+        this.mArkTextBlock.text = `${swordData.ark}`;
+        this.refreshUI();
+        this.mRarityTextBlock.text = `血量提升${1 + swordData.hpRarity}倍\n攻击力提升${1 + swordData.atkRarity}倍`;
+    }
+    refreshUI() {
+        if (this.getFlyModuleC.isHasSwordId(this.key)) {
+            this.buyComplete();
+        }
+        else {
+            this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        }
+    }
+    buyComplete() {
+        this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
+        this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
+        this.mArkIconImage.visibility = mw.SlateVisibility.Collapsed;
+        this.mArkTextBlock.text = `点击使用`;
+        this.mArkTextBlock.textHorizontalLayout = mw.UITextHorizontalLayout.NoClipping;
+        this.mArkTextBlock.textAlign = mw.TextJustify.Right;
+        this.mIconImage.position = new mw.Vector2(7, 42);
+        this.mIconImage.size = new mw.Vector2(210, 210);
+    }
+}
+class SwordPanel extends SwordPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.hudPanel = null;
+        this.swordItems = [];
+    }
+    get getHudPanel() {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mTitleTextBlock.text = "御剑飞行商城";
+        this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
+        this.mIconArkImage.imageGuid = GlobalData.arkIcon;
+        this.initItem();
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+        Event.addLocalListener(`UpdateDiamondTextBlock`, this.updateDiamondTextBlock.bind(this));
+    }
+    addCloseButton() {
+        this.hideTween();
+    }
+    initItem() {
+        swordDataMap.forEach((value, key) => {
+            let swordItem = mw.UIService.create(SwordItem);
+            swordItem.initItem(key);
+            this.mCanvas.addChild(swordItem.uiObject);
+            this.swordItems.push(swordItem);
+        });
+    }
+    updateArkTextBlock(arkCount) {
+        this.mArkCountTextBlock.text = `${arkCount}`;
+    }
+    updateDiamondTextBlock(diamondCount) {
+        this.mDiamondCountTextBlock.text = `${diamondCount}`;
+    }
+    updateRarityTextBlock(hpRarity, atkRarity) {
+        this.mTotalRarityTextBlock.text = `御剑飞行总加成\n血量提升${1 + hpRarity}倍\n攻击力提升${1 + atkRarity}倍`;
+    }
+    onShow(...params) {
+        Utils.openUITween(this.rootCanvas, () => {
+            this.getHudPanel.hide();
+        }, null);
+    }
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+            this.getHudPanel.show();
+        });
+    }
+}
+class FlyData extends Subdata {
+    constructor() {
+        super(...arguments);
+        this.flyIds = [];
+        this.swordIds = [];
+        this.usingSwordId = 0;
+    }
+    delFlyId(swordId) {
+        if (!this.swordIds.includes(swordId)) {
+            this.swordIds.push(swordId);
+        }
+        this.flyIds.length = 0;
+        this.save(true);
+    }
+    setSwordId(swordId) {
+        if (!this.swordIds.includes(swordId)) {
+            this.swordIds.push(swordId);
+        }
+        this.save(true);
+    }
+    setUsingSwordId(swordId) {
+        if (this.usingSwordId == swordId)
+            return;
+        this.usingSwordId = swordId;
+        this.save(true);
+    }
+    get getHpRarity() {
+        if (!this.swordIds || this.swordIds.length == 0)
+            return 0;
+        let hpRarity = 0;
+        this.swordIds.forEach((swordId) => {
+            hpRarity += swordDataMap.get(swordId).hpRarity;
+        });
+        return Number(hpRarity.toFixed(1));
+    }
+    get getAtkRarity() {
+        if (!this.swordIds || this.swordIds.length == 0)
+            return 0;
+        let atkRarity = 0;
+        this.swordIds.forEach((swordId) => {
+            atkRarity += swordDataMap.get(swordId).atkRarity;
+        });
+        return atkRarity;
+    }
+}
+__decorate([
+    Decorator.persistence()
+], FlyData.prototype, "flyIds", void 0);
+__decorate([
+    Decorator.persistence()
+], FlyData.prototype, "swordIds", void 0);
+__decorate([
+    Decorator.persistence()
+], FlyData.prototype, "usingSwordId", void 0);
+class SwordData {
+    constructor() {
+        this.hpRarity = 0;
+        this.atkRarity = 0;
+    }
+}
+const swordTriggerId = "0D77F0C2";
+const swordWorldUIId = "21930ABA";
+const swordDataMap = new Map();
+swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "0F6CADC5", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0", hpRarity: 0.2, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "373123C7", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5", hpRarity: 0.5, atkRarity: 0.5, isCharacter: false });
+swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D", hpRarity: 0.3, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249", hpRarity: 0.7, atkRarity: 0.6, isCharacter: false });
+swordDataMap.set(7, { id: 7, name: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A", hpRarity: 0.1, atkRarity: 0, isCharacter: false });
+swordDataMap.set(8, { id: 8, name: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "", skinId: "", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(9, { id: 9, name: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(10, { id: 10, name: "御剑_滑板", icon: "mode_172322", diamond: -1, ark: 300, commodityId: "2n1J8tM5rtL0001Q2", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "739C4F7545D25E898D93F89BF0AC4B8A", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(11, { id: 11, name: "御剑_小绿龙", icon: "mode_247654", diamond: -1, ark: 1000, commodityId: "7zMYBoBixh80001Q3", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "01728B2A4C9722493B4703BEBA7E4CF2", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(12, { id: 12, name: "御剑_小蓝龙", icon: "mode_248837", diamond: -1, ark: 1000, commodityId: "AJrYTJFqjFR0001Q4", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "48A6F6E348AAACD86C9269B780CF3BE8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(13, { id: 13, name: "御剑_小火龙", icon: "mode_248730", diamond: -1, ark: 1000, commodityId: "7gMCn89dVTb0001Q5", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "14AF817A43500A7102A057A2D52ECAD8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+class FlyModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.swordPanel = null;
+        this.swordTipsPanel = null;
+        this.hudModuleC = null;
+        this.adTipsPanel = null;
+        this.playerModuleC = null;
+        this.bagModuleC = null;
+        this.flyIds = [];
+        this.swordIds = [];
+        this.usingSwordId = 0;
+        this.isFlying = false;
+        this.isFirst = true;
+    }
+    get getSwordPanel() {
+        if (!this.swordPanel) {
+            this.swordPanel = mw.UIService.getUI(SwordPanel);
+        }
+        return this.swordPanel;
+    }
+    get getSwordTipsPanel() {
+        if (!this.swordTipsPanel) {
+            this.swordTipsPanel = mw.UIService.getUI(SwordTipsPanel);
+        }
+        return this.swordTipsPanel;
+    }
+    get getHudModuleC() {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+    get getAdTipsPanel() {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    get getBagModuleC() {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.bindAction();
+    }
+    bindAction() {
+        this.getHudModuleC.onOpenSwordAction.add(this.addOpenSwordPanel.bind(this));
+        this.getHudModuleC.onOnOffFlyAction.add(this.addOnOffSword.bind(this));
+        mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
+    }
+    addOpenSwordPanel() {
+        this.getSwordPanel.show();
+        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
+        Event.dispatchToLocal(`SyncDiamondCount`);
+        this.getSwordPanel.updateRarityTextBlock(this.getHpRarity, this.getAtkRarity);
+    }
+    addArkUpdate(amount) {
+        //刷新逻辑，amount为当前代币数量
+        console.error(`ArkModuleC addArkUpdate amount: ${amount}`);
+        this.getSwordPanel.updateArkTextBlock(amount);
+    }
+    clickSwordItem(key, buySuccessCallback) {
+        if (this.isHasSwordId(key)) {
+            this.setUsingSwordId(key);
+            this.getSwordPanel.hideTween();
+        }
+        else {
+            let swordData = swordDataMap.get(key);
+            if (swordData.diamond <= 0) {
+                if (mw.SystemUtil.isPIE) {
+                    this.setSwordId(key);
+                    Notice.showDownNotice(`御剑飞行购买成功`);
+                    if (buySuccessCallback)
+                        buySuccessCallback();
+                }
+                else {
+                    mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
+                        mw.PurchaseService.getArkBalance(); //刷新代币数量
+                        if (status != 200)
+                            return;
+                        if (buySuccessCallback)
+                            buySuccessCallback();
+                    });
+                }
+            }
+            else {
+                this.getSwordTipsPanel.showPanel(key, () => {
+                    if (mw.SystemUtil.isPIE) {
+                        this.setSwordId(key);
+                        Notice.showDownNotice(`御剑飞行购买成功`);
+                        if (buySuccessCallback)
+                            buySuccessCallback();
+                        this.getSwordTipsPanel.hide();
+                    }
+                    else {
+                        mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
+                            mw.PurchaseService.getArkBalance(); //刷新代币数量
+                            if (status != 200)
+                                return;
+                            if (buySuccessCallback)
+                                buySuccessCallback();
+                            this.getSwordTipsPanel.hide();
+                        });
+                    }
+                }, () => {
+                    let costDiamond = this.getPlayerModuleC.getDiamond;
+                    if (costDiamond >= swordData.diamond) {
+                        this.getPlayerModuleC.saveDiamond(-swordData.diamond);
+                        this.setSwordId(key);
+                        Notice.showDownNotice(`御剑飞行购买成功`);
+                        this.getSwordTipsPanel.hide();
+                        if (buySuccessCallback)
+                            buySuccessCallback();
+                    }
+                    else {
+                        Notice.showDownNotice(`钻石不足`);
+                        if (GlobalData.isOpenIAA) {
+                            this.getAdTipsPanel.showRewardAd(() => {
+                                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                            }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                        }
+                        else {
+                            Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                            this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                        }
+                    }
+                }, null);
+            }
+        }
+    }
+    net_deliverGoods(commodityId, amount) {
+        swordDataMap.forEach((value, key) => {
+            if (value.commodityId == commodityId) {
+                this.setSwordId(key);
+                Notice.showDownNotice(`御剑飞行购买成功`);
+            }
+        });
+    }
+    onEnterScene(sceneType) {
+        this.initSwordData();
+        this.initTrigger().then(() => {
+            TimeUtil.delaySecond(10).then(() => {
+                if (this.usingSwordId > 0)
+                    this.addOnOffSword(true);
+            });
+        });
+    }
+    ;
+    initSwordData() {
+        this.flyIds = this.data.flyIds;
+        this.swordIds = this.data.swordIds;
+        this.usingSwordId = this.data.usingSwordId;
+        if (this.flyIds && this.flyIds.length > 0) {
+            if (this.flyIds[0] == 1)
+                this.delFlyId();
+        }
+    }
+    delFlyId() {
+        let swordId = 4;
+        if (!this.swordIds.includes(swordId)) {
+            this.swordIds.push(swordId);
+        }
+        if (this.usingSwordId != swordId) {
+            this.usingSwordId = swordId;
+        }
+        this.flyIds.length = 0;
+        this.server.net_delFlyId(swordId);
+    }
+    setSwordId(swordId) {
+        if (this.swordIds.includes(swordId))
+            return;
+        this.swordIds.push(swordId);
+        this.server.net_setSwordId(swordId);
+        this.getBagModuleC.updateHpByUsing();
+        this.getSwordPanel.updateRarityTextBlock(this.getHpRarity, this.getAtkRarity);
+    }
+    isHasSwordId(swordId) {
+        return this.swordIds.includes(swordId);
+    }
+    get getHpRarity() {
+        if (!this.swordIds || this.swordIds.length == 0)
+            return 0;
+        let hpRarity = 0;
+        this.swordIds.forEach((swordId) => {
+            hpRarity += swordDataMap.get(swordId).hpRarity;
+        });
+        return Number(hpRarity.toFixed(1));
+    }
+    get getAtkRarity() {
+        if (!this.swordIds || this.swordIds.length == 0)
+            return 0;
+        let atkRarity = 0;
+        this.swordIds.forEach((swordId) => {
+            atkRarity += swordDataMap.get(swordId).atkRarity;
+        });
+        return Number(atkRarity.toFixed(1));
+    }
+    setUsingSwordId(swordId) {
+        if (this.usingSwordId == swordId)
+            return;
+        this.usingSwordId = swordId;
+        this.server.net_setUsingSwordId(this.usingSwordId);
+        Notice.showDownNotice(`装备御剑飞行`);
+        this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
+        this.server.net_useFly(this.usingSwordId);
+        this.isFlying = true;
+    }
+    addOnOffSword(on) {
+        if (on) {
+            if (this.usingSwordId <= 0) {
+                Notice.showDownNotice(`未装备御剑飞行`);
+                return;
+            }
+            else {
+                if (this.isFlying)
+                    return;
+                Notice.showDownNotice(`装备御剑飞行`);
+                this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
+                this.server.net_useFly(this.usingSwordId);
+                this.isFlying = true;
+            }
+        }
+        else {
+            if (!this.isFlying)
+                return;
+            Notice.showDownNotice(`卸下御剑飞行`);
+            this.localPlayer.character.changeState(mw.CharacterStateType.Running);
+            this.server.net_useFly(-1);
+            this.isFlying = false;
+        }
+    }
+    defaultOpenBuyPanel() {
+        console.error(`aaaaaaaaaaaaaaaaaaaaaaaaaaaaa`);
+        if (this.isFirst) {
+            this.isFirst = false;
+            return;
+        }
+        this.addOpenSwordPanel();
+    }
+    async initTrigger() {
+        mw.GameObject.asyncFindGameObjectById(swordTriggerId).then((trigger) => {
+            trigger.onEnter.add((character) => {
+                if (character.gameObjectId != this.localPlayer.character.gameObjectId)
+                    return;
+                this.addOpenSwordPanel();
+            });
+        });
+        mw.GameObject.asyncFindGameObjectById(swordWorldUIId).then((worldUI) => {
+            let levelItem = mw.UIService.create(LevelItem);
+            levelItem.updateLevelTextBlock(`御剑飞行商城`);
+            worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+        });
+        swordDataMap.forEach((swordData) => {
+            if (swordData.id >= 7)
+                return;
+            GameObject.asyncFindGameObjectById(swordData.npcId).then((character) => {
+                character.setDescription([swordData.skinId]);
+                let animation = character.loadAnimation(swordData.animationId);
+                animation.loop = 0;
+                animation.play();
+            });
+        });
+    }
+}
+class FlyModuleS extends ModuleS {
+    constructor() {
+        super(...arguments);
+        this.playerModuleS = null;
+        this.bagModuleS = null;
+    }
+    get getPlayerModuleS() {
+        if (!this.playerModuleS) {
+            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
+        }
+        return this.playerModuleS;
+    }
+    get getBagModuleS() {
+        if (!this.bagModuleS) {
+            this.bagModuleS = ModuleService.getModule(BagModuleS);
+        }
+        return this.bagModuleS;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.bindAction();
+    }
+    bindAction() {
+        mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
+    }
+    addShipOrder(playerId, orderId, commodityId, amount, confirmOrder) {
+        //根据playerId和commodityId来处理购买逻辑
+        this.getClient(playerId).net_deliverGoods(commodityId, amount);
+        confirmOrder(true); //调用这个方法表示确认收货成功
+    }
+    net_delFlyId(swordId) {
+        this.currentData.delFlyId(swordId);
+    }
+    net_setSwordId(swordId) {
+        let player = this.currentPlayer;
+        this.currentData.setSwordId(swordId);
+        this.getBagModuleS.updateHpByUsing(player);
+    }
+    getRarity(player) {
+        return DataCenterS.getData(player, FlyData).getHpRarity;
+    }
+    net_setUsingSwordId(swordId) {
+        this.currentData.setUsingSwordId(swordId);
+    }
+    net_useFly(key) {
+        this.getPlayerModuleS.useFly(this.currentPlayer, key);
+    }
+}
+__decorate([
+    Decorator.noReply()
+], FlyModuleS.prototype, "net_delFlyId", null);
+__decorate([
+    Decorator.noReply()
+], FlyModuleS.prototype, "net_setSwordId", null);
+__decorate([
+    Decorator.noReply()
+], FlyModuleS.prototype, "net_setUsingSwordId", null);
+__decorate([
+    Decorator.noReply()
+], FlyModuleS.prototype, "net_useFly", null);
+
+var foreign48 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    FlyData: FlyData,
+    FlyModuleC: FlyModuleC,
+    FlyModuleS: FlyModuleS,
+    SwordData: SwordData,
+    SwordItem: SwordItem,
+    SwordPanel: SwordPanel,
+    SwordTipsPanel: SwordTipsPanel,
+    swordDataMap: swordDataMap
+});
+
 var ObjectPoolServices;
 (function (ObjectPoolServices) {
     class ObjectPool {
@@ -9646,7 +10671,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -10245,9 +11270,11 @@ class HUDModuleC extends ModuleC {
         this.playerModuleC = null;
         this.hudPanel = null;
         this.ringSoulPanel = null;
+        this.ringSoulModuleC = null;
         this.adTipsPanel = null;
         this.upPanel = null;
         this.bagModuleC = null;
+        this.flyModuleC = null;
         this.levelModuleC = null;
         /**跳跃事件 */
         this.onJumpAction = new Action();
@@ -10358,6 +11385,12 @@ class HUDModuleC extends ModuleC {
         }
         return this.ringSoulPanel;
     }
+    get getRingSoulModuleC() {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
     get getAdTipsPanel() {
         if (!this.adTipsPanel) {
             this.adTipsPanel = mw.UIService.create(AdTipsPanel);
@@ -10375,6 +11408,12 @@ class HUDModuleC extends ModuleC {
             this.bagModuleC = ModuleService.getModule(BagModuleC);
         }
         return this.bagModuleC;
+    }
+    get getFlyModuleC() {
+        if (!this.flyModuleC) {
+            this.flyModuleC = ModuleService.getModule(FlyModuleC);
+        }
+        return this.flyModuleC;
     }
     get getLevelModuleC() {
         if (!this.levelModuleC) {
@@ -10532,13 +11571,13 @@ class HUDModuleC extends ModuleC {
     }
     updateLvExpCoin(lv, exp, coin, isAddLv) {
         this.lv = lv;
-        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing());
+        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
         if (!isAddLv)
             return;
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
         this.getHudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = Math.round(Utils.getHp(lv) * this.getBagModuleC.getAddHpByUsing());
+        let hp = Math.round(Utils.getHp(lv) * (this.getBagModuleC.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity));
         this.maxHp = hp;
         this.updateHp(hp);
     }
@@ -11017,7 +12056,7 @@ var foreign80 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.10.06-00.28.29
+ * TIME: 2024.10.08-23.13.31
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -12006,7 +13045,7 @@ var foreign44 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.31
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -12716,7 +13755,7 @@ var foreign49 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
 let LotteryItem_Generate = class LotteryItem_Generate extends UIScript {
     get mBgImage() {
@@ -12828,7 +13867,7 @@ var foreign132 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
 let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -13088,7 +14127,7 @@ var foreign133 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
 let LotteryResultItem_Generate = class LotteryResultItem_Generate extends UIScript {
     get mTextBlock() {
@@ -13144,7 +14183,7 @@ var foreign134 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
 let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UIScript {
     get mBgImage() {
@@ -13916,6 +14955,8 @@ class BagModuleC extends ModuleC {
         this.guideModuleC = null;
         this.playerModuleC = null;
         this.loading = null;
+        this.ringSoulModuleC = null;
+        this.flyModuleC = null;
         this.bagIds = [];
         this.usingWeaponId = -1;
         this.usingSkinId = -1;
@@ -13971,6 +15012,18 @@ class BagModuleC extends ModuleC {
             this.loading = mw.UIService.getUI(Loading);
         }
         return this.loading;
+    }
+    get getRingSoulModuleC() {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
+    get getFlyModuleC() {
+        if (!this.flyModuleC) {
+            this.flyModuleC = ModuleService.getModule(FlyModuleC);
+        }
+        return this.flyModuleC;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -14104,7 +15157,7 @@ class BagModuleC extends ModuleC {
         this.usePet(this.usingPetId);
     }
     updateHpByUsing() {
-        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing(), this.getAddAtkByUsing());
+        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity, this.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
     }
     getAddHpByUsing() {
         let weaponHp = 0, skinHp = 0, equipHp = 0, petHp = 0;
@@ -14563,12 +15616,26 @@ class BagModuleS extends ModuleS {
     constructor() {
         super(...arguments);
         this.playerModuleS = null;
+        this.ringSoulModuleS = null;
+        this.flyModuleS = null;
     }
     get getPlayerModuleS() {
         if (!this.playerModuleS) {
             this.playerModuleS = ModuleService.getModule(PlayerModuleS);
         }
         return this.playerModuleS;
+    }
+    get getRingSoulModuleS() {
+        if (!this.ringSoulModuleS) {
+            this.ringSoulModuleS = ModuleService.getModule(RingSoulModuleS);
+        }
+        return this.ringSoulModuleS;
+    }
+    get getFlyModuleS() {
+        if (!this.flyModuleS) {
+            this.flyModuleS = ModuleService.getModule(FlyModuleS);
+        }
+        return this.flyModuleS;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -14593,7 +15660,7 @@ class BagModuleS extends ModuleS {
         this.updateHpByUsing(this.currentPlayer);
     }
     updateHpByUsing(player) {
-        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player));
+        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player));
     }
     getAddHpByUsing(player) {
         let bagData = DataCenterS.getData(player, BagData);
@@ -15473,7 +16540,7 @@ var foreign60 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let SignInItem_Generate = class SignInItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -15596,7 +16663,7 @@ var foreign148 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let SignInPanel_Generate = class SignInPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -16176,7 +17243,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -16247,891 +17314,6 @@ var foreign140 = /*#__PURE__*/Object.freeze({
     default: PlayerLifebar_Generate$1
 });
 
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/FlyModule/SwordItem.ui
- * TIME: 2024.10.06-00.28.28
- */
-let SwordItem_Generate = class SwordItem_Generate extends UIScript {
-    get mNameTextBlock() {
-        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
-            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mNameTextBlock');
-        }
-        return this.mNameTextBlock_Internal;
-    }
-    get mIconImage() {
-        if (!this.mIconImage_Internal && this.uiWidgetBase) {
-            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mIconImage');
-        }
-        return this.mIconImage_Internal;
-    }
-    get mDiamondCanvas() {
-        if (!this.mDiamondCanvas_Internal && this.uiWidgetBase) {
-            this.mDiamondCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas');
-        }
-        return this.mDiamondCanvas_Internal;
-    }
-    get mDiamondIconImage() {
-        if (!this.mDiamondIconImage_Internal && this.uiWidgetBase) {
-            this.mDiamondIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas/DiamondBgImage/mDiamondIconImage');
-        }
-        return this.mDiamondIconImage_Internal;
-    }
-    get mDiamondTextBlock() {
-        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
-            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mDiamondCanvas/DiamondBgImage/mDiamondTextBlock');
-        }
-        return this.mDiamondTextBlock_Internal;
-    }
-    get mArkCanvas() {
-        if (!this.mArkCanvas_Internal && this.uiWidgetBase) {
-            this.mArkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas');
-        }
-        return this.mArkCanvas_Internal;
-    }
-    get mArkIconImage() {
-        if (!this.mArkIconImage_Internal && this.uiWidgetBase) {
-            this.mArkIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas/mArkIconImage');
-        }
-        return this.mArkIconImage_Internal;
-    }
-    get mArkTextBlock() {
-        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
-            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mArkCanvas/mArkTextBlock');
-        }
-        return this.mArkTextBlock_Internal;
-    }
-    get mHasCanvas() {
-        if (!this.mHasCanvas_Internal && this.uiWidgetBase) {
-            this.mHasCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas');
-        }
-        return this.mHasCanvas_Internal;
-    }
-    get mMaskImage() {
-        if (!this.mMaskImage_Internal && this.uiWidgetBase) {
-            this.mMaskImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskImage');
-        }
-        return this.mMaskImage_Internal;
-    }
-    get mMaskBgImage() {
-        if (!this.mMaskBgImage_Internal && this.uiWidgetBase) {
-            this.mMaskBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskBgImage');
-        }
-        return this.mMaskBgImage_Internal;
-    }
-    get mHasTextBlock() {
-        if (!this.mHasTextBlock_Internal && this.uiWidgetBase) {
-            this.mHasTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mHasCanvas/mMaskBgImage/mHasTextBlock');
-        }
-        return this.mHasTextBlock_Internal;
-    }
-    get mClickButton() {
-        if (!this.mClickButton_Internal && this.uiWidgetBase) {
-            this.mClickButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mClickButton');
-        }
-        return this.mClickButton_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mClickButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        });
-        this.mClickButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mNameTextBlock);
-        this.initLanguage(this.mDiamondTextBlock);
-        this.initLanguage(this.mArkTextBlock);
-        this.initLanguage(this.mHasTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-SwordItem_Generate = __decorate([
-    UIBind('UI/module/FlyModule/SwordItem.ui')
-], SwordItem_Generate);
-var SwordItem_Generate$1 = SwordItem_Generate;
-
-var foreign123 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SwordItem_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/FlyModule/SwordPanel.ui
- * TIME: 2024.10.06-00.28.28
- */
-let SwordPanel_Generate = class SwordPanel_Generate extends UIScript {
-    get mTitleTextBlock() {
-        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
-            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
-        }
-        return this.mTitleTextBlock_Internal;
-    }
-    get mScrollBox() {
-        if (!this.mScrollBox_Internal && this.uiWidgetBase) {
-            this.mScrollBox_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mScrollBox');
-        }
-        return this.mScrollBox_Internal;
-    }
-    get mCanvas() {
-        if (!this.mCanvas_Internal && this.uiWidgetBase) {
-            this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mScrollBox/mCanvas');
-        }
-        return this.mCanvas_Internal;
-    }
-    get mMoneyCanvas() {
-        if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
-            this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
-        }
-        return this.mMoneyCanvas_Internal;
-    }
-    get mIconDiamondImage() {
-        if (!this.mIconDiamondImage_Internal && this.uiWidgetBase) {
-            this.mIconDiamondImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mIconDiamondImage');
-        }
-        return this.mIconDiamondImage_Internal;
-    }
-    get mDiamondCountTextBlock() {
-        if (!this.mDiamondCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mDiamondCountTextBlock');
-        }
-        return this.mDiamondCountTextBlock_Internal;
-    }
-    get mIconArkImage() {
-        if (!this.mIconArkImage_Internal && this.uiWidgetBase) {
-            this.mIconArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mIconArkImage');
-        }
-        return this.mIconArkImage_Internal;
-    }
-    get mArkCountTextBlock() {
-        if (!this.mArkCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mArkCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mArkCountTextBlock');
-        }
-        return this.mArkCountTextBlock_Internal;
-    }
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTitleTextBlock);
-        this.initLanguage(this.mDiamondCountTextBlock);
-        this.initLanguage(this.mArkCountTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-SwordPanel_Generate = __decorate([
-    UIBind('UI/module/FlyModule/SwordPanel.ui')
-], SwordPanel_Generate);
-var SwordPanel_Generate$1 = SwordPanel_Generate;
-
-var foreign124 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SwordPanel_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/FlyModule/SwordTipsPanel.ui
- * TIME: 2024.10.06-00.28.28
- */
-let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
-    }
-    get mContentTextBlock() {
-        if (!this.mContentTextBlock_Internal && this.uiWidgetBase) {
-            this.mContentTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock');
-        }
-        return this.mContentTextBlock_Internal;
-    }
-    get mDiamondButton() {
-        if (!this.mDiamondButton_Internal && this.uiWidgetBase) {
-            this.mDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton');
-        }
-        return this.mDiamondButton_Internal;
-    }
-    get mDiamondTextBlock() {
-        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
-            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton/mDiamondTextBlock');
-        }
-        return this.mDiamondTextBlock_Internal;
-    }
-    get mArkButton() {
-        if (!this.mArkButton_Internal && this.uiWidgetBase) {
-            this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton');
-        }
-        return this.mArkButton_Internal;
-    }
-    get mArkTextBlock() {
-        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
-            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton/mArkTextBlock');
-        }
-        return this.mArkTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mDiamondButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mDiamondButton");
-        });
-        this.mDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mArkButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mArkButton");
-        });
-        this.mArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mContentTextBlock);
-        this.initLanguage(this.mDiamondTextBlock);
-        this.initLanguage(this.mArkTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-SwordTipsPanel_Generate = __decorate([
-    UIBind('UI/module/FlyModule/SwordTipsPanel.ui')
-], SwordTipsPanel_Generate);
-var SwordTipsPanel_Generate$1 = SwordTipsPanel_Generate;
-
-var foreign125 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: SwordTipsPanel_Generate$1
-});
-
-class SwordTipsPanel extends SwordTipsPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.arkCallBack = null;
-        this.diamondCallBack = null;
-        this.closeCallBack = null;
-    }
-    onStart() {
-        this.initUI();
-        this.bindButton();
-    }
-    initUI() {
-        this.mArkTextBlock.text = `派队币购买`;
-        this.mDiamondTextBlock.text = `钻石购买`;
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addClickButton.bind(this));
-        this.mArkButton.onClicked.add(this.addArkButton.bind(this));
-        this.mDiamondButton.onClicked.add(this.addDiamondButton.bind(this));
-    }
-    addClickButton() {
-        this.hide();
-        if (this.closeCallBack)
-            this.closeCallBack();
-    }
-    addArkButton() {
-        if (this.arkCallBack)
-            this.arkCallBack();
-    }
-    addDiamondButton() {
-        if (this.diamondCallBack)
-            this.diamondCallBack();
-    }
-    showPanel(key, arkCallBack, diamondCallBack, closeCallBack) {
-        let swordData = swordDataMap.get(key);
-        if (swordData.diamond <= 0) {
-            this.mContentTextBlock.text = `消耗 ${swordData.ark}派队币`;
-            this.mDiamondButton.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mContentTextBlock.text = `消耗 ${swordData.diamond}钻石 或\n消耗 ${swordData.ark}派队币`;
-            this.mDiamondButton.visibility = mw.SlateVisibility.Visible;
-        }
-        this.arkCallBack = arkCallBack;
-        this.diamondCallBack = diamondCallBack;
-        this.closeCallBack = closeCallBack;
-        this.show();
-    }
-}
-class SwordItem extends SwordItem_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.flyModuleC = null;
-        this.isCanContinueClick = true;
-        this.key = 0;
-    }
-    get getFlyModuleC() {
-        if (!this.flyModuleC) {
-            this.flyModuleC = ModuleService.getModule(FlyModuleC);
-        }
-        return this.flyModuleC;
-    }
-    onStart() {
-        this.initUI();
-        this.bindButton();
-    }
-    initUI() {
-        this.mDiamondIconImage.imageGuid = GlobalData.diamondIcon;
-        this.mArkIconImage.imageGuid = GlobalData.arkIcon;
-        this.mHasTextBlock.text = `点击获得`;
-    }
-    bindButton() {
-        this.mClickButton.onClicked.add(this.addClickButton.bind(this));
-    }
-    addClickButton() {
-        if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
-            return;
-        }
-        this.isCanContinueClick = false;
-        TimeUtil.delaySecond(3).then(() => {
-            this.isCanContinueClick = true;
-        });
-        this.getFlyModuleC.clickSwordItem(this.key, () => {
-            this.buyComplete();
-        });
-    }
-    initItem(key) {
-        this.key = key;
-        let swordData = swordDataMap.get(this.key);
-        let iconStr = swordData.icon.split(`_`);
-        if (iconStr[0] == `mode`) {
-            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
-        }
-        else if (iconStr[0] == `icon`) {
-            this.mIconImage.imageGuid = iconStr[1];
-        }
-        this.mNameTextBlock.text = swordData.name;
-        if (swordData.diamond <= 0) {
-            this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
-            this.mIconImage.position = new mw.Vector2(7, 42);
-            this.mIconImage.size = new mw.Vector2(210, 210);
-        }
-        else {
-            this.mDiamondTextBlock.text = `${swordData.diamond}`;
-            this.mDiamondCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }
-        this.mArkTextBlock.text = `${swordData.ark}`;
-        this.refreshUI();
-    }
-    refreshUI() {
-        if (this.getFlyModuleC.isHasSwordId(this.key)) {
-            this.buyComplete();
-        }
-        else {
-            this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }
-    }
-    buyComplete() {
-        this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-        this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
-        this.mArkIconImage.visibility = mw.SlateVisibility.Collapsed;
-        this.mArkTextBlock.text = `点击使用`;
-        this.mArkTextBlock.textHorizontalLayout = mw.UITextHorizontalLayout.NoClipping;
-        this.mArkTextBlock.textAlign = mw.TextJustify.Right;
-        this.mIconImage.position = new mw.Vector2(7, 42);
-        this.mIconImage.size = new mw.Vector2(210, 210);
-    }
-}
-class SwordPanel extends SwordPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.hudPanel = null;
-        this.swordItems = [];
-    }
-    get getHudPanel() {
-        if (!this.hudPanel) {
-            this.hudPanel = mw.UIService.getUI(HUDPanel);
-        }
-        return this.hudPanel;
-    }
-    onStart() {
-        this.initUI();
-        this.bindButton();
-    }
-    initUI() {
-        this.mTitleTextBlock.text = "御剑飞行商城";
-        this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
-        this.mIconArkImage.imageGuid = GlobalData.arkIcon;
-        this.initItem();
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
-        Event.addLocalListener(`UpdateDiamondTextBlock`, this.updateDiamondTextBlock.bind(this));
-    }
-    addCloseButton() {
-        this.hideTween();
-    }
-    initItem() {
-        swordDataMap.forEach((value, key) => {
-            let swordItem = mw.UIService.create(SwordItem);
-            swordItem.initItem(key);
-            this.mCanvas.addChild(swordItem.uiObject);
-            this.swordItems.push(swordItem);
-        });
-    }
-    updateArkTextBlock(arkCount) {
-        this.mArkCountTextBlock.text = `${arkCount}`;
-    }
-    updateDiamondTextBlock(diamondCount) {
-        this.mDiamondCountTextBlock.text = `${diamondCount}`;
-    }
-    onShow(...params) {
-        Utils.openUITween(this.rootCanvas, () => {
-            this.getHudPanel.hide();
-        }, null);
-    }
-    hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, () => {
-            this.hide();
-            this.getHudPanel.show();
-        });
-    }
-}
-class FlyData extends Subdata {
-    constructor() {
-        super(...arguments);
-        this.flyIds = [];
-        this.swordIds = [];
-        this.usingSwordId = 0;
-    }
-    delFlyId(swordId) {
-        if (!this.swordIds.includes(swordId)) {
-            this.swordIds.push(swordId);
-        }
-        this.flyIds.length = 0;
-        this.save(true);
-    }
-    setSwordId(swordId) {
-        if (!this.swordIds.includes(swordId)) {
-            this.swordIds.push(swordId);
-        }
-        this.save(true);
-    }
-    setUsingSwordId(swordId) {
-        if (this.usingSwordId == swordId)
-            return;
-        this.usingSwordId = swordId;
-        this.save(true);
-    }
-}
-__decorate([
-    Decorator.persistence()
-], FlyData.prototype, "flyIds", void 0);
-__decorate([
-    Decorator.persistence()
-], FlyData.prototype, "swordIds", void 0);
-__decorate([
-    Decorator.persistence()
-], FlyData.prototype, "usingSwordId", void 0);
-class SwordData {
-}
-const swordTriggerId = "0D77F0C2";
-const swordWorldUIId = "21930ABA";
-const swordDataMap = new Map();
-swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73" });
-swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "0F6CADC5", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991" });
-swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0" });
-swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "373123C7", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5" });
-swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D" });
-swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249" });
-swordDataMap.set(7, { id: 7, name: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A" });
-swordDataMap.set(8, { id: 8, name: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "", skinId: "", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451" });
-swordDataMap.set(9, { id: 9, name: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274" });
-class FlyModuleC extends ModuleC {
-    constructor() {
-        super(...arguments);
-        this.swordPanel = null;
-        this.swordTipsPanel = null;
-        this.hudModuleC = null;
-        this.adTipsPanel = null;
-        this.playerModuleC = null;
-        this.flyIds = [];
-        this.swordIds = [];
-        this.usingSwordId = 0;
-        this.isFlying = false;
-        this.isFirst = true;
-    }
-    get getSwordPanel() {
-        if (!this.swordPanel) {
-            this.swordPanel = mw.UIService.getUI(SwordPanel);
-        }
-        return this.swordPanel;
-    }
-    get getSwordTipsPanel() {
-        if (!this.swordTipsPanel) {
-            this.swordTipsPanel = mw.UIService.getUI(SwordTipsPanel);
-        }
-        return this.swordTipsPanel;
-    }
-    get getHudModuleC() {
-        if (!this.hudModuleC) {
-            this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        }
-        return this.hudModuleC;
-    }
-    get getAdTipsPanel() {
-        if (!this.adTipsPanel) {
-            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
-        }
-        return this.adTipsPanel;
-    }
-    get getPlayerModuleC() {
-        if (!this.playerModuleC) {
-            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        }
-        return this.playerModuleC;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.bindAction();
-    }
-    bindAction() {
-        this.getHudModuleC.onOpenSwordAction.add(this.addOpenSwordPanel.bind(this));
-        this.getHudModuleC.onOnOffFlyAction.add(this.addOnOffSword.bind(this));
-        mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
-    }
-    addOpenSwordPanel() {
-        this.getSwordPanel.show();
-        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
-    }
-    addArkUpdate(amount) {
-        //刷新逻辑，amount为当前代币数量
-        console.error(`ArkModuleC addArkUpdate amount: ${amount}`);
-        this.getSwordPanel.updateArkTextBlock(amount);
-    }
-    clickSwordItem(key, buySuccessCallback) {
-        if (this.isHasSwordId(key)) {
-            this.setUsingSwordId(key);
-        }
-        else {
-            let swordData = swordDataMap.get(key);
-            if (swordData.diamond <= 0) {
-                if (mw.SystemUtil.isPIE) {
-                    this.setSwordId(key);
-                    Notice.showDownNotice(`御剑飞行购买成功`);
-                    if (buySuccessCallback)
-                        buySuccessCallback();
-                }
-                else {
-                    mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
-                        mw.PurchaseService.getArkBalance(); //刷新代币数量
-                        if (status != 200)
-                            return;
-                        if (buySuccessCallback)
-                            buySuccessCallback();
-                    });
-                }
-            }
-            else {
-                this.getSwordTipsPanel.showPanel(key, () => {
-                    if (mw.SystemUtil.isPIE) {
-                        this.setSwordId(key);
-                        Notice.showDownNotice(`御剑飞行购买成功`);
-                        if (buySuccessCallback)
-                            buySuccessCallback();
-                        this.getSwordTipsPanel.hide();
-                    }
-                    else {
-                        mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
-                            mw.PurchaseService.getArkBalance(); //刷新代币数量
-                            if (status != 200)
-                                return;
-                            if (buySuccessCallback)
-                                buySuccessCallback();
-                            this.getSwordTipsPanel.hide();
-                        });
-                    }
-                }, () => {
-                    let costDiamond = this.getPlayerModuleC.getDiamond;
-                    if (costDiamond >= swordData.diamond) {
-                        this.getPlayerModuleC.saveDiamond(-swordData.diamond);
-                        this.setSwordId(key);
-                        Notice.showDownNotice(`御剑飞行购买成功`);
-                        this.getSwordTipsPanel.hide();
-                        if (buySuccessCallback)
-                            buySuccessCallback();
-                    }
-                    else {
-                        Notice.showDownNotice(`钻石不足`);
-                        if (GlobalData.isOpenIAA) {
-                            this.getAdTipsPanel.showRewardAd(() => {
-                                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
-                                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                            }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
-                        }
-                        else {
-                            Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
-                            this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                        }
-                    }
-                }, null);
-            }
-        }
-    }
-    net_deliverGoods(commodityId, amount) {
-        swordDataMap.forEach((value, key) => {
-            if (value.commodityId == commodityId) {
-                this.setSwordId(key);
-                Notice.showDownNotice(`御剑飞行购买成功`);
-            }
-        });
-    }
-    onEnterScene(sceneType) {
-        this.initSwordData();
-        this.initTrigger().then(() => {
-            TimeUtil.delaySecond(10).then(() => {
-                if (this.usingSwordId > 0)
-                    this.addOnOffSword(true);
-            });
-        });
-    }
-    ;
-    initSwordData() {
-        this.flyIds = this.data.flyIds;
-        this.swordIds = this.data.swordIds;
-        this.usingSwordId = this.data.usingSwordId;
-        if (this.flyIds && this.flyIds.length > 0) {
-            if (this.flyIds[0] == 1)
-                this.delFlyId();
-        }
-    }
-    delFlyId() {
-        let swordId = 4;
-        if (!this.swordIds.includes(swordId)) {
-            this.swordIds.push(swordId);
-        }
-        if (this.usingSwordId != swordId) {
-            this.usingSwordId = swordId;
-        }
-        this.flyIds.length = 0;
-        this.server.net_delFlyId(swordId);
-    }
-    setSwordId(swordId) {
-        if (this.swordIds.includes(swordId))
-            return;
-        this.swordIds.push(swordId);
-        this.server.net_setSwordId(swordId);
-    }
-    isHasSwordId(swordId) {
-        return this.swordIds.includes(swordId);
-    }
-    setUsingSwordId(swordId) {
-        if (this.usingSwordId == swordId)
-            return;
-        this.usingSwordId = swordId;
-        this.server.net_setUsingSwordId(this.usingSwordId);
-        Notice.showDownNotice(`装备御剑飞行`);
-        this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
-        this.server.net_useFly(this.usingSwordId);
-        this.isFlying = true;
-    }
-    addOnOffSword(on) {
-        if (on) {
-            if (this.usingSwordId <= 0) {
-                Notice.showDownNotice(`未装备御剑飞行`);
-                return;
-            }
-            else {
-                if (this.isFlying)
-                    return;
-                Notice.showDownNotice(`装备御剑飞行`);
-                this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
-                this.server.net_useFly(this.usingSwordId);
-                this.isFlying = true;
-            }
-        }
-        else {
-            if (!this.isFlying)
-                return;
-            Notice.showDownNotice(`卸下御剑飞行`);
-            this.localPlayer.character.changeState(mw.CharacterStateType.Running);
-            this.server.net_useFly(-1);
-            this.isFlying = false;
-        }
-    }
-    defaultOpenBuyPanel() {
-        console.error(`aaaaaaaaaaaaaaaaaaaaaaaaaaaaa`);
-        if (this.isFirst) {
-            this.isFirst = false;
-            return;
-        }
-        this.addOpenSwordPanel();
-    }
-    async initTrigger() {
-        mw.GameObject.asyncFindGameObjectById(swordTriggerId).then((trigger) => {
-            trigger.onEnter.add((character) => {
-                if (character.gameObjectId != this.localPlayer.character.gameObjectId)
-                    return;
-                this.addOpenSwordPanel();
-            });
-        });
-        mw.GameObject.asyncFindGameObjectById(swordWorldUIId).then((worldUI) => {
-            let levelItem = mw.UIService.create(LevelItem);
-            levelItem.updateLevelTextBlock(`御剑飞行商城`);
-            worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-        });
-        swordDataMap.forEach((swordData) => {
-            if (swordData.id >= 7)
-                return;
-            GameObject.asyncFindGameObjectById(swordData.npcId).then((character) => {
-                character.setDescription([swordData.skinId]);
-                let animation = character.loadAnimation(swordData.animationId);
-                animation.loop = 0;
-                animation.play();
-            });
-        });
-    }
-}
-class FlyModuleS extends ModuleS {
-    constructor() {
-        super(...arguments);
-        this.playerModuleS = null;
-    }
-    get getPlayerModuleS() {
-        if (!this.playerModuleS) {
-            this.playerModuleS = ModuleService.getModule(PlayerModuleS);
-        }
-        return this.playerModuleS;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.bindAction();
-    }
-    bindAction() {
-        mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
-    }
-    addShipOrder(playerId, orderId, commodityId, amount, confirmOrder) {
-        //根据playerId和commodityId来处理购买逻辑
-        this.getClient(playerId).net_deliverGoods(commodityId, amount);
-        confirmOrder(true); //调用这个方法表示确认收货成功
-    }
-    net_delFlyId(swordId) {
-        this.currentData.delFlyId(swordId);
-    }
-    net_setSwordId(swordId) {
-        this.currentData.setSwordId(swordId);
-    }
-    net_setUsingSwordId(swordId) {
-        this.currentData.setUsingSwordId(swordId);
-    }
-    net_useFly(key) {
-        this.getPlayerModuleS.useFly(this.currentPlayer, key);
-    }
-}
-__decorate([
-    Decorator.noReply()
-], FlyModuleS.prototype, "net_delFlyId", null);
-__decorate([
-    Decorator.noReply()
-], FlyModuleS.prototype, "net_setSwordId", null);
-__decorate([
-    Decorator.noReply()
-], FlyModuleS.prototype, "net_setUsingSwordId", null);
-__decorate([
-    Decorator.noReply()
-], FlyModuleS.prototype, "net_useFly", null);
-
-var foreign48 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    FlyData: FlyData,
-    FlyModuleC: FlyModuleC,
-    FlyModuleS: FlyModuleS,
-    SwordData: SwordData,
-    SwordItem: SwordItem,
-    SwordPanel: SwordPanel,
-    SwordTipsPanel: SwordTipsPanel,
-    swordDataMap: swordDataMap
-});
-
 let PlayerLifebar = class PlayerLifebar extends mw.Script {
     constructor() {
         super(...arguments);
@@ -17155,6 +17337,7 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
         this.targetDistance = 0;
         this.petAnimation = null;
         this.flyJian = null;
+        this.flyCharacter = null;
         this.flyJianAni = null;
         this.flyAnimationId = "";
         this.isFlying = false;
@@ -17295,6 +17478,10 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
                 GameObjPool.despawn(this.flyJian);
                 this.flyJian = null;
             }
+            if (this.flyCharacter) {
+                GameObjPool.despawn(this.flyCharacter);
+                this.flyCharacter = null;
+            }
             if (this.flyJianAni) {
                 this.flyJianAni.stop();
                 this.flyJianAni = null;
@@ -17309,15 +17496,34 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
                 GameObjPool.despawn(this.flyJian);
                 this.flyJian = null;
             }
+            if (this.flyCharacter) {
+                GameObjPool.despawn(this.flyCharacter);
+                this.flyCharacter = null;
+            }
             if (!swordDataMap.has(this.flyId))
                 return;
             let flyData = swordDataMap.get(this.flyId);
             Utils.asyncDownloadAsset(flyData.swordPrefabId).then(() => {
                 GameObjPool.asyncSpawn(flyData.swordPrefabId).then((go) => {
-                    this.flyJian = go;
-                    this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
-                    this.flyJian.localTransform.position = mw.Vector.zero;
-                    this.flyJian.localTransform.rotation = mw.Rotation.zero;
+                    if (flyData.isCharacter) {
+                        this.flyCharacter = go;
+                        this.flyCharacter.setCollision(mw.PropertyStatus.Off, true);
+                        this.character.attachToSlot(this.flyCharacter, mw.HumanoidSlotType.Root);
+                        this.flyCharacter.localTransform.scale = mw.Vector.one.multiply(4);
+                        this.flyCharacter.localTransform.position = new mw.Vector(12, 0, 30);
+                        this.flyCharacter.localTransform.rotation = mw.Rotation.zero;
+                        Utils.asyncDownloadAsset(`160628`).then(() => {
+                            let flyCharacterAnimation = this.flyCharacter.loadAnimation(`160628`); //TODO-小龙动画
+                            flyCharacterAnimation.loop = 0;
+                            flyCharacterAnimation.play();
+                        });
+                    }
+                    else {
+                        this.flyJian = go;
+                        this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
+                        this.flyJian.localTransform.position = mw.Vector.zero;
+                        this.flyJian.localTransform.rotation = mw.Rotation.zero;
+                    }
                     this.flyAnimationId = flyData.animationId;
                     this.flyJianAni = this.character.loadAnimation(this.flyAnimationId);
                     this.flyJianAni.loop = 0;
@@ -17341,6 +17547,8 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
             GameObjPool.despawn(this.pet);
         if (this.flyJian)
             GameObjPool.despawn(this.flyJian);
+        if (this.flyCharacter)
+            GameObjPool.despawn(this.flyCharacter);
         this._hpBarUI?.destroy();
         this._hpBarWidget?.destroy();
     }
@@ -17937,7 +18145,7 @@ var foreign4 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -19512,7 +19720,7 @@ var foreign15 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -19623,7 +19831,7 @@ var foreign16 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkItem.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let ArkItem_Generate = class ArkItem_Generate extends UIScript {
     get mIconImage() {
@@ -19752,7 +19960,7 @@ var foreign116 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -19856,7 +20064,7 @@ var foreign117 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/GiftBagPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
 let GiftBagPanel_Generate = class GiftBagPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -20488,7 +20696,7 @@ var foreign52 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeopleItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let NewPeopleItem_Generate = class NewPeopleItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -20659,7 +20867,7 @@ var foreign136 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeoplePanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let NewPeoplePanel_Generate = class NewPeoplePanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -21002,7 +21210,7 @@ var foreign56 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -22379,7 +22587,7 @@ var foreign97 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -22479,7 +22687,7 @@ var foreign145 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -22599,7 +22807,7 @@ var foreign77 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -25150,7 +25358,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_1.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_1_Generate = class WorldTips_1_Generate extends UIScript {
     get mTextBlock() {
@@ -25206,7 +25414,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_2.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_2_Generate = class WorldTips_2_Generate extends UIScript {
     get mTextBlock() {
@@ -25263,7 +25471,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_3.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_3_Generate = class WorldTips_3_Generate extends UIScript {
     get mTextBlock() {
@@ -25320,7 +25528,7 @@ var foreign108 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_4.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_4_Generate = class WorldTips_4_Generate extends UIScript {
     get mTextBlock() {
@@ -25376,7 +25584,7 @@ var foreign109 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_5.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_5_Generate = class WorldTips_5_Generate extends UIScript {
     get mTextBlock() {
@@ -25433,7 +25641,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_6.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_6_Generate = class WorldTips_6_Generate extends UIScript {
     get mTextBlock() {
@@ -25489,7 +25697,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_7.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_7_Generate = class WorldTips_7_Generate extends UIScript {
     get mTextBlock() {
@@ -25546,7 +25754,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips.ui
- * TIME: 2024.10.06-00.28.27
+ * TIME: 2024.10.08-23.13.30
  */
 let WorldTips_Generate = class WorldTips_Generate extends UIScript {
     get mTextBlock() {
@@ -25603,7 +25811,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -25722,7 +25930,7 @@ var foreign138 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -25813,7 +26021,7 @@ var foreign146 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -25926,7 +26134,7 @@ var foreign150 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -25981,7 +26189,7 @@ var foreign152 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -26056,7 +26264,7 @@ var foreign153 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -26140,7 +26348,7 @@ var foreign154 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
  
 @UIBind('UI/module/FlyModule/SwordPanel.ui')
@@ -64,6 +64,13 @@ export default class SwordPanel_Generate extends UIScript {
 		}
 		return this.mArkCountTextBlock_Internal
 	}
+	private mTotalRarityTextBlock_Internal: mw.TextBlock
+	public get mTotalRarityTextBlock(): mw.TextBlock {
+		if(!this.mTotalRarityTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityTextBlock') as mw.TextBlock
+		}
+		return this.mTotalRarityTextBlock_Internal
+	}
 	private mCloseButton_Internal: mw.Button
 	public get mCloseButton(): mw.Button {
 		if(!this.mCloseButton_Internal&&this.uiWidgetBase) {
@@ -101,6 +108,9 @@ export default class SwordPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mArkCountTextBlock)
+		
+	
+		this.initLanguage(this.mTotalRarityTextBlock)
 		
 	
 		//文本多语言

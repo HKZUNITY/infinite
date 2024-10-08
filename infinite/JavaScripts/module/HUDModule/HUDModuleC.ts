@@ -8,11 +8,12 @@ import GlobalData from "../../const/GlobalData";
 import AdTipsPanel from '../AdsModule/ui/AdTipsPanel';
 import UpPanel from '../AdsModule/ui/UpPanel';
 import { BagModuleC } from '../BagModule/BagModule';
+import { FlyModuleC } from '../FlyModule/FlyModule';
 import { LevelModuleC } from '../LevelModule/LevelModule';
 import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 import { WorldConfigData } from '../RankModule/PlayerPropData';
-import { RingSoulPanel } from '../RingSoulModule/RingSoulModule';
+import { RingSoulModuleC, RingSoulPanel } from '../RingSoulModule/RingSoulModule';
 import TaskModuleC from "../TaskModule/TaskModuleC";
 import HUDModuleS from "./HUDModuleS";
 import HUDPanel from "./ui/HUDPanel";
@@ -53,6 +54,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         }
         return this.ringSoulPanel;
     }
+    private ringSoulModuleC: RingSoulModuleC = null;
+    private get getRingSoulModuleC(): RingSoulModuleC {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
     private adTipsPanel: AdTipsPanel = null;
     private get getAdTipsPanel(): AdTipsPanel {
         if (!this.adTipsPanel) {
@@ -73,6 +81,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.bagModuleC = ModuleService.getModule(BagModuleC);
         }
         return this.bagModuleC;
+    }
+    private flyModuleC: FlyModuleC = null;
+    private get getFlyModuleC(): FlyModuleC {
+        if (!this.flyModuleC) {
+            this.flyModuleC = ModuleService.getModule(FlyModuleC);
+        }
+        return this.flyModuleC;
     }
     private levelModuleC: LevelModuleC = null;
     private get getLevelModuleC(): LevelModuleC {
@@ -278,12 +293,12 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     private lv: number = 0;
     public updateLvExpCoin(lv: number, exp: number, coin: number, isAddLv: boolean): void {
         this.lv = lv;
-        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing());
+        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
         if (!isAddLv) return;
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
         this.getHudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = Math.round(Utils.getHp(lv) * this.getBagModuleC.getAddHpByUsing());
+        let hp = Math.round(Utils.getHp(lv) * (this.getBagModuleC.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity));
         this.maxHp = hp;
         this.updateHp(hp);
     }

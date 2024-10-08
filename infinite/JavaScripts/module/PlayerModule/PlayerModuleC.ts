@@ -42,6 +42,9 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
 
     private initAction(): void {
         this.getHudModuleC.onOnOffUpExpAction.add(this.addOnOffUpExp.bind(this));
+        Event.addLocalListener(`SyncDiamondCount`, () => {
+            Event.dispatchToLocal(`UpdateDiamondTextBlock`, this.getDiamond);
+        });
     }
 
     protected onEnterScene(sceneType: number): void {

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.31
  */
  
 @UIBind('UI/module/RingSoulModule/RingSoulPanel.ui')
@@ -14,6 +14,13 @@ export default class RingSoulPanel_Generate extends UIScript {
 			this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton') as mw.Button
 		}
 		return this.mCloseButton_Internal
+	}
+	private mTotalRarityTextBlock_Internal: mw.TextBlock
+	public get mTotalRarityTextBlock(): mw.TextBlock {
+		if(!this.mTotalRarityTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTotalRarityTextBlock') as mw.TextBlock
+		}
+		return this.mTotalRarityTextBlock_Internal
 	}
 	private mContentCanvas_Internal: mw.Canvas
 	public get mContentCanvas(): mw.Canvas {
@@ -106,6 +113,9 @@ export default class RingSoulPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
+		this.initLanguage(this.mTotalRarityTextBlock)
+		
+	
 		this.initLanguage(this.mUpTextBlock)
 		
 	

@@ -11,12 +11,14 @@ import BagItem_Generate from "../../ui-generate/module/BagModule/BagItem_generat
 import BagPanel_Generate from "../../ui-generate/module/BagModule/BagPanel_generate";
 import BagTab_Generate from "../../ui-generate/module/BagModule/BagTab_generate";
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
+import { FlyModuleC, FlyModuleS } from "../FlyModule/FlyModule";
 import { GuideModuleC } from "../GuideModule/GuideModule";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import { lotteryDatas } from "../LotteryModule/LotteryModule";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 import PlayerModuleS from "../PlayerModule/PlayerModuleS";
+import { RingSoulModuleC, RingSoulModuleS } from "../RingSoulModule/RingSoulModule";
 import TaskModuleC from "../TaskModule/TaskModuleC";
 
 /**
@@ -136,6 +138,22 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             this.loading = mw.UIService.getUI(Loading);
         }
         return this.loading;
+    }
+
+    private ringSoulModuleC: RingSoulModuleC = null;
+    private get getRingSoulModuleC(): RingSoulModuleC {
+        if (!this.ringSoulModuleC) {
+            this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
+        }
+        return this.ringSoulModuleC;
+    }
+
+    private flyModuleC: FlyModuleC = null;
+    private get getFlyModuleC(): FlyModuleC {
+        if (!this.flyModuleC) {
+            this.flyModuleC = ModuleService.getModule(FlyModuleC);
+        }
+        return this.flyModuleC;
     }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
@@ -284,8 +302,8 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.usePet(this.usingPetId);
     }
 
-    private updateHpByUsing(): void {
-        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing(), this.getAddAtkByUsing());
+    public updateHpByUsing(): void {
+        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity, this.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
     }
 
     public getAddHpByUsing(): number {
@@ -714,6 +732,23 @@ export class BagModuleS extends ModuleS<BagModuleC, BagData> {
         }
         return this.playerModuleS;
     }
+
+    private ringSoulModuleS: RingSoulModuleS = null;
+    private get getRingSoulModuleS(): RingSoulModuleS {
+        if (!this.ringSoulModuleS) {
+            this.ringSoulModuleS = ModuleService.getModule(RingSoulModuleS);
+        }
+        return this.ringSoulModuleS;
+    }
+
+    private flyModuleS: FlyModuleS = null;
+    private get getFlyModuleS(): FlyModuleS {
+        if (!this.flyModuleS) {
+            this.flyModuleS = ModuleService.getModule(FlyModuleS);
+        }
+        return this.flyModuleS;
+    }
+
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
@@ -748,8 +783,8 @@ export class BagModuleS extends ModuleS<BagModuleC, BagData> {
         this.updateHpByUsing(this.currentPlayer);
     }
 
-    private updateHpByUsing(player: mw.Player): void {
-        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player));
+    public updateHpByUsing(player: mw.Player): void {
+        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player));
     }
 
     public getAddHpByUsing(player: mw.Player): number {

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordItem.ui
- * TIME: 2024.10.06-00.28.28
+ * TIME: 2024.10.08-23.13.30
  */
  
 @UIBind('UI/module/FlyModule/SwordItem.ui')
@@ -99,6 +99,13 @@ export default class SwordItem_Generate extends UIScript {
 		}
 		return this.mClickButton_Internal
 	}
+	private mRarityTextBlock_Internal: mw.TextBlock
+	public get mRarityTextBlock(): mw.TextBlock {
+		if(!this.mRarityTextBlock_Internal&&this.uiWidgetBase) {
+			this.mRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/BgImage/mRarityTextBlock') as mw.TextBlock
+		}
+		return this.mRarityTextBlock_Internal
+	}
 
 
 	protected onAwake() {
@@ -132,6 +139,9 @@ export default class SwordItem_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mHasTextBlock)
+		
+	
+		this.initLanguage(this.mRarityTextBlock)
 		
 	
 		//文本多语言

@@ -6,6 +6,7 @@ import RingSoulItem_Generate from "../../ui-generate/module/RingSoulModule/RingS
 import RingSoulItemChild_Generate from "../../ui-generate/module/RingSoulModule/RingSoulItemChild_generate";
 import RingSoulPanel_Generate from "../../ui-generate/module/RingSoulModule/RingSoulPanel_generate";
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
+import { BagModuleC, BagModuleS } from "../BagModule/BagModule";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
@@ -294,6 +295,14 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
         return this.hudModuleC;
     }
 
+    private bagModuleC: BagModuleC = null;
+    private get getBagModuleC(): BagModuleC {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
+
     private ringSoulPanel: RingSoulPanel = null;
     private get getRingSoulPanel(): RingSoulPanel {
         if (this.ringSoulPanel == null) {
@@ -311,6 +320,7 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
 
         this.getHudModuleC.onOpenRingSoulAction.add(() => {
             this.getRingSoulPanel.show();
+            this.getRingSoulPanel.updateRarityTextBlock(this.getRarity);
         });
         this.getHudModuleC.onOnOffRingSoulAction.add(this.onOffRingSoul.bind(this));
         this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
@@ -344,6 +354,17 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
     public setRingSoulIndex(key: number, value: number): void {
         MapEx.set(this.ringSoul, key, value);
         this.server.net_setRingSoulIndex(key, value);
+        this.getBagModuleC.updateHpByUsing();
+        this.getRingSoulPanel.updateRarityTextBlock(this.getRarity);
+    }
+
+    public get getRarity(): number {
+        if (!this.ringSoul || MapEx.count(this.ringSoul) == 0) return 0;
+        let rarity = 0;
+        MapEx.forEach(this.ringSoul, (key: number, value: number) => {
+            rarity += value;
+        });
+        return rarity * 0.05;
     }
 
     public onOffRingSoul(isOpenRingSoul: boolean): void {
@@ -352,6 +373,14 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
 }
 
 export class RingSoulModuleS extends ModuleS<RingSoulModuleC, RingSoulData> {
+    private bagModuleS: BagModuleS = null;
+    private get getBagModuleS(): BagModuleS {
+        if (!this.bagModuleS) {
+            this.bagModuleS = ModuleService.getModule(BagModuleS);
+        }
+        return this.bagModuleS;
+    }
+
     protected onStart(): void {
 
     }
@@ -379,11 +408,16 @@ export class RingSoulModuleS extends ModuleS<RingSoulModuleC, RingSoulData> {
     }
 
     public net_setRingSoulIndex(key: number, value: number): void {
-        let playerId = this.currentPlayerId;
+        let player = this.currentPlayer;
         this.currentData.setRingSoulIndex(key, value);
-        if (!this.ringSoulMap.has(playerId)) return;
-        let ringSoul = this.ringSoulMap.get(playerId);
+        if (!this.ringSoulMap.has(player.playerId)) return;
+        let ringSoul = this.ringSoulMap.get(player.playerId);
         ringSoul.ringSoulStrs = `${key}-${value}`;
+        this.getBagModuleS.updateHpByUsing(player);
+    }
+
+    public getRarity(player: mw.Player): number {
+        return DataCenterS.getData(player, RingSoulData).getRarity;
     }
 
     public net_onOffRingSoul(isOpenRingSoul: boolean): void {
@@ -401,6 +435,15 @@ export class RingSoulData extends Subdata {
     public setRingSoulIndex(key: number, value: number): void {
         MapEx.set(this.ringSoul, key, value);
         this.save(true);
+    }
+
+    public get getRarity(): number {
+        if (!this.ringSoul || MapEx.count(this.ringSoul) == 0) return 0;
+        let rarity = 0;
+        MapEx.forEach(this.ringSoul, (key: number, value: number) => {
+            rarity += value;
+        });
+        return rarity * 0.05;
     }
 }
 
@@ -524,6 +567,10 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
 
     public updateDiamond(diamond: number): void {
         this.mDiamondTextBlock.text = `${diamond}`;
+    }
+
+    public updateRarityTextBlock(rarity: number): void {
+        this.mTotalRarityTextBlock.text = `总加成：血量提升${1 + rarity}倍，攻击力提升${1 + rarity}倍`;
     }
 
     protected onShow(...params: any[]): void {

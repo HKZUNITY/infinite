@@ -4,8 +4,10 @@ import Console from "../../Tools/Console";
 import { Utils } from "../../Tools/utils";
 import GlobalData from "../../const/GlobalData";
 import { BagModuleS } from '../BagModule/BagModule';
+import { FlyModuleS } from '../FlyModule/FlyModule';
 import { LevelModuleS } from '../LevelModule/LevelModule';
 import { WorldRankModuleS } from "../RankModule/WorldRankModuleS";
+import { RingSoulModuleS } from '../RingSoulModule/RingSoulModule';
 import TaskModuleS from "../TaskModule/TaskModuleS";
 import PlayerData from "./PlayerData";
 import PlayerModuleC from "./PlayerModuleC";
@@ -41,6 +43,22 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             this.levelModuleS = ModuleService.getModule(LevelModuleS);
         }
         return this.levelModuleS;
+    }
+
+    private ringSoulModuleS: RingSoulModuleS = null;
+    private get getRingSoulModuleS(): RingSoulModuleS {
+        if (!this.ringSoulModuleS) {
+            this.ringSoulModuleS = ModuleService.getModule(RingSoulModuleS);
+        }
+        return this.ringSoulModuleS;
+    }
+
+    private flyModuleS: FlyModuleS = null;
+    private get getFlyModuleS(): FlyModuleS {
+        if (!this.flyModuleS) {
+            this.flyModuleS = ModuleService.getModule(FlyModuleS);
+        }
+        return this.flyModuleS;
     }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
@@ -158,7 +176,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = Math.round(playerData.getHp() * this.getBagModuleS.getAddHpByUsing(player));
+                let maxHp = Math.round(playerData.getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = playerData.playerLv;
@@ -207,7 +225,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let curHp = targetPlayerData.playerLifebar.hp;
         curHp -= damage;
         if (curHp <= 0) {
-            let maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(targetPlayer));
+            let maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer) + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)));
             targetPlayerData.playerLifebar.hp = 0;
             targetPlayerData.isDie = true;
             if (sendPlayer) {
@@ -234,7 +252,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         if (sendPlayer) {
             let maxHp = 0;
             if (targetPlayerData.isDie) {
-                maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(targetPlayer));
+                maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer) + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)));
             }
             this.getClient(sendPlayer).net_onSelfAtkPlayer(damage, hitPoint, targetPlayerData.isDie, maxHp);
         }
@@ -258,7 +276,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let playerDataS = new PlayerDataS();
         // let hpbar = await mw.Script.spawnScript(PlayerLifebar, true, player.character);
         let hpbar = player.character.addComponent(PlayerLifebar, true);
-        let maxHp = Math.round(DataCenterS.getData(player, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(player));
+        let maxHp = Math.round(DataCenterS.getData(player, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
         hpbar.maxHp = maxHp;
         hpbar.hp = maxHp;
         playerDataS.playerLifebar = hpbar;
@@ -345,7 +363,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = Math.round(this.currentData.getHp() * this.getBagModuleS.getAddHpByUsing(player));
+                let maxHp = Math.round(this.currentData.getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = this.currentData.playerLv;

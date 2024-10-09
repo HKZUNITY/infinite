@@ -17591,6 +17591,8 @@ class PlayerModuleS extends ModuleS {
         this.taskModuleS = null;
         this.bagModuleS = null;
         this.levelModuleS = null;
+        this.ringSoulModuleS = null;
+        this.flyModuleS = null;
         this.allPlayerMap = new Map();
         /**存储所有玩家的生命数据 */
         this.playerLifeMap = new Map();
@@ -17618,6 +17620,18 @@ class PlayerModuleS extends ModuleS {
             this.levelModuleS = ModuleService.getModule(LevelModuleS);
         }
         return this.levelModuleS;
+    }
+    get getRingSoulModuleS() {
+        if (!this.ringSoulModuleS) {
+            this.ringSoulModuleS = ModuleService.getModule(RingSoulModuleS);
+        }
+        return this.ringSoulModuleS;
+    }
+    get getFlyModuleS() {
+        if (!this.flyModuleS) {
+            this.flyModuleS = ModuleService.getModule(FlyModuleS);
+        }
+        return this.flyModuleS;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -17734,7 +17748,7 @@ class PlayerModuleS extends ModuleS {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = Math.round(playerData.getHp() * this.getBagModuleS.getAddHpByUsing(player));
+                let maxHp = Math.round(playerData.getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = playerData.playerLv;
@@ -17777,7 +17791,7 @@ class PlayerModuleS extends ModuleS {
         let curHp = targetPlayerData.playerLifebar.hp;
         curHp -= damage;
         if (curHp <= 0) {
-            let maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(targetPlayer));
+            let maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer) + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)));
             targetPlayerData.playerLifebar.hp = 0;
             targetPlayerData.isDie = true;
             if (sendPlayer) {
@@ -17804,7 +17818,7 @@ class PlayerModuleS extends ModuleS {
         if (sendPlayer) {
             let maxHp = 0;
             if (targetPlayerData.isDie) {
-                maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(targetPlayer));
+                maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer) + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)));
             }
             this.getClient(sendPlayer).net_onSelfAtkPlayer(damage, hitPoint, targetPlayerData.isDie, maxHp);
         }
@@ -17826,7 +17840,7 @@ class PlayerModuleS extends ModuleS {
         let playerDataS = new PlayerDataS();
         // let hpbar = await mw.Script.spawnScript(PlayerLifebar, true, player.character);
         let hpbar = player.character.addComponent(PlayerLifebar$1, true);
-        let maxHp = Math.round(DataCenterS.getData(player, PlayerData).getHp() * this.getBagModuleS.getAddHpByUsing(player));
+        let maxHp = Math.round(DataCenterS.getData(player, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
         hpbar.maxHp = maxHp;
         hpbar.hp = maxHp;
         playerDataS.playerLifebar = hpbar;
@@ -17899,7 +17913,7 @@ class PlayerModuleS extends ModuleS {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = Math.round(this.currentData.getHp() * this.getBagModuleS.getAddHpByUsing(player));
+                let maxHp = Math.round(this.currentData.getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = this.currentData.playerLv;

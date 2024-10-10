@@ -732,6 +732,13 @@ export class Utils {
             }
         }
     }
+
+    public static setGraphicsLevel(): void {
+        let defaultGraphicsLevel = mw.GraphicsSettings.getDefaultGPULevel();
+        let targetGraphicsLevel = Math.ceil(defaultGraphicsLevel / 2);
+        mw.GraphicsSettings.setGraphicsCPULevel(targetGraphicsLevel);
+        mw.GraphicsSettings.setGraphicsGPULevel(targetGraphicsLevel);
+    }
 }
 
 /**贝塞尔曲线 */

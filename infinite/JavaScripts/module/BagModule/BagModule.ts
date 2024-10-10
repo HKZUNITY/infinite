@@ -192,6 +192,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     protected onEnterScene(sceneType: number): void {
         this.initBagData();
         this.initTrigger().then(() => {
+            Utils.setGraphicsLevel();
         });
         this.updateLotteryData();
     }
@@ -502,6 +503,9 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                 return;
             } else if (GameConfig.BagInfo.getElement(bagId).GetType == 5) {
                 Notice.showDownNotice(`看广告获得`);
+                return;
+            } else if (GameConfig.BagInfo.getElement(bagId).GetType == 6) {
+                Notice.showDownNotice(`老玩家回归获得`);
                 return;
             }
         }
@@ -1094,6 +1098,8 @@ export class BagItem extends BagItem_Generate {
                 this.mHasTextBlock.text = "完成新手引导";
             } else if (this.bagInfoElement.GetType == 5) {
                 this.mHasTextBlock.text = "看广告获得";
+            } else if (this.bagInfoElement.GetType == 6) {
+                this.mHasTextBlock.text = "老玩家回归获得";
             } else {
                 this.mHasTextBlock.text = "点击获得";
             }

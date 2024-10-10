@@ -40,7 +40,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
-    private totalStep: number = 26;
+    private totalStep: number = 27;
     private curStep: number = -1;
     public onNextStepAction: Action = new Action();
 
@@ -254,7 +254,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             if (mw.UIService.getUI(BagInfoPanel, false).visible) mw.UIService.hide(BagInfoPanel);
             Event.dispatchToLocal("First");
             TimeUtil.delaySecond(5).then(() => {
-                this.getGuidePanel.guideByStep(20);
+                this.getGuidePanel.guideByStep(21);
                 this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
                 Notice.showDownNotice(`返回新手村`);
                 Notice.showDownNotice(`正式开启你的副本吧`);

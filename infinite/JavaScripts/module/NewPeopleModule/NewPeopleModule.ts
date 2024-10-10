@@ -16,15 +16,25 @@ const onlineMinutes: number = 30;
 export class NewPeopleData extends Subdata {
     @Decorator.persistence()
     public isGetNewPeoples: MapEx.MapExClass<string> = {};
+    @Decorator.persistence()
+    public isOldPeople: boolean = false;
 
     public setIsGetNewPeoples(key: number, isGet: string): void {
         MapEx.set(this.isGetNewPeoples, key, isGet);
+        this.save(true);
+    }
+
+    public setIsOldPeople(isOld: boolean): void {
+        this.isGetNewPeoples = {};
+        this.isOldPeople = isOld;
         this.save(true);
     }
 }
 
 const NewPeopleTriggerMap: Map<number, { triggers: string[], worldUIIds: string[], name: string }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string }>();
 NewPeopleTriggerMap.set(1, { triggers: ["08A7D30E"], worldUIIds: ["272413D6"], name: `新手礼包` });
+NewPeopleTriggerMap.set(2, { triggers: null, worldUIIds: ["07D9DF79"], name: `领取自动攻击` });
+NewPeopleTriggerMap.set(3, { triggers: null, worldUIIds: ["0D9A6CAC"], name: `领取限定皮肤` });
 export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
     private newPeoplePanel: NewPeoplePanel = null;
     private get getNewPeoplePanel(): NewPeoplePanel {
@@ -64,9 +74,38 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
     }
 
     private isGetNewPeoples: MapEx.MapExClass<string> = {};
+    private isOldPeople: boolean = false;
     protected onEnterScene(sceneType: number): void {
         this.isGetNewPeoples = this.data.isGetNewPeoples;
+        this.isOldPeople = this.data.isOldPeople;
+        this.checkIsOldPeople();
+        this.initOldPeopleData();
         this.initTrigger();
+    }
+
+    private checkIsOldPeople(): void {
+        if (this.isOldPeople) return;
+        if (this.isGetNewPeoples && MapEx.count(this.isGetNewPeoples) == 2) {
+            let isOld = true;
+            MapEx.forEach(this.isGetNewPeoples, (key: number, value: string) => {
+                if (!value) isOld = false;
+            });
+            if (!isOld) return;
+            this.isOldPeople = true;
+            this.isGetNewPeoples = {};
+            this.server.net_setIsOldPeople(isOld);
+        }
+    }
+
+    private initOldPeopleData(): void {
+        if (!this.isOldPeople) return;
+        NewPeopleTriggerMap.get(1).name = `老玩家回归礼包`;
+        newPeopleGiftDatas.get(1).name = `黄金王子+JK女孩`;
+        newPeopleGiftDatas.get(1).icon = ["142399", "320751"];
+        newPeopleGiftDatas.get(1).bagId = [20064, 20065];//TODO
+        newPeopleGiftDatas.get(2).name = `小蓝龙+小绿龙\n小黑龙+小橘龙`;
+        newPeopleGiftDatas.get(2).bagId = [20066, 200677, 20068, 20069];//TODO
+        newPeopleGiftDatas.get(2).icon = ["216268", "216269", "216270", "212971"];
     }
 
     public isGetNewPeople(key: number): boolean {
@@ -116,15 +155,17 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
             worldUIIds: string[];
             name: string;
         }, key: number) => {
-            value.triggers.forEach((triggerId: string) => {
-                mw.GameObject.asyncFindGameObjectById(triggerId).then((go: mw.GameObject) => {
-                    let trigger = go as mw.Trigger;
-                    trigger.onEnter.add((character: mw.Character) => {
-                        if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
-                        this.getNewPeoplePanel.show();
+            if (value.triggers && value.triggers.length > 0) {
+                value.triggers.forEach((triggerId: string) => {
+                    mw.GameObject.asyncFindGameObjectById(triggerId).then((go: mw.GameObject) => {
+                        let trigger = go as mw.Trigger;
+                        trigger.onEnter.add((character: mw.Character) => {
+                            if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
+                            this.getNewPeoplePanel.show();
+                        });
                     });
                 });
-            });
+            }
             value.worldUIIds.forEach((worldId: string) => {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v: mw.GameObject) => {
                     let worldUI: mw.UIWidget = v as mw.UIWidget;
@@ -147,6 +188,11 @@ export class NewPeopleModuleS extends ModuleS<NewPeopleModuleC, NewPeopleData> {
     @Decorator.noReply()
     public net_setIsGetNewPeoples(key: number, isGet: string): void {
         this.currentData.setIsGetNewPeoples(key, isGet);
+    }
+
+    @Decorator.noReply()
+    public net_setIsOldPeople(isOld: boolean): void {
+        this.currentData.setIsOldPeople(isOld);
     }
 }
 

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.10.08-23.13.31
+ * TIME: 2024.10.11-00.17.38
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -133,6 +133,27 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mSkillCDTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mSkillCanvas_1/mSkillCDTextBlock_1') as mw.TextBlock
 		}
 		return this.mSkillCDTextBlock_1_Internal
+	}
+	private mAutoAtkCanvas_Internal: mw.Canvas
+	public get mAutoAtkCanvas(): mw.Canvas {
+		if(!this.mAutoAtkCanvas_Internal&&this.uiWidgetBase) {
+			this.mAutoAtkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mAutoAtkCanvas') as mw.Canvas
+		}
+		return this.mAutoAtkCanvas_Internal
+	}
+	private mAutoAtkButton_Internal: mw.Button
+	public get mAutoAtkButton(): mw.Button {
+		if(!this.mAutoAtkButton_Internal&&this.uiWidgetBase) {
+			this.mAutoAtkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mAutoAtkCanvas/mAutoAtkButton') as mw.Button
+		}
+		return this.mAutoAtkButton_Internal
+	}
+	private mAutoAtkTextBlock_Internal: mw.TextBlock
+	public get mAutoAtkTextBlock(): mw.TextBlock {
+		if(!this.mAutoAtkTextBlock_Internal&&this.uiWidgetBase) {
+			this.mAutoAtkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/mAutoAtkCanvas/mAutoAtkTextBlock') as mw.TextBlock
+		}
+		return this.mAutoAtkTextBlock_Internal
 	}
 	private mPlayerButton_Internal: mw.Button
 	public get mPlayerButton(): mw.Button {
@@ -611,6 +632,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mFlyButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mAutoAtkButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mAutoAtkButton");
+		});
+		this.mAutoAtkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mPlayerButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mPlayerButton");
 		});
@@ -769,6 +796,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mSkillCDTextBlock_1)
+		
+	
+		this.initLanguage(this.mAutoAtkTextBlock)
 		
 	
 		this.initLanguage(this.mLotteryTextBlock)

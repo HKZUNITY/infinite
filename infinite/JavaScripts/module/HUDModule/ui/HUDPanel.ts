@@ -56,10 +56,14 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mJumpButton.onClicked.add(() => {
 			this.getHudModuleC.onJumpAction.call();
 			this.getHudModuleC.onOnOffFlyAction.call(false);
+			this.isOpenAuto = false;
+			this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
 		});
 		this.mSprintButton.onClicked.add(() => {
 			this.getHudModuleC.onSprintAction.call();
 			this.getHudModuleC.onOnOffFlyAction.call(false);
+			this.isOpenAuto = false;
+			this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
 		});
 		this.mOnlineRewardButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenOnlineRewardAction.call();
@@ -128,6 +132,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mUpExpButton.onClicked.add(() => {
 			this.getHudModuleC.onOnOffUpExpAction.call(true);
 			this.getHudModuleC.onOnOffFlyAction.call(false);
+			this.isOpenAuto = false;
+			this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
 		});
 		this.mNewPeopleButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenNewPeopleAction.call();
@@ -136,12 +142,15 @@ export default class HUDPanel extends HUDPanel_Generate {
 			this.getHudModuleC.onOpenLotteryAction.call();
 		});
 		this.mFlyButton.onClicked.add(() => {
+			this.isOpenAuto = false;
+			this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
 			this.getHudModuleC.onOnOffFlyAction.call(true);
 		});
 		this.mSwordButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenSwordAction.call();
 		});
 		this.initSkill_1();
+		this.initAutoAtk();
 	}
 
 	public updateInvincibleCanvasState(visibility: boolean): void {
@@ -374,6 +383,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 		} else if (this.mHpProgressBar.currentValue == 0) {
 			this.startDeadCountDown();
 			this.getHudModuleC.onOnOffFlyAction.call(false);
+			this.isOpenAuto = false;
+			this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
 		}
 	}
 	//#endregion
@@ -389,6 +400,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 			}
 			if (this.curInputIndex != -1) return;
 			this.getHudModuleC.onOnOffFlyAction.call(false);
+			this.isOpenAuto = false;
+			this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
 			ColdWeapon.getInstance().attack(index);
 			this.curInputIndex = index;
 		});
@@ -402,7 +415,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 	private isUnlockSkill_1: boolean = false;
 	private skillIsCanAtk_1: boolean = true;
 	private initSkill_1(): void {
-		this.mSkillTextBlock_1.text = `<size=30>${GlobalData.skillName_1}</size>\n<size=15>${GlobalData.skillContinue_1}秒内攻击力翻倍</size>`;
+		this.mSkillTextBlock_1.text = `<size=20>${GlobalData.skillName_1}</size>\n<size=10>${GlobalData.skillContinue_1}秒内攻击力翻倍</size>`;
 		this.mSkillMaskButton_1.fanShapedValue = 1;
 		this.mSkillMaskButton_1.clickedDelegate.add(() => {
 			Event.dispatchToLocal("PlayButtonClick", this.mSkillMaskButton_1.name);
@@ -437,6 +450,16 @@ export default class HUDPanel extends HUDPanel_Generate {
 			});
 		});
 	}
+
+	private isOpenAuto: boolean = false;
+	private initAutoAtk(): void {
+		this.mAutoAtkButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenAutoAtkAction.call((isCanOpen: boolean) => {
+				this.isOpenAuto = isCanOpen;
+			}, !this.isOpenAuto);
+		});
+	}
+
 	//#endregion
 
 	//#region 背景音乐

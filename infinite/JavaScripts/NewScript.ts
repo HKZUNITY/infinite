@@ -9,6 +9,9 @@ export default class NewScript extends Script {
     @mw.Property({ displayName: "bagId", group: "脚本设置" })
     private bagId: number = 0;
 
+    @mw.Property({ displayName: "skinId", group: "脚本设置" })
+    private skinId: string = "";
+
     @mw.Property({ displayName: "adsCount", group: "脚本设置" })
     private adsCount: number = 10;
 
@@ -33,7 +36,7 @@ export default class NewScript extends Script {
     protected onStart(): void {
         if (mw.SystemUtil.isClient()) {
             if (this.bagId <= 0) return;
-            let skinId = GameConfig.BagInfo.getElement(this.bagId).AssetId;
+            let skinId = (this.skinId && this.skinId.length > 0) ? this.skinId : GameConfig.BagInfo.getElement(this.bagId).AssetId;
             this.curAdsCount = 0;
             Utils.asyncDownloadAsset(skinId).then(() => {
                 (this.gameObject.parent as mw.Character).setDescription([skinId]);

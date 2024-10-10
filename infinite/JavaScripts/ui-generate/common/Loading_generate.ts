@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.10.08-23.13.30
+ * TIME: 2024.10.11-00.17.38
  */
  
 @UIBind('UI/common/Loading.ui')

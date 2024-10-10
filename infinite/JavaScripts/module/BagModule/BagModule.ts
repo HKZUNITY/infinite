@@ -162,6 +162,31 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             this.getBagPanel.show();
             this.getBagPanel.updateBar(this.bagIds.length);
         });
+        this.getHUDModuleC.onOpenAutoAtkAction.add((resultCallBack: (isOpenSuccess: boolean) => void, isOpen: boolean) => {
+            console.error(isOpen);
+            if (isOpen) {
+                if (this.isHasBagId(10046)) {
+                    if (resultCallBack) resultCallBack(true);
+                    Notice.showDownNotice("成功开启自动攻击");
+                    this.use(10046);
+                    this.isOpenAutoAtk = true;
+                } else if (this.isHasBagId(10047)) {
+                    if (resultCallBack) resultCallBack(true);
+                    Notice.showDownNotice("成功开启自动攻击");
+                    this.use(10047);
+                    this.isOpenAutoAtk = true;
+                } else {
+                    if (resultCallBack) resultCallBack(false);
+                    Notice.showDownNotice("未获得自动攻击武魂");
+                }
+            } else {
+                if (resultCallBack) resultCallBack(false);
+                if (this.isOpenAutoAtk) {
+                    Notice.showDownNotice("成功关闭自动攻击");
+                    this.isOpenAutoAtk = false;
+                }
+            }
+        });
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -169,6 +194,18 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.initTrigger().then(() => {
         });
         this.updateLotteryData();
+    }
+
+    private isOpenAutoAtk: boolean = false;
+    private isAutoAtkTimer: number = 0;
+    private autoAtkTime: number = 0.5;
+    private onUpdateAutoAtk(dt: number): void {
+        if (!this.isOpenAutoAtk) return;
+        this.isAutoAtkTimer += dt;
+        if (this.isAutoAtkTimer >= this.autoAtkTime) {
+            this.isAutoAtkTimer = 0;
+            ColdWeapon.getInstance().attack(0);
+        }
     }
 
     private updateLotteryData(): void {
@@ -713,6 +750,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     protected onUpdate(dt: number): void {
+        this.onUpdateAutoAtk(dt);
         // this.setBagItemRot(dt);
     }
 

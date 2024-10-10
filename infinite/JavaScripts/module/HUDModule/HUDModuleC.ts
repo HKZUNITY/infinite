@@ -130,6 +130,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onOnOffUpExpAction: Action1<boolean> = new Action1<boolean>();
     public onOnOffFlyAction: Action1<boolean> = new Action1<boolean>();
     public onSkillAction: Action1<(isCanAtk: boolean) => void> = new Action1<(isCanAtk: boolean) => void>();
+    public onOpenAutoAtkAction: Action2<(isCanOpen: boolean) => void, boolean> = new Action2<(isCanOpen: boolean) => void, boolean>();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {

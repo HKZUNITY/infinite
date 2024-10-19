@@ -1,6 +1,8 @@
 import { GameConfig } from "../config/GameConfig";
 
 export default class GlobalData {
+    public static languageId: number = -1;
+
     /**log级别"None": "0", "Log": "1", "Warn": "2", "Error": "3" */
     public static logLevel: number = 0;
 
@@ -92,7 +94,7 @@ export default class GlobalData {
 
     public static gameName: string = `斗神大陆(我的魂环无限升级)`;
 
-    public static addCoinCount: number = 1000000;
+    public static addCoinCount: number = 2888888;
     public static addDiamondCount: number = 5;
 
     public static arkIcon: string = "312541";

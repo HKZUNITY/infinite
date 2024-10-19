@@ -455,6 +455,7 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
     private addOpenLotteryPanel(): void {
         this.getLotteryPanel.show();
         mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
+        Event.dispatchToLocal(`SyncCoinCount`);
     }
 
     private addUpdateCoinTextBlock(count: number): void {

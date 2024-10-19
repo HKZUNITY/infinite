@@ -45,6 +45,9 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         Event.addLocalListener(`SyncDiamondCount`, () => {
             Event.dispatchToLocal(`UpdateDiamondTextBlock`, this.getDiamond);
         });
+        Event.addLocalListener(`SyncCoinCount`, () => {
+            Event.dispatchToLocal(`UpdateCoinTextBlock`, this.getCoin());
+        });
     }
 
     protected onEnterScene(sceneType: number): void {

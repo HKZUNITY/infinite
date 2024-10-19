@@ -8,6 +8,7 @@ import {ColdWeaponConfig} from "./ColdWeapon";
 import {ColorConfig} from "./Color";
 import {DressDataConfig} from "./DressData";
 import {DressProgressConfig} from "./DressProgress";
+import {LanguageConfig} from "./Language";
 import {MonsterInfoConfig} from "./MonsterInfo";
 import {MusicConfig} from "./Music";
 import {NPCConfig} from "./NPC";
@@ -43,6 +44,7 @@ export class GameConfig{
 	public static get Color():ColorConfig{ return this.getConfig(ColorConfig) };
 	public static get DressData():DressDataConfig{ return this.getConfig(DressDataConfig) };
 	public static get DressProgress():DressProgressConfig{ return this.getConfig(DressProgressConfig) };
+	public static get Language():LanguageConfig{ return this.getConfig(LanguageConfig) };
 	public static get MonsterInfo():MonsterInfoConfig{ return this.getConfig(MonsterInfoConfig) };
 	public static get Music():MusicConfig{ return this.getConfig(MusicConfig) };
 	public static get NPC():NPCConfig{ return this.getConfig(NPCConfig) };

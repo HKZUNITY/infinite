@@ -125,6 +125,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onOpenArkAction: Action = new Action();
     public onOpenGetAction: Action = new Action();
     public onOpenNewPeopleAction: Action = new Action();
+    public onOpenSoulBoneAction: Action = new Action();
     public onOpenLotteryAction: Action = new Action();
     public onOpenSwordAction: Action = new Action();
     public onOnOffUpExpAction: Action1<boolean> = new Action1<boolean>();

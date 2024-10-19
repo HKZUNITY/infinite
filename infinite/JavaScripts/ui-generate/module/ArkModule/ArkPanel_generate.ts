@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.10.11-00.17.38
+ * TIME: 2024.10.19-11.22.57
  */
  
 @UIBind('UI/module/ArkModule/ArkPanel.ui')

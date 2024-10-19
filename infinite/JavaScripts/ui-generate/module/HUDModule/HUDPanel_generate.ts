@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.10.11-00.17.38
+ * TIME: 2024.10.19-11.22.58
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -322,6 +322,27 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mSwordButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SwordCanvas/mSwordButton') as mw.Button
 		}
 		return this.mSwordButton_Internal
+	}
+	private mSoulBoneButton_Internal: mw.Button
+	public get mSoulBoneButton(): mw.Button {
+		if(!this.mSoulBoneButton_Internal&&this.uiWidgetBase) {
+			this.mSoulBoneButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SoulBoneCanvas/mSoulBoneButton') as mw.Button
+		}
+		return this.mSoulBoneButton_Internal
+	}
+	private mSoulBoneTextBlock_Internal: mw.TextBlock
+	public get mSoulBoneTextBlock(): mw.TextBlock {
+		if(!this.mSoulBoneTextBlock_Internal&&this.uiWidgetBase) {
+			this.mSoulBoneTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SoulBoneCanvas/mSoulBoneTextBlock') as mw.TextBlock
+		}
+		return this.mSoulBoneTextBlock_Internal
+	}
+	private mSoulBonePointImage_Internal: mw.Image
+	public get mSoulBonePointImage(): mw.Image {
+		if(!this.mSoulBonePointImage_Internal&&this.uiWidgetBase) {
+			this.mSoulBonePointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SoulBoneCanvas/mSoulBonePointImage') as mw.Image
+		}
+		return this.mSoulBonePointImage_Internal
 	}
 	private mMusicCanvas_Internal: mw.Canvas
 	public get mMusicCanvas(): mw.Canvas {
@@ -728,6 +749,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mSwordButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mSoulBoneButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mSoulBoneButton");
+		});
+		this.mSoulBoneButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseMusicBtn.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
 		});
@@ -805,6 +832,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mOnlineRewardTextBlock)
+		
+	
+		this.initLanguage(this.mSoulBoneTextBlock)
 		
 	
 		this.initLanguage(this.mMusicText)

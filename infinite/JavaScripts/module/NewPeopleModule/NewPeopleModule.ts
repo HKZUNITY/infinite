@@ -33,8 +33,8 @@ export class NewPeopleData extends Subdata {
 
 const NewPeopleTriggerMap: Map<number, { triggers: string[], worldUIIds: string[], name: string }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string }>();
 NewPeopleTriggerMap.set(1, { triggers: ["08A7D30E"], worldUIIds: ["272413D6"], name: `新手礼包` });
-NewPeopleTriggerMap.set(2, { triggers: null, worldUIIds: ["07D9DF79"], name: `领取自动攻击` });
-NewPeopleTriggerMap.set(3, { triggers: null, worldUIIds: ["0D9A6CAC"], name: `领取限定皮肤` });
+// NewPeopleTriggerMap.set(2, { triggers: null, worldUIIds: ["07D9DF79"], name: `领取自动攻击` });
+// NewPeopleTriggerMap.set(3, { triggers: null, worldUIIds: ["0D9A6CAC"], name: `领取限定皮肤` });
 export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
     private newPeoplePanel: NewPeoplePanel = null;
     private get getNewPeoplePanel(): NewPeoplePanel {

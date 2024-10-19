@@ -149,6 +149,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mSwordButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenSwordAction.call();
 		});
+		this.mSoulBoneButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenSoulBoneAction.call();
+		});
 		this.initSkill_1();
 		this.initAutoAtk();
 	}
@@ -167,6 +170,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.initRedPointTween();
 		this.initTaskTween();
 		this.initRedPointTween_RingSou();
+		this.initRedPointTween_SoulBone();
 		this.initRedPointTween_SignIn();
 		this.initRedPointTween_Ark();
 		this.initRedPointTween_NewPeople();
@@ -760,6 +764,41 @@ export default class HUDPanel extends HUDPanel_Generate {
 			});
 
 		onOffRingSoulTween1.start();
+	}
+	//#endregion
+
+	//#region SoulBone
+	private redPointTween1_SoulBone: mw.Tween<any> = null;
+	private redPointTween2_SoulBone: mw.Tween<any> = null;
+
+	private initRedPointTween_SoulBone(): void {
+		this.redPointTween1_SoulBone = new mw.Tween({ value: 0.8 })
+			.to({ value: 1.2 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(0.8);
+			})
+			.onUpdate((v) => {
+				this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween2_SoulBone.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween2_SoulBone = new mw.Tween({ value: 1.2 })
+			.to({ value: 0.8 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(1.2);
+			})
+			.onUpdate((v) => {
+				this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween1_SoulBone.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween1_SoulBone.start();
 	}
 	//#endregion
 

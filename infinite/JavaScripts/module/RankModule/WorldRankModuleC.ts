@@ -1,4 +1,5 @@
 import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import PlayerData from "../PlayerModule/PlayerData";
 import { PlayerData_CSR, PlayerData_CSW } from "./PlayerPropData";
@@ -51,7 +52,7 @@ export class WorldRankModuleC extends ModuleC<WorldRankModuleS, null> {
         });
         this.getWorldRankPanel.onRankTypeAction.add((rankType: RankType) => {
             if (!this.isRefresh) {
-                Notice.showDownNotice("小手别点太快哟~");
+                Notice.showDownNotice(GameConfig.Language.Text_DonTClickTooQuicklyWithYourLittleHand.Value);
             }
             this.isRefresh = false;
             TimeUtil.delaySecond(1.5).then(() => {

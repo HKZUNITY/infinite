@@ -290,9 +290,9 @@ export default class TaskModuleC extends ModuleC<TaskModuleS, TaskData> {
         let rewardCoin = taskElement.Coin;
         let rewardDiamond = taskElement.Diamond;
         Console.error("[奖励经验：" + rewardExp + "][奖励金币：" + rewardCoin + "]");
-        Notice.showDownNotice("奖励金币：" + rewardCoin);
-        Notice.showDownNotice("奖励经验：" + rewardExp);
-        Notice.showDownNotice("奖励钻石：" + rewardDiamond);
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardCoins.Value, rewardCoin));
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardExperience.Value, rewardExp));
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardDiamonds.Value, rewardDiamond));
         this.getPlayerModuleC.saveCoinAndExp(rewardCoin, rewardExp);
         this.getPlayerModuleC.saveDiamond(rewardDiamond);
     }

@@ -1,37 +1,20 @@
 ﻿{
-	"name": "斗神大陆测试版",
-	"packageName": "6342EFA24E16C42FA9A019A43B5EA531",
+	"IsHorizontal": true,
+	"name": "斗神大陆(上线就送小舞)",
+	"packageName": "9C69E7E74004CDE120C6ACB9BB1BA436",
 	"foldername": "infinite",
 	"mainScene": 1,
 	"scenePublic": 1,
-	"intro": "斗神大陆测试版",
-	"notes": "斗神大陆测试版",
-	"editorVersion": "v0.39.0.5",
+	"intro": "修改审核拒绝问题【Ring 界面的UPGRADE字体可以调小些，太大了 很难看出是 UPGRADE因为上下分开了 ， check in的第一天是 1st ， 不是 1th ，错字】",
+	"notes": "修改审核拒绝问题【Ring 界面的UPGRADE字体可以调小些，太大了 很难看出是 UPGRADE因为上下分开了 ， check in的第一天是 1st ， 不是 1th ，错字】",
+	"editorVersion": "v0.40.0.3",
 	"parentGameIdentity": "",
 	"parentGameId": "",
-	"extra": "{\"attribute\":2,\"IsHorizontal\":true,\"useAvatar\":1}",
+	"extra": "{\"attribute\":2,\"IsHorizontal\":true,\"useAvatar\":0}",
 	"devEnv": 4,
-	"needToMgs": 1,
+	"needToMgs": 0,
 	"attribute": 2,
 	"autoSubmitAudit": false,
-	"ignore": [
-		"game.desc",
-		"Asset_Data_List"
-	],
-	"files": [
-		{
-			"type": "Game_Thumbnail",
-			"path": "Pictures/Game_Thumbnail.jpg"
-		},
-		{
-			"type": "GameSetting",
-			"path": "Config/GameSetting.ini"
-		},
-		{
-			"type": "Asset_Data_List",
-			"path": "Asset_Data_List"
-		}
-	],
 	"lightZipIgnore":
 	{
 		"suffixMatches": [
@@ -49,5 +32,19 @@
 			"JavaScripts/",
 			"Plugins/"
 		]
-	}
+	},
+	"files": [
+		{
+			"type": "Game_Thumbnail",
+			"path": "Pictures/Game_Thumbnail.jpg"
+		},
+		{
+			"type": "GameSetting",
+			"path": "Config/GameSetting.ini"
+		},
+		{
+			"type": "Asset_Data_List",
+			"path": "Asset_Data_List"
+		}
+	]
 }

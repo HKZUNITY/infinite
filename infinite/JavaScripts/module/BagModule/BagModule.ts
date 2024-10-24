@@ -19,6 +19,7 @@ import { lotteryDatas } from "../LotteryModule/LotteryModule";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 import PlayerModuleS from "../PlayerModule/PlayerModuleS";
 import { RingSoulModuleC, RingSoulModuleS } from "../RingSoulModule/RingSoulModule";
+import { SoulBoneModuleC, SoulBoneModuleS } from "../SoulBoneModule/SoulBoneModule";
 import TaskModuleC from "../TaskModule/TaskModuleC";
 
 /**
@@ -71,6 +72,17 @@ export class BagData extends Subdata {
     public setUsingPetId(petId: number): void {
         this.usingPetId = petId;
         this.save(true);
+    }
+
+    public checkBagIdError(errorBagId: number, bagId: number): void {
+        if (!this.bagIds || this.bagIds.length == 0 || !this.bagIds.includes(errorBagId)) return;
+        for (let i = 0; i < this.bagIds.length; ++i) {
+            if (this.bagIds[i] == errorBagId) {
+                this.bagIds[i] = bagId;
+                this.save(true);
+                break;
+            }
+        }
     }
 }
 
@@ -156,6 +168,14 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         return this.flyModuleC;
     }
 
+    private soulBoneModuleC: SoulBoneModuleC = null;
+    private get getSoulBoneModuleC(): SoulBoneModuleC {
+        if (!this.soulBoneModuleC) {
+            this.soulBoneModuleC = ModuleService.getModule(SoulBoneModuleC);
+        }
+        return this.soulBoneModuleC;
+    }
+
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
         this.getHUDModuleC.onOpenShopAction.add(() => {
@@ -167,22 +187,22 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             if (isOpen) {
                 if (this.isHasBagId(10046)) {
                     if (resultCallBack) resultCallBack(true);
-                    Notice.showDownNotice("成功开启自动攻击");
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyActivatedAutomaticAttack.Value);
                     this.use(10046);
                     this.isOpenAutoAtk = true;
                 } else if (this.isHasBagId(10047)) {
                     if (resultCallBack) resultCallBack(true);
-                    Notice.showDownNotice("成功开启自动攻击");
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyActivatedAutomaticAttack.Value);
                     this.use(10047);
                     this.isOpenAutoAtk = true;
                 } else {
                     if (resultCallBack) resultCallBack(false);
-                    Notice.showDownNotice("未获得自动攻击武魂");
+                    Notice.showDownNotice(GameConfig.Language.Text_FailedToObtainAutomaticAttackSoul.Value);
                 }
             } else {
                 if (resultCallBack) resultCallBack(false);
                 if (this.isOpenAutoAtk) {
-                    Notice.showDownNotice("成功关闭自动攻击");
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyDisabledAutomaticAttack.Value);
                     this.isOpenAutoAtk = false;
                 }
             }
@@ -192,9 +212,11 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     protected onEnterScene(sceneType: number): void {
         this.initBagData();
         this.initTrigger().then(() => {
-            Utils.setGraphicsLevel();
         });
         this.updateLotteryData();
+        TimeUtil.delaySecond(3).then(() => {
+            Utils.setGraphicsLevel();
+        });
     }
 
     private isOpenAutoAtk: boolean = false;
@@ -221,17 +243,17 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         if (this.isHasBagId(lotteryDatas.get(8).reward)) {
             lotteryDatas.get(8).reward = 20061;
             lotteryDatas.get(8).icon = `mode_163292`;
-            lotteryDatas.get(8).name = `小舞`;
+            lotteryDatas.get(8).name = `Text_XiaoWuJie`;
         }
         if (this.isHasBagId(lotteryDatas.get(9).reward)) {
             lotteryDatas.get(9).reward = 10044;
             lotteryDatas.get(9).icon = `mode_151245`;
-            lotteryDatas.get(9).name = `武魂-机甲斩狂风斩(男)`;
+            lotteryDatas.get(9).name = `Text_MartialSoulMechSlashWindSlash_Male`;
         }
         if (this.isHasBagId(lotteryDatas.get(10).reward)) {
             lotteryDatas.get(10).reward = 10045;
             lotteryDatas.get(10).icon = `mode_151897`;
-            lotteryDatas.get(10).name = `武魂-机甲斩狂风斩(女)`;
+            lotteryDatas.get(10).name = `Text_MartialSoulMechSlashWindSlash_Female`;
         }
     }
 
@@ -252,6 +274,19 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         this.usingSkinId = this.data.usingSkinId;
         this.usingEquipIds = this.data.usingEquipIds;
         this.usingPetId = this.data.usingPetId;
+
+        this.checkBagIdError(200677, 20067);
+    }
+
+    private checkBagIdError(errorBagId: number, bagId: number): void {
+        if (!this.bagIds || this.bagIds.length == 0 || !this.bagIds.includes(errorBagId)) return;
+        for (let i = 0; i < this.bagIds.length; ++i) {
+            if (this.bagIds[i] == errorBagId) {
+                this.bagIds[i] = bagId;
+                this.server.net_checkBagIdError(errorBagId, bagId);
+                break;
+            }
+        }
     }
 
     public isHasBagId(bagId: number): boolean {
@@ -260,20 +295,20 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setBagId(bagId: number): void {
         if (this.bagIds.includes(bagId)) {
-            Notice.showDownNotice("已获得");
+            Notice.showDownNotice(GameConfig.Language.Text_Obtained.Value);
             return;
         }
         this.bagIds.push(bagId);
         this.server.net_setBagId(bagId);
         this.getPlayerModuleC.adsUpLv();
-        Notice.showDownNotice("恭喜获得");
+        Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnObtaining.Value);
         this.getBagPanel.updateBar(this.bagIds.length);
         this.getBagPanel.updateBagItem(bagId);
     }
 
     public setUsingWeaponId(weaponId: number): boolean {
         if (this.usingWeaponId == weaponId) {
-            Notice.showDownNotice(`${GlobalData.weaponStr}使用中`);
+            Notice.showDownNotice(`${GlobalData.weaponStr}${GameConfig.Language.Text_InUse.Value}`);
             return false;
         }
         this.usingWeaponId = weaponId;
@@ -284,7 +319,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setUsingSkinId(skinId: number): boolean {
         if (this.usingSkinId == skinId) {
-            Notice.showDownNotice(`${GlobalData.skinStr}使用中`);
+            Notice.showDownNotice(`${GlobalData.skinStr}${GameConfig.Language.Text_InUse.Value}`);
             return false;
         }
         this.usingSkinId = skinId;
@@ -305,7 +340,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setUsingEquipId(key: number, bagId: number): boolean {
         if (MapEx.has(this.usingEquipIds, key) && MapEx.get(this.usingEquipIds, key) == bagId) {
-            Notice.showDownNotice(`${GlobalData.equipStr}装备中`);
+            Notice.showDownNotice(`${GlobalData.equipStr}${GameConfig.Language.Text_InTheEquipment.Value}`);
             return false;
         }
         MapEx.set(this.usingEquipIds, key, bagId);
@@ -324,7 +359,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
 
     public setUsingPetId(petId: number): boolean {
         if (this.usingPetId == petId) {
-            Notice.showDownNotice(`${GlobalData.petStr}跟随中`);
+            Notice.showDownNotice(`${GlobalData.petStr}${GameConfig.Language.Text_FollowIn.Value}`);
             return false;
         }
         this.usingPetId = petId;
@@ -341,7 +376,8 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     }
 
     public updateHpByUsing(): void {
-        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity, this.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
+        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue,
+            this.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue);
     }
 
     public getAddHpByUsing(): number {
@@ -493,19 +529,19 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
     public clickBagItem(bagId: number, buyComplete: () => void): void {
         if (!this.isHasBagId(bagId)) {
             if (GameConfig.BagInfo.getElement(bagId).GetType == 2) {
-                Notice.showDownNotice(`新手礼包获取`);
+                Notice.showDownNotice(GameConfig.Language.Text_BeginnerGiftPackAcquisition.Value);
                 return;
             } else if (GameConfig.BagInfo.getElement(bagId).GetType == 3) {
-                Notice.showDownNotice(`金币抽奖获取`);
+                Notice.showDownNotice(GameConfig.Language.Text_GoldCoinLotteryToObtain.Value);
                 return;
             } else if (GameConfig.BagInfo.getElement(bagId).GetType == 4) {
-                Notice.showDownNotice(`请先完成新手引导`);
+                Notice.showDownNotice(GameConfig.Language.Text_PleaseCompleteTheBeginnerGuideFirst.Value);
                 return;
             } else if (GameConfig.BagInfo.getElement(bagId).GetType == 5) {
-                Notice.showDownNotice(`看广告获得`);
+                Notice.showDownNotice(GameConfig.Language.Text_ObtainByWatchingAdvertisements.Value);
                 return;
             } else if (GameConfig.BagInfo.getElement(bagId).GetType == 6) {
-                Notice.showDownNotice(`老玩家回归获得`);
+                Notice.showDownNotice(GameConfig.Language.Text_OldPlayersReturningToObtain.Value);
                 return;
             }
         }
@@ -515,16 +551,18 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                 if (this.isHasBagId(bagId)) {
                     this.use(bagId);
                 } else {
-                    Notice.showDownNotice("未获得");
+                    Notice.showDownNotice(GameConfig.Language.Text_NotObtained.Value);
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
-                            Notice.showDownNotice("开始引导");
+                            Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
                             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                             this.getBagInfoPanel.hide();
                             this.getBagPanel.hideTween();
-                        }, "带你去免费获得", "取消", "免费获得");
+                        }, GameConfig.Language.Text_TakeYouToGetItForFree.Value
+                            , GameConfig.Language.Text_Cancel.Value
+                            , GameConfig.Language.Text_GetItForFree.Value);
                     } else {
-                        Notice.showDownNotice("开始引导");
+                        Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                     }
                 }
@@ -538,21 +576,23 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
                     if (buyComplete) buyComplete();
                     this.getBagInfoPanel.mPriceButton.visibility = mw.SlateVisibility.Collapsed;
                     this.getBagInfoPanel.mAdsButton.visibility = mw.SlateVisibility.Collapsed;
-                    Notice.showDownNotice("购买成功");
+                    Notice.showDownNotice(GameConfig.Language.Text_PurchaseSuccessful.Value);
                 } else {
-                    Notice.showDownNotice("金币不足");
+                    Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
-                            Notice.showDownNotice("成功获得金币");
+                            Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedCoins.Value);
                             this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
-                        }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
+                        }, StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount)
+                            , GameConfig.Language.Text_Cancel.Value
+                            , GameConfig.Language.Text_FreeToReceive.Value);
                     } else {
-                        Notice.showDownNotice("成功获得金币");
+                        Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedCoins.Value);
                         this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                     }
                 }
             }, () => {
-                Notice.showDownNotice("开始引导");
+                Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
                 this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                 this.getBagInfoPanel.hide();
                 this.getBagPanel.hideTween();
@@ -565,23 +605,23 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
             case 1:
                 if (!this.setUsingWeaponId(bagId)) return;
                 this.useWeapon(bagId);
-                Notice.showDownNotice("装备成功");
+                Notice.showDownNotice(GameConfig.Language.Text_EquipmentSuccessful.Value);
                 break;
             case 2:
                 if (!this.setUsingSkinId(bagId)) return;
                 this.useSkin(bagInfoElement.AssetId);
-                Notice.showDownNotice("穿戴成功");
+                Notice.showDownNotice(GameConfig.Language.Text_WearingSuccessfully.Value);
                 break;
             case 3:
                 if (!this.setUsingEquipId(bagInfoElement.HumanoidSlotType, bagId)) return;
                 this.useEquip(bagInfoElement);
-                Notice.showDownNotice("装备成功");
+                Notice.showDownNotice(GameConfig.Language.Text_EquipmentSuccessful.Value);
                 break;
             case 4:
                 // Notice.showDownNotice(`功能明天开放，敬请期待`);
                 if (!this.setUsingPetId(bagId)) return;
                 this.usePet(bagId);
-                Notice.showDownNotice("跟随成功");
+                Notice.showDownNotice(GameConfig.Language.Text_FollowSuccess.Value);
                 break;
             default:
                 break;
@@ -712,6 +752,7 @@ export class BagModuleC extends ModuleC<BagModuleS, BagData> {
         let objId = bagInfoElement?.ObjId;
         if (!objId || objId == "") return false;
 
+        console.error("出错啦" + objId);
         let bagItemGo = await GameObjPool.asyncSpawn(objId) as mw.Model;
         bagItemGo.collisionEnabled = false;
         if (bagItemGo instanceof mw.Character) bagItemGo.collisionWithOtherCharacterEnabled = false;
@@ -791,9 +832,22 @@ export class BagModuleS extends ModuleS<BagModuleC, BagData> {
         return this.flyModuleS;
     }
 
+    private soulBoneModuleS: SoulBoneModuleS = null;
+    private get getSoulBoneModuleS(): SoulBoneModuleS {
+        if (!this.soulBoneModuleS) {
+            this.soulBoneModuleS = ModuleService.getModule(SoulBoneModuleS);
+        }
+        return this.soulBoneModuleS;
+    }
+
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
+    }
+
+    @Decorator.noReply()
+    public net_checkBagIdError(errorBagId: number, bagId: number): void {
+        this.currentData.checkBagIdError(errorBagId, bagId);
     }
 
     @Decorator.noReply()
@@ -826,7 +880,7 @@ export class BagModuleS extends ModuleS<BagModuleC, BagData> {
     }
 
     public updateHpByUsing(player: mw.Player): void {
-        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player));
+        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player) + this.getSoulBoneModuleS.getRarity(player));
     }
 
     public getAddHpByUsing(player: mw.Player): number {
@@ -906,20 +960,19 @@ export class BagPanel extends BagPanel_Generate {
         this.resetButton.mButton.onClicked.add(() => {
             switch (this.currentBagTabIndex) {
                 case 0:
-                    Notice.showDownNotice(`功能暂未开放，敬请期待`);
+                    Notice.showDownNotice(GameConfig.Language.Text_TheFunctionIsNotYetOpen_PleaseStayTuned.Value);
                     break;
                 case 1:
                     this.getBagModuleC.resetUsingSkin();
-                    Notice.showDownNotice(`恢复成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_RecoveryWasSuccessful.Value);
                     break;
                 case 2:
                     this.getBagModuleC.resetUsingEquip();
-                    Notice.showDownNotice(`卸下成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_RemovedSuccessfully.Value);
                     break;
                 case 3:
-                    Notice.showDownNotice(`丢掉宠物成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyDiscardedPet.Value);
                     this.getBagModuleC.resetUsingPet();
-                    // Notice.showDownNotice(`功能明天开放，敬请期待`);
                     break;
                 default:
                     break;
@@ -936,15 +989,15 @@ export class BagPanel extends BagPanel_Generate {
                 break;
             case 1:
                 Utils.setWidgetVisibility(this.resetButton.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-                this.resetButton.setData("恢复初始形象");
+                this.resetButton.setData(GameConfig.Language.Text_RestoreInitialImage.Value);
                 break;
             case 2:
                 Utils.setWidgetVisibility(this.resetButton.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-                this.resetButton.setData("卸下所有装备");
+                this.resetButton.setData(GameConfig.Language.Text_RemoveAllEquipment.Value);
                 break;
             case 3:
                 Utils.setWidgetVisibility(this.resetButton.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-                this.resetButton.setData("取消宠物跟随");
+                this.resetButton.setData(GameConfig.Language.Text_CancelPetFollowing.Value);
                 break;
             default:
                 break;
@@ -1053,7 +1106,16 @@ export class BagItem extends BagItem_Generate {
     }
 
     protected onStart(): void {
+        this.initUI();
         this.bindButton();
+    }
+
+    private initUI(): void {
+        if (GlobalData.languageId == 0) {
+            this.mNameTextBlock.fontSize = 15;
+        } else {
+            this.mNameTextBlock.fontSize = 25;
+        }
     }
 
     private bindButton(): void {
@@ -1086,24 +1148,24 @@ export class BagItem extends BagItem_Generate {
 
     public setHas(): void {
         if (this.getBagModuleC.isHasBagId(this.bagId)) {
-            this.mHasTextBlock.text = "点击使用";
-            this.mHasTextBlock_1.text = "已拥有";
+            this.mHasTextBlock.text = GameConfig.Language.Text_ClickToUse.Value;
+            this.mHasTextBlock_1.text = GameConfig.Language.Text_AlreadyOwned.Value;
             this.mIconImage.imageColor = mw.LinearColor.white;
         } else {
             if (this.bagInfoElement.GetType == 2) {
-                this.mHasTextBlock.text = "新手礼包获取";
+                this.mHasTextBlock.text = GameConfig.Language.Text_BeginnerGiftPackAcquisition.Value;
             } else if (this.bagInfoElement.GetType == 3) {
-                this.mHasTextBlock.text = "抽奖获取";
+                this.mHasTextBlock.text = GameConfig.Language.Text_GoldCoinLotteryToObtain.Value;
             } else if (this.bagInfoElement.GetType == 4) {
-                this.mHasTextBlock.text = "完成新手引导";
+                this.mHasTextBlock.text = GameConfig.Language.Text_PleaseCompleteTheBeginnerGuideFirst.Value;
             } else if (this.bagInfoElement.GetType == 5) {
-                this.mHasTextBlock.text = "看广告获得";
+                this.mHasTextBlock.text = GameConfig.Language.Text_ObtainByWatchingAdvertisements.Value;
             } else if (this.bagInfoElement.GetType == 6) {
-                this.mHasTextBlock.text = "老玩家回归获得";
+                this.mHasTextBlock.text = GameConfig.Language.Text_OldPlayersReturningToObtain.Value;
             } else {
-                this.mHasTextBlock.text = "点击获得";
+                this.mHasTextBlock.text = GameConfig.Language.Text_ClickToGet.Value;
             }
-            this.mHasTextBlock_1.text = "未拥有";
+            this.mHasTextBlock_1.text = GameConfig.Language.Text_NotOwned.Value;
             this.mIconImage.imageColor = mw.LinearColor.black;
         }
     }
@@ -1154,8 +1216,8 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
     }
 
     private initUI(): void {
-        this.mUseTextBlock.text = "使用";
-        this.mAdsButton.text = `免费获得`;
+        this.mUseTextBlock.text = GameConfig.Language.Text_Use.Value;
+        this.mAdsButton.text = GameConfig.Language.Text_GetItForFree.Value
     }
 
     private bindButton(): void {
@@ -1177,7 +1239,7 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
     private addAdsButton(isSuccess: boolean): void {
         if (!isSuccess) {
             this.hide();
-            Notice.showDownNotice(`失败`);
+            Notice.showDownNotice(GameConfig.Language.Text_FailedPleaseTryAgain.Value);
             return;
         }
         if (this.adsCallBack) this.adsCallBack();
@@ -1201,7 +1263,7 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
         this.priceCallBack = priceCallBack;
         this.adsCallBack = adsCallBack;
         let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * GlobalData.addCoinCount;
-        this.mPreceTextBlock.text = `${price}金币购买`;
+        this.mPreceTextBlock.text = `${price}${GameConfig.Language.Text_PurchaseCoins.Value}`;
         this.show();
     }
 
@@ -1235,25 +1297,30 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
         switch (bagInfoElement.Type) {
             case 1:
                 bagTypeStr = GlobalData.weaponStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
             case 2:
                 bagTypeStr = GlobalData.skinStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
             case 3:
                 bagTypeStr = GlobalData.equipStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
             case 4:
                 bagTypeStr = GlobalData.petStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
             default:
                 break;
         }
         this.mNameTextBlock.text = bagInfoElement?.Name;
-        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>`;
+        let name = bagInfoElement?.Name?.replace(/[\r\n]/g, "");
+        if (GlobalData.languageId == 0) {
+            this.mInfoTextBlock.text = `<size=30><b><color=#lime>${name}</color></b></size>，<size=30><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n${GameConfig.Language.Text_IncreasedHealthAndAttackPowerAfterUse.Value}<size=30><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}${GameConfig.Language.Text_Times.Value}</color></b></size>`;
+        } else {
+            this.mInfoTextBlock.text = `<size=40><b><color=#lime>${name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n${GameConfig.Language.Text_IncreasedHealthAndAttackPowerAfterUse.Value}<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}${GameConfig.Language.Text_Times.Value}</color></b></size>`;
+        }
         let assetId = bagInfoElement?.AssetId;
         Utils.setImageByAssetIconData(this.mIconImage, assetId);
     }

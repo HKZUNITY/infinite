@@ -8,6 +8,7 @@ import SoulBonePanel_Generate from "../../ui-generate/module/SoulBoneModule/Soul
 import StarItem_Generate from "../../ui-generate/module/SoulBoneModule/StarItem_generate";
 import UpProbabilityPanel_Generate from "../../ui-generate/module/SoulBoneModule/UpProbabilityPanel_generate";
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
+import { BagModuleC, BagModuleS } from "../BagModule/BagModule";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
@@ -39,6 +40,11 @@ export class PartItem extends PartItem_Generate {
 
     private initUI(): void {
         Utils.setWidgetVisibility(this.mFgImage, mw.SlateVisibility.Collapsed);
+        if (GlobalData.languageId == 0) {
+            this.mNameTextBlock.fontSize = 15;
+        } else {
+            this.mNameTextBlock.fontSize = 20;
+        }
     }
 
     private bindButton(): void {
@@ -66,7 +72,7 @@ export class PartItem extends PartItem_Generate {
     }
 
     private setName(): void {
-        this.mNameTextBlock.text = this.soulBoneData.name;
+        this.mNameTextBlock.text = GameConfig.Language[`${this.soulBoneData.name}`].Value;
     }
 
     public setSelect(isSelect: boolean): void {
@@ -102,6 +108,11 @@ export class SoulBonePanel extends SoulBonePanel_Generate {
         this.mIconCoinImage.imageGuid = GlobalData.coinIcon;
         this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
         this.mIconArkImage.imageGuid = GlobalData.arkIcon;
+        this.mIconBoneImage.imageGuid = GlobalData.boneIcon;
+
+        this.mNeedDiamondIconImage.imageGuid = GlobalData.diamondIcon;
+        this.mNeedCoinIconImage.imageGuid = GlobalData.coinIcon;
+        this.mNeedBoneIconImage.imageGuid = GlobalData.boneIcon;
     }
 
     private partItems: PartItem[] = [];
@@ -113,6 +124,7 @@ export class SoulBonePanel extends SoulBonePanel_Generate {
             this.mPartListCanvas.addChild(partItem.uiObject);
         });
         this.selectPart(0);
+        this.updateTotalUpStarOffsetValue();
     }
 
     private initTextBlock(): void {
@@ -125,9 +137,34 @@ export class SoulBonePanel extends SoulBonePanel_Generate {
         this.mNeedTitleTextBlock.text = GameConfig.Language.Text_StrengtheningConditions.Value;
         this.mNeedDiamondTipsTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
         this.mNeedCoinTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
+        this.mNeedBoneTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
 
         this.mUpProbabilityTextBlock.text = GameConfig.Language.Text_IncreaseProbability.Value;
         this.mStrengthenTextBlock.text = GameConfig.Language.Text_StartStrengthening.Value;
+
+        this.mHasMaxLvTextBlock.text = GameConfig.Language.Text_FullLevel.Value;
+
+        if (GlobalData.languageId == 0) {
+            this.mProbabilityTextBlock.fontSize = 15;
+            this.mHpTextBlock.fontSize = 18;
+            this.mHpedTextBlock.fontSize = 18;
+            this.mAtkTextBlock.fontSize = 18;
+            this.mAtkedTextBlock.fontSize = 18;
+            this.mHpTipsTextBlock.fontSize = 15;
+            this.mAtkTipsTextBlock.fontSize = 15;
+            this.mStrengthenTextBlock.fontSize = 28;
+            this.mTitleTextBlock.fontSize = 50;
+        } else {
+            this.mProbabilityTextBlock.fontSize = 30;
+            this.mHpTextBlock.fontSize = 30;
+            this.mHpedTextBlock.fontSize = 30;
+            this.mAtkTextBlock.fontSize = 30;
+            this.mAtkedTextBlock.fontSize = 30;
+            this.mHpTipsTextBlock.fontSize = 30;
+            this.mAtkTipsTextBlock.fontSize = 30;
+            this.mStrengthenTextBlock.fontSize = 40;
+            this.mTitleTextBlock.fontSize = 80;
+        }
     }
 
     private bindButton(): void {
@@ -150,6 +187,16 @@ export class SoulBonePanel extends SoulBonePanel_Generate {
 
     public updateDiamondTextBlock(count: number): void {
         this.mDiamondCountTextBlock.text = `${Utils.integerUnitConversionStr(count)}`;
+    }
+
+    public updateBoneTextBlock(count: number): void {
+        this.mBoneCountTextBlock.text = `${count}`;
+    }
+
+    public updateTotalUpStarOffsetValue(): void {
+        let totalUpStarOffsetValue = Number((this.getSoulBoneModuleC.getTotalUpStarOffsetValue + 1).toFixed(2));
+        this.mTotalRarityTextBlock.text = `${StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes.Value, totalUpStarOffsetValue)}
+        \n${StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes.Value, totalUpStarOffsetValue)}`;
     }
 
     private currentSelectPartId: number = -1;
@@ -240,6 +287,7 @@ export class SoulBonePanel extends SoulBonePanel_Generate {
         this.setNeedLv();
         this.setNeedDiamondCost();
         this.setNeedCoinCost();
+        this.setNeedBoneCost();
     }
 
     private setNeedLv(): void {
@@ -257,8 +305,13 @@ export class SoulBonePanel extends SoulBonePanel_Generate {
         this.mNeedCoinCountTextBlock.text = `${coin}/${this.getSoulBoneModuleC.getCoin}`;
     }
 
+    private setNeedBoneCost(): void {
+        let bone = this.currentSoulBoneData.soulBones[this.soulBoneLv];
+        this.mNeedBoneCountTextBlock.text = `${bone}/${this.getSoulBoneModuleC.getBone}`;
+    }
+
     private setStrengthenButtonState(): void {
-        this.mProbabilityTextBlock.text = `${GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess}:${this.getSoulBoneModuleC.getProbability}%`;
+        this.mProbabilityTextBlock.text = StringUtil.format(GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess.Value, this.getSoulBoneModuleC.getProbability);
     }
 
     private addUpProbabilityButton(): void {
@@ -278,16 +331,25 @@ export class SoulBonePanel extends SoulBonePanel_Generate {
             return;
         }
         let costDiamond = this.currentSoulBoneData.diamonds[this.soulBoneLv];
-        if (this.currentSoulBoneData.diamonds[this.soulBoneLv] > this.getSoulBoneModuleC.getDiamond) {
+        if (costDiamond > this.getSoulBoneModuleC.getDiamond) {
             Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
+            return;
+        }
+        let costBone = this.currentSoulBoneData.soulBones[this.soulBoneLv];
+        if (costBone > this.getSoulBoneModuleC.getBone) {
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientSoulBoneFragments.Value);
             return;
         }
         this.getSoulBoneModuleC.strengthen(() => {
             this.refreshContentUI();
-        }, this.currentSelectPartId, costCoin, costDiamond);
+            this.updateTotalUpStarOffsetValue();
+        }, () => {
+            this.refreshContentUI();
+        }, this.currentSelectPartId, costCoin, costDiamond, costBone);
     }
 
     protected onShow(...params: any[]): void {
+        this.refreshContentUI();
         Utils.openUITween(
             this.rootCanvas,
             () => {
@@ -318,6 +380,18 @@ export class UpProbabilityPanel extends UpProbabilityPanel_Generate {
         this.mContentTextBlock_2.text = GameConfig.Language.Text_Or.Value;
         this.mDiamondTextBlock.text = GameConfig.Language.Text_UsingDiamonds.Value;
         this.mArkTextBlock.text = GameConfig.Language.Text_UseTeamCoins.Value;
+
+        if (GlobalData.languageId == 0) {
+            this.mContentTextBlock_0.fontSize = 30;
+            this.mContentTextBlock_1.fontSize = 30;
+            this.mDiamondTextBlock.fontSize = 30;
+            this.mArkTextBlock.fontSize = 30;
+        } else {
+            this.mContentTextBlock_0.fontSize = 40;
+            this.mContentTextBlock_1.fontSize = 40;
+            this.mDiamondTextBlock.fontSize = 38;
+            this.mArkTextBlock.fontSize = 38;
+        }
     }
 
     private bindButton(): void {
@@ -386,32 +460,45 @@ export class SoulBone extends Subdata {
         this.probability = probability;
         this.save(true);
     }
+
+    public get getTotalUpStarOffsetValue(): number {
+        if (!this.soulBoneLvs || MapEx.count(this.soulBoneLvs) == 0) return 0;
+        let totalUpStarOffsetValue = 0;
+        MapEx.forEach(this.soulBoneLvs, (key: number, value: number) => {
+            totalUpStarOffsetValue += (value * upStarOffsetValue);
+        });
+        return totalUpStarOffsetValue;
+    }
 }
 
 export class SoulBoneData {
     public id: number;
+    public desc: string;
     public name: string;
     public icon: string;
     public limitLv: number;
     public coins: number[];
     public diamonds: number[];
+    public soulBones: number[];
 }
 
-export const soulBoneMap: Map<number, SoulBoneData> = new Map<number, SoulBoneData>();
-soulBoneMap.set(0, { id: 0, name: "", icon: "450608", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(1, { id: 0, name: "", icon: "450611", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(2, { id: 0, name: "", icon: "450595", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(3, { id: 0, name: "", icon: "450603", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(4, { id: 0, name: "", icon: "450597", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(5, { id: 0, name: "", icon: "450610", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(6, { id: 0, name: "", icon: "450602", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
+const soulBoneMap: Map<number, SoulBoneData> = new Map<number, SoulBoneData>();
+soulBoneMap.set(0, { id: 0, desc: "头部魂骨", name: `Text_HeadSoulBone`, icon: "icon_450608", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [1, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(1, { id: 1, desc: "外附魂骨", name: `Text_ExternalSoulBone`, icon: "icon_450602", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(2, { id: 2, desc: "躯干魂骨", name: `Text_TorsoSoulBone`, icon: "icon_450603", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(3, { id: 3, desc: "腰部魂骨", name: `Text_WaistSoulBone`, icon: "icon_450610", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(4, { id: 4, desc: "手臂魂骨", name: `Text_ArmSoulBone`, icon: "icon_450611", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(5, { id: 5, desc: "腿部魂骨", name: `Text_LegSoulBone`, icon: "icon_450597", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(6, { id: 6, desc: "脚部魂骨", name: `Text_FootSoulBone`, icon: "icon_450595", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
 
 const maxStarLv: number = 10;
 const upStarOffsetValue: number = 0.05;
 
 const costDiamondUpProbability: number = 100;
 const costArkUpProbability: number = 100;
-const upProbabilityByArkCommodityId: string = "";
+const upProbabilityByArkCommodityId: string = "5aYcgFQpdxe0001Ud";
+const upFaildSound: string = "120841";
+const upSucceedSound: string = "169179";
 export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
     private upProbabilityPanel: UpProbabilityPanel = null;
     private get getUpProbabilityPanel(): UpProbabilityPanel {
@@ -450,6 +537,14 @@ export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
         return this.adTipsPanel
     }
 
+    private bagModuleC: BagModuleC = null;
+    private get getBagModuleC(): BagModuleC {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
+
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
         this.bindAction();
@@ -460,6 +555,7 @@ export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
         mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
         Event.addLocalListener(`UpdateDiamondTextBlock`, this.addUpdateDiamondTextBlock.bind(this));
         Event.addLocalListener(`UpdateCoinTextBlock`, this.addUpdateCoinTextBlock.bind(this));
+        Event.addLocalListener(`UpdateBoneTextBlock`, this.addUpdateBoneTextBlock.bind(this));
     }
 
     private addArkUpdate(amount: number): void {
@@ -476,11 +572,16 @@ export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
         this.getSoulBonePanel.updateCoinTextBlock(count);
     }
 
+    private addUpdateBoneTextBlock(count: number): void {
+        this.getSoulBonePanel.updateBoneTextBlock(count);
+    }
+
     private onOpenSoulBonePanel(): void {
         this.getSoulBonePanel.show();
         mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
         Event.dispatchToLocal(`SyncDiamondCount`);
         Event.dispatchToLocal(`SyncCoinCount`);
+        Event.dispatchToLocal(`SyncBoneCount`);
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -533,6 +634,13 @@ export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
         this.getPlayerModuleC.saveDiamond(diamond);
     }
 
+    public get getBone(): number {
+        return this.getPlayerModuleC.getBone;
+    }
+    public setBone(bone: number): void {
+        this.getPlayerModuleC.saveBone(bone);
+    }
+
     public get getCoin(): number {
         return this.getPlayerModuleC.getCoin();
     }
@@ -541,18 +649,19 @@ export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
     }
 
     public get getProbability(): number {
-        return Math.round(this.probability);
+        return Math.round(this.probability) < 50 ? 50 : Math.round(this.probability);
     }
 
     public setProbability(probability: number): void {
         this.probability = probability;
+        if (this.probability > 100) this.probability = 100;
         this.server.net_setProbability(probability);
     }
 
     private upProbabilitySuccessCallBack: () => void = null;
     public upProbability(callBack: () => void): void {
         if (this.probability >= 100) {
-            Notice.showDownNotice(`${GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess.Value}${100}%`)
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess.Value, 100));
             return;
         }
         this.upProbabilitySuccessCallBack = callBack;
@@ -562,21 +671,27 @@ export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
                 mw.PurchaseService.getArkBalance();//刷新代币数量
                 if (status != 200) return;
                 if (this.upProbabilitySuccessCallBack) this.upProbabilitySuccessCallBack();
+                SoundService.playSound(upSucceedSound);
+                Notice.showDownNotice(GameConfig.Language.Text_ProbabilityIncreaseSuccess.Value);
             });
         }, () => {
             if (this.getDiamond >= costDiamondUpProbability) {
                 this.setDiamond(-costDiamondUpProbability);
                 this.setProbability(this.probability + 10);
                 if (this.upProbabilitySuccessCallBack) this.upProbabilitySuccessCallBack();
+                SoundService.playSound(upSucceedSound);
+                Notice.showDownNotice(GameConfig.Language.Text_ProbabilityIncreaseSuccess.Value);
             } else {
                 Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
                 if (GlobalData.isOpenIAA) {
                     this.getAdTipsPanel.showRewardAd(() => {
-                        Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                         this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                    }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                    }, StringUtil.format(GameConfig.Language.Text_GetDiamondsForFree.Value, GlobalData.addDiamondCount)
+                        , GameConfig.Language.Text_Cancel.Value
+                        , GameConfig.Language.Text_FreeToReceive.Value);
                 } else {
-                    Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                 }
             }
@@ -593,16 +708,41 @@ export class SoulBoneModuleC extends ModuleC<SoulBoneModuleS, SoulBone> {
     }
 
     private strengthenSuccessCallBack: () => void = null;
-    public strengthen(callBack: () => void, selectPartId: number, costCoin: number, costDiamond: number): void {
-        this.strengthenSuccessCallBack = callBack;
+    private strengthenFailCallBack: () => void = null;
+    public strengthen(strengthenSuccessCallBack: () => void, strengthenFailCallBack: () => void, selectPartId: number, costCoin: number, costDiamond: number, costBone: number): void {
+        let randomValue = Utils.getRandomInteger(1, 100);
+
         this.setCoin(-costCoin);
         this.setDiamond(-costDiamond);
-        this.setSoulBoneLv(selectPartId, 1);
-        if (this.strengthenSuccessCallBack) this.strengthenSuccessCallBack();
+        this.setBone(-costBone);
+        if (randomValue <= this.probability) {
+            this.setSoulBoneLv(selectPartId, 1);
+            this.getBagModuleC.updateHpByUsing();
+            SoundService.playSound(upSucceedSound);
+            Notice.showDownNotice(GameConfig.Language.Text_SoulBoneStrengtheningSuccessful.Value);
+
+            this.setProbability(50);
+            this.strengthenSuccessCallBack = strengthenSuccessCallBack;
+            if (this.strengthenSuccessCallBack) this.strengthenSuccessCallBack();
+        } else {
+            SoundService.playSound(upFaildSound);
+            Notice.showDownNotice(GameConfig.Language.Text_SoulBoneStrengtheningFailed.Value);
+
+            this.setProbability(50);
+            this.strengthenFailCallBack = strengthenFailCallBack;
+            if (this.strengthenFailCallBack) this.strengthenFailCallBack();
+        }
     }
 }
 
 export class SoulBoneModuleS extends ModuleS<SoulBoneModuleC, SoulBone> {
+    private bagModuleS: BagModuleS = null;
+    private get getBagModuleS(): BagModuleS {
+        if (!this.bagModuleS) {
+            this.bagModuleS = ModuleService.getModule(BagModuleS);
+        }
+        return this.bagModuleS;
+    }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
@@ -626,6 +766,12 @@ export class SoulBoneModuleS extends ModuleS<SoulBoneModuleC, SoulBone> {
 
     @Decorator.noReply()
     public net_setSoulBoneLv(partId: number, lv: number): void {
+        let player = this.currentPlayer;
         this.currentData.setSoulBoneLv(partId, lv);
+        this.getBagModuleS.updateHpByUsing(player);
+    }
+
+    public getRarity(player: mw.Player): number {
+        return DataCenterS.getData(player, SoulBone).getTotalUpStarOffsetValue;
     }
 }

@@ -18,6 +18,7 @@ export default class GlobalData {
     /**是否开启攻击范围检测可视化 */
     public static isDebug: boolean = false;
 
+    public static worldRankCount: number = 500;
     /**全局UI点击音效Guid */
     public static uiClickSoundGuid: string = GameConfig.Assets.getElement(1).Guid;
     /**爆炸金币特效Guid */
@@ -53,17 +54,37 @@ export default class GlobalData {
 
     public static totalBagLen: number = 157;
 
-    public static mpStr: string = `魂力`;
-    public static atkStr: string = `武魂`;
-    public static weaponStr: string = `武魂`;
-    public static skinStr: string = `魂师`;
-    public static equipStr: string = `魂骨`;
-    public static petStr: string = `魂兽`;
+    public static get mpStr(): string {
+        return GameConfig.Language.Text_SoulPower.Value;
+    }
+    public static get atkStr(): string {
+        return GameConfig.Language.Text_MartialSoul.Value;
+    }
+    public static get weaponStr(): string {
+        return GameConfig.Language.Text_MartialSoul.Value;
+    }
+    public static get skinStr(): string {
+        return GameConfig.Language.Text_SoulMaster.Value;
+    }
+    public static get equipStr(): string {
+        return GameConfig.Language.Text_SoulBone.Value;
+    }
+    public static get petStr(): string {
+        return GameConfig.Language.Text_Ayakashi.Value;
+    }
 
-    public static rarityStr1: string = `普通`;
-    public static rarityStr2: string = "稀有";
-    public static rarityStr3: string = "史诗";
-    public static rarityStr4: string = "传说";
+    public static get rarityStr1(): string {
+        return GameConfig.Language.Text_Ordinary.Value;
+    }
+    public static get rarityStr2(): string {
+        return GameConfig.Language.Text_Rare.Value;
+    }
+    public static get rarityStr3(): string {
+        return GameConfig.Language.Text_Epic.Value;
+    }
+    public static get rarityStr4(): string {
+        return GameConfig.Language.Text_Legend.Value;
+    }
 
     public static upgradeExpMultiple: number = 500;
     public static monsterHurt: number = 200;
@@ -72,7 +93,9 @@ export default class GlobalData {
     public static skillMp_1: number = 100;
     public static skillLvLimit_1: number = 90;
     public static skillContinue_1: number = 20;
-    public static skillName_1: string = `杀神领域`;
+    public static get skillName_1(): string {
+        return GameConfig.Language.Text_KillingGodDomain.Value;
+    }
     public static baseSkillDamage: number = 1;
     public static skillSoundId_1: string = `307720`;
     public static skillEffectId_1: string = `113913`;
@@ -92,12 +115,16 @@ export default class GlobalData {
 
     public static signInDays: number = 7;
 
-    public static gameName: string = `斗神大陆(我的魂环无限升级)`;
+    public static get gameName(): string {
+        return GameConfig.Language.Text_DoushenContinent_MySoulRingUnlimitedUpgrade.Value;
+    }
 
     public static addCoinCount: number = 2888888;
     public static addDiamondCount: number = 5;
+    public static addBoneCount: number = 5;
 
     public static arkIcon: string = "312541";
     public static coinIcon: string = "151950";
     public static diamondIcon: string = "103220";
+    public static boneIcon: string = "351119";
 }

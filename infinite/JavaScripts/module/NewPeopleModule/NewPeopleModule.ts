@@ -1,4 +1,6 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
+import GlobalData from "../../const/GlobalData";
 import { MapEx } from "../../Tools/MapEx";
 import { Utils } from "../../Tools/utils";
 import NewPeopleItem_Generate from "../../ui-generate/module/NewPeopleModule/NewPeopleItem_generate";
@@ -8,9 +10,9 @@ import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import { LevelItem } from "../LevelModule/LevelModule";
 
-const newPeopleGiftDatas: Map<number, { icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }> = new Map<number, { icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }>();
-newPeopleGiftDatas.set(1, { icon: ["209508", "367076"], dayStr: "第一天", name: "金箍棒(粉)+制服女孩", bagId: [10041, 20056], itemPos: new mw.Vector2(30, 27) });
-newPeopleGiftDatas.set(2, { icon: ["318640", "343523", "313464", "398484"], dayStr: "第二天", name: "昊天锤+唐三\n金箍棒(紫)+蓝银皇", bagId: [10043, 20057, 20055, 10042], itemPos: new mw.Vector2(538, 27) });
+const newPeopleGiftDatas: Map<number, { desc: string, icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }> = new Map<number, { desc: string, icon: string[], dayStr: string, name: string, bagId: number[], itemPos: mw.Vector2 }>();
+newPeopleGiftDatas.set(1, { desc: "第一天", icon: ["209508", "367076"], dayStr: `Text_FirstDay`, name: `Text_GoldenHoopRodPowderUniformGirl`, bagId: [10041, 20056], itemPos: new mw.Vector2(30, 27) });
+newPeopleGiftDatas.set(2, { desc: "第二天", icon: ["318640", "343523", "313464", "398484"], dayStr: `Text_TheSecondDay`, name: `HaotianHammerTangSan_GoldenHoopRodPurpleBlueSilverEmperor`, bagId: [10043, 20057, 20055, 10042], itemPos: new mw.Vector2(538, 27) });
 const onlineMinutes: number = 30;
 
 export class NewPeopleData extends Subdata {
@@ -32,7 +34,7 @@ export class NewPeopleData extends Subdata {
 }
 
 const NewPeopleTriggerMap: Map<number, { triggers: string[], worldUIIds: string[], name: string }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string }>();
-NewPeopleTriggerMap.set(1, { triggers: ["08A7D30E"], worldUIIds: ["272413D6"], name: `新手礼包` });
+NewPeopleTriggerMap.set(1, { triggers: ["08A7D30E"], worldUIIds: ["272413D6"], name: `Text_NoviceGiftPack` });
 // NewPeopleTriggerMap.set(2, { triggers: null, worldUIIds: ["07D9DF79"], name: `领取自动攻击` });
 // NewPeopleTriggerMap.set(3, { triggers: null, worldUIIds: ["0D9A6CAC"], name: `领取限定皮肤` });
 export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
@@ -99,12 +101,12 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
 
     private initOldPeopleData(): void {
         if (!this.isOldPeople) return;
-        NewPeopleTriggerMap.get(1).name = `老玩家回归礼包`;
-        newPeopleGiftDatas.get(1).name = `黄金王子+JK女孩`;
+        NewPeopleTriggerMap.get(1).name = `Text_ReturnGiftPackageForVeteranPlayers`;
+        newPeopleGiftDatas.get(1).name = `Text_TheGoldenPrinceJkGirl`;
         newPeopleGiftDatas.get(1).icon = ["142399", "320751"];
-        newPeopleGiftDatas.get(1).bagId = [20064, 20065];//TODO
-        newPeopleGiftDatas.get(2).name = `小蓝龙+小绿龙\n小黑龙+小橘龙`;
-        newPeopleGiftDatas.get(2).bagId = [20066, 200677, 20068, 20069];//TODO
+        newPeopleGiftDatas.get(1).bagId = [20064, 20065];
+        newPeopleGiftDatas.get(2).name = `Text_XiaolanGreenBlackOrangeDragon`;
+        newPeopleGiftDatas.get(2).bagId = [20066, 20067, 20068, 20069];
         newPeopleGiftDatas.get(2).icon = ["216268", "216269", "216270", "212971"];
     }
 
@@ -128,10 +130,10 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
         if (this.isCanGet(key)) {
             if (!this.isGetNewPeople(key)) {
                 if (minutes < onlineMinutes) {
-                    Notice.showDownNotice(`在线时间不足${onlineMinutes}分钟`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_OnlineTimeIsLessThanMinutes.Value, onlineMinutes));
                 } else {
-                    Notice.showDownNotice(`领取成功`);
-                    Notice.showDownNotice(`打开背包使用`);
+                    Notice.showDownNotice(GameConfig.Language.Text_ReceivedSuccessfully.Value);
+                    Notice.showDownNotice(GameConfig.Language.Text_OpenTheBackpackForUse.Value);
                     let bagIds = newPeopleGiftDatas.get(key).bagId;
                     for (let i = 0; i < bagIds.length; ++i) {
                         TimeUtil.delaySecond(i).then(() => {
@@ -142,10 +144,10 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
                     if (getComplete) getComplete();
                 }
             } else {
-                Notice.showDownNotice(`不能重复领取`);
+                Notice.showDownNotice(GameConfig.Language.Text_CannotBeClaimedRepeatedly.Value);
             }
         } else {
-            Notice.showDownNotice(`请第${key}天再来领取`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseComeBackToCollectOnTheThDay.Value, key));
         }
     }
 
@@ -170,7 +172,7 @@ export class NewPeopleModuleC extends ModuleC<NewPeopleModuleS, NewPeopleData> {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v: mw.GameObject) => {
                     let worldUI: mw.UIWidget = v as mw.UIWidget;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(value.name);
+                    levelItem.updateLevelTextBlock(GameConfig.Language[`${value.name}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -211,7 +213,8 @@ export class NewPeoplePanel extends NewPeoplePanel_Generate {
     }
 
     private initUI(): void {
-        this.mTitleTextBlock.text = `新手礼包`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_NoviceGiftPack.Value;
+        this.mTipsTextBlock.text = GameConfig.Language.Text_OpenTheBackpackAndUseItAfterReceivingIt.Value;
         this.initItem();
     }
 
@@ -261,7 +264,6 @@ export class NewPeoplePanel extends NewPeoplePanel_Generate {
     }
 }
 
-
 export class NewPeopleItem extends NewPeopleItem_Generate {
     private newPeopleModuleC: NewPeopleModuleC = null;
     private get getNewPeopleModuleC(): NewPeopleModuleC {
@@ -274,10 +276,19 @@ export class NewPeopleItem extends NewPeopleItem_Generate {
     protected onStart(): void {
         this.initUI();
         this.bindButton();
+        this.initTextBlock();
+    }
+
+    private initTextBlock(): void {
+        if (GlobalData.languageId == 0) {
+            this.mTipsTextBlock.fontSize = 12;
+        } else {
+            this.mTipsTextBlock.fontSize = 25;
+        }
     }
 
     private initUI(): void {
-        this.mHasTextBlock.text = `已领取`;
+        this.mHasTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
         this.updateOnlineMinutesTextBlock(0);
     }
 
@@ -305,7 +316,7 @@ export class NewPeopleItem extends NewPeopleItem_Generate {
 
     private updateUI(): void {
         let newPeopleGiftData = newPeopleGiftDatas.get(this.key);
-        this.mDayTextBlock.text = `${newPeopleGiftData.dayStr}`;
+        this.mDayTextBlock.text = GameConfig.Language[`${newPeopleGiftData.dayStr}`].Value;
         for (let i = 0; i < newPeopleGiftData.icon.length; ++i) {
             (this[`mIconBgImage_${i}`] as mw.Image).visibility = mw.SlateVisibility.SelfHitTestInvisible;
             Utils.setImageByAssetIconData((this[`mIconImage_${i}`] as mw.Image), newPeopleGiftData.icon[i]);
@@ -313,16 +324,16 @@ export class NewPeopleItem extends NewPeopleItem_Generate {
         for (let i = newPeopleGiftData.icon.length; i < 4; ++i) {
             (this[`mIconBgImage_${i}`] as mw.Image).visibility = mw.SlateVisibility.Collapsed;
         }
-        this.mTipsTextBlock.text = `${newPeopleGiftData.name}`;
+        this.mTipsTextBlock.text = GameConfig.Language[`${newPeopleGiftData.name}`].Value;
         if (this.getNewPeopleModuleC.isGetNewPeople(this.key)) {
             this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mRewardTextBlock.text = `在线${onlineMinutes}分钟(${onlineMinutes}/${onlineMinutes})`;
+            this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_OnlineMinutes.Value, onlineMinutes, onlineMinutes, onlineMinutes);
         } else {
             this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
             if (this.getNewPeopleModuleC.isCanGet(this.key)) {
                 Event.dispatchToLocal(`RequestNewPeopleGiftBagOnlineTime`);
             } else {
-                this.mRewardTextBlock.text = `在线${onlineMinutes}分钟(${0}/${onlineMinutes})`;
+                this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_OnlineMinutes.Value, onlineMinutes, 0, onlineMinutes);
             }
         }
     }
@@ -331,6 +342,6 @@ export class NewPeopleItem extends NewPeopleItem_Generate {
     public updateOnlineMinutesTextBlock(minutes: number): void {
         console.error(`minutes:${minutes}`);
         this.minutes = minutes;
-        this.mRewardTextBlock.text = `在线${onlineMinutes}分钟(${minutes}/${onlineMinutes})`;
+        this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_OnlineMinutes.Value, onlineMinutes, minutes, onlineMinutes);
     }
 }

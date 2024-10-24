@@ -3,12 +3,19 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
  
 @UIBind('UI/module/OnlineReward/OnlineRewardPanel.ui')
 export default class OnlineRewardPanel_Generate extends UIScript {
-		private mCanvas_Internal: mw.Canvas
+		private mTitleTextBlock_Internal: mw.TextBlock
+	public get mTitleTextBlock(): mw.TextBlock {
+		if(!this.mTitleTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mTitleTextBlock') as mw.TextBlock
+		}
+		return this.mTitleTextBlock_Internal
+	}
+	private mCanvas_Internal: mw.Canvas
 	public get mCanvas(): mw.Canvas {
 		if(!this.mCanvas_Internal&&this.uiWidgetBase) {
 			this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/ScrollBox/mCanvas') as mw.Canvas
@@ -45,11 +52,11 @@ export default class OnlineRewardPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
-		//文本多语言
-		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/TextBlock") as any);
+		this.initLanguage(this.mTitleTextBlock)
 		
 	
+		//文本多语言
+		
 	}
 	
 	/*初始化多语言*/

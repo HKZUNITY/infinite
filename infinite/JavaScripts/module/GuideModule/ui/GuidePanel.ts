@@ -4,6 +4,7 @@
  * TIME: 2023.09.26-13.56.59
  */
 
+import { GameConfig } from "../../../config/GameConfig";
 import GlobalData from "../../../const/GlobalData";
 import GuideUI_Generate from "../../../ui-generate/module/GuideModule/GuideUI_generate";
 import HUDPanel from "../../HUDModule/ui/HUDPanel";
@@ -29,6 +30,7 @@ export default class GuidePanel extends GuideUI_Generate {
 		this.layer = mw.UILayerMiddle;
 		this.initData();
 		this.bindButton();
+		this.initTextBlock();
 	}
 
 	private guideModuleC: GuideModuleC = null;
@@ -44,6 +46,10 @@ export default class GuidePanel extends GuideUI_Generate {
 			this.hudPanel = mw.UIService.getUI(HUDPanel);
 		}
 		return this.hudPanel
+	}
+
+	private initTextBlock(): void {
+		this.mContinueClickTextBlock.text = GameConfig.Language.Text_ClickAnywhereToContinue.Value;
 	}
 
 	private centPos: mw.Vector2 = mw.Vector2.zero;
@@ -152,6 +158,9 @@ export default class GuidePanel extends GuideUI_Generate {
 			case 27:
 				this.guide27();
 				break;
+			case 28:
+				this.guide28();
+				break;
 			// 可以继续增加无数步
 			default:
 				this.hide();
@@ -160,31 +169,31 @@ export default class GuidePanel extends GuideUI_Generate {
 	}
 	private guide0(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
-			this.centPos, `欢迎来到\n${GlobalData.gameName}\n我来给你介绍一下所有按钮操作吧。`, 0, true)
+			this.centPos, StringUtil.format(GameConfig.Language.Text_Guid_0.Value, GlobalData.gameName), 0, true)
 	}
 
 	private guide1(): void {
 		mw.localToViewport(this.getHudPanel.mVirtualJoystickPanel.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mVirtualJoystickPanel.size,
-			new mw.Vector2(900, 200), "移动按钮，点击后拖拽可以控制角色移动。", 0, true)
+			new mw.Vector2(900, 200), GameConfig.Language.Text_Guid_1.Value, 0, true)
 	}
 
 	private guide2(): void {
 		mw.localToViewport(this.getHudPanel.mTouchPad.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mTouchPad.size,
-			new mw.Vector2(0, 250), "视角移动区域，点击拖动这里可以控制屏幕视角。", 0, true)
+			new mw.Vector2(0, 250), GameConfig.Language.Text_Guid_2.Value, 0, true)
 	}
 
 	private guide3(): void {
 		mw.localToViewport(this.getHudPanel.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size,
-			new mw.Vector2(700, 350), `跳跃按钮，连续点击会进行二段跳，会消耗${GlobalData.mpStr}。`, 0, true)
+			new mw.Vector2(700, 350), StringUtil.format(GameConfig.Language.Text_Guid_3.Value, GlobalData.mpStr), 0, true)
 	}
 
 	private guide4(): void {
 		mw.localToViewport(this.getHudPanel.mFlyButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mFlyButton.size,
-			new mw.Vector2(500, 550), `御剑飞行，可以飞行`, 0, true)
+			new mw.Vector2(500, 550), GameConfig.Language.Text_Guid_4.Value, 0, true)
 	}
 
 	// private guide4(): void {
@@ -196,138 +205,144 @@ export default class GuidePanel extends GuideUI_Generate {
 	private guide5(): void {
 		mw.localToViewport(this.getHudPanel.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size,
-			new mw.Vector2(400, 550), `攻击按钮，连续点击可释放炫酷的连招，会消耗${GlobalData.mpStr}。`, 0, true)
+			new mw.Vector2(400, 550), StringUtil.format(GameConfig.Language.Text_Guid_5.Value, GlobalData.mpStr), 0, true)
 	}
 
 	private guide6(): void {
 		mw.localToViewport(this.getHudPanel.mAutoAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAutoAtkButton.size,
-			new mw.Vector2(400, 550), `自动攻击按钮、开启自动攻击`, 0, true)
+			new mw.Vector2(400, 550), GameConfig.Language.Text_Guid_6.Value, 0, true)
 	}
 
 	private guide7(): void {
 		mw.localToViewport(this.getHudPanel.mOnOffRingSoulCanvas.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mOnOffRingSoulCanvas.size,
-			new mw.Vector2(250, 550), `开启魂环按钮，可展示魂环。`, 0, true)
+			new mw.Vector2(250, 550), GameConfig.Language.Text_Guid_7.Value, 0, true)
 	}
 
 	private guide8(): void {
 		mw.localToViewport(this.getHudPanel.mMusicButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mMusicButton.size,
-			new mw.Vector2(710, 150), "背景音乐按钮，打开可更换背景音乐以及开关背景音乐。", 1, true)
+			new mw.Vector2(710, 150), GameConfig.Language.Text_Guid_8.Value, 1, true)
 	}
 
 	private guide9(): void {
 		mw.localToViewport(this.getHudPanel.mHomeButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mHomeButton.size,
-			new mw.Vector2(510, 150), "点我回家按钮，当你被卡在地图中无法移动时可以点击我试试哦。", 1, true)
+			new mw.Vector2(510, 150), GameConfig.Language.Text_Guid_9.Value, 1, true)
 	}
 
 	private guide10(): void {
 		mw.localToViewport(this.getHudPanel.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mShopButton.size,
-			new mw.Vector2(310, 150), "背包按钮，提升等级最快的办法就是在地图中寻找武魂、职业、魂骨、宠物。", 1, true)
+			new mw.Vector2(310, 150), GameConfig.Language.Text_Guid_10.Value, 1, true)
 	}
 
 	private guide11(): void {
 		mw.localToViewport(this.getHudPanel.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mRankButton.size,
-			new mw.Vector2(110, 150), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗罗大陆的排名是多少吧。", 1, true)
+			new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_11.Value, 1, true)
 	}
 
 	private guide12(): void {
 		mw.localToViewport(this.getHudPanel.mLotteryButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mLotteryButton.size,
-			new mw.Vector2(0, 150), "金币抽奖按钮，花不完的金币在这里可以兑现 钻石、等级、皮肤哦", 1, true)
+			new mw.Vector2(0, 150), GameConfig.Language.Text_Guid_12.Value, 1, true)
 	}
 
 	private guide13(): void {
 		mw.localToViewport(this.getHudPanel.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size,
-			new mw.Vector2(710, 150), "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到封号斗罗。", 1, true)
+			new mw.Vector2(710, 150), GameConfig.Language.Text_Guid_13.Value, 1, true)
 	}
 
 	private guide14(): void {
 		mw.localToViewport(this.getHudPanel.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mTaskButton.size,
-			new mw.Vector2(510, 150), "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到神级。", 1, true)
+			new mw.Vector2(510, 150), GameConfig.Language.Text_Guid_14.Value, 1, true)
 	}
 
 	private guide15(): void {
 		mw.localToViewport(this.getHudPanel.mSignInButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mSignInButton.size,
-			new mw.Vector2(310, 150), "签到按钮，登录游戏签到领取大量钻石和等级。", 1, true)
+			new mw.Vector2(310, 150), GameConfig.Language.Text_Guid_15.Value, 1, true)
 	}
 
 	private guide16(): void {
 		mw.localToViewport(this.getHudPanel.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size,
-			new mw.Vector2(110, 150), "福利多多，最快提升等级的办法，无限升级，成为神级的捷径。", 1, true)
+			new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_16.Value, 1, true)
 	}
 
 	private guide17(): void {
 		mw.localToViewport(this.getHudPanel.mSwordButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mSwordButton.size,
-			new mw.Vector2(0, 150), "御剑飞行，装备后可飞行。", 1, true)
+			new mw.Vector2(0, 150), GameConfig.Language.Text_Guid_17.Value, 1, true)
 	}
 
 	private guide18(): void {
 		mw.localToViewport(this.getHudPanel.mArkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mArkButton.size,
-			new mw.Vector2(710, 150), "充值钻石，可充值大量钻石快速提升魂环年限、最快达到百万年级别。", 1, true)
+			new mw.Vector2(710, 150), GameConfig.Language.Text_Guid_18.Value, 1, true)
 	}
 
 	private guide19(): void {
 		mw.localToViewport(this.getHudPanel.mGetButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mGetButton.size,
-			new mw.Vector2(510, 150), "兑换奖励，领取兑换码兑换奖励，钻石+等级。", 1, true)
+			new mw.Vector2(510, 150), GameConfig.Language.Text_Guid_19.Value, 1, true)
 	}
 
 	private guide20(): void {
 		mw.localToViewport(this.getHudPanel.mNewPeopleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mNewPeopleButton.size,
-			new mw.Vector2(310, 150), "新手礼包按钮，领取新手大礼包", 1, true)
+			new mw.Vector2(310, 150), GameConfig.Language.Text_Guid_20.Value, 1, true)
 	}
 
 	private guide21(): void {
 		mw.localToViewport(this.getHudPanel.mRingSoulButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mRingSoulButton.size,
-			new mw.Vector2(110, 150), "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", 1, true)
+			new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_21.Value, 1, true)
 	}
 
 	private guide22(): void {
-		mw.localToViewport(this.getHudPanel.mUpExpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mUpExpButton.size,
-			new mw.Vector2(300, 350), "挂机按钮，开启后、无需操作自动升级。", 1, true)
+		mw.localToViewport(this.getHudPanel.mSoulBoneButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mSoulBoneButton.size,
+			new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_28.Value, 1, true)
 	}
 
 	private guide23(): void {
-		mw.localToViewport(this.getHudPanel.mInvincibleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mInvincibleButton.size,
-			new mw.Vector2(550, 350), "开启防御，不会被队友误伤。", 1, true)
+		mw.localToViewport(this.getHudPanel.mUpExpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mUpExpButton.size,
+			new mw.Vector2(300, 350), GameConfig.Language.Text_Guid_22.Value, 1, true)
 	}
 
 	private guide24(): void {
-		mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size,
-			new mw.Vector2(550, 350), `角色属性，血量、${GlobalData.mpStr}，攻击力会随等级提升而提升。`, 1, true)
+		mw.localToViewport(this.getHudPanel.mInvincibleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mInvincibleButton.size,
+			new mw.Vector2(550, 350), GameConfig.Language.Text_Guid_23.Value, 1, true)
 	}
 
 	private guide25(): void {
-		mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-		this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size,
-			new mw.Vector2(550, 350), "可快速增加金币直接购买武魂、魂骨。", 1, true)
+		mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size,
+			new mw.Vector2(550, 350), StringUtil.format(GameConfig.Language.Text_Guid_24.Value, GlobalData.mpStr), 1, true)
 	}
 
 	private guide26(): void {
-		mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
 		this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size,
-			new mw.Vector2(550, 350), "可快速增加钻石锻造魂环。", 1, true)
+			new mw.Vector2(550, 350), GameConfig.Language.Text_Guid_25.Value, 1, true)
 	}
 
 	private guide27(): void {
+		mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+		this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size,
+			new mw.Vector2(550, 350), GameConfig.Language.Text_Guid_26.Value, 1, true)
+	}
+
+	private guide28(): void {
 		this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0),
-			this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", 0, true)
+			this.centPos, GameConfig.Language.Text_Guid_27.Value, 0, true)
 	}
 
 	/**
@@ -364,7 +379,7 @@ export default class GuidePanel extends GuideUI_Generate {
 		if (text) {
 			this.setVisibility(this.container, true)
 			this.container.position = pos
-			this.text.text = text
+			this.mContentTextBlock.text = text
 		} else {
 			this.setVisibility(this.container, false)
 		}

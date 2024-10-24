@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import GlobalData from "../../const/GlobalData";
 import { Utils } from "../../Tools/utils";
 import SwordItem_Generate from "../../ui-generate/module/FlyModule/SwordItem_generate";
@@ -19,8 +20,20 @@ export class SwordTipsPanel extends SwordTipsPanel_Generate {
     }
 
     private initUI(): void {
-        this.mArkTextBlock.text = `派队币购买`;
-        this.mDiamondTextBlock.text = `钻石购买`;
+        this.mArkTextBlock.text = GameConfig.Language.Text_UseTeamCoins.Value;
+        this.mDiamondTextBlock.text = GameConfig.Language.Text_UsingDiamonds.Value;
+        this.mContentTextBlock_2.text = GameConfig.Language.Text_Or.Value;
+        if (GlobalData.languageId == 0) {
+            this.mContentTextBlock_0.fontSize = 30;
+            this.mContentTextBlock_1.fontSize = 30;
+            this.mDiamondTextBlock.fontSize = 30;
+            this.mArkTextBlock.fontSize = 30;
+        } else {
+            this.mContentTextBlock_0.fontSize = 40;
+            this.mContentTextBlock_1.fontSize = 40;
+            this.mDiamondTextBlock.fontSize = 38;
+            this.mArkTextBlock.fontSize = 38;
+        }
     }
 
     private bindButton(): void {
@@ -48,11 +61,18 @@ export class SwordTipsPanel extends SwordTipsPanel_Generate {
     public showPanel(key: number, arkCallBack: () => void, diamondCallBack: () => void, closeCallBack: () => void): void {
         let swordData = swordDataMap.get(key);
         if (swordData.diamond <= 0) {
-            this.mContentTextBlock.text = `消耗 ${swordData.ark}派队币`;
-            this.mDiamondButton.visibility = mw.SlateVisibility.Collapsed;
+            Utils.setWidgetVisibility(this.mContentTextBlock_0, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mContentTextBlock_1, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mContentTextBlock_2, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mDiamondButton, mw.SlateVisibility.Collapsed);
+            this.mContentTextBlock_0.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoinsToPurchase.Value, swordData.ark);
         } else {
-            this.mContentTextBlock.text = `消耗 ${swordData.diamond}钻石 或\n消耗 ${swordData.ark}派队币`;
-            this.mDiamondButton.visibility = mw.SlateVisibility.Visible;
+            this.mContentTextBlock_0.text = StringUtil.format(GameConfig.Language.Text_ConsumingDiamondsToPurchase.Value, swordData.diamond);
+            this.mContentTextBlock_1.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoinsToPurchase.Value, swordData.ark);
+            Utils.setWidgetVisibility(this.mContentTextBlock_0, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mContentTextBlock_1, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mContentTextBlock_2, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mDiamondButton, mw.SlateVisibility.Visible);
         }
         this.arkCallBack = arkCallBack;
         this.diamondCallBack = diamondCallBack;
@@ -78,7 +98,15 @@ export class SwordItem extends SwordItem_Generate {
     private initUI(): void {
         this.mDiamondIconImage.imageGuid = GlobalData.diamondIcon;
         this.mArkIconImage.imageGuid = GlobalData.arkIcon;
-        this.mHasTextBlock.text = `点击获得`;
+        this.mHasTextBlock.text = GameConfig.Language.Text_ClickToGet.Value;
+
+        if (GlobalData.languageId == 0) {
+            this.mRarityTextBlock.fontSize = 9;
+            this.mArkTextBlock.fontSize = 20;
+        } else {
+            this.mRarityTextBlock.fontSize = 15;
+            this.mArkTextBlock.fontSize = 30;
+        }
     }
 
     private bindButton(): void {
@@ -88,7 +116,7 @@ export class SwordItem extends SwordItem_Generate {
     private isCanContinueClick: boolean = true;
     private addClickButton(): void {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -110,7 +138,7 @@ export class SwordItem extends SwordItem_Generate {
         } else if (iconStr[0] == `icon`) {
             this.mIconImage.imageGuid = iconStr[1];
         }
-        this.mNameTextBlock.text = swordData.name;
+        this.mNameTextBlock.text = GameConfig.Language[`${swordData.name}`].Value;
         if (swordData.diamond <= 0) {
             this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
             this.mIconImage.position = new mw.Vector2(7, 42);
@@ -122,8 +150,9 @@ export class SwordItem extends SwordItem_Generate {
         this.mArkTextBlock.text = `${swordData.ark}`;
 
         this.refreshUI();
-
-        this.mRarityTextBlock.text = `血量提升${1 + swordData.hpRarity}倍\n攻击力提升${1 + swordData.atkRarity}倍`;
+        this.mRarityTextBlock.text = `${StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes_Nowrap.Value
+            , 1 + swordData.hpRarity)}\n${StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes_Nowrap.Value
+                , 1 + swordData.atkRarity)}`;
     }
 
     private refreshUI(): void {
@@ -138,7 +167,7 @@ export class SwordItem extends SwordItem_Generate {
         this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
         this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
         this.mArkIconImage.visibility = mw.SlateVisibility.Collapsed;
-        this.mArkTextBlock.text = `点击使用`;
+        this.mArkTextBlock.text = GameConfig.Language.Text_ClickToUse.Value;
         this.mArkTextBlock.textHorizontalLayout = mw.UITextHorizontalLayout.NoClipping;
         this.mArkTextBlock.textAlign = mw.TextJustify.Right;
 
@@ -161,7 +190,7 @@ export class SwordPanel extends SwordPanel_Generate {
     }
 
     private initUI(): void {
-        this.mTitleTextBlock.text = "御剑飞行商城";
+        this.mTitleTextBlock.text = GameConfig.Language.Text_YujianFlyingMall.Value;
         this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
         this.mIconArkImage.imageGuid = GlobalData.arkIcon;
         this.initItem();
@@ -195,7 +224,7 @@ export class SwordPanel extends SwordPanel_Generate {
     }
 
     public updateRarityTextBlock(hpRarity: number, atkRarity: number): void {
-        this.mTotalRarityTextBlock.text = `御剑飞行总加成\n血量提升${1 + hpRarity}倍\n攻击力提升${1 + atkRarity}倍`;
+        this.mTotalRarityTextBlock.text = `${GameConfig.Language.Text_RoyalSwordFlyingBonus.Value}\n${StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes_Nowrap.Value, 1 + hpRarity)}\n${StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes_Nowrap.Value, 1 + atkRarity)}`;
     }
 
     protected onShow(...params: any[]): void {
@@ -272,6 +301,7 @@ export class FlyData extends Subdata {
 export class SwordData {
     public id: number;
     public name: string;
+    public des: string;
     public icon: string;
     public diamond: number;
     public ark: number;
@@ -289,19 +319,19 @@ export class SwordData {
 const swordTriggerId: string = "0D77F0C2";
 const swordWorldUIId: string = "21930ABA";
 export const swordDataMap: Map<number, SwordData> = new Map<number, SwordData>();
-swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
-swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
-swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0", hpRarity: 0.2, atkRarity: 0.2, isCharacter: false });
-swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5", hpRarity: 0.5, atkRarity: 0.5, isCharacter: false });
-swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D", hpRarity: 0.3, atkRarity: 0.2, isCharacter: false });
-swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249", hpRarity: 0.7, atkRarity: 0.6, isCharacter: false });
-swordDataMap.set(7, { id: 7, name: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A", hpRarity: 0.1, atkRarity: 0, isCharacter: false });
-swordDataMap.set(8, { id: 8, name: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "373123C7", skinId: "F6A887214D21780BC36A41B26307265B", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
-swordDataMap.set(9, { id: 9, name: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
-swordDataMap.set(10, { id: 10, name: "御剑_滑板", icon: "mode_172322", diamond: -1, ark: 300, commodityId: "2n1J8tM5rtL0001Q2", npcId: "0F6CADC5", skinId: "CDB4F61044BF45F91E8E91AB9E1C706B", animationId: "285774", swordPrefabId: "739C4F7545D25E898D93F89BF0AC4B8A", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
-swordDataMap.set(11, { id: 11, name: "御剑_小绿龙", icon: "mode_247654", diamond: -1, ark: 1000, commodityId: "7zMYBoBixh80001Q3", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "01728B2A4C9722493B4703BEBA7E4CF2", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
-swordDataMap.set(12, { id: 12, name: "御剑_小蓝龙", icon: "mode_248837", diamond: -1, ark: 1000, commodityId: "AJrYTJFqjFR0001Q4", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "48A6F6E348AAACD86C9269B780CF3BE8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
-swordDataMap.set(13, { id: 13, name: "御剑_小火龙", icon: "mode_248730", diamond: -1, ark: 1000, commodityId: "7gMCn89dVTb0001Q5", npcId: "0E9E1B46", skinId: "F5B67E80465D850BAD46A09F62FB6B87", animationId: "285781", swordPrefabId: "14AF817A43500A7102A057A2D52ECAD8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(1, { id: 1, name: "Text_MitsurugiSmartKiller", des: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(4, { id: 4, name: "Text_MitsurugiGoldenSword", des: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(2, { id: 2, name: "Text_MitsurugiIceDiamondSword", des: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0", hpRarity: 0.2, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(5, { id: 5, name: "Text_MitsurugiDemonSword", des: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5", hpRarity: 0.5, atkRarity: 0.5, isCharacter: false });
+swordDataMap.set(3, { id: 3, name: "Text_MitsurugiBrokenCrazySword", des: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D", hpRarity: 0.3, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(6, { id: 6, name: "Text_MitsurugiAerocraft", des: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249", hpRarity: 0.7, atkRarity: 0.6, isCharacter: false });
+swordDataMap.set(7, { id: 7, name: "Text_MitsurugiImperialSwordDart", des: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A", hpRarity: 0.1, atkRarity: 0, isCharacter: false });
+swordDataMap.set(8, { id: 8, name: "Text_MitsurugiSmallBicycle", des: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "373123C7", skinId: "F6A887214D21780BC36A41B26307265B", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(9, { id: 9, name: "Text_MitsurugiAnywayHeShandsome", des: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(10, { id: 10, name: "Text_MitsurugiSkate", des: "御剑_滑板", icon: "mode_172322", diamond: -1, ark: 300, commodityId: "2n1J8tM5rtL0001Q2", npcId: "0F6CADC5", skinId: "CDB4F61044BF45F91E8E91AB9E1C706B", animationId: "285774", swordPrefabId: "739C4F7545D25E898D93F89BF0AC4B8A", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(11, { id: 11, name: "Text_MitsurugiLittleGreenDragon", des: "御剑_小绿龙", icon: "mode_247654", diamond: -1, ark: 1000, commodityId: "7zMYBoBixh80001Q3", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "01728B2A4C9722493B4703BEBA7E4CF2", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(12, { id: 12, name: "Text_MitsurugiXiaolanLong", des: "御剑_小蓝龙", icon: "mode_248837", diamond: -1, ark: 1000, commodityId: "AJrYTJFqjFR0001Q4", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "48A6F6E348AAACD86C9269B780CF3BE8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(13, { id: 13, name: "Text_MitsurugiLittleFireDragon", des: "御剑_小火龙", icon: "mode_248730", diamond: -1, ark: 1000, commodityId: "7gMCn89dVTb0001Q5", npcId: "0E9E1B46", skinId: "F5B67E80465D850BAD46A09F62FB6B87", animationId: "285781", swordPrefabId: "14AF817A43500A7102A057A2D52ECAD8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
 
 export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
     private swordPanel: SwordPanel = null;
@@ -384,7 +414,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
             if (swordData.diamond <= 0) {
                 if (mw.SystemUtil.isPIE) {
                     this.setSwordId(key);
-                    Notice.showDownNotice(`御剑飞行购买成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                     if (buySuccessCallback) buySuccessCallback();
                 } else {
                     mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
@@ -398,7 +428,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
                     () => {
                         if (mw.SystemUtil.isPIE) {
                             this.setSwordId(key);
-                            Notice.showDownNotice(`御剑飞行购买成功`);
+                            Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                             if (buySuccessCallback) buySuccessCallback();
                             this.getSwordTipsPanel.hide();
                         } else {
@@ -415,18 +445,20 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
                         if (costDiamond >= swordData.diamond) {
                             this.getPlayerModuleC.saveDiamond(-swordData.diamond);
                             this.setSwordId(key);
-                            Notice.showDownNotice(`御剑飞行购买成功`);
+                            Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                             this.getSwordTipsPanel.hide();
                             if (buySuccessCallback) buySuccessCallback();
                         } else {
-                            Notice.showDownNotice(`钻石不足`);
+                            Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
                             if (GlobalData.isOpenIAA) {
                                 this.getAdTipsPanel.showRewardAd(() => {
-                                    Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount)
+                                    , GameConfig.Language.Text_Cancel.Value
+                                    , GameConfig.Language.Text_FreeToReceive.Value);
                             } else {
-                                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                             }
                         }
@@ -439,7 +471,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
         swordDataMap.forEach((value: SwordData, key: number) => {
             if (value.commodityId == commodityId) {
                 this.setSwordId(key);
-                Notice.showDownNotice(`御剑飞行购买成功`);
+                Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
             }
         });
     }
@@ -513,7 +545,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
         this.usingSwordId = swordId;
         this.server.net_setUsingSwordId(this.usingSwordId);
 
-        Notice.showDownNotice(`装备御剑飞行`);
+        Notice.showDownNotice(GameConfig.Language.Text_EquippingSwordFlying.Value);
         this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
         this.server.net_useFly(this.usingSwordId);
         this.isFlying = true;
@@ -523,18 +555,18 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
     public addOnOffSword(on: boolean): void {
         if (on) {
             if (this.usingSwordId <= 0) {
-                Notice.showDownNotice(`未装备御剑飞行`);
+                Notice.showDownNotice(GameConfig.Language.Text_FlyingWithoutEquippedSword.Value);
                 return;
             } else {
                 if (this.isFlying) return;
-                Notice.showDownNotice(`装备御剑飞行`);
+                Notice.showDownNotice(GameConfig.Language.Text_EquippingSwordFlying.Value);
                 this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
                 this.server.net_useFly(this.usingSwordId);
                 this.isFlying = true;
             }
         } else {
             if (!this.isFlying) return;
-            Notice.showDownNotice(`卸下御剑飞行`);
+            Notice.showDownNotice(GameConfig.Language.Text_RemoveTheImperialSwordAndFly.Value);
             this.localPlayer.character.changeState(mw.CharacterStateType.Running);
             this.server.net_useFly(-1);
             this.isFlying = false;
@@ -560,7 +592,7 @@ export class FlyModuleC extends ModuleC<FlyModuleS, FlyData> {
         });
         mw.GameObject.asyncFindGameObjectById(swordWorldUIId).then((worldUI: mw.UIWidget) => {
             let levelItem = mw.UIService.create(LevelItem);
-            levelItem.updateLevelTextBlock(`御剑飞行商城`);
+            levelItem.updateLevelTextBlock(GameConfig.Language.Text_YujianFlyingMall.Value);
             worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
         });
         swordDataMap.forEach((swordData: SwordData) => {

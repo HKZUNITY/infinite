@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
  
 @UIBind('UI/module/LotteryModule/LotteryResultPanel.ui')
@@ -14,6 +14,13 @@ export default class LotteryResultPanel_Generate extends UIScript {
 			this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage') as mw.Image
 		}
 		return this.mBgImage_Internal
+	}
+	private mTitleTextBlock_Internal: mw.TextBlock
+	public get mTitleTextBlock(): mw.TextBlock {
+		if(!this.mTitleTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mTitleTextBlock') as mw.TextBlock
+		}
+		return this.mTitleTextBlock_Internal
 	}
 	private mCloseButton_Internal: mw.Button
 	public get mCloseButton(): mw.Button {
@@ -59,6 +66,9 @@ export default class LotteryResultPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
+		this.initLanguage(this.mTitleTextBlock)
+		
+	
 		//文本多语言
 		
 	}

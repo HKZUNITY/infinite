@@ -14,6 +14,7 @@ import { OnlineRewardModuleC } from "../OnlineRewardModule/OnlineRewardModuleC";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 import { WorldConfigData } from '../RankModule/PlayerPropData';
 import { RingSoulModuleC, RingSoulPanel } from '../RingSoulModule/RingSoulModule';
+import { SoulBoneModuleC } from '../SoulBoneModule/SoulBoneModule';
 import TaskModuleC from "../TaskModule/TaskModuleC";
 import HUDModuleS from "./HUDModuleS";
 import HUDPanel from "./ui/HUDPanel";
@@ -60,6 +61,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             this.ringSoulModuleC = ModuleService.getModule(RingSoulModuleC);
         }
         return this.ringSoulModuleC;
+    }
+    private soulBoneModuleC: SoulBoneModuleC = null;
+    private get getSoulBoneModuleC(): SoulBoneModuleC {
+        if (!this.soulBoneModuleC) {
+            this.soulBoneModuleC = ModuleService.getModule(SoulBoneModuleC);
+        }
+        return this.soulBoneModuleC;
     }
     private adTipsPanel: AdTipsPanel = null;
     private get getAdTipsPanel(): AdTipsPanel {
@@ -117,6 +125,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onHomeAction: Action = new Action();
     public onAddCoinAction: Action = new Action();
     public onAddDiamondAction: Action = new Action();
+    public onAddBoneAction: Action = new Action();
     public onAdsAction: Action = new Action();
     public onInvincibleAction: Action1<boolean> = new Action1();
     public onOpenRingSoulAction: Action = new Action();
@@ -170,47 +179,71 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得金币+${GlobalData.addCoinCount}`);
+                    Notice.showDownNotice(`${GameConfig.Language.Text_SuccessfullyObtainedCoins.Value}+${GlobalData.addCoinCount}`);
                     this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
-                }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
+                }, StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount)
+                    , GameConfig.Language.Text_Cancel.Value
+                    , GameConfig.Language.Text_FreeToReceive.Value);
             } else {
-                Notice.showDownNotice(`成功获得金币+${GlobalData.addCoinCount}`);
+                Notice.showDownNotice(`${GameConfig.Language.Text_SuccessfullyObtainedCoins.Value}+${GlobalData.addCoinCount}`);
                 this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
             }
         });
         this.onAddDiamondAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount)
+                    , GameConfig.Language.Text_Cancel.Value
+                    , GameConfig.Language.Text_FreeToReceive.Value);
             } else {
-                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+            }
+        });
+        this.onAddBoneAction.add(() => {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedBones.Value, GlobalData.addBoneCount));
+                    this.getPlayerModuleC.saveBone(GlobalData.addBoneCount);
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeBones.Value, GlobalData.addBoneCount)
+                    , GameConfig.Language.Text_Cancel.Value
+                    , GameConfig.Language.Text_FreeToReceive.Value);
+            } else {
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addBoneCount));
+                this.getPlayerModuleC.saveBone(GlobalData.addBoneCount);
             }
         });
 
         this.onAdsAction.add(() => {
             this.getUpPanel.showRewardAd(() => {
-                Notice.showDownNotice(`升级成功 等级+${1}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                 this.getPlayerModuleC.adsUpLv();
             }, () => {
                 if (this.getPlayerModuleC.getDiamond >= GlobalData.addDiamondCount) {
                     this.getPlayerModuleC.saveDiamond(-GlobalData.addDiamondCount);
                     this.getPlayerModuleC.adsUpLv();
-                    Notice.showDownNotice(`升级成功 等级+${1}`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                 } else {
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
                             this.getPlayerModuleC.adsUpLv();
-                            Notice.showDownNotice(`升级成功 等级+${1}`);
-                        }, "等级免费提升一级", "取消", "免费领取");
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
+                        }, StringUtil.format(GameConfig.Language.Text_FreeLevelUpgradeByLevel.Value, 1)
+                            , GameConfig.Language.Text_Cancel.Value
+                            , GameConfig.Language.Text_FreeUpgrade.Value);
                     } else {
-                        Notice.showDownNotice(`升级成功 等级+${1}`);
+                        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                         this.getPlayerModuleC.adsUpLv();
                     }
                 }
-            }, `升级等级`, `使用${GlobalData.addDiamondCount}个钻石\n提升等级`, `直接提升等级`, ``, `免费升级`, `确定`);
+            }, GameConfig.Language.Text_UpgradeLevel.Value
+                , StringUtil.format(GameConfig.Language.Text_UseDiamondsUpgradeLevel.Value, GlobalData.addDiamondCount)
+                , GameConfig.Language.Text_DirectlyUpgradeTheLevel.Value
+                , ``
+                , GameConfig.Language.Text_FreeUpgrade.Value
+                , GameConfig.Language.Text_Determine.Value);
         });
 
         this.onInvincibleAction.add((isInvincible: boolean) => {
@@ -239,7 +272,7 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             let isHaveMp = this.isHaveMp(GlobalData.skillMp_1);
             if (callBack) callBack(isHaveMp);
             if (!isHaveMp) {
-                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
                 return;
             }
             this.getPlayerModuleC.skill_1();
@@ -295,16 +328,19 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     private lv: number = 0;
     public updateLvExpCoin(lv: number, exp: number, coin: number, isAddLv: boolean): void {
         this.lv = lv;
-        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
+        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue);
         if (!isAddLv) return;
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
         this.getHudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = Math.round(Utils.getHp(lv) * (this.getBagModuleC.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity));
+        let hp = Math.round(Utils.getHp(lv) * (this.getBagModuleC.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue));
         this.maxHp = hp;
         this.updateHp(hp);
     }
 
+    public updateBone(bone: number): void {
+        this.getHudPanel.updateBone(bone);
+    }
     public updateCoin(coin: number): void {
         this.getHudPanel.updateCoin(coin);
     }
@@ -371,31 +407,31 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         switch (killCount) {
             case 2:
                 soundId = "65877";
-                killCountTips = "连续消灭2人！势不可当！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_2.Value
                 break;
             case 3:
                 soundId = "65874";
-                killCountTips = "连续消灭3人！勇冠三军！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_3.Value
                 break;
             case 4:
                 soundId = "65873";
-                killCountTips = "连续消灭4人！无人能敌！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_4.Value
                 break;
             case 5:
                 soundId = "65881";
-                killCountTips = "连续消灭5人！横扫千军！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_5.Value
                 break;
             case 6:
                 soundId = "65871";
-                killCountTips = "连续消灭6人！接近神了！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_6.Value
                 break;
             case 7:
                 soundId = "65879";
-                killCountTips = "连续消灭7人！超越神了！";
+                killCountTips = StringUtil.format(GameConfig.Language.Text_ContinuouslyEliminatePeople_7.Value, killCount);
                 break;
             default:
                 soundId = "65879";
-                killCountTips = "连续消灭" + Utils.numChangeToCN(killCount) + "人！超越神了！";
+                killCountTips = StringUtil.format(GameConfig.Language.Text_ContinuouslyEliminatePeople_7.Value, killCount);
                 break;
         }
         SoundService.playSound(soundId, 1);
@@ -487,8 +523,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     private sprint(): void {
         if (!this.isCanSprint) return;
         if (!this.isHaveMp(10)) {
-            Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-            Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+            Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
             return;
         }
         this.isCanSprint = false;
@@ -549,15 +585,15 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.currentJumpTime++;
         if (this.currentJumpTime == 1) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
                 return;
             }
         }
         if (this.currentJumpTime == 2) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
                 return;
             }
             PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.secondJumpAniID, 1)

@@ -1,4 +1,6 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
+import GlobalData from "../../const/GlobalData";
 import { GeneralManager } from "../../Modified027Editor/ModifiedStaticAPI";
 import { MapEx } from "../../Tools/MapEx";
 import { Utils } from "../../Tools/utils";
@@ -28,7 +30,18 @@ export class ArkItem extends ArkItem_Generate {
     }
 
     protected onStart(): void {
+        this.initTextBlock();
         this.bindButton();
+    }
+
+    private initTextBlock(): void {
+        if (GlobalData.languageId == 0) {
+            this.mRewardTextBlock.fontSize = 20;
+            this.mDayTextBlock.fontSize = 15;
+        } else {
+            this.mRewardTextBlock.fontSize = 28;
+            this.mDayTextBlock.fontSize = 25;
+        }
     }
 
     private bindButton(): void {
@@ -39,7 +52,7 @@ export class ArkItem extends ArkItem_Generate {
         this.getArkModuleC.placeOrder(this.commodityId, () => {
             if (rewardDiamond.get(this.commodityId).isLimit) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.mHasTextBlock.text = `今日已售空`;
+                this.mHasTextBlock.text = GameConfig.Language.Text_Soldouttoday.Value;
             }
         });
     }
@@ -52,20 +65,20 @@ export class ArkItem extends ArkItem_Generate {
 
     private updateUI(): void {
         if (rewardDiamond.get(this.commodityId).isLimit) {
-            this.mDayTextBlock.text = `每天限购一次`;
+            this.mDayTextBlock.text = GameConfig.Language.Text_Limitedtoonepurchaseperday.Value;
             if (!this.getArkModuleC.isBuy(this.commodityId)) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
             } else {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.mHasTextBlock.text = `今日已售空`;
+                this.mHasTextBlock.text = GameConfig.Language.Text_Soldouttoday.Value;
             }
         } else {
-            this.mDayTextBlock.text = `不限购`;
+            this.mDayTextBlock.text = GameConfig.Language.Text_Nopurchaserestrictions.Value;
             this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
         }
         let data = rewardDiamond.get(this.commodityId);
         this.mIconImage.imageGuid = data.icon;
-        this.mRewardTextBlock.text = `钻石 +${data.rewardCount}`;
+        this.mRewardTextBlock.text = `${GameConfig.Language.Text_Diamonds.Value} +${data.rewardCount}`;
         this.mTipsIconImage.imageGuid = arkIcon;
         this.mTipsTextBlock.text = `${data.price}`;
     }
@@ -86,7 +99,7 @@ export class ArkPanel extends ArkPanel_Generate {
 
     private initUI(): void {
         this.mIconArkImage.imageGuid = arkIcon;
-        this.mTitleTextBlock.text = `充值钻石`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_Rechargediamonds.Value;
         this.initArkItem();
     }
 
@@ -139,7 +152,7 @@ export class ArkPanel extends ArkPanel_Generate {
     }
 
     public updateUserIdTextBlock(str: string): void {
-        this.mUserIdTextBlock.text = `${str}:${Player.localPlayer.userId}`;
+        this.mUserIdTextBlock.text = `${str ? str : `UserId`}:${Player.localPlayer.userId}`;
     }
 }
 
@@ -236,11 +249,11 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
     private isCanContinueClick: boolean = true;
     public placeOrder(commodityId: string, buySuccessCallback: () => void): void {
         if (rewardDiamond.get(commodityId).isLimit && this.isBuy(commodityId)) {
-            Notice.showDownNotice(`今日已售空,请更换其他商品购买`);
+            Notice.showDownNotice(GameConfig.Language.Text_SoldouttodayPleaseReplaceWithOtherProductsToPurchase.Value);
             return;
         }
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -251,7 +264,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             if (rewardDiamond.get(commodityId).isLimit) this.setLimitStr(commodityId);
             if (buySuccessCallback) buySuccessCallback();
             let rewardCount = rewardDiamond.get(commodityId).rewardCount;
-            Notice.showDownNotice(`钻石+${rewardCount}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${rewardCount}`);
             this.getPlayerModuleC.saveDiamond(rewardCount);
         } else {
             mw.PurchaseService.placeOrder(commodityId, 1, (status, msg) => {
@@ -267,7 +280,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         //根据commodityId和amount来处理收货逻辑
         console.error(`ArkModuleC net_deliverGoods commodityId: ${commodityId}, amount: ${amount}`);
         let rewardCount = rewardDiamond.get(commodityId).rewardCount;
-        Notice.showDownNotice(`钻石+${rewardCount}`);
+        Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${rewardCount}`);
         this.getPlayerModuleC.saveDiamond(rewardCount);
     }
 
@@ -292,7 +305,7 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
     private isCanGetGiftBag: boolean = true;
     public getGiftBag(coodStr: string): void {
         if (!this.isCanGetGiftBag) {
-            Notice.showDownNotice(`冷却3秒`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanGetGiftBag = false;
@@ -302,24 +315,24 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
 
     public net_getGiftBag(giftBagCood: GiftBagCood, messageJson: string): void {
         if (giftBagCood == GiftBagCood.Success) {
-            Notice.showDownNotice(`兑换成功`);
+            Notice.showDownNotice(GameConfig.Language.Text_ExchangeSuccessful.Value);
             let message = JSON.parse(messageJson);
             let giftBagData = message as GiftBagData;
 
             if (giftBagData?.diamond && giftBagData?.diamond > 0) {
-                Notice.showDownNotice(`钻石+${giftBagData.diamond}`);
+                Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${giftBagData.diamond}`);
                 this.getPlayerModuleC.saveDiamond(giftBagData.diamond);
             }
 
             if (giftBagData?.lv && giftBagData?.lv > 0) {
-                Notice.showDownNotice(`等级+${giftBagData.lv}`);
+                Notice.showDownNotice(`${GameConfig.Language.Text_Grade.Value}+${giftBagData.lv}`);
                 this.getPlayerModuleC.upLvByCount(giftBagData.lv);
             }
         } else if (giftBagCood == GiftBagCood.Fail) {
-            Notice.showDownNotice(`礼包兑换码错误`);
-            Notice.showDownNotice(`领取失败`);
+            Notice.showDownNotice(GameConfig.Language.Text_GiftPackRedemptionCodeError.Value);
+            Notice.showDownNotice(GameConfig.Language.Text_CollectionFailed.Value);
         } else if (giftBagCood == GiftBagCood.Exchanged) {
-            Notice.showDownNotice(`已兑换，无需重复兑换`);
+            Notice.showDownNotice(GameConfig.Language.Text_AlreadyredeemedNoNeedToRedeemAgain.Value);
         }
     }
 
@@ -423,8 +436,16 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
     }
 
     private initUI(): void {
-        this.mTitleTextBlock.text = `礼包兑换`;
-        this.mInputTipsTextBlock.text = `请输入作者提供的兑换码\n即可兑换奖励`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_GiftPackExchange.Value;
+        this.mInputTipsTextBlock.text = GameConfig.Language.Text_PleaseEnterTheRedemptionCodeProvidedByTheAuthorCanBeRedeemedForRewards.Value;
+        this.mGetTextBlock.text = GameConfig.Language.Text_Exchange.Value;
+        this.mInputBox.hintString = GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value;
+
+        if (GlobalData.languageId == 0) {
+            this.mInputTipsTextBlock.fontSize = 28;
+        } else {
+            this.mInputTipsTextBlock.fontSize = 60;
+        }
     }
 
     private bindButton(): void {
@@ -439,8 +460,7 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
     private addGetButton(): void {
         let coodStr = this.mInputBox.text;
         if (!coodStr || coodStr == "") {
-            Notice.showDownNotice(`请输入兑换码`);
-            console.error(`请输入兑换码`);
+            Notice.showDownNotice(GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value);
             return;
         }
         this.getArkModuleC.getGiftBag(coodStr);

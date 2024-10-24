@@ -38,6 +38,11 @@ export class OnlineRewardPanel extends OnlineRewardPanel_Generate {
 		this.canUpdate = false;
 		this.layer = mw.UILayerMiddle;
 		this.bindButton();
+		this.initTextBlock();
+	}
+
+	private initTextBlock(): void {
+		this.mTitleTextBlock.text = GameConfig.Language.Text_OnlineRewards.Value;
 	}
 
 	/**
@@ -248,7 +253,15 @@ export class OnlineRewardItem {
 
 		this.mRoleCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas") as mw.Canvas;
 		this.mRoleTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas/mRoleTextBlock") as mw.TextBlock;
+
+		this.initTextBlock();
 	}
+
+	private initTextBlock(): void {
+		this.mCanRewardTextBlock.text = GameConfig.Language.Text_CanBeClaimed.Value;
+		this.mGetRewardTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
+	}
+
 	private hudPanel: HUDPanel = null;
 	private get getHUDPanel(): HUDPanel {
 		if (this.hudPanel == null) {
@@ -312,17 +325,17 @@ export class OnlineRewardItem {
 			Event.dispatchToLocal("PlayButtonClick");
 			switch (this.onlineRewardItemState) {
 				case OnlineRewardItemState.notSatisfy:
-					Notice.showDownNotice("在线时间不足");
+					Notice.showDownNotice(GameConfig.Language.Text_InsufficientOnlineTime.Value);
 					break;
 				case OnlineRewardItemState.satisfy:
 					this.onlineRewardItemState = OnlineRewardItemState.getReward;
 					ModuleService.getModule(OnlineRewardModuleC).getOnlineRewrad(this.index);
 					mw.UIService.getUI(OnlineRewardPanel).deleteNeedTweenItem(this.index);
 					this.onClickButtonUpdateUI();
-					Notice.showDownNotice("领取奖励");
+					Notice.showDownNotice(GameConfig.Language.Text_ClaimRewards.Value);
 					break;
 				case OnlineRewardItemState.getReward:
-					Notice.showDownNotice("已领取奖励");
+					Notice.showDownNotice(GameConfig.Language.Text_ReceivedReward.Value);
 					break;
 				default:
 					break;
@@ -350,12 +363,13 @@ export class OnlineRewardItem {
 			this.mExpCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
 			this.mExpTextBlock.text = "×" + this.rewardCounts[1];
 		}
-		if (this.rewardCounts[2] == 0) {
-			this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
-		} else {
-			this.mRoleCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-			this.mRoleTextBlock.text = "随机1" + this.rewardCounts[2] + "个\n永久套装";
-		}
+		// if (this.rewardCounts[2] == 0) {
+		// this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
+		// } else {
+		// this.mRoleCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+		// this.mRoleTextBlock.text = "随机1" + this.rewardCounts[2] + "个\n永久套装";
+		// }
+		this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
 	}
 
 	/**

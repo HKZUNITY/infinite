@@ -3,19 +3,12 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SoulBoneModule/SoulBonePanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
  
 @UIBind('UI/module/SoulBoneModule/SoulBonePanel.ui')
 export default class SoulBonePanel_Generate extends UIScript {
-		private mTitleTextBlock_Internal: mw.TextBlock
-	public get mTitleTextBlock(): mw.TextBlock {
-		if(!this.mTitleTextBlock_Internal&&this.uiWidgetBase) {
-			this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock') as mw.TextBlock
-		}
-		return this.mTitleTextBlock_Internal
-	}
-	private mMainCanvas_Internal: mw.Canvas
+		private mMainCanvas_Internal: mw.Canvas
 	public get mMainCanvas(): mw.Canvas {
 		if(!this.mMainCanvas_Internal&&this.uiWidgetBase) {
 			this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas') as mw.Canvas
@@ -64,10 +57,17 @@ export default class SoulBonePanel_Generate extends UIScript {
 		}
 		return this.mIconImage_Internal
 	}
+	private mNameFgImage_Internal: mw.Image
+	public get mNameFgImage(): mw.Image {
+		if(!this.mNameFgImage_Internal&&this.uiWidgetBase) {
+			this.mNameFgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mNameFgImage') as mw.Image
+		}
+		return this.mNameFgImage_Internal
+	}
 	private mNameTextBlock_Internal: mw.TextBlock
 	public get mNameTextBlock(): mw.TextBlock {
 		if(!this.mNameTextBlock_Internal&&this.uiWidgetBase) {
-			this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mNameTextBlock') as mw.TextBlock
+			this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mNameFgImage/mNameTextBlock') as mw.TextBlock
 		}
 		return this.mNameTextBlock_Internal
 	}
@@ -95,7 +95,7 @@ export default class SoulBonePanel_Generate extends UIScript {
 	private mHpTextBlock_Internal: mw.TextBlock
 	public get mHpTextBlock(): mw.TextBlock {
 		if(!this.mHpTextBlock_Internal&&this.uiWidgetBase) {
-			this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpTextBlock') as mw.TextBlock
+			this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/HpTitleImage/mHpTextBlock') as mw.TextBlock
 		}
 		return this.mHpTextBlock_Internal
 	}
@@ -120,6 +120,13 @@ export default class SoulBonePanel_Generate extends UIScript {
 		}
 		return this.mHpedTextBlock_Internal
 	}
+	private mHpLineImage_Internal: mw.Image
+	public get mHpLineImage(): mw.Image {
+		if(!this.mHpLineImage_Internal&&this.uiWidgetBase) {
+			this.mHpLineImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpLineImage') as mw.Image
+		}
+		return this.mHpLineImage_Internal
+	}
 	private mAtkCanvas_Internal: mw.Canvas
 	public get mAtkCanvas(): mw.Canvas {
 		if(!this.mAtkCanvas_Internal&&this.uiWidgetBase) {
@@ -130,7 +137,7 @@ export default class SoulBonePanel_Generate extends UIScript {
 	private mAtkTextBlock_Internal: mw.TextBlock
 	public get mAtkTextBlock(): mw.TextBlock {
 		if(!this.mAtkTextBlock_Internal&&this.uiWidgetBase) {
-			this.mAtkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkTextBlock') as mw.TextBlock
+			this.mAtkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/AtkTitleImage/mAtkTextBlock') as mw.TextBlock
 		}
 		return this.mAtkTextBlock_Internal
 	}
@@ -155,12 +162,12 @@ export default class SoulBonePanel_Generate extends UIScript {
 		}
 		return this.mAtkedTextBlock_Internal
 	}
-	private mHasMaxLvTextBlock_Internal: mw.TextBlock
-	public get mHasMaxLvTextBlock(): mw.TextBlock {
-		if(!this.mHasMaxLvTextBlock_Internal&&this.uiWidgetBase) {
-			this.mHasMaxLvTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHasMaxLvTextBlock') as mw.TextBlock
+	private mAtkLineImage_Internal: mw.Image
+	public get mAtkLineImage(): mw.Image {
+		if(!this.mAtkLineImage_Internal&&this.uiWidgetBase) {
+			this.mAtkLineImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkLineImage') as mw.Image
 		}
-		return this.mHasMaxLvTextBlock_Internal
+		return this.mAtkLineImage_Internal
 	}
 	private mNeedInfoCanvas_Internal: mw.Canvas
 	public get mNeedInfoCanvas(): mw.Canvas {
@@ -204,10 +211,17 @@ export default class SoulBonePanel_Generate extends UIScript {
 		}
 		return this.mNeedDiamondTipsTextBlock_Internal
 	}
+	private mNeedDiamondIconBgImage_Internal: mw.Image
+	public get mNeedDiamondIconBgImage(): mw.Image {
+		if(!this.mNeedDiamondIconBgImage_Internal&&this.uiWidgetBase) {
+			this.mNeedDiamondIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondIconBgImage') as mw.Image
+		}
+		return this.mNeedDiamondIconBgImage_Internal
+	}
 	private mNeedDiamondIconImage_Internal: mw.Image
 	public get mNeedDiamondIconImage(): mw.Image {
 		if(!this.mNeedDiamondIconImage_Internal&&this.uiWidgetBase) {
-			this.mNeedDiamondIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondIconImage') as mw.Image
+			this.mNeedDiamondIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondIconBgImage/mNeedDiamondIconImage') as mw.Image
 		}
 		return this.mNeedDiamondIconImage_Internal
 	}
@@ -239,10 +253,17 @@ export default class SoulBonePanel_Generate extends UIScript {
 		}
 		return this.mNeedCoinTextBlock_Internal
 	}
+	private mNeedCoinIconBgImage_Internal: mw.Image
+	public get mNeedCoinIconBgImage(): mw.Image {
+		if(!this.mNeedCoinIconBgImage_Internal&&this.uiWidgetBase) {
+			this.mNeedCoinIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinIconBgImage') as mw.Image
+		}
+		return this.mNeedCoinIconBgImage_Internal
+	}
 	private mNeedCoinIconImage_Internal: mw.Image
 	public get mNeedCoinIconImage(): mw.Image {
 		if(!this.mNeedCoinIconImage_Internal&&this.uiWidgetBase) {
-			this.mNeedCoinIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinIconImage') as mw.Image
+			this.mNeedCoinIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinIconBgImage/mNeedCoinIconImage') as mw.Image
 		}
 		return this.mNeedCoinIconImage_Internal
 	}
@@ -252,6 +273,55 @@ export default class SoulBonePanel_Generate extends UIScript {
 			this.mNeedCoinCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinCountTextBlock') as mw.TextBlock
 		}
 		return this.mNeedCoinCountTextBlock_Internal
+	}
+	private mNeedBoneCanvas_Internal: mw.Canvas
+	public get mNeedBoneCanvas(): mw.Canvas {
+		if(!this.mNeedBoneCanvas_Internal&&this.uiWidgetBase) {
+			this.mNeedBoneCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas') as mw.Canvas
+		}
+		return this.mNeedBoneCanvas_Internal
+	}
+	private mNeedBoneTitleImage_Internal: mw.Image
+	public get mNeedBoneTitleImage(): mw.Image {
+		if(!this.mNeedBoneTitleImage_Internal&&this.uiWidgetBase) {
+			this.mNeedBoneTitleImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneTitleImage') as mw.Image
+		}
+		return this.mNeedBoneTitleImage_Internal
+	}
+	private mNeedBoneTextBlock_Internal: mw.TextBlock
+	public get mNeedBoneTextBlock(): mw.TextBlock {
+		if(!this.mNeedBoneTextBlock_Internal&&this.uiWidgetBase) {
+			this.mNeedBoneTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneTextBlock') as mw.TextBlock
+		}
+		return this.mNeedBoneTextBlock_Internal
+	}
+	private mNeedBoneIconBgImage_Internal: mw.Image
+	public get mNeedBoneIconBgImage(): mw.Image {
+		if(!this.mNeedBoneIconBgImage_Internal&&this.uiWidgetBase) {
+			this.mNeedBoneIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneIconBgImage') as mw.Image
+		}
+		return this.mNeedBoneIconBgImage_Internal
+	}
+	private mNeedBoneIconImage_Internal: mw.Image
+	public get mNeedBoneIconImage(): mw.Image {
+		if(!this.mNeedBoneIconImage_Internal&&this.uiWidgetBase) {
+			this.mNeedBoneIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneIconBgImage/mNeedBoneIconImage') as mw.Image
+		}
+		return this.mNeedBoneIconImage_Internal
+	}
+	private mNeedBoneCountTextBlock_Internal: mw.TextBlock
+	public get mNeedBoneCountTextBlock(): mw.TextBlock {
+		if(!this.mNeedBoneCountTextBlock_Internal&&this.uiWidgetBase) {
+			this.mNeedBoneCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneCountTextBlock') as mw.TextBlock
+		}
+		return this.mNeedBoneCountTextBlock_Internal
+	}
+	private mHasMaxLvTextBlock_Internal: mw.TextBlock
+	public get mHasMaxLvTextBlock(): mw.TextBlock {
+		if(!this.mHasMaxLvTextBlock_Internal&&this.uiWidgetBase) {
+			this.mHasMaxLvTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mHasMaxLvTextBlock') as mw.TextBlock
+		}
+		return this.mHasMaxLvTextBlock_Internal
 	}
 	private mStrengthenCanvas_Internal: mw.Canvas
 	public get mStrengthenCanvas(): mw.Canvas {
@@ -302,6 +372,20 @@ export default class SoulBonePanel_Generate extends UIScript {
 		}
 		return this.mMoneyCanvas_Internal
 	}
+	private mIconBoneImage_Internal: mw.Image
+	public get mIconBoneImage(): mw.Image {
+		if(!this.mIconBoneImage_Internal&&this.uiWidgetBase) {
+			this.mIconBoneImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/BoneCanvas/mIconBoneImage') as mw.Image
+		}
+		return this.mIconBoneImage_Internal
+	}
+	private mBoneCountTextBlock_Internal: mw.TextBlock
+	public get mBoneCountTextBlock(): mw.TextBlock {
+		if(!this.mBoneCountTextBlock_Internal&&this.uiWidgetBase) {
+			this.mBoneCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/BoneCanvas/mBoneCountTextBlock') as mw.TextBlock
+		}
+		return this.mBoneCountTextBlock_Internal
+	}
 	private mIconCoinImage_Internal: mw.Image
 	public get mIconCoinImage(): mw.Image {
 		if(!this.mIconCoinImage_Internal&&this.uiWidgetBase) {
@@ -344,12 +428,26 @@ export default class SoulBonePanel_Generate extends UIScript {
 		}
 		return this.mArkCountTextBlock_Internal
 	}
+	private mTotalRarityImage_Internal: mw.Image
+	public get mTotalRarityImage(): mw.Image {
+		if(!this.mTotalRarityImage_Internal&&this.uiWidgetBase) {
+			this.mTotalRarityImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityImage') as mw.Image
+		}
+		return this.mTotalRarityImage_Internal
+	}
 	private mTotalRarityTextBlock_Internal: mw.TextBlock
 	public get mTotalRarityTextBlock(): mw.TextBlock {
 		if(!this.mTotalRarityTextBlock_Internal&&this.uiWidgetBase) {
-			this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityTextBlock') as mw.TextBlock
+			this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityImage/mTotalRarityTextBlock') as mw.TextBlock
 		}
 		return this.mTotalRarityTextBlock_Internal
+	}
+	private mTitleTextBlock_Internal: mw.TextBlock
+	public get mTitleTextBlock(): mw.TextBlock {
+		if(!this.mTitleTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock') as mw.TextBlock
+		}
+		return this.mTitleTextBlock_Internal
 	}
 	private mCloseButton_Internal: mw.Button
 	public get mCloseButton(): mw.Button {
@@ -393,9 +491,6 @@ export default class SoulBonePanel_Generate extends UIScript {
 		
 		//文本多语言
 		
-		this.initLanguage(this.mTitleTextBlock)
-		
-	
 		this.initLanguage(this.mNameTextBlock)
 		
 	
@@ -417,9 +512,6 @@ export default class SoulBonePanel_Generate extends UIScript {
 		this.initLanguage(this.mAtkedTextBlock)
 		
 	
-		this.initLanguage(this.mHasMaxLvTextBlock)
-		
-	
 		this.initLanguage(this.mNeedTitleTextBlock)
 		
 	
@@ -438,6 +530,15 @@ export default class SoulBonePanel_Generate extends UIScript {
 		this.initLanguage(this.mNeedCoinCountTextBlock)
 		
 	
+		this.initLanguage(this.mNeedBoneTextBlock)
+		
+	
+		this.initLanguage(this.mNeedBoneCountTextBlock)
+		
+	
+		this.initLanguage(this.mHasMaxLvTextBlock)
+		
+	
 		this.initLanguage(this.mProbabilityTextBlock)
 		
 	
@@ -445,6 +546,9 @@ export default class SoulBonePanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mStrengthenTextBlock)
+		
+	
+		this.initLanguage(this.mBoneCountTextBlock)
 		
 	
 		this.initLanguage(this.mCoinCountTextBlock)
@@ -457,6 +561,9 @@ export default class SoulBonePanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mTotalRarityTextBlock)
+		
+	
+		this.initLanguage(this.mTitleTextBlock)
 		
 	
 		//文本多语言

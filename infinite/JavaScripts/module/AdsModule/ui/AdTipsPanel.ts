@@ -1,4 +1,6 @@
 import { Notice } from "../../../common/notice/Notice";
+import { GameConfig } from "../../../config/GameConfig";
+import GlobalData from "../../../const/GlobalData";
 import { Utils } from "../../../Tools/utils";
 import AdsTipsPanel_Generate from "../../../ui-generate/module/AdsModule/AdsTipsPanel_generate";
 import TaskModuleC from "../../TaskModule/TaskModuleC";
@@ -15,8 +17,19 @@ export default class AdTipsPanel extends AdsTipsPanel_Generate {
 	protected onStart(): void {
 		this.canUpdate = false;
 		this.layer = mw.UILayerDialog;
-
+		this.initTextBlock();
 		this.bindButtons();
+	}
+
+	private initTextBlock(): void {
+		this.mTitleTxt.text = GameConfig.Language.Text_AdvertisingRewards.Value;
+		if (GlobalData.languageId == 0) {
+			this.mTitleTxt.fontSize = 15;
+			this.mContentTxt.fontSize = 30;
+		} else {
+			this.mTitleTxt.fontSize = 35;
+			this.mContentTxt.fontSize = 35;
+		}
 	}
 
 	private bindButtons(): void {
@@ -26,7 +39,7 @@ export default class AdTipsPanel extends AdsTipsPanel_Generate {
 
 	private onClickYesButton(isSuccess: boolean): void {
 		if (!isSuccess) {
-			Notice.showDownNotice(`${this.mYesBtn.text}失败，请重试`);
+			Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FailedPleaseTryAgain.Value, this.mYesBtn.text));
 			return;
 		}
 		this.hideAdPanel();
@@ -41,7 +54,7 @@ export default class AdTipsPanel extends AdsTipsPanel_Generate {
 	}
 
 	private callback: () => void = null;
-	public showRewardAd(callback: () => void, contentText: string, noText: string = "取消", yesText = "领取"): void {
+	public showRewardAd(callback: () => void, contentText: string, noText: string, yesText: string): void {
 		this.callback = callback;
 		this.mContentTxt.text = contentText;
 		this.mNoBtn.text = noText;

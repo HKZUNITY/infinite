@@ -3,6 +3,7 @@ import { SpawnManager } from '../../../Modified027Editor/ModifiedSpawn';
 import Console from "../../../Tools/Console";
 import { Notice } from '../../../common/notice/Notice';
 import { IColdWeaponElement } from "../../../config/ColdWeapon";
+import { GameConfig } from '../../../config/GameConfig';
 import GlobalData from '../../../const/GlobalData';
 import { PrefabEvent } from "../../PrefabEvent";
 import { SkillRectCheck } from "./SkillRectCheck";
@@ -91,7 +92,7 @@ export class ColdWeapon {
      */
     public attack(index: number) {
         if (!this._weapon) {
-            Notice.showDownNotice(`还未装备${GlobalData.atkStr},去寻找${GlobalData.atkStr}`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_NotEquippedWithYetGoFind.Value, GlobalData.atkStr, GlobalData.atkStr));
             return;
         }
         this.isPlaying = true;

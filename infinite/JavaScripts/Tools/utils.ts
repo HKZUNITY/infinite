@@ -1,3 +1,5 @@
+import { GameConfig } from "../config/GameConfig";
+import GlobalData from "../const/GlobalData";
 import { WorldConfigData } from "../module/RankModule/PlayerPropData";
 import Console from "./Console";
 
@@ -479,45 +481,49 @@ export class Utils {
         let level = Math.floor(lv / 10);
         switch (level) {
             case 0:
-                return `${lv}级 魂士`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulMaster1.Value, lv);
             case 1:
-                return `${lv}级 魂师`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulMaster2.Value, lv);
             case 2:
-                return `${lv}级 大魂师`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulMaster3.Value, lv);
             case 3:
-                return `${lv}级 魂尊`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulSovereign.Value, lv);
             case 4:
-                return `${lv}级 魂宗`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulSect.Value, lv);
             case 5:
-                return `${lv}级 魂王`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulKing.Value, lv);
             case 6:
-                return `${lv}级 魂帝`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulEmperor.Value, lv);
             case 7:
-                return `${lv}级 魂圣`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulSaint.Value, lv);
             case 8:
-                return `${lv}级 魂斗罗`;
+                return StringUtil.format(GameConfig.Language.Text_LevelContra.Value, lv);
             case 9:
-                if (lv <= 94) return `${lv}级 封号斗罗`;
-                if (lv <= 98) return `${lv}级 巅峰斗罗`;
-                if (lv == 99) return `${lv}级 半神`;
+                if (lv <= 94) return StringUtil.format(GameConfig.Language.Text_LevelBannedDouluo.Value, lv);
+                if (lv <= 98) return StringUtil.format(GameConfig.Language.Text_LevelPeakDouluo.Value, lv);
+                if (lv == 99) return StringUtil.format(GameConfig.Language.Text_LevelDemigod.Value, lv);
             case 10:
-                return `${lv}级 神官`;
+                return StringUtil.format(GameConfig.Language.Text_LevelDivineOfficer.Value, lv);
             case 11:
-                return `${lv}级 真神级`;
+                return StringUtil.format(GameConfig.Language.Text_LevelTrueGodLevel.Value, lv);
             case 12:
             case 13:
-                return `${lv}级 超神级`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSuperGodLevel.Value, lv);
             case 14:
-                return `${lv}级 超神巅峰`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSuperGodPeak.Value, lv);
             case 15:
-                return `${lv}级 神王`;
+                return StringUtil.format(GameConfig.Language.Text_LevelDivineKing.Value, lv);
             case 16:
-                return `${lv}级 万古仙帝`;
+                return StringUtil.format(GameConfig.Language.Text_LevelEternalImmortalEmperor.Value, lv);
             default:
                 if (level >= 17) {
-                    let titleName: string = await this.getTitleNameByUserId(userId);
-                    if (titleName == "-1") titleName = "万古仙帝";
-                    return `${lv}级 ${titleName}`;
+                    if (GlobalData.languageId == 0) {
+                        return StringUtil.format(GameConfig.Language.Text_LevelEternalImmortalEmperor.Value, lv);
+                    } else {
+                        let titleName: string = await this.getTitleNameByUserId(userId);
+                        if (titleName == "-1") titleName = GameConfig.Language.Text_EternalImmortalEmperor.Value
+                        return `${lv}${GameConfig.Language.Text_Level.Value} ${titleName}`;
+                    }
                 }
         }
     }
@@ -608,47 +614,51 @@ export class Utils {
     public static randomNpcName(monsterId: number): string {
         switch (monsterId) {
             case 1:
-                return "魔兽美杜莎";
+                return GameConfig.Language.Text_WarcraftMedusa.Value;
             case 2:
-                return "魔兽炫彩蜘蛛";
+                return GameConfig.Language.Text_WarcraftColorfulSpider.Value;
             case 3:
-                return "魔兽蜘蛛精";
+                return GameConfig.Language.Text_WarcraftSpiderSpirit.Value;
             case 4:
-                return "龙之魔兽";
+                return GameConfig.Language.Text_DragonSWarcraft.Value;
             case 5:
-                return "丧尸";
+                return GameConfig.Language.Text_Zombies.Value;
             case 6:
-                return "变异布偶";
+                return GameConfig.Language.Text_MutatedPuppet.Value;
             case 100:
-                return "黑悟空";
+                return GameConfig.Language.Text_BlackWukong.Value;
         }
-        return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
+        if (GlobalData.languageId == 0) {
+            return GameConfig.Language.Text_MickeyMouse.Value;
+        } else {
+            return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
+        }
     }
 
-    private static tens: string[] = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-    private static digitalUnits: string[] = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
+    // private static tens: string[] = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+    // private static digitalUnits: string[] = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 
     /**根据数字获取汉字*/
-    public static numChangeToCN(num: number): string {
-        if (this.tens[num]) {
-            return this.tens[num];
-        } else if (num > 10 && num < 20) {
-            let numStr = num.toString();
-            let n = numStr.substring(1, 2);
-            let result = this.digitalUnits[1] + this.tens[n];
-            return result;
-        } else if (num > 10) {
-            let result = "";
-            let numStr = num.toString();
-            for (var i = 0; i < numStr.length; ++i) {
-                let n = numStr.substring(i, i + 1);
-                let m = numStr.length - i - 1;
-                result += this.tens[n] + this.digitalUnits[m];
-            }
-            return result;
-        }
-        else return "零";
-    }
+    // public static numChangeToCN(num: number): string {
+    //     if (this.tens[num]) {
+    //         return this.tens[num];
+    //     } else if (num > 10 && num < 20) {
+    //         let numStr = num.toString();
+    //         let n = numStr.substring(1, 2);
+    //         let result = this.digitalUnits[1] + this.tens[n];
+    //         return result;
+    //     } else if (num > 10) {
+    //         let result = "";
+    //         let numStr = num.toString();
+    //         for (var i = 0; i < numStr.length; ++i) {
+    //             let n = numStr.substring(i, i + 1);
+    //             let m = numStr.length - i - 1;
+    //             result += this.tens[n] + this.digitalUnits[m];
+    //         }
+    //         return result;
+    //     }
+    //     else return "零";
+    // }
 
     public static getHp(lv: number): number {
         return 100 + (lv * 100);
@@ -714,19 +724,23 @@ export class Utils {
     }
 
     public static integerUnitConversionStr(num: number): string {
-        if (num <= 9999) {
+        if (GlobalData.languageId == 0) {
             return `${num}`;
         } else {
-            if (num <= 99999999) {
-                return `${(num / 10000).toFixed(2)}万`;
+            if (num <= 9999) {
+                return `${num}`;
             } else {
-                if (num <= 999999999999) {
-                    return `${(num / 100000000).toFixed(2)}亿`;
+                if (num <= 99999999) {
+                    return `${(num / 10000).toFixed(2)}万`;
                 } else {
-                    if (num <= 9999999999999999) {
-                        return `${(num / 1000000000000).toFixed(2)}万亿`;
+                    if (num <= 999999999999) {
+                        return `${(num / 100000000).toFixed(2)}亿`;
                     } else {
-                        return `${(num / 10000000000000000).toFixed(2)}亿亿`;
+                        if (num <= 9999999999999999) {
+                            return `${(num / 1000000000000).toFixed(2)}万亿`;
+                        } else {
+                            return `${(num / 10000000000000000).toFixed(2)}亿亿`;
+                        }
                     }
                 }
             }

@@ -856,7 +856,7 @@ var foreign19 = /*#__PURE__*/Object.freeze({
     AssetsConfig: AssetsConfig
 });
 
-const EXCELDATA$e = [["ID", "Name", "Type", "AssetId", "Rarity", "HumanoidSlotType", "OffsetPos", "OffsetRot", "OffsetSca", "ObjId", "AssetOffsetPos", "AssetOffsetRot", "AssetOffsetSca", "Idle", "Move", "GetType"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "武魂|魂师|魂骨|魂兽", 0, null, 0, 0, null, null, null, null, null, null, null, null, null, 0], [10046, "自动攻击拳(男)", 1, "92821", 3, 0, null, null, null, "92821", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [10047, "自动攻击拳(女)", 1, "168946", 3, 0, null, null, null, "168946", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [10044, "机甲斩狂风斩(男)", 1, "151245", 3, 0, null, null, null, "151245", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [10045, "机甲斩狂风斩(女)", 1, "151897", 3, 0, null, null, null, "151897", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [10041, "金箍棒(粉)", 1, "209508", 3, 0, null, null, null, "209508", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [10042, "金箍棒(紫)", 1, "313464", 3, 0, null, null, null, "313464", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [10043, "昊天锤", 1, "318640", 3, 0, null, null, null, "318640", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [10001, "海神三叉戟", 1, "134222", 0, 0, null, null, null, "134222", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10002, "赛博自来也长枪", 1, "122953", 0, 0, null, null, null, "122953", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10003, "海王双头刀", 1, "118146", 0, 0, null, null, null, "118146", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10004, "美国队长神锤", 1, "152954", 2, 0, null, null, null, "152954", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10005, "毒液斧头", 1, "118143", 0, 0, null, null, null, "118143", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10006, "灭霸斧", 1, "122960", 2, 0, null, null, null, "122960", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10007, "鸣人手里剑", 1, "33861", 1, 0, null, null, null, "33861", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10008, "未来战士黄金剑", 1, "218730", 2, 0, null, null, null, "218730", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10009, "森林哨兵魔法仗", 1, "210791", 0, 0, null, null, null, "210791", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10010, "手枪(索尼克专用)", 1, "221099", 1, 0, null, null, null, "221099", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10011, "信号枪(粉毛怪专用)", 1, "43702", 1, 0, null, null, null, "43702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10012, "刀(纲手专用)", 1, "103067", 1, 0, null, null, null, "103067", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10013, "刀(李洛克专用)", 1, "103080", 1, 0, null, null, null, "103080", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10014, "镰刀(干柿鬼鲛专用)", 1, "103075", 1, 0, null, null, null, "103075", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10015, "镰刀(赛博女孩专用)", 1, "122946", 1, 0, null, null, null, "122946", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10016, "冰封剑(黑寡妇专用)", 1, "31710", 1, 0, null, null, null, "31710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10017, "怪物爪刀", 1, "103069", 1, 0, null, null, null, "103069", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10018, "大砍刀(卡卡西专用)", 1, "122961", 1, 0, null, null, null, "122961", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10019, "法杖(宇智波鼬专用)", 1, "272767", 1, 0, null, null, null, "272767", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10020, "水枪", 1, "166941", 2, 0, null, null, null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10021, "冰钻剑", 1, "31712", 2, 0, null, null, null, "31712", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10022, "屠刀", 1, "118142", 2, 0, null, null, null, "118142", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10023, "蓝色法杖(洛基专用)", 1, "210651", 2, 0, null, null, null, "210651", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10024, "镰刀(太阳神专用)", 1, "121672", 3, 0, null, null, null, "121672", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10025, "恶魔剑(宇智波斑爷专用)", 1, "122956", 3, 0, null, null, null, "122956", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10026, "剑(纳米机器人专用)", 1, "103068", 2, 0, null, null, null, "103068", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10027, "镰刀(死侍专用)", 1, "103083", 2, 0, null, null, null, "103083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10028, "  荧光剑(火山哨兵专用)", 1, "198698", 2, 0, null, null, null, "198698", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10029, "狂热剑(绯红女巫专用)", 1, "29057", 2, 0, null, null, null, "29057", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10030, "充气锤子", 1, "272130", 1, 0, null, null, null, "272130", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10031, "木法杖(毒液蜘蛛侠专用)", 1, "300436", 3, 0, null, null, null, "300436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10032, "瓜子盾", 1, "121541", 0, 0, null, null, null, "121541", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10033, "盾(浩克专用)", 1, "122950", 3, 0, null, null, null, "122950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10034, "终极冰环剑", 1, "31734", 3, 0, null, null, null, "31734", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10035, "散弹喷枪(雏田专用)", 1, "155702", 3, 0, null, null, null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10036, "火枪(路飞专用)", 1, "122726", 3, 0, null, null, null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10037, "紫光剑(佐助专用)", 1, "297029", 3, 0, null, null, null, "297029", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10038, "激光枪(天神专用)", 1, "222534", 3, 0, null, null, null, "222534", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10039, "剑(金刚狼专用)", 1, "269895", 3, 0, null, null, null, "269895", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10040, "激光枪(钢铁侠专用)", 1, "122720", 3, 0, null, null, null, "122720", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20063, "情侣机甲套装(女)", 2, "163553", 3, 0, null, null, null, "163553", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [20062, "情侣机甲套装(男)", 2, "164428", 3, 0, null, null, null, "164428", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [20061, "小舞姐", 2, "163292", 3, 0, null, null, null, "163292", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 4], [20055, "蓝银皇", 2, "398484", 3, 0, null, null, null, "398484", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [20056, "制服女孩", 2, "367076", 3, 0, null, null, null, "367076", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [20057, "唐三", 2, "343523", 3, 0, null, null, null, "343523", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [20064, "黄金王子", 2, "142399", 3, 0, null, null, null, "142399", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20065, "JK女孩", 2, "320751", 3, 0, null, null, null, "320751", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20066, "小蓝龙", 2, "216268", 3, 0, null, null, null, "216268", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20067, "小绿龙", 2, "216269", 3, 0, null, null, null, "216269", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20068, "小黑龙", 2, "216270", 3, 0, null, null, null, "216270", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20069, "小橘龙", 2, "212971", 3, 0, null, null, null, "212971", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20058, "神级魔王", 2, "141499", 3, 0, null, null, null, "141499", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [20059, "四代火影", 2, "142921", 3, 0, null, null, null, "142921", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [20060, "美杜莎女王", 2, "163289", 3, 0, null, null, null, "163289", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [20001, "狐耳少女", 2, "361906", 3, 0, null, null, null, "65710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20002, "邪恶使者", 2, "357571", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20003, "长款大衣女", 2, "357567", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20004, "海绵宝宝", 2, "357566", 3, 0, null, null, null, "63711", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20005, "钢铁侠", 2, "357563", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20006, "灭霸", 2, "357556", 3, 0, null, null, null, "112568", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20007, "刺猬小子", 2, "357555", 3, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20008, "邪恶使者", 2, "351891", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20009, "蓝衣男", 2, "351680", 3, 0, null, null, null, "127800", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20010, "黑衣男", 2, "351598", 3, 0, null, null, null, "224168", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20011, "毁灭战士", 2, "351597", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20012, "雷神", 2, "357570", 2, 0, null, null, null, "111768", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20013, "黑寡妇", 2, "357568", 2, 0, null, null, null, "111240", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20014, "可爱女", 2, "351500", 2, 0, null, null, null, "269652", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20015, "丸子头女", 2, "351497", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20016, "西方神女", 2, "351405", 3, 0, null, null, null, "64410", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20017, "黑裙少女", 2, "351404", 3, 0, null, null, null, "128834", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20018, "短发女", 2, "351026", 2, 0, null, null, null, "115849", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20019, "旗袍女", 2, "351025", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20020, "披风男", 2, "351024", 1, 0, null, null, null, "96576", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20021, "长发女", 2, "351004", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20022, "双马尾女", 2, "350987", 1, 0, null, null, null, "59857", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20023, "长发短裙女", 2, "350973", 1, 0, null, null, null, "63648", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20024, "双马尾女", 2, "350959", 0, 0, null, null, null, "248351", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20025, "双马尾女", 2, "350958", 0, 0, null, null, null, "64774", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20026, "百褶裙女孩", 2, "350756", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20027, "短发时尚女", 2, "350752", 0, 0, null, null, null, "111241", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20028, "长马尾女孩", 2, "350746", 1, 0, null, null, null, "121948", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20029, "长耳女", 2, "350744", 1, 0, null, null, null, "64458", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20030, "风衣长发女", 2, "350739", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20031, "恶魔角女", 2, "350738", 1, 0, null, null, null, "64305", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20032, "和服女", 2, "350568", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20033, "发卡女", 2, "350318", 1, 0, null, null, null, "181365", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20034, "女仆套装女", 2, "350569", 2, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20035, "帽子女", 2, "350314", 1, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20036, "魔法女孩", 2, "350260", 1, 0, null, null, null, "111088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20037, "长裙女", 2, "349270", 2, 0, null, null, null, "124880", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20038, "杀手女", 2, "347528", 3, 0, null, null, null, "137518", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20039, "巫医", 2, "145319", 3, 0, null, null, null, "119773", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20040, "长腿妈妈", 2, "143403", 2, 0, null, null, null, "119229", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20041, "玄魁", 2, "143402", 2, 0, null, null, null, "121882", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20042, "邪恶女巫", 2, "143401", 2, 0, null, null, null, "119745", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20043, "小丑女", 2, "143400", 1, 0, null, null, null, "63539", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20044, "万圣节女", 2, "143399", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20045, "屠夫", 2, "143398", 0, 0, null, null, null, "109144", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20046, "魔莱坞学院院长", 2, "143396", 1, 0, null, null, null, "64141", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20047, "迷雾鬼影", 2, "143395", 0, 0, null, null, null, "109058", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20048, "蓝毛怪", 2, "143394", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20049, "狗头毛毛虫", 2, "143390", 1, 0, null, null, null, "118079", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20050, "粉毛怪", 2, "143389", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20051, "索尼克", 2, "143387", 1, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20052, "Rainbow friends", 2, "143385", 3, 0, null, null, null, "119483", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20053, "海神", 2, "226377", 3, 0, null, null, null, "226377", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30001, "恶魔翅膀", 3, "223877", 3, 12, new mw.Vector(-10, 0, 10), new mw.Vector(0, 0, 90), new mw.Vector(2, 2, 2), "223877", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), null, null, 1], [30002, "恶魔角", 3, "266332", 3, 1, new mw.Vector(0, 5, 10), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 2), "266332", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 2), null, null, 1], [30003, "恶魔尾巴", 3, "136179", 3, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "136179", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30004, "恶魔头骨", 3, "136506", 3, 6, new mw.Vector(-4.8, 0, -11), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "136506", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30005, "恶魔三头犬", 3, "192395", 3, 20, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192395", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30006, "天使翅膀", 3, "334814", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "334814", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30007, "天使蜘蛛", 3, "192359", 3, 20, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192359", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30008, "狐狸尾巴", 3, "226476", 3, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226476", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30009, "狐狸耳朵", 3, "226479", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226479", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30010, "挥动的围巾", 3, "295506", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "295506", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30011, "闪电翅膀", 3, "42818", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42818", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30012, "眼镜", 3, "324491", 3, 1, new mw.Vector(0, -1, 2), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "324491", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30013, "拍照机器人", 3, "292313", 3, 26, new mw.Vector(1, -10, -1), new mw.Vector(110, -45, 55), new mw.Vector(0.4, 0.4, 0.4), "292313", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.4, 0.4, 0.4), null, null, 1], [30014, "面纱", 3, "269783", 3, 1, new mw.Vector(0, 14, -4), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8), "269783", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8), null, null, 1], [30015, "火箭发射器", 3, "226826", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "226826", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5), null, null, 1], [30016, "狙击枪枪身", 3, "318663", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "318663", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5), null, null, 1], [30017, "可爱西方龙", 3, "152259", 0, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "152259", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30018, "龙", 3, "292574", 2, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "292574", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30019, "帝王龙", 3, "192533", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192533", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30020, "地狱龙", 3, "192420", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192420", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30021, "糖果龙", 3, "191950", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30022, "武士龙", 3, "191852", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191852", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30023, "水晶翅膀", 3, "375788", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "375788", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30024, "杀戮翅膀", 3, "136966", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136966", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30025, "地狱翅膀", 3, "145912", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145912", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30026, "精灵翅膀", 3, "393543", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "393543", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30027, "火焰翅膀", 3, "211667", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "211667", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30028, "大剑", 3, "186519", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "186519", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30029, "天使剑", 3, "20971", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "20971", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [40001, "蛇女", 4, "328236", 3, 0, null, null, null, "328236", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "318618", "318617", 1], [40002, "络新妇", 4, "338436", 3, 0, null, null, null, "338436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "338467", 1], [40003, "大蜘蛛", 4, "328291", 3, 0, null, null, null, "328291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40004, "小型抱脸紫蜘蛛", 4, "340103", 3, 0, null, null, null, "340103", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40005, "小型抱脸红蜘蛛", 4, "340104", 3, 0, null, null, null, "340104", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40006, "小型抱脸绿蜘蛛", 4, "340105", 3, 0, null, null, null, "340105", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40007, "小型抱脸蓝蜘蛛", 4, "340106", 3, 0, null, null, null, "340106", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40008, "小龙", 4, "328246", 1, 0, null, null, null, "328246", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40009, "卡通木龙", 4, "328030", 1, 0, null, null, null, "328030", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40010, "红龙", 4, "328093", 1, 0, null, null, null, "328093", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40011, "黄龙", 4, "328083", 1, 0, null, null, null, "328083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40012, "蓝龙", 4, "328088", 1, 0, null, null, null, "328088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [20054, "奥特之神", 2, "162938", 3, 0, null, null, null, "162938", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1]];
+const EXCELDATA$e = [["ID", "NameExplain", "Name", "Type", "AssetId", "Rarity", "HumanoidSlotType", "OffsetPos", "OffsetRot", "OffsetSca", "ObjId", "AssetOffsetPos", "AssetOffsetRot", "AssetOffsetSca", "Idle", "Move", "GetType"], ["", "", "Language", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "武魂|魂师|魂骨|魂兽", "Text_BagTabTextBlock", 0, null, 0, 0, null, null, null, null, null, null, null, null, null, 0], [10046, "自动攻击拳(男)", "Text_AutomaticAttackFist_Male", 1, "92821", 3, 0, null, null, null, "92821", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [10047, "自动攻击拳(女)", "Text_AutomaticAttackFist_Female", 1, "168946", 3, 0, null, null, null, "168946", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [10044, "机甲斩狂风斩(男)", "Text_MechSlashWindSlash_Male", 1, "151245", 3, 0, null, null, null, "151245", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [10045, "机甲斩狂风斩(女)", "Text_MechSlashWindSlash_Female", 1, "151897", 3, 0, null, null, null, "151897", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [10041, "金箍棒(粉)", "Text_GoldenHoopRod_Powder", 1, "209508", 3, 0, null, null, null, "209508", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [10042, "金箍棒(紫)", "Text_GoldenHoopRod_Purple", 1, "313464", 3, 0, null, null, null, "313464", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [10043, "昊天锤", "Text_HaotianHammer", 1, "318640", 3, 0, null, null, null, "318640", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [10001, "海神三叉戟", "Text_TridentOfTheSeaGod", 1, "134222", 0, 0, null, null, null, "134222", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10002, "赛博自来也长枪", "Text_CyberComesWithALongSpear", 1, "122953", 0, 0, null, null, null, "122953", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10003, "海王双头刀", "Text_SeaKingDoubleHeadedKnife", 1, "118146", 0, 0, null, null, null, "118146", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10004, "美国队长神锤", "Text_CaptainAmericaSHammer", 1, "152954", 2, 0, null, null, null, "152954", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10005, "毒液斧头", "Text_VenomAxe", 1, "118143", 0, 0, null, null, null, "118143", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10006, "灭霸斧", "Text_MiebaAxe", 1, "122960", 2, 0, null, null, null, "122960", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10007, "鸣人手里剑", "Text_NarutoWieldingASword", 1, "33861", 1, 0, null, null, null, "33861", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10008, "未来战士黄金剑", "Text_FutureWarriorGoldenSword", 1, "218730", 2, 0, null, null, null, "218730", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10009, "森林哨兵魔法仗", "Text_ForestSentinelMagicBattle", 1, "210791", 0, 0, null, null, null, "210791", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10010, "手枪(索尼克专用)", "Text_Pistol_SonicSpecific", 1, "221099", 1, 0, null, null, null, "221099", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10011, "信号枪(粉毛怪专用)", "Text_SignalGun_SpecificallyForPinkHairMonster", 1, "43702", 1, 0, null, null, null, "43702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10012, "刀(纲手专用)", "Text_Knife_ForTsunade", 1, "103067", 1, 0, null, null, null, "103067", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10013, "刀(李洛克专用)", "Text_Knife_ExclusiveToLilock", 1, "103080", 1, 0, null, null, null, "103080", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10014, "镰刀(干柿鬼鲛专用)", "Text_Sickle_ForDriedPersimmonGhostShark", 1, "103075", 1, 0, null, null, null, "103075", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10015, "镰刀(赛博女孩专用)", "Text_Sickle_ExclusivelyForCyberGirls", 1, "122946", 1, 0, null, null, null, "122946", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10016, "冰封剑(黑寡妇专用)", "Text_IceSword_ExclusivelyForBlackWidow", 1, "31710", 1, 0, null, null, null, "31710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10017, "怪物爪刀", "Text_MonsterClawKnife", 1, "103069", 1, 0, null, null, null, "103069", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10018, "大砍刀(卡卡西专用)", "Text_Machete_KakashiSpecific", 1, "122961", 1, 0, null, null, null, "122961", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10019, "法杖(宇智波鼬专用)", "Text_TheStaff_ExclusivelyForUchihaItachi", 1, "272767", 1, 0, null, null, null, "272767", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10020, "水枪", "Text_WaterGun", 1, "166941", 2, 0, null, null, null, "166941", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10021, "冰钻剑", "Text_IceDiamondSword", 1, "31712", 2, 0, null, null, null, "31712", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10022, "屠刀", "Text_ButcherSKnife", 1, "118142", 2, 0, null, null, null, "118142", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10023, "蓝色法杖(洛基专用)", "Text_BlueStaff_LokiSpecific", 1, "210651", 2, 0, null, null, null, "210651", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10024, "镰刀(太阳神专用)", "Text_Sickle_SunGodExclusive", 1, "121672", 3, 0, null, null, null, "121672", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10025, "恶魔剑(宇智波斑爷专用)", "Text_DemonSword_ExclusivelyForUchihaMadara", 1, "122956", 3, 0, null, null, null, "122956", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10026, "剑(纳米机器人专用)", "Text_Sword_SpecificallyDesignedForNanorobots", 1, "103068", 2, 0, null, null, null, "103068", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10027, "镰刀(死侍专用)", "Text_Sickle_DeadpoolSpecific", 1, "103083", 2, 0, null, null, null, "103083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10028, "  荧光剑(火山哨兵专用)", "Text_FluorescentSword_ForVolcanoSentinelsOnly", 1, "198698", 2, 0, null, null, null, "198698", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10029, "狂热剑(绯红女巫专用)", "Text_FanaticalSword_ExclusiveToCrimsonWitch", 1, "29057", 2, 0, null, null, null, "29057", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10030, "充气锤子", "Text_InflatableHammer", 1, "272130", 1, 0, null, null, null, "272130", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10031, "木法杖(毒液蜘蛛侠专用)", "Text_WoodenStaff_VenomSpiderManSpecific", 1, "300436", 3, 0, null, null, null, "300436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10032, "瓜子盾", "Text_GuaziShield", 1, "121541", 0, 0, null, null, null, "121541", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10033, "盾(浩克专用)", "Text_Shield_HulkExclusive", 1, "122950", 3, 0, null, null, null, "122950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10034, "终极冰环剑", "Text_UltimateIceRingSword", 1, "31734", 3, 0, null, null, null, "31734", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10035, "散弹喷枪(雏田专用)", "Text_BulletSprayGun_ForHinata", 1, "155702", 3, 0, null, null, null, "155702", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10036, "火枪(路飞专用)", "Text_Firearms_LuffySpecific", 1, "122726", 3, 0, null, null, null, "122726", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10037, "紫光剑(佐助专用)", "Text_PurpleLightSword_SpecialForSasuke", 1, "297029", 3, 0, null, null, null, "297029", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10038, "激光枪(天神专用)", "Text_LaserGun_TenjinSpecific", 1, "222534", 3, 0, null, null, null, "222534", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10039, "剑(金刚狼专用)", "Text_Sword_ExclusivelyForWolverine", 1, "269895", 3, 0, null, null, null, "269895", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [10040, "激光枪(钢铁侠专用)", "Text_LaserGun_IronManSpecific", 1, "122720", 3, 0, null, null, null, "122720", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20063, "情侣机甲套装(女)", "Text_CoupleMechSet_Female", 2, "163553", 3, 0, null, null, null, "163553", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [20062, "情侣机甲套装(男)", "Text_CoupleMechSet_Male", 2, "164428", 3, 0, null, null, null, "164428", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 5], [20061, "小舞姐", "Text_XiaoWuJie", 2, "163292", 3, 0, null, null, null, "163292", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 4], [20055, "蓝银皇", "Text_BlueSilverEmperor", 2, "398484", 3, 0, null, null, null, "398484", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [20056, "制服女孩", "Text_UniformGirl", 2, "367076", 3, 0, null, null, null, "367076", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [20057, "唐三", "Text_TangSan", 2, "343523", 3, 0, null, null, null, "343523", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 2], [20064, "黄金王子", "Text_TheGoldenPrince", 2, "142399", 3, 0, null, null, null, "142399", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20065, "JK女孩", "Text_JkGirl", 2, "320751", 3, 0, null, null, null, "320751", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20066, "小蓝龙", "Text_XiaolanLong", 2, "216268", 3, 0, null, null, null, "216268", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20067, "小绿龙", "Text_LittleGreenDragon", 2, "216269", 3, 0, null, null, null, "216269", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20068, "小黑龙", "Text_LittleBlackDragon", 2, "216270", 3, 0, null, null, null, "216270", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20069, "小橘龙", "Text_LittleOrangeDragon", 2, "212971", 3, 0, null, null, null, "212971", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 6], [20058, "神级魔王", "Text_GodLevelDemonKing", 2, "141499", 3, 0, null, null, null, "141499", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [20059, "四代火影", "Text_TheFourthHokage", 2, "142921", 3, 0, null, null, null, "142921", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [20060, "美杜莎女王", "Text_MedusaQueen", 2, "163289", 3, 0, null, null, null, "163289", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 3], [20001, "狐耳少女", "Text_FoxEaredGirl", 2, "361906", 3, 0, null, null, null, "65710", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20002, "邪恶使者", "Text_EvilMessenger", 2, "357571", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20003, "长款大衣女", "Text_LongCoatForWomen", 2, "357567", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20004, "海绵宝宝", "Text_Spongebob", 2, "357566", 3, 0, null, null, null, "63711", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20005, "钢铁侠", "Text_IronMan", 2, "357563", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20006, "灭霸", "Text_Thanos", 2, "357556", 3, 0, null, null, null, "112568", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20007, "刺猬小子", "Text_HedgehogBoy", 2, "357555", 3, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20008, "邪恶使者", "Text_EvilMessenger1", 2, "351891", 3, 0, null, null, null, "64995", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20009, "蓝衣男", "Text_BlueClothedMan", 2, "351680", 3, 0, null, null, null, "127800", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20010, "黑衣男", "Text_BlackClothedMan", 2, "351598", 3, 0, null, null, null, "224168", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20011, "毁灭战士", "Text_Doom", 2, "351597", 3, 0, null, null, null, "94782", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20012, "雷神", "Text_ThunderGod", 2, "357570", 2, 0, null, null, null, "111768", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20013, "黑寡妇", "Text_BlackWidow", 2, "357568", 2, 0, null, null, null, "111240", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20014, "可爱女", "Text_CuteGirl", 2, "351500", 2, 0, null, null, null, "269652", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20015, "丸子头女", "Text_MarukoHeadGirl", 2, "351497", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20016, "西方神女", "Text_WesternGoddess", 2, "351405", 3, 0, null, null, null, "64410", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20017, "黑裙少女", "Text_BlackDressGirl", 2, "351404", 3, 0, null, null, null, "128834", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20018, "短发女", "Text_ShortHairedWoman", 2, "351026", 2, 0, null, null, null, "115849", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20019, "旗袍女", "Text_QipaoWomen", 2, "351025", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20020, "披风男", "Text_ClothedMan", 2, "351024", 1, 0, null, null, null, "96576", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20021, "长发女", "Text_LongHairedWoman", 2, "351004", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20022, "双马尾女", "Text_DoublePonytailGirl1", 2, "350987", 1, 0, null, null, null, "59857", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20023, "长发短裙女", "Text_WomenWithLongHairAndShortSkirts", 2, "350973", 1, 0, null, null, null, "63648", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20024, "双马尾女", "Text_DoublePonytailGirl2", 2, "350959", 0, 0, null, null, null, "248351", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20025, "双马尾女", "Text_DoublePonytailGirl3", 2, "350958", 0, 0, null, null, null, "64774", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20026, "百褶裙女孩", "Text_PleatedSkirtGirl", 2, "350756", 1, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20027, "短发时尚女", "Text_ShortHairedFashionableWomen", 2, "350752", 0, 0, null, null, null, "111241", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20028, "长马尾女孩", "Text_LongPonytailGirl", 2, "350746", 1, 0, null, null, null, "121948", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20029, "长耳女", "Text_LongEaredGirl", 2, "350744", 1, 0, null, null, null, "64458", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20030, "风衣长发女", "Text_LongHairedWomanInWindbreaker", 2, "350739", 2, 0, null, null, null, "142606", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20031, "恶魔角女", "Text_DevilHornGirl", 2, "350738", 1, 0, null, null, null, "64305", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20032, "和服女", "Text_KimonoGirl", 2, "350568", 2, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20033, "发卡女", "Text_HairpinGirl", 2, "350318", 1, 0, null, null, null, "181365", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20034, "女仆套装女", "Text_MaidSuitForWomen", 2, "350569", 2, 0, null, null, null, "63291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20035, "帽子女", "Text_HatGirl", 2, "350314", 1, 0, null, null, null, "299082", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20036, "魔法女孩", "Text_MagicalGirl", 2, "350260", 1, 0, null, null, null, "111088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20037, "长裙女", "Text_LongSkirtWomen", 2, "349270", 2, 0, null, null, null, "124880", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20038, "杀手女", "Text_KillerWoman", 2, "347528", 3, 0, null, null, null, "137518", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20039, "巫医", "Text_WitchDoctor", 2, "145319", 3, 0, null, null, null, "119773", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20040, "长腿妈妈", "Text_LongLeggedMom", 2, "143403", 2, 0, null, null, null, "119229", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20041, "玄魁", "Text_XuanKui", 2, "143402", 2, 0, null, null, null, "121882", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20042, "邪恶女巫", "Text_EvilWitch", 2, "143401", 2, 0, null, null, null, "119745", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20043, "小丑女", "Text_LittleUglyGirl", 2, "143400", 1, 0, null, null, null, "63539", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20044, "万圣节女", "Text_HalloweenGirl", 2, "143399", 2, 0, null, null, null, "60981", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20045, "屠夫", "Text_Butcher", 2, "143398", 0, 0, null, null, null, "109144", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20046, "魔莱坞学院院长", "Text_DeanOfMolewoodCollege", 2, "143396", 1, 0, null, null, null, "64141", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20047, "迷雾鬼影", "Text_MistyGhostShadow", 2, "143395", 0, 0, null, null, null, "109058", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20048, "蓝毛怪", "Text_BlueHairedMonster", 2, "143394", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20049, "狗头毛毛虫", "Text_DogHeadedCaterpillar", 2, "143390", 1, 0, null, null, null, "118079", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20050, "粉毛怪", "Text_PinkHairedMonster", 2, "143389", 1, 0, null, null, null, "109839", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20051, "索尼克", "Text_SonicAdvance", 2, "143387", 1, 0, null, null, null, "117681", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20052, "Rainbow friends", "Text_RainbowFriends", 2, "143385", 3, 0, null, null, null, "119483", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [20053, "海神", "Text_SeaGod", 2, "226377", 3, 0, null, null, null, "226377", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30001, "恶魔翅膀", "Text_DevilSWings", 3, "223877", 3, 12, new mw.Vector(-10, 0, 10), new mw.Vector(0, 0, 90), new mw.Vector(2, 2, 2), "223877", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(2, 2, 2), null, null, 1], [30002, "恶魔角", "Text_DevilSCorner", 3, "266332", 3, 1, new mw.Vector(0, 5, 10), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 2), "266332", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 2), null, null, 1], [30003, "恶魔尾巴", "Text_DevilSTail", 3, "136179", 3, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "136179", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30004, "恶魔头骨", "Text_DemonSkull", 3, "136506", 3, 6, new mw.Vector(-4.8, 0, -11), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "136506", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30005, "恶魔三头犬", "Text_DevilSThreeHeadedDog", 3, "192395", 3, 20, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192395", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30006, "天使翅膀", "Text_AngelWings", 3, "334814", 3, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "334814", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30007, "天使蜘蛛", "Text_AngelSpider", 3, "192359", 3, 20, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192359", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30008, "狐狸尾巴", "Text_FoxSTail", 3, "226476", 3, 19, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226476", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30009, "狐狸耳朵", "Text_FoxEars", 3, "226479", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "226479", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30010, "挥动的围巾", "Text_WavingScarf", 3, "295506", 3, 1, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "295506", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30011, "闪电翅膀", "Text_LightningWings", 3, "42818", 0, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "42818", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30012, "眼镜", "Text_Glasses", 3, "324491", 3, 1, new mw.Vector(0, -1, 2), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "324491", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30013, "拍照机器人", "Text_PhotographyRobot", 3, "292313", 3, 26, new mw.Vector(1, -10, -1), new mw.Vector(110, -45, 55), new mw.Vector(0.4, 0.4, 0.4), "292313", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.4, 0.4, 0.4), null, null, 1], [30014, "面纱", "Text_Veil", 3, "269783", 3, 1, new mw.Vector(0, 14, -4), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8), "269783", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 0.8, 0.8), null, null, 1], [30015, "火箭发射器", "Text_RocketLauncher", 3, "226826", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "226826", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5), null, null, 1], [30016, "狙击枪枪身", "Text_SniperGunBody", 3, "318663", 3, 26, new mw.Vector(20, 8, -10), new mw.Vector(-90, 0, 0), new mw.Vector(0.5, 0.5, 0.5), "318663", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(0.5, 0.5, 0.5), null, null, 1], [30017, "可爱西方龙", "Text_CuteWesternDragon", 3, "152259", 0, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "152259", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30018, "龙", "Text_Loong", 3, "292574", 2, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "292574", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30019, "帝王龙", "Text_EmperorDragon", 3, "192533", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192533", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30020, "地狱龙", "Text_HellDragon", 3, "192420", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "192420", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30021, "糖果龙", "Text_CandyDragon", 3, "191950", 3, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191950", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30022, "武士龙", "Text_WuShilong", 3, "191852", 1, 21, new mw.Vector(0, 50, -80), new mw.Vector(0, 0, -90), new mw.Vector(1, 1, 1), "191852", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30023, "水晶翅膀", "Text_CrystalWings", 3, "375788", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "375788", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30024, "杀戮翅膀", "Text_KillingWings", 3, "136966", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 180), new mw.Vector(1, 1, 1), "136966", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30025, "地狱翅膀", "Text_HellSWings", 3, "145912", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "145912", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30026, "精灵翅膀", "Text_FairyWings", 3, "393543", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "393543", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30027, "火焰翅膀", "Text_FlameWings", 3, "211667", 2, 12, new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 90), new mw.Vector(1, 1, 1), "211667", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30028, "大剑", "Text_BigSword", 3, "186519", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "186519", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [30029, "天使剑", "Text_AngelSword", 3, "20971", 3, 12, new mw.Vector(7, 0, 20), new mw.Vector(-170, 0, 90), new mw.Vector(1, 1, 1), "20971", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1], [40001, "蛇女", "Text_Snaker", 4, "328236", 3, 0, null, null, null, "328236", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "318618", "318617", 1], [40002, "络新妇", "Text_ASpider", 4, "338436", 3, 0, null, null, null, "338436", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "338467", 1], [40003, "大蜘蛛", "Text_BigSpider", 4, "328291", 3, 0, null, null, null, "328291", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40004, "小型抱脸紫蜘蛛", "Text_SmallFaceHuggingPurpleSpider", 4, "340103", 3, 0, null, null, null, "340103", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40005, "小型抱脸红蜘蛛", "Text_SmallBlushingSpider", 4, "340104", 3, 0, null, null, null, "340104", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40006, "小型抱脸绿蜘蛛", "Text_SmallFaceHuggingGreenSpider", 4, "340105", 3, 0, null, null, null, "340105", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40007, "小型抱脸蓝蜘蛛", "Text_SmallFaceHuggingBlueSpider", 4, "340106", 3, 0, null, null, null, "340106", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "336668", "336669", 1], [40008, "小龙", "Text_Xiaolong", 4, "328246", 1, 0, null, null, null, "328246", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40009, "卡通木龙", "Text_CartoonWoodenDragon", 4, "328030", 1, 0, null, null, null, "328030", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40010, "红龙", "Text_RedDragon", 4, "328093", 1, 0, null, null, null, "328093", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40011, "黄龙", "Text_Huanglong", 4, "328083", 1, 0, null, null, null, "328083", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [40012, "蓝龙", "Text_BlueDragon", 4, "328088", 1, 0, null, null, null, "328088", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), "160627", "160628", 1], [20054, "奥特之神", "Text_TheGodOfOtter", 2, "162938", 3, 0, null, null, null, "162938", new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0), new mw.Vector(1, 1, 1), null, null, 1]];
 class BagInfoConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$e);
@@ -928,7 +928,7 @@ var foreign26 = /*#__PURE__*/Object.freeze({
     DressProgressConfig: DressProgressConfig
 });
 
-const EXCELDATA$8 = [["Id", "Name", "Value", "Value_Ch", "Value_Cht", "Value_J", "Value_K"], ["", "Key|ReadByName", "MainLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage"], [1, "Text_AfterStrengthening", "After Strengthening", "强化后", "强化後", "強化されます", "강화된 후"], [2, "Text_StarRating", "{0} Star Rating", "{0}星级", "{0}星級", "{0}つ星", "{0}성급"], [3, "Text_NeedToReachLevel", "Need To Reach Level {0}", "需要等级达到{0}级", "需要等級達到{0}級", "要求レベルが{0}レベルに達する", "레벨 {0} 레벨 달성 필요"], [4, "Text_IncreaseBloodVolumeByTimes", "Increase Blood Volume By {0} Times", "血量提升{0}倍", "血量提升{0}倍", "血液量が{0}倍に上昇", "혈액량 {0}배 증가"], [5, "Text_AttackPowerIncreasedByTimes", "Attack Power Increased By {0} Times", "攻击力提升{0}倍", "攻擊力提升{0}倍", "攻撃力{0}倍アップ", "공격력 {0}배 증가"], [6, "Text_StrengthenSoulBones", "Strengthen Soul Bones", "强化魂骨", "强化魂骨", "魂の骨を強化する", "혼골 강화"], [7, "Text_NeedToConsume", "Need To Consume", "需要消耗", "需要消耗", "消費する必要がある", "필요 소비"], [8, "Text_Diamonds", "Diamonds", "钻石", "鑽石", "ダイヤモンド", "다이아몬드"], [9, "Text_GoldCoins", "Gold Coins", "金币", "金幣", "金貨", "금화"], [10, "Text_StrengtheningConditions", "Strengthening Conditions", "强化条件", "强化條件", "強化条件", "조건을 강화하다"], [11, "Text_EnhanceTheProbabilityOfSuccess", "Enhance The Probability Of Success", "强化成功概率", "强化成功概率", "成功確率の強化", "성공 확률 강화"], [12, "Text_IncreaseProbability", "Increase Probability", "提升概率", "提升概率", "かくりつを上げる", "확률 증가"], [13, "Text_StartStrengthening", "Start Strengthening", "开始强化", "開始强化", "強化を開始", "강화 시작"], [14, "Text_TeamCoin", "Team Coin", "派队币", "派隊幣", "派隊貨幣", "파티 머니"], [15, "Text_Buy", "Buy", "购买", "購買", "購入する", "구매"], [16, "Text_Or", "Or", "或", "或", "または", "또는"], [17, "Text_UpProbabiliotyConetntTextBlock_0", "Consume {0} Diamonds\nEnhancement Probability Increased To {1}%", "消耗{0}钻石\n强化概率提升到{1}%", "消耗{0}鑽石\n强化概率提升到{1}%", "{0}ダイヤモンド消費\n強化確率が{1}%に向上", "{0} 다이아 소모\n강화 확률을 {1}%까지 증가"], [18, "Text_UpProbabiliotyConetntTextBlock_1", "Consume {0} Team Coins\nEnhance The Probability To {1}%", "消耗{0}派队币\n强化概率提升到{1}%", "消耗{0}派隊幣\n强化概率提升到{1}%", "{0}パーティー貨幣を消費する\n強化確率が{1}%にアップ", "{0} 파티 코인 소모\n강화 확률을 {1}%까지 증가"], [19, "Text_UsingDiamonds", "Using Diamonds", "使用钻石", "使用鑽石", "ダイヤモンドを使う", "다이아몬드 사용"], [20, "Text_UseTeamCoins", "Use Team Coins", "使用派队币", "使用派隊幣", "ディスパッチ通貨の使用", "파티 코인 사용"], [21, "Text_DiamondShortage", "Diamond Shortage", "钻石不足", "鑽石不足", "ダイヤ不足", "다이아 부족"], [22, "Text_InsufficientGoldCoins", "Insufficient Gold Coins", "金币不足", "金幣不足", "金貨不足", "금화 부족"]];
+const EXCELDATA$8 = [["Id", "Name", "Value", "Value_Ch", "Value_Cht", "Value_J", "Value_K"], ["", "Key|ReadByName", "MainLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage"], [1, "Text_AfterStrengthening", "After\nStrengthening", "强化后", "强化後", "強化されます", "강화된 후"], [2, "Text_StarRating", "{0} Star Rating", "{0}星级", "{0}星級", "{0}つ星", "{0}성급"], [3, "Text_NeedToReachLevel", "Need To Reach Level {0}", "需要等级达到{0}级", "需要等級達到{0}級", "要求レベルが{0}レベルに達する", "레벨 {0} 레벨 달성 필요"], [4, "Text_IncreaseBloodVolumeByTimes", "Blood Volume Increase\n{0} Times", "血量提升{0}倍", "血量提升{0}倍", "血液量が{0}倍に上昇", "혈액량 {0}배 증가"], [5, "Text_AttackPowerIncreasedByTimes", "Attack Power Enhancement\n{0} Times", "攻击力提升{0}倍", "攻擊力提升{0}倍", "攻撃力{0}倍アップ", "공격력 {0}배 증가"], [6, "Text_StrengthenSoulBones", "Strengthen Soul Bones", "强化魂骨", "强化魂骨", "魂の骨を強化する", "혼골 강화"], [7, "Text_NeedToConsume", "Need To Consume", "需要消耗", "需要消耗", "消費する必要がある", "필요 소비"], [8, "Text_Diamonds", "Diamonds", "钻石", "鑽石", "ダイヤモンド", "다이아몬드"], [9, "Text_GoldCoins", "Gold Coins", "金币", "金幣", "金貨", "금화"], [10, "Text_StrengtheningConditions", "Strengthening Conditions", "强化条件", "强化條件", "強化条件", "조건을 강화하다"], [11, "Text_EnhanceTheProbabilityOfSuccess", "Strengthening Success\nProbability: {0}%", "强化成功\n概率：{0}%", "强化成功\n概率：{0}%", "強化に成功\n確率：{0}%", "강화 성공\n확률: {0}%"], [12, "Text_IncreaseProbability", "Increase\nProbability", "提升概率", "提升概率", "かくりつを上げる", "확률 증가"], [13, "Text_StartStrengthening", "Start\nStrengthening", "开始强化", "開始强化", "強化を開始", "강화 시작"], [14, "Text_TeamCoin", "Team Coin", "派队币", "派隊幣", "派隊貨幣", "파티 머니"], [15, "Text_Buy", "Buy", "购买", "購買", "購入する", "구매"], [16, "Text_Or", "Or", "或", "或", "または", "또는"], [17, "Text_UpProbabiliotyConetntTextBlock_0", "Consume {0} Diamonds\nEnhancement Probability\nIncreased To {1}%", "消耗{0}钻石\n强化概率提升到{1}%", "消耗{0}鑽石\n强化概率提升到{1}%", "{0}ダイヤモンド消費\n強化確率が{1}%に向上", "{0} 다이아 소모\n강화 확률을 {1}%까지 증가"], [18, "Text_UpProbabiliotyConetntTextBlock_1", "Consume {0} Team Coins\nEnhance The Probability\nTo {1}%", "消耗{0}派队币\n强化概率提升到{1}%", "消耗{0}派隊幣\n强化概率提升到{1}%", "{0}パーティー貨幣を消費する\n強化確率が{1}%にアップ", "{0} 파티 코인 소모\n강화 확률을 {1}%까지 증가"], [19, "Text_UsingDiamonds", "Using Diamonds", "使用钻石", "使用鑽石", "ダイヤモンドを使う", "다이아몬드 사용"], [20, "Text_UseTeamCoins", "Use Team Coins", "使用派队币", "使用派隊幣", "ディスパッチ通貨の使用", "파티 코인 사용"], [21, "Text_DiamondShortage", "Diamond Shortage", "钻石不足", "鑽石不足", "ダイヤ不足", "다이아 부족"], [22, "Text_InsufficientGoldCoins", "Insufficient Gold Coins", "金币不足", "金幣不足", "金貨不足", "금화 부족"], [23, "Text_SuccessfullyObtainedDiamonds", "Successfully Obtained Diamonds+{0}", "成功获得钻石+{0}", "成功獲得鑽石+{0}", "ダイヤモンド+{0}の獲得に成功", "다이아 +{0} 획득 성공"], [24, "Text_GetDiamondsForFree", "Get {0} Diamonds For Free", "免费领取{0}颗钻石", "免費領取{0}顆鑽石", "{0}個のダイヤモンドを無料で受け取ります", "{0}개 다이아 무료 수령"], [25, "Text_Cancel", "Cancel", "取消", "取消", "キャンセル", "취소"], [26, "Text_FreeToReceive", "Free To Receive", "免费领取", "免費領取", "無料で受け取る", "무료 수령"], [27, "Text_FullLevel", "Full Level", "已满级", "已滿級", "フルレベル", "만급"], [28, "Text_HeadSoulBone", "Head Soul Bone", "头部魂骨", "頭部魂骨", "頭部魂骨", "머리의 혼골"], [29, "Text_ExternalSoulBone", "External Soul Bone", "外附魂骨", "外附魂骨", "外付魂骨", "외부혼골"], [30, "Text_TorsoSoulBone", "Torso Soul Bone", "躯干魂骨", "軀幹魂骨", "体幹魂骨", "몸통 혼골"], [31, "Text_WaistSoulBone", "Waist Soul Bone", "腰部魂骨", "腰部魂骨", "腰部魂骨", "허리의 혼골"], [32, "Text_ArmSoulBone", "Arm Soul Bone", "手臂魂骨", "手臂魂骨", "腕の魂骨", "팔의 혼골"], [33, "Text_LegSoulBone", "Leg Soul Bone", "腿部魂骨", "腿部魂骨", "足の魂骨", "다리 혼골"], [34, "Text_FootSoulBone", "Foot Soul Bone", "脚部魂骨", "脚部魂骨", "足魂骨", "발의 혼골"], [35, "Text_GoTo", "Go To", "前往", null, null, null], [36, "Text_GodLevelHuntingGround", "God Level Hunting Ground", "神级狩猎场", null, null, null], [37, "Text_NoviceVillage", "Novice Village", "新手村", null, null, null], [38, "Text_IntermediateHuntingGround", "Intermediate Hunting Ground", "中级狩猎场", null, null, null], [39, "Text_AdvancedHuntingGround", "Advanced Hunting Ground", "高级狩猎场", null, null, null], [40, "Text_HuntAndKill", "Hunt And Kill", "猎杀", null, null, null], [41, "Text_100000YearSoulBeast", "100000 Year Soul Beast", "10万年魂兽", null, null, null], [42, "Text_LoadingMapResourcesPleaseBePatient", "Loading Map Resources, Please Be Patient", "正在加载地图资源，请耐心等待", null, null, null], [43, "Text_AdvertisingRewards", "Advertising Rewards", "广告奖励", null, null, null], [44, "Text_WatchTheAdvertisementTimesGetItForFree", "Watch The Advertisement {0} Times\nGet It For Free", "观看{0}次广告\n免费获得", null, null, null], [45, "Text_TakeYouToGetItForFree", "Take You To Get It For Free", "带你去免费获得", null, null, null], [46, "Text_GetItForFree", "Get It For Free", "免费获得", null, null, null], [47, "Text_GetGoldCoinsForFree", "Get {0} Gold Coins For Free", "免费领取{0}金币", null, null, null], [48, "Text_SuccessfullyObtainedCoins", "Successfully Obtained Coins", "成功获得金币", null, null, null], [49, "Text_GetFreeDiamonds", "Get {0} Free Diamonds", "免费领取{0}颗钻石", null, null, null], [50, "Text_FreeLevelUpgradeByLevel", "Free Level Upgrade By {0} Level", "等级免费提升{0}级", null, null, null], [51, "Text_FreeUpgrade", "Free Upgrade", "免费提升", null, null, null], [52, "Text_FreeDayReward", "Free {0}st Day Reward", "免费领取第{0}天奖励", null, null, null], [53, "Text_FailedPleaseTryAgain", "{0} Failed, Please Try Again", "{0}失败，请重试", null, null, null], [54, "Text_DontClickTooFastItWillGetStuck", "Don't Click Too Fast, It Will Get Stuck", "别点太快、会卡哦", null, null, null], [55, "Text_DirectlyUpgradeTheLevel", "Directly Upgrade The Level", "直接提升等级", null, null, null], [56, "Text_Determine", "Determine", "确定", null, null, null], [57, "Text_UpgradeLevel", "Upgrade Level", "升级等级", null, null, null], [58, "Text_UseDiamondsUpgradeLevel", "Use {0} Diamonds\nUpgrade Level", "使用5个钻石\n提升等级", null, null, null], [59, "Text_PleaseEnterTheRedemptionCode", "Please Enter The Redemption Code", "请输入兑换码", null, null, null], [60, "Text_Exchange", "Exchange", "兑换", null, null, null], [61, "Text_PleaseEnterTheRedemptionCodeProvidedByTheAuthorCanBeRedeemedForRewards", "Please Enter The Redemption Code Provided By The Author\nCan Be Redeemed For Rewards", "请输入作者提供的兑换码\n即可兑换奖励", null, null, null], [62, "Text_GiftPackExchange", "Gift Pack Exchange", "礼包兑换", null, null, null], [63, "Text_AlreadyredeemedNoNeedToRedeemAgain", "Already Redeemed, No Need To Redeem Again", "已兑换，无需重复兑换", null, null, null], [64, "Text_CollectionFailed", "Collection Failed", "领取失败", null, null, null], [65, "Text_GiftPackRedemptionCodeError", "Gift Pack Redemption Code Error", "礼包兑换码错误", null, null, null], [66, "Text_Grade", "Grade", "等级", null, null, null], [67, "Text_ExchangeSuccessful", "Exchange Successful", "兑换成功", null, null, null], [68, "Text_CoolForSeconds", "Cool For {0} Seconds", "冷却{0}秒", null, null, null], [69, "Text_SoldouttodayPleaseReplaceWithOtherProductsToPurchase", "Sold Out Today, Please Replace With Other Products To Purchase", "今日已售空,请更换其他商品购买", null, null, null], [70, "Text_Rechargediamonds", "Recharge Diamonds", "充值钻石", null, null, null], [71, "Text_Nopurchaserestrictions", "No purchase Restrictions", "不限购", null, null, null], [72, "Text_Soldouttoday", "Sold Out Today", "今日已售空", null, null, null], [73, "Text_Limitedtoonepurchaseperday", "Limited To One Purchase Per Day", "每天限购一次", null, null, null], [74, "Text_BagTabTextBlock", "Martial Soul|Soul Master|Soul Bone|Soul Beast", "武魂|魂师|魂骨|魂兽", null, null, null], [75, "Text_AutomaticAttackFist_Male", "Automatic Attack Fist (Male)", "自动攻击拳(男)", null, null, null], [76, "Text_AutomaticAttackFist_Female", "Automatic Attack Fist (Female)", "自动攻击拳(女)", null, null, null], [77, "Text_MechSlashWindSlash_Male", "Mech Slash Wind Slash (Male)", "机甲斩狂风斩(男)", null, null, null], [78, "Text_MechSlashWindSlash_Female", "Mech Slash Wind Slash (Female)", "机甲斩狂风斩(女)", null, null, null], [79, "Text_GoldenHoopRod_Powder", "Golden Hoop Rod (Powder)", "金箍棒(粉)", null, null, null], [80, "Text_GoldenHoopRod_Purple", "Golden Hoop Rod (Purple)", "金箍棒(紫)", null, null, null], [81, "Text_HaotianHammer", "Haotian Hammer", "昊天锤", null, null, null], [82, "Text_TridentOfTheSeaGod", "Trident Of The Sea God", "海神三叉戟", null, null, null], [83, "Text_CyberComesWithALongSpear", "Cyber Comes With A Long Spear", "赛博自来也长枪", null, null, null], [84, "Text_SeaKingDoubleHeadedKnife", "Sea King Double Headed Knife", "海王双头刀", null, null, null], [85, "Text_CaptainAmericaSHammer", "Captain America'S Hammer", "美国队长神锤", null, null, null], [86, "Text_VenomAxe", "Venom Axe", "毒液斧头", null, null, null], [87, "Text_MiebaAxe", "Mieba Axe", "灭霸斧", null, null, null], [88, "Text_NarutoWieldingASword", "Naruto Wielding A Sword", "鸣人手里剑", null, null, null], [89, "Text_FutureWarriorGoldenSword", "Future Warrior Golden Sword", "未来战士黄金剑", null, null, null], [90, "Text_ForestSentinelMagicBattle", "Forest Sentinel Magic Battle", "森林哨兵魔法仗", null, null, null], [91, "Text_Pistol_SonicSpecific", "Pistol (Sonic Specific)", "手枪\n索尼克专用", null, null, null], [92, "Text_SignalGun_SpecificallyForPinkHairMonster", "Signal Gun\nSpecifically For Pink Hair Monster", "信号枪\n粉毛怪专用", null, null, null], [93, "Text_Knife_ForTsunade", "Knife (For Tsunade)", "刀(纲手专用)", null, null, null], [94, "Text_Knife_ExclusiveToLilock", "Knife (Exclusive To Lilock)", "刀(李洛克专用)", null, null, null], [95, "Text_Sickle_ForDriedPersimmonGhostShark", "Sickle\nFor Dried Persimmon Ghost Shark", "镰刀\n干柿鬼鲛专用", null, null, null], [96, "Text_Sickle_ExclusivelyForCyberGirls", "Sickle\nExclusively For Cyber Girls", "镰刀\n赛博女孩专用", null, null, null], [97, "Text_IceSword_ExclusivelyForBlackWidow", "Ice Sword\nExclusively For Black Widow", "冰封剑\n黑寡妇专用", null, null, null], [98, "Text_MonsterClawKnife", "Monster Claw Knife", "怪物爪刀", null, null, null], [99, "Text_Machete_KakashiSpecific", "Machete (Kakashi Specific)", "大砍刀\n卡卡西专用", null, null, null], [100, "Text_TheStaff_ExclusivelyForUchihaItachi", "The Staff\nExclusively For Uchiha Itachi", "法杖\n宇智波鼬专用", null, null, null], [101, "Text_WaterGun", "Water Gun", "水枪", null, null, null], [102, "Text_IceDiamondSword", "Ice Diamond Sword", "冰钻剑", null, null, null], [103, "Text_ButcherSKnife", "Butcher 'S Knife", "屠刀", null, null, null], [104, "Text_BlueStaff_LokiSpecific", "Blue Staff (Loki Specific)", "蓝色法杖\n洛基专用", null, null, null], [105, "Text_Sickle_SunGodExclusive", "Sickle (Sun God Exclusive)", "镰刀\n太阳神专用", null, null, null], [106, "Text_DemonSword_ExclusivelyForUchihaMadara", "Demon Sword\nExclusively For Uchiha Madara", "恶魔剑\n宇智波斑爷专用", null, null, null], [107, "Text_Sword_SpecificallyDesignedForNanorobots", "Sword\nSpecifically Designed For Nanorobots", "剑(纳米机器人专用)", null, null, null], [108, "Text_Sickle_DeadpoolSpecific", "Sickle (Deadpool Specific)", "镰刀(死侍专用)", null, null, null], [109, "Text_FluorescentSword_ForVolcanoSentinelsOnly", "Fluorescent Sword\nFor Volcano Sentinels Only", "荧光剑\n火山哨兵专用", null, null, null], [110, "Text_FanaticalSword_ExclusiveToCrimsonWitch", "Fanatical Sword\nExclusive To Crimson Witch", "狂热剑\n绯红女巫专用", null, null, null], [111, "Text_InflatableHammer", "Inflatable Hammer", "充气锤子", null, null, null], [112, "Text_WoodenStaff_VenomSpiderManSpecific", "Wooden Staff\nVenom Spider Man Specific", "木法杖\n毒液蜘蛛侠专用", null, null, null], [113, "Text_GuaziShield", "Guazi Shield", "瓜子盾", null, null, null], [114, "Text_Shield_HulkExclusive", "Shield (Hulk Exclusive)", "盾(浩克专用)", null, null, null], [115, "Text_UltimateIceRingSword", "Ultimate Ice Ring Sword", "终极冰环剑", null, null, null], [116, "Text_BulletSprayGun_ForHinata", "Bullet Spray Gun (For Hinata)", "散弹喷枪\n雏田专用", null, null, null], [117, "Text_Firearms_LuffySpecific", "Firearms (Luffy Specific)", "火枪(路飞专用)", null, null, null], [118, "Text_PurpleLightSword_SpecialForSasuke", "Purple Light Sword\nSpecial For Sasuke", "紫光剑\n佐助专用", null, null, null], [119, "Text_LaserGun_TenjinSpecific", "Laser Gun (Tenjin Specific)", "激光枪(天神专用)", null, null, null], [120, "Text_Sword_ExclusivelyForWolverine", "Sword\nExclusively For Wolverine", "剑(金刚狼专用)", null, null, null], [121, "Text_LaserGun_IronManSpecific", "Laser Gun (Iron Man Specific)", "激光枪(钢铁侠专用)", null, null, null], [122, "Text_CoupleMechSet_Female", "Couple Mech Set (Female)", "情侣机甲套装(女)", null, null, null], [123, "Text_CoupleMechSet_Male", "Couple Mech Set (Male)", "情侣机甲套装(男)", null, null, null], [124, "Text_XiaoWuJie", "Xiao Wu Jie", "小舞姐", null, null, null], [125, "Text_BlueSilverEmperor", "Blue Silver Emperor", "蓝银皇", null, null, null], [126, "Text_UniformGirl", "Uniform Girl", "制服女孩", null, null, null], [127, "Text_TangSan", "Tang San", "唐三", null, null, null], [128, "Text_TheGoldenPrince", "The Golden Prince", "黄金王子", null, null, null], [129, "Text_JkGirl", "Jk Girl", "JK女孩", null, null, null], [130, "Text_XiaolanLong", "Xiaolan Long", "小蓝龙", null, null, null], [131, "Text_LittleGreenDragon", "Little Green Dragon", "小绿龙", null, null, null], [132, "Text_LittleBlackDragon", "Little Black Dragon", "小黑龙", null, null, null], [133, "Text_LittleOrangeDragon", "Little Orange Dragon", "小橘龙", null, null, null], [134, "Text_GodLevelDemonKing", "God Level Demon King", "神级魔王", null, null, null], [135, "Text_TheFourthHokage", "The Fourth Hokage", "四代火影", null, null, null], [136, "Text_MedusaQueen", "Medusa Queen", "美杜莎女王", null, null, null], [137, "Text_FoxEaredGirl", "Fox Eared Girl", "狐耳少女", null, null, null], [138, "Text_EvilMessenger", "Evil Messenger", "邪恶使者", null, null, null], [139, "Text_LongCoatForWomen", "Long Coat For Women", "长款大衣女", null, null, null], [140, "Text_Spongebob", "Spongebob", "海绵宝宝", null, null, null], [141, "Text_IronMan", "Iron Man", "钢铁侠", null, null, null], [142, "Text_Thanos", "Thanos", "灭霸", null, null, null], [143, "Text_HedgehogBoy", "Hedgehog Boy", "刺猬小子", null, null, null], [144, "Text_EvilMessenger1", "Evil Messenger", "邪恶使者", null, null, null], [145, "Text_BlueClothedMan", "Blue Clothed Man", "蓝衣男", null, null, null], [146, "Text_BlackClothedMan", "Black Clothed Man", "黑衣男", null, null, null], [147, "Text_Doom", "Doom", "毁灭战士", null, null, null], [148, "Text_ThunderGod", "Thunder God", "雷神", null, null, null], [149, "Text_BlackWidow", "Black Widow", "黑寡妇", null, null, null], [150, "Text_CuteGirl", "Cute Girl", "可爱女", null, null, null], [151, "Text_MarukoHeadGirl", "Maruko Head Girl", "丸子头女", null, null, null], [152, "Text_WesternGoddess", "Western Goddess", "西方神女", null, null, null], [153, "Text_BlackDressGirl", "Black Dress Girl", "黑裙少女", null, null, null], [154, "Text_ShortHairedWoman", "Short Haired Woman", "短发女", null, null, null], [155, "Text_QipaoWomen", "Qipao Women", "旗袍女", null, null, null], [156, "Text_ClothedMan", "Clothed Man", "披风男", null, null, null], [157, "Text_LongHairedWoman", "Long Haired Woman", "长发女", null, null, null], [158, "Text_DoublePonytailGirl1", "Double Ponytail Girl", "双马尾女", null, null, null], [159, "Text_WomenWithLongHairAndShortSkirts", "Women With Long Hair\nShort Skirts", "长发短裙女", null, null, null], [160, "Text_DoublePonytailGirl2", "Double Ponytail Girl", "双马尾女", null, null, null], [161, "Text_DoublePonytailGirl3", "Double Ponytail Girl", "双马尾女", null, null, null], [162, "Text_PleatedSkirtGirl", "Pleated Skirt Girl", "百褶裙女孩", null, null, null], [163, "Text_ShortHairedFashionableWomen", "Short Haired\nFashionable Women", "短发时尚女", null, null, null], [164, "Text_LongPonytailGirl", "Long Ponytail Girl", "长马尾女孩", null, null, null], [165, "Text_LongEaredGirl", "Long Eared Girl", "长耳女", null, null, null], [166, "Text_LongHairedWomanInWindbreaker", "Long Haired\nWoman In Windbreaker", "风衣长发女", null, null, null], [167, "Text_DevilHornGirl", "Devil Horn Girl", "恶魔角女", null, null, null], [168, "Text_KimonoGirl", "Kimono Girl", "和服女", null, null, null], [169, "Text_HairpinGirl", "Hairpin Girl", "发卡女", null, null, null], [170, "Text_MaidSuitForWomen", "Maid Suit For Women", "女仆套装女", null, null, null], [171, "Text_HatGirl", "Hat Girl", "帽子女", null, null, null], [172, "Text_MagicalGirl", "Magical Girl", "魔法女孩", null, null, null], [173, "Text_LongSkirtWomen", "Long Skirt Women", "长裙女", null, null, null], [174, "Text_KillerWoman", "Killer Woman", "杀手女", null, null, null], [175, "Text_WitchDoctor", "Witch Doctor", "巫医", null, null, null], [176, "Text_LongLeggedMom", "Long Legged Mom", "长腿妈妈", null, null, null], [177, "Text_XuanKui", "Xuan Kui", "玄魁", null, null, null], [178, "Text_EvilWitch", "Evil Witch", "邪恶女巫", null, null, null], [179, "Text_LittleUglyGirl", "Little Ugly Girl", "小丑女", null, null, null], [180, "Text_HalloweenGirl", "Halloween Girl", "万圣节女", null, null, null], [181, "Text_Butcher", "Butcher", "屠夫", null, null, null], [182, "Text_DeanOfMolewoodCollege", "Dean Of Molewood College", "魔莱坞学院院长", null, null, null], [183, "Text_MistyGhostShadow", "Misty Ghost Shadow", "迷雾鬼影", null, null, null], [184, "Text_BlueHairedMonster", "Blue Haired Monster", "蓝毛怪", null, null, null], [185, "Text_DogHeadedCaterpillar", "Dog Headed Caterpillar", "狗头毛毛虫", null, null, null], [186, "Text_PinkHairedMonster", "Pink Haired Monster", "粉毛怪", null, null, null], [187, "Text_SonicAdvance", "Sonic Advance", "索尼克", null, null, null], [188, "Text_RainbowFriends", "Rainbow Friends", "Rainbow friends", null, null, null], [189, "Text_SeaGod", "Sea God", "海神", null, null, null], [190, "Text_DevilSWings", "Devil'S Wings", "恶魔翅膀", null, null, null], [191, "Text_DevilSCorner", "Devil'S Corner", "恶魔角", null, null, null], [192, "Text_DevilSTail", "Devil'S Tail", "恶魔尾巴", null, null, null], [193, "Text_DemonSkull", "Demon Skull", "恶魔头骨", null, null, null], [194, "Text_DevilSThreeHeadedDog", "Devil'S Three Headed Dog", "恶魔三头犬", null, null, null], [195, "Text_AngelWings", "Angel Wings", "天使翅膀", null, null, null], [196, "Text_AngelSpider", "Angel Spider", "天使蜘蛛", null, null, null], [197, "Text_FoxSTail", "Fox'S Tail", "狐狸尾巴", null, null, null], [198, "Text_FoxEars", "Fox Ears", "狐狸耳朵", null, null, null], [199, "Text_WavingScarf", "Waving Scarf", "挥动的围巾", null, null, null], [200, "Text_LightningWings", "Lightning Wings", "闪电翅膀", null, null, null], [201, "Text_Glasses", "Glasses", "眼镜", null, null, null], [202, "Text_PhotographyRobot", "Photography Robot", "拍照机器人", null, null, null], [203, "Text_Veil", "Veil", "面纱", null, null, null], [204, "Text_RocketLauncher", "Rocket Launcher", "火箭发射器", null, null, null], [205, "Text_SniperGunBody", "Sniper Gun Body", "狙击枪枪身", null, null, null], [206, "Text_CuteWesternDragon", "Cute Western Dragon", "可爱西方龙", null, null, null], [207, "Text_Loong", "Loong", "龙", null, null, null], [208, "Text_EmperorDragon", "Emperor Dragon", "帝王龙", null, null, null], [209, "Text_HellDragon", "Hell Dragon", "地狱龙", null, null, null], [210, "Text_CandyDragon", "Candy Dragon", "糖果龙", null, null, null], [211, "Text_WuShilong", "Wu Shilong", "武士龙", null, null, null], [212, "Text_CrystalWings", "Crystal Wings", "水晶翅膀", null, null, null], [213, "Text_KillingWings", "Killing Wings", "杀戮翅膀", null, null, null], [214, "Text_HellSWings", "Hell'S Wings", "地狱翅膀", null, null, null], [215, "Text_FairyWings", "Fairy Wings", "精灵翅膀", null, null, null], [216, "Text_FlameWings", "Flame Wings", "火焰翅膀", null, null, null], [217, "Text_BigSword", "Big Sword", "大剑", null, null, null], [218, "Text_AngelSword", "Angel Sword", "天使剑", null, null, null], [219, "Text_Snaker", "Snaker", "蛇女", null, null, null], [220, "Text_ASpider", "A Spider", "络新妇", null, null, null], [221, "Text_BigSpider", "Big Spider", "大蜘蛛", null, null, null], [222, "Text_SmallFaceHuggingPurpleSpider", "Small Face Hugging\nPurple Spider", "小型抱脸紫蜘蛛", null, null, null], [223, "Text_SmallBlushingSpider", "Small Blushing Spider", "小型抱脸红蜘蛛", null, null, null], [224, "Text_SmallFaceHuggingGreenSpider", "Small Face Hugging\nGreen Spider", "小型抱脸绿蜘蛛", null, null, null], [225, "Text_SmallFaceHuggingBlueSpider", "Small Face Hugging\nBlue Spider", "小型抱脸蓝蜘蛛", null, null, null], [226, "Text_Xiaolong", "Xiaolong", "小龙", null, null, null], [227, "Text_CartoonWoodenDragon", "Cartoon Wooden Dragon", "卡通木龙", null, null, null], [228, "Text_RedDragon", "Red Dragon", "红龙", null, null, null], [229, "Text_Huanglong", "Huanglong", "黄龙", null, null, null], [230, "Text_BlueDragon", "Blue Dragon", "蓝龙", null, null, null], [231, "Text_TheGodOfOtter", "The God Of Otter", "奥特之神", null, null, null], [232, "Text_SuccessfullyActivatedAutomaticAttack", "Successfully Activated Automatic Attack", "成功开启自动攻击", null, null, null], [233, "Text_FailedToObtainAutomaticAttackSoul", "Failed To Obtain Automatic Attack Soul", "未获得自动攻击武魂", null, null, null], [234, "Text_SuccessfullyDisabledAutomaticAttack", "Successfully Disabled Automatic Attack", "成功关闭自动攻击", null, null, null], [235, "Text_Obtained", "Obtained", "已获得", null, null, null], [236, "Text_CongratulationsOnObtaining", "Congratulations On Obtaining", "恭喜获得", null, null, null], [237, "Text_SoulPower", "Soul Power", "魂力", null, null, null], [238, "Text_MartialSoul", "Martial Soul", "武魂", null, null, null], [239, "Text_SoulMaster", "Soul Master", "魂师", null, null, null], [240, "Text_SoulBone", "Soul Bone", "魂骨", null, null, null], [241, "Text_Ayakashi", "Ayakashi", "魂兽", null, null, null], [242, "Text_Ordinary", "Ordinary", "普通", null, null, null], [243, "Text_Rare", "Rare", "稀有", null, null, null], [244, "Text_Epic", "Epic", "史诗", null, null, null], [245, "Text_Legend", "Legend", "传说", null, null, null], [246, "Text_KillingGodDomain", "Killing God Domain", "杀神领域", null, null, null], [247, "Text_DoushenContinent_MySoulRingUnlimitedUpgrade", "Doushen Continent (My Soul Ring Unlimited Upgrade)", "斗神大陆(我的魂环无限升级)", null, null, null], [248, "Text_InTheEquipment", "In The Equipment", "装备中", null, null, null], [249, "Text_InUse", "In Use", "使用中", null, null, null], [250, "Text_FollowIn", "Follow In", "跟随中", null, null, null], [251, "Text_BeginnerGiftPackAcquisition", "Beginner Gift Pack Acquisition", "新手礼包获取", null, null, null], [252, "Text_GoldCoinLotteryToObtain", "Gold Coin Lottery To Obtain", "金币抽奖获取", null, null, null], [253, "Text_PleaseCompleteTheBeginnerGuideFirst", "Please Complete The Beginner Guide First", "请先完成新手引导", null, null, null], [254, "Text_ObtainByWatchingAdvertisements", "Obtain By Watching Advertisements", "看广告获得", null, null, null], [255, "Text_OldPlayersReturningToObtain", "Old Players Returning To Obtain", "老玩家回归获得", null, null, null], [256, "Text_NotObtained", "Not Obtained", "未获得", null, null, null], [257, "Text_StartGuiding", "Start Guiding", "开始引导", null, null, null], [258, "Text_PurchaseSuccessful", "Purchase Successful", "购买成功", null, null, null], [259, "Text_EquipmentSuccessful", "Equipment Successful", "装备成功", null, null, null], [260, "Text_WearingSuccessfully", "Wearing Successfully", "穿戴成功", null, null, null], [261, "Text_FollowSuccess", "Follow Success", "跟随成功", null, null, null], [262, "Text_TheFunctionIsNotYetOpen_PleaseStayTuned", "The Function Is Not Yet Open, Please Stay Tuned", "功能暂未开放，敬请期待", null, null, null], [263, "Text_RecoveryWasSuccessful", "Recovery Was Successful", "恢复成功", null, null, null], [264, "Text_RemovedSuccessfully", "Removed Successfully", "卸下成功", null, null, null], [265, "Text_SuccessfullyDiscardedPet", "Successfully Discarded Pet", "丢掉宠物成功", null, null, null], [266, "Text_RestoreInitialImage", "Restore Initial Image", "恢复初始形象", null, null, null], [267, "Text_RemoveAllEquipment", "Remove All Equipment", "卸下所有装备", null, null, null], [268, "Text_CancelPetFollowing", "Cancel Pet Following", "取消宠物跟随", null, null, null], [269, "Text_ClickToUse", "Click To Use", "点击使用", null, null, null], [270, "Text_AlreadyOwned", "Already Owned", "已拥有", null, null, null], [271, "Text_ClickToGet", "Click To Get", "点击获得", null, null, null], [272, "Text_NotOwned", "Not Owned", "未拥有", null, null, null], [273, "Text_Use", "Use", "使用", null, null, null], [274, "Text_PurchaseCoins", "Purchase Coins", "金币购买", null, null, null], [275, "Text_Introduce", "Introduce", "介绍", null, null, null], [276, "Text_IncreasedHealthAndAttackPowerAfterUse", "Increased Health And Attack Power After Use", "使用后血量和攻击力提升", null, null, null], [277, "Text_Times", "Times", "倍", null, null, null], [278, "Text_ConsumingDiamondsToPurchase", "Consuming {0} Diamonds\nTo Purchase", "消耗{0}钻石购买", null, null, null], [279, "Text_ConsumeTeamCoinsToPurchase", "Consume {0} Team Coins\nTo Purchase", "消耗{0}派队币购买", null, null, null], [280, "Text_YujianFlyingMall", "Yujian Flying Mall", "御剑飞行商城", null, null, null], [281, "Text_RoyalSwordFlyingBonus", "Royal Sword Flying Bonus", "御剑飞行总加成", null, null, null], [282, "Text_MitsurugiSmartKiller", "Mitsurugi - Smart Killer", "御剑_智弑者", null, null, null], [283, "Text_MitsurugiGoldenSword", "Mitsurugi - Golden Sword", "御剑_黄金剑", null, null, null], [284, "Text_MitsurugiIceDiamondSword", "Mitsurugi - Ice Diamond Sword", "御剑_冰钻剑", null, null, null], [285, "Text_MitsurugiDemonSword", "Mitsurugi - Demon Sword", "御剑_恶魔剑", null, null, null], [286, "Text_MitsurugiBrokenCrazySword", "Mitsurugi - Broken Crazy Sword", "御剑_断狂剑", null, null, null], [287, "Text_MitsurugiAerocraft", "Mitsurugi - Aerocraft", "御剑_飞行器", null, null, null], [288, "Text_MitsurugiImperialSwordDart", "Mitsurugi - Imperial Sword Dart", "御剑_飞镖", null, null, null], [289, "Text_MitsurugiSmallBicycle", "Mitsurugi - Small Bicycle", "御剑_小单车", null, null, null], [290, "Text_MitsurugiAnywayHeShandsome", "Mitsurugi - Anyway, He's Handsome", "御剑_反正很帅", null, null, null], [291, "Text_MitsurugiSkate", "Mitsurugi - Skate", "御剑_滑板", null, null, null], [292, "Text_MitsurugiLittleGreenDragon", "Mitsurugi - Little Green Dragon", "御剑_小绿龙", null, null, null], [293, "Text_MitsurugiXiaolanLong", "Mitsurugi - Xiaolan Long", "御剑_小蓝龙", null, null, null], [294, "Text_MitsurugiLittleFireDragon", "Mitsurugi - Little Fire Dragon", "御剑_小火龙", null, null, null], [295, "Text_YujianFlyingHasBeenSuccessfullyPurchased", "Yujian Flying Has Been Successfully Purchased", "御剑飞行购买成功", null, null, null], [296, "Text_EquippingSwordFlying", "Equipping Sword Flying", "装备御剑飞行", null, null, null], [297, "Text_FlyingWithoutEquippedSword", "Flying Without Equipped Sword", "未装备御剑飞行", null, null, null], [298, "Text_RemoveTheImperialSwordAndFly", "Remove The Imperial Sword And Fly", "卸下御剑飞行", null, null, null], [299, "Text_IncreaseBloodVolumeByTimes_Nowrap", "Blood Volume Increase {0} Times", "血量提升{0}倍", "血量提升{0}倍", "血液量が{0}倍に上昇", "혈액량 {0}배 증가"], [300, "Text_AttackPowerIncreasedByTimes_Nowrap", "Attack Power Enhancement {0} Times", "攻击力提升{0}倍", "攻擊力提升{0}倍", "攻撃力{0}倍アップ", "공격력 {0}배 증가"], [301, "Text_ClickAnywhereToContinue", "Click anywhere to continue", "点击任意位置继续……", null, null, null], [302, "Text_Guid_0", "Welcome to\n{0}\nLet me introduce you to all the button operations.", "欢迎来到\n{0}\n我来给你介绍一下所有按钮操作吧。", null, null, null], [303, "Text_Guid_1", "Move button, click and drag to control the character's movement.", "移动按钮，点击后拖拽可以控制角色移动。", null, null, null], [304, "Text_Guid_2", "View movement area, click and drag here to control the screen view.", "视角移动区域，点击拖动这里可以控制屏幕视角。", null, null, null], [305, "Text_Guid_3", "Jump button, continuous clicking will perform a two-stage jump, which will consume {0}", "跳跃按钮，连续点击会进行二段跳，会消耗{0}", null, null, null], [306, "Text_Guid_4", "Sword flying, can fly", "御剑飞行，可以飞行", null, null, null], [307, "Text_Guid_5", "Attack button, continuous clicking can release cool combos, which will consume {0}", "攻击按钮，连续点击可释放炫酷的连招，会消耗{0}", null, null, null], [308, "Text_Guid_6", "Automatic attack button, enable automatic attack", "自动攻击按钮、开启自动攻击", null, null, null], [309, "Text_Guid_7", "Activate the soul ring button to display the soul ring.", "开启魂环按钮，可展示魂环。", null, null, null], [310, "Text_Guid_8", "Background music button, open to change background music and switch background music on/off.", "背景音乐按钮，打开可更换背景音乐以及开关背景音乐。", null, null, null], [311, "Text_Guid_9", "Click the 'I'm Home' button, and when you're stuck in the map and unable to move, you can try clicking on 'I'll Try'.", "点我回家按钮，当你被卡在地图中无法移动时可以点击我试试哦。", null, null, null], [312, "Text_Guid_10", "The backpack button, the fastest way to level up is to search for martial souls, professions, soul bones, and pets in the map.", "背包按钮，提升等级最快的办法就是在地图中寻找武魂、职业、魂骨、宠物。", null, null, null], [313, "Text_Guid_11", "The leaderboard button can be opened to view the in room leaderboard and world leaderboard. Come and check your ranking in Douluo Continent.", "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗罗大陆的排名是多少吧。", null, null, null], [314, "Text_Guid_12", "Gold coin lottery button, where you can redeem diamonds, levels, and skins for coins that you can't spend all", "金币抽奖按钮，花不完的金币在这里可以兑现 钻石、等级、皮肤哦", null, null, null], [315, "Text_Guid_13", "The online reward button allows you to receive a large amount of coins and experience to quickly upgrade your level. You can quickly upgrade to a banned Douluo within 10 minutes of being online.", "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到封号斗罗。", null, null, null], [316, "Text_Guid_14", "Task button, completing tasks can earn a large amount of coins and experience to quickly level up, and you can immediately upgrade to god level.", "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到神级。", null, null, null], [317, "Text_Guid_15", "Check in button, log in to the game, check in to receive a large amount of diamonds and levels.", "签到按钮，登录游戏签到领取大量钻石和等级。", null, null, null], [318, "Text_Guid_16", "There are many benefits, the fastest way to level up, unlimited upgrades, and become a shortcut to becoming a god level.", "福利多多，最快提升等级的办法，无限升级，成为神级的捷径。", null, null, null], [319, "Text_Guid_17", "Sword flying, equipped to fly.", "御剑飞行，装备后可飞行。", null, null, null], [320, "Text_Guid_18", "Recharge diamonds to quickly increase the lifespan of soul rings and reach up to one million grade levels.", "充值钻石，可充值大量钻石快速提升魂环年限、最快达到百万年级别。", null, null, null], [321, "Text_Guid_19", "Redeem rewards, receive redemption codes to redeem rewards, diamonds+levels.", "兑换奖励，领取兑换码兑换奖励，钻石+等级。", null, null, null], [322, "Text_Guid_20", "Newbie Gift Pack Button, Get Newbie Gift Pack", "新手礼包按钮，领取新手大礼包", null, null, null], [323, "Text_Guid_21", "Forge soul ring button, can forge soul rings, making your soul rings reach 100000 levels, and the tenth ring can reach millions of levels", "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", null, null, null], [324, "Text_Guid_22", "The hang up button automatically upgrades without the need for operation when turned on.", "挂机按钮，开启后、无需操作自动升级。", null, null, null], [325, "Text_Guid_23", "Activate defense and avoid being accidentally injured by teammates.", "开启防御，不会被队友误伤。", null, null, null], [326, "Text_Guid_24", "Character attributes, health, {0}, attack power will increase with level.", "角色属性，血量、{0}，攻击力会随等级提升而提升。", null, null, null], [327, "Text_Guid_25", "Quickly increase coins to directly purchase martial souls and soul bones.", "可快速增加金币直接购买武魂、魂骨。", null, null, null], [328, "Text_Guid_26", "Can quickly increase diamond forged soul rings.", "可快速增加钻石锻造魂环。", null, null, null], [329, "Text_Guid_27", "Introduction completed, welcome to leave a message in the gaming community. Follow my signpost and I'll take you to find the martial soul and soul bone.", "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", null, null, null], [330, "Text_Guid_28", "Forge Soul Bones", "锻造魂骨", null, null, null], [331, "Text_ArrivedNearTheTargetPoint", "Arrived Near The Target Point", "已到达目标点附近", null, null, null], [332, "Text_ReturnToNewbieVillage", "Return To Newbie Village", "返回新手村", null, null, null], [333, "Text_LetSOfficiallyOpenYourCopy", "Let'S Officially Open Your Copy", "正式开启你的副本吧", null, null, null], [334, "Text_Beat", "Beat", "击败", null, null, null], [335, "Text_SwordFlying", "Sword", "御剑飞行", null, null, null], [336, "Text_AutomaticAttack", "Automatic", "自动攻击", null, null, null], [337, "Text_BackgroundMusic", "Music", "背景音乐", null, null, null], [338, "Text_ClickOnMeToGoHome", "Home", "点我回家", null, null, null], [339, "Text_Knapsack", "Knapsack", "背包", null, null, null], [340, "Text_RankingList", "Ranking", "排行榜", null, null, null], [341, "Text_GoldCoinLottery", "Lottery", "金币抽奖", null, null, null], [342, "Text_CollectingTasks", "Tasks", "领取任务", null, null, null], [343, "Text_SignIn", "Sign In", "签到", null, null, null], [344, "Text_RechargeDiamonds", "Diamonds", "充值钻石", null, null, null], [345, "Text_ExchangeRewards", "Exchange", "兑换奖励", null, null, null], [346, "Text_ForgeSoulRings", "Rings", "锻造魂环", null, null, null], [347, "Text_NoviceGiftPack", "Gift Pack", "新手礼包", null, null, null], [348, "Text_ForgeSoulBones", "Bones", "锻造魂骨", null, null, null], [349, "Text_DoYouWantToActivateTeammateAccidentalInjury", "Do You Want To Activate Teammate Accidental Injury", "是否开启队友误伤", null, null, null], [350, "Text_EnableAfk", "Enable Afk", "开启挂机", null, null, null], [351, "Text_DefenseHasBeenTurnedOff", "Defense Has Been Turned Off", "已关闭防御", null, null, null], [352, "Text_DefenseActivated", "Defense Activated", "已开启防御", null, null, null], [353, "Text_PutItAway", "Off", "收起", null, null, null], [354, "Text_Open", "On", "开启", null, null, null], [355, "Text_Defeated", "Defeated", "击败了", null, null, null], [356, "Text_YouHaveBeenDefeatedBy", "You Have Been Defeated By {0}", "你已被 {0} 击败", null, null, null], [357, "Text_DefeatToCompleteRevenge", "Defeat {0} To Complete Revenge", "击败 {0} 完成复仇", null, null, null], [358, "Text_Grade_MaoHao", "Grade:", "等级：", null, null, null], [359, "Text_Experience", "Experience:", "经验：", null, null, null], [360, "Text_Aggressivity", "Aggressivity:", "攻击力：", null, null, null], [361, "Text_LevelUnlock", "Level Unlock", "级解锁", null, null, null], [362, "Text_BloodVolume", "Blood Volume:", "血量：", null, null, null], [363, "Text_Insufficient", "Insufficient", "不足", null, null, null], [364, "Text_UpgradeToIncreaseReserves", "Upgrade To Increase {0} Reserves", "升级增加{0}储量", null, null, null], [365, "Text_DoubleTheAttackPowerWithinSeconds", "Seconds", "秒内攻击力翻倍", null, null, null], [366, "Text_LevelOpen", "Level Open", "级开启", null, null, null], [367, "Text_TheSkillsAreNotReadyYet", "The Skills Are Not Ready Yet", "技能还没准备好", null, null, null], [368, "Text_UpgradeSuccessLevel", "Upgrade Success Level+{0}", "升级成功 等级+{0}", null, null, null], [369, "Text_ContinuouslyEliminatePeople_2", "Continuously Eliminate 2 People!", "连续消灭2人！势不可当！", null, null, null], [370, "Text_ContinuouslyEliminatePeople_3", "Continuously Eliminate 3 People!", "连续消灭3人！勇冠三军！", null, null, null], [371, "Text_ContinuouslyEliminatePeople_4", "Continuously Eliminate 4 People!", "连续消灭4人！无人能敌！", null, null, null], [372, "Text_ContinuouslyEliminatePeople_5", "Continuously Eliminate 5 People!", "连续消灭5人！横扫千军！", null, null, null], [373, "Text_ContinuouslyEliminatePeople_6", "Continuously Eliminate 6 People!", "连续消灭6人！接近神了！", null, null, null], [374, "Text_ContinuouslyEliminatePeople_7", "Continuously Eliminate {0} People!", "连续消灭{0}人！超越神了！", null, null, null], [375, "Text_FreeUpgrade_Simoleness", "Upgrade", "免费升级", null, null, null], [376, "Text_HangingOnTheHook", "Hanging On The Hook", "挂机中", null, null, null], [377, "Text_CancelAfk", "Cancel Afk", "取消挂机", null, null, null], [378, "Text_Level", "Level", "级", null, null, null], [379, "Text_BlackMonkeyKingLevel", "Black Monkey King", "黑悟空关卡", null, null, null], [380, "Text_MillionYearSoulBeast", "Million Year Soul Beast", "百万年魂兽", null, null, null], [381, "Text_ReturningToTheCity", "Returning To The City", "回城", null, null, null], [382, "Text_PleaseFirstRaiseTheLevelToLevel", "Please First Raise The Level To {0} Level", "请先将等级提升至{0}级", null, null, null], [383, "Text_EmptyPrizeHaha", "Empty Prize - Haha", "空奖-哈哈", null, null, null], [384, "Text_WinningProbability", "Winning Probability", "中奖概率", null, null, null], [385, "Text_DrawTimes", "Draw {0} Times", "抽{0}次", null, null, null], [386, "Text_ConsumeCoins", "Consume {0} Coins", "消耗{0}金币", null, null, null], [387, "Text_ConsumeDispatchCoins", "Consume {0} Dispatch Coins", "消耗{0}派队币", null, null, null], [388, "Text_FreeLotteryDraw", "Free\nLottery Draw", "免费抽奖", null, null, null], [389, "Text_LotteryResults", "Lottery Results", "抽奖结果", null, null, null], [390, "Text_CongratulationsOnWinningThePrize", "Congratulations On Winning The Prize", "恭喜中奖", null, null, null], [391, "Text_ObtainDiamonds", "Obtain {0} Diamonds", "获得{0}钻石", null, null, null], [392, "Text_OpenTheBackpackForUse", "Open The Backpack For Use", "打开背包使用", null, null, null], [393, "Text_FirstDay", "First Day", "第一天", null, null, null], [394, "Text_TheSecondDay", "The Second Day", "第二天", null, null, null], [395, "Text_ReturnGiftPackageForVeteranPlayers", "Return Gift Package For Veteran Players", "老玩家回归礼包", null, null, null], [396, "Text_OnlineTimeIsLessThanMinutes", "Online Time Is Less Than {0} Minutes", "在线时间不足{0}分钟", null, null, null], [397, "Text_ReceivedSuccessfully", "Received Successfully", "领取成功", null, null, null], [398, "Text_CannotBeClaimedRepeatedly", "Cannot Be Claimed Repeatedly", "不能重复领取", null, null, null], [399, "Text_PleaseComeBackToCollectOnTheThDay", "Please Come Back To Collect On The {0} Th Day", "请第{0}天再来领取", null, null, null], [400, "Text_OpenTheBackpackAndUseItAfterReceivingIt", "Open The Backpack And Use It After Receiving It", "领取后打开背包使用", null, null, null], [401, "Text_OnlineMinutes", "Online {0} Minutes ({1}/{2})", "在线{0}分钟({1}/{2})", null, null, null], [402, "Text_ReceivedAlready", "Received Already", "已领取", null, null, null], [403, "Text_OnlineRewards", "Online Rewards", "在线奖励", null, null, null], [404, "Text_CanBeClaimed", "Can Be Claimed", "可领取", null, null, null], [405, "Text_InsufficientOnlineTime", "Insufficient Online Time", "在线时间不足", null, null, null], [406, "Text_ClaimRewards", "Claim Rewards", "领取奖励", null, null, null], [407, "Text_ReceivedReward", "Received Reward", "已领取奖励", null, null, null], [408, "Text_RewardCoins", "Reward {0} Coins", "奖励{0}金币", null, null, null], [409, "Text_RewardExperience", "Reward {0} Experience", "奖励{0}经验", null, null, null], [410, "Text_RewardDiamonds", "Reward {0} Diamonds", "奖励{0}钻石", null, null, null], [411, "Text_Lv", "Lv.", "等级Lv.", null, null, null], [412, "Text_IncreaseCoins", "Increase {0} Coins", "增加{0}金币", null, null, null], [413, "Text_IncreaseExperience", "Increase {0} Experience", "增加{0}经验", null, null, null], [414, "Text_GetCoins", "Get {0} Coins", "获得{0}金币", null, null, null], [415, "Text_UpgradeLevelTo", "Upgrade Level To", "等级提升至", null, null, null], [416, "Text_CurrentlyUnavailable", "0", "暂无", null, null, null], [417, "Text_Ranking", "Ranking", "排名", null, null, null], [418, "Text_Name", "Name", "名字", null, null, null], [419, "Text_Height", "Height", "高度", null, null, null], [420, "Text_Kill", "Kill", "击杀", null, null, null], [421, "Text_LevelMode", "Level Mode", "等级模式", null, null, null], [422, "Text_HeightMode", "Height Mode", "高度模式", null, null, null], [423, "Text_KillMode", "Kill Mode", "击杀模式", null, null, null], [424, "Text_SwitchRoomLeaderboard", "Switch Room Leaderboard", "切换房间排行榜", null, null, null], [425, "Text_SwitchToTheFullServerRankingList", "Switch To The Full Server Ranking List", "切换全服排行榜", null, null, null], [426, "Text_TheRankingListInYourRoom", "The Ranking List In Your Room\nClicking The Ranking Mode Button \nOn The Right Will Refresh The Ranking Mode", "你所在房间内的排行榜。\n点击右侧排行模式按钮会刷新排行榜模式。", null, null, null], [427, "Text_RoomRanking", "Room Ranking", "房间排行榜", null, null, null], [428, "Text_TopInTheEntireServer", "Top {0} In The Entire Server\nRank Lv. Rank Ranking", "全服前{0}名\n段位 Lv.等级排行。", null, null, null], [429, "Text_FullServerRankingList", "Full Server Ranking List", "全服排行榜", null, null, null], [430, "Text_DonTClickTooQuicklyWithYourLittleHand", "Don'T Click Too Quickly With Your Little Hand~", "小手别点太快哟~", null, null, null], [431, "Text_Decade", "Decade", "十年", null, null, null], [432, "Text_AHundredYears", "A Hundred Years", "百年", null, null, null], [433, "Text_Millennium", "Millennium", "千年", null, null, null], [434, "Text_TenThousandYears", "Ten Thousand Years", "万年", null, null, null], [435, "Text_100000Years", "100000 Years", "十万年", null, null, null], [436, "Text_MillionsOfYears", "Millions Of Years", "百万年", null, null, null], [437, "Text_Eternity", "Eternity", "万万年", null, null, null], [438, "Text_BillionsOfYears", "Billions Of Years", "亿万年", null, null, null], [439, "Text_1", "1", "一", null, null, null], [440, "Text_2", "2", "二", null, null, null], [441, "Text_3", "3", "三", null, null, null], [442, "Text_4", "4", "四", null, null, null], [443, "Text_5", "5", "五", null, null, null], [444, "Text_6", "6", "六", null, null, null], [445, "Text_7", "7", "七", null, null, null], [446, "Text_8", "8", "八", null, null, null], [447, "Text_9", "9", "九", null, null, null], [448, "Text_10", "10", "十", null, null, null], [449, "Text_NotYetObtainedSoulRing", "Not Yet Obtained Soul Ring", "还未获取魂环", null, null, null], [450, "Text_ContactTheAuthorForRepair", "Contact The Author For Repair", "联系作者修复", null, null, null], [451, "Text_InsufficientLevel", "Insufficient Level", "等级不足", null, null, null], [452, "Text_SuccessfullyForged", "Successfully Forged", "锻造成功", null, null, null], [453, "Text_TotalBonus", "Total Bonus: Health Increased By {0} Times, Attack Power Increased By {1} Times", "总加成：血量提升{0}倍，攻击力提升{1}倍", null, null, null], [454, "Text_CongratulationsOnCompletingTheBeginnerSGuide", "Congratulations On Completing The Beginner'S Guide", "恭喜你完成新手引导", null, null, null], [455, "Text_RewardTheFirstSoulRingWithATenYearSoulRing", "Reward The First Soul Ring With A Ten-Year Soul Ring", "奖励第一魂环 十年魂环", null, null, null], [456, "Text_TheSoulRingSoulRing", "The {0} Soul Ring\n{1} Soul Ring", "第{0}魂环\n{1}魂环 ", null, null, null], [457, "Text_UnlockableAtLevel", "Unlockable At Level {0}", "{0}级可解锁", null, null, null], [458, "Text_Cost", "Cost", "需要消耗", null, null, null], [459, "Text_SoulRing", "Soul Ring", "魂环", null, null, null], [460, "Text_Unlockable", "Unlockable", "可解锁", null, null, null], [461, "Text_SupplementarySignature", "Supplementary Signature", "补签", null, null, null], [462, "Text_Unclaimed", "Unclaimed", "待领取", null, null, null], [463, "Text_DiamondGrade", "Diamond+{0} Grade+{1}", "钻石 +{0} 等级 +{1}", null, null, null], [464, "Text_Day", "Day {0}", "第{0}天", null, null, null], [465, "Text_DayCheckIn", "{0} Day Check-In", "{0}日签到", null, null, null], [466, "Text_SignedIn", "Signed In", "已签到", null, null, null], [467, "Text_SuccessfullyObtainedTodaySReward", "Successfully Obtained Today'S Reward", "成功获得今日奖励", null, null, null], [468, "Text_TheCheckInDateHasNotYetArrived", "The Check-In Date Has Not Yet Arrived", "还未到签到日期", null, null, null], [469, "Text_DailyLoginToGames", "Daily Login To Games（{0}/{1}）", "每日登陆游戏（{0}/{1}）", null, null, null], [470, "Text_DailyOnlineMinutes", "Daily Online {2} Minutes（{0}/{1}）", "每日在线时长{2}分钟（{0}/{1}）", null, null, null], [471, "Text_DefeatMedusaEveryDay", "Defeat {2} Medusa Every Day（{0}/{1}）", "每日击败{2}只美杜莎（{0}/{1}）", null, null, null], [472, "Text_DefeatSpiderSpiritsDaily", "Defeat {2} Spider Spirits Daily（{0}/{1}）", "每日击败{2}只蜘蛛精（{0}/{1}）", null, null, null], [473, "Text_DefeatDazzlingSpidersDaily", "Defeat {2} Dazzling Spiders Daily（{0}/{1}）", "每日击败{2}只炫彩蜘蛛（{0}/{1}）", null, null, null], [474, "Text_DefeatDragonBeastsDaily", "Defeat {2} Dragon Beasts Daily（{0}/{1}）", "每日击败{2}只龙兽（{0}/{1}）", null, null, null], [475, "Text_DefeatZombiesDaily", "Defeat {2} Zombies Daily（{0}/{1}）", "每日击败{2}只丧尸（{0}/{1}）", null, null, null], [476, "Text_DefeatMutatedPuppetsDaily", "Defeat {2} Mutated Puppets Daily（{0}/{1}）", "每日击败{2}只变异布偶（{0}/{1}）", null, null, null], [477, "Text_DefeatPlayersDaily", "Defeat {2} Players Daily（{0}/{1}）", "每日击败{2}名玩家（{0}/{1}）", null, null, null], [478, "Text_DailyLevelIncreaseByLevels", "Daily Level Increase By {2} Levels（{0}/{1}）", "每日等级提升{2}级（{0}/{1}）", null, null, null], [479, "Text_PickUpTreasuresEveryDay", "Pick Up {2} Treasures Every Day（{0}/{1}）", "每日捡到{2}个秘宝（{0}/{1}）", null, null, null], [480, "Text_WatchAdsPerDay", "Watch {2} Ads Per Day（{0}/{1}）", "每日观看{2}次广告（{0}/{1}）", null, null, null], [481, "Text_LoginDaysAWeek", "Login {2} Days A Week（{0}/{1}）", "每周登录{2}天（{0}/{1}）", null, null, null], [482, "Text_UpTo30MinutesAndDaysPerWeek", "Up To 30 Minutes And {2} Days Per Week（{0}/{1}）", "每周时长达到30分钟{2}天（{0}/{1}）", null, null, null], [483, "Text_DefeatMedusaEveryWeek", "Defeat {2} Medusa Every Week（{0}/{1}）", "每周击败{2}只美杜莎（{0}/{1}）", null, null, null], [484, "Text_DefeatSpiderSpiritsEveryWeek", "Defeat {2} Spider Spirits Every Week（{0}/{1}）", "每周击败{2}只蜘蛛精（{0}/{1}）", null, null, null], [485, "Text_DefeatDazzlingSpidersEveryWeek", "Defeat {2} Dazzling Spiders Every Week（{0}/{1}）", "每周击败{2}只炫彩蜘蛛（{0}/{1}）", null, null, null], [486, "Text_DefeatDragonBeastsEveryWeek", "Defeat {2} Dragon Beasts Every Week（{0}/{1}）", "每周击败{2}只龙兽（{0}/{1}）", null, null, null], [487, "Text_DefeatZombiesEveryWeek", "Defeat {2} Zombies Every Week（{0}/{1}）", "每周击败{2}只丧尸（{0}/{1}）", null, null, null], [488, "Text_DefeatMutatedPuppetsEveryWeek", "Defeat {2} Mutated Puppets Every Week（{0}/{1}）", "每周击败{2}只变异布偶（{0}/{1}）", null, null, null], [489, "Text_DefeatPlayersPerWeek", "Defeat {2} Players Per Week（{0}/{1}）", "每周击败{2}名玩家（{0}/{1}）", null, null, null], [490, "Text_UpgradeByLevelsPerWeek", "Upgrade By {2} Levels Per Week（{0}/{1}）", "每周等级提升{2}级（{0}/{1}）", null, null, null], [491, "Text_PickUpTreasuresEveryWeek", "Pick Up {2} Treasures Every Week（{0}/{1}）", "每周捡到{2}个秘宝（{0}/{1}）", null, null, null], [492, "Text_WatchAdsPerWeek", "Watch {2} Ads Per Week（{0}/{1}）", "每周观看{2}次广告（{0}/{1}）", null, null, null], [493, "Text_DailyTasks", "Daily Tasks", "每日任务", null, null, null], [494, "Text_AllTasksHaveBeenCompletedWaitingForRefresh", "All Tasks Have Been Completed, Waiting For Refresh", "任务已全部完成，等待刷新...", null, null, null], [495, "Text_WeeklyTasks", "Weekly Tasks", "每周任务", null, null, null], [496, "Text_RemainingHours", "Remaining: {0} Hours", "剩余：{0}小时", null, null, null], [497, "Text_RemainingDays", "Remaining: {0} Days", "剩余：{0}天", null, null, null], [498, "Text_HangInTheAir", "Hang In The Air", "未完成", null, null, null], [499, "Text_NotEquippedWithYetGoFind", "Not Equipped With {0} Yet, Go Find {1}", "还未装备{0},去寻找{1}", null, null, null], [500, "Text_WarcraftMedusa", "Warcraft Medusa", "魔兽美杜莎", null, null, null], [501, "Text_WarcraftColorfulSpider", "Warcraft Colorful Spider", "魔兽炫彩蜘蛛", null, null, null], [502, "Text_WarcraftSpiderSpirit", "Warcraft Spider Spirit", "魔兽蜘蛛精", null, null, null], [503, "Text_DragonSWarcraft", "Dragon'S Warcraft", "龙之魔兽", null, null, null], [504, "Text_Zombies", "Zombies", "丧尸", null, null, null], [505, "Text_MutatedPuppet", "Mutated Puppet", "变异布偶", null, null, null], [506, "Text_BlackWukong", "Black Wukong", "黑悟空", null, null, null], [507, "Text_MickeyMouse", "Mickey Mouse", "魔兽米老鼠", null, null, null], [508, "Text_LevelSoulMaster1", "{0} Level Soul Master", "{0}级 魂士", null, null, null], [509, "Text_LevelSoulMaster2", "{0} Level Soul Master", "{0}级 魂师", null, null, null], [510, "Text_LevelSoulMaster3", "{0} Level Soul Master", "{0}级 大魂师", null, null, null], [511, "Text_LevelSoulSovereign", "{0} Level Soul Sovereign", "{0}级 魂尊", null, null, null], [512, "Text_LevelSoulSect", "{0} Level Soul Sect", "{0}级 魂宗", null, null, null], [513, "Text_LevelSoulKing", "{0} Level Soul King", "{0}级 魂王", null, null, null], [514, "Text_LevelSoulEmperor", "{0} Level Soul Emperor", "{0}级 魂帝", null, null, null], [515, "Text_LevelSoulSaint", "{0} Level Soul Saint", "{0}级 魂圣", null, null, null], [516, "Text_LevelContra", "{0} Level Contra", "{0}级 魂斗罗", null, null, null], [517, "Text_LevelBannedDouluo", "{0} Level Banned Douluo", "{0}级 封号斗罗", null, null, null], [518, "Text_LevelPeakDouluo", "{0} Level Peak Douluo", "{0}级 巅峰斗罗", null, null, null], [519, "Text_LevelDemigod", "{0} Level Demigod", "{0}级 半神", null, null, null], [520, "Text_LevelDivineOfficer", "{0} Level Divine Officer", "{0}级 神官", null, null, null], [521, "Text_LevelTrueGodLevel", "{0} Level True God Level", "{0}级 真神级", null, null, null], [522, "Text_LevelSuperGodLevel", "{0} Level Super God Level", "{0}级 超神级", null, null, null], [523, "Text_LevelSuperGodPeak", "{0} Level Super God Peak", "{0}级 超神巅峰", null, null, null], [524, "Text_LevelDivineKing", "{0} Level Divine King", "{0}级 神王", null, null, null], [525, "Text_LevelEternalImmortalEmperor", "{0} Level Eternal Immortal Emperor", "{0}级 万古仙帝", null, null, null], [526, "Text_EternalImmortalEmperor", "Eternal Immortal Emperor", "万古仙帝", null, null, null], [527, "Text_MartialSoulMechSlashWindSlash_Male", "Martial Soul - Mech Slash Wind Slash (Male)", "武魂-机甲斩狂风斩(男)", null, null, null], [528, "Text_MartialSoulMechSlashWindSlash_Female", "Martial Soul - Mech Slash Wind Slash (Female)", "武魂-机甲斩狂风斩(女)", null, null, null], [529, "Text_GoldenHoopRodPowderUniformGirl", "Golden Hoop Rod (Powder)+Uniform Girl", "金箍棒(粉)+制服女孩", null, null, null], [530, "HaotianHammerTangSan_GoldenHoopRodPurpleBlueSilverEmperor", "Haotian Hammer+Tang San\nGolden Hoop Rod (Purple)+Blue Silver Emperor", "昊天锤+唐三\n金箍棒(紫)+蓝银皇", null, null, null], [531, "Text_TheGoldenPrinceJkGirl", "The Golden Prince+Jk Girl", "黄金王子+JK女孩", null, null, null], [532, "Text_XiaolanGreenBlackOrangeDragon", "Xiaolan Long+Little Green Dragon\nLittle Black Dragon+Little Orange Dragon", "小蓝龙+小绿龙\n小黑龙+小橘龙", null, null, null], [533, "Text_ProbabilityIncreaseSuccess", "Probability Increase Success", "概率提升成功", null, null, null], [534, "Text_SoulBoneStrengtheningSuccessful", "Soul Bone Strengthening Successful", "魂骨强化成功", null, null, null], [535, "Text_SoulBoneStrengtheningFailed", "Soul Bone Strengthening Failed", "魂骨强化失败", null, null, null], [536, "Text_ClaimLimitedSkin", "Claim Limited Skin", "领取限定皮肤", null, null, null], [537, "Text_ClaimAutomaticAttack", "Claim Automatic Attack", "领取自动攻击", null, null, null], [538, "Text_ObtainedOpenTheBackpackToUse", "Obtained, Open The Backpack To Use", "已获得，打开背包使用", null, null, null], [539, "Text_Music_1", "Open World", "开放世界", null, null, null], [540, "Text_Music_2", "Stay", "留下来", null, null, null], [541, "Text_Music_3", "Bad Guy", "坏人", null, null, null], [542, "Text_Music_4", "I Will Survive", "我会活下去", null, null, null], [543, "Text_Music_5", "Let Me Love You", "让我爱你", null, null, null], [544, "Text_Music_6", "Running Up That Hill", "跑上那座山", null, null, null], [545, "Text_Music_7", "Love To Hate Me", "爱恨我", null, null, null], [546, "Text_Music_8", "Tomboy", "假小子", null, null, null], [547, "Text_Music_9", "Shut Down", "关闭", null, null, null], [548, "Text_Music_10", "Celestial", "天空的", null, null, null], [549, "Text_Music_11", "As It Was", "事实上", null, null, null], [550, "Text_Music_12", "Good Morning", "早上好", null, null, null], [551, "Text_Music_13", "Alone", "独自一人", null, null, null], [552, "Text_Music_14", "Chanderiler", "钱德里勒", null, null, null], [553, "Text_Music_15", "Don'T Wanna Know", "不想知道", null, null, null], [554, "Text_Music_16", "Mood", "心情", null, null, null], [555, "Text_Music_17", "Moon", "金轮", null, null, null], [556, "Text_Music_18", "I Don'T Know What It'S Called", "不知道叫啥", null, null, null], [557, "Text_Music_19", "I Don'T Know What It'S Called", "也不知道叫啥", null, null, null], [558, "Text_RewardSoulBone", "Reward {0} Soul Bone", "奖励{0}魂骨碎片", null, null, null], [559, "Text_InsufficientSoulBoneFragments", "Insufficient Soul Bone Fragments", "魂骨碎片不足", null, null, null], [560, "Text_GetFreeBones", "Get {0} Free Bones", "免费领取{0}魂骨碎片", null, null, null], [561, "Text_SuccessfullyObtainedBones", "Successfully Obtained Bones+{0}", "成功获得魂骨碎片+{0}", null, null, null], [562, "Text_Upgrade", "Upgrade", "升级", null, null, null], [563, "Text_ForgeSoulRings_Button", "Forge Soul Rings", "锻造魂环", null, null, null]];
 class LanguageConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$8);
@@ -963,7 +963,8 @@ class LanguageConfig extends ConfigBase {
     /**强化条件*/
     get Text_StrengtheningConditions() { return this.getElement(10); }
     ;
-    /**强化成功概率*/
+    /**强化成功
+概率：{0}%*/
     get Text_EnhanceTheProbabilityOfSuccess() { return this.getElement(11); }
     ;
     /**提升概率*/
@@ -1001,7 +1002,1660 @@ class LanguageConfig extends ConfigBase {
     /**金币不足*/
     get Text_InsufficientGoldCoins() { return this.getElement(22); }
     ;
+    /**成功获得钻石+{0}*/
+    get Text_SuccessfullyObtainedDiamonds() { return this.getElement(23); }
+    ;
+    /**免费领取{0}颗钻石*/
+    get Text_GetDiamondsForFree() { return this.getElement(24); }
+    ;
+    /**取消*/
+    get Text_Cancel() { return this.getElement(25); }
+    ;
+    /**免费领取*/
+    get Text_FreeToReceive() { return this.getElement(26); }
+    ;
+    /**已满级*/
+    get Text_FullLevel() { return this.getElement(27); }
+    ;
+    /**头部魂骨*/
+    get Text_HeadSoulBone() { return this.getElement(28); }
+    ;
+    /**外附魂骨*/
+    get Text_ExternalSoulBone() { return this.getElement(29); }
+    ;
+    /**躯干魂骨*/
+    get Text_TorsoSoulBone() { return this.getElement(30); }
+    ;
+    /**腰部魂骨*/
+    get Text_WaistSoulBone() { return this.getElement(31); }
+    ;
+    /**手臂魂骨*/
+    get Text_ArmSoulBone() { return this.getElement(32); }
+    ;
+    /**腿部魂骨*/
+    get Text_LegSoulBone() { return this.getElement(33); }
+    ;
+    /**脚部魂骨*/
+    get Text_FootSoulBone() { return this.getElement(34); }
+    ;
+    /**前往*/
+    get Text_GoTo() { return this.getElement(35); }
+    ;
+    /**神级狩猎场*/
+    get Text_GodLevelHuntingGround() { return this.getElement(36); }
+    ;
+    /**新手村*/
+    get Text_NoviceVillage() { return this.getElement(37); }
+    ;
+    /**中级狩猎场*/
+    get Text_IntermediateHuntingGround() { return this.getElement(38); }
+    ;
+    /**高级狩猎场*/
+    get Text_AdvancedHuntingGround() { return this.getElement(39); }
+    ;
+    /**猎杀*/
+    get Text_HuntAndKill() { return this.getElement(40); }
+    ;
+    /**10万年魂兽*/
+    get Text_100000YearSoulBeast() { return this.getElement(41); }
+    ;
+    /**正在加载地图资源，请耐心等待*/
+    get Text_LoadingMapResourcesPleaseBePatient() { return this.getElement(42); }
+    ;
+    /**广告奖励*/
+    get Text_AdvertisingRewards() { return this.getElement(43); }
+    ;
+    /**观看{0}次广告
+免费获得*/
+    get Text_WatchTheAdvertisementTimesGetItForFree() { return this.getElement(44); }
+    ;
+    /**带你去免费获得*/
+    get Text_TakeYouToGetItForFree() { return this.getElement(45); }
+    ;
+    /**免费获得*/
+    get Text_GetItForFree() { return this.getElement(46); }
+    ;
+    /**免费领取{0}金币*/
+    get Text_GetGoldCoinsForFree() { return this.getElement(47); }
+    ;
+    /**成功获得金币*/
+    get Text_SuccessfullyObtainedCoins() { return this.getElement(48); }
+    ;
+    /**免费领取{0}颗钻石*/
+    get Text_GetFreeDiamonds() { return this.getElement(49); }
+    ;
+    /**等级免费提升{0}级*/
+    get Text_FreeLevelUpgradeByLevel() { return this.getElement(50); }
+    ;
+    /**免费提升*/
+    get Text_FreeUpgrade() { return this.getElement(51); }
+    ;
+    /**免费领取第{0}天奖励*/
+    get Text_FreeDayReward() { return this.getElement(52); }
+    ;
+    /**{0}失败，请重试*/
+    get Text_FailedPleaseTryAgain() { return this.getElement(53); }
+    ;
+    /**别点太快、会卡哦*/
+    get Text_DontClickTooFastItWillGetStuck() { return this.getElement(54); }
+    ;
+    /**直接提升等级*/
+    get Text_DirectlyUpgradeTheLevel() { return this.getElement(55); }
+    ;
+    /**确定*/
+    get Text_Determine() { return this.getElement(56); }
+    ;
+    /**升级等级*/
+    get Text_UpgradeLevel() { return this.getElement(57); }
+    ;
+    /**使用5个钻石
+提升等级*/
+    get Text_UseDiamondsUpgradeLevel() { return this.getElement(58); }
+    ;
+    /**请输入兑换码*/
+    get Text_PleaseEnterTheRedemptionCode() { return this.getElement(59); }
+    ;
+    /**兑换*/
+    get Text_Exchange() { return this.getElement(60); }
+    ;
+    /**请输入作者提供的兑换码
+即可兑换奖励*/
+    get Text_PleaseEnterTheRedemptionCodeProvidedByTheAuthorCanBeRedeemedForRewards() { return this.getElement(61); }
+    ;
+    /**礼包兑换*/
+    get Text_GiftPackExchange() { return this.getElement(62); }
+    ;
+    /**已兑换，无需重复兑换*/
+    get Text_AlreadyredeemedNoNeedToRedeemAgain() { return this.getElement(63); }
+    ;
+    /**领取失败*/
+    get Text_CollectionFailed() { return this.getElement(64); }
+    ;
+    /**礼包兑换码错误*/
+    get Text_GiftPackRedemptionCodeError() { return this.getElement(65); }
+    ;
+    /**等级*/
+    get Text_Grade() { return this.getElement(66); }
+    ;
+    /**兑换成功*/
+    get Text_ExchangeSuccessful() { return this.getElement(67); }
+    ;
+    /**冷却{0}秒*/
+    get Text_CoolForSeconds() { return this.getElement(68); }
+    ;
+    /**今日已售空,请更换其他商品购买*/
+    get Text_SoldouttodayPleaseReplaceWithOtherProductsToPurchase() { return this.getElement(69); }
+    ;
+    /**充值钻石*/
+    get Text_Rechargediamonds() { return this.getElement(70); }
+    ;
+    /**不限购*/
+    get Text_Nopurchaserestrictions() { return this.getElement(71); }
+    ;
+    /**今日已售空*/
+    get Text_Soldouttoday() { return this.getElement(72); }
+    ;
+    /**每天限购一次*/
+    get Text_Limitedtoonepurchaseperday() { return this.getElement(73); }
+    ;
+    /**武魂|魂师|魂骨|魂兽*/
+    get Text_BagTabTextBlock() { return this.getElement(74); }
+    ;
+    /**自动攻击拳(男)*/
+    get Text_AutomaticAttackFist_Male() { return this.getElement(75); }
+    ;
+    /**自动攻击拳(女)*/
+    get Text_AutomaticAttackFist_Female() { return this.getElement(76); }
+    ;
+    /**机甲斩狂风斩(男)*/
+    get Text_MechSlashWindSlash_Male() { return this.getElement(77); }
+    ;
+    /**机甲斩狂风斩(女)*/
+    get Text_MechSlashWindSlash_Female() { return this.getElement(78); }
+    ;
+    /**金箍棒(粉)*/
+    get Text_GoldenHoopRod_Powder() { return this.getElement(79); }
+    ;
+    /**金箍棒(紫)*/
+    get Text_GoldenHoopRod_Purple() { return this.getElement(80); }
+    ;
+    /**昊天锤*/
+    get Text_HaotianHammer() { return this.getElement(81); }
+    ;
+    /**海神三叉戟*/
+    get Text_TridentOfTheSeaGod() { return this.getElement(82); }
+    ;
+    /**赛博自来也长枪*/
+    get Text_CyberComesWithALongSpear() { return this.getElement(83); }
+    ;
+    /**海王双头刀*/
+    get Text_SeaKingDoubleHeadedKnife() { return this.getElement(84); }
+    ;
+    /**美国队长神锤*/
+    get Text_CaptainAmericaSHammer() { return this.getElement(85); }
+    ;
+    /**毒液斧头*/
+    get Text_VenomAxe() { return this.getElement(86); }
+    ;
+    /**灭霸斧*/
+    get Text_MiebaAxe() { return this.getElement(87); }
+    ;
+    /**鸣人手里剑*/
+    get Text_NarutoWieldingASword() { return this.getElement(88); }
+    ;
+    /**未来战士黄金剑*/
+    get Text_FutureWarriorGoldenSword() { return this.getElement(89); }
+    ;
+    /**森林哨兵魔法仗*/
+    get Text_ForestSentinelMagicBattle() { return this.getElement(90); }
+    ;
+    /**手枪
+索尼克专用*/
+    get Text_Pistol_SonicSpecific() { return this.getElement(91); }
+    ;
+    /**信号枪
+粉毛怪专用*/
+    get Text_SignalGun_SpecificallyForPinkHairMonster() { return this.getElement(92); }
+    ;
+    /**刀(纲手专用)*/
+    get Text_Knife_ForTsunade() { return this.getElement(93); }
+    ;
+    /**刀(李洛克专用)*/
+    get Text_Knife_ExclusiveToLilock() { return this.getElement(94); }
+    ;
+    /**镰刀
+干柿鬼鲛专用*/
+    get Text_Sickle_ForDriedPersimmonGhostShark() { return this.getElement(95); }
+    ;
+    /**镰刀
+赛博女孩专用*/
+    get Text_Sickle_ExclusivelyForCyberGirls() { return this.getElement(96); }
+    ;
+    /**冰封剑
+黑寡妇专用*/
+    get Text_IceSword_ExclusivelyForBlackWidow() { return this.getElement(97); }
+    ;
+    /**怪物爪刀*/
+    get Text_MonsterClawKnife() { return this.getElement(98); }
+    ;
+    /**大砍刀
+卡卡西专用*/
+    get Text_Machete_KakashiSpecific() { return this.getElement(99); }
+    ;
+    /**法杖
+宇智波鼬专用*/
+    get Text_TheStaff_ExclusivelyForUchihaItachi() { return this.getElement(100); }
+    ;
+    /**水枪*/
+    get Text_WaterGun() { return this.getElement(101); }
+    ;
+    /**冰钻剑*/
+    get Text_IceDiamondSword() { return this.getElement(102); }
+    ;
+    /**屠刀*/
+    get Text_ButcherSKnife() { return this.getElement(103); }
+    ;
+    /**蓝色法杖
+洛基专用*/
+    get Text_BlueStaff_LokiSpecific() { return this.getElement(104); }
+    ;
+    /**镰刀
+太阳神专用*/
+    get Text_Sickle_SunGodExclusive() { return this.getElement(105); }
+    ;
+    /**恶魔剑
+宇智波斑爷专用*/
+    get Text_DemonSword_ExclusivelyForUchihaMadara() { return this.getElement(106); }
+    ;
+    /**剑(纳米机器人专用)*/
+    get Text_Sword_SpecificallyDesignedForNanorobots() { return this.getElement(107); }
+    ;
+    /**镰刀(死侍专用)*/
+    get Text_Sickle_DeadpoolSpecific() { return this.getElement(108); }
+    ;
+    /**荧光剑
+火山哨兵专用*/
+    get Text_FluorescentSword_ForVolcanoSentinelsOnly() { return this.getElement(109); }
+    ;
+    /**狂热剑
+绯红女巫专用*/
+    get Text_FanaticalSword_ExclusiveToCrimsonWitch() { return this.getElement(110); }
+    ;
+    /**充气锤子*/
+    get Text_InflatableHammer() { return this.getElement(111); }
+    ;
+    /**木法杖
+毒液蜘蛛侠专用*/
+    get Text_WoodenStaff_VenomSpiderManSpecific() { return this.getElement(112); }
+    ;
+    /**瓜子盾*/
+    get Text_GuaziShield() { return this.getElement(113); }
+    ;
+    /**盾(浩克专用)*/
+    get Text_Shield_HulkExclusive() { return this.getElement(114); }
+    ;
+    /**终极冰环剑*/
+    get Text_UltimateIceRingSword() { return this.getElement(115); }
+    ;
+    /**散弹喷枪
+雏田专用*/
+    get Text_BulletSprayGun_ForHinata() { return this.getElement(116); }
+    ;
+    /**火枪(路飞专用)*/
+    get Text_Firearms_LuffySpecific() { return this.getElement(117); }
+    ;
+    /**紫光剑
+佐助专用*/
+    get Text_PurpleLightSword_SpecialForSasuke() { return this.getElement(118); }
+    ;
+    /**激光枪(天神专用)*/
+    get Text_LaserGun_TenjinSpecific() { return this.getElement(119); }
+    ;
+    /**剑(金刚狼专用)*/
+    get Text_Sword_ExclusivelyForWolverine() { return this.getElement(120); }
+    ;
+    /**激光枪(钢铁侠专用)*/
+    get Text_LaserGun_IronManSpecific() { return this.getElement(121); }
+    ;
+    /**情侣机甲套装(女)*/
+    get Text_CoupleMechSet_Female() { return this.getElement(122); }
+    ;
+    /**情侣机甲套装(男)*/
+    get Text_CoupleMechSet_Male() { return this.getElement(123); }
+    ;
+    /**小舞姐*/
+    get Text_XiaoWuJie() { return this.getElement(124); }
+    ;
+    /**蓝银皇*/
+    get Text_BlueSilverEmperor() { return this.getElement(125); }
+    ;
+    /**制服女孩*/
+    get Text_UniformGirl() { return this.getElement(126); }
+    ;
+    /**唐三*/
+    get Text_TangSan() { return this.getElement(127); }
+    ;
+    /**黄金王子*/
+    get Text_TheGoldenPrince() { return this.getElement(128); }
+    ;
+    /**JK女孩*/
+    get Text_JkGirl() { return this.getElement(129); }
+    ;
+    /**小蓝龙*/
+    get Text_XiaolanLong() { return this.getElement(130); }
+    ;
+    /**小绿龙*/
+    get Text_LittleGreenDragon() { return this.getElement(131); }
+    ;
+    /**小黑龙*/
+    get Text_LittleBlackDragon() { return this.getElement(132); }
+    ;
+    /**小橘龙*/
+    get Text_LittleOrangeDragon() { return this.getElement(133); }
+    ;
+    /**神级魔王*/
+    get Text_GodLevelDemonKing() { return this.getElement(134); }
+    ;
+    /**四代火影*/
+    get Text_TheFourthHokage() { return this.getElement(135); }
+    ;
+    /**美杜莎女王*/
+    get Text_MedusaQueen() { return this.getElement(136); }
+    ;
+    /**狐耳少女*/
+    get Text_FoxEaredGirl() { return this.getElement(137); }
+    ;
+    /**邪恶使者*/
+    get Text_EvilMessenger() { return this.getElement(138); }
+    ;
+    /**长款大衣女*/
+    get Text_LongCoatForWomen() { return this.getElement(139); }
+    ;
+    /**海绵宝宝*/
+    get Text_Spongebob() { return this.getElement(140); }
+    ;
+    /**钢铁侠*/
+    get Text_IronMan() { return this.getElement(141); }
+    ;
+    /**灭霸*/
+    get Text_Thanos() { return this.getElement(142); }
+    ;
+    /**刺猬小子*/
+    get Text_HedgehogBoy() { return this.getElement(143); }
+    ;
+    /**邪恶使者*/
+    get Text_EvilMessenger1() { return this.getElement(144); }
+    ;
+    /**蓝衣男*/
+    get Text_BlueClothedMan() { return this.getElement(145); }
+    ;
+    /**黑衣男*/
+    get Text_BlackClothedMan() { return this.getElement(146); }
+    ;
+    /**毁灭战士*/
+    get Text_Doom() { return this.getElement(147); }
+    ;
+    /**雷神*/
+    get Text_ThunderGod() { return this.getElement(148); }
+    ;
+    /**黑寡妇*/
+    get Text_BlackWidow() { return this.getElement(149); }
+    ;
+    /**可爱女*/
+    get Text_CuteGirl() { return this.getElement(150); }
+    ;
+    /**丸子头女*/
+    get Text_MarukoHeadGirl() { return this.getElement(151); }
+    ;
+    /**西方神女*/
+    get Text_WesternGoddess() { return this.getElement(152); }
+    ;
+    /**黑裙少女*/
+    get Text_BlackDressGirl() { return this.getElement(153); }
+    ;
+    /**短发女*/
+    get Text_ShortHairedWoman() { return this.getElement(154); }
+    ;
+    /**旗袍女*/
+    get Text_QipaoWomen() { return this.getElement(155); }
+    ;
+    /**披风男*/
+    get Text_ClothedMan() { return this.getElement(156); }
+    ;
+    /**长发女*/
+    get Text_LongHairedWoman() { return this.getElement(157); }
+    ;
+    /**双马尾女*/
+    get Text_DoublePonytailGirl1() { return this.getElement(158); }
+    ;
+    /**长发短裙女*/
+    get Text_WomenWithLongHairAndShortSkirts() { return this.getElement(159); }
+    ;
+    /**双马尾女*/
+    get Text_DoublePonytailGirl2() { return this.getElement(160); }
+    ;
+    /**双马尾女*/
+    get Text_DoublePonytailGirl3() { return this.getElement(161); }
+    ;
+    /**百褶裙女孩*/
+    get Text_PleatedSkirtGirl() { return this.getElement(162); }
+    ;
+    /**短发时尚女*/
+    get Text_ShortHairedFashionableWomen() { return this.getElement(163); }
+    ;
+    /**长马尾女孩*/
+    get Text_LongPonytailGirl() { return this.getElement(164); }
+    ;
+    /**长耳女*/
+    get Text_LongEaredGirl() { return this.getElement(165); }
+    ;
+    /**风衣长发女*/
+    get Text_LongHairedWomanInWindbreaker() { return this.getElement(166); }
+    ;
+    /**恶魔角女*/
+    get Text_DevilHornGirl() { return this.getElement(167); }
+    ;
+    /**和服女*/
+    get Text_KimonoGirl() { return this.getElement(168); }
+    ;
+    /**发卡女*/
+    get Text_HairpinGirl() { return this.getElement(169); }
+    ;
+    /**女仆套装女*/
+    get Text_MaidSuitForWomen() { return this.getElement(170); }
+    ;
+    /**帽子女*/
+    get Text_HatGirl() { return this.getElement(171); }
+    ;
+    /**魔法女孩*/
+    get Text_MagicalGirl() { return this.getElement(172); }
+    ;
+    /**长裙女*/
+    get Text_LongSkirtWomen() { return this.getElement(173); }
+    ;
+    /**杀手女*/
+    get Text_KillerWoman() { return this.getElement(174); }
+    ;
+    /**巫医*/
+    get Text_WitchDoctor() { return this.getElement(175); }
+    ;
+    /**长腿妈妈*/
+    get Text_LongLeggedMom() { return this.getElement(176); }
+    ;
+    /**玄魁*/
+    get Text_XuanKui() { return this.getElement(177); }
+    ;
+    /**邪恶女巫*/
+    get Text_EvilWitch() { return this.getElement(178); }
+    ;
+    /**小丑女*/
+    get Text_LittleUglyGirl() { return this.getElement(179); }
+    ;
+    /**万圣节女*/
+    get Text_HalloweenGirl() { return this.getElement(180); }
+    ;
+    /**屠夫*/
+    get Text_Butcher() { return this.getElement(181); }
+    ;
+    /**魔莱坞学院院长*/
+    get Text_DeanOfMolewoodCollege() { return this.getElement(182); }
+    ;
+    /**迷雾鬼影*/
+    get Text_MistyGhostShadow() { return this.getElement(183); }
+    ;
+    /**蓝毛怪*/
+    get Text_BlueHairedMonster() { return this.getElement(184); }
+    ;
+    /**狗头毛毛虫*/
+    get Text_DogHeadedCaterpillar() { return this.getElement(185); }
+    ;
+    /**粉毛怪*/
+    get Text_PinkHairedMonster() { return this.getElement(186); }
+    ;
+    /**索尼克*/
+    get Text_SonicAdvance() { return this.getElement(187); }
+    ;
+    /**Rainbow friends*/
+    get Text_RainbowFriends() { return this.getElement(188); }
+    ;
+    /**海神*/
+    get Text_SeaGod() { return this.getElement(189); }
+    ;
+    /**恶魔翅膀*/
+    get Text_DevilSWings() { return this.getElement(190); }
+    ;
+    /**恶魔角*/
+    get Text_DevilSCorner() { return this.getElement(191); }
+    ;
+    /**恶魔尾巴*/
+    get Text_DevilSTail() { return this.getElement(192); }
+    ;
+    /**恶魔头骨*/
+    get Text_DemonSkull() { return this.getElement(193); }
+    ;
+    /**恶魔三头犬*/
+    get Text_DevilSThreeHeadedDog() { return this.getElement(194); }
+    ;
+    /**天使翅膀*/
+    get Text_AngelWings() { return this.getElement(195); }
+    ;
+    /**天使蜘蛛*/
+    get Text_AngelSpider() { return this.getElement(196); }
+    ;
+    /**狐狸尾巴*/
+    get Text_FoxSTail() { return this.getElement(197); }
+    ;
+    /**狐狸耳朵*/
+    get Text_FoxEars() { return this.getElement(198); }
+    ;
+    /**挥动的围巾*/
+    get Text_WavingScarf() { return this.getElement(199); }
+    ;
+    /**闪电翅膀*/
+    get Text_LightningWings() { return this.getElement(200); }
+    ;
+    /**眼镜*/
+    get Text_Glasses() { return this.getElement(201); }
+    ;
+    /**拍照机器人*/
+    get Text_PhotographyRobot() { return this.getElement(202); }
+    ;
+    /**面纱*/
+    get Text_Veil() { return this.getElement(203); }
+    ;
+    /**火箭发射器*/
+    get Text_RocketLauncher() { return this.getElement(204); }
+    ;
+    /**狙击枪枪身*/
+    get Text_SniperGunBody() { return this.getElement(205); }
+    ;
+    /**可爱西方龙*/
+    get Text_CuteWesternDragon() { return this.getElement(206); }
+    ;
+    /**龙*/
+    get Text_Loong() { return this.getElement(207); }
+    ;
+    /**帝王龙*/
+    get Text_EmperorDragon() { return this.getElement(208); }
+    ;
+    /**地狱龙*/
+    get Text_HellDragon() { return this.getElement(209); }
+    ;
+    /**糖果龙*/
+    get Text_CandyDragon() { return this.getElement(210); }
+    ;
+    /**武士龙*/
+    get Text_WuShilong() { return this.getElement(211); }
+    ;
+    /**水晶翅膀*/
+    get Text_CrystalWings() { return this.getElement(212); }
+    ;
+    /**杀戮翅膀*/
+    get Text_KillingWings() { return this.getElement(213); }
+    ;
+    /**地狱翅膀*/
+    get Text_HellSWings() { return this.getElement(214); }
+    ;
+    /**精灵翅膀*/
+    get Text_FairyWings() { return this.getElement(215); }
+    ;
+    /**火焰翅膀*/
+    get Text_FlameWings() { return this.getElement(216); }
+    ;
+    /**大剑*/
+    get Text_BigSword() { return this.getElement(217); }
+    ;
+    /**天使剑*/
+    get Text_AngelSword() { return this.getElement(218); }
+    ;
+    /**蛇女*/
+    get Text_Snaker() { return this.getElement(219); }
+    ;
+    /**络新妇*/
+    get Text_ASpider() { return this.getElement(220); }
+    ;
+    /**大蜘蛛*/
+    get Text_BigSpider() { return this.getElement(221); }
+    ;
+    /**小型抱脸紫蜘蛛*/
+    get Text_SmallFaceHuggingPurpleSpider() { return this.getElement(222); }
+    ;
+    /**小型抱脸红蜘蛛*/
+    get Text_SmallBlushingSpider() { return this.getElement(223); }
+    ;
+    /**小型抱脸绿蜘蛛*/
+    get Text_SmallFaceHuggingGreenSpider() { return this.getElement(224); }
+    ;
+    /**小型抱脸蓝蜘蛛*/
+    get Text_SmallFaceHuggingBlueSpider() { return this.getElement(225); }
+    ;
+    /**小龙*/
+    get Text_Xiaolong() { return this.getElement(226); }
+    ;
+    /**卡通木龙*/
+    get Text_CartoonWoodenDragon() { return this.getElement(227); }
+    ;
+    /**红龙*/
+    get Text_RedDragon() { return this.getElement(228); }
+    ;
+    /**黄龙*/
+    get Text_Huanglong() { return this.getElement(229); }
+    ;
+    /**蓝龙*/
+    get Text_BlueDragon() { return this.getElement(230); }
+    ;
+    /**奥特之神*/
+    get Text_TheGodOfOtter() { return this.getElement(231); }
+    ;
+    /**成功开启自动攻击*/
+    get Text_SuccessfullyActivatedAutomaticAttack() { return this.getElement(232); }
+    ;
+    /**未获得自动攻击武魂*/
+    get Text_FailedToObtainAutomaticAttackSoul() { return this.getElement(233); }
+    ;
+    /**成功关闭自动攻击*/
+    get Text_SuccessfullyDisabledAutomaticAttack() { return this.getElement(234); }
+    ;
+    /**已获得*/
+    get Text_Obtained() { return this.getElement(235); }
+    ;
+    /**恭喜获得*/
+    get Text_CongratulationsOnObtaining() { return this.getElement(236); }
+    ;
+    /**魂力*/
+    get Text_SoulPower() { return this.getElement(237); }
+    ;
+    /**武魂*/
+    get Text_MartialSoul() { return this.getElement(238); }
+    ;
+    /**魂师*/
+    get Text_SoulMaster() { return this.getElement(239); }
+    ;
+    /**魂骨*/
+    get Text_SoulBone() { return this.getElement(240); }
+    ;
+    /**魂兽*/
+    get Text_Ayakashi() { return this.getElement(241); }
+    ;
+    /**普通*/
+    get Text_Ordinary() { return this.getElement(242); }
+    ;
+    /**稀有*/
+    get Text_Rare() { return this.getElement(243); }
+    ;
+    /**史诗*/
+    get Text_Epic() { return this.getElement(244); }
+    ;
+    /**传说*/
+    get Text_Legend() { return this.getElement(245); }
+    ;
+    /**杀神领域*/
+    get Text_KillingGodDomain() { return this.getElement(246); }
+    ;
+    /**斗神大陆(我的魂环无限升级)*/
+    get Text_DoushenContinent_MySoulRingUnlimitedUpgrade() { return this.getElement(247); }
+    ;
+    /**装备中*/
+    get Text_InTheEquipment() { return this.getElement(248); }
+    ;
+    /**使用中*/
+    get Text_InUse() { return this.getElement(249); }
+    ;
+    /**跟随中*/
+    get Text_FollowIn() { return this.getElement(250); }
+    ;
+    /**新手礼包获取*/
+    get Text_BeginnerGiftPackAcquisition() { return this.getElement(251); }
+    ;
+    /**金币抽奖获取*/
+    get Text_GoldCoinLotteryToObtain() { return this.getElement(252); }
+    ;
+    /**请先完成新手引导*/
+    get Text_PleaseCompleteTheBeginnerGuideFirst() { return this.getElement(253); }
+    ;
+    /**看广告获得*/
+    get Text_ObtainByWatchingAdvertisements() { return this.getElement(254); }
+    ;
+    /**老玩家回归获得*/
+    get Text_OldPlayersReturningToObtain() { return this.getElement(255); }
+    ;
+    /**未获得*/
+    get Text_NotObtained() { return this.getElement(256); }
+    ;
+    /**开始引导*/
+    get Text_StartGuiding() { return this.getElement(257); }
+    ;
+    /**购买成功*/
+    get Text_PurchaseSuccessful() { return this.getElement(258); }
+    ;
+    /**装备成功*/
+    get Text_EquipmentSuccessful() { return this.getElement(259); }
+    ;
+    /**穿戴成功*/
+    get Text_WearingSuccessfully() { return this.getElement(260); }
+    ;
+    /**跟随成功*/
+    get Text_FollowSuccess() { return this.getElement(261); }
+    ;
+    /**功能暂未开放，敬请期待*/
+    get Text_TheFunctionIsNotYetOpen_PleaseStayTuned() { return this.getElement(262); }
+    ;
+    /**恢复成功*/
+    get Text_RecoveryWasSuccessful() { return this.getElement(263); }
+    ;
+    /**卸下成功*/
+    get Text_RemovedSuccessfully() { return this.getElement(264); }
+    ;
+    /**丢掉宠物成功*/
+    get Text_SuccessfullyDiscardedPet() { return this.getElement(265); }
+    ;
+    /**恢复初始形象*/
+    get Text_RestoreInitialImage() { return this.getElement(266); }
+    ;
+    /**卸下所有装备*/
+    get Text_RemoveAllEquipment() { return this.getElement(267); }
+    ;
+    /**取消宠物跟随*/
+    get Text_CancelPetFollowing() { return this.getElement(268); }
+    ;
+    /**点击使用*/
+    get Text_ClickToUse() { return this.getElement(269); }
+    ;
+    /**已拥有*/
+    get Text_AlreadyOwned() { return this.getElement(270); }
+    ;
+    /**点击获得*/
+    get Text_ClickToGet() { return this.getElement(271); }
+    ;
+    /**未拥有*/
+    get Text_NotOwned() { return this.getElement(272); }
+    ;
+    /**使用*/
+    get Text_Use() { return this.getElement(273); }
+    ;
+    /**金币购买*/
+    get Text_PurchaseCoins() { return this.getElement(274); }
+    ;
+    /**介绍*/
+    get Text_Introduce() { return this.getElement(275); }
+    ;
+    /**使用后血量和攻击力提升*/
+    get Text_IncreasedHealthAndAttackPowerAfterUse() { return this.getElement(276); }
+    ;
+    /**倍*/
+    get Text_Times() { return this.getElement(277); }
+    ;
+    /**消耗{0}钻石购买*/
+    get Text_ConsumingDiamondsToPurchase() { return this.getElement(278); }
+    ;
+    /**消耗{0}派队币购买*/
+    get Text_ConsumeTeamCoinsToPurchase() { return this.getElement(279); }
+    ;
+    /**御剑飞行商城*/
+    get Text_YujianFlyingMall() { return this.getElement(280); }
+    ;
+    /**御剑飞行总加成*/
+    get Text_RoyalSwordFlyingBonus() { return this.getElement(281); }
+    ;
+    /**御剑_智弑者*/
+    get Text_MitsurugiSmartKiller() { return this.getElement(282); }
+    ;
+    /**御剑_黄金剑*/
+    get Text_MitsurugiGoldenSword() { return this.getElement(283); }
+    ;
+    /**御剑_冰钻剑*/
+    get Text_MitsurugiIceDiamondSword() { return this.getElement(284); }
+    ;
+    /**御剑_恶魔剑*/
+    get Text_MitsurugiDemonSword() { return this.getElement(285); }
+    ;
+    /**御剑_断狂剑*/
+    get Text_MitsurugiBrokenCrazySword() { return this.getElement(286); }
+    ;
+    /**御剑_飞行器*/
+    get Text_MitsurugiAerocraft() { return this.getElement(287); }
+    ;
+    /**御剑_飞镖*/
+    get Text_MitsurugiImperialSwordDart() { return this.getElement(288); }
+    ;
+    /**御剑_小单车*/
+    get Text_MitsurugiSmallBicycle() { return this.getElement(289); }
+    ;
+    /**御剑_反正很帅*/
+    get Text_MitsurugiAnywayHeShandsome() { return this.getElement(290); }
+    ;
+    /**御剑_滑板*/
+    get Text_MitsurugiSkate() { return this.getElement(291); }
+    ;
+    /**御剑_小绿龙*/
+    get Text_MitsurugiLittleGreenDragon() { return this.getElement(292); }
+    ;
+    /**御剑_小蓝龙*/
+    get Text_MitsurugiXiaolanLong() { return this.getElement(293); }
+    ;
+    /**御剑_小火龙*/
+    get Text_MitsurugiLittleFireDragon() { return this.getElement(294); }
+    ;
+    /**御剑飞行购买成功*/
+    get Text_YujianFlyingHasBeenSuccessfullyPurchased() { return this.getElement(295); }
+    ;
+    /**装备御剑飞行*/
+    get Text_EquippingSwordFlying() { return this.getElement(296); }
+    ;
+    /**未装备御剑飞行*/
+    get Text_FlyingWithoutEquippedSword() { return this.getElement(297); }
+    ;
+    /**卸下御剑飞行*/
+    get Text_RemoveTheImperialSwordAndFly() { return this.getElement(298); }
+    ;
+    /**血量提升{0}倍*/
+    get Text_IncreaseBloodVolumeByTimes_Nowrap() { return this.getElement(299); }
+    ;
+    /**攻击力提升{0}倍*/
+    get Text_AttackPowerIncreasedByTimes_Nowrap() { return this.getElement(300); }
+    ;
+    /**点击任意位置继续……*/
+    get Text_ClickAnywhereToContinue() { return this.getElement(301); }
+    ;
+    /**欢迎来到
+{0}
+我来给你介绍一下所有按钮操作吧。*/
+    get Text_Guid_0() { return this.getElement(302); }
+    ;
+    /**移动按钮，点击后拖拽可以控制角色移动。*/
+    get Text_Guid_1() { return this.getElement(303); }
+    ;
+    /**视角移动区域，点击拖动这里可以控制屏幕视角。*/
+    get Text_Guid_2() { return this.getElement(304); }
+    ;
+    /**跳跃按钮，连续点击会进行二段跳，会消耗{0}*/
+    get Text_Guid_3() { return this.getElement(305); }
+    ;
+    /**御剑飞行，可以飞行*/
+    get Text_Guid_4() { return this.getElement(306); }
+    ;
+    /**攻击按钮，连续点击可释放炫酷的连招，会消耗{0}*/
+    get Text_Guid_5() { return this.getElement(307); }
+    ;
+    /**自动攻击按钮、开启自动攻击*/
+    get Text_Guid_6() { return this.getElement(308); }
+    ;
+    /**开启魂环按钮，可展示魂环。*/
+    get Text_Guid_7() { return this.getElement(309); }
+    ;
+    /**背景音乐按钮，打开可更换背景音乐以及开关背景音乐。*/
+    get Text_Guid_8() { return this.getElement(310); }
+    ;
+    /**点我回家按钮，当你被卡在地图中无法移动时可以点击我试试哦。*/
+    get Text_Guid_9() { return this.getElement(311); }
+    ;
+    /**背包按钮，提升等级最快的办法就是在地图中寻找武魂、职业、魂骨、宠物。*/
+    get Text_Guid_10() { return this.getElement(312); }
+    ;
+    /**排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗罗大陆的排名是多少吧。*/
+    get Text_Guid_11() { return this.getElement(313); }
+    ;
+    /**金币抽奖按钮，花不完的金币在这里可以兑现 钻石、等级、皮肤哦*/
+    get Text_Guid_12() { return this.getElement(314); }
+    ;
+    /**在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到封号斗罗。*/
+    get Text_Guid_13() { return this.getElement(315); }
+    ;
+    /**任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到神级。*/
+    get Text_Guid_14() { return this.getElement(316); }
+    ;
+    /**签到按钮，登录游戏签到领取大量钻石和等级。*/
+    get Text_Guid_15() { return this.getElement(317); }
+    ;
+    /**福利多多，最快提升等级的办法，无限升级，成为神级的捷径。*/
+    get Text_Guid_16() { return this.getElement(318); }
+    ;
+    /**御剑飞行，装备后可飞行。*/
+    get Text_Guid_17() { return this.getElement(319); }
+    ;
+    /**充值钻石，可充值大量钻石快速提升魂环年限、最快达到百万年级别。*/
+    get Text_Guid_18() { return this.getElement(320); }
+    ;
+    /**兑换奖励，领取兑换码兑换奖励，钻石+等级。*/
+    get Text_Guid_19() { return this.getElement(321); }
+    ;
+    /**新手礼包按钮，领取新手大礼包*/
+    get Text_Guid_20() { return this.getElement(322); }
+    ;
+    /**锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别*/
+    get Text_Guid_21() { return this.getElement(323); }
+    ;
+    /**挂机按钮，开启后、无需操作自动升级。*/
+    get Text_Guid_22() { return this.getElement(324); }
+    ;
+    /**开启防御，不会被队友误伤。*/
+    get Text_Guid_23() { return this.getElement(325); }
+    ;
+    /**角色属性，血量、{0}，攻击力会随等级提升而提升。*/
+    get Text_Guid_24() { return this.getElement(326); }
+    ;
+    /**可快速增加金币直接购买武魂、魂骨。*/
+    get Text_Guid_25() { return this.getElement(327); }
+    ;
+    /**可快速增加钻石锻造魂环。*/
+    get Text_Guid_26() { return this.getElement(328); }
+    ;
+    /**介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。*/
+    get Text_Guid_27() { return this.getElement(329); }
+    ;
+    /**锻造魂骨*/
+    get Text_Guid_28() { return this.getElement(330); }
+    ;
+    /**已到达目标点附近*/
+    get Text_ArrivedNearTheTargetPoint() { return this.getElement(331); }
+    ;
+    /**返回新手村*/
+    get Text_ReturnToNewbieVillage() { return this.getElement(332); }
+    ;
+    /**正式开启你的副本吧*/
+    get Text_LetSOfficiallyOpenYourCopy() { return this.getElement(333); }
+    ;
+    /**击败*/
+    get Text_Beat() { return this.getElement(334); }
+    ;
+    /**御剑飞行*/
+    get Text_SwordFlying() { return this.getElement(335); }
+    ;
+    /**自动攻击*/
+    get Text_AutomaticAttack() { return this.getElement(336); }
+    ;
+    /**背景音乐*/
+    get Text_BackgroundMusic() { return this.getElement(337); }
+    ;
+    /**点我回家*/
+    get Text_ClickOnMeToGoHome() { return this.getElement(338); }
+    ;
+    /**背包*/
+    get Text_Knapsack() { return this.getElement(339); }
+    ;
+    /**排行榜*/
+    get Text_RankingList() { return this.getElement(340); }
+    ;
+    /**金币抽奖*/
+    get Text_GoldCoinLottery() { return this.getElement(341); }
+    ;
+    /**领取任务*/
+    get Text_CollectingTasks() { return this.getElement(342); }
+    ;
+    /**签到*/
+    get Text_SignIn() { return this.getElement(343); }
+    ;
+    /**充值钻石*/
+    get Text_RechargeDiamonds() { return this.getElement(344); }
+    ;
+    /**兑换奖励*/
+    get Text_ExchangeRewards() { return this.getElement(345); }
+    ;
+    /**锻造魂环*/
+    get Text_ForgeSoulRings() { return this.getElement(346); }
+    ;
+    /**新手礼包*/
+    get Text_NoviceGiftPack() { return this.getElement(347); }
+    ;
+    /**锻造魂骨*/
+    get Text_ForgeSoulBones() { return this.getElement(348); }
+    ;
+    /**是否开启队友误伤*/
+    get Text_DoYouWantToActivateTeammateAccidentalInjury() { return this.getElement(349); }
+    ;
+    /**开启挂机*/
+    get Text_EnableAfk() { return this.getElement(350); }
+    ;
+    /**已关闭防御*/
+    get Text_DefenseHasBeenTurnedOff() { return this.getElement(351); }
+    ;
+    /**已开启防御*/
+    get Text_DefenseActivated() { return this.getElement(352); }
+    ;
+    /**收起*/
+    get Text_PutItAway() { return this.getElement(353); }
+    ;
+    /**开启*/
+    get Text_Open() { return this.getElement(354); }
+    ;
+    /**击败了*/
+    get Text_Defeated() { return this.getElement(355); }
+    ;
+    /**你已被 {0} 击败*/
+    get Text_YouHaveBeenDefeatedBy() { return this.getElement(356); }
+    ;
+    /**击败 {0} 完成复仇*/
+    get Text_DefeatToCompleteRevenge() { return this.getElement(357); }
+    ;
+    /**等级：*/
+    get Text_Grade_MaoHao() { return this.getElement(358); }
+    ;
+    /**经验：*/
+    get Text_Experience() { return this.getElement(359); }
+    ;
+    /**攻击力：*/
+    get Text_Aggressivity() { return this.getElement(360); }
+    ;
+    /**级解锁*/
+    get Text_LevelUnlock() { return this.getElement(361); }
+    ;
+    /**血量：*/
+    get Text_BloodVolume() { return this.getElement(362); }
+    ;
+    /**不足*/
+    get Text_Insufficient() { return this.getElement(363); }
+    ;
+    /**升级增加{0}储量*/
+    get Text_UpgradeToIncreaseReserves() { return this.getElement(364); }
+    ;
+    /**秒内攻击力翻倍*/
+    get Text_DoubleTheAttackPowerWithinSeconds() { return this.getElement(365); }
+    ;
+    /**级开启*/
+    get Text_LevelOpen() { return this.getElement(366); }
+    ;
+    /**技能还没准备好*/
+    get Text_TheSkillsAreNotReadyYet() { return this.getElement(367); }
+    ;
+    /**升级成功 等级+{0}*/
+    get Text_UpgradeSuccessLevel() { return this.getElement(368); }
+    ;
+    /**连续消灭2人！势不可当！*/
+    get Text_ContinuouslyEliminatePeople_2() { return this.getElement(369); }
+    ;
+    /**连续消灭3人！勇冠三军！*/
+    get Text_ContinuouslyEliminatePeople_3() { return this.getElement(370); }
+    ;
+    /**连续消灭4人！无人能敌！*/
+    get Text_ContinuouslyEliminatePeople_4() { return this.getElement(371); }
+    ;
+    /**连续消灭5人！横扫千军！*/
+    get Text_ContinuouslyEliminatePeople_5() { return this.getElement(372); }
+    ;
+    /**连续消灭6人！接近神了！*/
+    get Text_ContinuouslyEliminatePeople_6() { return this.getElement(373); }
+    ;
+    /**连续消灭{0}人！超越神了！*/
+    get Text_ContinuouslyEliminatePeople_7() { return this.getElement(374); }
+    ;
+    /**免费升级*/
+    get Text_FreeUpgrade_Simoleness() { return this.getElement(375); }
+    ;
+    /**挂机中*/
+    get Text_HangingOnTheHook() { return this.getElement(376); }
+    ;
+    /**取消挂机*/
+    get Text_CancelAfk() { return this.getElement(377); }
+    ;
+    /**级*/
+    get Text_Level() { return this.getElement(378); }
+    ;
+    /**黑悟空关卡*/
+    get Text_BlackMonkeyKingLevel() { return this.getElement(379); }
+    ;
+    /**百万年魂兽*/
+    get Text_MillionYearSoulBeast() { return this.getElement(380); }
+    ;
+    /**回城*/
+    get Text_ReturningToTheCity() { return this.getElement(381); }
+    ;
+    /**请先将等级提升至{0}级*/
+    get Text_PleaseFirstRaiseTheLevelToLevel() { return this.getElement(382); }
+    ;
+    /**空奖-哈哈*/
+    get Text_EmptyPrizeHaha() { return this.getElement(383); }
+    ;
+    /**中奖概率*/
+    get Text_WinningProbability() { return this.getElement(384); }
+    ;
+    /**抽{0}次*/
+    get Text_DrawTimes() { return this.getElement(385); }
+    ;
+    /**消耗{0}金币*/
+    get Text_ConsumeCoins() { return this.getElement(386); }
+    ;
+    /**消耗{0}派队币*/
+    get Text_ConsumeDispatchCoins() { return this.getElement(387); }
+    ;
+    /**免费抽奖*/
+    get Text_FreeLotteryDraw() { return this.getElement(388); }
+    ;
+    /**抽奖结果*/
+    get Text_LotteryResults() { return this.getElement(389); }
+    ;
+    /**恭喜中奖*/
+    get Text_CongratulationsOnWinningThePrize() { return this.getElement(390); }
+    ;
+    /**获得{0}钻石*/
+    get Text_ObtainDiamonds() { return this.getElement(391); }
+    ;
+    /**打开背包使用*/
+    get Text_OpenTheBackpackForUse() { return this.getElement(392); }
+    ;
+    /**第一天*/
+    get Text_FirstDay() { return this.getElement(393); }
+    ;
+    /**第二天*/
+    get Text_TheSecondDay() { return this.getElement(394); }
+    ;
+    /**老玩家回归礼包*/
+    get Text_ReturnGiftPackageForVeteranPlayers() { return this.getElement(395); }
+    ;
+    /**在线时间不足{0}分钟*/
+    get Text_OnlineTimeIsLessThanMinutes() { return this.getElement(396); }
+    ;
+    /**领取成功*/
+    get Text_ReceivedSuccessfully() { return this.getElement(397); }
+    ;
+    /**不能重复领取*/
+    get Text_CannotBeClaimedRepeatedly() { return this.getElement(398); }
+    ;
+    /**请第{0}天再来领取*/
+    get Text_PleaseComeBackToCollectOnTheThDay() { return this.getElement(399); }
+    ;
+    /**领取后打开背包使用*/
+    get Text_OpenTheBackpackAndUseItAfterReceivingIt() { return this.getElement(400); }
+    ;
+    /**在线{0}分钟({1}/{2})*/
+    get Text_OnlineMinutes() { return this.getElement(401); }
+    ;
+    /**已领取*/
+    get Text_ReceivedAlready() { return this.getElement(402); }
+    ;
+    /**在线奖励*/
+    get Text_OnlineRewards() { return this.getElement(403); }
+    ;
+    /**可领取*/
+    get Text_CanBeClaimed() { return this.getElement(404); }
+    ;
+    /**在线时间不足*/
+    get Text_InsufficientOnlineTime() { return this.getElement(405); }
+    ;
+    /**领取奖励*/
+    get Text_ClaimRewards() { return this.getElement(406); }
+    ;
+    /**已领取奖励*/
+    get Text_ReceivedReward() { return this.getElement(407); }
+    ;
+    /**奖励{0}金币*/
+    get Text_RewardCoins() { return this.getElement(408); }
+    ;
+    /**奖励{0}经验*/
+    get Text_RewardExperience() { return this.getElement(409); }
+    ;
+    /**奖励{0}钻石*/
+    get Text_RewardDiamonds() { return this.getElement(410); }
+    ;
+    /**等级Lv.*/
+    get Text_Lv() { return this.getElement(411); }
+    ;
+    /**增加{0}金币*/
+    get Text_IncreaseCoins() { return this.getElement(412); }
+    ;
+    /**增加{0}经验*/
+    get Text_IncreaseExperience() { return this.getElement(413); }
+    ;
+    /**获得{0}金币*/
+    get Text_GetCoins() { return this.getElement(414); }
+    ;
+    /**等级提升至*/
+    get Text_UpgradeLevelTo() { return this.getElement(415); }
+    ;
+    /**暂无*/
+    get Text_CurrentlyUnavailable() { return this.getElement(416); }
+    ;
+    /**排名*/
+    get Text_Ranking() { return this.getElement(417); }
+    ;
+    /**名字*/
+    get Text_Name() { return this.getElement(418); }
+    ;
+    /**高度*/
+    get Text_Height() { return this.getElement(419); }
+    ;
+    /**击杀*/
+    get Text_Kill() { return this.getElement(420); }
+    ;
+    /**等级模式*/
+    get Text_LevelMode() { return this.getElement(421); }
+    ;
+    /**高度模式*/
+    get Text_HeightMode() { return this.getElement(422); }
+    ;
+    /**击杀模式*/
+    get Text_KillMode() { return this.getElement(423); }
+    ;
+    /**切换房间排行榜*/
+    get Text_SwitchRoomLeaderboard() { return this.getElement(424); }
+    ;
+    /**切换全服排行榜*/
+    get Text_SwitchToTheFullServerRankingList() { return this.getElement(425); }
+    ;
+    /**你所在房间内的排行榜。
+点击右侧排行模式按钮会刷新排行榜模式。*/
+    get Text_TheRankingListInYourRoom() { return this.getElement(426); }
+    ;
+    /**房间排行榜*/
+    get Text_RoomRanking() { return this.getElement(427); }
+    ;
+    /**全服前{0}名
+段位 Lv.等级排行。*/
+    get Text_TopInTheEntireServer() { return this.getElement(428); }
+    ;
+    /**全服排行榜*/
+    get Text_FullServerRankingList() { return this.getElement(429); }
+    ;
+    /**小手别点太快哟~*/
+    get Text_DonTClickTooQuicklyWithYourLittleHand() { return this.getElement(430); }
+    ;
+    /**十年*/
+    get Text_Decade() { return this.getElement(431); }
+    ;
+    /**百年*/
+    get Text_AHundredYears() { return this.getElement(432); }
+    ;
+    /**千年*/
+    get Text_Millennium() { return this.getElement(433); }
+    ;
+    /**万年*/
+    get Text_TenThousandYears() { return this.getElement(434); }
+    ;
+    /**十万年*/
+    get Text_100000Years() { return this.getElement(435); }
+    ;
+    /**百万年*/
+    get Text_MillionsOfYears() { return this.getElement(436); }
+    ;
+    /**万万年*/
+    get Text_Eternity() { return this.getElement(437); }
+    ;
+    /**亿万年*/
+    get Text_BillionsOfYears() { return this.getElement(438); }
+    ;
+    /**一*/
+    get Text_1() { return this.getElement(439); }
+    ;
+    /**二*/
+    get Text_2() { return this.getElement(440); }
+    ;
+    /**三*/
+    get Text_3() { return this.getElement(441); }
+    ;
+    /**四*/
+    get Text_4() { return this.getElement(442); }
+    ;
+    /**五*/
+    get Text_5() { return this.getElement(443); }
+    ;
+    /**六*/
+    get Text_6() { return this.getElement(444); }
+    ;
+    /**七*/
+    get Text_7() { return this.getElement(445); }
+    ;
+    /**八*/
+    get Text_8() { return this.getElement(446); }
+    ;
+    /**九*/
+    get Text_9() { return this.getElement(447); }
+    ;
+    /**十*/
+    get Text_10() { return this.getElement(448); }
+    ;
+    /**还未获取魂环*/
+    get Text_NotYetObtainedSoulRing() { return this.getElement(449); }
+    ;
+    /**联系作者修复*/
+    get Text_ContactTheAuthorForRepair() { return this.getElement(450); }
+    ;
+    /**等级不足*/
+    get Text_InsufficientLevel() { return this.getElement(451); }
+    ;
+    /**锻造成功*/
+    get Text_SuccessfullyForged() { return this.getElement(452); }
+    ;
+    /**总加成：血量提升{0}倍，攻击力提升{1}倍*/
+    get Text_TotalBonus() { return this.getElement(453); }
+    ;
+    /**恭喜你完成新手引导*/
+    get Text_CongratulationsOnCompletingTheBeginnerSGuide() { return this.getElement(454); }
+    ;
+    /**奖励第一魂环 十年魂环*/
+    get Text_RewardTheFirstSoulRingWithATenYearSoulRing() { return this.getElement(455); }
+    ;
+    /**第{0}魂环
+{1}魂环 */
+    get Text_TheSoulRingSoulRing() { return this.getElement(456); }
+    ;
+    /**{0}级可解锁*/
+    get Text_UnlockableAtLevel() { return this.getElement(457); }
+    ;
+    /**需要消耗*/
+    get Text_Cost() { return this.getElement(458); }
+    ;
+    /**魂环*/
+    get Text_SoulRing() { return this.getElement(459); }
+    ;
+    /**可解锁*/
+    get Text_Unlockable() { return this.getElement(460); }
+    ;
+    /**补签*/
+    get Text_SupplementarySignature() { return this.getElement(461); }
+    ;
+    /**待领取*/
+    get Text_Unclaimed() { return this.getElement(462); }
+    ;
+    /**钻石 +{0} 等级 +{1}*/
+    get Text_DiamondGrade() { return this.getElement(463); }
+    ;
+    /**第{0}天*/
+    get Text_Day() { return this.getElement(464); }
+    ;
+    /**{0}日签到*/
+    get Text_DayCheckIn() { return this.getElement(465); }
+    ;
+    /**已签到*/
+    get Text_SignedIn() { return this.getElement(466); }
+    ;
+    /**成功获得今日奖励*/
+    get Text_SuccessfullyObtainedTodaySReward() { return this.getElement(467); }
+    ;
+    /**还未到签到日期*/
+    get Text_TheCheckInDateHasNotYetArrived() { return this.getElement(468); }
+    ;
+    /**每日登陆游戏（{0}/{1}）*/
+    get Text_DailyLoginToGames() { return this.getElement(469); }
+    ;
+    /**每日在线时长{2}分钟（{0}/{1}）*/
+    get Text_DailyOnlineMinutes() { return this.getElement(470); }
+    ;
+    /**每日击败{2}只美杜莎（{0}/{1}）*/
+    get Text_DefeatMedusaEveryDay() { return this.getElement(471); }
+    ;
+    /**每日击败{2}只蜘蛛精（{0}/{1}）*/
+    get Text_DefeatSpiderSpiritsDaily() { return this.getElement(472); }
+    ;
+    /**每日击败{2}只炫彩蜘蛛（{0}/{1}）*/
+    get Text_DefeatDazzlingSpidersDaily() { return this.getElement(473); }
+    ;
+    /**每日击败{2}只龙兽（{0}/{1}）*/
+    get Text_DefeatDragonBeastsDaily() { return this.getElement(474); }
+    ;
+    /**每日击败{2}只丧尸（{0}/{1}）*/
+    get Text_DefeatZombiesDaily() { return this.getElement(475); }
+    ;
+    /**每日击败{2}只变异布偶（{0}/{1}）*/
+    get Text_DefeatMutatedPuppetsDaily() { return this.getElement(476); }
+    ;
+    /**每日击败{2}名玩家（{0}/{1}）*/
+    get Text_DefeatPlayersDaily() { return this.getElement(477); }
+    ;
+    /**每日等级提升{2}级（{0}/{1}）*/
+    get Text_DailyLevelIncreaseByLevels() { return this.getElement(478); }
+    ;
+    /**每日捡到{2}个秘宝（{0}/{1}）*/
+    get Text_PickUpTreasuresEveryDay() { return this.getElement(479); }
+    ;
+    /**每日观看{2}次广告（{0}/{1}）*/
+    get Text_WatchAdsPerDay() { return this.getElement(480); }
+    ;
+    /**每周登录{2}天（{0}/{1}）*/
+    get Text_LoginDaysAWeek() { return this.getElement(481); }
+    ;
+    /**每周时长达到30分钟{2}天（{0}/{1}）*/
+    get Text_UpTo30MinutesAndDaysPerWeek() { return this.getElement(482); }
+    ;
+    /**每周击败{2}只美杜莎（{0}/{1}）*/
+    get Text_DefeatMedusaEveryWeek() { return this.getElement(483); }
+    ;
+    /**每周击败{2}只蜘蛛精（{0}/{1}）*/
+    get Text_DefeatSpiderSpiritsEveryWeek() { return this.getElement(484); }
+    ;
+    /**每周击败{2}只炫彩蜘蛛（{0}/{1}）*/
+    get Text_DefeatDazzlingSpidersEveryWeek() { return this.getElement(485); }
+    ;
+    /**每周击败{2}只龙兽（{0}/{1}）*/
+    get Text_DefeatDragonBeastsEveryWeek() { return this.getElement(486); }
+    ;
+    /**每周击败{2}只丧尸（{0}/{1}）*/
+    get Text_DefeatZombiesEveryWeek() { return this.getElement(487); }
+    ;
+    /**每周击败{2}只变异布偶（{0}/{1}）*/
+    get Text_DefeatMutatedPuppetsEveryWeek() { return this.getElement(488); }
+    ;
+    /**每周击败{2}名玩家（{0}/{1}）*/
+    get Text_DefeatPlayersPerWeek() { return this.getElement(489); }
+    ;
+    /**每周等级提升{2}级（{0}/{1}）*/
+    get Text_UpgradeByLevelsPerWeek() { return this.getElement(490); }
+    ;
+    /**每周捡到{2}个秘宝（{0}/{1}）*/
+    get Text_PickUpTreasuresEveryWeek() { return this.getElement(491); }
+    ;
+    /**每周观看{2}次广告（{0}/{1}）*/
+    get Text_WatchAdsPerWeek() { return this.getElement(492); }
+    ;
+    /**每日任务*/
+    get Text_DailyTasks() { return this.getElement(493); }
+    ;
+    /**任务已全部完成，等待刷新...*/
+    get Text_AllTasksHaveBeenCompletedWaitingForRefresh() { return this.getElement(494); }
+    ;
+    /**每周任务*/
+    get Text_WeeklyTasks() { return this.getElement(495); }
+    ;
+    /**剩余：{0}小时*/
+    get Text_RemainingHours() { return this.getElement(496); }
+    ;
+    /**剩余：{0}天*/
+    get Text_RemainingDays() { return this.getElement(497); }
+    ;
+    /**未完成*/
+    get Text_HangInTheAir() { return this.getElement(498); }
+    ;
+    /**还未装备{0},去寻找{1}*/
+    get Text_NotEquippedWithYetGoFind() { return this.getElement(499); }
+    ;
+    /**魔兽美杜莎*/
+    get Text_WarcraftMedusa() { return this.getElement(500); }
+    ;
+    /**魔兽炫彩蜘蛛*/
+    get Text_WarcraftColorfulSpider() { return this.getElement(501); }
+    ;
+    /**魔兽蜘蛛精*/
+    get Text_WarcraftSpiderSpirit() { return this.getElement(502); }
+    ;
+    /**龙之魔兽*/
+    get Text_DragonSWarcraft() { return this.getElement(503); }
+    ;
+    /**丧尸*/
+    get Text_Zombies() { return this.getElement(504); }
+    ;
+    /**变异布偶*/
+    get Text_MutatedPuppet() { return this.getElement(505); }
+    ;
+    /**黑悟空*/
+    get Text_BlackWukong() { return this.getElement(506); }
+    ;
+    /**魔兽米老鼠*/
+    get Text_MickeyMouse() { return this.getElement(507); }
+    ;
+    /**{0}级 魂士*/
+    get Text_LevelSoulMaster1() { return this.getElement(508); }
+    ;
+    /**{0}级 魂师*/
+    get Text_LevelSoulMaster2() { return this.getElement(509); }
+    ;
+    /**{0}级 大魂师*/
+    get Text_LevelSoulMaster3() { return this.getElement(510); }
+    ;
+    /**{0}级 魂尊*/
+    get Text_LevelSoulSovereign() { return this.getElement(511); }
+    ;
+    /**{0}级 魂宗*/
+    get Text_LevelSoulSect() { return this.getElement(512); }
+    ;
+    /**{0}级 魂王*/
+    get Text_LevelSoulKing() { return this.getElement(513); }
+    ;
+    /**{0}级 魂帝*/
+    get Text_LevelSoulEmperor() { return this.getElement(514); }
+    ;
+    /**{0}级 魂圣*/
+    get Text_LevelSoulSaint() { return this.getElement(515); }
+    ;
+    /**{0}级 魂斗罗*/
+    get Text_LevelContra() { return this.getElement(516); }
+    ;
+    /**{0}级 封号斗罗*/
+    get Text_LevelBannedDouluo() { return this.getElement(517); }
+    ;
+    /**{0}级 巅峰斗罗*/
+    get Text_LevelPeakDouluo() { return this.getElement(518); }
+    ;
+    /**{0}级 半神*/
+    get Text_LevelDemigod() { return this.getElement(519); }
+    ;
+    /**{0}级 神官*/
+    get Text_LevelDivineOfficer() { return this.getElement(520); }
+    ;
+    /**{0}级 真神级*/
+    get Text_LevelTrueGodLevel() { return this.getElement(521); }
+    ;
+    /**{0}级 超神级*/
+    get Text_LevelSuperGodLevel() { return this.getElement(522); }
+    ;
+    /**{0}级 超神巅峰*/
+    get Text_LevelSuperGodPeak() { return this.getElement(523); }
+    ;
+    /**{0}级 神王*/
+    get Text_LevelDivineKing() { return this.getElement(524); }
+    ;
+    /**{0}级 万古仙帝*/
+    get Text_LevelEternalImmortalEmperor() { return this.getElement(525); }
+    ;
+    /**万古仙帝*/
+    get Text_EternalImmortalEmperor() { return this.getElement(526); }
+    ;
+    /**武魂-机甲斩狂风斩(男)*/
+    get Text_MartialSoulMechSlashWindSlash_Male() { return this.getElement(527); }
+    ;
+    /**武魂-机甲斩狂风斩(女)*/
+    get Text_MartialSoulMechSlashWindSlash_Female() { return this.getElement(528); }
+    ;
+    /**金箍棒(粉)+制服女孩*/
+    get Text_GoldenHoopRodPowderUniformGirl() { return this.getElement(529); }
+    ;
+    /**昊天锤+唐三
+金箍棒(紫)+蓝银皇*/
+    get HaotianHammerTangSan_GoldenHoopRodPurpleBlueSilverEmperor() { return this.getElement(530); }
+    ;
+    /**黄金王子+JK女孩*/
+    get Text_TheGoldenPrinceJkGirl() { return this.getElement(531); }
+    ;
+    /**小蓝龙+小绿龙
+小黑龙+小橘龙*/
+    get Text_XiaolanGreenBlackOrangeDragon() { return this.getElement(532); }
+    ;
+    /**概率提升成功*/
+    get Text_ProbabilityIncreaseSuccess() { return this.getElement(533); }
+    ;
+    /**魂骨强化成功*/
+    get Text_SoulBoneStrengtheningSuccessful() { return this.getElement(534); }
+    ;
+    /**魂骨强化失败*/
+    get Text_SoulBoneStrengtheningFailed() { return this.getElement(535); }
+    ;
+    /**领取限定皮肤*/
+    get Text_ClaimLimitedSkin() { return this.getElement(536); }
+    ;
+    /**领取自动攻击*/
+    get Text_ClaimAutomaticAttack() { return this.getElement(537); }
+    ;
+    /**已获得，打开背包使用*/
+    get Text_ObtainedOpenTheBackpackToUse() { return this.getElement(538); }
+    ;
+    /**开放世界*/
+    get Text_Music_1() { return this.getElement(539); }
+    ;
+    /**留下来*/
+    get Text_Music_2() { return this.getElement(540); }
+    ;
+    /**坏人*/
+    get Text_Music_3() { return this.getElement(541); }
+    ;
+    /**我会活下去*/
+    get Text_Music_4() { return this.getElement(542); }
+    ;
+    /**让我爱你*/
+    get Text_Music_5() { return this.getElement(543); }
+    ;
+    /**跑上那座山*/
+    get Text_Music_6() { return this.getElement(544); }
+    ;
+    /**爱恨我*/
+    get Text_Music_7() { return this.getElement(545); }
+    ;
+    /**假小子*/
+    get Text_Music_8() { return this.getElement(546); }
+    ;
+    /**关闭*/
+    get Text_Music_9() { return this.getElement(547); }
+    ;
+    /**天空的*/
+    get Text_Music_10() { return this.getElement(548); }
+    ;
+    /**事实上*/
+    get Text_Music_11() { return this.getElement(549); }
+    ;
+    /**早上好*/
+    get Text_Music_12() { return this.getElement(550); }
+    ;
+    /**独自一人*/
+    get Text_Music_13() { return this.getElement(551); }
+    ;
+    /**钱德里勒*/
+    get Text_Music_14() { return this.getElement(552); }
+    ;
+    /**不想知道*/
+    get Text_Music_15() { return this.getElement(553); }
+    ;
+    /**心情*/
+    get Text_Music_16() { return this.getElement(554); }
+    ;
+    /**金轮*/
+    get Text_Music_17() { return this.getElement(555); }
+    ;
+    /**不知道叫啥*/
+    get Text_Music_18() { return this.getElement(556); }
+    ;
+    /**也不知道叫啥*/
+    get Text_Music_19() { return this.getElement(557); }
+    ;
+    /**奖励{0}魂骨碎片*/
+    get Text_RewardSoulBone() { return this.getElement(558); }
+    ;
+    /**魂骨碎片不足*/
+    get Text_InsufficientSoulBoneFragments() { return this.getElement(559); }
+    ;
+    /**免费领取{0}魂骨碎片*/
+    get Text_GetFreeBones() { return this.getElement(560); }
+    ;
+    /**成功获得魂骨碎片+{0}*/
+    get Text_SuccessfullyObtainedBones() { return this.getElement(561); }
+    ;
+    /**升级*/
+    get Text_Upgrade() { return this.getElement(562); }
+    ;
+    /**锻造魂环*/
+    get Text_ForgeSoulRings_Button() { return this.getElement(563); }
+    ;
 }
+
+var foreign28 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    LanguageConfig: LanguageConfig
+});
 
 const EXCELDATA$7 = [["ID", "Des", "PathStr", "Idles", "Moves", "MoveSpeed", "Die", "Attacks", "AttackTimePoints", "AttackOffsets", "AttackLengths", "AttackSizes", "Damages", "EffectIds", "EffectPosOffsets", "EffectRotOffsets", "EffectScales"], ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], [1, "蛇女", ["3E882EFC"], ["318618"], ["318617"], 300, "318619", ["318616"], [0.35], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["125704"], [new mw.Vector(60, 0, 0)], [new mw.Vector(0, 0, -90)], [new mw.Vector(1, 0.8, 1)]], [2, "蜘蛛", ["3E882EFC"], ["336664", "336668"], ["336669"], 250, "336816", ["336673", "336670", "336672"], [1, 0.95, 1.2], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["384353", "101411", "297932"], [new mw.Vector(170, 0, -50), new mw.Vector(200, 0, -120), new mw.Vector(100, 0, -125)], [new mw.Vector(0, -60, 0), new mw.Vector(0, 30, 10), new mw.Vector(0, 0, 0)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1), new mw.Vector(0.55, 1, 1)]], [3, "蜘蛛精", ["3E882EFC"], ["336664", "336668"], ["338467"], 250, "338468", ["338464", "338466"], [0.8, 0.8], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["297932", "101407"], [new mw.Vector(100, 0, -125), new mw.Vector(100, 0, -125)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0.55, 1, 1), new mw.Vector(1, 1, 1)]], [4, "龙", ["3E882EFC"], ["160627", "250400", "250399", "160627"], ["160628"], 250, "-1", ["250094", "250095"], [1.6, 1.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100], ["168947", "92843"], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(1, 1, 1), new mw.Vector(1, 1, 1)]], [5, "丧尸", ["3E882EFC"], ["284991", "268599"], ["285740", "269161", "285826"], 150, "-1", ["285210"], [0.55], [new mw.Vector(0, 50, 0)], [300], [new mw.Vector(50, 50, 100)], [100], ["31260"], [new mw.Vector(5, 0, 0)], [new mw.Vector(0, -30, 180)], [new mw.Vector(1, 1, 1)]], [6, "角色", ["3E882EFC"], ["285445"], ["285336", "285372", "280652", "280671", "280723", "284685", "280699", "280780"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]], [7, "角色", ["3E882EFC"], ["-1"], ["-1"], 150, "-1", ["219129", "280914", "280916"], [0.2, 0.4, 0.3], [new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0), new mw.Vector(0, 50, 0)], [300, 300, 300], [new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100), new mw.Vector(50, 50, 100)], [100, 100, 100], ["92838", "135894", "125704"], [new mw.Vector(250, 0, 0), new mw.Vector(140, 0, 0), new mw.Vector(0, 0, 0)], [new mw.Vector(0, 0, 0), new mw.Vector(0, 0, -90), new mw.Vector(0, 0, -90)], [new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(0.5, 0.5, 0.5), new mw.Vector(1, 1, 1)]]];
 class MonsterInfoConfig extends ConfigBase {
@@ -1015,7 +2669,7 @@ var foreign29 = /*#__PURE__*/Object.freeze({
     MonsterInfoConfig: MonsterInfoConfig
 });
 
-const EXCELDATA$6 = [["id", "Guid", "Annotation"], ["", "", ""], [1, "268224", "开放世界"], [2, "118698", "STAY"], [3, "118699", "bad guy"], [4, "117222", "我会活下去"], [5, "118697", "Let Me Love You"], [6, "118700", "Running up That Hill"], [7, "118701", "Love To Hate Me"], [8, "118702", "TOMBOY"], [9, "118703", "Shut Down"], [10, "118704", "Celestial"], [11, "118712", "As It Was"], [12, "118706", "Good Morning"], [13, "118707", "Alone"], [14, "118709", "Chanderiler"], [15, "118711", "Don't Wanna Know"], [16, "118716", "Mood"], [17, "117220", "金轮"], [18, "128884", "不知道叫啥"], [19, "128888", "也不知道叫啥"]];
+const EXCELDATA$6 = [["id", "Guid", "Annotation", "Desc"], ["", "", "Language", ""], [1, "268224", "Text_Music_1", "开放世界"], [2, "118698", "Text_Music_2", "STAY"], [3, "118699", "Text_Music_3", "bad guy"], [4, "117222", "Text_Music_4", "我会活下去"], [5, "118697", "Text_Music_5", "Let Me Love You"], [6, "118700", "Text_Music_6", "Running up That Hill"], [7, "118701", "Text_Music_7", "Love To Hate Me"], [8, "118702", "Text_Music_8", "TOMBOY"], [9, "118703", "Text_Music_9", "Shut Down"], [10, "118704", "Text_Music_10", "Celestial"], [11, "118712", "Text_Music_11", "As It Was"], [12, "118706", "Text_Music_12", "Good Morning"], [13, "118707", "Text_Music_13", "Alone"], [14, "118709", "Text_Music_14", "Chanderiler"], [15, "118711", "Text_Music_15", "Don't Wanna Know"], [16, "118716", "Text_Music_16", "Mood"], [17, "117220", "Text_Music_17", "金轮"], [18, "128884", "Text_Music_18", "不知道叫啥"], [19, "128888", "Text_Music_19", "也不知道叫啥"]];
 class MusicConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$6);
@@ -1075,7 +2729,7 @@ var foreign34 = /*#__PURE__*/Object.freeze({
     QuickTalkConfig: QuickTalkConfig
 });
 
-const EXCELDATA$1 = [["id", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Exp", "Diamond"], ["", "", "", "", "", "", "", "", ""], [1, "每日登陆游戏（{0}/{1}）", 1, 1, 0, 1, 100, 100, 1, 1], [2, "每日在线时长8分钟（{0}/{1}）", 1, 11, 0, 8, 800, 800, 8, 11, 3], [3, "每日在线时长15分钟（{0}/{1}）", 1, 12, 0, 15, 1500, 1500, 15, 11, 4], [4, "每日在线时长25分钟（{0}/{1}）", 1, 13, 0, 25, 2500, 2500, 25, 11, 5], [5, "每日在线时长35分钟（{0}/{1}）", 1, 14, 0, 35, 3500, 3555, 100, 11, 6], [6, "每日在线时长50分钟（{0}/{1}）", 1, 15, 0, 50, 5000, 5000, 150, 11, 7], [7, "每日在线时长60分钟（{0}/{1}）", 1, 16, 0, 60, 6000, 6000, 200, 11], [8, "每日击败1只美杜莎（{0}/{1}）", 1, 21, 0, 1, 500, 500, 0, 21, 9], [9, "每日击败3只美杜莎（{0}/{1}）", 1, 22, 0, 3, 1500, 1500, 1, 21, 10], [10, "每日击败6只美杜莎（{0}/{1}）", 1, 23, 0, 6, 3000, 3000, 2, 21, 11], [11, "每日击败10只美杜莎（{0}/{1}）", 1, 24, 0, 10, 5000, 5000, 3, 21, 12], [12, "每日击败20只美杜莎（{0}/{1}）", 1, 25, 0, 20, 10000, 10000, 5, 21], [13, "每日击败1只蜘蛛精（{0}/{1}）", 1, 31, 0, 1, 250, 250, 0, 31, 14], [14, "每日击败3只蜘蛛精（{0}/{1}）", 1, 32, 0, 3, 750, 750, 1, 31, 15], [15, "每日击败6只蜘蛛精（{0}/{1}）", 1, 33, 0, 6, 1500, 1500, 2, 31, 16], [16, "每日击败10只蜘蛛精（{0}/{1}）", 1, 34, 0, 10, 2500, 2500, 3, 31, 17], [17, "每日击败20只蜘蛛精（{0}/{1}）", 1, 35, 0, 20, 5000, 5000, 5, 31], [18, "每日击败1只炫彩蜘蛛（{0}/{1}）", 1, 41, 0, 1, 250, 250, 0, 41, 19], [19, "每日击败3只炫彩蜘蛛（{0}/{1}）", 1, 42, 0, 3, 750, 750, 1, 41, 20], [20, "每日击败6只炫彩蜘蛛（{0}/{1}）", 1, 43, 0, 6, 1500, 1500, 2, 41, 21], [21, "每日击败10只炫彩蜘蛛（{0}/{1}）", 1, 44, 0, 10, 2500, 2500, 3, 41, 22], [22, "每日击败20只炫彩蜘蛛（{0}/{1}）", 1, 45, 0, 20, 5000, 5000, 5, 41], [23, "每日击败1只龙兽（{0}/{1}）", 1, 51, 0, 1, 250, 250, 0, 51, 24], [24, "每日击败3只龙兽（{0}/{1}）", 1, 52, 0, 3, 750, 750, 1, 51, 25], [25, "每日击败6只龙兽（{0}/{1}）", 1, 53, 0, 6, 1500, 1500, 2, 51, 26], [26, "每日击败10只龙兽（{0}/{1}）", 1, 54, 0, 10, 2500, 2500, 3, 51, 27], [27, "每日击败20只龙兽（{0}/{1}）", 1, 55, 0, 20, 5000, 5000, 5, 51], [28, "每日击败1只丧尸（{0}/{1}）", 1, 61, 0, 1, 250, 250, 0, 61, 29], [29, "每日击败3只丧尸（{0}/{1}）", 1, 62, 0, 3, 750, 750, 1, 61, 30], [30, "每日击败6只丧尸（{0}/{1}）", 1, 63, 0, 6, 1500, 1500, 2, 61, 31], [31, "每日击败10只丧尸（{0}/{1}）", 1, 64, 0, 10, 2500, 2500, 3, 61, 32], [32, "每日击败20只丧尸（{0}/{1}）", 1, 65, 0, 20, 5000, 5000, 5, 61], [33, "每日击败1只变异布偶（{0}/{1}）", 1, 71, 0, 1, 250, 250, 0, 71, 34], [34, "每日击败3只变异布偶（{0}/{1}）", 1, 72, 0, 3, 750, 750, 1, 71, 35], [35, "每日击败6只变异布偶（{0}/{1}）", 1, 73, 0, 6, 1500, 1500, 2, 71, 36], [36, "每日击败10只变异布偶（{0}/{1}）", 1, 74, 0, 10, 2500, 2500, 3, 71, 37], [37, "每日击败20只变异布偶（{0}/{1}）", 1, 75, 0, 20, 5000, 5000, 5, 71], [38, "每日击败1名玩家（{0}/{1}）", 1, 81, 0, 1, 250, 250, 0, 81, 39], [39, "每日击败3名玩家（{0}/{1}）", 1, 82, 0, 3, 750, 750, 1, 81, 40], [40, "每日击败6名玩家（{0}/{1}）", 1, 83, 0, 6, 1500, 1500, 2, 81, 41], [41, "每日击败10名玩家（{0}/{1}）", 1, 84, 0, 10, 2500, 2500, 3, 81, 42], [42, "每日击败20名玩家（{0}/{1}）", 1, 85, 0, 20, 5000, 5000, 5, 81], [43, "每日等级提升1级（{0}/{1}）", 1, 91, 0, 1, 250, 250, 0, 91, 44], [44, "每日等级提升3级（{0}/{1}）", 1, 92, 0, 3, 750, 750, 1, 91, 45], [45, "每日等级提升6级（{0}/{1}）", 1, 93, 0, 6, 1500, 1500, 2, 91, 46], [46, "每日等级提升10级（{0}/{1}）", 1, 94, 0, 10, 2500, 2500, 3, 91, 47], [47, "每日等级提升20级（{0}/{1}）", 1, 95, 0, 20, 5000, 5000, 5, 91], [48, "每日捡到1个秘宝（{0}/{1}）", 1, 101, 0, 1, 250, 250, 0, 101, 49], [49, "每日捡到3个秘宝（{0}/{1}）", 1, 102, 0, 3, 750, 750, 1, 101, 50], [50, "每日捡到6个秘宝（{0}/{1}）", 1, 103, 0, 6, 1500, 1500, 2, 101, 51], [51, "每日捡到10个秘宝（{0}/{1}）", 1, 104, 0, 10, 2500, 2500, 3, 101, 52], [52, "每日捡到20个秘宝（{0}/{1}）", 1, 105, 0, 20, 5000, 5000, 5, 101], [53, "每日观看1次广告（{0}/{1}）", 1, 111, 0, 1, 250, 250, 5, 111, 54], [54, "每日观看3次广告（{0}/{1}）", 1, 112, 0, 3, 750, 750, 15, 111, 55], [55, "每日观看6次广告（{0}/{1}）", 1, 113, 0, 6, 1500, 1500, 30, 111, 56], [56, "每日观看10次广告（{0}/{1}）", 1, 114, 0, 10, 2500, 2500, 50, 111, 57], [57, "每日观看20次广告（{0}/{1}）", 1, 115, 0, 20, 5000, 5000, 100, 111], [58, "每周登录2天（{0}/{1}）", 2, 201, 0, 2, 2000, 2000, 100, 201, 59], [59, "每周登录3天（{0}/{1}）", 2, 202, 0, 3, 3000, 3000, 100, 201, 60], [60, "每周登录5天（{0}/{1}）", 2, 203, 0, 5, 5000, 5000, 100, 201, 61], [61, "每周登录7天（{0}/{1}）", 2, 204, 0, 7, 7000, 7000, 100, 201], [62, "每周时长达到30分钟2天（{0}/{1}）", 2, 211, 0, 2, 200, 200, 100, 211, 63], [63, "每周时长达到30分钟3天（{0}/{1}）", 2, 212, 0, 3, 300, 300, 300, 211, 64], [64, "每周时长达到30分钟5天（{0}/{1}）", 2, 213, 0, 5, 500, 500, 500, 211, 65], [65, "每周时长达到30分钟7天（{0}/{1}）", 2, 214, 0, 7, 700, 700, 1000, 211], [66, "每周击败50只美杜莎（{0}/{1}）", 2, 221, 0, 50, 25000, 25000, 5, 221, 67], [67, "每周击败150只美杜莎（{0}/{1}）", 2, 222, 0, 150, 75000, 75000, 15, 221, 68], [68, "每周击败300只美杜莎（{0}/{1}）", 2, 223, 0, 300, 150000, 150000, 30, 221, 69], [69, "每周击败500只美杜莎（{0}/{1}）", 2, 224, 0, 500, 250000, 250000, 50, 221, 70], [70, "每周击败1000只美杜莎（{0}/{1}）", 2, 225, 0, 1000, 500000, 500000, 100, 221], [71, "每周击败50只蜘蛛精（{0}/{1}）", 2, 231, 0, 50, 25000, 25000, 5, 231, 72], [72, "每周击败150只蜘蛛精（{0}/{1}）", 2, 232, 0, 150, 75000, 75000, 15, 231, 73], [73, "每周击败300只蜘蛛精（{0}/{1}）", 2, 233, 0, 300, 150000, 150000, 30, 231, 74], [74, "每周击败500只蜘蛛精（{0}/{1}）", 2, 234, 0, 500, 250000, 250000, 50, 231, 75], [75, "每周击败1000只蜘蛛精（{0}/{1}）", 2, 235, 0, 1000, 500000, 500000, 100, 231], [76, "每周击败50只炫彩蜘蛛（{0}/{1}）", 2, 241, 0, 50, 25000, 25000, 5, 241, 77], [77, "每周击败150只炫彩蜘蛛（{0}/{1}）", 2, 241, 0, 150, 75000, 75000, 15, 241, 78], [78, "每周击败300只炫彩蜘蛛（{0}/{1}）", 2, 241, 0, 300, 150000, 150000, 30, 241, 79], [79, "每周击败500只炫彩蜘蛛（{0}/{1}）", 2, 241, 0, 500, 250000, 250000, 50, 241, 80], [80, "每周击败1000只炫彩蜘蛛（{0}/{1}）", 2, 241, 0, 1000, 500000, 500000, 100, 241], [81, "每周击败50只龙兽（{0}/{1}）", 2, 251, 0, 50, 25000, 25000, 5, 251, 82], [82, "每周击败150只龙兽（{0}/{1}）", 2, 252, 0, 150, 75000, 75000, 15, 251, 83], [83, "每周击败300只龙兽（{0}/{1}）", 2, 253, 0, 300, 150000, 150000, 30, 251, 84], [84, "每周击败500只龙兽（{0}/{1}）", 2, 254, 0, 500, 250000, 250000, 50, 251, 85], [85, "每周击败1000只龙兽（{0}/{1}）", 2, 255, 0, 1000, 500000, 500000, 100, 251], [86, "每周击败50只丧尸（{0}/{1}）", 2, 261, 0, 50, 25000, 25000, 5, 261, 87], [87, "每周击败150只丧尸（{0}/{1}）", 2, 262, 0, 150, 75000, 75000, 15, 261, 88], [88, "每周击败300只丧尸（{0}/{1}）", 2, 263, 0, 300, 150000, 150000, 30, 261, 89], [89, "每周击败500只丧尸（{0}/{1}）", 2, 264, 0, 500, 250000, 250000, 50, 261, 90], [90, "每周击败1000只丧尸（{0}/{1}）", 2, 265, 0, 1000, 500000, 500000, 100, 261], [91, "每周击败50只变异布偶（{0}/{1}）", 2, 271, 0, 50, 25000, 25000, 5, 271, 92], [92, "每周击败150只变异布偶（{0}/{1}）", 2, 272, 0, 150, 75000, 75000, 15, 271, 93], [93, "每周击败300只变异布偶（{0}/{1}）", 2, 273, 0, 300, 150000, 150000, 30, 271, 94], [94, "每周击败500只变异布偶（{0}/{1}）", 2, 274, 0, 500, 250000, 250000, 50, 271, 95], [95, "每周击败1000只变异布偶（{0}/{1}）", 2, 275, 0, 1000, 500000, 500000, 100, 271], [96, "每周击败50名玩家（{0}/{1}）", 2, 281, 0, 50, 25000, 25000, 5, 281, 97], [97, "每周击败150名玩家（{0}/{1}）", 2, 282, 0, 150, 75000, 75000, 15, 281, 98], [98, "每周击败300名玩家（{0}/{1}）", 2, 283, 0, 300, 150000, 150000, 30, 281, 99], [99, "每周击败500名玩家（{0}/{1}）", 2, 284, 0, 500, 250000, 250000, 50, 281, 100], [100, "每周击败1000名玩家（{0}/{1}）", 2, 285, 0, 1000, 500000, 500000, 100, 281], [101, "每周等级提升10级（{0}/{1}）", 2, 291, 0, 10, 2500, 2500, 5, 291, 102], [102, "每周等级提升30级（{0}/{1}）", 2, 292, 0, 30, 7500, 7500, 15, 291, 103], [103, "每周等级提升60级（{0}/{1}）", 2, 293, 0, 60, 15000, 15000, 30, 291, 104], [104, "每周等级提升100级（{0}/{1}）", 2, 294, 0, 100, 25000, 25000, 50, 291, 105], [105, "每周等级提升200级（{0}/{1}）", 2, 295, 0, 200, 50000, 50000, 100, 291], [106, "每周捡到10个秘宝（{0}/{1}）", 2, 301, 0, 10, 2500, 2500, 5, 301, 107], [107, "每周捡到30个秘宝（{0}/{1}）", 2, 302, 0, 30, 7500, 7500, 15, 301, 108], [108, "每周捡到60个秘宝（{0}/{1}）", 2, 303, 0, 60, 15000, 15000, 30, 301, 109], [109, "每周捡到100个秘宝（{0}/{1}）", 2, 304, 0, 100, 25000, 25000, 50, 301, 110], [110, "每周捡到200个秘宝（{0}/{1}）", 2, 305, 0, 200, 50000, 50000, 100, 301], [111, "每周观看10次广告（{0}/{1}）", 2, 311, 0, 10, 2500, 2500, 50, 311, 112], [112, "每周观看30次广告（{0}/{1}）", 2, 312, 0, 30, 7500, 7500, 150, 311, 113], [113, "每周观看60次广告（{0}/{1}）", 2, 313, 0, 60, 15000, 15000, 300, 311, 114], [114, "每周观看100次广告（{0}/{1}）", 2, 314, 0, 100, 25000, 25000, 500, 311, 115], [115, "每周观看200次广告（{0}/{1}）", 2, 315, 0, 200, 50000, 50000, 1000, 311]];
+const EXCELDATA$1 = [["id", "Describe", "Name", "TaskType", "TaskItemType", "NextId", "TragetNum", "Coin", "Exp", "Diamond"], ["", "", "Language", "", "", "", "", "", "", ""], [1, "每日登陆游戏（{0}/{1}）", "Text_DailyLoginToGames", 1, 1, 0, 1, 100, 100, 1, 1], [2, "每日在线时长8分钟（{0}/{1}）", "Text_DailyOnlineMinutes", 1, 11, 0, 8, 800, 800, 8, 11, 3], [3, "每日在线时长15分钟（{0}/{1}）", "Text_DailyOnlineMinutes", 1, 12, 0, 15, 1500, 1500, 15, 11, 4], [4, "每日在线时长25分钟（{0}/{1}）", "Text_DailyOnlineMinutes", 1, 13, 0, 25, 2500, 2500, 25, 11, 5], [5, "每日在线时长35分钟（{0}/{1}）", "Text_DailyOnlineMinutes", 1, 14, 0, 35, 3500, 3555, 100, 11, 6], [6, "每日在线时长50分钟（{0}/{1}）", "Text_DailyOnlineMinutes", 1, 15, 0, 50, 5000, 5000, 150, 11, 7], [7, "每日在线时长60分钟（{0}/{1}）", "Text_DailyOnlineMinutes", 1, 16, 0, 60, 6000, 6000, 200, 11], [8, "每日击败1只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryDay", 1, 21, 0, 1, 500, 500, 0, 21, 9], [9, "每日击败3只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryDay", 1, 22, 0, 3, 1500, 1500, 1, 21, 10], [10, "每日击败6只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryDay", 1, 23, 0, 6, 3000, 3000, 2, 21, 11], [11, "每日击败10只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryDay", 1, 24, 0, 10, 5000, 5000, 3, 21, 12], [12, "每日击败20只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryDay", 1, 25, 0, 20, 10000, 10000, 5, 21], [13, "每日击败1只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsDaily", 1, 31, 0, 1, 250, 250, 0, 31, 14], [14, "每日击败3只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsDaily", 1, 32, 0, 3, 750, 750, 1, 31, 15], [15, "每日击败6只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsDaily", 1, 33, 0, 6, 1500, 1500, 2, 31, 16], [16, "每日击败10只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsDaily", 1, 34, 0, 10, 2500, 2500, 3, 31, 17], [17, "每日击败20只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsDaily", 1, 35, 0, 20, 5000, 5000, 5, 31], [18, "每日击败1只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersDaily", 1, 41, 0, 1, 250, 250, 0, 41, 19], [19, "每日击败3只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersDaily", 1, 42, 0, 3, 750, 750, 1, 41, 20], [20, "每日击败6只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersDaily", 1, 43, 0, 6, 1500, 1500, 2, 41, 21], [21, "每日击败10只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersDaily", 1, 44, 0, 10, 2500, 2500, 3, 41, 22], [22, "每日击败20只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersDaily", 1, 45, 0, 20, 5000, 5000, 5, 41], [23, "每日击败1只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsDaily", 1, 51, 0, 1, 250, 250, 0, 51, 24], [24, "每日击败3只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsDaily", 1, 52, 0, 3, 750, 750, 1, 51, 25], [25, "每日击败6只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsDaily", 1, 53, 0, 6, 1500, 1500, 2, 51, 26], [26, "每日击败10只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsDaily", 1, 54, 0, 10, 2500, 2500, 3, 51, 27], [27, "每日击败20只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsDaily", 1, 55, 0, 20, 5000, 5000, 5, 51], [28, "每日击败1只丧尸（{0}/{1}）", "Text_DefeatZombiesDaily", 1, 61, 0, 1, 250, 250, 0, 61, 29], [29, "每日击败3只丧尸（{0}/{1}）", "Text_DefeatZombiesDaily", 1, 62, 0, 3, 750, 750, 1, 61, 30], [30, "每日击败6只丧尸（{0}/{1}）", "Text_DefeatZombiesDaily", 1, 63, 0, 6, 1500, 1500, 2, 61, 31], [31, "每日击败10只丧尸（{0}/{1}）", "Text_DefeatZombiesDaily", 1, 64, 0, 10, 2500, 2500, 3, 61, 32], [32, "每日击败20只丧尸（{0}/{1}）", "Text_DefeatZombiesDaily", 1, 65, 0, 20, 5000, 5000, 5, 61], [33, "每日击败1只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsDaily", 1, 71, 0, 1, 250, 250, 0, 71, 34], [34, "每日击败3只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsDaily", 1, 72, 0, 3, 750, 750, 1, 71, 35], [35, "每日击败6只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsDaily", 1, 73, 0, 6, 1500, 1500, 2, 71, 36], [36, "每日击败10只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsDaily", 1, 74, 0, 10, 2500, 2500, 3, 71, 37], [37, "每日击败20只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsDaily", 1, 75, 0, 20, 5000, 5000, 5, 71], [38, "每日击败1名玩家（{0}/{1}）", "Text_DefeatPlayersDaily", 1, 81, 0, 1, 250, 250, 0, 81, 39], [39, "每日击败3名玩家（{0}/{1}）", "Text_DefeatPlayersDaily", 1, 82, 0, 3, 750, 750, 1, 81, 40], [40, "每日击败6名玩家（{0}/{1}）", "Text_DefeatPlayersDaily", 1, 83, 0, 6, 1500, 1500, 2, 81, 41], [41, "每日击败10名玩家（{0}/{1}）", "Text_DefeatPlayersDaily", 1, 84, 0, 10, 2500, 2500, 3, 81, 42], [42, "每日击败20名玩家（{0}/{1}）", "Text_DefeatPlayersDaily", 1, 85, 0, 20, 5000, 5000, 5, 81], [43, "每日等级提升1级（{0}/{1}）", "Text_DailyLevelIncreaseByLevels", 1, 91, 0, 1, 250, 250, 0, 91, 44], [44, "每日等级提升3级（{0}/{1}）", "Text_DailyLevelIncreaseByLevels", 1, 92, 0, 3, 750, 750, 1, 91, 45], [45, "每日等级提升6级（{0}/{1}）", "Text_DailyLevelIncreaseByLevels", 1, 93, 0, 6, 1500, 1500, 2, 91, 46], [46, "每日等级提升10级（{0}/{1}）", "Text_DailyLevelIncreaseByLevels", 1, 94, 0, 10, 2500, 2500, 3, 91, 47], [47, "每日等级提升20级（{0}/{1}）", "Text_DailyLevelIncreaseByLevels", 1, 95, 0, 20, 5000, 5000, 5, 91], [48, "每日捡到1个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryDay", 1, 101, 0, 1, 250, 250, 0, 101, 49], [49, "每日捡到3个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryDay", 1, 102, 0, 3, 750, 750, 1, 101, 50], [50, "每日捡到6个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryDay", 1, 103, 0, 6, 1500, 1500, 2, 101, 51], [51, "每日捡到10个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryDay", 1, 104, 0, 10, 2500, 2500, 3, 101, 52], [52, "每日捡到20个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryDay", 1, 105, 0, 20, 5000, 5000, 5, 101], [53, "每日观看1次广告（{0}/{1}）", "Text_WatchAdsPerDay", 1, 111, 0, 1, 250, 250, 5, 111, 54], [54, "每日观看3次广告（{0}/{1}）", "Text_WatchAdsPerDay", 1, 112, 0, 3, 750, 750, 15, 111, 55], [55, "每日观看6次广告（{0}/{1}）", "Text_WatchAdsPerDay", 1, 113, 0, 6, 1500, 1500, 30, 111, 56], [56, "每日观看10次广告（{0}/{1}）", "Text_WatchAdsPerDay", 1, 114, 0, 10, 2500, 2500, 50, 111, 57], [57, "每日观看20次广告（{0}/{1}）", "Text_WatchAdsPerDay", 1, 115, 0, 20, 5000, 5000, 100, 111], [58, "每周登录2天（{0}/{1}）", "Text_LoginDaysAWeek", 2, 201, 0, 2, 2000, 2000, 100, 201, 59], [59, "每周登录3天（{0}/{1}）", "Text_LoginDaysAWeek", 2, 202, 0, 3, 3000, 3000, 100, 201, 60], [60, "每周登录5天（{0}/{1}）", "Text_LoginDaysAWeek", 2, 203, 0, 5, 5000, 5000, 100, 201, 61], [61, "每周登录7天（{0}/{1}）", "Text_LoginDaysAWeek", 2, 204, 0, 7, 7000, 7000, 100, 201], [62, "每周时长达到30分钟2天（{0}/{1}）", "Text_UpTo30MinutesAndDaysPerWeek", 2, 211, 0, 2, 200, 200, 100, 211, 63], [63, "每周时长达到30分钟3天（{0}/{1}）", "Text_UpTo30MinutesAndDaysPerWeek", 2, 212, 0, 3, 300, 300, 300, 211, 64], [64, "每周时长达到30分钟5天（{0}/{1}）", "Text_UpTo30MinutesAndDaysPerWeek", 2, 213, 0, 5, 500, 500, 500, 211, 65], [65, "每周时长达到30分钟7天（{0}/{1}）", "Text_UpTo30MinutesAndDaysPerWeek", 2, 214, 0, 7, 700, 700, 1000, 211], [66, "每周击败50只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryWeek", 2, 221, 0, 50, 25000, 25000, 5, 221, 67], [67, "每周击败150只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryWeek", 2, 222, 0, 150, 75000, 75000, 15, 221, 68], [68, "每周击败300只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryWeek", 2, 223, 0, 300, 150000, 150000, 30, 221, 69], [69, "每周击败500只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryWeek", 2, 224, 0, 500, 250000, 250000, 50, 221, 70], [70, "每周击败1000只美杜莎（{0}/{1}）", "Text_DefeatMedusaEveryWeek", 2, 225, 0, 1000, 500000, 500000, 100, 221], [71, "每周击败50只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsEveryWeek", 2, 231, 0, 50, 25000, 25000, 5, 231, 72], [72, "每周击败150只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsEveryWeek", 2, 232, 0, 150, 75000, 75000, 15, 231, 73], [73, "每周击败300只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsEveryWeek", 2, 233, 0, 300, 150000, 150000, 30, 231, 74], [74, "每周击败500只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsEveryWeek", 2, 234, 0, 500, 250000, 250000, 50, 231, 75], [75, "每周击败1000只蜘蛛精（{0}/{1}）", "Text_DefeatSpiderSpiritsEveryWeek", 2, 235, 0, 1000, 500000, 500000, 100, 231], [76, "每周击败50只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersEveryWeek", 2, 241, 0, 50, 25000, 25000, 5, 241, 77], [77, "每周击败150只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersEveryWeek", 2, 241, 0, 150, 75000, 75000, 15, 241, 78], [78, "每周击败300只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersEveryWeek", 2, 241, 0, 300, 150000, 150000, 30, 241, 79], [79, "每周击败500只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersEveryWeek", 2, 241, 0, 500, 250000, 250000, 50, 241, 80], [80, "每周击败1000只炫彩蜘蛛（{0}/{1}）", "Text_DefeatDazzlingSpidersEveryWeek", 2, 241, 0, 1000, 500000, 500000, 100, 241], [81, "每周击败50只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsEveryWeek", 2, 251, 0, 50, 25000, 25000, 5, 251, 82], [82, "每周击败150只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsEveryWeek", 2, 252, 0, 150, 75000, 75000, 15, 251, 83], [83, "每周击败300只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsEveryWeek", 2, 253, 0, 300, 150000, 150000, 30, 251, 84], [84, "每周击败500只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsEveryWeek", 2, 254, 0, 500, 250000, 250000, 50, 251, 85], [85, "每周击败1000只龙兽（{0}/{1}）", "Text_DefeatDragonBeastsEveryWeek", 2, 255, 0, 1000, 500000, 500000, 100, 251], [86, "每周击败50只丧尸（{0}/{1}）", "Text_DefeatZombiesEveryWeek", 2, 261, 0, 50, 25000, 25000, 5, 261, 87], [87, "每周击败150只丧尸（{0}/{1}）", "Text_DefeatZombiesEveryWeek", 2, 262, 0, 150, 75000, 75000, 15, 261, 88], [88, "每周击败300只丧尸（{0}/{1}）", "Text_DefeatZombiesEveryWeek", 2, 263, 0, 300, 150000, 150000, 30, 261, 89], [89, "每周击败500只丧尸（{0}/{1}）", "Text_DefeatZombiesEveryWeek", 2, 264, 0, 500, 250000, 250000, 50, 261, 90], [90, "每周击败1000只丧尸（{0}/{1}）", "Text_DefeatZombiesEveryWeek", 2, 265, 0, 1000, 500000, 500000, 100, 261], [91, "每周击败50只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsEveryWeek", 2, 271, 0, 50, 25000, 25000, 5, 271, 92], [92, "每周击败150只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsEveryWeek", 2, 272, 0, 150, 75000, 75000, 15, 271, 93], [93, "每周击败300只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsEveryWeek", 2, 273, 0, 300, 150000, 150000, 30, 271, 94], [94, "每周击败500只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsEveryWeek", 2, 274, 0, 500, 250000, 250000, 50, 271, 95], [95, "每周击败1000只变异布偶（{0}/{1}）", "Text_DefeatMutatedPuppetsEveryWeek", 2, 275, 0, 1000, 500000, 500000, 100, 271], [96, "每周击败50名玩家（{0}/{1}）", "Text_DefeatPlayersPerWeek", 2, 281, 0, 50, 25000, 25000, 5, 281, 97], [97, "每周击败150名玩家（{0}/{1}）", "Text_DefeatPlayersPerWeek", 2, 282, 0, 150, 75000, 75000, 15, 281, 98], [98, "每周击败300名玩家（{0}/{1}）", "Text_DefeatPlayersPerWeek", 2, 283, 0, 300, 150000, 150000, 30, 281, 99], [99, "每周击败500名玩家（{0}/{1}）", "Text_DefeatPlayersPerWeek", 2, 284, 0, 500, 250000, 250000, 50, 281, 100], [100, "每周击败1000名玩家（{0}/{1}）", "Text_DefeatPlayersPerWeek", 2, 285, 0, 1000, 500000, 500000, 100, 281], [101, "每周等级提升10级（{0}/{1}）", "Text_UpgradeByLevelsPerWeek", 2, 291, 0, 10, 2500, 2500, 5, 291, 102], [102, "每周等级提升30级（{0}/{1}）", "Text_UpgradeByLevelsPerWeek", 2, 292, 0, 30, 7500, 7500, 15, 291, 103], [103, "每周等级提升60级（{0}/{1}）", "Text_UpgradeByLevelsPerWeek", 2, 293, 0, 60, 15000, 15000, 30, 291, 104], [104, "每周等级提升100级（{0}/{1}）", "Text_UpgradeByLevelsPerWeek", 2, 294, 0, 100, 25000, 25000, 50, 291, 105], [105, "每周等级提升200级（{0}/{1}）", "Text_UpgradeByLevelsPerWeek", 2, 295, 0, 200, 50000, 50000, 100, 291], [106, "每周捡到10个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryWeek", 2, 301, 0, 10, 2500, 2500, 5, 301, 107], [107, "每周捡到30个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryWeek", 2, 302, 0, 30, 7500, 7500, 15, 301, 108], [108, "每周捡到60个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryWeek", 2, 303, 0, 60, 15000, 15000, 30, 301, 109], [109, "每周捡到100个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryWeek", 2, 304, 0, 100, 25000, 25000, 50, 301, 110], [110, "每周捡到200个秘宝（{0}/{1}）", "Text_PickUpTreasuresEveryWeek", 2, 305, 0, 200, 50000, 50000, 100, 301], [111, "每周观看10次广告（{0}/{1}）", "Text_WatchAdsPerWeek", 2, 311, 0, 10, 2500, 2500, 50, 311, 112], [112, "每周观看30次广告（{0}/{1}）", "Text_WatchAdsPerWeek", 2, 312, 0, 30, 7500, 7500, 150, 311, 113], [113, "每周观看60次广告（{0}/{1}）", "Text_WatchAdsPerWeek", 2, 313, 0, 60, 15000, 15000, 300, 311, 114], [114, "每周观看100次广告（{0}/{1}）", "Text_WatchAdsPerWeek", 2, 314, 0, 100, 25000, 25000, 500, 311, 115], [115, "每周观看200次广告（{0}/{1}）", "Text_WatchAdsPerWeek", 2, 315, 0, 200, 50000, 50000, 1000, 311]];
 class TaskConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$1);
@@ -1475,6 +3129,42 @@ var foreign2 = /*#__PURE__*/Object.freeze({
 });
 
 class GlobalData {
+    static get mpStr() {
+        return GameConfig.Language.Text_SoulPower.Value;
+    }
+    static get atkStr() {
+        return GameConfig.Language.Text_MartialSoul.Value;
+    }
+    static get weaponStr() {
+        return GameConfig.Language.Text_MartialSoul.Value;
+    }
+    static get skinStr() {
+        return GameConfig.Language.Text_SoulMaster.Value;
+    }
+    static get equipStr() {
+        return GameConfig.Language.Text_SoulBone.Value;
+    }
+    static get petStr() {
+        return GameConfig.Language.Text_Ayakashi.Value;
+    }
+    static get rarityStr1() {
+        return GameConfig.Language.Text_Ordinary.Value;
+    }
+    static get rarityStr2() {
+        return GameConfig.Language.Text_Rare.Value;
+    }
+    static get rarityStr3() {
+        return GameConfig.Language.Text_Epic.Value;
+    }
+    static get rarityStr4() {
+        return GameConfig.Language.Text_Legend.Value;
+    }
+    static get skillName_1() {
+        return GameConfig.Language.Text_KillingGodDomain.Value;
+    }
+    static get gameName() {
+        return GameConfig.Language.Text_DoushenContinent_MySoulRingUnlimitedUpgrade.Value;
+    }
 }
 GlobalData.languageId = -1;
 /**log级别"None": "0", "Log": "1", "Warn": "2", "Error": "3" */
@@ -1487,6 +3177,7 @@ GlobalData.isOpenIAA = false;
 GlobalData.isOpenCcreenshot = false;
 /**是否开启攻击范围检测可视化 */
 GlobalData.isDebug = false;
+GlobalData.worldRankCount = 500;
 /**全局UI点击音效Guid */
 GlobalData.uiClickSoundGuid = GameConfig.Assets.getElement(1).Guid;
 /**爆炸金币特效Guid */
@@ -1516,16 +3207,6 @@ GlobalData.targetEffectGuid = GameConfig.Assets.getElement(22).Guid;
 GlobalData.atk = 0;
 GlobalData.hp = 0;
 GlobalData.totalBagLen = 157;
-GlobalData.mpStr = `魂力`;
-GlobalData.atkStr = `武魂`;
-GlobalData.weaponStr = `武魂`;
-GlobalData.skinStr = `魂师`;
-GlobalData.equipStr = `魂骨`;
-GlobalData.petStr = `魂兽`;
-GlobalData.rarityStr1 = `普通`;
-GlobalData.rarityStr2 = "稀有";
-GlobalData.rarityStr3 = "史诗";
-GlobalData.rarityStr4 = "传说";
 GlobalData.upgradeExpMultiple = 500;
 GlobalData.monsterHurt = 200;
 GlobalData.attackMp = 1;
@@ -1533,7 +3214,6 @@ GlobalData.skillCD_1 = 60;
 GlobalData.skillMp_1 = 100;
 GlobalData.skillLvLimit_1 = 90;
 GlobalData.skillContinue_1 = 20;
-GlobalData.skillName_1 = `杀神领域`;
 GlobalData.baseSkillDamage = 1;
 GlobalData.skillSoundId_1 = `307720`;
 GlobalData.skillEffectId_1 = `113913`;
@@ -1548,12 +3228,13 @@ GlobalData.pathStrMap = new Map([
     [6, "0118B262"]
 ]);
 GlobalData.signInDays = 7;
-GlobalData.gameName = `斗神大陆(我的魂环无限升级)`;
 GlobalData.addCoinCount = 2888888;
 GlobalData.addDiamondCount = 5;
+GlobalData.addBoneCount = 5;
 GlobalData.arkIcon = "312541";
 GlobalData.coinIcon = "151950";
 GlobalData.diamondIcon = "103220";
+GlobalData.boneIcon = "351119";
 
 var foreign37 = /*#__PURE__*/Object.freeze({
     __proto__: null,
@@ -2702,49 +4383,54 @@ class Utils {
         let level = Math.floor(lv / 10);
         switch (level) {
             case 0:
-                return `${lv}级 魂士`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulMaster1.Value, lv);
             case 1:
-                return `${lv}级 魂师`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulMaster2.Value, lv);
             case 2:
-                return `${lv}级 大魂师`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulMaster3.Value, lv);
             case 3:
-                return `${lv}级 魂尊`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulSovereign.Value, lv);
             case 4:
-                return `${lv}级 魂宗`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulSect.Value, lv);
             case 5:
-                return `${lv}级 魂王`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulKing.Value, lv);
             case 6:
-                return `${lv}级 魂帝`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulEmperor.Value, lv);
             case 7:
-                return `${lv}级 魂圣`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSoulSaint.Value, lv);
             case 8:
-                return `${lv}级 魂斗罗`;
+                return StringUtil.format(GameConfig.Language.Text_LevelContra.Value, lv);
             case 9:
                 if (lv <= 94)
-                    return `${lv}级 封号斗罗`;
+                    return StringUtil.format(GameConfig.Language.Text_LevelBannedDouluo.Value, lv);
                 if (lv <= 98)
-                    return `${lv}级 巅峰斗罗`;
+                    return StringUtil.format(GameConfig.Language.Text_LevelPeakDouluo.Value, lv);
                 if (lv == 99)
-                    return `${lv}级 半神`;
+                    return StringUtil.format(GameConfig.Language.Text_LevelDemigod.Value, lv);
             case 10:
-                return `${lv}级 神官`;
+                return StringUtil.format(GameConfig.Language.Text_LevelDivineOfficer.Value, lv);
             case 11:
-                return `${lv}级 真神级`;
+                return StringUtil.format(GameConfig.Language.Text_LevelTrueGodLevel.Value, lv);
             case 12:
             case 13:
-                return `${lv}级 超神级`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSuperGodLevel.Value, lv);
             case 14:
-                return `${lv}级 超神巅峰`;
+                return StringUtil.format(GameConfig.Language.Text_LevelSuperGodPeak.Value, lv);
             case 15:
-                return `${lv}级 神王`;
+                return StringUtil.format(GameConfig.Language.Text_LevelDivineKing.Value, lv);
             case 16:
-                return `${lv}级 万古仙帝`;
+                return StringUtil.format(GameConfig.Language.Text_LevelEternalImmortalEmperor.Value, lv);
             default:
                 if (level >= 17) {
-                    let titleName = await this.getTitleNameByUserId(userId);
-                    if (titleName == "-1")
-                        titleName = "万古仙帝";
-                    return `${lv}级 ${titleName}`;
+                    if (GlobalData.languageId == 0) {
+                        return StringUtil.format(GameConfig.Language.Text_LevelEternalImmortalEmperor.Value, lv);
+                    }
+                    else {
+                        let titleName = await this.getTitleNameByUserId(userId);
+                        if (titleName == "-1")
+                            titleName = GameConfig.Language.Text_EternalImmortalEmperor.Value;
+                        return `${lv}${GameConfig.Language.Text_Level.Value} ${titleName}`;
+                    }
                 }
         }
     }
@@ -2757,46 +4443,50 @@ class Utils {
     static randomNpcName(monsterId) {
         switch (monsterId) {
             case 1:
-                return "魔兽美杜莎";
+                return GameConfig.Language.Text_WarcraftMedusa.Value;
             case 2:
-                return "魔兽炫彩蜘蛛";
+                return GameConfig.Language.Text_WarcraftColorfulSpider.Value;
             case 3:
-                return "魔兽蜘蛛精";
+                return GameConfig.Language.Text_WarcraftSpiderSpirit.Value;
             case 4:
-                return "龙之魔兽";
+                return GameConfig.Language.Text_DragonSWarcraft.Value;
             case 5:
-                return "丧尸";
+                return GameConfig.Language.Text_Zombies.Value;
             case 6:
-                return "变异布偶";
+                return GameConfig.Language.Text_MutatedPuppet.Value;
             case 100:
-                return "黑悟空";
+                return GameConfig.Language.Text_BlackWukong.Value;
         }
-        return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
+        if (GlobalData.languageId == 0) {
+            return GameConfig.Language.Text_MickeyMouse.Value;
+        }
+        else {
+            return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
+        }
     }
+    // private static tens: string[] = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+    // private static digitalUnits: string[] = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
     /**根据数字获取汉字*/
-    static numChangeToCN(num) {
-        if (this.tens[num]) {
-            return this.tens[num];
-        }
-        else if (num > 10 && num < 20) {
-            let numStr = num.toString();
-            let n = numStr.substring(1, 2);
-            let result = this.digitalUnits[1] + this.tens[n];
-            return result;
-        }
-        else if (num > 10) {
-            let result = "";
-            let numStr = num.toString();
-            for (var i = 0; i < numStr.length; ++i) {
-                let n = numStr.substring(i, i + 1);
-                let m = numStr.length - i - 1;
-                result += this.tens[n] + this.digitalUnits[m];
-            }
-            return result;
-        }
-        else
-            return "零";
-    }
+    // public static numChangeToCN(num: number): string {
+    //     if (this.tens[num]) {
+    //         return this.tens[num];
+    //     } else if (num > 10 && num < 20) {
+    //         let numStr = num.toString();
+    //         let n = numStr.substring(1, 2);
+    //         let result = this.digitalUnits[1] + this.tens[n];
+    //         return result;
+    //     } else if (num > 10) {
+    //         let result = "";
+    //         let numStr = num.toString();
+    //         for (var i = 0; i < numStr.length; ++i) {
+    //             let n = numStr.substring(i, i + 1);
+    //             let m = numStr.length - i - 1;
+    //             result += this.tens[n] + this.digitalUnits[m];
+    //         }
+    //         return result;
+    //     }
+    //     else return "零";
+    // }
     static getHp(lv) {
         return 100 + (lv * 100);
     }
@@ -2854,23 +4544,28 @@ class Utils {
         }
     }
     static integerUnitConversionStr(num) {
-        if (num <= 9999) {
+        if (GlobalData.languageId == 0) {
             return `${num}`;
         }
         else {
-            if (num <= 99999999) {
-                return `${(num / 10000).toFixed(2)}万`;
+            if (num <= 9999) {
+                return `${num}`;
             }
             else {
-                if (num <= 999999999999) {
-                    return `${(num / 100000000).toFixed(2)}亿`;
+                if (num <= 99999999) {
+                    return `${(num / 10000).toFixed(2)}万`;
                 }
                 else {
-                    if (num <= 9999999999999999) {
-                        return `${(num / 1000000000000).toFixed(2)}万亿`;
+                    if (num <= 999999999999) {
+                        return `${(num / 100000000).toFixed(2)}亿`;
                     }
                     else {
-                        return `${(num / 10000000000000000).toFixed(2)}亿亿`;
+                        if (num <= 9999999999999999) {
+                            return `${(num / 1000000000000).toFixed(2)}万亿`;
+                        }
+                        else {
+                            return `${(num / 10000000000000000).toFixed(2)}亿亿`;
+                        }
                     }
                 }
             }
@@ -2956,8 +4651,6 @@ Utils.boss = [
     "142397"
 ];
 Utils.npcNames = ["张吉惟", "林国瑞", "林玫书", "林雅南", "江奕云", "刘柏宏", "阮建安", "林子帆", "夏志豪", "吉茹定", "李中冰", "谢彦文", "傅智翔", "洪振霞", "刘姿婷", "荣姿康", "吕致盈", "方一强", "黎芸贵", "郑伊雯", "雷进宝", "吴美隆", "吴心真", "王美珠", "郭芳天", "李雅惠", "陈文婷", "曹敏侑", "王依婷", "陈婉璇", "吴美玉", "蔡依婷", "郑昌梦", "林家纶", "黄丽昆", "李育泉", "黄芸欢", "吴韵如", "李肇芬", "卢木仲", "李成白", "方兆玉", "刘翊惠", "丁汉臻", "吴佳瑞", "舒绿珮", "周白芷", "张姿妤", "张虹伦", "周琼玫", "倪怡芳", "郭贵妃", "杨佩芳", "黄盛玫", "郑丽青", "许智云", "张孟涵", "李小爱", "王恩龙", "朱政廷", "邓诗涵", "陈政倩", "吴俊伯", "阮馨学", "翁惠珠", "吴思翰", "林佩玲", "邓海来", "陈翊依", "李建智", "武淑芬", "金雅琪", "赖怡宜", "黄育霖", "张仪湖", "王俊民", "张诗刚", "林慧颖", "沈俊君", "陈淑妤", "李姿伶", "高咏钰", "黄彦宜", "周孟儒", "潘欣臻", "李祯韵", "叶洁启", "梁哲宇", "黄晓萍", "杨雅萍", "卢志铭", "张茂以", "林婉婷", "蔡宜芸", "林珮瑜", "黄柏仪", "周逸珮", "夏雅惠", "王采珮", "林孟霖", "林竹水", "王怡乐", "王爱乐", "金佳蓉", "韩健毓", "李士杰", "陈董珍", "苏姿婷", "张政霖", "李志宏", "陈素达", "陈虹荣", "何美玲", "李仪琳", "张俞幸", "黄秋萍", "潘吉维"];
-Utils.tens = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-Utils.digitalUnits = ["", '十', '百', '千', '万', '亿', '十', '百', '千'];
 Utils.assetIconDataMap = new Map();
 Utils.pathIndex = 0;
 Utils.worldConfigDataMap = new Map();
@@ -3030,7 +4723,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.26
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -3044,6 +4737,12 @@ let Loading_Generate = class Loading_Generate extends UIScript {
             this.mProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mImage/mProgressBar');
         }
         return this.mProgressBar_Internal;
+    }
+    get mTipsTextBlock() {
+        if (!this.mTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mImage/mProgressBar/mTipsTextBlock');
+        }
+        return this.mTipsTextBlock_Internal;
     }
     get mTextBlock_1() {
         if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
@@ -3062,9 +4761,9 @@ let Loading_Generate = class Loading_Generate extends UIScript {
         //按钮添加点击
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mTipsTextBlock);
         this.initLanguage(this.mTextBlock_1);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mImage/mProgressBar/TextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -3113,6 +4812,10 @@ class Loading extends Loading_Generate$1 {
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
         this.layer = UILayerMiddle;
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mTipsTextBlock.text = GameConfig.Language.Text_LoadingMapResourcesPleaseBePatient.Value;
     }
     onShow(...params) {
         this.index = 0;
@@ -3142,7 +4845,7 @@ var foreign7 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -3209,7 +4912,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -5045,7 +6748,7 @@ class ColdWeapon {
      */
     attack(index) {
         if (!this._weapon) {
-            Notice.showDownNotice(`还未装备${GlobalData.atkStr},去寻找${GlobalData.atkStr}`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_NotEquippedWithYetGoFind.Value, GlobalData.atkStr, GlobalData.atkStr));
             return;
         }
         this.isPlaying = true;
@@ -5271,7 +6974,7 @@ var foreign101 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5397,7 +7100,7 @@ var foreign122 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5489,7 +7192,7 @@ var foreign123 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5585,7 +7288,7 @@ var foreign124 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5651,7 +7354,7 @@ var foreign125 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5731,7 +7434,7 @@ var foreign117 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/UpPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let UpPanel_Generate = class UpPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -5841,7 +7544,21 @@ class UpPanel extends UpPanel_Generate$1 {
     onStart() {
         this.canUpdate = false;
         this.layer = mw.UILayerDialog;
+        this.initTextBlock();
         this.bindButtons();
+    }
+    initTextBlock() {
+        this.mTitleTxt.text = GameConfig.Language.Text_AdvertisingRewards.Value;
+        if (GlobalData.languageId == 0) {
+            this.mTitleTxt.fontSize = 20;
+            this.mContentTxt.fontSize = 30;
+            this.mContentTxt_1.fontSize = 30;
+        }
+        else {
+            this.mTitleTxt.fontSize = 35;
+            this.mContentTxt.fontSize = 35;
+            this.mContentTxt_1.fontSize = 35;
+        }
     }
     bindButtons() {
         this.mYesBtn.onClose.add(this.onClickYesButton.bind(this));
@@ -5850,7 +7567,7 @@ class UpPanel extends UpPanel_Generate$1 {
     }
     onClickYesButton(isSuccess) {
         if (!isSuccess) {
-            Notice.showDownNotice(`${this.mYesBtn.text}失败，请重试`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FailedPleaseTryAgain.Value, this.mYesBtn.text));
             return;
         }
         if (this.yesCallback) {
@@ -5860,7 +7577,7 @@ class UpPanel extends UpPanel_Generate$1 {
     }
     onClickUpButton() {
         if (!this.isCanUp) {
-            Notice.showDownNotice(`别点太快、会卡哦`);
+            Notice.showDownNotice(GameConfig.Language.Text_DontClickTooFastItWillGetStuck.Value);
             return;
         }
         this.isCanUp = false;
@@ -5872,7 +7589,7 @@ class UpPanel extends UpPanel_Generate$1 {
     onClickNoButton() {
         this.hideAdPanel();
     }
-    showRewardAd(yesCallback, upCallback, titleName, contentText, contentText_1, noText = "取消", yesText = "领取", upText = "升级") {
+    showRewardAd(yesCallback, upCallback, titleName, contentText, contentText_1, noText, yesText, upText) {
         this.yesCallback = yesCallback;
         this.upCallback = upCallback;
         this.mTitleTxt.text = titleName;
@@ -5910,7 +7627,7 @@ var foreign46 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let SwordItem_Generate = class SwordItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -6052,7 +7769,7 @@ var foreign126 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let SwordPanel_Generate = class SwordPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -6169,7 +7886,7 @@ var foreign127 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordTipsPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -6178,11 +7895,23 @@ let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
         }
         return this.mCloseButton_Internal;
     }
-    get mContentTextBlock() {
-        if (!this.mContentTextBlock_Internal && this.uiWidgetBase) {
-            this.mContentTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock');
+    get mContentTextBlock_0() {
+        if (!this.mContentTextBlock_0_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_0');
         }
-        return this.mContentTextBlock_Internal;
+        return this.mContentTextBlock_0_Internal;
+    }
+    get mContentTextBlock_1() {
+        if (!this.mContentTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_1');
+        }
+        return this.mContentTextBlock_1_Internal;
+    }
+    get mContentTextBlock_2() {
+        if (!this.mContentTextBlock_2_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_2');
+        }
+        return this.mContentTextBlock_2_Internal;
     }
     get mDiamondButton() {
         if (!this.mDiamondButton_Internal && this.uiWidgetBase) {
@@ -6231,7 +7960,9 @@ let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
         this.mArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
-        this.initLanguage(this.mContentTextBlock);
+        this.initLanguage(this.mContentTextBlock_0);
+        this.initLanguage(this.mContentTextBlock_1);
+        this.initLanguage(this.mContentTextBlock_2);
         this.initLanguage(this.mDiamondTextBlock);
         this.initLanguage(this.mArkTextBlock);
         //文本多语言
@@ -6269,7 +8000,7 @@ var foreign128 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -6404,11 +8135,23 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mPlayerButton_Internal;
     }
+    get mPlayerTextBlock() {
+        if (!this.mPlayerTextBlock_Internal && this.uiWidgetBase) {
+            this.mPlayerTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/PlayerCanvas/mPlayerTextBlock');
+        }
+        return this.mPlayerTextBlock_Internal;
+    }
     get mMusicButton() {
         if (!this.mMusicButton_Internal && this.uiWidgetBase) {
             this.mMusicButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/MusicCanvas/mMusicButton');
         }
         return this.mMusicButton_Internal;
+    }
+    get mMusicTextBlock() {
+        if (!this.mMusicTextBlock_Internal && this.uiWidgetBase) {
+            this.mMusicTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/MusicCanvas/mMusicTextBlock');
+        }
+        return this.mMusicTextBlock_Internal;
     }
     get mHomeButton() {
         if (!this.mHomeButton_Internal && this.uiWidgetBase) {
@@ -6416,17 +8159,35 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mHomeButton_Internal;
     }
+    get mHomeTextBlock() {
+        if (!this.mHomeTextBlock_Internal && this.uiWidgetBase) {
+            this.mHomeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/HomeCanvas/mHomeTextBlock');
+        }
+        return this.mHomeTextBlock_Internal;
+    }
     get mShopButton() {
         if (!this.mShopButton_Internal && this.uiWidgetBase) {
             this.mShopButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ShopCanvas/mShopButton');
         }
         return this.mShopButton_Internal;
     }
+    get mShopTextBlock() {
+        if (!this.mShopTextBlock_Internal && this.uiWidgetBase) {
+            this.mShopTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ShopCanvas/mShopTextBlock');
+        }
+        return this.mShopTextBlock_Internal;
+    }
     get mRankButton() {
         if (!this.mRankButton_Internal && this.uiWidgetBase) {
             this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RankCanvas/mRankButton');
         }
         return this.mRankButton_Internal;
+    }
+    get mRankTextBlock() {
+        if (!this.mRankTextBlock_Internal && this.uiWidgetBase) {
+            this.mRankTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RankCanvas/mRankTextBlock');
+        }
+        return this.mRankTextBlock_Internal;
     }
     get mLotteryButton() {
         if (!this.mLotteryButton_Internal && this.uiWidgetBase) {
@@ -6470,6 +8231,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mTaskButton_Internal;
     }
+    get mTaskTextBlock() {
+        if (!this.mTaskTextBlock_Internal && this.uiWidgetBase) {
+            this.mTaskTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/TaskCanvas/mTaskTextBlock');
+        }
+        return this.mTaskTextBlock_Internal;
+    }
     get mTaskPointImage() {
         if (!this.mTaskPointImage_Internal && this.uiWidgetBase) {
             this.mTaskPointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/TaskCanvas/mTaskPointImage');
@@ -6481,6 +8248,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mSignInButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SignInCanvas/mSignInButton');
         }
         return this.mSignInButton_Internal;
+    }
+    get mSignInTextBlock() {
+        if (!this.mSignInTextBlock_Internal && this.uiWidgetBase) {
+            this.mSignInTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SignInCanvas/mSignInTextBlock');
+        }
+        return this.mSignInTextBlock_Internal;
     }
     get mSignInImage() {
         if (!this.mSignInImage_Internal && this.uiWidgetBase) {
@@ -6494,11 +8267,23 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mAdsButton_Internal;
     }
+    get mAdsTextBlock() {
+        if (!this.mAdsTextBlock_Internal && this.uiWidgetBase) {
+            this.mAdsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/AdsCanvas/mAdsTextBlock');
+        }
+        return this.mAdsTextBlock_Internal;
+    }
     get mArkButton() {
         if (!this.mArkButton_Internal && this.uiWidgetBase) {
             this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ArkCanvas/mArkButton');
         }
         return this.mArkButton_Internal;
+    }
+    get mArkTextBlock() {
+        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ArkCanvas/mArkTextBlock');
+        }
+        return this.mArkTextBlock_Internal;
     }
     get mArkImage() {
         if (!this.mArkImage_Internal && this.uiWidgetBase) {
@@ -6512,11 +8297,23 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mGetButton_Internal;
     }
+    get mGetTextBlock() {
+        if (!this.mGetTextBlock_Internal && this.uiWidgetBase) {
+            this.mGetTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/GetCanvas/mGetTextBlock');
+        }
+        return this.mGetTextBlock_Internal;
+    }
     get mRingSoulButton() {
         if (!this.mRingSoulButton_Internal && this.uiWidgetBase) {
             this.mRingSoulButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RingSoulCanvas/mRingSoulButton');
         }
         return this.mRingSoulButton_Internal;
+    }
+    get mRingSoulTextBlock() {
+        if (!this.mRingSoulTextBlock_Internal && this.uiWidgetBase) {
+            this.mRingSoulTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RingSoulCanvas/mRingSoulTextBlock');
+        }
+        return this.mRingSoulTextBlock_Internal;
     }
     get mRingSoulPointImage() {
         if (!this.mRingSoulPointImage_Internal && this.uiWidgetBase) {
@@ -6530,6 +8327,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mNewPeopleButton_Internal;
     }
+    get mNewPeopleTextBlock() {
+        if (!this.mNewPeopleTextBlock_Internal && this.uiWidgetBase) {
+            this.mNewPeopleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/NewPeopleCanvas/mNewPeopleTextBlock');
+        }
+        return this.mNewPeopleTextBlock_Internal;
+    }
     get mNewPeoplePointImage() {
         if (!this.mNewPeoplePointImage_Internal && this.uiWidgetBase) {
             this.mNewPeoplePointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/NewPeopleCanvas/mNewPeoplePointImage');
@@ -6541,6 +8344,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mSwordButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SwordCanvas/mSwordButton');
         }
         return this.mSwordButton_Internal;
+    }
+    get mSwordTextBlock() {
+        if (!this.mSwordTextBlock_Internal && this.uiWidgetBase) {
+            this.mSwordTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SwordCanvas/mSwordTextBlock');
+        }
+        return this.mSwordTextBlock_Internal;
     }
     get mSoulBoneButton() {
         if (!this.mSoulBoneButton_Internal && this.uiWidgetBase) {
@@ -6698,6 +8507,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mInvincibleButton_Internal;
     }
+    get mTipsInvincibleTextBlock() {
+        if (!this.mTipsInvincibleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTipsInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas/mTipsInvincibleTextBlock');
+        }
+        return this.mTipsInvincibleTextBlock_Internal;
+    }
     get mInvincibleTextBlock() {
         if (!this.mInvincibleTextBlock_Internal && this.uiWidgetBase) {
             this.mInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas/mInvincibleTextBlock');
@@ -6710,6 +8525,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mUpLvButton_Internal;
     }
+    get mUpExpTextBlock() {
+        if (!this.mUpExpTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpExpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/UpExpCanvas/mUpExpTextBlock');
+        }
+        return this.mUpExpTextBlock_Internal;
+    }
     get mUpExpFlipBook() {
         if (!this.mUpExpFlipBook_Internal && this.uiWidgetBase) {
             this.mUpExpFlipBook_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/UpExpCanvas/mUpExpFlipBook');
@@ -6721,6 +8542,18 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mUpExpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/UpExpCanvas/mUpExpButton');
         }
         return this.mUpExpButton_Internal;
+    }
+    get mBoneextBlock() {
+        if (!this.mBoneextBlock_Internal && this.uiWidgetBase) {
+            this.mBoneextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/BoneCanvas/mBoneextBlock');
+        }
+        return this.mBoneextBlock_Internal;
+    }
+    get mAddBoneButton() {
+        if (!this.mAddBoneButton_Internal && this.uiWidgetBase) {
+            this.mAddBoneButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/BoneCanvas/mAddBoneButton');
+        }
+        return this.mAddBoneButton_Internal;
     }
     get mCoinTextBlock() {
         if (!this.mCoinTextBlock_Internal && this.uiWidgetBase) {
@@ -6782,11 +8615,23 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mDeadCanvas_Internal;
     }
+    get mDeadTextBlock() {
+        if (!this.mDeadTextBlock_Internal && this.uiWidgetBase) {
+            this.mDeadTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadTextBlock');
+        }
+        return this.mDeadTextBlock_Internal;
+    }
     get mDeadCountDownTextBlock() {
         if (!this.mDeadCountDownTextBlock_Internal && this.uiWidgetBase) {
             this.mDeadCountDownTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadCountDownTextBlock');
         }
         return this.mDeadCountDownTextBlock_Internal;
+    }
+    get mDeadTipsTextBlock() {
+        if (!this.mDeadTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mDeadTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadTipsTextBlock');
+        }
+        return this.mDeadTipsTextBlock_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -6913,6 +8758,10 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mUpExpButton");
         });
         this.mUpExpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mAddBoneButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mAddBoneButton");
+        });
+        this.mAddBoneButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mAddCoinButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAddCoinButton");
         });
@@ -6928,8 +8777,21 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.mSkillTextBlock_1);
         this.initLanguage(this.mSkillCDTextBlock_1);
         this.initLanguage(this.mAutoAtkTextBlock);
+        this.initLanguage(this.mPlayerTextBlock);
+        this.initLanguage(this.mMusicTextBlock);
+        this.initLanguage(this.mHomeTextBlock);
+        this.initLanguage(this.mShopTextBlock);
+        this.initLanguage(this.mRankTextBlock);
         this.initLanguage(this.mLotteryTextBlock);
         this.initLanguage(this.mOnlineRewardTextBlock);
+        this.initLanguage(this.mTaskTextBlock);
+        this.initLanguage(this.mSignInTextBlock);
+        this.initLanguage(this.mAdsTextBlock);
+        this.initLanguage(this.mArkTextBlock);
+        this.initLanguage(this.mGetTextBlock);
+        this.initLanguage(this.mRingSoulTextBlock);
+        this.initLanguage(this.mNewPeopleTextBlock);
+        this.initLanguage(this.mSwordTextBlock);
         this.initLanguage(this.mSoulBoneTextBlock);
         this.initLanguage(this.mMusicText);
         this.initLanguage(this.mAtkTextBlock);
@@ -6937,31 +8799,19 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.mHpTextBlock);
         this.initLanguage(this.mMpTextBlock);
         this.initLanguage(this.mExpTextBlock);
+        this.initLanguage(this.mTipsInvincibleTextBlock);
         this.initLanguage(this.mInvincibleTextBlock);
+        this.initLanguage(this.mUpExpTextBlock);
+        this.initLanguage(this.mBoneextBlock);
         this.initLanguage(this.mCoinTextBlock);
         this.initLanguage(this.mDiamondTextBlock);
         this.initLanguage(this.mKillTipTextBlock1);
         this.initLanguage(this.mKillTipTextBlock2);
         this.initLanguage(this.mKillTipTextBlock3);
+        this.initLanguage(this.mDeadTextBlock);
         this.initLanguage(this.mDeadCountDownTextBlock);
+        this.initLanguage(this.mDeadTipsTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/PlayerCanvas/ShopTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/MusicCanvas/MusicTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ShopCanvas/ShopTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RankCanvas/RankTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/TaskCanvas/TaskTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/SignInCanvas/SignInTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/AdsCanvas/AdsTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ArkCanvas/ArkTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/GetCanvas/GetTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RingSoulCanvas/RingSoulTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/NewPeopleCanvas/NewPeopleTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/SwordCanvas/SwordTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/mInvincibleCanvas/InvincibleTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/UpExpCanvas/UpExpTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTipsTextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -6996,7 +8846,7 @@ var foreign130 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -7017,6 +8867,12 @@ let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
         }
         return this.mKillerTextBlock_Internal;
     }
+    get mKillTextBlock() {
+        if (!this.mKillTextBlock_Internal && this.uiWidgetBase) {
+            this.mKillTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/KillCanvas/mKillTextBlock');
+        }
+        return this.mKillTextBlock_Internal;
+    }
     get mKilledTextBlock() {
         if (!this.mKilledTextBlock_Internal && this.uiWidgetBase) {
             this.mKilledTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMainCanvas/KilledCanvas/mKilledTextBlock');
@@ -7035,9 +8891,9 @@ let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
         //按钮多语言
         //文本多语言
         this.initLanguage(this.mKillerTextBlock);
+        this.initLanguage(this.mKillTextBlock);
         this.initLanguage(this.mKilledTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mMainCanvas/KillCanvas/KillTextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -7072,7 +8928,7 @@ var foreign131 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
     get mMainCanvas() {
@@ -7156,7 +9012,7 @@ var foreign144 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
     get mCanvas() {
@@ -7263,7 +9119,7 @@ var foreign145 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -7597,6 +9453,7 @@ class PlayerModuleC extends ModuleC {
         // }
         this.coin = 0;
         this.diamond = 0;
+        this.bone = 0;
         this.invincible = false;
         this.isOnUpExp = false;
         this.upExpTimer = 0;
@@ -7635,12 +9492,17 @@ class PlayerModuleC extends ModuleC {
         Event.addLocalListener(`SyncCoinCount`, () => {
             Event.dispatchToLocal(`UpdateCoinTextBlock`, this.getCoin());
         });
+        Event.addLocalListener(`SyncBoneCount`, () => {
+            Event.dispatchToLocal(`UpdateBoneTextBlock`, this.getBone);
+        });
     }
     onEnterScene(sceneType) {
         this.coin = this.data.coin;
         this.diamond = this.data.diamond;
+        this.bone = this.data.bone;
         this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.coin, true);
         this.getHudModuleC.updateDiamond(this.diamond);
+        this.getHudModuleC.updateBone(this.bone);
     }
     onUpdate(dt) {
         this.updateUpExp(dt);
@@ -7655,8 +9517,8 @@ class PlayerModuleC extends ModuleC {
         FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
         if (isDie) {
             ExplosiveCoins.instance.explosiveCoins(new mw.Vector(hitPoint.x, hitPoint.y, hitPoint.z / 2), maxHp / 10, Utils.getRandomInteger(5, 10));
-            Notice.showDownNotice("增加" + maxHp / 10 + "金币");
-            Notice.showDownNotice("增加" + maxHp / 10 + "经验");
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_IncreaseCoins.Value, maxHp / 10));
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_IncreaseExperience.Value, maxHp / 10));
         }
     }
     async net_updateLvExpAndCoin(isAddLv, coin = 0) {
@@ -7665,9 +9527,9 @@ class PlayerModuleC extends ModuleC {
         if (this.data.coin != this.coin)
             this.coin = this.data.coin;
         if (coin > 0)
-            Notice.showDownNotice(`获得${coin}金币`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_GetCoins.Value, coin));
         if (isAddLv) {
-            Notice.showDownNotice("等级提升至 " + await Utils.getLvText(playerLv, this.localPlayer.userId) + " Lv." + playerLv);
+            Notice.showDownNotice(`${GameConfig.Language.Text_UpgradeLevelTo.Value} ` + await Utils.getLvText(playerLv, this.localPlayer.userId) + " Lv." + playerLv);
             this.getTaskModuleC.upLv(playerLv);
         }
     }
@@ -7697,13 +9559,28 @@ class PlayerModuleC extends ModuleC {
     get getDiamond() {
         return this.diamond;
     }
+    saveBone(value) {
+        this.bone += value;
+        this.getHudModuleC.updateBone(this.bone);
+        Event.dispatchToLocal(`UpdateBoneTextBlock`, this.getBone);
+        this.server.net_saveBone(value);
+    }
+    get getBone() {
+        return this.bone;
+    }
+    net_setBone(bone) {
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardSoulBone.Value, bone - this.bone));
+        this.bone = bone;
+        this.getHudModuleC.updateBone(this.bone);
+        Event.dispatchToLocal(`UpdateBoneTextBlock`, this.getBone);
+    }
     /**
      * 更新金币
      * @param value
      */
     net_updateCoin(value) {
         this.getHudModuleC.updateCoin(this.data.coin + value);
-        Notice.showDownNotice("获得" + value + "金币");
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_GetCoins.Value, value));
     }
     saveCoinAndExp(coin, exp) {
         if (coin < 0 || isNaN(coin))
@@ -7737,7 +9614,7 @@ class PlayerModuleC extends ModuleC {
     isInvincible(isInvincible) {
         if (this.invincible == isInvincible)
             return;
-        Notice.showDownNotice(isInvincible ? "已开启防御" : "已关闭防御");
+        Notice.showDownNotice(isInvincible ? GameConfig.Language.Text_DefenseActivated.Value : GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value);
         this.invincible = isInvincible;
         this.server.net_isInvincible(isInvincible);
     }
@@ -7777,8 +9654,8 @@ var foreign64 = /*#__PURE__*/Object.freeze({
     default: PlayerModuleC
 });
 
-const ringSoulNames = ["十年", "百年", "千年", "万年", "十万年", "百万年", "千万年", "万万年", "亿万年"];
-const figureStrs = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+const ringSoulNames = ["Text_Decade", "Text_AHundredYears", "Text_Millennium", "Text_TenThousandYears", "Text_100000Years", "Text_MillionsOfYears", "Text_MillionsOfYears", "Text_Eternity", "Text_BillionsOfYears"];
+const figureStrs = ["Text_1", "Text_2", "Text_3", "Text_4", "Text_5", "Text_6", "Text_7", "Text_8", "Text_9", "Text_10"];
 const costDiamonds = [
     [8, 28, 38, 58, 108, 198, 298],
     [18, 38, 58, 108, 198, 298, 398],
@@ -8110,7 +9987,7 @@ class RingSoulModuleC extends ModuleC {
     }
     get isCanOpenRingSoul() {
         if (MapEx.count(this.ringSoul) == 0) {
-            Notice.showDownNotice(`还未获取魂环`);
+            Notice.showDownNotice(GameConfig.Language.Text_NotYetObtainedSoulRing.Value);
             return false;
         }
         return true;
@@ -8260,6 +10137,18 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
     onStart() {
         this.initUI();
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mUpTextBlock.text = GameConfig.Language.Text_ForgeSoulRings_Button.Value;
+        if (GlobalData.languageId == 0) {
+            this.mTotalRarityTextBlock.fontSize = 30;
+            this.mUpTextBlock.fontSize = 20;
+        }
+        else {
+            this.mTotalRarityTextBlock.fontSize = 50;
+            this.mUpTextBlock.fontSize = 38;
+        }
     }
     initUI() {
         for (let i = 1; i <= 9; ++i) {
@@ -8292,16 +10181,16 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
     }
     addUpButton() {
         if (this.ringSoulPage <= 0) {
-            Notice.showDownNotice(`联系作者修复`);
+            Notice.showDownNotice(GameConfig.Language.Text_ContactTheAuthorForRepair.Value);
             return;
         }
         if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
-            Notice.showDownNotice(`已满级`);
+            Notice.showDownNotice(GameConfig.Language.Text_FullLevel.Value);
             return;
         }
         let lv = this.getPlayerModuleC.getLv;
         if (lv < this.ringSoulPage * 10) {
-            Notice.showDownNotice(`等级不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientLevel.Value);
             return;
         }
         let diamond = this.getPlayerModuleC.getDiamond;
@@ -8312,14 +10201,14 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
             SoundService.playSound(upSound);
-            Notice.showDownNotice(`锻造成功`);
+            Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyForged.Value);
         }
         else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                    Notice.showDownNotice(`成功获得钻石 +${GlobalData.addDiamondCount}`);
-                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             }
             else {
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
@@ -8330,7 +10219,7 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
         this.mDiamondTextBlock.text = `${diamond}`;
     }
     updateRarityTextBlock(rarity) {
-        this.mTotalRarityTextBlock.text = `总加成：血量提升${1 + rarity}倍，攻击力提升${1 + rarity}倍`;
+        this.mTotalRarityTextBlock.text = StringUtil.format(GameConfig.Language.Text_TotalBonus.Value, 1 + rarity, 1 + rarity);
     }
     onShow(...params) {
         Utils.openUITween(this.rootCanvas, () => {
@@ -8374,6 +10263,16 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
     }
     onStart() {
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mUpTextBlock.text = GameConfig.Language.Text_ForgeSoulRings_Button.Value;
+        if (GlobalData.languageId == 0) {
+            this.mUpTextBlock.fontSize = 20;
+        }
+        else {
+            this.mUpTextBlock.fontSize = 38;
+        }
     }
     bindButton() {
         this.mUpButton.onClicked.add(this.addUpButton.bind(this));
@@ -8383,23 +10282,23 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
                 this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
                 this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
                 SoundService.playSound(upSound);
-                Notice.showDownNotice(`恭喜你完成新手引导`);
-                Notice.showDownNotice(`奖励第一魂环 十年魂环`);
+                Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnCompletingTheBeginnerSGuide.Value);
+                Notice.showDownNotice(GameConfig.Language.Text_RewardTheFirstSoulRingWithATenYearSoulRing.Value);
             }
         });
     }
     addUpButton() {
         if (this.ringSoulPage <= 0) {
-            Notice.showDownNotice(`联系作者修复`);
+            Notice.showDownNotice(GameConfig.Language.Text_ContactTheAuthorForRepair.Value);
             return;
         }
         if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
-            Notice.showDownNotice(`已满级`);
+            Notice.showDownNotice(GameConfig.Language.Text_FullLevel.Value);
             return;
         }
         let lv = this.getPlayerModuleC.getLv;
         if (lv < this.ringSoulPage * 10) {
-            Notice.showDownNotice(`等级不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientLevel.Value);
             return;
         }
         let diamond = this.getPlayerModuleC.getDiamond;
@@ -8410,14 +10309,14 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
             SoundService.playSound(upSound);
-            Notice.showDownNotice(`锻造成功`);
+            Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyForged.Value);
         }
         else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得钻石 +${GlobalData.addDiamondCount}`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             }
             else {
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
@@ -8451,6 +10350,16 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
         return this.playerModuleC;
     }
     onStart() {
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mUpTextBlock.text = GameConfig.Language.Text_Upgrade.Value;
+        if (GlobalData.languageId == 0) {
+            this.mUpTextBlock.fontSize = 20;
+        }
+        else {
+            this.mUpTextBlock.fontSize = 30;
+        }
     }
     setRingSoulItemChildData(ringSoulIndex, ringSoulIndex_Self, ringSoulPage) {
         this.ringSoulPage = ringSoulPage;
@@ -8463,7 +10372,8 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
     }
     updateUI() {
         let lv = this.getPlayerModuleC.getLv;
-        this.mNameTextBlock.text = `第${figureStrs[this.ringSoulPage - 1]}魂环\n${ringSoulNames[this.ringSoulIndex - 1]}魂环`;
+        // this.mNameTextBlock.text = `第${figureStrs[this.ringSoulPage - 1]}魂环\n${ringSoulNames[this.ringSoulIndex - 1]}魂环`;
+        this.mNameTextBlock.text = StringUtil.format(GameConfig.Language.Text_TheSoulRingSoulRing.Value, GameConfig.Language[`${figureStrs[this.ringSoulPage - 1]}`].Value, GameConfig.Language[`${ringSoulNames[this.ringSoulIndex - 1]}`].Value);
         if (this.isHas) {
             this.mHasTextBlock.visibility = mw.SlateVisibility.Collapsed;
             this.mCostTextBlock.visibility = mw.SlateVisibility.Collapsed;
@@ -8473,8 +10383,13 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
             this.mHasTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mCostTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mUpTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `级可解锁` : `${this.ringSoulPage * 10}级可解锁`;
-            this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex - 1]}</size></color><size=15>钻石</size>`;
+            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? GameConfig.Language.Text_Unlockable.Value : StringUtil.format(GameConfig.Language.Text_UnlockableAtLevel.Value, this.ringSoulPage * 10);
+            if (GlobalData.languageId == 0) {
+                this.mCostTextBlock.text = `${GameConfig.Language.Text_Cost.Value}\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex - 1]}</size></color><size=7>${GameConfig.Language.Text_Diamonds.Value}</size>`;
+            }
+            else {
+                this.mCostTextBlock.text = `${GameConfig.Language.Text_Cost.Value}\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex - 1]}</size></color><size=10>${GameConfig.Language.Text_Diamonds.Value}</size>`;
+            }
         }
     }
     setRingSoulItemChildDataByIndex(ringSoulIndex_Self) {
@@ -8493,7 +10408,8 @@ var foreign74 = /*#__PURE__*/Object.freeze({
     RingSoulModuleC: RingSoulModuleC,
     RingSoulModuleS: RingSoulModuleS,
     RingSoulPanel: RingSoulPanel,
-    default: RingSoul$1
+    default: RingSoul$1,
+    upSound: upSound
 });
 
 /**
@@ -8591,6 +10507,41 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.bindButtons();
         this.initUI();
         this.initRoleData();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mFlyTextBlock.text = GameConfig.Language.Text_SwordFlying.Value;
+        this.mAutoAtkTextBlock.text = GameConfig.Language.Text_AutomaticAttack.Value;
+        this.mMusicTextBlock.text = GameConfig.Language.Text_BackgroundMusic.Value;
+        this.mHomeTextBlock.text = GameConfig.Language.Text_ClickOnMeToGoHome.Value;
+        this.mShopTextBlock.text = GameConfig.Language.Text_Knapsack.Value;
+        this.mRankTextBlock.text = GameConfig.Language.Text_RankingList.Value;
+        this.mLotteryTextBlock.text = GameConfig.Language.Text_GoldCoinLottery.Value;
+        this.mTaskTextBlock.text = GameConfig.Language.Text_CollectingTasks.Value;
+        this.mSignInTextBlock.text = GameConfig.Language.Text_SignIn.Value;
+        this.mAdsTextBlock.text = GameConfig.Language.Text_FreeUpgrade_Simoleness.Value;
+        this.mArkTextBlock.text = GameConfig.Language.Text_RechargeDiamonds.Value;
+        this.mGetTextBlock.text = GameConfig.Language.Text_ExchangeRewards.Value;
+        this.mRingSoulTextBlock.text = GameConfig.Language.Text_ForgeSoulRings.Value;
+        this.mNewPeopleTextBlock.text = GameConfig.Language.Text_NoviceGiftPack.Value;
+        this.mSwordTextBlock.text = GameConfig.Language.Text_SwordFlying.Value;
+        this.mSoulBoneTextBlock.text = GameConfig.Language.Text_ForgeSoulBones.Value;
+        this.mTipsInvincibleTextBlock.text = GameConfig.Language.Text_DoYouWantToActivateTeammateAccidentalInjury.Value;
+        this.mUpExpTextBlock.text = GameConfig.Language.Text_EnableAfk.Value;
+        if (GlobalData.languageId == 0) {
+            this.mTipsInvincibleTextBlock.fontSize = 10;
+            this.mInvincibleTextBlock.fontSize = 15;
+            this.mShopTextBlock.fontSize = 18;
+            this.mArkTextBlock.fontSize = 18;
+            this.mGetTextBlock.fontSize = 18;
+        }
+        else {
+            this.mTipsInvincibleTextBlock.fontSize = 18;
+            this.mInvincibleTextBlock.fontSize = 25;
+            this.mShopTextBlock.fontSize = 20;
+            this.mArkTextBlock.fontSize = 20;
+            this.mGetTextBlock.fontSize = 20;
+        }
     }
     /**绑定按钮 */
     bindButtons() {
@@ -8632,6 +10583,9 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mAddDiamondButton.onClicked.add(() => {
             this.getHudModuleC.onAddDiamondAction.call();
         });
+        this.mAddBoneButton.onClicked.add(() => {
+            this.getHudModuleC.onAddBoneAction.call();
+        });
         this.mAdsButton.onClicked.add(() => {
             this.getHudModuleC.onAdsAction.call();
         });
@@ -8642,10 +10596,10 @@ class HUDPanel extends HUDPanel_Generate$1 {
             this.getHudModuleC.onOpenRingSoulAction.call();
         });
         let isInvincible = false;
-        this.mInvincibleTextBlock.text = "已关闭防御";
+        this.mInvincibleTextBlock.text = GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
         this.mInvincibleButton.onClicked.add(() => {
             isInvincible = !isInvincible;
-            this.mInvincibleTextBlock.text = isInvincible ? "已开启防御" : "已关闭防御";
+            this.mInvincibleTextBlock.text = isInvincible ? GameConfig.Language.Text_DefenseActivated.Value : GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
             this.getHudModuleC.onInvincibleAction.call(isInvincible);
         });
         this.mOnlineRewardButton.normalImageGuid = "193281";
@@ -8653,12 +10607,12 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mOnlineRewardButton.disableImageGuid = "193281";
         this.bindMusicButton();
         let isOpenRingSoul = true;
-        this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? "收起" : "开启";
+        this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? GameConfig.Language.Text_PutItAway.Value : GameConfig.Language.Text_Open.Value;
         this.mOnOffRingSoulButton.onClicked.add(() => {
             if (!this.getRingSoulModuleC.isCanOpenRingSoul)
                 return;
             if (!this.isCanOnRingSoul) {
-                Notice.showDownNotice(`5秒冷却`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 5));
                 return;
             }
             this.isCanOnRingSoul = false;
@@ -8666,7 +10620,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
                 this.isCanOnRingSoul = true;
             });
             isOpenRingSoul = !isOpenRingSoul;
-            this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? "收起" : "开启";
+            this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? GameConfig.Language.Text_PutItAway.Value : GameConfig.Language.Text_Open.Value;
             this.getHudModuleC.onOnOffRingSoulAction.call(isOpenRingSoul);
         });
         this.mArkButton.onClicked.add(() => {
@@ -8706,7 +10660,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     updateInvincibleCanvasState(visibility) {
         Utils.setWidgetVisibility(this.mInvincibleCanvas, visibility ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-        this.mInvincibleTextBlock.text = visibility ? "已开启防御" : "已关闭防御";
+        this.mInvincibleTextBlock.text = visibility ? GameConfig.Language.Text_DefenseActivated.Value : GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
     }
     /**
      * 初始化UI
@@ -8813,7 +10767,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         }
     }
     showKillTips1(killTips, killerName, killedName) {
-        Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
+        Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + ` ${GameConfig.Language.Text_Defeated.Value} ` + killedName + "</size>" + "</color>"
             + "\n" + "<color=#red>" + killTips + "</color>");
     }
     clearKillTipsTimeOutId1() {
@@ -8827,10 +10781,10 @@ class HUDPanel extends HUDPanel_Generate$1 {
             return;
         this.clearKillTipsTimeOutId2();
         if (killTipType == KillTipType.Killed) {
-            this.mKillTipTextBlock3.text = "你已被 " + killerName + " 击败";
+            this.mKillTipTextBlock3.text = StringUtil.format(GameConfig.Language.Text_YouHaveBeenDefeatedBy.Value, killerName);
         }
         else if (killTipType == KillTipType.revenge) {
-            this.mKillTipTextBlock3.text = "击败 " + killedName + " 完成复仇";
+            this.mKillTipTextBlock3.text = StringUtil.format(GameConfig.Language.Text_DefeatToCompleteRevenge.Value, killedName);
         }
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
         this.killTipsTimeOutId2 = setTimeout(() => {
@@ -8852,14 +10806,14 @@ class HUDPanel extends HUDPanel_Generate$1 {
         AccountService.fillAvatar(this.mRoleIconImage);
     }
     async updateLvExpCoin(lv, exp, coin, addAtk) {
-        this.mLvTextBlock.text = `等级 ${await Utils.getLvText(lv, Player.localPlayer.userId)}`;
+        this.mLvTextBlock.text = `${GameConfig.Language.Text_Grade_MaoHao.Value}${await Utils.getLvText(lv, Player.localPlayer.userId)}`;
         this.mExpProgressBar.currentValue = exp / ((lv + 1) * GlobalData.upgradeExpMultiple);
-        this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
+        this.mExpTextBlock.text = `${GameConfig.Language.Text_Experience.Value}${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
         this.mCoinTextBlock.text = `${Utils.integerUnitConversionStr(Math.round(coin))}`;
         Event.dispatchToLocal(`UpdateCoinTextBlock`, coin);
         let atk = Math.round(Utils.getAtk(lv) * addAtk);
         GlobalData.atk = atk;
-        this.mAtkTextBlock.text = "攻击力：" + atk;
+        this.mAtkTextBlock.text = `${GameConfig.Language.Text_Aggressivity.Value}${atk}`;
         ColdWeapon.getInstance().updateHitDamage(atk);
         if (!this.isUnlockSkill_1) {
             if (lv >= GlobalData.skillLvLimit_1) {
@@ -8869,15 +10823,18 @@ class HUDPanel extends HUDPanel_Generate$1 {
             }
             else {
                 this.mSkillCDTextBlock_1.fontSize = 25;
-                this.mSkillCDTextBlock_1.text = `${GlobalData.skillLvLimit_1}级解锁`;
+                this.mSkillCDTextBlock_1.text = `${GlobalData.skillLvLimit_1}${GameConfig.Language.Text_LevelUnlock.Value}`;
             }
         }
     }
     updateAtk(lv, addAtk) {
         let atk = Math.round(Utils.getAtk(lv) * addAtk);
         GlobalData.atk = atk;
-        this.mAtkTextBlock.text = "攻击力：" + atk;
+        this.mAtkTextBlock.text = `${GameConfig.Language.Text_Aggressivity.Value}${atk}`;
         ColdWeapon.getInstance().updateHitDamage(atk);
+    }
+    updateBone(bone) {
+        this.mBoneextBlock.text = `${bone}`;
     }
     updateCoin(coin) {
         this.mCoinTextBlock.text = `${Utils.integerUnitConversionStr(Math.round(coin))}`;
@@ -8898,7 +10855,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         if (curHp > maxHp)
             curHp = maxHp;
         this.mHpProgressBar.currentValue = curHp / maxHp;
-        this.mHpTextBlock.text = `血量：${curHp}/${maxHp}`;
+        this.mHpTextBlock.text = `${GameConfig.Language.Text_BloodVolume.Value}${curHp}/${maxHp}`;
         if (this.mHpProgressBar.currentValue == 1) {
             this.endDeadCountDown();
             // this.getHudModuleC.onOnOffFlyAction.call(true);
@@ -8913,8 +10870,8 @@ class HUDPanel extends HUDPanel_Generate$1 {
     atk(index) {
         this.mAtkButton.onPressed.add(() => {
             if (this.getHudModuleC.getMp < 5) {
-                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
                 return;
             }
             if (this.curInputIndex != -1)
@@ -8933,16 +10890,16 @@ class HUDPanel extends HUDPanel_Generate$1 {
         });
     }
     initSkill_1() {
-        this.mSkillTextBlock_1.text = `<size=20>${GlobalData.skillName_1}</size>\n<size=10>${GlobalData.skillContinue_1}秒内攻击力翻倍</size>`;
+        this.mSkillTextBlock_1.text = `<size=20>${GlobalData.skillName_1}</size>\n<size=10>${GlobalData.skillContinue_1}${GameConfig.Language.Text_DoubleTheAttackPowerWithinSeconds.Value}</size>`;
         this.mSkillMaskButton_1.fanShapedValue = 1;
         this.mSkillMaskButton_1.clickedDelegate.add(() => {
             Event.dispatchToLocal("PlayButtonClick", this.mSkillMaskButton_1.name);
             if (!this.isUnlockSkill_1) {
-                Notice.showDownNotice(`${GlobalData.skillLvLimit_1}级开启${GlobalData.skillName_1}`);
+                Notice.showDownNotice(`${GlobalData.skillLvLimit_1}${GameConfig.Language.Text_LevelOpen.Value}${GlobalData.skillName_1}`);
                 return;
             }
             if (!this.skillIsCanAtk_1) {
-                Notice.showDownNotice(`技能还没准备好`);
+                Notice.showDownNotice(GameConfig.Language.Text_TheSkillsAreNotReadyYet.Value);
                 return;
             }
             this.getHudModuleC.onSkillAction.call((isCakAtk) => {
@@ -9364,6 +11321,10 @@ class HUDPanel extends HUDPanel_Generate$1 {
 }
 class KillTipItem extends KillTipItem_Generate$1 {
     onAwake() {
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mKillTextBlock.text = ` ${GameConfig.Language.Text_Defeated.Value} `;
     }
     setInfo(killTipDatas) {
         this.mKillerTextBlock.text = killTipDatas.killerName;
@@ -9406,7 +11367,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let LevelItem_Generate = class LevelItem_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -9462,7 +11423,7 @@ var foreign132 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let LevelPanel_Generate = class LevelPanel_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -9518,7 +11479,7 @@ var foreign133 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/UpExpPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
     get mCancleUpExpCanvas() {
@@ -9533,11 +11494,23 @@ let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
         }
         return this.mCancleUpExpFlipBook_Internal;
     }
+    get mOnHookTextBlock() {
+        if (!this.mOnHookTextBlock_Internal && this.uiWidgetBase) {
+            this.mOnHookTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/mOnHookTextBlock');
+        }
+        return this.mOnHookTextBlock_Internal;
+    }
     get mCancleUpExpButton() {
         if (!this.mCancleUpExpButton_Internal && this.uiWidgetBase) {
             this.mCancleUpExpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton');
         }
         return this.mCancleUpExpButton_Internal;
+    }
+    get mCancelOnHookTextBlock() {
+        if (!this.mCancelOnHookTextBlock_Internal && this.uiWidgetBase) {
+            this.mCancelOnHookTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton/mCancelOnHookTextBlock');
+        }
+        return this.mCancelOnHookTextBlock_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -9554,9 +11527,9 @@ let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
         this.mCancleUpExpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mOnHookTextBlock);
+        this.initLanguage(this.mCancelOnHookTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/TextBlock_1"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton/TextBlock_2"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -9592,14 +11565,16 @@ class PlayerData extends Subdata {
         this.exp = 0;
         this.coin = 0;
         this.diamond = 0;
+        this.bone = 0;
         this.playerLv = 0;
         this.playerHeight = 0;
         this.playerKill = 0;
     }
     initDefaultData() {
         this.exp = 0;
-        this.coin = 10000;
-        this.diamond = 0;
+        this.coin = 2888888;
+        this.diamond = 1;
+        this.bone = 1;
         this.playerLv = 0;
         this.playerHeight = 0;
         this.playerKill = 0;
@@ -9654,6 +11629,17 @@ class PlayerData extends Subdata {
     getHp() {
         return Utils.getHp(this.playerLv);
     }
+    saveBone(bone) {
+        this.bone += bone;
+        this.save(true);
+    }
+    getBone(bone = 0) {
+        if (bone != 0) {
+            this.bone += bone;
+            this.save(true);
+        }
+        return this.bone;
+    }
 }
 __decorate([
     Decorator.persistence()
@@ -9664,6 +11650,9 @@ __decorate([
 __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "diamond", void 0);
+__decorate([
+    Decorator.persistence()
+], PlayerData.prototype, "bone", void 0);
 __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "playerLv", void 0);
@@ -9694,6 +11683,11 @@ class UpExpPanel extends UpExpPanel_Generate$1 {
         this.layer = mw.UILayerTop;
         this.initUI();
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mOnHookTextBlock.text = GameConfig.Language.Text_HangingOnTheHook.Value;
+        this.mCancelOnHookTextBlock.text = GameConfig.Language.Text_CancelAfk.Value;
     }
     initUI() {
         this.mCancleUpExpFlipBook.pause();
@@ -9734,16 +11728,16 @@ __decorate([
     Decorator.persistence()
 ], LevelData.prototype, "levels", void 0);
 const transferMap = new Map();
-transferMap.set(1, { triggerIds: ["19DDCA11"], worldUIIds: ["34DE2A28"], targetLoc: new mw.Vector(-4065, 6446, 2000), name: `级解锁\n新手村`, limitLevel: 1 });
-transferMap.set(2, { triggerIds: ["3E8FFFFB"], worldUIIds: ["361F265D"], targetLoc: new mw.Vector(-5260, -3226, 1700), name: `级解锁\n中级狩猎场`, limitLevel: 18 });
-transferMap.set(3, { triggerIds: ["0CEEF058"], worldUIIds: ["18EED1DD"], targetLoc: new mw.Vector(3246, -19119, 1700), name: `级解锁\n高级狩猎场`, limitLevel: 68 });
-transferMap.set(4, { triggerIds: ["1849DDD5"], worldUIIds: ["2789D9BE"], targetLoc: new mw.Vector(-9170, -9478, 400), name: `级解锁\n10万年魂兽`, limitLevel: 288 });
-transferMap.set(5, { triggerIds: ["3FDFD371"], worldUIIds: ["27AE1609"], targetLoc: new mw.Vector(-9687, 9475, 4200), name: `级解锁\n神级狩猎场`, limitLevel: 98 });
+transferMap.set(1, { desc: "新手村", triggerIds: ["19DDCA11"], worldUIIds: ["34DE2A28"], targetLoc: new mw.Vector(-4065, 6446, 2000), name: `Text_NoviceVillage`, limitLevel: 1 });
+transferMap.set(2, { desc: "中级狩猎场", triggerIds: ["3E8FFFFB"], worldUIIds: ["361F265D"], targetLoc: new mw.Vector(-5260, -3226, 1700), name: `Text_IntermediateHuntingGround`, limitLevel: 18 });
+transferMap.set(3, { desc: "高级狩猎场", triggerIds: ["0CEEF058"], worldUIIds: ["18EED1DD"], targetLoc: new mw.Vector(3246, -19119, 1700), name: `Text_AdvancedHuntingGround`, limitLevel: 68 });
+transferMap.set(4, { desc: "10万年魂兽", triggerIds: ["1849DDD5"], worldUIIds: ["2789D9BE"], targetLoc: new mw.Vector(-9170, -9478, 400), name: `Text_100000YearSoulBeast`, limitLevel: 288 });
+transferMap.set(5, { desc: "神级狩猎场", triggerIds: ["3FDFD371"], worldUIIds: ["27AE1609"], targetLoc: new mw.Vector(-9687, 9475, 4200), name: `Text_GodLevelHuntingGround`, limitLevel: 98 });
 class LevelPanel extends LevelPanel_Generate$1 {
     onStart() {
     }
     updateLevelTextBlock(key, level) {
-        this.mLevelTextBlock.text = `${level}级\n${levelMap.get(key).name}`;
+        this.mLevelTextBlock.text = `${level}${GameConfig.Language.Text_Level.Value}\n${levelMap.get(key).name}`;
         this.show();
     }
 }
@@ -9755,10 +11749,10 @@ class LevelItem extends LevelItem_Generate$1 {
     }
 }
 const levelMap = new Map();
-levelMap.set(1, { triggers: ["0531B54C"], worldUIIds: ["081A5D07"], name: `黑悟空关卡`, limitLevel: 38 });
+levelMap.set(1, { desc: "黑悟空关卡", triggers: ["0531B54C"], worldUIIds: ["081A5D07"], name: `Text_BlackMonkeyKingLevel`, limitLevel: 38 });
 const arenaMap = new Map();
-arenaMap.set(1, { triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `百万年魂兽`, limitLevel: 588, targetLoc: new mw.Vector(5500, 10500, 2200) });
-arenaMap.set(2, { triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `回城`, limitLevel: 588, targetLoc: new mw.Vector(-4065, 6446, 2000) });
+arenaMap.set(1, { desc: "百万年魂兽", triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `Text_MillionYearSoulBeast`, limitLevel: 588, targetLoc: new mw.Vector(5500, 10500, 2200) });
+arenaMap.set(2, { desc: "回城", triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `Text_ReturningToTheCity`, limitLevel: 588, targetLoc: new mw.Vector(-4065, 6446, 2000) });
 class LevelModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -9817,7 +11811,7 @@ class LevelModuleC extends ModuleC {
                         if (character.gameObjectId != this.localPlayer.character.gameObjectId)
                             return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
-                            Notice.showDownNotice(`请先将等级提升至${value.limitLevel}级`);
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
@@ -9828,7 +11822,7 @@ class LevelModuleC extends ModuleC {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(`${value.limitLevel}${value.name}`);
+                    levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelUnlock.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -9840,7 +11834,7 @@ class LevelModuleC extends ModuleC {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId)
                             return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
-                            Notice.showDownNotice(`请先将等级提升至${value.limitLevel}级`);
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.server.net_startLevel(key);
@@ -9852,7 +11846,7 @@ class LevelModuleC extends ModuleC {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(`${value.limitLevel}级开启\n${value.name}`);
+                    levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelOpen.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -9864,7 +11858,7 @@ class LevelModuleC extends ModuleC {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId)
                             return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
-                            Notice.showDownNotice(`请先将等级提升至${value.limitLevel}级`);
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
@@ -9876,7 +11870,7 @@ class LevelModuleC extends ModuleC {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(`${value.limitLevel}级开启\n${value.name}`);
+                    levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelOpen.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -10069,8 +12063,21 @@ class SwordTipsPanel extends SwordTipsPanel_Generate$1 {
         this.bindButton();
     }
     initUI() {
-        this.mArkTextBlock.text = `派队币购买`;
-        this.mDiamondTextBlock.text = `钻石购买`;
+        this.mArkTextBlock.text = GameConfig.Language.Text_UseTeamCoins.Value;
+        this.mDiamondTextBlock.text = GameConfig.Language.Text_UsingDiamonds.Value;
+        this.mContentTextBlock_2.text = GameConfig.Language.Text_Or.Value;
+        if (GlobalData.languageId == 0) {
+            this.mContentTextBlock_0.fontSize = 30;
+            this.mContentTextBlock_1.fontSize = 30;
+            this.mDiamondTextBlock.fontSize = 30;
+            this.mArkTextBlock.fontSize = 30;
+        }
+        else {
+            this.mContentTextBlock_0.fontSize = 40;
+            this.mContentTextBlock_1.fontSize = 40;
+            this.mDiamondTextBlock.fontSize = 38;
+            this.mArkTextBlock.fontSize = 38;
+        }
     }
     bindButton() {
         this.mCloseButton.onClicked.add(this.addClickButton.bind(this));
@@ -10093,12 +12100,19 @@ class SwordTipsPanel extends SwordTipsPanel_Generate$1 {
     showPanel(key, arkCallBack, diamondCallBack, closeCallBack) {
         let swordData = swordDataMap.get(key);
         if (swordData.diamond <= 0) {
-            this.mContentTextBlock.text = `消耗 ${swordData.ark}派队币`;
-            this.mDiamondButton.visibility = mw.SlateVisibility.Collapsed;
+            Utils.setWidgetVisibility(this.mContentTextBlock_0, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mContentTextBlock_1, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mContentTextBlock_2, mw.SlateVisibility.Collapsed);
+            Utils.setWidgetVisibility(this.mDiamondButton, mw.SlateVisibility.Collapsed);
+            this.mContentTextBlock_0.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoinsToPurchase.Value, swordData.ark);
         }
         else {
-            this.mContentTextBlock.text = `消耗 ${swordData.diamond}钻石 或\n消耗 ${swordData.ark}派队币`;
-            this.mDiamondButton.visibility = mw.SlateVisibility.Visible;
+            this.mContentTextBlock_0.text = StringUtil.format(GameConfig.Language.Text_ConsumingDiamondsToPurchase.Value, swordData.diamond);
+            this.mContentTextBlock_1.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoinsToPurchase.Value, swordData.ark);
+            Utils.setWidgetVisibility(this.mContentTextBlock_0, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mContentTextBlock_1, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mContentTextBlock_2, mw.SlateVisibility.SelfHitTestInvisible);
+            Utils.setWidgetVisibility(this.mDiamondButton, mw.SlateVisibility.Visible);
         }
         this.arkCallBack = arkCallBack;
         this.diamondCallBack = diamondCallBack;
@@ -10126,14 +12140,22 @@ class SwordItem extends SwordItem_Generate$1 {
     initUI() {
         this.mDiamondIconImage.imageGuid = GlobalData.diamondIcon;
         this.mArkIconImage.imageGuid = GlobalData.arkIcon;
-        this.mHasTextBlock.text = `点击获得`;
+        this.mHasTextBlock.text = GameConfig.Language.Text_ClickToGet.Value;
+        if (GlobalData.languageId == 0) {
+            this.mRarityTextBlock.fontSize = 9;
+            this.mArkTextBlock.fontSize = 20;
+        }
+        else {
+            this.mRarityTextBlock.fontSize = 15;
+            this.mArkTextBlock.fontSize = 30;
+        }
     }
     bindButton() {
         this.mClickButton.onClicked.add(this.addClickButton.bind(this));
     }
     addClickButton() {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -10154,7 +12176,7 @@ class SwordItem extends SwordItem_Generate$1 {
         else if (iconStr[0] == `icon`) {
             this.mIconImage.imageGuid = iconStr[1];
         }
-        this.mNameTextBlock.text = swordData.name;
+        this.mNameTextBlock.text = GameConfig.Language[`${swordData.name}`].Value;
         if (swordData.diamond <= 0) {
             this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
             this.mIconImage.position = new mw.Vector2(7, 42);
@@ -10166,7 +12188,7 @@ class SwordItem extends SwordItem_Generate$1 {
         }
         this.mArkTextBlock.text = `${swordData.ark}`;
         this.refreshUI();
-        this.mRarityTextBlock.text = `血量提升${1 + swordData.hpRarity}倍\n攻击力提升${1 + swordData.atkRarity}倍`;
+        this.mRarityTextBlock.text = `${StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes_Nowrap.Value, 1 + swordData.hpRarity)}\n${StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes_Nowrap.Value, 1 + swordData.atkRarity)}`;
     }
     refreshUI() {
         if (this.getFlyModuleC.isHasSwordId(this.key)) {
@@ -10180,7 +12202,7 @@ class SwordItem extends SwordItem_Generate$1 {
         this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
         this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
         this.mArkIconImage.visibility = mw.SlateVisibility.Collapsed;
-        this.mArkTextBlock.text = `点击使用`;
+        this.mArkTextBlock.text = GameConfig.Language.Text_ClickToUse.Value;
         this.mArkTextBlock.textHorizontalLayout = mw.UITextHorizontalLayout.NoClipping;
         this.mArkTextBlock.textAlign = mw.TextJustify.Right;
         this.mIconImage.position = new mw.Vector2(7, 42);
@@ -10204,7 +12226,7 @@ class SwordPanel extends SwordPanel_Generate$1 {
         this.bindButton();
     }
     initUI() {
-        this.mTitleTextBlock.text = "御剑飞行商城";
+        this.mTitleTextBlock.text = GameConfig.Language.Text_YujianFlyingMall.Value;
         this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
         this.mIconArkImage.imageGuid = GlobalData.arkIcon;
         this.initItem();
@@ -10231,7 +12253,7 @@ class SwordPanel extends SwordPanel_Generate$1 {
         this.mDiamondCountTextBlock.text = `${diamondCount}`;
     }
     updateRarityTextBlock(hpRarity, atkRarity) {
-        this.mTotalRarityTextBlock.text = `御剑飞行总加成\n血量提升${1 + hpRarity}倍\n攻击力提升${1 + atkRarity}倍`;
+        this.mTotalRarityTextBlock.text = `${GameConfig.Language.Text_RoyalSwordFlyingBonus.Value}\n${StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes_Nowrap.Value, 1 + hpRarity)}\n${StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes_Nowrap.Value, 1 + atkRarity)}`;
     }
     onShow(...params) {
         Utils.openUITween(this.rootCanvas, () => {
@@ -10308,19 +12330,19 @@ class SwordData {
 const swordTriggerId = "0D77F0C2";
 const swordWorldUIId = "21930ABA";
 const swordDataMap = new Map();
-swordDataMap.set(1, { id: 1, name: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
-swordDataMap.set(4, { id: 4, name: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
-swordDataMap.set(2, { id: 2, name: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0", hpRarity: 0.2, atkRarity: 0.2, isCharacter: false });
-swordDataMap.set(5, { id: 5, name: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5", hpRarity: 0.5, atkRarity: 0.5, isCharacter: false });
-swordDataMap.set(3, { id: 3, name: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D", hpRarity: 0.3, atkRarity: 0.2, isCharacter: false });
-swordDataMap.set(6, { id: 6, name: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249", hpRarity: 0.7, atkRarity: 0.6, isCharacter: false });
-swordDataMap.set(7, { id: 7, name: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A", hpRarity: 0.1, atkRarity: 0, isCharacter: false });
-swordDataMap.set(8, { id: 8, name: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "373123C7", skinId: "F6A887214D21780BC36A41B26307265B", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
-swordDataMap.set(9, { id: 9, name: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
-swordDataMap.set(10, { id: 10, name: "御剑_滑板", icon: "mode_172322", diamond: -1, ark: 300, commodityId: "2n1J8tM5rtL0001Q2", npcId: "0F6CADC5", skinId: "CDB4F61044BF45F91E8E91AB9E1C706B", animationId: "285774", swordPrefabId: "739C4F7545D25E898D93F89BF0AC4B8A", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
-swordDataMap.set(11, { id: 11, name: "御剑_小绿龙", icon: "mode_247654", diamond: -1, ark: 1000, commodityId: "7zMYBoBixh80001Q3", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "01728B2A4C9722493B4703BEBA7E4CF2", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
-swordDataMap.set(12, { id: 12, name: "御剑_小蓝龙", icon: "mode_248837", diamond: -1, ark: 1000, commodityId: "AJrYTJFqjFR0001Q4", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "48A6F6E348AAACD86C9269B780CF3BE8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
-swordDataMap.set(13, { id: 13, name: "御剑_小火龙", icon: "mode_248730", diamond: -1, ark: 1000, commodityId: "7gMCn89dVTb0001Q5", npcId: "0E9E1B46", skinId: "F5B67E80465D850BAD46A09F62FB6B87", animationId: "285781", swordPrefabId: "14AF817A43500A7102A057A2D52ECAD8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(1, { id: 1, name: "Text_MitsurugiSmartKiller", des: "御剑_智弑者", icon: "mode_31724", diamond: 2800, ark: 600, commodityId: "37zTtTSg2c60001PE", npcId: "3C256CEA", skinId: "268ED77E4D6DFFFD309A05BA9BE0A309", animationId: "285774", swordPrefabId: "9F82AAFB4DE4AFC4ADB866A11D838D73", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(4, { id: 4, name: "Text_MitsurugiGoldenSword", des: "御剑_黄金剑", icon: "mode_218730", diamond: -1, ark: 3000, commodityId: "ARlkmT3Usqb0001PH", npcId: "", skinId: "0B11729440BFEE070D9B1F9BF3C27D6E", animationId: "285774", swordPrefabId: "CDA48366471D1E2820A362823CC0E991", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(2, { id: 2, name: "Text_MitsurugiIceDiamondSword", des: "御剑_冰钻剑", icon: "mode_31712", diamond: 30000, ark: 1500, commodityId: "Ac8BwTjIqya0001PF", npcId: "3776969F", skinId: "BDFB169745A51FDCFCC95F930B93FF06", animationId: "285774", swordPrefabId: "1F1C60AE4477C35E7A866B9B1EC115B0", hpRarity: 0.2, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(5, { id: 5, name: "Text_MitsurugiDemonSword", des: "御剑_恶魔剑", icon: "mode_122956", diamond: -1, ark: 5000, commodityId: "AiOAFX4FHqP0001PI", npcId: "", skinId: "65980CA14CDB69DA3768E692D62B2EA5", animationId: "285774", swordPrefabId: "8916A58D484FBB70C4AC53883A1B4CA5", hpRarity: 0.5, atkRarity: 0.5, isCharacter: false });
+swordDataMap.set(3, { id: 3, name: "Text_MitsurugiBrokenCrazySword", des: "御剑_断狂剑", icon: "mode_269895", diamond: 50000, ark: 2500, commodityId: "5RQ4kLNvse30001PG", npcId: "2D50E787", skinId: "C1052B3F48E85F92B636938767F2C051", animationId: "285774", swordPrefabId: "8124134E4CBF3FA72E07A7B4EEFCF00D", hpRarity: 0.3, atkRarity: 0.2, isCharacter: false });
+swordDataMap.set(6, { id: 6, name: "Text_MitsurugiAerocraft", des: "御剑_飞行器", icon: "mode_87017", diamond: -1, ark: 6800, commodityId: "4uaXGuU0QS20001PJ", npcId: "0CA13464", skinId: "23BB2A944F3CE285BBCD3084FB10A724", animationId: "285774", swordPrefabId: "22D90B924C59CC74C1EFFD9784B19249", hpRarity: 0.7, atkRarity: 0.6, isCharacter: false });
+swordDataMap.set(7, { id: 7, name: "Text_MitsurugiImperialSwordDart", des: "御剑_飞镖", icon: "mode_20925", diamond: -1, ark: 100, commodityId: "25qyjRc49QC0001Py", npcId: "", skinId: "", animationId: "285774", swordPrefabId: "0C9D159B4A075406380DB88269CD789A", hpRarity: 0.1, atkRarity: 0, isCharacter: false });
+swordDataMap.set(8, { id: 8, name: "Text_MitsurugiSmallBicycle", des: "御剑_小单车", icon: "mode_31526", diamond: -1, ark: 3000, commodityId: "5FvNd2bs82z0001Pz", npcId: "373123C7", skinId: "F6A887214D21780BC36A41B26307265B", animationId: "285057", swordPrefabId: "9715225D4634C394F69BA0BD6F420451", hpRarity: 0.3, atkRarity: 0.3, isCharacter: false });
+swordDataMap.set(9, { id: 9, name: "Text_MitsurugiAnywayHeShandsome", des: "御剑_反正很帅", icon: "mode_151412", diamond: -1, ark: 600, commodityId: "5HMpNdwFrJr0001Q0", npcId: "", skinId: "", animationId: "284772", swordPrefabId: "938C2259434A97CA393C8199DD80D274", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(10, { id: 10, name: "Text_MitsurugiSkate", des: "御剑_滑板", icon: "mode_172322", diamond: -1, ark: 300, commodityId: "2n1J8tM5rtL0001Q2", npcId: "0F6CADC5", skinId: "CDB4F61044BF45F91E8E91AB9E1C706B", animationId: "285774", swordPrefabId: "739C4F7545D25E898D93F89BF0AC4B8A", hpRarity: 0.1, atkRarity: 0.1, isCharacter: false });
+swordDataMap.set(11, { id: 11, name: "Text_MitsurugiLittleGreenDragon", des: "御剑_小绿龙", icon: "mode_247654", diamond: -1, ark: 1000, commodityId: "7zMYBoBixh80001Q3", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "01728B2A4C9722493B4703BEBA7E4CF2", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(12, { id: 12, name: "Text_MitsurugiXiaolanLong", des: "御剑_小蓝龙", icon: "mode_248837", diamond: -1, ark: 1000, commodityId: "AJrYTJFqjFR0001Q4", npcId: "", skinId: "", animationId: "285781", swordPrefabId: "48A6F6E348AAACD86C9269B780CF3BE8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
+swordDataMap.set(13, { id: 13, name: "Text_MitsurugiLittleFireDragon", des: "御剑_小火龙", icon: "mode_248730", diamond: -1, ark: 1000, commodityId: "7gMCn89dVTb0001Q5", npcId: "0E9E1B46", skinId: "F5B67E80465D850BAD46A09F62FB6B87", animationId: "285781", swordPrefabId: "14AF817A43500A7102A057A2D52ECAD8", hpRarity: 0.2, atkRarity: 0.1, isCharacter: true });
 class FlyModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -10402,7 +12424,7 @@ class FlyModuleC extends ModuleC {
             if (swordData.diamond <= 0) {
                 if (mw.SystemUtil.isPIE) {
                     this.setSwordId(key);
-                    Notice.showDownNotice(`御剑飞行购买成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                     if (buySuccessCallback)
                         buySuccessCallback();
                 }
@@ -10420,7 +12442,7 @@ class FlyModuleC extends ModuleC {
                 this.getSwordTipsPanel.showPanel(key, () => {
                     if (mw.SystemUtil.isPIE) {
                         this.setSwordId(key);
-                        Notice.showDownNotice(`御剑飞行购买成功`);
+                        Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                         if (buySuccessCallback)
                             buySuccessCallback();
                         this.getSwordTipsPanel.hide();
@@ -10440,21 +12462,21 @@ class FlyModuleC extends ModuleC {
                     if (costDiamond >= swordData.diamond) {
                         this.getPlayerModuleC.saveDiamond(-swordData.diamond);
                         this.setSwordId(key);
-                        Notice.showDownNotice(`御剑飞行购买成功`);
+                        Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                         this.getSwordTipsPanel.hide();
                         if (buySuccessCallback)
                             buySuccessCallback();
                     }
                     else {
-                        Notice.showDownNotice(`钻石不足`);
+                        Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
                         if (GlobalData.isOpenIAA) {
                             this.getAdTipsPanel.showRewardAd(() => {
-                                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                            }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                            }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
                         }
                         else {
-                            Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                             this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                         }
                     }
@@ -10466,7 +12488,7 @@ class FlyModuleC extends ModuleC {
         swordDataMap.forEach((value, key) => {
             if (value.commodityId == commodityId) {
                 this.setSwordId(key);
-                Notice.showDownNotice(`御剑飞行购买成功`);
+                Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
             }
         });
     }
@@ -10534,7 +12556,7 @@ class FlyModuleC extends ModuleC {
             return;
         this.usingSwordId = swordId;
         this.server.net_setUsingSwordId(this.usingSwordId);
-        Notice.showDownNotice(`装备御剑飞行`);
+        Notice.showDownNotice(GameConfig.Language.Text_EquippingSwordFlying.Value);
         this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
         this.server.net_useFly(this.usingSwordId);
         this.isFlying = true;
@@ -10542,13 +12564,13 @@ class FlyModuleC extends ModuleC {
     addOnOffSword(on) {
         if (on) {
             if (this.usingSwordId <= 0) {
-                Notice.showDownNotice(`未装备御剑飞行`);
+                Notice.showDownNotice(GameConfig.Language.Text_FlyingWithoutEquippedSword.Value);
                 return;
             }
             else {
                 if (this.isFlying)
                     return;
-                Notice.showDownNotice(`装备御剑飞行`);
+                Notice.showDownNotice(GameConfig.Language.Text_EquippingSwordFlying.Value);
                 this.localPlayer.character.changeState(mw.CharacterStateType.Flying);
                 this.server.net_useFly(this.usingSwordId);
                 this.isFlying = true;
@@ -10557,7 +12579,7 @@ class FlyModuleC extends ModuleC {
         else {
             if (!this.isFlying)
                 return;
-            Notice.showDownNotice(`卸下御剑飞行`);
+            Notice.showDownNotice(GameConfig.Language.Text_RemoveTheImperialSwordAndFly.Value);
             this.localPlayer.character.changeState(mw.CharacterStateType.Running);
             this.server.net_useFly(-1);
             this.isFlying = false;
@@ -10581,7 +12603,7 @@ class FlyModuleC extends ModuleC {
         });
         mw.GameObject.asyncFindGameObjectById(swordWorldUIId).then((worldUI) => {
             let levelItem = mw.UIService.create(LevelItem);
-            levelItem.updateLevelTextBlock(`御剑飞行商城`);
+            levelItem.updateLevelTextBlock(GameConfig.Language.Text_YujianFlyingMall.Value);
             worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
         });
         swordDataMap.forEach((swordData) => {
@@ -10873,9 +12895,15 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
+    }
     get mCanvas() {
         if (!this.mCanvas_Internal && this.uiWidgetBase) {
             this.mCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/ScrollBox/mCanvas');
@@ -10903,8 +12931,8 @@ let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScri
         this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/TextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -10968,6 +12996,10 @@ class OnlineRewardPanel extends OnlineRewardPanel_Generate$1 {
         this.canUpdate = false;
         this.layer = mw.UILayerMiddle;
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mTitleTextBlock.text = GameConfig.Language.Text_OnlineRewards.Value;
     }
     /**
      * 绑定按钮事件
@@ -11158,6 +13190,11 @@ class OnlineRewardItem {
         this.mExpTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mExpCanvas/mExpTextBlock");
         this.mRoleCanvas = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas");
         this.mRoleTextBlock = this.onlineRewardItem.findChildByPath("RootCanvas/mRoleCanvas/mRoleTextBlock");
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mCanRewardTextBlock.text = GameConfig.Language.Text_CanBeClaimed.Value;
+        this.mGetRewardTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
     }
     get getHUDPanel() {
         if (this.hudPanel == null) {
@@ -11211,17 +13248,17 @@ class OnlineRewardItem {
             Event.dispatchToLocal("PlayButtonClick");
             switch (this.onlineRewardItemState) {
                 case OnlineRewardItemState.notSatisfy:
-                    Notice.showDownNotice("在线时间不足");
+                    Notice.showDownNotice(GameConfig.Language.Text_InsufficientOnlineTime.Value);
                     break;
                 case OnlineRewardItemState.satisfy:
                     this.onlineRewardItemState = OnlineRewardItemState.getReward;
                     ModuleService.getModule(OnlineRewardModuleC).getOnlineRewrad(this.index);
                     mw.UIService.getUI(OnlineRewardPanel).deleteNeedTweenItem(this.index);
                     this.onClickButtonUpdateUI();
-                    Notice.showDownNotice("领取奖励");
+                    Notice.showDownNotice(GameConfig.Language.Text_ClaimRewards.Value);
                     break;
                 case OnlineRewardItemState.getReward:
-                    Notice.showDownNotice("已领取奖励");
+                    Notice.showDownNotice(GameConfig.Language.Text_ReceivedReward.Value);
                     break;
             }
         });
@@ -11248,13 +13285,13 @@ class OnlineRewardItem {
             this.mExpCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mExpTextBlock.text = "×" + this.rewardCounts[1];
         }
-        if (this.rewardCounts[2] == 0) {
-            this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
-        }
-        else {
-            this.mRoleCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mRoleTextBlock.text = "随机1" + this.rewardCounts[2] + "个\n永久套装";
-        }
+        // if (this.rewardCounts[2] == 0) {
+        // this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
+        // } else {
+        // this.mRoleCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+        // this.mRoleTextBlock.text = "随机1" + this.rewardCounts[2] + "个\n永久套装";
+        // }
+        this.mRoleCanvas.visibility = mw.SlateVisibility.Collapsed;
     }
     /**
     * 点击按钮更新UI
@@ -11443,8 +13480,8 @@ class OnlineRewardModuleC extends ModuleC {
     getOnlineRewrad(index) {
         this.setIsGetRewards(index);
         let rewardCount = GameConfig.OnlineRewards.getElement(index + 1).RewardCount;
-        Notice.showDownNotice("奖励金币：" + rewardCount[0]);
-        Notice.showDownNotice("奖励经验：" + rewardCount[1]);
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardCoins.Value, rewardCount[0]));
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardExperience.Value, rewardCount[1]));
         this.getPlayerModuleC.saveCoinAndExp(rewardCount[0], rewardCount[1]);
     }
 }
@@ -11464,6 +13501,1454 @@ var foreign60 = /*#__PURE__*/Object.freeze({
     OnlineRewardModuleC: OnlineRewardModuleC
 });
 
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/SoulBoneModule/PartItem.ui
+ * TIME: 2024.10.24-19.45.28
+ */
+let PartItem_Generate = class PartItem_Generate extends UIScript {
+    get mBgImage() {
+        if (!this.mBgImage_Internal && this.uiWidgetBase) {
+            this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage');
+        }
+        return this.mBgImage_Internal;
+    }
+    get mFgImage() {
+        if (!this.mFgImage_Internal && this.uiWidgetBase) {
+            this.mFgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mFgImage');
+        }
+        return this.mFgImage_Internal;
+    }
+    get mIconBgImage() {
+        if (!this.mIconBgImage_Internal && this.uiWidgetBase) {
+            this.mIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mIconBgImage');
+        }
+        return this.mIconBgImage_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mIconBgImage/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mNameTextBlock() {
+        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mNameTextBlock');
+        }
+        return this.mNameTextBlock_Internal;
+    }
+    get mClickButton() {
+        if (!this.mClickButton_Internal && this.uiWidgetBase) {
+            this.mClickButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mClickButton');
+        }
+        return this.mClickButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mClickButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mClickButton");
+        });
+        this.mClickButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mNameTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+PartItem_Generate = __decorate([
+    UIBind('UI/module/SoulBoneModule/PartItem.ui')
+], PartItem_Generate);
+var PartItem_Generate$1 = PartItem_Generate;
+
+var foreign153 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: PartItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/SoulBoneModule/SoulBonePanel.ui
+ * TIME: 2024.10.24-19.45.28
+ */
+let SoulBonePanel_Generate = class SoulBonePanel_Generate extends UIScript {
+    get mMainCanvas() {
+        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
+            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas');
+        }
+        return this.mMainCanvas_Internal;
+    }
+    get mPartListScrollBox() {
+        if (!this.mPartListScrollBox_Internal && this.uiWidgetBase) {
+            this.mPartListScrollBox_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mPartListScrollBox');
+        }
+        return this.mPartListScrollBox_Internal;
+    }
+    get mPartListCanvas() {
+        if (!this.mPartListCanvas_Internal && this.uiWidgetBase) {
+            this.mPartListCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mPartListScrollBox/mPartListCanvas');
+        }
+        return this.mPartListCanvas_Internal;
+    }
+    get mContentCanvas() {
+        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
+            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas');
+        }
+        return this.mContentCanvas_Internal;
+    }
+    get mIconCanvas() {
+        if (!this.mIconCanvas_Internal && this.uiWidgetBase) {
+            this.mIconCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas');
+        }
+        return this.mIconCanvas_Internal;
+    }
+    get mIconBgImage() {
+        if (!this.mIconBgImage_Internal && this.uiWidgetBase) {
+            this.mIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mIconBgImage');
+        }
+        return this.mIconBgImage_Internal;
+    }
+    get mIconImage() {
+        if (!this.mIconImage_Internal && this.uiWidgetBase) {
+            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mIconBgImage/mIconImage');
+        }
+        return this.mIconImage_Internal;
+    }
+    get mNameFgImage() {
+        if (!this.mNameFgImage_Internal && this.uiWidgetBase) {
+            this.mNameFgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mNameFgImage');
+        }
+        return this.mNameFgImage_Internal;
+    }
+    get mNameTextBlock() {
+        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mNameFgImage/mNameTextBlock');
+        }
+        return this.mNameTextBlock_Internal;
+    }
+    get mStarCanvas() {
+        if (!this.mStarCanvas_Internal && this.uiWidgetBase) {
+            this.mStarCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mStarCanvas');
+        }
+        return this.mStarCanvas_Internal;
+    }
+    get mPropertyCanvas() {
+        if (!this.mPropertyCanvas_Internal && this.uiWidgetBase) {
+            this.mPropertyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas');
+        }
+        return this.mPropertyCanvas_Internal;
+    }
+    get mHpCanvas() {
+        if (!this.mHpCanvas_Internal && this.uiWidgetBase) {
+            this.mHpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas');
+        }
+        return this.mHpCanvas_Internal;
+    }
+    get mHpTextBlock() {
+        if (!this.mHpTextBlock_Internal && this.uiWidgetBase) {
+            this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/HpTitleImage/mHpTextBlock');
+        }
+        return this.mHpTextBlock_Internal;
+    }
+    get mHpArrowImage() {
+        if (!this.mHpArrowImage_Internal && this.uiWidgetBase) {
+            this.mHpArrowImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpArrowImage');
+        }
+        return this.mHpArrowImage_Internal;
+    }
+    get mHpTipsTextBlock() {
+        if (!this.mHpTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mHpTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpArrowImage/mHpTipsTextBlock');
+        }
+        return this.mHpTipsTextBlock_Internal;
+    }
+    get mHpedTextBlock() {
+        if (!this.mHpedTextBlock_Internal && this.uiWidgetBase) {
+            this.mHpedTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpArrowImage/mHpedTextBlock');
+        }
+        return this.mHpedTextBlock_Internal;
+    }
+    get mHpLineImage() {
+        if (!this.mHpLineImage_Internal && this.uiWidgetBase) {
+            this.mHpLineImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpLineImage');
+        }
+        return this.mHpLineImage_Internal;
+    }
+    get mAtkCanvas() {
+        if (!this.mAtkCanvas_Internal && this.uiWidgetBase) {
+            this.mAtkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas');
+        }
+        return this.mAtkCanvas_Internal;
+    }
+    get mAtkTextBlock() {
+        if (!this.mAtkTextBlock_Internal && this.uiWidgetBase) {
+            this.mAtkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/AtkTitleImage/mAtkTextBlock');
+        }
+        return this.mAtkTextBlock_Internal;
+    }
+    get mAtkArrowImage() {
+        if (!this.mAtkArrowImage_Internal && this.uiWidgetBase) {
+            this.mAtkArrowImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkArrowImage');
+        }
+        return this.mAtkArrowImage_Internal;
+    }
+    get mAtkTipsTextBlock() {
+        if (!this.mAtkTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mAtkTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkArrowImage/mAtkTipsTextBlock');
+        }
+        return this.mAtkTipsTextBlock_Internal;
+    }
+    get mAtkedTextBlock() {
+        if (!this.mAtkedTextBlock_Internal && this.uiWidgetBase) {
+            this.mAtkedTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkArrowImage/mAtkedTextBlock');
+        }
+        return this.mAtkedTextBlock_Internal;
+    }
+    get mAtkLineImage() {
+        if (!this.mAtkLineImage_Internal && this.uiWidgetBase) {
+            this.mAtkLineImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkLineImage');
+        }
+        return this.mAtkLineImage_Internal;
+    }
+    get mNeedInfoCanvas() {
+        if (!this.mNeedInfoCanvas_Internal && this.uiWidgetBase) {
+            this.mNeedInfoCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas');
+        }
+        return this.mNeedInfoCanvas_Internal;
+    }
+    get mNeedTitleTextBlock() {
+        if (!this.mNeedTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/NeedInfoBgImage/mNeedTitleTextBlock');
+        }
+        return this.mNeedTitleTextBlock_Internal;
+    }
+    get mNeedLvCanvas() {
+        if (!this.mNeedLvCanvas_Internal && this.uiWidgetBase) {
+            this.mNeedLvCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedLvCanvas');
+        }
+        return this.mNeedLvCanvas_Internal;
+    }
+    get mNeedLvCountTextBlock() {
+        if (!this.mNeedLvCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedLvCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedLvCanvas/mNeedLvCountTextBlock');
+        }
+        return this.mNeedLvCountTextBlock_Internal;
+    }
+    get mNeedDianondtCanvas() {
+        if (!this.mNeedDianondtCanvas_Internal && this.uiWidgetBase) {
+            this.mNeedDianondtCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas');
+        }
+        return this.mNeedDianondtCanvas_Internal;
+    }
+    get mNeedDiamondTipsTextBlock() {
+        if (!this.mNeedDiamondTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedDiamondTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondTipsTextBlock');
+        }
+        return this.mNeedDiamondTipsTextBlock_Internal;
+    }
+    get mNeedDiamondIconBgImage() {
+        if (!this.mNeedDiamondIconBgImage_Internal && this.uiWidgetBase) {
+            this.mNeedDiamondIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondIconBgImage');
+        }
+        return this.mNeedDiamondIconBgImage_Internal;
+    }
+    get mNeedDiamondIconImage() {
+        if (!this.mNeedDiamondIconImage_Internal && this.uiWidgetBase) {
+            this.mNeedDiamondIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondIconBgImage/mNeedDiamondIconImage');
+        }
+        return this.mNeedDiamondIconImage_Internal;
+    }
+    get mNeedDiamondCountTextBlock() {
+        if (!this.mNeedDiamondCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondCountTextBlock');
+        }
+        return this.mNeedDiamondCountTextBlock_Internal;
+    }
+    get mNeedCoinCanvas() {
+        if (!this.mNeedCoinCanvas_Internal && this.uiWidgetBase) {
+            this.mNeedCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas');
+        }
+        return this.mNeedCoinCanvas_Internal;
+    }
+    get mNeedCionTitleImage() {
+        if (!this.mNeedCionTitleImage_Internal && this.uiWidgetBase) {
+            this.mNeedCionTitleImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCionTitleImage');
+        }
+        return this.mNeedCionTitleImage_Internal;
+    }
+    get mNeedCoinTextBlock() {
+        if (!this.mNeedCoinTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinTextBlock');
+        }
+        return this.mNeedCoinTextBlock_Internal;
+    }
+    get mNeedCoinIconBgImage() {
+        if (!this.mNeedCoinIconBgImage_Internal && this.uiWidgetBase) {
+            this.mNeedCoinIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinIconBgImage');
+        }
+        return this.mNeedCoinIconBgImage_Internal;
+    }
+    get mNeedCoinIconImage() {
+        if (!this.mNeedCoinIconImage_Internal && this.uiWidgetBase) {
+            this.mNeedCoinIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinIconBgImage/mNeedCoinIconImage');
+        }
+        return this.mNeedCoinIconImage_Internal;
+    }
+    get mNeedCoinCountTextBlock() {
+        if (!this.mNeedCoinCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedCoinCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinCountTextBlock');
+        }
+        return this.mNeedCoinCountTextBlock_Internal;
+    }
+    get mNeedBoneCanvas() {
+        if (!this.mNeedBoneCanvas_Internal && this.uiWidgetBase) {
+            this.mNeedBoneCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas');
+        }
+        return this.mNeedBoneCanvas_Internal;
+    }
+    get mNeedBoneTitleImage() {
+        if (!this.mNeedBoneTitleImage_Internal && this.uiWidgetBase) {
+            this.mNeedBoneTitleImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneTitleImage');
+        }
+        return this.mNeedBoneTitleImage_Internal;
+    }
+    get mNeedBoneTextBlock() {
+        if (!this.mNeedBoneTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedBoneTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneTextBlock');
+        }
+        return this.mNeedBoneTextBlock_Internal;
+    }
+    get mNeedBoneIconBgImage() {
+        if (!this.mNeedBoneIconBgImage_Internal && this.uiWidgetBase) {
+            this.mNeedBoneIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneIconBgImage');
+        }
+        return this.mNeedBoneIconBgImage_Internal;
+    }
+    get mNeedBoneIconImage() {
+        if (!this.mNeedBoneIconImage_Internal && this.uiWidgetBase) {
+            this.mNeedBoneIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneIconBgImage/mNeedBoneIconImage');
+        }
+        return this.mNeedBoneIconImage_Internal;
+    }
+    get mNeedBoneCountTextBlock() {
+        if (!this.mNeedBoneCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mNeedBoneCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedBoneCanvas/mNeedBoneCountTextBlock');
+        }
+        return this.mNeedBoneCountTextBlock_Internal;
+    }
+    get mHasMaxLvTextBlock() {
+        if (!this.mHasMaxLvTextBlock_Internal && this.uiWidgetBase) {
+            this.mHasMaxLvTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mHasMaxLvTextBlock');
+        }
+        return this.mHasMaxLvTextBlock_Internal;
+    }
+    get mStrengthenCanvas() {
+        if (!this.mStrengthenCanvas_Internal && this.uiWidgetBase) {
+            this.mStrengthenCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas');
+        }
+        return this.mStrengthenCanvas_Internal;
+    }
+    get mProbabilityTextBlock() {
+        if (!this.mProbabilityTextBlock_Internal && this.uiWidgetBase) {
+            this.mProbabilityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mProbabilityTextBlock');
+        }
+        return this.mProbabilityTextBlock_Internal;
+    }
+    get mUpProbabilityButton() {
+        if (!this.mUpProbabilityButton_Internal && this.uiWidgetBase) {
+            this.mUpProbabilityButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mUpProbabilityButton');
+        }
+        return this.mUpProbabilityButton_Internal;
+    }
+    get mUpProbabilityTextBlock() {
+        if (!this.mUpProbabilityTextBlock_Internal && this.uiWidgetBase) {
+            this.mUpProbabilityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mUpProbabilityButton/mUpProbabilityTextBlock');
+        }
+        return this.mUpProbabilityTextBlock_Internal;
+    }
+    get mStrengthenButton() {
+        if (!this.mStrengthenButton_Internal && this.uiWidgetBase) {
+            this.mStrengthenButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mStrengthenButton');
+        }
+        return this.mStrengthenButton_Internal;
+    }
+    get mStrengthenTextBlock() {
+        if (!this.mStrengthenTextBlock_Internal && this.uiWidgetBase) {
+            this.mStrengthenTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mStrengthenButton/mStrengthenTextBlock');
+        }
+        return this.mStrengthenTextBlock_Internal;
+    }
+    get mMoneyCanvas() {
+        if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
+            this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
+        }
+        return this.mMoneyCanvas_Internal;
+    }
+    get mIconBoneImage() {
+        if (!this.mIconBoneImage_Internal && this.uiWidgetBase) {
+            this.mIconBoneImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/BoneCanvas/mIconBoneImage');
+        }
+        return this.mIconBoneImage_Internal;
+    }
+    get mBoneCountTextBlock() {
+        if (!this.mBoneCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mBoneCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/BoneCanvas/mBoneCountTextBlock');
+        }
+        return this.mBoneCountTextBlock_Internal;
+    }
+    get mIconCoinImage() {
+        if (!this.mIconCoinImage_Internal && this.uiWidgetBase) {
+            this.mIconCoinImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mIconCoinImage');
+        }
+        return this.mIconCoinImage_Internal;
+    }
+    get mCoinCountTextBlock() {
+        if (!this.mCoinCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mCoinCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mCoinCountTextBlock');
+        }
+        return this.mCoinCountTextBlock_Internal;
+    }
+    get mIconDiamondImage() {
+        if (!this.mIconDiamondImage_Internal && this.uiWidgetBase) {
+            this.mIconDiamondImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mIconDiamondImage');
+        }
+        return this.mIconDiamondImage_Internal;
+    }
+    get mDiamondCountTextBlock() {
+        if (!this.mDiamondCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mDiamondCountTextBlock');
+        }
+        return this.mDiamondCountTextBlock_Internal;
+    }
+    get mIconArkImage() {
+        if (!this.mIconArkImage_Internal && this.uiWidgetBase) {
+            this.mIconArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mIconArkImage');
+        }
+        return this.mIconArkImage_Internal;
+    }
+    get mArkCountTextBlock() {
+        if (!this.mArkCountTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mArkCountTextBlock');
+        }
+        return this.mArkCountTextBlock_Internal;
+    }
+    get mTotalRarityImage() {
+        if (!this.mTotalRarityImage_Internal && this.uiWidgetBase) {
+            this.mTotalRarityImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityImage');
+        }
+        return this.mTotalRarityImage_Internal;
+    }
+    get mTotalRarityTextBlock() {
+        if (!this.mTotalRarityTextBlock_Internal && this.uiWidgetBase) {
+            this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityImage/mTotalRarityTextBlock');
+        }
+        return this.mTotalRarityTextBlock_Internal;
+    }
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mUpProbabilityButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mUpProbabilityButton");
+        });
+        this.mUpProbabilityButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mStrengthenButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mStrengthenButton");
+        });
+        this.mStrengthenButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mNameTextBlock);
+        this.initLanguage(this.mHpTextBlock);
+        this.initLanguage(this.mHpTipsTextBlock);
+        this.initLanguage(this.mHpedTextBlock);
+        this.initLanguage(this.mAtkTextBlock);
+        this.initLanguage(this.mAtkTipsTextBlock);
+        this.initLanguage(this.mAtkedTextBlock);
+        this.initLanguage(this.mNeedTitleTextBlock);
+        this.initLanguage(this.mNeedLvCountTextBlock);
+        this.initLanguage(this.mNeedDiamondTipsTextBlock);
+        this.initLanguage(this.mNeedDiamondCountTextBlock);
+        this.initLanguage(this.mNeedCoinTextBlock);
+        this.initLanguage(this.mNeedCoinCountTextBlock);
+        this.initLanguage(this.mNeedBoneTextBlock);
+        this.initLanguage(this.mNeedBoneCountTextBlock);
+        this.initLanguage(this.mHasMaxLvTextBlock);
+        this.initLanguage(this.mProbabilityTextBlock);
+        this.initLanguage(this.mUpProbabilityTextBlock);
+        this.initLanguage(this.mStrengthenTextBlock);
+        this.initLanguage(this.mBoneCountTextBlock);
+        this.initLanguage(this.mCoinCountTextBlock);
+        this.initLanguage(this.mDiamondCountTextBlock);
+        this.initLanguage(this.mArkCountTextBlock);
+        this.initLanguage(this.mTotalRarityTextBlock);
+        this.initLanguage(this.mTitleTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+SoulBonePanel_Generate = __decorate([
+    UIBind('UI/module/SoulBoneModule/SoulBonePanel.ui')
+], SoulBonePanel_Generate);
+var SoulBonePanel_Generate$1 = SoulBonePanel_Generate;
+
+var foreign154 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: SoulBonePanel_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/SoulBoneModule/StarItem.ui
+ * TIME: 2024.10.24-19.45.28
+ */
+let StarItem_Generate = class StarItem_Generate extends UIScript {
+    get mBgImage() {
+        if (!this.mBgImage_Internal && this.uiWidgetBase) {
+            this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage');
+        }
+        return this.mBgImage_Internal;
+    }
+    get mFgImage() {
+        if (!this.mFgImage_Internal && this.uiWidgetBase) {
+            this.mFgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mFgImage');
+        }
+        return this.mFgImage_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+StarItem_Generate = __decorate([
+    UIBind('UI/module/SoulBoneModule/StarItem.ui')
+], StarItem_Generate);
+var StarItem_Generate$1 = StarItem_Generate;
+
+var foreign155 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: StarItem_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/SoulBoneModule/UpProbabilityPanel.ui
+ * TIME: 2024.10.24-19.45.28
+ */
+let UpProbabilityPanel_Generate = class UpProbabilityPanel_Generate extends UIScript {
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    get mContentTextBlock_0() {
+        if (!this.mContentTextBlock_0_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_0');
+        }
+        return this.mContentTextBlock_0_Internal;
+    }
+    get mContentTextBlock_1() {
+        if (!this.mContentTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_1');
+        }
+        return this.mContentTextBlock_1_Internal;
+    }
+    get mContentTextBlock_2() {
+        if (!this.mContentTextBlock_2_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_2');
+        }
+        return this.mContentTextBlock_2_Internal;
+    }
+    get mDiamondButton() {
+        if (!this.mDiamondButton_Internal && this.uiWidgetBase) {
+            this.mDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton');
+        }
+        return this.mDiamondButton_Internal;
+    }
+    get mDiamondTextBlock() {
+        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
+            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton/mDiamondTextBlock');
+        }
+        return this.mDiamondTextBlock_Internal;
+    }
+    get mArkButton() {
+        if (!this.mArkButton_Internal && this.uiWidgetBase) {
+            this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton');
+        }
+        return this.mArkButton_Internal;
+    }
+    get mArkTextBlock() {
+        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
+            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton/mArkTextBlock');
+        }
+        return this.mArkTextBlock_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mDiamondButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mDiamondButton");
+        });
+        this.mDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mArkButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mArkButton");
+        });
+        this.mArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mContentTextBlock_0);
+        this.initLanguage(this.mContentTextBlock_1);
+        this.initLanguage(this.mContentTextBlock_2);
+        this.initLanguage(this.mDiamondTextBlock);
+        this.initLanguage(this.mArkTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+UpProbabilityPanel_Generate = __decorate([
+    UIBind('UI/module/SoulBoneModule/UpProbabilityPanel.ui')
+], UpProbabilityPanel_Generate);
+var UpProbabilityPanel_Generate$1 = UpProbabilityPanel_Generate;
+
+var foreign156 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: UpProbabilityPanel_Generate$1
+});
+
+class StarItem extends StarItem_Generate$1 {
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+    }
+    setStar(isStar) {
+        this.mFgImage.visibility = isStar ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
+    }
+}
+class PartItem extends PartItem_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.soulBonePanel = null;
+        this.soulBoneData = null;
+    }
+    get getSoulBonePanel() {
+        if (!this.soulBonePanel) {
+            this.soulBonePanel = mw.UIService.getUI(SoulBonePanel);
+        }
+        return this.soulBonePanel;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        Utils.setWidgetVisibility(this.mFgImage, mw.SlateVisibility.Collapsed);
+        if (GlobalData.languageId == 0) {
+            this.mNameTextBlock.fontSize = 15;
+        }
+        else {
+            this.mNameTextBlock.fontSize = 20;
+        }
+    }
+    bindButton() {
+        this.mClickButton.onClicked.add(this.addClickButton.bind(this));
+    }
+    addClickButton() {
+        this.getSoulBonePanel.selectPart(this.soulBoneData.id);
+    }
+    setData(soulBoneData) {
+        this.soulBoneData = soulBoneData;
+        this.setIcon();
+        this.setName();
+    }
+    setIcon() {
+        let iconStr = this.soulBoneData.icon.split(`_`);
+        if (iconStr[0] == `icon`) {
+            this.mIconImage.imageGuid = iconStr[1];
+        }
+        else if (iconStr[0] == `mode`) {
+            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
+        }
+    }
+    setName() {
+        this.mNameTextBlock.text = GameConfig.Language[`${this.soulBoneData.name}`].Value;
+    }
+    setSelect(isSelect) {
+        Utils.setWidgetVisibility(this.mFgImage, isSelect ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+    }
+}
+class SoulBonePanel extends SoulBonePanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.soulBoneModuleC = null;
+        this.hudPanel = null;
+        this.partItems = [];
+        this.currentSelectPartId = -1;
+        this.currentSoulBoneData = null;
+        this.soulBoneLv = 0;
+        this.starItems = [];
+    }
+    get getSoulBoneModuleC() {
+        if (!this.soulBoneModuleC) {
+            this.soulBoneModuleC = ModuleService.getModule(SoulBoneModuleC);
+        }
+        return this.soulBoneModuleC;
+    }
+    get getHudPanel() {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.initUI();
+        this.bindButton();
+        this.initTextBlock();
+        this.initIconImage();
+    }
+    initIconImage() {
+        this.mIconCoinImage.imageGuid = GlobalData.coinIcon;
+        this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
+        this.mIconArkImage.imageGuid = GlobalData.arkIcon;
+        this.mIconBoneImage.imageGuid = GlobalData.boneIcon;
+        this.mNeedDiamondIconImage.imageGuid = GlobalData.diamondIcon;
+        this.mNeedCoinIconImage.imageGuid = GlobalData.coinIcon;
+        this.mNeedBoneIconImage.imageGuid = GlobalData.boneIcon;
+    }
+    initUI() {
+        soulBoneMap.forEach((value, key) => {
+            let partItem = mw.UIService.create(PartItem);
+            partItem.setData(value);
+            this.partItems.push(partItem);
+            this.mPartListCanvas.addChild(partItem.uiObject);
+        });
+        this.selectPart(0);
+        this.updateTotalUpStarOffsetValue();
+    }
+    initTextBlock() {
+        this.mTitleTextBlock.text = GameConfig.Language.Text_StrengthenSoulBones.Value;
+        let afterStrengthening = GameConfig.Language.Text_AfterStrengthening.Value;
+        this.mHpTipsTextBlock.text = afterStrengthening;
+        this.mAtkTipsTextBlock.text = afterStrengthening;
+        this.mNeedTitleTextBlock.text = GameConfig.Language.Text_StrengtheningConditions.Value;
+        this.mNeedDiamondTipsTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
+        this.mNeedCoinTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
+        this.mNeedBoneTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
+        this.mUpProbabilityTextBlock.text = GameConfig.Language.Text_IncreaseProbability.Value;
+        this.mStrengthenTextBlock.text = GameConfig.Language.Text_StartStrengthening.Value;
+        this.mHasMaxLvTextBlock.text = GameConfig.Language.Text_FullLevel.Value;
+        if (GlobalData.languageId == 0) {
+            this.mProbabilityTextBlock.fontSize = 15;
+            this.mHpTextBlock.fontSize = 18;
+            this.mHpedTextBlock.fontSize = 18;
+            this.mAtkTextBlock.fontSize = 18;
+            this.mAtkedTextBlock.fontSize = 18;
+            this.mHpTipsTextBlock.fontSize = 15;
+            this.mAtkTipsTextBlock.fontSize = 15;
+            this.mStrengthenTextBlock.fontSize = 28;
+            this.mTitleTextBlock.fontSize = 50;
+        }
+        else {
+            this.mProbabilityTextBlock.fontSize = 30;
+            this.mHpTextBlock.fontSize = 30;
+            this.mHpedTextBlock.fontSize = 30;
+            this.mAtkTextBlock.fontSize = 30;
+            this.mAtkedTextBlock.fontSize = 30;
+            this.mHpTipsTextBlock.fontSize = 30;
+            this.mAtkTipsTextBlock.fontSize = 30;
+            this.mStrengthenTextBlock.fontSize = 40;
+            this.mTitleTextBlock.fontSize = 80;
+        }
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
+        this.mUpProbabilityButton.onClicked.add(this.addUpProbabilityButton.bind(this));
+        this.mStrengthenButton.onClicked.add(this.addStrengthenButton.bind(this));
+    }
+    addCloseButton() {
+        this.hideTween();
+    }
+    updateCoinTextBlock(count) {
+        this.mCoinCountTextBlock.text = `${Utils.integerUnitConversionStr(count)}`;
+    }
+    updateArkTextBlock(arkCount) {
+        this.mArkCountTextBlock.text = `${arkCount}`;
+    }
+    updateDiamondTextBlock(count) {
+        this.mDiamondCountTextBlock.text = `${Utils.integerUnitConversionStr(count)}`;
+    }
+    updateBoneTextBlock(count) {
+        this.mBoneCountTextBlock.text = `${count}`;
+    }
+    updateTotalUpStarOffsetValue() {
+        let totalUpStarOffsetValue = Number((this.getSoulBoneModuleC.getTotalUpStarOffsetValue + 1).toFixed(2));
+        this.mTotalRarityTextBlock.text = `${StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes.Value, totalUpStarOffsetValue)}
+        \n${StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes.Value, totalUpStarOffsetValue)}`;
+    }
+    selectPart(partId) {
+        if (this.currentSelectPartId >= 0)
+            this.partItems[this.currentSelectPartId].setSelect(false);
+        this.currentSelectPartId = partId;
+        this.currentSoulBoneData = soulBoneMap.get(partId);
+        this.partItems[partId].setSelect(true);
+        this.refreshContentUI();
+    }
+    refreshContentUI() {
+        this.soulBoneLv = this.getSoulBoneModuleC.getSoulBoneLv(this.currentSelectPartId);
+        this.setHeadInfo();
+        this.setPropertyInfo();
+    }
+    setHeadInfo() {
+        let iconStr = soulBoneMap.get(this.currentSelectPartId).icon.split(`_`);
+        if (iconStr[0] == `icon`) {
+            this.mIconImage.imageGuid = iconStr[1];
+        }
+        else if (iconStr[0] == `mode`) {
+            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
+        }
+        this.mNameTextBlock.text = StringUtil.format(GameConfig.Language.Text_StarRating.Value, this.soulBoneLv);
+        this.setStars();
+    }
+    setStars() {
+        if (!this.starItems || this.starItems.length == 0) {
+            this.starItems = [];
+            for (let i = 0; i < maxStarLv; ++i) {
+                let starItem = mw.UIService.create(StarItem);
+                this.starItems.push(starItem);
+                this.mStarCanvas.addChild(starItem.uiObject);
+            }
+        }
+        for (let i = 0; i < this.soulBoneLv; ++i) {
+            this.starItems[i].setStar(true);
+        }
+        for (let i = this.soulBoneLv; i < maxStarLv; ++i) {
+            this.starItems[i].setStar(false);
+        }
+    }
+    setPropertyInfo() {
+        this.setPropertyArrowVisibility();
+    }
+    setPropertyArrowVisibility() {
+        if (this.soulBoneLv == maxStarLv) {
+            this.mHasMaxLvTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mHpArrowImage.visibility = mw.SlateVisibility.Collapsed;
+            this.mAtkArrowImage.visibility = mw.SlateVisibility.Collapsed;
+            this.mNeedInfoCanvas.visibility = mw.SlateVisibility.Collapsed;
+            this.mStrengthenCanvas.visibility = mw.SlateVisibility.Collapsed;
+        }
+        else {
+            this.mHasMaxLvTextBlock.visibility = mw.SlateVisibility.Collapsed;
+            this.mHpArrowImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mAtkArrowImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mNeedInfoCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.mStrengthenCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
+            this.setHpPropertyInfo();
+            this.setAtkPropertyInfo();
+            this.setNeedInfo();
+            this.setStrengthenButtonState();
+        }
+    }
+    setHpPropertyInfo() {
+        let currentHpMultiple = 1 + (this.soulBoneLv * upStarOffsetValue);
+        let nextHpMultiple = 1 + ((this.soulBoneLv + 1) * upStarOffsetValue);
+        this.mHpTextBlock.text = StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes.Value, currentHpMultiple);
+        this.mHpedTextBlock.text = StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes.Value, nextHpMultiple);
+    }
+    setAtkPropertyInfo() {
+        let currentAtkMultiple = 1 + (this.soulBoneLv * upStarOffsetValue);
+        let nextAtkMultiple = 1 + ((this.soulBoneLv + 1) * upStarOffsetValue);
+        this.mAtkTextBlock.text = StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes.Value, currentAtkMultiple);
+        this.mAtkedTextBlock.text = StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes.Value, nextAtkMultiple);
+    }
+    setNeedInfo() {
+        this.setNeedLv();
+        this.setNeedDiamondCost();
+        this.setNeedCoinCost();
+        this.setNeedBoneCost();
+    }
+    setNeedLv() {
+        let limitLv = this.currentSoulBoneData.limitLv;
+        this.mNeedLvCountTextBlock.text = `${StringUtil.format(GameConfig.Language.Text_NeedToReachLevel.Value, limitLv)}(${limitLv}/${this.getSoulBoneModuleC.getLevel})`;
+    }
+    setNeedDiamondCost() {
+        let diamond = this.currentSoulBoneData.diamonds[this.soulBoneLv];
+        this.mNeedDiamondCountTextBlock.text = `${diamond}/${this.getSoulBoneModuleC.getDiamond}`;
+    }
+    setNeedCoinCost() {
+        let coin = this.currentSoulBoneData.coins[this.soulBoneLv];
+        this.mNeedCoinCountTextBlock.text = `${coin}/${this.getSoulBoneModuleC.getCoin}`;
+    }
+    setNeedBoneCost() {
+        let bone = this.currentSoulBoneData.soulBones[this.soulBoneLv];
+        this.mNeedBoneCountTextBlock.text = `${bone}/${this.getSoulBoneModuleC.getBone}`;
+    }
+    setStrengthenButtonState() {
+        this.mProbabilityTextBlock.text = StringUtil.format(GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess.Value, this.getSoulBoneModuleC.getProbability);
+    }
+    addUpProbabilityButton() {
+        this.getSoulBoneModuleC.upProbability(() => {
+            this.setStrengthenButtonState();
+        });
+    }
+    addStrengthenButton() {
+        if (this.currentSoulBoneData.limitLv > this.getSoulBoneModuleC.getLevel) {
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_NeedToReachLevel.Value, this.currentSoulBoneData.limitLv));
+            return;
+        }
+        let costCoin = this.currentSoulBoneData.coins[this.soulBoneLv];
+        if (costCoin > this.getSoulBoneModuleC.getCoin) {
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
+            return;
+        }
+        let costDiamond = this.currentSoulBoneData.diamonds[this.soulBoneLv];
+        if (costDiamond > this.getSoulBoneModuleC.getDiamond) {
+            Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
+            return;
+        }
+        let costBone = this.currentSoulBoneData.soulBones[this.soulBoneLv];
+        if (costBone > this.getSoulBoneModuleC.getBone) {
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientSoulBoneFragments.Value);
+            return;
+        }
+        this.getSoulBoneModuleC.strengthen(() => {
+            this.refreshContentUI();
+            this.updateTotalUpStarOffsetValue();
+        }, () => {
+            this.refreshContentUI();
+        }, this.currentSelectPartId, costCoin, costDiamond, costBone);
+    }
+    onShow(...params) {
+        this.refreshContentUI();
+        Utils.openUITween(this.rootCanvas, () => {
+            this.getHudPanel.hide();
+        }, null);
+    }
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+            this.getHudPanel.show();
+        });
+    }
+}
+class UpProbabilityPanel extends UpProbabilityPanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.isCanClickArkButton = true;
+        this.arkCallBack = null;
+        this.diamondCallBack = null;
+        this.closeCallBack = null;
+    }
+    onStart() {
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mContentTextBlock_2.text = GameConfig.Language.Text_Or.Value;
+        this.mDiamondTextBlock.text = GameConfig.Language.Text_UsingDiamonds.Value;
+        this.mArkTextBlock.text = GameConfig.Language.Text_UseTeamCoins.Value;
+        if (GlobalData.languageId == 0) {
+            this.mContentTextBlock_0.fontSize = 30;
+            this.mContentTextBlock_1.fontSize = 30;
+            this.mDiamondTextBlock.fontSize = 30;
+            this.mArkTextBlock.fontSize = 30;
+        }
+        else {
+            this.mContentTextBlock_0.fontSize = 40;
+            this.mContentTextBlock_1.fontSize = 40;
+            this.mDiamondTextBlock.fontSize = 38;
+            this.mArkTextBlock.fontSize = 38;
+        }
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(this.addClickButton.bind(this));
+        this.mArkButton.onClicked.add(this.addArkButton.bind(this));
+        this.mDiamondButton.onClicked.add(this.addDiamondButton.bind(this));
+    }
+    addClickButton() {
+        this.hide();
+        if (this.closeCallBack)
+            this.closeCallBack();
+    }
+    addArkButton() {
+        if (!this.isCanClickArkButton)
+            return;
+        this.isCanClickArkButton = false;
+        TimeUtil.delaySecond(3).then(() => { this.isCanClickArkButton = true; });
+        if (this.arkCallBack)
+            this.arkCallBack();
+    }
+    addDiamondButton() {
+        if (this.diamondCallBack)
+            this.diamondCallBack();
+    }
+    showPanel(arkCallBack, diamondCallBack, closeCallBack, diamondProbility, arkProbility) {
+        this.isCanClickArkButton = true;
+        this.arkCallBack = arkCallBack;
+        this.diamondCallBack = diamondCallBack;
+        this.closeCallBack = closeCallBack;
+        this.mContentTextBlock_0.text = StringUtil.format(GameConfig.Language.Text_UpProbabiliotyConetntTextBlock_0.Value, costDiamondUpProbability, diamondProbility);
+        this.mContentTextBlock_1.text = StringUtil.format(GameConfig.Language.Text_UpProbabiliotyConetntTextBlock_1.Value, costArkUpProbability, arkProbility);
+        this.show();
+    }
+}
+class SoulBone extends Subdata {
+    constructor() {
+        super(...arguments);
+        this.soulBoneLvs = {};
+        this.probability = 50;
+    }
+    setSoulBoneLv(partId, lv) {
+        if (MapEx.has(this.soulBoneLvs, partId)) {
+            let oldLv = MapEx.get(this.soulBoneLvs, partId);
+            MapEx.set(this.soulBoneLvs, partId, Math.round(oldLv + lv));
+        }
+        else {
+            MapEx.set(this.soulBoneLvs, partId, Math.round(lv));
+        }
+        this.save(true);
+    }
+    getSoulBoneLv(partId) {
+        if (MapEx.has(this.soulBoneLvs, partId)) {
+            return MapEx.get(this.soulBoneLvs, partId);
+        }
+        else {
+            return 0;
+        }
+    }
+    setProbability(probability) {
+        this.probability = probability;
+        this.save(true);
+    }
+    get getTotalUpStarOffsetValue() {
+        if (!this.soulBoneLvs || MapEx.count(this.soulBoneLvs) == 0)
+            return 0;
+        let totalUpStarOffsetValue = 0;
+        MapEx.forEach(this.soulBoneLvs, (key, value) => {
+            totalUpStarOffsetValue += (value * upStarOffsetValue);
+        });
+        return totalUpStarOffsetValue;
+    }
+}
+__decorate([
+    Decorator.persistence()
+], SoulBone.prototype, "soulBoneLvs", void 0);
+__decorate([
+    Decorator.persistence()
+], SoulBone.prototype, "probability", void 0);
+class SoulBoneData {
+}
+const soulBoneMap = new Map();
+soulBoneMap.set(0, { id: 0, desc: "头部魂骨", name: `Text_HeadSoulBone`, icon: "icon_450608", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [1, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(1, { id: 1, desc: "外附魂骨", name: `Text_ExternalSoulBone`, icon: "icon_450602", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(2, { id: 2, desc: "躯干魂骨", name: `Text_TorsoSoulBone`, icon: "icon_450603", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(3, { id: 3, desc: "腰部魂骨", name: `Text_WaistSoulBone`, icon: "icon_450610", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(4, { id: 4, desc: "手臂魂骨", name: `Text_ArmSoulBone`, icon: "icon_450611", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(5, { id: 5, desc: "腿部魂骨", name: `Text_LegSoulBone`, icon: "icon_450597", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+soulBoneMap.set(6, { id: 6, desc: "脚部魂骨", name: `Text_FootSoulBone`, icon: "icon_450595", limitLv: 1, coins: [2888888, 2888888 * 3, 2888888 * 10, 2888888 * 50, 2888888 * 100, 2888888 * 500, 2888888 * 1000, 2888888 * 5000, 2888888 * 10000, 2888888 * 100000], diamonds: [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998], soulBones: [1, 10, 300, 600, 1000, 2000, 4000, 6000, 8000, 10000] });
+const maxStarLv = 10;
+const upStarOffsetValue = 0.05;
+const costDiamondUpProbability = 100;
+const costArkUpProbability = 100;
+const upProbabilityByArkCommodityId = "5aYcgFQpdxe0001Ud";
+const upFaildSound = "120841";
+const upSucceedSound = "169179";
+class SoulBoneModuleC extends ModuleC {
+    constructor() {
+        super(...arguments);
+        this.upProbabilityPanel = null;
+        this.soulBonePanel = null;
+        this.hudModuleC = null;
+        this.playerModuleC = null;
+        this.adTipsPanel = null;
+        this.bagModuleC = null;
+        this.soulBoneLvs = {};
+        this.probability = 0;
+        this.upProbabilitySuccessCallBack = null;
+        this.strengthenSuccessCallBack = null;
+        this.strengthenFailCallBack = null;
+    }
+    get getUpProbabilityPanel() {
+        if (!this.upProbabilityPanel) {
+            this.upProbabilityPanel = mw.UIService.getUI(UpProbabilityPanel);
+        }
+        return this.upProbabilityPanel;
+    }
+    get getSoulBonePanel() {
+        if (!this.soulBonePanel) {
+            this.soulBonePanel = mw.UIService.getUI(SoulBonePanel);
+        }
+        return this.soulBonePanel;
+    }
+    get getHudModuleC() {
+        if (!this.hudModuleC) {
+            this.hudModuleC = ModuleService.getModule(HUDModuleC);
+        }
+        return this.hudModuleC;
+    }
+    get getPlayerModuleC() {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
+    }
+    get getAdTipsPanel() {
+        if (!this.adTipsPanel) {
+            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
+        }
+        return this.adTipsPanel;
+    }
+    get getBagModuleC() {
+        if (!this.bagModuleC) {
+            this.bagModuleC = ModuleService.getModule(BagModuleC);
+        }
+        return this.bagModuleC;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.bindAction();
+    }
+    bindAction() {
+        this.getHudModuleC.onOpenSoulBoneAction.add(this.onOpenSoulBonePanel.bind(this));
+        mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
+        Event.addLocalListener(`UpdateDiamondTextBlock`, this.addUpdateDiamondTextBlock.bind(this));
+        Event.addLocalListener(`UpdateCoinTextBlock`, this.addUpdateCoinTextBlock.bind(this));
+        Event.addLocalListener(`UpdateBoneTextBlock`, this.addUpdateBoneTextBlock.bind(this));
+    }
+    addArkUpdate(amount) {
+        //刷新逻辑，amount为当前代币数量
+        console.error(`ArkModuleC addArkUpdate amount: ${amount}`);
+        this.getSoulBonePanel.updateArkTextBlock(amount);
+    }
+    addUpdateDiamondTextBlock(count) {
+        this.getSoulBonePanel.updateDiamondTextBlock(count);
+    }
+    addUpdateCoinTextBlock(count) {
+        this.getSoulBonePanel.updateCoinTextBlock(count);
+    }
+    addUpdateBoneTextBlock(count) {
+        this.getSoulBonePanel.updateBoneTextBlock(count);
+    }
+    onOpenSoulBonePanel() {
+        this.getSoulBonePanel.show();
+        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
+        Event.dispatchToLocal(`SyncDiamondCount`);
+        Event.dispatchToLocal(`SyncCoinCount`);
+        Event.dispatchToLocal(`SyncBoneCount`);
+    }
+    onEnterScene(sceneType) {
+        this.initSoulBoneData();
+    }
+    initSoulBoneData() {
+        this.soulBoneLvs = this.data.soulBoneLvs;
+        this.probability = this.data.probability;
+        if (this.probability < 50)
+            this.setProbability(50);
+    }
+    getSoulBoneLv(partId) {
+        if (MapEx.has(this.soulBoneLvs, partId)) {
+            return MapEx.get(this.soulBoneLvs, partId);
+        }
+        else {
+            return 0;
+        }
+    }
+    setSoulBoneLv(partId, lv) {
+        if (MapEx.has(this.soulBoneLvs, partId)) {
+            let oldLv = MapEx.get(this.soulBoneLvs, partId);
+            MapEx.set(this.soulBoneLvs, partId, Math.round(oldLv + lv));
+        }
+        else {
+            MapEx.set(this.soulBoneLvs, partId, Math.round(lv));
+        }
+        this.server.net_setSoulBoneLv(partId, lv);
+    }
+    get getTotalUpStarOffsetValue() {
+        if (!this.soulBoneLvs || MapEx.count(this.soulBoneLvs) == 0)
+            return 0;
+        let totalUpStarOffsetValue = 0;
+        MapEx.forEach(this.soulBoneLvs, (key, value) => {
+            totalUpStarOffsetValue += (value * upStarOffsetValue);
+        });
+        return totalUpStarOffsetValue;
+    }
+    get getLevel() {
+        return this.getPlayerModuleC.getLv;
+    }
+    get getDiamond() {
+        return this.getPlayerModuleC.getDiamond;
+    }
+    setDiamond(diamond) {
+        this.getPlayerModuleC.saveDiamond(diamond);
+    }
+    get getBone() {
+        return this.getPlayerModuleC.getBone;
+    }
+    setBone(bone) {
+        this.getPlayerModuleC.saveBone(bone);
+    }
+    get getCoin() {
+        return this.getPlayerModuleC.getCoin();
+    }
+    setCoin(coin) {
+        this.getPlayerModuleC.saveCoin(coin);
+    }
+    get getProbability() {
+        return Math.round(this.probability) < 50 ? 50 : Math.round(this.probability);
+    }
+    setProbability(probability) {
+        this.probability = probability;
+        if (this.probability > 100)
+            this.probability = 100;
+        this.server.net_setProbability(probability);
+    }
+    upProbability(callBack) {
+        if (this.probability >= 100) {
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess.Value, 100));
+            return;
+        }
+        this.upProbabilitySuccessCallBack = callBack;
+        this.getUpProbabilityPanel.showPanel(() => {
+            mw.PurchaseService.placeOrder(upProbabilityByArkCommodityId, 1, (status, msg) => {
+                mw.PurchaseService.getArkBalance(); //刷新代币数量
+                if (status != 200)
+                    return;
+                if (this.upProbabilitySuccessCallBack)
+                    this.upProbabilitySuccessCallBack();
+                SoundService.playSound(upSucceedSound);
+                Notice.showDownNotice(GameConfig.Language.Text_ProbabilityIncreaseSuccess.Value);
+            });
+        }, () => {
+            if (this.getDiamond >= costDiamondUpProbability) {
+                this.setDiamond(-costDiamondUpProbability);
+                this.setProbability(this.probability + 10);
+                if (this.upProbabilitySuccessCallBack)
+                    this.upProbabilitySuccessCallBack();
+                SoundService.playSound(upSucceedSound);
+                Notice.showDownNotice(GameConfig.Language.Text_ProbabilityIncreaseSuccess.Value);
+            }
+            else {
+                Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
+                if (GlobalData.isOpenIAA) {
+                    this.getAdTipsPanel.showRewardAd(() => {
+                        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
+                        this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                    }, StringUtil.format(GameConfig.Language.Text_GetDiamondsForFree.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                }
+                else {
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
+                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+                }
+            }
+        }, () => {
+        }, this.probability + 10, 100);
+    }
+    net_deliverGoods(commodityId, amount) {
+        if (commodityId == upProbabilityByArkCommodityId) {
+            this.setProbability(100);
+            if (this.upProbabilitySuccessCallBack)
+                this.upProbabilitySuccessCallBack();
+        }
+    }
+    strengthen(strengthenSuccessCallBack, strengthenFailCallBack, selectPartId, costCoin, costDiamond, costBone) {
+        let randomValue = Utils.getRandomInteger(1, 100);
+        this.setCoin(-costCoin);
+        this.setDiamond(-costDiamond);
+        this.setBone(-costBone);
+        if (randomValue <= this.probability) {
+            this.setSoulBoneLv(selectPartId, 1);
+            this.getBagModuleC.updateHpByUsing();
+            SoundService.playSound(upSucceedSound);
+            Notice.showDownNotice(GameConfig.Language.Text_SoulBoneStrengtheningSuccessful.Value);
+            this.setProbability(50);
+            this.strengthenSuccessCallBack = strengthenSuccessCallBack;
+            if (this.strengthenSuccessCallBack)
+                this.strengthenSuccessCallBack();
+        }
+        else {
+            SoundService.playSound(upFaildSound);
+            Notice.showDownNotice(GameConfig.Language.Text_SoulBoneStrengtheningFailed.Value);
+            this.setProbability(50);
+            this.strengthenFailCallBack = strengthenFailCallBack;
+            if (this.strengthenFailCallBack)
+                this.strengthenFailCallBack();
+        }
+    }
+}
+class SoulBoneModuleS extends ModuleS {
+    constructor() {
+        super(...arguments);
+        this.bagModuleS = null;
+    }
+    get getBagModuleS() {
+        if (!this.bagModuleS) {
+            this.bagModuleS = ModuleService.getModule(BagModuleS);
+        }
+        return this.bagModuleS;
+    }
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+        this.bindAction();
+    }
+    bindAction() {
+        mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
+    }
+    addShipOrder(playerId, orderId, commodityId, amount, confirmOrder) {
+        //根据playerId和commodityId来处理购买逻辑
+        this.getClient(playerId).net_deliverGoods(commodityId, amount);
+        confirmOrder(true); //调用这个方法表示确认收货成功
+    }
+    net_setProbability(probability) {
+        this.currentData.setProbability(probability);
+    }
+    net_setSoulBoneLv(partId, lv) {
+        let player = this.currentPlayer;
+        this.currentData.setSoulBoneLv(partId, lv);
+        this.getBagModuleS.updateHpByUsing(player);
+    }
+    getRarity(player) {
+        return DataCenterS.getData(player, SoulBone).getTotalUpStarOffsetValue;
+    }
+}
+__decorate([
+    Decorator.noReply()
+], SoulBoneModuleS.prototype, "net_setProbability", null);
+__decorate([
+    Decorator.noReply()
+], SoulBoneModuleS.prototype, "net_setSoulBoneLv", null);
+
+var foreign81 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    PartItem: PartItem,
+    SoulBone: SoulBone,
+    SoulBoneData: SoulBoneData,
+    SoulBoneModuleC: SoulBoneModuleC,
+    SoulBoneModuleS: SoulBoneModuleS,
+    SoulBonePanel: SoulBonePanel,
+    StarItem: StarItem,
+    UpProbabilityPanel: UpProbabilityPanel
+});
+
 class HUDModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -11473,6 +14958,7 @@ class HUDModuleC extends ModuleC {
         this.hudPanel = null;
         this.ringSoulPanel = null;
         this.ringSoulModuleC = null;
+        this.soulBoneModuleC = null;
         this.adTipsPanel = null;
         this.upPanel = null;
         this.bagModuleC = null;
@@ -11499,6 +14985,7 @@ class HUDModuleC extends ModuleC {
         this.onHomeAction = new Action();
         this.onAddCoinAction = new Action();
         this.onAddDiamondAction = new Action();
+        this.onAddBoneAction = new Action();
         this.onAdsAction = new Action();
         this.onInvincibleAction = new Action1();
         this.onOpenRingSoulAction = new Action();
@@ -11595,6 +15082,12 @@ class HUDModuleC extends ModuleC {
         }
         return this.ringSoulModuleC;
     }
+    get getSoulBoneModuleC() {
+        if (!this.soulBoneModuleC) {
+            this.soulBoneModuleC = ModuleService.getModule(SoulBoneModuleC);
+        }
+        return this.soulBoneModuleC;
+    }
     get getAdTipsPanel() {
         if (!this.adTipsPanel) {
             this.adTipsPanel = mw.UIService.create(AdTipsPanel);
@@ -11660,50 +15153,62 @@ class HUDModuleC extends ModuleC {
         this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得金币+${GlobalData.addCoinCount}`);
+                    Notice.showDownNotice(`${GameConfig.Language.Text_SuccessfullyObtainedCoins.Value}+${GlobalData.addCoinCount}`);
                     this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
-                }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
+                }, StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             }
             else {
-                Notice.showDownNotice(`成功获得金币+${GlobalData.addCoinCount}`);
+                Notice.showDownNotice(`${GameConfig.Language.Text_SuccessfullyObtainedCoins.Value}+${GlobalData.addCoinCount}`);
                 this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
             }
         });
         this.onAddDiamondAction.add(() => {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             }
             else {
-                Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
+            }
+        });
+        this.onAddBoneAction.add(() => {
+            if (GlobalData.isOpenIAA) {
+                this.getAdTipsPanel.showRewardAd(() => {
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedBones.Value, GlobalData.addBoneCount));
+                    this.getPlayerModuleC.saveBone(GlobalData.addBoneCount);
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeBones.Value, GlobalData.addBoneCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+            }
+            else {
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addBoneCount));
+                this.getPlayerModuleC.saveBone(GlobalData.addBoneCount);
             }
         });
         this.onAdsAction.add(() => {
             this.getUpPanel.showRewardAd(() => {
-                Notice.showDownNotice(`升级成功 等级+${1}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                 this.getPlayerModuleC.adsUpLv();
             }, () => {
                 if (this.getPlayerModuleC.getDiamond >= GlobalData.addDiamondCount) {
                     this.getPlayerModuleC.saveDiamond(-GlobalData.addDiamondCount);
                     this.getPlayerModuleC.adsUpLv();
-                    Notice.showDownNotice(`升级成功 等级+${1}`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                 }
                 else {
                     if (GlobalData.isOpenIAA) {
                         this.getAdTipsPanel.showRewardAd(() => {
                             this.getPlayerModuleC.adsUpLv();
-                            Notice.showDownNotice(`升级成功 等级+${1}`);
-                        }, "等级免费提升一级", "取消", "免费领取");
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
+                        }, StringUtil.format(GameConfig.Language.Text_FreeLevelUpgradeByLevel.Value, 1), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeUpgrade.Value);
                     }
                     else {
-                        Notice.showDownNotice(`升级成功 等级+${1}`);
+                        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                         this.getPlayerModuleC.adsUpLv();
                     }
                 }
-            }, `升级等级`, `使用${GlobalData.addDiamondCount}个钻石\n提升等级`, `直接提升等级`, ``, `免费升级`, `确定`);
+            }, GameConfig.Language.Text_UpgradeLevel.Value, StringUtil.format(GameConfig.Language.Text_UseDiamondsUpgradeLevel.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_DirectlyUpgradeTheLevel.Value, ``, GameConfig.Language.Text_FreeUpgrade.Value, GameConfig.Language.Text_Determine.Value);
         });
         this.onInvincibleAction.add((isInvincible) => {
             this.getPlayerModuleC.isInvincible(isInvincible);
@@ -11727,7 +15232,7 @@ class HUDModuleC extends ModuleC {
             if (callBack)
                 callBack(isHaveMp);
             if (!isHaveMp) {
-                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
+                Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
                 return;
             }
             this.getPlayerModuleC.skill_1();
@@ -11775,15 +15280,18 @@ class HUDModuleC extends ModuleC {
     }
     updateLvExpCoin(lv, exp, coin, isAddLv) {
         this.lv = lv;
-        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
+        this.getHudPanel.updateLvExpCoin(lv, exp, coin, this.getBagModuleC.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue);
         if (!isAddLv)
             return;
         this.maxMp = 100 + (lv * 10);
         this.currentMp = this.maxMp;
         this.getHudPanel.updateMp(this.currentMp, this.maxMp);
-        let hp = Math.round(Utils.getHp(lv) * (this.getBagModuleC.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity));
+        let hp = Math.round(Utils.getHp(lv) * (this.getBagModuleC.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue));
         this.maxHp = hp;
         this.updateHp(hp);
+    }
+    updateBone(bone) {
+        this.getHudPanel.updateBone(bone);
     }
     updateCoin(coin) {
         this.getHudPanel.updateCoin(coin);
@@ -11845,31 +15353,31 @@ class HUDModuleC extends ModuleC {
         switch (killCount) {
             case 2:
                 soundId = "65877";
-                killCountTips = "连续消灭2人！势不可当！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_2.Value;
                 break;
             case 3:
                 soundId = "65874";
-                killCountTips = "连续消灭3人！勇冠三军！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_3.Value;
                 break;
             case 4:
                 soundId = "65873";
-                killCountTips = "连续消灭4人！无人能敌！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_4.Value;
                 break;
             case 5:
                 soundId = "65881";
-                killCountTips = "连续消灭5人！横扫千军！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_5.Value;
                 break;
             case 6:
                 soundId = "65871";
-                killCountTips = "连续消灭6人！接近神了！";
+                killCountTips = GameConfig.Language.Text_ContinuouslyEliminatePeople_6.Value;
                 break;
             case 7:
                 soundId = "65879";
-                killCountTips = "连续消灭7人！超越神了！";
+                killCountTips = StringUtil.format(GameConfig.Language.Text_ContinuouslyEliminatePeople_7.Value, killCount);
                 break;
             default:
                 soundId = "65879";
-                killCountTips = "连续消灭" + Utils.numChangeToCN(killCount) + "人！超越神了！";
+                killCountTips = StringUtil.format(GameConfig.Language.Text_ContinuouslyEliminatePeople_7.Value, killCount);
                 break;
         }
         SoundService.playSound(soundId, 1);
@@ -11940,8 +15448,8 @@ class HUDModuleC extends ModuleC {
         if (!this.isCanSprint)
             return;
         if (!this.isHaveMp(10)) {
-            Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-            Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+            Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
             return;
         }
         this.isCanSprint = false;
@@ -11990,15 +15498,15 @@ class HUDModuleC extends ModuleC {
         this.currentJumpTime++;
         if (this.currentJumpTime == 1) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
                 return;
             }
         }
         if (this.currentJumpTime == 2) {
             if (!this.isHaveMp(5)) {
-                Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-                Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+                Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
                 return;
             }
             PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.secondJumpAniID, 1);
@@ -12260,9 +15768,15 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
+    get mDailyTaskTitleTextBlock() {
+        if (!this.mDailyTaskTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mDailyTaskTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/TaskCanvas/DailyTaskCanvas/mDailyTaskTitleTextBlock');
+        }
+        return this.mDailyTaskTitleTextBlock_Internal;
+    }
     get mDailyTimeTextBlock() {
         if (!this.mDailyTimeTextBlock_Internal && this.uiWidgetBase) {
             this.mDailyTimeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/TaskCanvas/DailyTaskCanvas/mDailyTimeTextBlock');
@@ -12286,6 +15800,12 @@ let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
             this.mDailyTaskDoneTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/TaskCanvas/DailyTaskCanvas/mDailyTaskDoneTextBlock');
         }
         return this.mDailyTaskDoneTextBlock_Internal;
+    }
+    get mWeekTaskTitleTextBlock() {
+        if (!this.mWeekTaskTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mWeekTaskTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/TaskCanvas/WeekTaskCanvas/mWeekTaskTitleTextBlock');
+        }
+        return this.mWeekTaskTitleTextBlock_Internal;
     }
     get mWeekTimeTextBlock() {
         if (!this.mWeekTimeTextBlock_Internal && this.uiWidgetBase) {
@@ -12338,13 +15858,13 @@ let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
         this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mDailyTaskTitleTextBlock);
         this.initLanguage(this.mDailyTimeTextBlock);
         this.initLanguage(this.mDailyTaskDoneTextBlock);
+        this.initLanguage(this.mWeekTaskTitleTextBlock);
         this.initLanguage(this.mWeekTimeTextBlock);
         this.initLanguage(this.mWeekTaskDoneTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TaskCanvas/DailyTaskCanvas/DailyTaskTitleTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TaskCanvas/WeekTaskCanvas/WeekTaskTitleTextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -12407,6 +15927,25 @@ class TaskPanel extends TaskPanel_Generate$1 {
         this.layer = mw.UILayerMiddle;
         this.bindButton();
         this.initTime();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mDailyTaskTitleTextBlock.text = GameConfig.Language.Text_DailyTasks.Value;
+        this.mDailyTaskDoneTextBlock.text = GameConfig.Language.Text_AllTasksHaveBeenCompletedWaitingForRefresh.Value;
+        this.mWeekTaskTitleTextBlock.text = GameConfig.Language.Text_WeeklyTasks.Value;
+        this.mWeekTaskDoneTextBlock.text = GameConfig.Language.Text_AllTasksHaveBeenCompletedWaitingForRefresh.Value;
+        if (GlobalData.languageId == 0) {
+            this.mDailyTaskTitleTextBlock.fontSize = 40;
+            this.mWeekTaskTitleTextBlock.fontSize = 35;
+            this.mDailyTimeTextBlock.fontSize = 18;
+            this.mWeekTimeTextBlock.fontSize = 18;
+        }
+        else {
+            this.mDailyTaskTitleTextBlock.fontSize = 50;
+            this.mWeekTaskTitleTextBlock.fontSize = 50;
+            this.mDailyTimeTextBlock.fontSize = 30;
+            this.mWeekTimeTextBlock.fontSize = 30;
+        }
     }
     bindButton() {
         this.mCloseButton.onClicked.add(() => {
@@ -12616,15 +16155,15 @@ class TaskPanel extends TaskPanel_Generate$1 {
         else {
             this.hour = 24 - this.hour + this.refreshDailyHourTime;
         }
-        this.mDailyTimeTextBlock.text = "剩余: " + this.hour + "小时";
+        this.mDailyTimeTextBlock.text = StringUtil.format(GameConfig.Language.Text_RemainingHours.Value, this.hour);
     }
     updateWeekTime() {
         if (Number(Utils.getWhatDay()) == 1 && this.hour < this.refreshWeekHourTime) {
-            this.mWeekTimeTextBlock.text = "剩余: " + 1 + "天";
+            this.mWeekTimeTextBlock.text = StringUtil.format(GameConfig.Language.Text_RemainingDays.Value, 1);
             this.week = 1;
         }
         else {
-            this.mWeekTimeTextBlock.text = "剩余: " + this.week + "天";
+            this.mWeekTimeTextBlock.text = StringUtil.format(GameConfig.Language.Text_RemainingDays.Value, this.week);
         }
     }
 }
@@ -12639,6 +16178,7 @@ class TaskItem {
         this.mDiamondCanvas = undefined;
         this.mDiamondTextBlock = undefined;
         this.mFinishButton = undefined;
+        this.mFinishTextBlock = undefined;
         this.mUnfinishTextBlock = undefined;
         this.vipTaskType = TaskItemType.None;
         this.task = null;
@@ -12653,9 +16193,25 @@ class TaskItem {
         this.mDiamondCanvas = this.taskItem.findChildByPath("RootCanvas/mDiamondCanvas");
         this.mDiamondTextBlock = this.taskItem.findChildByPath("RootCanvas/mDiamondCanvas/mDiamondTextBlock");
         this.mFinishButton = this.taskItem.findChildByPath("RootCanvas/mFinishButton");
+        this.mFinishTextBlock = this.taskItem.findChildByPath("RootCanvas/mFinishButton/mFinishTextBlock");
         this.mUnfinishTextBlock = this.taskItem.findChildByPath("RootCanvas/mUnfinishTextBlock");
         this.mFinishButton.visibility = mw.SlateVisibility.Collapsed;
         this.mFinishButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mFinishTextBlock.text = GameConfig.Language.Text_ClaimRewards.Value;
+        this.mUnfinishTextBlock.text = GameConfig.Language.Text_HangInTheAir.Value;
+        if (GlobalData.languageId == 0) {
+            this.mNameTextBlock.fontSize = 12;
+            this.mFinishTextBlock.fontSize = 15;
+            this.mUnfinishTextBlock.fontSize = 15;
+        }
+        else {
+            this.mNameTextBlock.fontSize = 20;
+            this.mFinishTextBlock.fontSize = 24;
+            this.mUnfinishTextBlock.fontSize = 24;
+        }
     }
     /**填充item数据 */
     initTaskItemData(vipTaskType, task) {
@@ -12673,7 +16229,9 @@ class TaskItem {
                 mw.UIService.getUI(TaskPanel).controllerPic(1);
             }
         }
-        this.mNameTextBlock.text = StringUtil.format(this.vIPTaskElement.Name, this.task.progress, this.vIPTaskElement.TragetNum);
+        setTimeout(() => {
+            this.mNameTextBlock.text = StringUtil.format(this.vIPTaskElement.Name, this.task.progress, this.vIPTaskElement.TragetNum, this.vIPTaskElement.TragetNum);
+        }, 1000);
         this.mCoinTextBlock.text = this.vIPTaskElement.Coin.toString();
         this.mExpTextBlock.text = this.vIPTaskElement.Exp.toString();
         this.mDiamondTextBlock.text = this.vIPTaskElement.Diamond.toString();
@@ -13035,9 +16593,9 @@ class TaskModuleC extends ModuleC {
         let rewardCoin = taskElement.Coin;
         let rewardDiamond = taskElement.Diamond;
         Console.error("[奖励经验：" + rewardExp + "][奖励金币：" + rewardCoin + "]");
-        Notice.showDownNotice("奖励金币：" + rewardCoin);
-        Notice.showDownNotice("奖励经验：" + rewardExp);
-        Notice.showDownNotice("奖励钻石：" + rewardDiamond);
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardCoins.Value, rewardCoin));
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardExperience.Value, rewardExp));
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardDiamonds.Value, rewardDiamond));
         this.getPlayerModuleC.saveCoinAndExp(rewardCoin, rewardExp);
         this.getPlayerModuleC.saveDiamond(rewardDiamond);
     }
@@ -13195,7 +16753,19 @@ class AdTipsPanel extends AdsTipsPanel_Generate$1 {
     onStart() {
         this.canUpdate = false;
         this.layer = mw.UILayerDialog;
+        this.initTextBlock();
         this.bindButtons();
+    }
+    initTextBlock() {
+        this.mTitleTxt.text = GameConfig.Language.Text_AdvertisingRewards.Value;
+        if (GlobalData.languageId == 0) {
+            this.mTitleTxt.fontSize = 15;
+            this.mContentTxt.fontSize = 30;
+        }
+        else {
+            this.mTitleTxt.fontSize = 35;
+            this.mContentTxt.fontSize = 35;
+        }
     }
     bindButtons() {
         this.mYesBtn.onClose.add(this.onClickYesButton.bind(this));
@@ -13203,7 +16773,7 @@ class AdTipsPanel extends AdsTipsPanel_Generate$1 {
     }
     onClickYesButton(isSuccess) {
         if (!isSuccess) {
-            Notice.showDownNotice(`${this.mYesBtn.text}失败，请重试`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FailedPleaseTryAgain.Value, this.mYesBtn.text));
             return;
         }
         this.hideAdPanel();
@@ -13215,7 +16785,7 @@ class AdTipsPanel extends AdsTipsPanel_Generate$1 {
     onClickNoButton() {
         this.hideAdPanel();
     }
-    showRewardAd(callback, contentText, noText = "取消", yesText = "领取") {
+    showRewardAd(callback, contentText, noText, yesText) {
         this.callback = callback;
         this.mContentTxt.text = contentText;
         this.mNoBtn.text = noText;
@@ -13249,7 +16819,7 @@ var foreign45 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -13288,11 +16858,17 @@ let GuideUI_Generate = class GuideUI_Generate extends UIScript {
         }
         return this.image_Internal;
     }
-    get text() {
-        if (!this.text_Internal && this.uiWidgetBase) {
-            this.text_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/container/text');
+    get mContentTextBlock() {
+        if (!this.mContentTextBlock_Internal && this.uiWidgetBase) {
+            this.mContentTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/container/mContentTextBlock');
         }
-        return this.text_Internal;
+        return this.mContentTextBlock_Internal;
+    }
+    get mContinueClickTextBlock() {
+        if (!this.mContinueClickTextBlock_Internal && this.uiWidgetBase) {
+            this.mContinueClickTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/container/mContinueClickTextBlock');
+        }
+        return this.mContinueClickTextBlock_Internal;
     }
     get guide() {
         if (!this.guide_Internal && this.uiWidgetBase) {
@@ -13328,9 +16904,9 @@ let GuideUI_Generate = class GuideUI_Generate extends UIScript {
         //按钮添加点击
         //按钮多语言
         //文本多语言
-        this.initLanguage(this.text);
+        this.initLanguage(this.mContentTextBlock);
+        this.initLanguage(this.mContinueClickTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/container/TextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -13389,6 +16965,7 @@ class GuidePanel extends GuideUI_Generate$1 {
         this.layer = mw.UILayerMiddle;
         this.initData();
         this.bindButton();
+        this.initTextBlock();
     }
     get getGuideModuleC() {
         if (!this.guideModuleC) {
@@ -13401,6 +16978,9 @@ class GuidePanel extends GuideUI_Generate$1 {
             this.hudPanel = mw.UIService.getUI(HUDPanel);
         }
         return this.hudPanel;
+    }
+    initTextBlock() {
+        this.mContinueClickTextBlock.text = GameConfig.Language.Text_ClickAnywhereToContinue.Value;
     }
     initData() {
         this.centPos = new mw.Vector(this.getHudPanel.rootCanvas.size.x / 2 - this.container.size.x / 2, this.getHudPanel.rootCanvas.size.y / 2 - this.container.size.y / 2);
@@ -13504,6 +17084,9 @@ class GuidePanel extends GuideUI_Generate$1 {
             case 27:
                 this.guide27();
                 break;
+            case 28:
+                this.guide28();
+                break;
             // 可以继续增加无数步
             default:
                 this.hide();
@@ -13511,23 +17094,23 @@ class GuidePanel extends GuideUI_Generate$1 {
         }
     }
     guide0() {
-        this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, `欢迎来到\n${GlobalData.gameName}\n我来给你介绍一下所有按钮操作吧。`, 0, true);
+        this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, StringUtil.format(GameConfig.Language.Text_Guid_0.Value, GlobalData.gameName), 0, true);
     }
     guide1() {
         mw.localToViewport(this.getHudPanel.mVirtualJoystickPanel.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mVirtualJoystickPanel.size, new mw.Vector2(900, 200), "移动按钮，点击后拖拽可以控制角色移动。", 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mVirtualJoystickPanel.size, new mw.Vector2(900, 200), GameConfig.Language.Text_Guid_1.Value, 0, true);
     }
     guide2() {
         mw.localToViewport(this.getHudPanel.mTouchPad.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mTouchPad.size, new mw.Vector2(0, 250), "视角移动区域，点击拖动这里可以控制屏幕视角。", 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mTouchPad.size, new mw.Vector2(0, 250), GameConfig.Language.Text_Guid_2.Value, 0, true);
     }
     guide3() {
         mw.localToViewport(this.getHudPanel.mJumpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size, new mw.Vector2(700, 350), `跳跃按钮，连续点击会进行二段跳，会消耗${GlobalData.mpStr}。`, 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mJumpButton.size, new mw.Vector2(700, 350), StringUtil.format(GameConfig.Language.Text_Guid_3.Value, GlobalData.mpStr), 0, true);
     }
     guide4() {
         mw.localToViewport(this.getHudPanel.mFlyButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mFlyButton.size, new mw.Vector2(500, 550), `御剑飞行，可以飞行`, 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mFlyButton.size, new mw.Vector2(500, 550), GameConfig.Language.Text_Guid_4.Value, 0, true);
     }
     // private guide4(): void {
     // 	mw.localToViewport(this.getHudPanel.mSprintButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
@@ -13536,94 +17119,98 @@ class GuidePanel extends GuideUI_Generate$1 {
     // }
     guide5() {
         mw.localToViewport(this.getHudPanel.mAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size, new mw.Vector2(400, 550), `攻击按钮，连续点击可释放炫酷的连招，会消耗${GlobalData.mpStr}。`, 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mAtkButton.size, new mw.Vector2(400, 550), StringUtil.format(GameConfig.Language.Text_Guid_5.Value, GlobalData.mpStr), 0, true);
     }
     guide6() {
         mw.localToViewport(this.getHudPanel.mAutoAtkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mAutoAtkButton.size, new mw.Vector2(400, 550), `自动攻击按钮、开启自动攻击`, 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mAutoAtkButton.size, new mw.Vector2(400, 550), GameConfig.Language.Text_Guid_6.Value, 0, true);
     }
     guide7() {
         mw.localToViewport(this.getHudPanel.mOnOffRingSoulCanvas.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mOnOffRingSoulCanvas.size, new mw.Vector2(250, 550), `开启魂环按钮，可展示魂环。`, 0, true);
+        this.cover(this.outViewPos, this.getHudPanel.mOnOffRingSoulCanvas.size, new mw.Vector2(250, 550), GameConfig.Language.Text_Guid_7.Value, 0, true);
     }
     guide8() {
         mw.localToViewport(this.getHudPanel.mMusicButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mMusicButton.size, new mw.Vector2(710, 150), "背景音乐按钮，打开可更换背景音乐以及开关背景音乐。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mMusicButton.size, new mw.Vector2(710, 150), GameConfig.Language.Text_Guid_8.Value, 1, true);
     }
     guide9() {
         mw.localToViewport(this.getHudPanel.mHomeButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mHomeButton.size, new mw.Vector2(510, 150), "点我回家按钮，当你被卡在地图中无法移动时可以点击我试试哦。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mHomeButton.size, new mw.Vector2(510, 150), GameConfig.Language.Text_Guid_9.Value, 1, true);
     }
     guide10() {
         mw.localToViewport(this.getHudPanel.mShopButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mShopButton.size, new mw.Vector2(310, 150), "背包按钮，提升等级最快的办法就是在地图中寻找武魂、职业、魂骨、宠物。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mShopButton.size, new mw.Vector2(310, 150), GameConfig.Language.Text_Guid_10.Value, 1, true);
     }
     guide11() {
         mw.localToViewport(this.getHudPanel.mRankButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mRankButton.size, new mw.Vector2(110, 150), "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗罗大陆的排名是多少吧。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mRankButton.size, new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_11.Value, 1, true);
     }
     guide12() {
         mw.localToViewport(this.getHudPanel.mLotteryButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mLotteryButton.size, new mw.Vector2(0, 150), "金币抽奖按钮，花不完的金币在这里可以兑现 钻石、等级、皮肤哦", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mLotteryButton.size, new mw.Vector2(0, 150), GameConfig.Language.Text_Guid_12.Value, 1, true);
     }
     guide13() {
         mw.localToViewport(this.getHudPanel.mOnlineRewardButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size, new mw.Vector2(710, 150), "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到封号斗罗。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mOnlineRewardButton.size, new mw.Vector2(710, 150), GameConfig.Language.Text_Guid_13.Value, 1, true);
     }
     guide14() {
         mw.localToViewport(this.getHudPanel.mTaskButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mTaskButton.size, new mw.Vector2(510, 150), "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到神级。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mTaskButton.size, new mw.Vector2(510, 150), GameConfig.Language.Text_Guid_14.Value, 1, true);
     }
     guide15() {
         mw.localToViewport(this.getHudPanel.mSignInButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mSignInButton.size, new mw.Vector2(310, 150), "签到按钮，登录游戏签到领取大量钻石和等级。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mSignInButton.size, new mw.Vector2(310, 150), GameConfig.Language.Text_Guid_15.Value, 1, true);
     }
     guide16() {
         mw.localToViewport(this.getHudPanel.mAdsButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size, new mw.Vector2(110, 150), "福利多多，最快提升等级的办法，无限升级，成为神级的捷径。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mAdsButton.size, new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_16.Value, 1, true);
     }
     guide17() {
         mw.localToViewport(this.getHudPanel.mSwordButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mSwordButton.size, new mw.Vector2(0, 150), "御剑飞行，装备后可飞行。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mSwordButton.size, new mw.Vector2(0, 150), GameConfig.Language.Text_Guid_17.Value, 1, true);
     }
     guide18() {
         mw.localToViewport(this.getHudPanel.mArkButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mArkButton.size, new mw.Vector2(710, 150), "充值钻石，可充值大量钻石快速提升魂环年限、最快达到百万年级别。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mArkButton.size, new mw.Vector2(710, 150), GameConfig.Language.Text_Guid_18.Value, 1, true);
     }
     guide19() {
         mw.localToViewport(this.getHudPanel.mGetButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mGetButton.size, new mw.Vector2(510, 150), "兑换奖励，领取兑换码兑换奖励，钻石+等级。", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mGetButton.size, new mw.Vector2(510, 150), GameConfig.Language.Text_Guid_19.Value, 1, true);
     }
     guide20() {
         mw.localToViewport(this.getHudPanel.mNewPeopleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mNewPeopleButton.size, new mw.Vector2(310, 150), "新手礼包按钮，领取新手大礼包", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mNewPeopleButton.size, new mw.Vector2(310, 150), GameConfig.Language.Text_Guid_20.Value, 1, true);
     }
     guide21() {
         mw.localToViewport(this.getHudPanel.mRingSoulButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mRingSoulButton.size, new mw.Vector2(110, 150), "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", 1, true);
+        this.cover(this.outViewPos, this.getHudPanel.mRingSoulButton.size, new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_21.Value, 1, true);
     }
     guide22() {
-        mw.localToViewport(this.getHudPanel.mUpExpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mUpExpButton.size, new mw.Vector2(300, 350), "挂机按钮，开启后、无需操作自动升级。", 1, true);
+        mw.localToViewport(this.getHudPanel.mSoulBoneButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mSoulBoneButton.size, new mw.Vector2(110, 150), GameConfig.Language.Text_Guid_28.Value, 1, true);
     }
     guide23() {
-        mw.localToViewport(this.getHudPanel.mInvincibleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mInvincibleButton.size, new mw.Vector2(550, 350), "开启防御，不会被队友误伤。", 1, true);
+        mw.localToViewport(this.getHudPanel.mUpExpButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mUpExpButton.size, new mw.Vector2(300, 350), GameConfig.Language.Text_Guid_22.Value, 1, true);
     }
     guide24() {
-        mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size, new mw.Vector2(550, 350), `角色属性，血量、${GlobalData.mpStr}，攻击力会随等级提升而提升。`, 1, true);
+        mw.localToViewport(this.getHudPanel.mInvincibleButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mInvincibleButton.size, new mw.Vector2(550, 350), GameConfig.Language.Text_Guid_23.Value, 1, true);
     }
     guide25() {
-        mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加金币直接购买武魂、魂骨。", 1, true);
+        mw.localToViewport(this.getHudPanel.mRoleCanvas_G.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mRoleCanvas_G.size, new mw.Vector2(550, 350), StringUtil.format(GameConfig.Language.Text_Guid_24.Value, GlobalData.mpStr), 1, true);
     }
     guide26() {
-        mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
-        this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), "可快速增加钻石锻造魂环。", 1, true);
+        mw.localToViewport(this.getHudPanel.mAddCoinButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), GameConfig.Language.Text_Guid_25.Value, 1, true);
     }
     guide27() {
-        this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", 0, true);
+        mw.localToViewport(this.getHudPanel.mAddDiamondButton.tickSpaceGeometry, mw.Vector2.zero, this.outPixelPos, this.outViewPos);
+        this.cover(this.outViewPos, this.getHudPanel.mAddCoinButton.size, new mw.Vector2(550, 350), GameConfig.Language.Text_Guid_26.Value, 1, true);
+    }
+    guide28() {
+        this.cover(new mw.Vector2(0, 0), new mw.Vector2(0, 0), this.centPos, GameConfig.Language.Text_Guid_27.Value, 0, true);
     }
     /**
      * 引导覆盖方法
@@ -13656,7 +17243,7 @@ class GuidePanel extends GuideUI_Generate$1 {
         if (text) {
             this.setVisibility(this.container, true);
             this.container.position = pos;
-            this.text.text = text;
+            this.mContentTextBlock.text = text;
         }
         else {
             this.setVisibility(this.container, false);
@@ -13713,9 +17300,10 @@ class GuideModuleC extends ModuleC {
         super(...arguments);
         this.guidePanel = null;
         this.bagModuleC = null;
-        this.totalStep = 27;
+        this.totalStep = 28;
         this.curStep = -1;
         this.onNextStepAction = new Action();
+        this.isHasCall = false;
         /**引导目标点特效ID */
         // private targetGuideEffectId: number = null;
         /**引导间隔标识 */
@@ -13741,8 +17329,12 @@ class GuideModuleC extends ModuleC {
     onStart() {
     }
     startFirst() {
+        if (this.isHasCall)
+            return;
+        this.isHasCall = true;
         if (this.data.isFirst) {
             this.onNextStepAction.add(() => {
+                console.error(this.curStep);
                 this.curStep++;
                 if (this.curStep > this.totalStep) {
                     if (!this.data.isFirst)
@@ -13791,7 +17383,7 @@ class GuideModuleC extends ModuleC {
                     });
                     this.guideEffectIds.length = 0;
                 }
-                Notice.showDownNotice("已到达目标点附近");
+                Notice.showDownNotice(GameConfig.Language.Text_ArrivedNearTheTargetPoint.Value);
                 if (onComplete)
                     onComplete();
                 return;
@@ -13933,8 +17525,8 @@ class GuideModuleC extends ModuleC {
             TimeUtil.delaySecond(5).then(() => {
                 this.getGuidePanel.guideByStep(21);
                 this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
-                Notice.showDownNotice(`返回新手村`);
-                Notice.showDownNotice(`正式开启你的副本吧`);
+                Notice.showDownNotice(GameConfig.Language.Text_ReturnToNewbieVillage.Value);
+                Notice.showDownNotice(GameConfig.Language.Text_LetSOfficiallyOpenYourCopy.Value);
             });
         });
     }
@@ -13966,7 +17558,7 @@ var foreign50 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let LotteryItem_Generate = class LotteryItem_Generate extends UIScript {
     get mBgImage() {
@@ -14078,7 +17670,7 @@ var foreign135 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -14213,6 +17805,42 @@ let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
         }
         return this.mHundredArkTipsTextBlock_Internal;
     }
+    get mHundredCoinCanvas() {
+        if (!this.mHundredCoinCanvas_Internal && this.uiWidgetBase) {
+            this.mHundredCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas');
+        }
+        return this.mHundredCoinCanvas_Internal;
+    }
+    get mHundredCoinButton() {
+        if (!this.mHundredCoinButton_Internal && this.uiWidgetBase) {
+            this.mHundredCoinButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas/mHundredCoinButton');
+        }
+        return this.mHundredCoinButton_Internal;
+    }
+    get mHundredCoinTextBlock() {
+        if (!this.mHundredCoinTextBlock_Internal && this.uiWidgetBase) {
+            this.mHundredCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas/mHundredCoinTextBlock');
+        }
+        return this.mHundredCoinTextBlock_Internal;
+    }
+    get mHundredCoinTipsTextBlock() {
+        if (!this.mHundredCoinTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mHundredCoinTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas/mHundredCoinTipsTextBlock');
+        }
+        return this.mHundredCoinTipsTextBlock_Internal;
+    }
+    get mOneAdsCanvas() {
+        if (!this.mOneAdsCanvas_Internal && this.uiWidgetBase) {
+            this.mOneAdsCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneAdsCanvas');
+        }
+        return this.mOneAdsCanvas_Internal;
+    }
+    get mOneAdsButton() {
+        if (!this.mOneAdsButton_Internal && this.uiWidgetBase) {
+            this.mOneAdsButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneAdsCanvas/mOneAdsButton');
+        }
+        return this.mOneAdsButton_Internal;
+    }
     get mMoneyCanvas() {
         if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
             this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
@@ -14284,6 +17912,10 @@ let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mHundredArkButton");
         });
         this.mHundredArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mHundredCoinButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mHundredCoinButton");
+        });
+        this.mHundredCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
         });
@@ -14301,6 +17933,8 @@ let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
         this.initLanguage(this.mTenCoinTipsTextBlock);
         this.initLanguage(this.mHundredArkTextBlock);
         this.initLanguage(this.mHundredArkTipsTextBlock);
+        this.initLanguage(this.mHundredCoinTextBlock);
+        this.initLanguage(this.mHundredCoinTipsTextBlock);
         this.initLanguage(this.mCoinCountTextBlock);
         this.initLanguage(this.mArkCountTextBlock);
         //文本多语言
@@ -14338,7 +17972,7 @@ var foreign136 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let LotteryResultItem_Generate = class LotteryResultItem_Generate extends UIScript {
     get mTextBlock() {
@@ -14394,7 +18028,7 @@ var foreign137 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UIScript {
     get mBgImage() {
@@ -14402,6 +18036,12 @@ let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UISc
             this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage');
         }
         return this.mBgImage_Internal;
+    }
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
     }
     get mCloseButton() {
         if (!this.mCloseButton_Internal && this.uiWidgetBase) {
@@ -14436,6 +18076,7 @@ let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UISc
         this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
         //文本多语言
     }
     /*初始化多语言*/
@@ -14474,20 +18115,21 @@ var RewardType;
     RewardType[RewardType["Bag"] = 3] = "Bag";
 })(RewardType || (RewardType = {}));
 const lotteryDatas = new Map();
-lotteryDatas.set(1, { isLimit: false, ratio: [1, 500], icon: "icon_404083", name: "空奖-哈哈", rewardType: RewardType.None, reward: 1, pos: new mw.Vector2(0, 0), bgIcon: "181426" }); //181426 181425 181424 181423 181420
-lotteryDatas.set(2, { isLimit: false, ratio: [501, 739], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 1, pos: new mw.Vector2(230, 0), bgIcon: "181424" });
-lotteryDatas.set(3, { isLimit: false, ratio: [740, 749], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 108, pos: new mw.Vector2(460, 0), bgIcon: "181423" });
-lotteryDatas.set(4, { isLimit: false, ratio: [750, 750], icon: "icon_103217", name: "钻石", rewardType: RewardType.Diamond, reward: 1088, pos: new mw.Vector2(690, 0), bgIcon: "181420" });
-lotteryDatas.set(5, { isLimit: false, ratio: [751, 978], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1, pos: new mw.Vector2(690, 230), bgIcon: "181424" });
-lotteryDatas.set(6, { isLimit: false, ratio: [979, 988], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 108, pos: new mw.Vector2(690, 460), bgIcon: "181423" });
-lotteryDatas.set(7, { isLimit: false, ratio: [989, 989], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1088, pos: new mw.Vector2(460, 460), bgIcon: "181420" });
-lotteryDatas.set(8, { isLimit: true, ratio: [990, 995], icon: "mode_141499", name: "神级魔王", rewardType: RewardType.Bag, reward: 20058, pos: new mw.Vector2(230, 460), bgIcon: "181420" });
-lotteryDatas.set(9, { isLimit: true, ratio: [996, 999], icon: "mode_142921", name: "四代火影", rewardType: RewardType.Bag, reward: 20059, pos: new mw.Vector2(0, 460), bgIcon: "181420" });
-lotteryDatas.set(10, { isLimit: true, ratio: [1000, 1000], icon: "mode_163289", name: "美杜莎女王", rewardType: RewardType.Bag, reward: 20060, pos: new mw.Vector2(0, 230), bgIcon: "181420" });
+lotteryDatas.set(1, { isLimit: false, ratio: [1, 500], icon: "icon_404083", name: `Text_EmptyPrizeHaha`, rewardType: RewardType.None, reward: 1, pos: new mw.Vector2(0, 0), bgIcon: "181426" }); //181426 181425 181424 181423 181420
+lotteryDatas.set(2, { isLimit: false, ratio: [501, 739], icon: "icon_103221", name: `Text_Diamonds`, rewardType: RewardType.Diamond, reward: 1, pos: new mw.Vector2(230, 0), bgIcon: "181424" });
+lotteryDatas.set(3, { isLimit: false, ratio: [740, 749], icon: "icon_103221", name: `Text_Diamonds`, rewardType: RewardType.Diamond, reward: 108, pos: new mw.Vector2(460, 0), bgIcon: "181423" });
+lotteryDatas.set(4, { isLimit: false, ratio: [750, 750], icon: "icon_103217", name: `Text_Diamonds`, rewardType: RewardType.Diamond, reward: 1088, pos: new mw.Vector2(690, 0), bgIcon: "181420" });
+lotteryDatas.set(5, { isLimit: false, ratio: [751, 978], icon: "icon_148883", name: `Text_Grade`, rewardType: RewardType.Lv, reward: 1, pos: new mw.Vector2(690, 230), bgIcon: "181424" });
+lotteryDatas.set(6, { isLimit: false, ratio: [979, 988], icon: "icon_148883", name: `Text_Grade`, rewardType: RewardType.Lv, reward: 108, pos: new mw.Vector2(690, 460), bgIcon: "181423" });
+lotteryDatas.set(7, { isLimit: false, ratio: [989, 989], icon: "icon_148883", name: `Text_Grade`, rewardType: RewardType.Lv, reward: 1088, pos: new mw.Vector2(460, 460), bgIcon: "181420" });
+lotteryDatas.set(8, { isLimit: true, ratio: [990, 995], icon: "mode_141499", name: `Text_GodLevelDemonKing`, rewardType: RewardType.Bag, reward: 20058, pos: new mw.Vector2(230, 460), bgIcon: "181420" });
+lotteryDatas.set(9, { isLimit: true, ratio: [996, 999], icon: "mode_142921", name: `Text_TheFourthHokage`, rewardType: RewardType.Bag, reward: 20059, pos: new mw.Vector2(0, 460), bgIcon: "181420" });
+lotteryDatas.set(10, { isLimit: true, ratio: [1000, 1000], icon: "mode_163289", name: `Text_MedusaQueen`, rewardType: RewardType.Bag, reward: 20060, pos: new mw.Vector2(0, 230), bgIcon: "181420" });
 const oneCostCoin = 2888888;
 const oneCostArk = 2;
 const tenCostCoin = 28888888;
 const tenCostArk = 20;
+const hundredCostCoin = 8888888888;
 const hundredCostArk = 200;
 const oneCommodityId = "7I6uNtkFmg00001Nx";
 const tenCommodityId = "6tOZfQYVTV90001Ny";
@@ -14508,8 +18150,16 @@ class LotteryItem extends LotteryItem_Generate$1 {
         this.initUI();
     }
     initUI() {
-        this.mHasTextBlock.text = `已拥有`;
+        this.mHasTextBlock.text = GameConfig.Language.Text_AlreadyOwned.Value;
         this.onOffUI(false);
+        if (GlobalData.languageId == 0) {
+            this.mRewardTextBlock.fontSize = 12;
+            this.mRatioTextBlock.fontSize = 13;
+        }
+        else {
+            this.mRewardTextBlock.fontSize = 23;
+            this.mRatioTextBlock.fontSize = 15;
+        }
     }
     initItem(key) {
         this.key = key;
@@ -14518,7 +18168,7 @@ class LotteryItem extends LotteryItem_Generate$1 {
     updateUI() {
         let lotteryData = lotteryDatas.get(this.key);
         this.mBgImage.imageGuid = lotteryData.bgIcon;
-        this.mRewardTextBlock.text = `${lotteryData.name}+${(lotteryData.rewardType == RewardType.Bag) ? 1 : lotteryData.reward}`;
+        this.mRewardTextBlock.text = `${GameConfig.Language[`${lotteryData.name}`].Value}+${(lotteryData.rewardType == RewardType.Bag) ? 1 : lotteryData.reward}`;
         let iconStr = lotteryData.icon.split(`_`);
         if (iconStr[0] == `icon`) {
             this.mIconImage.imageGuid = iconStr[1];
@@ -14532,7 +18182,7 @@ class LotteryItem extends LotteryItem_Generate$1 {
         else {
             this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
         }
-        this.mRatioTextBlock.text = `中奖概率\n${(((lotteryData.ratio[1] - lotteryData.ratio[0] + 1) / 1000) * 100).toFixed(1)}%`;
+        this.mRatioTextBlock.text = `${GameConfig.Language.Text_WinningProbability.Value}\n${(((lotteryData.ratio[1] - lotteryData.ratio[0] + 1) / 1000) * 100).toFixed(1)}%`;
     }
     onOffUI(on) {
         this.mSelectImage.visibility = on ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
@@ -14563,21 +18213,52 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
         this.bindButton();
     }
     initUI() {
-        this.mTitleTextBlock.text = `金币抽奖`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_GoldCoinLottery.Value;
         this.mIconCoinImage.imageGuid = GlobalData.coinIcon;
         this.mIconArkImage.imageGuid = GlobalData.arkIcon;
-        this.mOneCoinTextBlock.text = `抽1次`;
-        this.mOneArkTextBlock.text = `抽1次`;
-        this.mTenCoinTextBlock.text = `抽10次`;
-        this.mTenArkTextBlock.text = `抽10次`;
-        this.mHundredArkTextBlock.text = `抽100次`;
-        this.mOneCoinTipsTextBlock.text = `消耗${oneCostCoin}金币`;
-        this.mOneArkTipsTextBlock.text = `消耗${oneCostArk}派队币`;
-        this.mTenCoinTipsTextBlock.text = `消耗${tenCostCoin}金币`;
-        this.mTenArkTipsTextBlock.text = `消耗${tenCostArk}派队币`;
-        this.mHundredArkTipsTextBlock.text = `消耗${hundredCostArk}派对币`;
+        this.mOneCoinTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 1);
+        this.mOneCoinTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeCoins.Value, oneCostCoin);
+        this.mOneArkTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 1);
+        this.mOneArkTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeDispatchCoins.Value, oneCostArk);
+        this.mTenCoinTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 10);
+        this.mTenCoinTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeCoins.Value, tenCostCoin);
+        this.mTenArkTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 10);
+        this.mTenArkTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeDispatchCoins.Value, tenCostArk);
+        this.mHundredCoinTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 100);
+        this.mHundredCoinTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeCoins.Value, hundredCostCoin);
+        this.mHundredArkTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 100);
+        this.mHundredArkTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeDispatchCoins.Value, hundredCostArk);
+        this.mOneAdsButton.text = GameConfig.Language.Text_FreeLotteryDraw.Value;
         this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
         this.initItem();
+        if (GlobalData.languageId == 0) {
+            this.mOneCoinTextBlock.fontSize = 20;
+            this.mOneCoinTipsTextBlock.fontSize = 10;
+            this.mOneArkTextBlock.fontSize = 20;
+            this.mOneArkTipsTextBlock.fontSize = 17;
+            this.mTenCoinTextBlock.fontSize = 20;
+            this.mTenCoinTipsTextBlock.fontSize = 10;
+            this.mTenArkTextBlock.fontSize = 20;
+            this.mTenArkTipsTextBlock.fontSize = 15;
+            this.mHundredCoinTextBlock.fontSize = 20;
+            this.mHundredCoinTipsTextBlock.fontSize = 12;
+            this.mHundredArkTextBlock.fontSize = 20;
+            this.mHundredArkTipsTextBlock.fontSize = 15;
+        }
+        else {
+            this.mOneCoinTextBlock.fontSize = 30;
+            this.mOneCoinTipsTextBlock.fontSize = 18;
+            this.mOneArkTextBlock.fontSize = 30;
+            this.mOneArkTipsTextBlock.fontSize = 20;
+            this.mTenCoinTextBlock.fontSize = 30;
+            this.mTenCoinTipsTextBlock.fontSize = 15;
+            this.mTenArkTextBlock.fontSize = 30;
+            this.mTenArkTipsTextBlock.fontSize = 20;
+            this.mHundredCoinTextBlock.fontSize = 30;
+            this.mHundredCoinTipsTextBlock.fontSize = 14;
+            this.mHundredArkTextBlock.fontSize = 30;
+            this.mHundredArkTipsTextBlock.fontSize = 20;
+        }
     }
     bindButton() {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
@@ -14585,14 +18266,16 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
         this.mOneArkButton.onClicked.add(this.addOneArkButton.bind(this));
         this.mTenCoinButton.onClicked.add(this.addTenCoinButton.bind(this));
         this.mTenArkButton.onClicked.add(this.addTenArkButton.bind(this));
+        this.mHundredCoinButton.onClicked.add(this.addHundredCoinButton.bind(this));
         this.mHundredArkButton.onClicked.add(this.addHundredArkButton.bind(this));
+        this.mOneAdsButton.onClose.add(this.addOneAdsButton.bind(this));
     }
     addOneCoinButton() {
         this.getLotteryModuleC.oneCoinLottery();
     }
     addOneArkButton() {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -14602,11 +18285,11 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
         this.getLotteryModuleC.oneArkLottery();
     }
     addTenCoinButton() {
-        this.getLotteryModuleC.tenCoinLottery();
+        this.getLotteryModuleC.tenCoinLottery(true);
     }
     addTenArkButton() {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -14615,9 +18298,12 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
         });
         this.getLotteryModuleC.tenArkLottery(true);
     }
+    addHundredCoinButton() {
+        this.getLotteryModuleC.tenCoinLottery(false);
+    }
     addHundredArkButton() {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -14625,6 +18311,13 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
             this.isCanContinueClick = true;
         });
         this.getLotteryModuleC.tenArkLottery(false);
+    }
+    addOneAdsButton(isSuccess) {
+        if (!isSuccess) {
+            Notice.showDownNotice(GameConfig.Language.Text_FailedPleaseTryAgain.Value);
+            return;
+        }
+        this.getLotteryModuleC.calculateOneLottery();
     }
     addCloseButton() {
         this.hideTween();
@@ -14757,7 +18450,7 @@ class LotteryResultItem extends LotteryResultItem_Generate$1 {
     onStart() {
     }
     setTextBlock(key) {
-        this.mTextBlock.text = `${lotteryDatas.get(key).name} +${lotteryDatas.get(key).reward}`;
+        this.mTextBlock.text = `${GameConfig.Language[`${lotteryDatas.get(key).name}`].Value} +${lotteryDatas.get(key).reward}`;
     }
 }
 class LotteryResultPanel extends LotteryResultPanel_Generate$1 {
@@ -14768,6 +18461,10 @@ class LotteryResultPanel extends LotteryResultPanel_Generate$1 {
     onStart() {
         this.layer = mw.UILayerMiddle;
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mTitleTextBlock.text = GameConfig.Language.Text_LotteryResults.Value;
     }
     bindButton() {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
@@ -14813,7 +18510,7 @@ class LotteryResultPanel extends LotteryResultPanel_Generate$1 {
     }
 }
 const lotteryTriggerMap = new Map();
-lotteryTriggerMap.set(1, { triggers: ["1784616E"], worldUIIds: ["0D23C019"], name: `金币抽奖` });
+lotteryTriggerMap.set(1, { triggers: ["1784616E"], worldUIIds: ["0D23C019"], name: `Text_GoldCoinLottery` });
 class LotteryModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -14889,7 +18586,7 @@ class LotteryModuleC extends ModuleC {
             this.calculateOneLottery();
         }
         else {
-            Notice.showDownNotice(`金币不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
             if (mw.SystemUtil.isPIE) {
                 this.calculateOneLottery();
             }
@@ -14910,19 +18607,20 @@ class LotteryModuleC extends ModuleC {
             });
         }
     }
-    tenCoinLottery() {
+    tenCoinLottery(isTen) {
         let coin = this.getPlayerModuleC.getCoin();
-        if (coin >= tenCostCoin) {
-            this.getPlayerModuleC.saveCoin(-tenCostCoin);
-            this.calculateTenLottery(true);
+        let needCostCoin = isTen ? tenCostCoin : hundredCostCoin;
+        if (coin >= needCostCoin) {
+            this.getPlayerModuleC.saveCoin(-needCostCoin);
+            this.calculateTenLottery(isTen);
         }
         else {
-            Notice.showDownNotice(`金币不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
             if (mw.SystemUtil.isPIE) {
-                this.calculateTenLottery(true);
+                this.calculateTenLottery(isTen);
             }
             else {
-                mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
+                mw.PurchaseService.placeOrder(isTen ? tenCommodityId : hundredCommodityId, 1, (status, msg) => {
                     mw.PurchaseService.getArkBalance(); //刷新代币数量
                 });
             }
@@ -14976,7 +18674,7 @@ class LotteryModuleC extends ModuleC {
             this.getLotteryResultPanel.showPanel([calculateKey], true);
             if (lotteryDatas.get(calculateKey).isLimit)
                 this.getLotteryPanel.updateItemHasState(calculateKey);
-            Notice.showDownNotice(`恭喜中奖`);
+            Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnWinningThePrize.Value);
         });
     }
     calculateTenLottery(isTen) {
@@ -15014,7 +18712,7 @@ class LotteryModuleC extends ModuleC {
                 if (lotteryDatas.get(key).isLimit)
                     this.getLotteryPanel.updateItemHasState(key);
             });
-            Notice.showDownNotice(`恭喜中奖`);
+            Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnWinningThePrize.Value);
         });
     }
     calculateKey() {
@@ -15029,18 +18727,18 @@ class LotteryModuleC extends ModuleC {
     }
     saveLottery(diamond, lv, bagIds) {
         if (diamond > 0) {
-            Notice.showDownNotice(`获得${diamond}钻石`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_ObtainDiamonds.Value, diamond));
             this.getPlayerModuleC.saveDiamond(diamond);
         }
         if (lv > 0) {
             this.getPlayerModuleC.upLvByCount(lv);
-            Notice.showDownNotice(`等级+${lv}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_Grade.Value}+${lv}`);
         }
         if (bagIds && bagIds.length > 0) {
             for (let i = 0; i < bagIds.length; ++i) {
                 this.getBagModuleC.setBagId(bagIds[i]);
             }
-            Notice.showDownNotice(`打开背包使用`);
+            Notice.showDownNotice(GameConfig.Language.Text_OpenTheBackpackForUse.Value);
         }
     }
     isHas(key) {
@@ -15062,7 +18760,7 @@ class LotteryModuleC extends ModuleC {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(value.name);
+                    levelItem.updateLevelTextBlock(GameConfig.Language[`${value.name}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -15140,6 +18838,17 @@ class BagData extends Subdata {
         this.usingPetId = petId;
         this.save(true);
     }
+    checkBagIdError(errorBagId, bagId) {
+        if (!this.bagIds || this.bagIds.length == 0 || !this.bagIds.includes(errorBagId))
+            return;
+        for (let i = 0; i < this.bagIds.length; ++i) {
+            if (this.bagIds[i] == errorBagId) {
+                this.bagIds[i] = bagId;
+                this.save(true);
+                break;
+            }
+        }
+    }
 }
 __decorate([
     Decorator.persistence()
@@ -15169,6 +18878,7 @@ class BagModuleC extends ModuleC {
         this.loading = null;
         this.ringSoulModuleC = null;
         this.flyModuleC = null;
+        this.soulBoneModuleC = null;
         this.isOpenAutoAtk = false;
         this.isAutoAtkTimer = 0;
         this.autoAtkTime = 0.5;
@@ -15240,6 +18950,12 @@ class BagModuleC extends ModuleC {
         }
         return this.flyModuleC;
     }
+    get getSoulBoneModuleC() {
+        if (!this.soulBoneModuleC) {
+            this.soulBoneModuleC = ModuleService.getModule(SoulBoneModuleC);
+        }
+        return this.soulBoneModuleC;
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
         this.getHUDModuleC.onOpenShopAction.add(() => {
@@ -15252,28 +18968,28 @@ class BagModuleC extends ModuleC {
                 if (this.isHasBagId(10046)) {
                     if (resultCallBack)
                         resultCallBack(true);
-                    Notice.showDownNotice("成功开启自动攻击");
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyActivatedAutomaticAttack.Value);
                     this.use(10046);
                     this.isOpenAutoAtk = true;
                 }
                 else if (this.isHasBagId(10047)) {
                     if (resultCallBack)
                         resultCallBack(true);
-                    Notice.showDownNotice("成功开启自动攻击");
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyActivatedAutomaticAttack.Value);
                     this.use(10047);
                     this.isOpenAutoAtk = true;
                 }
                 else {
                     if (resultCallBack)
                         resultCallBack(false);
-                    Notice.showDownNotice("未获得自动攻击武魂");
+                    Notice.showDownNotice(GameConfig.Language.Text_FailedToObtainAutomaticAttackSoul.Value);
                 }
             }
             else {
                 if (resultCallBack)
                     resultCallBack(false);
                 if (this.isOpenAutoAtk) {
-                    Notice.showDownNotice("成功关闭自动攻击");
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyDisabledAutomaticAttack.Value);
                     this.isOpenAutoAtk = false;
                 }
             }
@@ -15282,9 +18998,11 @@ class BagModuleC extends ModuleC {
     onEnterScene(sceneType) {
         this.initBagData();
         this.initTrigger().then(() => {
-            Utils.setGraphicsLevel();
         });
         this.updateLotteryData();
+        TimeUtil.delaySecond(3).then(() => {
+            Utils.setGraphicsLevel();
+        });
     }
     onUpdateAutoAtk(dt) {
         if (!this.isOpenAutoAtk)
@@ -15307,17 +19025,17 @@ class BagModuleC extends ModuleC {
         if (this.isHasBagId(lotteryDatas.get(8).reward)) {
             lotteryDatas.get(8).reward = 20061;
             lotteryDatas.get(8).icon = `mode_163292`;
-            lotteryDatas.get(8).name = `小舞`;
+            lotteryDatas.get(8).name = `Text_XiaoWuJie`;
         }
         if (this.isHasBagId(lotteryDatas.get(9).reward)) {
             lotteryDatas.get(9).reward = 10044;
             lotteryDatas.get(9).icon = `mode_151245`;
-            lotteryDatas.get(9).name = `武魂-机甲斩狂风斩(男)`;
+            lotteryDatas.get(9).name = `Text_MartialSoulMechSlashWindSlash_Male`;
         }
         if (this.isHasBagId(lotteryDatas.get(10).reward)) {
             lotteryDatas.get(10).reward = 10045;
             lotteryDatas.get(10).icon = `mode_151897`;
-            lotteryDatas.get(10).name = `武魂-机甲斩狂风斩(女)`;
+            lotteryDatas.get(10).name = `Text_MartialSoulMechSlashWindSlash_Female`;
         }
     }
     enterScenceUsing() {
@@ -15334,25 +19052,37 @@ class BagModuleC extends ModuleC {
         this.usingSkinId = this.data.usingSkinId;
         this.usingEquipIds = this.data.usingEquipIds;
         this.usingPetId = this.data.usingPetId;
+        this.checkBagIdError(200677, 20067);
+    }
+    checkBagIdError(errorBagId, bagId) {
+        if (!this.bagIds || this.bagIds.length == 0 || !this.bagIds.includes(errorBagId))
+            return;
+        for (let i = 0; i < this.bagIds.length; ++i) {
+            if (this.bagIds[i] == errorBagId) {
+                this.bagIds[i] = bagId;
+                this.server.net_checkBagIdError(errorBagId, bagId);
+                break;
+            }
+        }
     }
     isHasBagId(bagId) {
         return this.bagIds.includes(bagId);
     }
     setBagId(bagId) {
         if (this.bagIds.includes(bagId)) {
-            Notice.showDownNotice("已获得");
+            Notice.showDownNotice(GameConfig.Language.Text_Obtained.Value);
             return;
         }
         this.bagIds.push(bagId);
         this.server.net_setBagId(bagId);
         this.getPlayerModuleC.adsUpLv();
-        Notice.showDownNotice("恭喜获得");
+        Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnObtaining.Value);
         this.getBagPanel.updateBar(this.bagIds.length);
         this.getBagPanel.updateBagItem(bagId);
     }
     setUsingWeaponId(weaponId) {
         if (this.usingWeaponId == weaponId) {
-            Notice.showDownNotice(`${GlobalData.weaponStr}使用中`);
+            Notice.showDownNotice(`${GlobalData.weaponStr}${GameConfig.Language.Text_InUse.Value}`);
             return false;
         }
         this.usingWeaponId = weaponId;
@@ -15362,7 +19092,7 @@ class BagModuleC extends ModuleC {
     }
     setUsingSkinId(skinId) {
         if (this.usingSkinId == skinId) {
-            Notice.showDownNotice(`${GlobalData.skinStr}使用中`);
+            Notice.showDownNotice(`${GlobalData.skinStr}${GameConfig.Language.Text_InUse.Value}`);
             return false;
         }
         this.usingSkinId = skinId;
@@ -15382,7 +19112,7 @@ class BagModuleC extends ModuleC {
     }
     setUsingEquipId(key, bagId) {
         if (MapEx.has(this.usingEquipIds, key) && MapEx.get(this.usingEquipIds, key) == bagId) {
-            Notice.showDownNotice(`${GlobalData.equipStr}装备中`);
+            Notice.showDownNotice(`${GlobalData.equipStr}${GameConfig.Language.Text_InTheEquipment.Value}`);
             return false;
         }
         MapEx.set(this.usingEquipIds, key, bagId);
@@ -15399,7 +19129,7 @@ class BagModuleC extends ModuleC {
     }
     setUsingPetId(petId) {
         if (this.usingPetId == petId) {
-            Notice.showDownNotice(`${GlobalData.petStr}跟随中`);
+            Notice.showDownNotice(`${GlobalData.petStr}${GameConfig.Language.Text_FollowIn.Value}`);
             return false;
         }
         this.usingPetId = petId;
@@ -15414,7 +19144,7 @@ class BagModuleC extends ModuleC {
         this.usePet(this.usingPetId);
     }
     updateHpByUsing() {
-        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity, this.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity);
+        this.getHUDModuleC.updateHpByUsing(this.getAddHpByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getHpRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue, this.getAddAtkByUsing() + this.getRingSoulModuleC.getRarity + this.getFlyModuleC.getAtkRarity + this.getSoulBoneModuleC.getTotalUpStarOffsetValue);
     }
     getAddHpByUsing() {
         let weaponHp = 0, skinHp = 0, equipHp = 0, petHp = 0;
@@ -15599,23 +19329,23 @@ class BagModuleC extends ModuleC {
     clickBagItem(bagId, buyComplete) {
         if (!this.isHasBagId(bagId)) {
             if (GameConfig.BagInfo.getElement(bagId).GetType == 2) {
-                Notice.showDownNotice(`新手礼包获取`);
+                Notice.showDownNotice(GameConfig.Language.Text_BeginnerGiftPackAcquisition.Value);
                 return;
             }
             else if (GameConfig.BagInfo.getElement(bagId).GetType == 3) {
-                Notice.showDownNotice(`金币抽奖获取`);
+                Notice.showDownNotice(GameConfig.Language.Text_GoldCoinLotteryToObtain.Value);
                 return;
             }
             else if (GameConfig.BagInfo.getElement(bagId).GetType == 4) {
-                Notice.showDownNotice(`请先完成新手引导`);
+                Notice.showDownNotice(GameConfig.Language.Text_PleaseCompleteTheBeginnerGuideFirst.Value);
                 return;
             }
             else if (GameConfig.BagInfo.getElement(bagId).GetType == 5) {
-                Notice.showDownNotice(`看广告获得`);
+                Notice.showDownNotice(GameConfig.Language.Text_ObtainByWatchingAdvertisements.Value);
                 return;
             }
             else if (GameConfig.BagInfo.getElement(bagId).GetType == 6) {
-                Notice.showDownNotice(`老玩家回归获得`);
+                Notice.showDownNotice(GameConfig.Language.Text_OldPlayersReturningToObtain.Value);
                 return;
             }
         }
@@ -15625,17 +19355,17 @@ class BagModuleC extends ModuleC {
                 this.use(bagId);
             }
             else {
-                Notice.showDownNotice("未获得");
+                Notice.showDownNotice(GameConfig.Language.Text_NotObtained.Value);
                 if (GlobalData.isOpenIAA) {
                     this.getAdTipsPanel.showRewardAd(() => {
-                        Notice.showDownNotice("开始引导");
+                        Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                         this.getBagInfoPanel.hide();
                         this.getBagPanel.hideTween();
-                    }, "带你去免费获得", "取消", "免费获得");
+                    }, GameConfig.Language.Text_TakeYouToGetItForFree.Value, GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_GetItForFree.Value);
                 }
                 else {
-                    Notice.showDownNotice("开始引导");
+                    Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
                     this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                 }
             }
@@ -15651,23 +19381,23 @@ class BagModuleC extends ModuleC {
                     buyComplete();
                 this.getBagInfoPanel.mPriceButton.visibility = mw.SlateVisibility.Collapsed;
                 this.getBagInfoPanel.mAdsButton.visibility = mw.SlateVisibility.Collapsed;
-                Notice.showDownNotice("购买成功");
+                Notice.showDownNotice(GameConfig.Language.Text_PurchaseSuccessful.Value);
             }
             else {
-                Notice.showDownNotice("金币不足");
+                Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
                 if (GlobalData.isOpenIAA) {
                     this.getAdTipsPanel.showRewardAd(() => {
-                        Notice.showDownNotice("成功获得金币");
+                        Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedCoins.Value);
                         this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
-                    }, `免费领取${GlobalData.addCoinCount}金币`, "取消", "免费领取");
+                    }, StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
                 }
                 else {
-                    Notice.showDownNotice("成功获得金币");
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedCoins.Value);
                     this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                 }
             }
         }, () => {
-            Notice.showDownNotice("开始引导");
+            Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
             this.getBagInfoPanel.hide();
             this.getBagPanel.hideTween();
@@ -15680,26 +19410,26 @@ class BagModuleC extends ModuleC {
                 if (!this.setUsingWeaponId(bagId))
                     return;
                 this.useWeapon(bagId);
-                Notice.showDownNotice("装备成功");
+                Notice.showDownNotice(GameConfig.Language.Text_EquipmentSuccessful.Value);
                 break;
             case 2:
                 if (!this.setUsingSkinId(bagId))
                     return;
                 this.useSkin(bagInfoElement.AssetId);
-                Notice.showDownNotice("穿戴成功");
+                Notice.showDownNotice(GameConfig.Language.Text_WearingSuccessfully.Value);
                 break;
             case 3:
                 if (!this.setUsingEquipId(bagInfoElement.HumanoidSlotType, bagId))
                     return;
                 this.useEquip(bagInfoElement);
-                Notice.showDownNotice("装备成功");
+                Notice.showDownNotice(GameConfig.Language.Text_EquipmentSuccessful.Value);
                 break;
             case 4:
                 // Notice.showDownNotice(`功能明天开放，敬请期待`);
                 if (!this.setUsingPetId(bagId))
                     return;
                 this.usePet(bagId);
-                Notice.showDownNotice("跟随成功");
+                Notice.showDownNotice(GameConfig.Language.Text_FollowSuccess.Value);
                 break;
         }
     }
@@ -15823,6 +19553,7 @@ class BagModuleC extends ModuleC {
         let objId = bagInfoElement?.ObjId;
         if (!objId || objId == "")
             return false;
+        console.error("出错啦" + objId);
         let bagItemGo = await GameObjPool.asyncSpawn(objId);
         bagItemGo.collisionEnabled = false;
         if (bagItemGo instanceof mw.Character)
@@ -15880,6 +19611,7 @@ class BagModuleS extends ModuleS {
         this.playerModuleS = null;
         this.ringSoulModuleS = null;
         this.flyModuleS = null;
+        this.soulBoneModuleS = null;
     }
     get getPlayerModuleS() {
         if (!this.playerModuleS) {
@@ -15899,8 +19631,17 @@ class BagModuleS extends ModuleS {
         }
         return this.flyModuleS;
     }
+    get getSoulBoneModuleS() {
+        if (!this.soulBoneModuleS) {
+            this.soulBoneModuleS = ModuleService.getModule(SoulBoneModuleS);
+        }
+        return this.soulBoneModuleS;
+    }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
+    }
+    net_checkBagIdError(errorBagId, bagId) {
+        this.currentData.checkBagIdError(errorBagId, bagId);
     }
     net_setBagId(bagId) {
         this.currentData.setBagId(bagId);
@@ -15922,7 +19663,7 @@ class BagModuleS extends ModuleS {
         this.updateHpByUsing(this.currentPlayer);
     }
     updateHpByUsing(player) {
-        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player));
+        this.getPlayerModuleS.updateHpByUsing(player, this.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player) + this.getSoulBoneModuleS.getRarity(player));
     }
     getAddHpByUsing(player) {
         let bagData = DataCenterS.getData(player, BagData);
@@ -15958,6 +19699,9 @@ class BagModuleS extends ModuleS {
         this.getPlayerModuleS.usePet(this.currentPlayer, bagId);
     }
 }
+__decorate([
+    Decorator.noReply()
+], BagModuleS.prototype, "net_checkBagIdError", null);
 __decorate([
     Decorator.noReply()
 ], BagModuleS.prototype, "net_setBagId", null);
@@ -16024,20 +19768,19 @@ class BagPanel extends BagPanel_Generate$1 {
         this.resetButton.mButton.onClicked.add(() => {
             switch (this.currentBagTabIndex) {
                 case 0:
-                    Notice.showDownNotice(`功能暂未开放，敬请期待`);
+                    Notice.showDownNotice(GameConfig.Language.Text_TheFunctionIsNotYetOpen_PleaseStayTuned.Value);
                     break;
                 case 1:
                     this.getBagModuleC.resetUsingSkin();
-                    Notice.showDownNotice(`恢复成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_RecoveryWasSuccessful.Value);
                     break;
                 case 2:
                     this.getBagModuleC.resetUsingEquip();
-                    Notice.showDownNotice(`卸下成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_RemovedSuccessfully.Value);
                     break;
                 case 3:
-                    Notice.showDownNotice(`丢掉宠物成功`);
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyDiscardedPet.Value);
                     this.getBagModuleC.resetUsingPet();
-                    // Notice.showDownNotice(`功能明天开放，敬请期待`);
                     break;
             }
         });
@@ -16051,15 +19794,15 @@ class BagPanel extends BagPanel_Generate$1 {
                 break;
             case 1:
                 Utils.setWidgetVisibility(this.resetButton.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-                this.resetButton.setData("恢复初始形象");
+                this.resetButton.setData(GameConfig.Language.Text_RestoreInitialImage.Value);
                 break;
             case 2:
                 Utils.setWidgetVisibility(this.resetButton.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-                this.resetButton.setData("卸下所有装备");
+                this.resetButton.setData(GameConfig.Language.Text_RemoveAllEquipment.Value);
                 break;
             case 3:
                 Utils.setWidgetVisibility(this.resetButton.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-                this.resetButton.setData("取消宠物跟随");
+                this.resetButton.setData(GameConfig.Language.Text_CancelPetFollowing.Value);
                 break;
         }
     }
@@ -16157,7 +19900,16 @@ class BagItem extends BagItem_Generate$1 {
         return this.bagModuleC;
     }
     onStart() {
+        this.initUI();
         this.bindButton();
+    }
+    initUI() {
+        if (GlobalData.languageId == 0) {
+            this.mNameTextBlock.fontSize = 15;
+        }
+        else {
+            this.mNameTextBlock.fontSize = 25;
+        }
     }
     bindButton() {
         this.mClickButton.onClicked.add(this.bindClickButton.bind(this));
@@ -16183,30 +19935,30 @@ class BagItem extends BagItem_Generate$1 {
     }
     setHas() {
         if (this.getBagModuleC.isHasBagId(this.bagId)) {
-            this.mHasTextBlock.text = "点击使用";
-            this.mHasTextBlock_1.text = "已拥有";
+            this.mHasTextBlock.text = GameConfig.Language.Text_ClickToUse.Value;
+            this.mHasTextBlock_1.text = GameConfig.Language.Text_AlreadyOwned.Value;
             this.mIconImage.imageColor = mw.LinearColor.white;
         }
         else {
             if (this.bagInfoElement.GetType == 2) {
-                this.mHasTextBlock.text = "新手礼包获取";
+                this.mHasTextBlock.text = GameConfig.Language.Text_BeginnerGiftPackAcquisition.Value;
             }
             else if (this.bagInfoElement.GetType == 3) {
-                this.mHasTextBlock.text = "抽奖获取";
+                this.mHasTextBlock.text = GameConfig.Language.Text_GoldCoinLotteryToObtain.Value;
             }
             else if (this.bagInfoElement.GetType == 4) {
-                this.mHasTextBlock.text = "完成新手引导";
+                this.mHasTextBlock.text = GameConfig.Language.Text_PleaseCompleteTheBeginnerGuideFirst.Value;
             }
             else if (this.bagInfoElement.GetType == 5) {
-                this.mHasTextBlock.text = "看广告获得";
+                this.mHasTextBlock.text = GameConfig.Language.Text_ObtainByWatchingAdvertisements.Value;
             }
             else if (this.bagInfoElement.GetType == 6) {
-                this.mHasTextBlock.text = "老玩家回归获得";
+                this.mHasTextBlock.text = GameConfig.Language.Text_OldPlayersReturningToObtain.Value;
             }
             else {
-                this.mHasTextBlock.text = "点击获得";
+                this.mHasTextBlock.text = GameConfig.Language.Text_ClickToGet.Value;
             }
-            this.mHasTextBlock_1.text = "未拥有";
+            this.mHasTextBlock_1.text = GameConfig.Language.Text_NotOwned.Value;
             this.mIconImage.imageColor = mw.LinearColor.black;
         }
     }
@@ -16256,8 +20008,8 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
         this.bindButton();
     }
     initUI() {
-        this.mUseTextBlock.text = "使用";
-        this.mAdsButton.text = `免费获得`;
+        this.mUseTextBlock.text = GameConfig.Language.Text_Use.Value;
+        this.mAdsButton.text = GameConfig.Language.Text_GetItForFree.Value;
     }
     bindButton() {
         this.mUseButton.onClicked.add(this.addUseButton.bind(this));
@@ -16277,7 +20029,7 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
     addAdsButton(isSuccess) {
         if (!isSuccess) {
             this.hide();
-            Notice.showDownNotice(`失败`);
+            Notice.showDownNotice(GameConfig.Language.Text_FailedPleaseTryAgain.Value);
             return;
         }
         if (this.adsCallBack)
@@ -16295,7 +20047,7 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
         this.priceCallBack = priceCallBack;
         this.adsCallBack = adsCallBack;
         let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * GlobalData.addCoinCount;
-        this.mPreceTextBlock.text = `${price}金币购买`;
+        this.mPreceTextBlock.text = `${price}${GameConfig.Language.Text_PurchaseCoins.Value}`;
         this.show();
     }
     setUI() {
@@ -16327,23 +20079,29 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
         switch (bagInfoElement.Type) {
             case 1:
                 bagTypeStr = GlobalData.weaponStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
             case 2:
                 bagTypeStr = GlobalData.skinStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
             case 3:
                 bagTypeStr = GlobalData.equipStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
             case 4:
                 bagTypeStr = GlobalData.petStr;
-                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}介绍`;
+                this.mTitleTextBlock.text = `${rarityStr}${bagTypeStr}${GameConfig.Language.Text_Introduce.Value}`;
                 break;
         }
         this.mNameTextBlock.text = bagInfoElement?.Name;
-        this.mInfoTextBlock.text = `<size=40><b><color=#lime>${bagInfoElement?.Name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n使用后血量和攻击力提升<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}倍</color></b></size>`;
+        let name = bagInfoElement?.Name?.replace(/[\r\n]/g, "");
+        if (GlobalData.languageId == 0) {
+            this.mInfoTextBlock.text = `<size=30><b><color=#lime>${name}</color></b></size>，<size=30><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n${GameConfig.Language.Text_IncreasedHealthAndAttackPowerAfterUse.Value}<size=30><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}${GameConfig.Language.Text_Times.Value}</color></b></size>`;
+        }
+        else {
+            this.mInfoTextBlock.text = `<size=40><b><color=#lime>${name}</color></b></size>，<size=50><b><color=#red>${rarityStr}${bagTypeStr}</color></b></size>\n${GameConfig.Language.Text_IncreasedHealthAndAttackPowerAfterUse.Value}<size=50><b><color=#fuchsia>${1 + Utils.getMultipleByRarity(bagInfoElement.Rarity)}${GameConfig.Language.Text_Times.Value}</color></b></size>`;
+        }
         let assetId = bagInfoElement?.AssetId;
         Utils.setImageByAssetIconData(this.mIconImage, assetId);
     }
@@ -16554,7 +20312,7 @@ class WorldRankModuleS extends ModuleS {
         if (this.worldDatas == null) {
             this.worldDatas = [];
         }
-        if (this.worldDatas.length < 500) {
+        if (this.worldDatas.length < GlobalData.worldRankCount) {
             if (this.worldDatas.length == 0) {
                 this.worldDatas.push(playerData_SW);
                 isPush = true;
@@ -16805,7 +20563,7 @@ var foreign61 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let SignInItem_Generate = class SignInItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -16928,7 +20686,7 @@ var foreign151 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let SignInPanel_Generate = class SignInPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -17018,6 +20776,17 @@ class SignInItem extends SignInItem_Generate$1 {
     }
     onStart() {
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        if (GlobalData.languageId == 0) {
+            this.mTipsTextBlock.fontSize = 15;
+            this.mRewardTextBlock.fontSize = 15;
+        }
+        else {
+            this.mTipsTextBlock.fontSize = 30;
+            this.mRewardTextBlock.fontSize = 20;
+        }
     }
     bindButton() {
         this.mClickButton.onClicked.add(this.addClickButton.bind(this));
@@ -17036,31 +20805,31 @@ class SignInItem extends SignInItem_Generate$1 {
     updateUI() {
         if (this.signIn == 1) {
             this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mTipsTextBlock.text = `已领取`;
-            this.mHasTextBlock.text = `已领取`;
+            this.mTipsTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
+            this.mHasTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
             this.mTipsTextBlock.setFontColorByHex("00FFFFFF");
         }
         else {
             if (this.day < this.getSignInModuleC.getDay) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.mTipsTextBlock.text = `补签`;
+                this.mTipsTextBlock.text = GameConfig.Language.Text_SupplementarySignature.Value;
                 this.mTipsTextBlock.setFontColorByHex("FF0000FF");
             }
             else if (this.day == this.getSignInModuleC.getDay) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.mTipsTextBlock.text = `可领取`;
+                this.mTipsTextBlock.text = GameConfig.Language.Text_CanBeClaimed.Value;
                 this.mTipsTextBlock.setFontColorByHex("FF0000FF");
             }
             else if (this.day > this.getSignInModuleC.getDay) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.mTipsTextBlock.text = `待领取`;
+                this.mTipsTextBlock.text = GameConfig.Language.Text_Unclaimed.Value;
                 this.mTipsTextBlock.setFontColorByHex("00FFFFFF");
             }
         }
-        this.mRewardTextBlock.text = `钻石 +${rewardMap.get(this.day).rewardDiamond} 等级 +${rewardMap.get(this.day).rewardLv}`;
+        this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_DiamondGrade.Value, rewardMap.get(this.day).rewardDiamond, rewardMap.get(this.day).rewardLv);
         this.mRewardTextBlock.setFontColorByHex("FF0000FF");
         this.mIconImage.imageGuid = rewardMap.get(this.day).icon;
-        this.mDayTextBlock.text = `第${this.day}天`;
+        this.mDayTextBlock.text = StringUtil.format(GameConfig.Language.Text_Day.Value, this.day);
     }
 }
 class SignInPanel extends SignInPanel_Generate$1 {
@@ -17078,6 +20847,10 @@ class SignInPanel extends SignInPanel_Generate$1 {
     }
     onStart() {
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mTitleTextBlock.text = StringUtil.format(GameConfig.Language.Text_DayCheckIn.Value, 7);
     }
     bindButton() {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
@@ -17211,15 +20984,15 @@ class SignInModuleC extends ModuleC {
         if (!MapEx.has(this.signIn, day) || day < 1 || day > GlobalData.signInDays)
             return;
         if (MapEx.get(this.signIn, day) == 1) {
-            Notice.showDownNotice(`已签到`);
+            Notice.showDownNotice(GameConfig.Language.Text_SignedIn.Value);
             return;
         }
         if (this.day > day) {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得今日奖励`);
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedTodaySReward.Value);
                     this.getReward(day, succeedCallback);
-                }, `免费领取第${day}天奖励`, `取消`, `领取`);
+                }, StringUtil.format(GameConfig.Language.Text_FreeDayReward.Value, day), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             }
             else {
                 this.getReward(day, succeedCallback);
@@ -17229,7 +21002,7 @@ class SignInModuleC extends ModuleC {
             this.getReward(day, succeedCallback);
         }
         else if (this.day < day) {
-            Notice.showDownNotice(`还未到签到日期`);
+            Notice.showDownNotice(GameConfig.Language.Text_TheCheckInDateHasNotYetArrived.Value);
         }
     }
     getReward(day, succeedCallback) {
@@ -17239,7 +21012,7 @@ class SignInModuleC extends ModuleC {
         this.server.net_setSignIn(day);
         if (succeedCallback)
             succeedCallback();
-        Notice.showDownNotice(`成功获取今日奖励`);
+        Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedTodaySReward.Value);
         let diamond = rewardMap.get(day).rewardDiamond;
         if (diamond > 0) {
             this.getPlayerModuleC.saveDiamond(diamond);
@@ -17248,7 +21021,7 @@ class SignInModuleC extends ModuleC {
         if (lv > 0) {
             this.getPlayerModuleC.upLvByCount(lv);
         }
-        Notice.showDownNotice(`钻石+${diamond} 等级+${lv}`);
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_DiamondGrade.Value, diamond, lv));
     }
 }
 class SignInModuleS extends ModuleS {
@@ -17508,7 +21281,7 @@ var foreign84 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -17661,7 +21434,7 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
     async onLevelChange() {
         if (!this._isInit || this.playerLevel < 0)
             return;
-        this._hpBarUI.mLevelText.text = await Utils.getLvText(this.playerLevel, this.character?.player?.userId) + " 等级Lv." + this.playerLevel;
+        this._hpBarUI.mLevelText.text = await Utils.getLvText(this.playerLevel, this.character?.player?.userId) + ` ${GameConfig.Language.Text_Lv.Value}` + this.playerLevel;
     }
     onInvincible() {
         if (!this._isInit)
@@ -17858,6 +21631,7 @@ class PlayerModuleS extends ModuleS {
         this.levelModuleS = null;
         this.ringSoulModuleS = null;
         this.flyModuleS = null;
+        this.soulBoneModuleS = null;
         this.allPlayerMap = new Map();
         /**存储所有玩家的生命数据 */
         this.playerLifeMap = new Map();
@@ -17897,6 +21671,12 @@ class PlayerModuleS extends ModuleS {
             this.flyModuleS = ModuleService.getModule(FlyModuleS);
         }
         return this.flyModuleS;
+    }
+    get getSoulBoneModuleS() {
+        if (!this.soulBoneModuleS) {
+            this.soulBoneModuleS = ModuleService.getModule(SoulBoneModuleS);
+        }
+        return this.soulBoneModuleS;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -17972,6 +21752,7 @@ class PlayerModuleS extends ModuleS {
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
         names.push(Utils.randomNpcName(monsterId));
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
+        this.saveBone(sendPlayer, hp);
     }
     /**
      * 玩家击杀敌人
@@ -17990,6 +21771,7 @@ class PlayerModuleS extends ModuleS {
         names.push(`${level}级${Utils.randomNpcName(monsterId)}`);
         this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
         this.getLevelModuleS.startLevel(sendPlayer, key);
+        this.saveBone(sendPlayer, hp);
     }
     playerAtkEnemyFlyText(senderGuid, hitPoint, damage) {
         if (!this.allPlayerMap.has(senderGuid))
@@ -18013,7 +21795,9 @@ class PlayerModuleS extends ModuleS {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = Math.round(playerData.getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
+                let maxHp = Math.round(playerData.getHp() * (this.getBagModuleS.getAddHpByUsing(player) +
+                    this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)
+                    + this.getSoulBoneModuleS.getRarity(player)));
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = playerData.playerLv;
@@ -18056,7 +21840,9 @@ class PlayerModuleS extends ModuleS {
         let curHp = targetPlayerData.playerLifebar.hp;
         curHp -= damage;
         if (curHp <= 0) {
-            let maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer) + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)));
+            let maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer)
+                + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)
+                + this.getSoulBoneModuleS.getRarity(targetPlayer)));
             targetPlayerData.playerLifebar.hp = 0;
             targetPlayerData.isDie = true;
             if (sendPlayer) {
@@ -18083,7 +21869,9 @@ class PlayerModuleS extends ModuleS {
         if (sendPlayer) {
             let maxHp = 0;
             if (targetPlayerData.isDie) {
-                maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer) + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)));
+                maxHp = Math.round(DataCenterS.getData(targetPlayer, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(targetPlayer)
+                    + this.getRingSoulModuleS.getRarity(targetPlayer) + this.getFlyModuleS.getRarity(targetPlayer)
+                    + this.getSoulBoneModuleS.getRarity(targetPlayer)));
             }
             this.getClient(sendPlayer).net_onSelfAtkPlayer(damage, hitPoint, targetPlayerData.isDie, maxHp);
         }
@@ -18105,7 +21893,9 @@ class PlayerModuleS extends ModuleS {
         let playerDataS = new PlayerDataS();
         // let hpbar = await mw.Script.spawnScript(PlayerLifebar, true, player.character);
         let hpbar = player.character.addComponent(PlayerLifebar$1, true);
-        let maxHp = Math.round(DataCenterS.getData(player, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
+        let maxHp = Math.round(DataCenterS.getData(player, PlayerData).getHp() * (this.getBagModuleS.getAddHpByUsing(player)
+            + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)
+            + this.getSoulBoneModuleS.getRarity(player)));
         hpbar.maxHp = maxHp;
         hpbar.hp = maxHp;
         playerDataS.playerLifebar = hpbar;
@@ -18159,6 +21949,13 @@ class PlayerModuleS extends ModuleS {
     net_saveDiamond(value) {
         this.currentData.saveDiamond(value);
     }
+    net_saveBone(value) {
+        this.currentData.saveBone(value);
+    }
+    saveBone(player, hp) {
+        let bone = DataCenterS.getData(player, PlayerData).getBone(1);
+        this.getClient(player).net_setBone(bone);
+    }
     /**
      * 更新金币
      * @param player
@@ -18178,7 +21975,9 @@ class PlayerModuleS extends ModuleS {
             let playerId = player.playerId;
             if (this.playerLifeMap.has(playerId)) {
                 let playerLifebar = this.playerLifeMap.get(player.playerId).playerLifebar;
-                let maxHp = Math.round(this.currentData.getHp() * (this.getBagModuleS.getAddHpByUsing(player) + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)));
+                let maxHp = Math.round(this.currentData.getHp() * (this.getBagModuleS.getAddHpByUsing(player)
+                    + this.getRingSoulModuleS.getRarity(player) + this.getFlyModuleS.getRarity(player)
+                    + this.getSoulBoneModuleS.getRarity(player)));
                 playerLifebar.maxHp = maxHp;
                 playerLifebar.hp = maxHp;
                 playerLifebar.playerLevel = this.currentData.playerLv;
@@ -18238,6 +22037,9 @@ __decorate([
 __decorate([
     Decorator.noReply()
 ], PlayerModuleS.prototype, "net_saveDiamond", null);
+__decorate([
+    Decorator.noReply()
+], PlayerModuleS.prototype, "net_saveBone", null);
 __decorate([
     Decorator.noReply()
 ], PlayerModuleS.prototype, "net_saveCoinAndExp", null);
@@ -18424,7 +22226,7 @@ var foreign4 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.26
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -19999,7 +23801,7 @@ var foreign15 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.26
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -20110,7 +23912,7 @@ var foreign16 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let ArkItem_Generate = class ArkItem_Generate extends UIScript {
     get mIconImage() {
@@ -20239,7 +24041,7 @@ var foreign119 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -20343,7 +24145,7 @@ var foreign120 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/GiftBagPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let GiftBagPanel_Generate = class GiftBagPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -20455,7 +24257,18 @@ class ArkItem extends ArkItem_Generate$1 {
         return this.arkModuleC;
     }
     onStart() {
+        this.initTextBlock();
         this.bindButton();
+    }
+    initTextBlock() {
+        if (GlobalData.languageId == 0) {
+            this.mRewardTextBlock.fontSize = 20;
+            this.mDayTextBlock.fontSize = 15;
+        }
+        else {
+            this.mRewardTextBlock.fontSize = 28;
+            this.mDayTextBlock.fontSize = 25;
+        }
     }
     bindButton() {
         this.mClickButton.onClicked.add(this.addClickButton.bind(this));
@@ -20464,7 +24277,7 @@ class ArkItem extends ArkItem_Generate$1 {
         this.getArkModuleC.placeOrder(this.commodityId, () => {
             if (rewardDiamond.get(this.commodityId).isLimit) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.mHasTextBlock.text = `今日已售空`;
+                this.mHasTextBlock.text = GameConfig.Language.Text_Soldouttoday.Value;
             }
         });
     }
@@ -20474,22 +24287,22 @@ class ArkItem extends ArkItem_Generate$1 {
     }
     updateUI() {
         if (rewardDiamond.get(this.commodityId).isLimit) {
-            this.mDayTextBlock.text = `每天限购一次`;
+            this.mDayTextBlock.text = GameConfig.Language.Text_Limitedtoonepurchaseperday.Value;
             if (!this.getArkModuleC.isBuy(this.commodityId)) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
             }
             else {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-                this.mHasTextBlock.text = `今日已售空`;
+                this.mHasTextBlock.text = GameConfig.Language.Text_Soldouttoday.Value;
             }
         }
         else {
-            this.mDayTextBlock.text = `不限购`;
+            this.mDayTextBlock.text = GameConfig.Language.Text_Nopurchaserestrictions.Value;
             this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
         }
         let data = rewardDiamond.get(this.commodityId);
         this.mIconImage.imageGuid = data.icon;
-        this.mRewardTextBlock.text = `钻石 +${data.rewardCount}`;
+        this.mRewardTextBlock.text = `${GameConfig.Language.Text_Diamonds.Value} +${data.rewardCount}`;
         this.mTipsIconImage.imageGuid = arkIcon;
         this.mTipsTextBlock.text = `${data.price}`;
     }
@@ -20512,7 +24325,7 @@ class ArkPanel extends ArkPanel_Generate$1 {
     }
     initUI() {
         this.mIconArkImage.imageGuid = arkIcon;
-        this.mTitleTextBlock.text = `充值钻石`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_Rechargediamonds.Value;
         this.initArkItem();
     }
     bindButton() {
@@ -20545,7 +24358,7 @@ class ArkPanel extends ArkPanel_Generate$1 {
         });
     }
     updateUserIdTextBlock(str) {
-        this.mUserIdTextBlock.text = `${str}:${Player.localPlayer.userId}`;
+        this.mUserIdTextBlock.text = `${str ? str : `UserId`}:${Player.localPlayer.userId}`;
     }
 }
 class ArkData extends Subdata {
@@ -20645,11 +24458,11 @@ class ArkModuleC extends ModuleC {
     }
     placeOrder(commodityId, buySuccessCallback) {
         if (rewardDiamond.get(commodityId).isLimit && this.isBuy(commodityId)) {
-            Notice.showDownNotice(`今日已售空,请更换其他商品购买`);
+            Notice.showDownNotice(GameConfig.Language.Text_SoldouttodayPleaseReplaceWithOtherProductsToPurchase.Value);
             return;
         }
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -20662,7 +24475,7 @@ class ArkModuleC extends ModuleC {
             if (buySuccessCallback)
                 buySuccessCallback();
             let rewardCount = rewardDiamond.get(commodityId).rewardCount;
-            Notice.showDownNotice(`钻石+${rewardCount}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${rewardCount}`);
             this.getPlayerModuleC.saveDiamond(rewardCount);
         }
         else {
@@ -20681,7 +24494,7 @@ class ArkModuleC extends ModuleC {
         //根据commodityId和amount来处理收货逻辑
         console.error(`ArkModuleC net_deliverGoods commodityId: ${commodityId}, amount: ${amount}`);
         let rewardCount = rewardDiamond.get(commodityId).rewardCount;
-        Notice.showDownNotice(`钻石+${rewardCount}`);
+        Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${rewardCount}`);
         this.getPlayerModuleC.saveDiamond(rewardCount);
     }
     isBuy(key) {
@@ -20700,7 +24513,7 @@ class ArkModuleC extends ModuleC {
     }
     getGiftBag(coodStr) {
         if (!this.isCanGetGiftBag) {
-            Notice.showDownNotice(`冷却3秒`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanGetGiftBag = false;
@@ -20709,24 +24522,24 @@ class ArkModuleC extends ModuleC {
     }
     net_getGiftBag(giftBagCood, messageJson) {
         if (giftBagCood == GiftBagCood.Success) {
-            Notice.showDownNotice(`兑换成功`);
+            Notice.showDownNotice(GameConfig.Language.Text_ExchangeSuccessful.Value);
             let message = JSON.parse(messageJson);
             let giftBagData = message;
             if (giftBagData?.diamond && giftBagData?.diamond > 0) {
-                Notice.showDownNotice(`钻石+${giftBagData.diamond}`);
+                Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${giftBagData.diamond}`);
                 this.getPlayerModuleC.saveDiamond(giftBagData.diamond);
             }
             if (giftBagData?.lv && giftBagData?.lv > 0) {
-                Notice.showDownNotice(`等级+${giftBagData.lv}`);
+                Notice.showDownNotice(`${GameConfig.Language.Text_Grade.Value}+${giftBagData.lv}`);
                 this.getPlayerModuleC.upLvByCount(giftBagData.lv);
             }
         }
         else if (giftBagCood == GiftBagCood.Fail) {
-            Notice.showDownNotice(`礼包兑换码错误`);
-            Notice.showDownNotice(`领取失败`);
+            Notice.showDownNotice(GameConfig.Language.Text_GiftPackRedemptionCodeError.Value);
+            Notice.showDownNotice(GameConfig.Language.Text_CollectionFailed.Value);
         }
         else if (giftBagCood == GiftBagCood.Exchanged) {
-            Notice.showDownNotice(`已兑换，无需重复兑换`);
+            Notice.showDownNotice(GameConfig.Language.Text_AlreadyredeemedNoNeedToRedeemAgain.Value);
         }
     }
     net_syncArkStr(str) {
@@ -20829,8 +24642,16 @@ class GiftBagPanel extends GiftBagPanel_Generate$1 {
         this.bindButton();
     }
     initUI() {
-        this.mTitleTextBlock.text = `礼包兑换`;
-        this.mInputTipsTextBlock.text = `请输入作者提供的兑换码\n即可兑换奖励`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_GiftPackExchange.Value;
+        this.mInputTipsTextBlock.text = GameConfig.Language.Text_PleaseEnterTheRedemptionCodeProvidedByTheAuthorCanBeRedeemedForRewards.Value;
+        this.mGetTextBlock.text = GameConfig.Language.Text_Exchange.Value;
+        this.mInputBox.hintString = GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value;
+        if (GlobalData.languageId == 0) {
+            this.mInputTipsTextBlock.fontSize = 28;
+        }
+        else {
+            this.mInputTipsTextBlock.fontSize = 60;
+        }
     }
     bindButton() {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
@@ -20842,8 +24663,7 @@ class GiftBagPanel extends GiftBagPanel_Generate$1 {
     addGetButton() {
         let coodStr = this.mInputBox.text;
         if (!coodStr || coodStr == "") {
-            Notice.showDownNotice(`请输入兑换码`);
-            console.error(`请输入兑换码`);
+            Notice.showDownNotice(GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value);
             return;
         }
         this.getArkModuleC.getGiftBag(coodStr);
@@ -20975,7 +24795,7 @@ var foreign53 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeopleItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let NewPeopleItem_Generate = class NewPeopleItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -21146,7 +24966,7 @@ var foreign139 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeoplePanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
 let NewPeoplePanel_Generate = class NewPeoplePanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -21221,8 +25041,8 @@ var foreign140 = /*#__PURE__*/Object.freeze({
 });
 
 const newPeopleGiftDatas = new Map();
-newPeopleGiftDatas.set(1, { icon: ["209508", "367076"], dayStr: "第一天", name: "金箍棒(粉)+制服女孩", bagId: [10041, 20056], itemPos: new mw.Vector2(30, 27) });
-newPeopleGiftDatas.set(2, { icon: ["318640", "343523", "313464", "398484"], dayStr: "第二天", name: "昊天锤+唐三\n金箍棒(紫)+蓝银皇", bagId: [10043, 20057, 20055, 10042], itemPos: new mw.Vector2(538, 27) });
+newPeopleGiftDatas.set(1, { desc: "第一天", icon: ["209508", "367076"], dayStr: `Text_FirstDay`, name: `Text_GoldenHoopRodPowderUniformGirl`, bagId: [10041, 20056], itemPos: new mw.Vector2(30, 27) });
+newPeopleGiftDatas.set(2, { desc: "第二天", icon: ["318640", "343523", "313464", "398484"], dayStr: `Text_TheSecondDay`, name: `HaotianHammerTangSan_GoldenHoopRodPurpleBlueSilverEmperor`, bagId: [10043, 20057, 20055, 10042], itemPos: new mw.Vector2(538, 27) });
 const onlineMinutes = 30;
 class NewPeopleData extends Subdata {
     constructor() {
@@ -21247,7 +25067,7 @@ __decorate([
     Decorator.persistence()
 ], NewPeopleData.prototype, "isOldPeople", void 0);
 const NewPeopleTriggerMap = new Map();
-NewPeopleTriggerMap.set(1, { triggers: ["08A7D30E"], worldUIIds: ["272413D6"], name: `新手礼包` });
+NewPeopleTriggerMap.set(1, { triggers: ["08A7D30E"], worldUIIds: ["272413D6"], name: `Text_NoviceGiftPack` });
 // NewPeopleTriggerMap.set(2, { triggers: null, worldUIIds: ["07D9DF79"], name: `领取自动攻击` });
 // NewPeopleTriggerMap.set(3, { triggers: null, worldUIIds: ["0D9A6CAC"], name: `领取限定皮肤` });
 class NewPeopleModuleC extends ModuleC {
@@ -21313,12 +25133,12 @@ class NewPeopleModuleC extends ModuleC {
     initOldPeopleData() {
         if (!this.isOldPeople)
             return;
-        NewPeopleTriggerMap.get(1).name = `老玩家回归礼包`;
-        newPeopleGiftDatas.get(1).name = `黄金王子+JK女孩`;
+        NewPeopleTriggerMap.get(1).name = `Text_ReturnGiftPackageForVeteranPlayers`;
+        newPeopleGiftDatas.get(1).name = `Text_TheGoldenPrinceJkGirl`;
         newPeopleGiftDatas.get(1).icon = ["142399", "320751"];
-        newPeopleGiftDatas.get(1).bagId = [20064, 20065]; //TODO
-        newPeopleGiftDatas.get(2).name = `小蓝龙+小绿龙\n小黑龙+小橘龙`;
-        newPeopleGiftDatas.get(2).bagId = [20066, 200677, 20068, 20069]; //TODO
+        newPeopleGiftDatas.get(1).bagId = [20064, 20065];
+        newPeopleGiftDatas.get(2).name = `Text_XiaolanGreenBlackOrangeDragon`;
+        newPeopleGiftDatas.get(2).bagId = [20066, 20067, 20068, 20069];
         newPeopleGiftDatas.get(2).icon = ["216268", "216269", "216270", "212971"];
     }
     isGetNewPeople(key) {
@@ -21341,11 +25161,11 @@ class NewPeopleModuleC extends ModuleC {
         if (this.isCanGet(key)) {
             if (!this.isGetNewPeople(key)) {
                 if (minutes < onlineMinutes) {
-                    Notice.showDownNotice(`在线时间不足${onlineMinutes}分钟`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_OnlineTimeIsLessThanMinutes.Value, onlineMinutes));
                 }
                 else {
-                    Notice.showDownNotice(`领取成功`);
-                    Notice.showDownNotice(`打开背包使用`);
+                    Notice.showDownNotice(GameConfig.Language.Text_ReceivedSuccessfully.Value);
+                    Notice.showDownNotice(GameConfig.Language.Text_OpenTheBackpackForUse.Value);
                     let bagIds = newPeopleGiftDatas.get(key).bagId;
                     for (let i = 0; i < bagIds.length; ++i) {
                         TimeUtil.delaySecond(i).then(() => {
@@ -21358,11 +25178,11 @@ class NewPeopleModuleC extends ModuleC {
                 }
             }
             else {
-                Notice.showDownNotice(`不能重复领取`);
+                Notice.showDownNotice(GameConfig.Language.Text_CannotBeClaimedRepeatedly.Value);
             }
         }
         else {
-            Notice.showDownNotice(`请第${key}天再来领取`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseComeBackToCollectOnTheThDay.Value, key));
         }
     }
     initTrigger() {
@@ -21383,7 +25203,7 @@ class NewPeopleModuleC extends ModuleC {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v) => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(value.name);
+                    levelItem.updateLevelTextBlock(GameConfig.Language[`${value.name}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -21424,7 +25244,8 @@ class NewPeoplePanel extends NewPeoplePanel_Generate$1 {
         this.bindButton();
     }
     initUI() {
-        this.mTitleTextBlock.text = `新手礼包`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_NoviceGiftPack.Value;
+        this.mTipsTextBlock.text = GameConfig.Language.Text_OpenTheBackpackAndUseItAfterReceivingIt.Value;
         this.initItem();
     }
     bindButton() {
@@ -21470,9 +25291,18 @@ class NewPeopleItem extends NewPeopleItem_Generate$1 {
     onStart() {
         this.initUI();
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        if (GlobalData.languageId == 0) {
+            this.mTipsTextBlock.fontSize = 12;
+        }
+        else {
+            this.mTipsTextBlock.fontSize = 25;
+        }
     }
     initUI() {
-        this.mHasTextBlock.text = `已领取`;
+        this.mHasTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
         this.updateOnlineMinutesTextBlock(0);
     }
     bindButton() {
@@ -21495,7 +25325,7 @@ class NewPeopleItem extends NewPeopleItem_Generate$1 {
     }
     updateUI() {
         let newPeopleGiftData = newPeopleGiftDatas.get(this.key);
-        this.mDayTextBlock.text = `${newPeopleGiftData.dayStr}`;
+        this.mDayTextBlock.text = GameConfig.Language[`${newPeopleGiftData.dayStr}`].Value;
         for (let i = 0; i < newPeopleGiftData.icon.length; ++i) {
             this[`mIconBgImage_${i}`].visibility = mw.SlateVisibility.SelfHitTestInvisible;
             Utils.setImageByAssetIconData(this[`mIconImage_${i}`], newPeopleGiftData.icon[i]);
@@ -21503,10 +25333,10 @@ class NewPeopleItem extends NewPeopleItem_Generate$1 {
         for (let i = newPeopleGiftData.icon.length; i < 4; ++i) {
             this[`mIconBgImage_${i}`].visibility = mw.SlateVisibility.Collapsed;
         }
-        this.mTipsTextBlock.text = `${newPeopleGiftData.name}`;
+        this.mTipsTextBlock.text = GameConfig.Language[`${newPeopleGiftData.name}`].Value;
         if (this.getNewPeopleModuleC.isGetNewPeople(this.key)) {
             this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mRewardTextBlock.text = `在线${onlineMinutes}分钟(${onlineMinutes}/${onlineMinutes})`;
+            this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_OnlineMinutes.Value, onlineMinutes, onlineMinutes, onlineMinutes);
         }
         else {
             this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
@@ -21514,14 +25344,14 @@ class NewPeopleItem extends NewPeopleItem_Generate$1 {
                 Event.dispatchToLocal(`RequestNewPeopleGiftBagOnlineTime`);
             }
             else {
-                this.mRewardTextBlock.text = `在线${onlineMinutes}分钟(${0}/${onlineMinutes})`;
+                this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_OnlineMinutes.Value, onlineMinutes, 0, onlineMinutes);
             }
         }
     }
     updateOnlineMinutesTextBlock(minutes) {
         console.error(`minutes:${minutes}`);
         this.minutes = minutes;
-        this.mRewardTextBlock.text = `在线${onlineMinutes}分钟(${minutes}/${onlineMinutes})`;
+        this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_OnlineMinutes.Value, onlineMinutes, minutes, onlineMinutes);
     }
 }
 
@@ -21539,7 +25369,7 @@ var foreign57 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -21553,6 +25383,36 @@ let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
             this.mRoomCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas');
         }
         return this.mRoomCanvas_Internal;
+    }
+    get mRoomRankTextBlock() {
+        if (!this.mRoomRankTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoomRankTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/mRoomRankTextBlock');
+        }
+        return this.mRoomRankTextBlock_Internal;
+    }
+    get mRoomNameTextBlock() {
+        if (!this.mRoomNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoomNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/mRoomNameTextBlock');
+        }
+        return this.mRoomNameTextBlock_Internal;
+    }
+    get mRoomLvTextBlock() {
+        if (!this.mRoomLvTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoomLvTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/mRoomLvTextBlock');
+        }
+        return this.mRoomLvTextBlock_Internal;
+    }
+    get mRoomHeightTextBlock() {
+        if (!this.mRoomHeightTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoomHeightTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/mRoomHeightTextBlock');
+        }
+        return this.mRoomHeightTextBlock_Internal;
+    }
+    get mRoomKillTextBlock() {
+        if (!this.mRoomKillTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoomKillTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/mRoomKillTextBlock');
+        }
+        return this.mRoomKillTextBlock_Internal;
     }
     get mScrollBox_Room() {
         if (!this.mScrollBox_Room_Internal && this.uiWidgetBase) {
@@ -21572,11 +25432,23 @@ let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
         }
         return this.mRankLvButton_Internal;
     }
+    get mRankLvTextBlock() {
+        if (!this.mRankLvTextBlock_Internal && this.uiWidgetBase) {
+            this.mRankLvTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomRankTypeCanvas/mRankLvButton/mRankLvTextBlock');
+        }
+        return this.mRankLvTextBlock_Internal;
+    }
     get mRankHeightButton() {
         if (!this.mRankHeightButton_Internal && this.uiWidgetBase) {
             this.mRankHeightButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomRankTypeCanvas/mRankHeightButton');
         }
         return this.mRankHeightButton_Internal;
+    }
+    get mRankHeightTextBlock() {
+        if (!this.mRankHeightTextBlock_Internal && this.uiWidgetBase) {
+            this.mRankHeightTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomRankTypeCanvas/mRankHeightButton/mRankHeightTextBlock');
+        }
+        return this.mRankHeightTextBlock_Internal;
     }
     get mRankKillButton() {
         if (!this.mRankKillButton_Internal && this.uiWidgetBase) {
@@ -21584,11 +25456,35 @@ let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
         }
         return this.mRankKillButton_Internal;
     }
+    get mRankKillTextBlock() {
+        if (!this.mRankKillTextBlock_Internal && this.uiWidgetBase) {
+            this.mRankKillTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mRoomCanvas/RoomRankTypeCanvas/mRankKillButton/mRankKillTextBlock');
+        }
+        return this.mRankKillTextBlock_Internal;
+    }
     get mWorldCanvas() {
         if (!this.mWorldCanvas_Internal && this.uiWidgetBase) {
             this.mWorldCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mWorldCanvas');
         }
         return this.mWorldCanvas_Internal;
+    }
+    get mWorldRankTextBlock() {
+        if (!this.mWorldRankTextBlock_Internal && this.uiWidgetBase) {
+            this.mWorldRankTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mWorldCanvas/WorldCanvas/mWorldRankTextBlock');
+        }
+        return this.mWorldRankTextBlock_Internal;
+    }
+    get mWorldNameTextBlock() {
+        if (!this.mWorldNameTextBlock_Internal && this.uiWidgetBase) {
+            this.mWorldNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mWorldCanvas/WorldCanvas/mWorldNameTextBlock');
+        }
+        return this.mWorldNameTextBlock_Internal;
+    }
+    get mWorldLvTextBlock() {
+        if (!this.mWorldLvTextBlock_Internal && this.uiWidgetBase) {
+            this.mWorldLvTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/mWorldCanvas/WorldCanvas/mWorldLvTextBlock');
+        }
+        return this.mWorldLvTextBlock_Internal;
     }
     get mScrollBox_World() {
         if (!this.mScrollBox_World_Internal && this.uiWidgetBase) {
@@ -21614,11 +25510,23 @@ let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
         }
         return this.mRoomRankButton_Internal;
     }
+    get mRoomTextBlock() {
+        if (!this.mRoomTextBlock_Internal && this.uiWidgetBase) {
+            this.mRoomTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/RankTypeCanvas/mRoomRankButton/mRoomTextBlock');
+        }
+        return this.mRoomTextBlock_Internal;
+    }
     get mWorldRankButton() {
         if (!this.mWorldRankButton_Internal && this.uiWidgetBase) {
             this.mWorldRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/RankTypeCanvas/mWorldRankButton');
         }
         return this.mWorldRankButton_Internal;
+    }
+    get mWorldTextBlock() {
+        if (!this.mWorldTextBlock_Internal && this.uiWidgetBase) {
+            this.mWorldTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RankCanvas/RankTypeCanvas/mWorldRankButton/mWorldTextBlock');
+        }
+        return this.mWorldTextBlock_Internal;
     }
     get mCloseButton() {
         if (!this.mCloseButton_Internal && this.uiWidgetBase) {
@@ -21668,21 +25576,21 @@ let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
         //按钮多语言
         //文本多语言
         this.initLanguage(this.mTitleTextBlock);
+        this.initLanguage(this.mRoomRankTextBlock);
+        this.initLanguage(this.mRoomNameTextBlock);
+        this.initLanguage(this.mRoomLvTextBlock);
+        this.initLanguage(this.mRoomHeightTextBlock);
+        this.initLanguage(this.mRoomKillTextBlock);
+        this.initLanguage(this.mRankLvTextBlock);
+        this.initLanguage(this.mRankHeightTextBlock);
+        this.initLanguage(this.mRankKillTextBlock);
+        this.initLanguage(this.mWorldRankTextBlock);
+        this.initLanguage(this.mWorldNameTextBlock);
+        this.initLanguage(this.mWorldLvTextBlock);
         this.initLanguage(this.mRankDesTextBlock);
+        this.initLanguage(this.mRoomTextBlock);
+        this.initLanguage(this.mWorldTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/RoomRankTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/RoomNameTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/RoomLvTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/RoomHeightTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomCanvas/RoomKillTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomRankTypeCanvas/mRankLvButton/RankLvTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomRankTypeCanvas/mRankHeightButton/RankHeightTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mRoomCanvas/RoomRankTypeCanvas/mRankKillButton/RankKillTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mWorldCanvas/WorldCanvas/WorldRankTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mWorldCanvas/WorldCanvas/WorldNameTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/mWorldCanvas/WorldCanvas/WorldLvTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/RankTypeCanvas/mRoomRankButton/RoomTextBlock"));
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RankCanvas/RankTypeCanvas/mWorldRankButton/WorldTextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -21735,7 +25643,7 @@ class WorldRankItem {
         this.mRankTextBlock.text = rank.toString();
         this.mNameTextBlock.text = name;
         if (lv == 0) {
-            this.mLvTextBlock.text = "暂无";
+            this.mLvTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
         }
         else {
             this.mLvTextBlock.text = await Utils.getLvText(lv, userId);
@@ -21778,19 +25686,19 @@ class RankItem {
         this.mRankTextBlock.text = rank.toString();
         this.mNameTextBlock.text = name;
         if (lv == 0) {
-            this.mLvTextBlock.text = "暂无";
+            this.mLvTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
         }
         else {
             this.mLvTextBlock.text = await Utils.getLvText(lv, userId);
         }
         if (height == 0) {
-            this.mHeightTextBlock.text = "暂无";
+            this.mHeightTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
         }
         else {
             this.mHeightTextBlock.text = height.toString();
         }
         if (kill == 0) {
-            this.mKillTextBlock.text = "暂无";
+            this.mKillTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
         }
         else {
             this.mKillTextBlock.text = kill.toString();
@@ -21827,6 +25735,54 @@ class WorldRankPanel extends WorldRankPanel_Generate$1 {
     onStart() {
         this.initData();
         this.bindButton();
+        this.initTextBlock();
+    }
+    initTextBlock() {
+        this.mRoomRankTextBlock.text = GameConfig.Language.Text_Ranking.Value;
+        this.mRoomNameTextBlock.text = GameConfig.Language.Text_Name.Value;
+        this.mRoomLvTextBlock.text = GameConfig.Language.Text_Grade.Value;
+        this.mRoomHeightTextBlock.text = GameConfig.Language.Text_Height.Value;
+        this.mRoomKillTextBlock.text = GameConfig.Language.Text_Kill.Value;
+        this.mRankLvTextBlock.text = GameConfig.Language.Text_LevelMode.Value;
+        this.mRankHeightTextBlock.text = GameConfig.Language.Text_HeightMode.Value;
+        this.mRankKillTextBlock.text = GameConfig.Language.Text_KillMode.Value;
+        this.mWorldRankTextBlock.text = GameConfig.Language.Text_Ranking.Value;
+        this.mWorldNameTextBlock.text = GameConfig.Language.Text_Name.Value;
+        this.mWorldLvTextBlock.text = GameConfig.Language.Text_Grade.Value;
+        this.mRoomTextBlock.text = GameConfig.Language.Text_SwitchRoomLeaderboard.Value;
+        this.mWorldTextBlock.text = GameConfig.Language.Text_SwitchToTheFullServerRankingList.Value;
+        if (GlobalData.languageId == 0) {
+            this.mRoomRankTextBlock.fontSize = 35;
+            this.mRoomNameTextBlock.fontSize = 35;
+            this.mRoomLvTextBlock.fontSize = 35;
+            this.mRoomHeightTextBlock.fontSize = 35;
+            this.mRoomKillTextBlock.fontSize = 35;
+            this.mRankLvTextBlock.fontSize = 25;
+            this.mRankHeightTextBlock.fontSize = 25;
+            this.mRankKillTextBlock.fontSize = 25;
+            this.mWorldRankTextBlock.fontSize = 35;
+            this.mWorldNameTextBlock.fontSize = 35;
+            this.mWorldLvTextBlock.fontSize = 35;
+            this.mRoomTextBlock.fontSize = 15;
+            this.mWorldTextBlock.fontSize = 15;
+            this.mTitleTextBlock.fontSize = 30;
+        }
+        else {
+            this.mRoomRankTextBlock.fontSize = 60;
+            this.mRoomNameTextBlock.fontSize = 60;
+            this.mRoomLvTextBlock.fontSize = 60;
+            this.mRoomHeightTextBlock.fontSize = 60;
+            this.mRoomKillTextBlock.fontSize = 60;
+            this.mRankLvTextBlock.fontSize = 35;
+            this.mRankHeightTextBlock.fontSize = 35;
+            this.mRankKillTextBlock.fontSize = 35;
+            this.mWorldRankTextBlock.fontSize = 60;
+            this.mWorldNameTextBlock.fontSize = 60;
+            this.mWorldLvTextBlock.fontSize = 60;
+            this.mRoomTextBlock.fontSize = 25;
+            this.mWorldTextBlock.fontSize = 25;
+            this.mTitleTextBlock.fontSize = 80;
+        }
     }
     initData() {
         this.showRoomCanvas();
@@ -21857,8 +25813,8 @@ class WorldRankPanel extends WorldRankPanel_Generate$1 {
         this.currentShowCanvas = ShowCanvasType.Room;
         this.mRoomCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
         this.mWorldCanvas.visibility = mw.SlateVisibility.Collapsed;
-        this.mRankDesTextBlock.text = "你所在房间内的排行榜。\n点击右侧排行模式按钮会刷新排行榜模式。";
-        this.mTitleTextBlock.text = "房间排行榜";
+        this.mRankDesTextBlock.text = GameConfig.Language.Text_TheRankingListInYourRoom.Value;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_RoomRanking.Value;
     }
     showWorldCanvas() {
         if (this.currentShowCanvas == ShowCanvasType.World)
@@ -21866,8 +25822,8 @@ class WorldRankPanel extends WorldRankPanel_Generate$1 {
         this.currentShowCanvas = ShowCanvasType.World;
         this.mRoomCanvas.visibility = mw.SlateVisibility.Collapsed;
         this.mWorldCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        this.mRankDesTextBlock.text = `全服前${500}名\n段位 Lv.等级排行。`;
-        this.mTitleTextBlock.text = "全服排行榜";
+        this.mRankDesTextBlock.text = StringUtil.format(GameConfig.Language.Text_TopInTheEntireServer.Value, GlobalData.worldRankCount);
+        this.mTitleTextBlock.text = GameConfig.Language.Text_FullServerRankingList.Value;
     }
     onShow(...params) {
         Utils.openUITween(this.rootCanvas, () => {
@@ -22021,7 +25977,7 @@ class WorldRankModuleC extends ModuleC {
         });
         this.getWorldRankPanel.onRankTypeAction.add((rankType) => {
             if (!this.isRefresh) {
-                Notice.showDownNotice("小手别点太快哟~");
+                Notice.showDownNotice(GameConfig.Language.Text_DonTClickTooQuicklyWithYourLittleHand.Value);
             }
             this.isRefresh = false;
             TimeUtil.delaySecond(1.5).then(() => {
@@ -22119,39 +26075,15 @@ var foreign72 = /*#__PURE__*/Object.freeze({
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/SoulBoneModule/PartItem.ui
- * TIME: 2024.10.19-11.22.58
+ * UI: UI/common/WorldTips/WorldTips_1.ui
+ * TIME: 2024.10.24-19.45.27
  */
-let PartItem_Generate = class PartItem_Generate extends UIScript {
-    get mBgImage() {
-        if (!this.mBgImage_Internal && this.uiWidgetBase) {
-            this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage');
+let WorldTips_1_Generate = class WorldTips_1_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        return this.mBgImage_Internal;
-    }
-    get mFgImage() {
-        if (!this.mFgImage_Internal && this.uiWidgetBase) {
-            this.mFgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mFgImage');
-        }
-        return this.mFgImage_Internal;
-    }
-    get mIconImage() {
-        if (!this.mIconImage_Internal && this.uiWidgetBase) {
-            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mIconImage');
-        }
-        return this.mIconImage_Internal;
-    }
-    get mNameTextBlock() {
-        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
-            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mNameTextBlock');
-        }
-        return this.mNameTextBlock_Internal;
-    }
-    get mClickButton() {
-        if (!this.mClickButton_Internal && this.uiWidgetBase) {
-            this.mClickButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mClickButton');
-        }
-        return this.mClickButton_Internal;
+        return this.mTextBlock_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -22162,13 +26094,9 @@ let PartItem_Generate = class PartItem_Generate extends UIScript {
     initButtons() {
         //按钮添加点击
         //按钮添加点击
-        this.mClickButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        });
-        this.mClickButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
-        this.initLanguage(this.mNameTextBlock);
+        this.initLanguage(this.mTextBlock);
         //文本多语言
     }
     /*初始化多语言*/
@@ -22189,323 +26117,35 @@ let PartItem_Generate = class PartItem_Generate extends UIScript {
         mw.UIService.hideUI(this);
     }
 };
-PartItem_Generate = __decorate([
-    UIBind('UI/module/SoulBoneModule/PartItem.ui')
-], PartItem_Generate);
-var PartItem_Generate$1 = PartItem_Generate;
+WorldTips_1_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips_1.ui')
+], WorldTips_1_Generate);
+var WorldTips_1_Generate$1 = WorldTips_1_Generate;
 
-var foreign153 = /*#__PURE__*/Object.freeze({
+var foreign109 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: PartItem_Generate$1
+    default: WorldTips_1_Generate$1
 });
 
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/SoulBoneModule/SoulBonePanel.ui
- * TIME: 2024.10.19-11.22.58
+ * UI: UI/common/WorldTips/WorldTips_2.ui
+ * TIME: 2024.10.24-19.45.27
  */
-let SoulBonePanel_Generate = class SoulBonePanel_Generate extends UIScript {
-    get mTitleTextBlock() {
-        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
-            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
+let WorldTips_2_Generate = class WorldTips_2_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        return this.mTitleTextBlock_Internal;
+        return this.mTextBlock_Internal;
     }
-    get mMainCanvas() {
-        if (!this.mMainCanvas_Internal && this.uiWidgetBase) {
-            this.mMainCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas');
+    get mTextBlock_1() {
+        if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock_1');
         }
-        return this.mMainCanvas_Internal;
-    }
-    get mPartListScrollBox() {
-        if (!this.mPartListScrollBox_Internal && this.uiWidgetBase) {
-            this.mPartListScrollBox_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mPartListScrollBox');
-        }
-        return this.mPartListScrollBox_Internal;
-    }
-    get mPartListCanvas() {
-        if (!this.mPartListCanvas_Internal && this.uiWidgetBase) {
-            this.mPartListCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mPartListScrollBox/mPartListCanvas');
-        }
-        return this.mPartListCanvas_Internal;
-    }
-    get mContentCanvas() {
-        if (!this.mContentCanvas_Internal && this.uiWidgetBase) {
-            this.mContentCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas');
-        }
-        return this.mContentCanvas_Internal;
-    }
-    get mIconCanvas() {
-        if (!this.mIconCanvas_Internal && this.uiWidgetBase) {
-            this.mIconCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas');
-        }
-        return this.mIconCanvas_Internal;
-    }
-    get mIconBgImage() {
-        if (!this.mIconBgImage_Internal && this.uiWidgetBase) {
-            this.mIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mIconBgImage');
-        }
-        return this.mIconBgImage_Internal;
-    }
-    get mIconImage() {
-        if (!this.mIconImage_Internal && this.uiWidgetBase) {
-            this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mIconBgImage/mIconImage');
-        }
-        return this.mIconImage_Internal;
-    }
-    get mNameTextBlock() {
-        if (!this.mNameTextBlock_Internal && this.uiWidgetBase) {
-            this.mNameTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mNameTextBlock');
-        }
-        return this.mNameTextBlock_Internal;
-    }
-    get mStarCanvas() {
-        if (!this.mStarCanvas_Internal && this.uiWidgetBase) {
-            this.mStarCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mIconCanvas/mStarCanvas');
-        }
-        return this.mStarCanvas_Internal;
-    }
-    get mPropertyCanvas() {
-        if (!this.mPropertyCanvas_Internal && this.uiWidgetBase) {
-            this.mPropertyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas');
-        }
-        return this.mPropertyCanvas_Internal;
-    }
-    get mHpCanvas() {
-        if (!this.mHpCanvas_Internal && this.uiWidgetBase) {
-            this.mHpCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas');
-        }
-        return this.mHpCanvas_Internal;
-    }
-    get mHpTextBlock() {
-        if (!this.mHpTextBlock_Internal && this.uiWidgetBase) {
-            this.mHpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpTextBlock');
-        }
-        return this.mHpTextBlock_Internal;
-    }
-    get mHpArrowImage() {
-        if (!this.mHpArrowImage_Internal && this.uiWidgetBase) {
-            this.mHpArrowImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpArrowImage');
-        }
-        return this.mHpArrowImage_Internal;
-    }
-    get mHpTipsTextBlock() {
-        if (!this.mHpTipsTextBlock_Internal && this.uiWidgetBase) {
-            this.mHpTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpArrowImage/mHpTipsTextBlock');
-        }
-        return this.mHpTipsTextBlock_Internal;
-    }
-    get mHpedTextBlock() {
-        if (!this.mHpedTextBlock_Internal && this.uiWidgetBase) {
-            this.mHpedTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHpCanvas/mHpArrowImage/mHpedTextBlock');
-        }
-        return this.mHpedTextBlock_Internal;
-    }
-    get mAtkCanvas() {
-        if (!this.mAtkCanvas_Internal && this.uiWidgetBase) {
-            this.mAtkCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas');
-        }
-        return this.mAtkCanvas_Internal;
-    }
-    get mAtkTextBlock() {
-        if (!this.mAtkTextBlock_Internal && this.uiWidgetBase) {
-            this.mAtkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkTextBlock');
-        }
-        return this.mAtkTextBlock_Internal;
-    }
-    get mAtkArrowImage() {
-        if (!this.mAtkArrowImage_Internal && this.uiWidgetBase) {
-            this.mAtkArrowImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkArrowImage');
-        }
-        return this.mAtkArrowImage_Internal;
-    }
-    get mAtkTipsTextBlock() {
-        if (!this.mAtkTipsTextBlock_Internal && this.uiWidgetBase) {
-            this.mAtkTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkArrowImage/mAtkTipsTextBlock');
-        }
-        return this.mAtkTipsTextBlock_Internal;
-    }
-    get mAtkedTextBlock() {
-        if (!this.mAtkedTextBlock_Internal && this.uiWidgetBase) {
-            this.mAtkedTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mAtkCanvas/mAtkArrowImage/mAtkedTextBlock');
-        }
-        return this.mAtkedTextBlock_Internal;
-    }
-    get mHasMaxLvTextBlock() {
-        if (!this.mHasMaxLvTextBlock_Internal && this.uiWidgetBase) {
-            this.mHasMaxLvTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mPropertyCanvas/mHasMaxLvTextBlock');
-        }
-        return this.mHasMaxLvTextBlock_Internal;
-    }
-    get mNeedInfoCanvas() {
-        if (!this.mNeedInfoCanvas_Internal && this.uiWidgetBase) {
-            this.mNeedInfoCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas');
-        }
-        return this.mNeedInfoCanvas_Internal;
-    }
-    get mNeedTitleTextBlock() {
-        if (!this.mNeedTitleTextBlock_Internal && this.uiWidgetBase) {
-            this.mNeedTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/NeedInfoBgImage/mNeedTitleTextBlock');
-        }
-        return this.mNeedTitleTextBlock_Internal;
-    }
-    get mNeedLvCanvas() {
-        if (!this.mNeedLvCanvas_Internal && this.uiWidgetBase) {
-            this.mNeedLvCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedLvCanvas');
-        }
-        return this.mNeedLvCanvas_Internal;
-    }
-    get mNeedLvCountTextBlock() {
-        if (!this.mNeedLvCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mNeedLvCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedLvCanvas/mNeedLvCountTextBlock');
-        }
-        return this.mNeedLvCountTextBlock_Internal;
-    }
-    get mNeedDianondtCanvas() {
-        if (!this.mNeedDianondtCanvas_Internal && this.uiWidgetBase) {
-            this.mNeedDianondtCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas');
-        }
-        return this.mNeedDianondtCanvas_Internal;
-    }
-    get mNeedDiamondTipsTextBlock() {
-        if (!this.mNeedDiamondTipsTextBlock_Internal && this.uiWidgetBase) {
-            this.mNeedDiamondTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondTipsTextBlock');
-        }
-        return this.mNeedDiamondTipsTextBlock_Internal;
-    }
-    get mNeedDiamondIconImage() {
-        if (!this.mNeedDiamondIconImage_Internal && this.uiWidgetBase) {
-            this.mNeedDiamondIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondIconImage');
-        }
-        return this.mNeedDiamondIconImage_Internal;
-    }
-    get mNeedDiamondCountTextBlock() {
-        if (!this.mNeedDiamondCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mNeedDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedDianondtCanvas/mNeedDiamondCountTextBlock');
-        }
-        return this.mNeedDiamondCountTextBlock_Internal;
-    }
-    get mNeedCoinCanvas() {
-        if (!this.mNeedCoinCanvas_Internal && this.uiWidgetBase) {
-            this.mNeedCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas');
-        }
-        return this.mNeedCoinCanvas_Internal;
-    }
-    get mNeedCionTitleImage() {
-        if (!this.mNeedCionTitleImage_Internal && this.uiWidgetBase) {
-            this.mNeedCionTitleImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCionTitleImage');
-        }
-        return this.mNeedCionTitleImage_Internal;
-    }
-    get mNeedCoinTextBlock() {
-        if (!this.mNeedCoinTextBlock_Internal && this.uiWidgetBase) {
-            this.mNeedCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinTextBlock');
-        }
-        return this.mNeedCoinTextBlock_Internal;
-    }
-    get mNeedCoinIconImage() {
-        if (!this.mNeedCoinIconImage_Internal && this.uiWidgetBase) {
-            this.mNeedCoinIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinIconImage');
-        }
-        return this.mNeedCoinIconImage_Internal;
-    }
-    get mNeedCoinCountTextBlock() {
-        if (!this.mNeedCoinCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mNeedCoinCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mNeedInfoCanvas/mNeedCoinCanvas/mNeedCoinCountTextBlock');
-        }
-        return this.mNeedCoinCountTextBlock_Internal;
-    }
-    get mStrengthenCanvas() {
-        if (!this.mStrengthenCanvas_Internal && this.uiWidgetBase) {
-            this.mStrengthenCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas');
-        }
-        return this.mStrengthenCanvas_Internal;
-    }
-    get mProbabilityTextBlock() {
-        if (!this.mProbabilityTextBlock_Internal && this.uiWidgetBase) {
-            this.mProbabilityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mProbabilityTextBlock');
-        }
-        return this.mProbabilityTextBlock_Internal;
-    }
-    get mUpProbabilityButton() {
-        if (!this.mUpProbabilityButton_Internal && this.uiWidgetBase) {
-            this.mUpProbabilityButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mUpProbabilityButton');
-        }
-        return this.mUpProbabilityButton_Internal;
-    }
-    get mUpProbabilityTextBlock() {
-        if (!this.mUpProbabilityTextBlock_Internal && this.uiWidgetBase) {
-            this.mUpProbabilityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mUpProbabilityButton/mUpProbabilityTextBlock');
-        }
-        return this.mUpProbabilityTextBlock_Internal;
-    }
-    get mStrengthenButton() {
-        if (!this.mStrengthenButton_Internal && this.uiWidgetBase) {
-            this.mStrengthenButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mStrengthenButton');
-        }
-        return this.mStrengthenButton_Internal;
-    }
-    get mStrengthenTextBlock() {
-        if (!this.mStrengthenTextBlock_Internal && this.uiWidgetBase) {
-            this.mStrengthenTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMainCanvas/mContentCanvas/mStrengthenCanvas/mStrengthenButton/mStrengthenTextBlock');
-        }
-        return this.mStrengthenTextBlock_Internal;
-    }
-    get mMoneyCanvas() {
-        if (!this.mMoneyCanvas_Internal && this.uiWidgetBase) {
-            this.mMoneyCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas');
-        }
-        return this.mMoneyCanvas_Internal;
-    }
-    get mIconCoinImage() {
-        if (!this.mIconCoinImage_Internal && this.uiWidgetBase) {
-            this.mIconCoinImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mIconCoinImage');
-        }
-        return this.mIconCoinImage_Internal;
-    }
-    get mCoinCountTextBlock() {
-        if (!this.mCoinCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mCoinCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/CoinCanvas/mCoinCountTextBlock');
-        }
-        return this.mCoinCountTextBlock_Internal;
-    }
-    get mIconDiamondImage() {
-        if (!this.mIconDiamondImage_Internal && this.uiWidgetBase) {
-            this.mIconDiamondImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mIconDiamondImage');
-        }
-        return this.mIconDiamondImage_Internal;
-    }
-    get mDiamondCountTextBlock() {
-        if (!this.mDiamondCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mDiamondCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/DiamondCanvas/mDiamondCountTextBlock');
-        }
-        return this.mDiamondCountTextBlock_Internal;
-    }
-    get mIconArkImage() {
-        if (!this.mIconArkImage_Internal && this.uiWidgetBase) {
-            this.mIconArkImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mIconArkImage');
-        }
-        return this.mIconArkImage_Internal;
-    }
-    get mArkCountTextBlock() {
-        if (!this.mArkCountTextBlock_Internal && this.uiWidgetBase) {
-            this.mArkCountTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mMoneyCanvas/MoneyCanvas/ArkCanvas/mArkCountTextBlock');
-        }
-        return this.mArkCountTextBlock_Internal;
-    }
-    get mTotalRarityTextBlock() {
-        if (!this.mTotalRarityTextBlock_Internal && this.uiWidgetBase) {
-            this.mTotalRarityTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTotalRarityTextBlock');
-        }
-        return this.mTotalRarityTextBlock_Internal;
-    }
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
-        }
-        return this.mCloseButton_Internal;
+        return this.mTextBlock_1_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -22516,42 +26156,10 @@ let SoulBonePanel_Generate = class SoulBonePanel_Generate extends UIScript {
     initButtons() {
         //按钮添加点击
         //按钮添加点击
-        this.mUpProbabilityButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mUpProbabilityButton");
-        });
-        this.mUpProbabilityButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mStrengthenButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mStrengthenButton");
-        });
-        this.mStrengthenButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
-        this.initLanguage(this.mTitleTextBlock);
-        this.initLanguage(this.mNameTextBlock);
-        this.initLanguage(this.mHpTextBlock);
-        this.initLanguage(this.mHpTipsTextBlock);
-        this.initLanguage(this.mHpedTextBlock);
-        this.initLanguage(this.mAtkTextBlock);
-        this.initLanguage(this.mAtkTipsTextBlock);
-        this.initLanguage(this.mAtkedTextBlock);
-        this.initLanguage(this.mHasMaxLvTextBlock);
-        this.initLanguage(this.mNeedTitleTextBlock);
-        this.initLanguage(this.mNeedLvCountTextBlock);
-        this.initLanguage(this.mNeedDiamondTipsTextBlock);
-        this.initLanguage(this.mNeedDiamondCountTextBlock);
-        this.initLanguage(this.mNeedCoinTextBlock);
-        this.initLanguage(this.mNeedCoinCountTextBlock);
-        this.initLanguage(this.mProbabilityTextBlock);
-        this.initLanguage(this.mUpProbabilityTextBlock);
-        this.initLanguage(this.mStrengthenTextBlock);
-        this.initLanguage(this.mCoinCountTextBlock);
-        this.initLanguage(this.mDiamondCountTextBlock);
-        this.initLanguage(this.mArkCountTextBlock);
-        this.initLanguage(this.mTotalRarityTextBlock);
+        this.initLanguage(this.mTextBlock);
+        this.initLanguage(this.mTextBlock_1);
         //文本多语言
     }
     /*初始化多语言*/
@@ -22572,35 +26180,35 @@ let SoulBonePanel_Generate = class SoulBonePanel_Generate extends UIScript {
         mw.UIService.hideUI(this);
     }
 };
-SoulBonePanel_Generate = __decorate([
-    UIBind('UI/module/SoulBoneModule/SoulBonePanel.ui')
-], SoulBonePanel_Generate);
-var SoulBonePanel_Generate$1 = SoulBonePanel_Generate;
+WorldTips_2_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips_2.ui')
+], WorldTips_2_Generate);
+var WorldTips_2_Generate$1 = WorldTips_2_Generate;
 
-var foreign154 = /*#__PURE__*/Object.freeze({
+var foreign110 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: SoulBonePanel_Generate$1
+    default: WorldTips_2_Generate$1
 });
 
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/SoulBoneModule/StarItem.ui
- * TIME: 2024.10.19-11.22.58
+ * UI: UI/common/WorldTips/WorldTips_3.ui
+ * TIME: 2024.10.24-19.45.27
  */
-let StarItem_Generate = class StarItem_Generate extends UIScript {
-    get mBgImage() {
-        if (!this.mBgImage_Internal && this.uiWidgetBase) {
-            this.mBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mBgImage');
+let WorldTips_3_Generate = class WorldTips_3_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        return this.mBgImage_Internal;
+        return this.mTextBlock_Internal;
     }
-    get mFgImage() {
-        if (!this.mFgImage_Internal && this.uiWidgetBase) {
-            this.mFgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mFgImage');
+    get mTextBlock_1() {
+        if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock_1');
         }
-        return this.mFgImage_Internal;
+        return this.mTextBlock_1_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -22613,6 +26221,8 @@ let StarItem_Generate = class StarItem_Generate extends UIScript {
         //按钮添加点击
         //按钮多语言
         //文本多语言
+        this.initLanguage(this.mTextBlock);
+        this.initLanguage(this.mTextBlock_1);
         //文本多语言
     }
     /*初始化多语言*/
@@ -22633,71 +26243,29 @@ let StarItem_Generate = class StarItem_Generate extends UIScript {
         mw.UIService.hideUI(this);
     }
 };
-StarItem_Generate = __decorate([
-    UIBind('UI/module/SoulBoneModule/StarItem.ui')
-], StarItem_Generate);
-var StarItem_Generate$1 = StarItem_Generate;
+WorldTips_3_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips_3.ui')
+], WorldTips_3_Generate);
+var WorldTips_3_Generate$1 = WorldTips_3_Generate;
 
-var foreign155 = /*#__PURE__*/Object.freeze({
+var foreign111 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: StarItem_Generate$1
+    default: WorldTips_3_Generate$1
 });
 
 /**
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/module/SoulBoneModule/UpProbabilityPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * UI: UI/common/WorldTips/WorldTips_4.ui
+ * TIME: 2024.10.24-19.45.27
  */
-let UpProbabilityPanel_Generate = class UpProbabilityPanel_Generate extends UIScript {
-    get mCloseButton() {
-        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
-            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mCloseButton');
+let WorldTips_4_Generate = class WorldTips_4_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        return this.mCloseButton_Internal;
-    }
-    get mContentTextBlock_0() {
-        if (!this.mContentTextBlock_0_Internal && this.uiWidgetBase) {
-            this.mContentTextBlock_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_0');
-        }
-        return this.mContentTextBlock_0_Internal;
-    }
-    get mContentTextBlock_1() {
-        if (!this.mContentTextBlock_1_Internal && this.uiWidgetBase) {
-            this.mContentTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_1');
-        }
-        return this.mContentTextBlock_1_Internal;
-    }
-    get mContentTextBlock_2() {
-        if (!this.mContentTextBlock_2_Internal && this.uiWidgetBase) {
-            this.mContentTextBlock_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_2');
-        }
-        return this.mContentTextBlock_2_Internal;
-    }
-    get mDiamondButton() {
-        if (!this.mDiamondButton_Internal && this.uiWidgetBase) {
-            this.mDiamondButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton');
-        }
-        return this.mDiamondButton_Internal;
-    }
-    get mDiamondTextBlock() {
-        if (!this.mDiamondTextBlock_Internal && this.uiWidgetBase) {
-            this.mDiamondTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mDiamondButton/mDiamondTextBlock');
-        }
-        return this.mDiamondTextBlock_Internal;
-    }
-    get mArkButton() {
-        if (!this.mArkButton_Internal && this.uiWidgetBase) {
-            this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton');
-        }
-        return this.mArkButton_Internal;
-    }
-    get mArkTextBlock() {
-        if (!this.mArkTextBlock_Internal && this.uiWidgetBase) {
-            this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mArkButton/mArkTextBlock');
-        }
-        return this.mArkTextBlock_Internal;
+        return this.mTextBlock_Internal;
     }
     onAwake() {
         //设置能否每帧触发onUpdate
@@ -22708,25 +26276,9 @@ let UpProbabilityPanel_Generate = class UpProbabilityPanel_Generate extends UISc
     initButtons() {
         //按钮添加点击
         //按钮添加点击
-        this.mCloseButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        });
-        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mDiamondButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mDiamondButton");
-        });
-        this.mDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mArkButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mArkButton");
-        });
-        this.mArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         //按钮多语言
         //文本多语言
-        this.initLanguage(this.mContentTextBlock_0);
-        this.initLanguage(this.mContentTextBlock_1);
-        this.initLanguage(this.mContentTextBlock_2);
-        this.initLanguage(this.mDiamondTextBlock);
-        this.initLanguage(this.mArkTextBlock);
+        this.initLanguage(this.mTextBlock);
         //文本多语言
     }
     /*初始化多语言*/
@@ -22747,587 +26299,277 @@ let UpProbabilityPanel_Generate = class UpProbabilityPanel_Generate extends UISc
         mw.UIService.hideUI(this);
     }
 };
-UpProbabilityPanel_Generate = __decorate([
-    UIBind('UI/module/SoulBoneModule/UpProbabilityPanel.ui')
-], UpProbabilityPanel_Generate);
-var UpProbabilityPanel_Generate$1 = UpProbabilityPanel_Generate;
+WorldTips_4_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips_4.ui')
+], WorldTips_4_Generate);
+var WorldTips_4_Generate$1 = WorldTips_4_Generate;
 
-var foreign156 = /*#__PURE__*/Object.freeze({
+var foreign112 = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    default: UpProbabilityPanel_Generate$1
+    default: WorldTips_4_Generate$1
 });
 
-class StarItem extends StarItem_Generate$1 {
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-    }
-    setStar(isStar) {
-        this.mFgImage.visibility = isStar ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed;
-    }
-}
-class PartItem extends PartItem_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.soulBonePanel = null;
-        this.soulBoneData = null;
-    }
-    get getSoulBonePanel() {
-        if (!this.soulBonePanel) {
-            this.soulBonePanel = mw.UIService.getUI(SoulBonePanel);
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/common/WorldTips/WorldTips_5.ui
+ * TIME: 2024.10.24-19.45.27
+ */
+let WorldTips_5_Generate = class WorldTips_5_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        return this.soulBonePanel;
+        return this.mTextBlock_Internal;
     }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.initUI();
-        this.bindButton();
-    }
-    initUI() {
-        Utils.setWidgetVisibility(this.mFgImage, mw.SlateVisibility.Collapsed);
-    }
-    bindButton() {
-        this.mClickButton.onClicked.add(this.addClickButton.bind(this));
-    }
-    addClickButton() {
-        this.getSoulBonePanel.selectPart(this.soulBoneData.id);
-    }
-    setData(soulBoneData) {
-        this.soulBoneData = soulBoneData;
-        this.setIcon();
-        this.setName();
-    }
-    setIcon() {
-        let iconStr = this.soulBoneData.icon.split(`_`);
-        if (iconStr[0] == `icon`) {
-            this.mIconImage.imageGuid = iconStr[1];
+    get mTextBlock_1() {
+        if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock_1');
         }
-        else if (iconStr[0] == `mode`) {
-            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
+        return this.mTextBlock_1_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTextBlock);
+        this.initLanguage(this.mTextBlock_1);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
         }
     }
-    setName() {
-        this.mNameTextBlock.text = this.soulBoneData.name;
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
     }
-    setSelect(isSelect) {
-        Utils.setWidgetVisibility(this.mFgImage, isSelect ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
     }
-}
-class SoulBonePanel extends SoulBonePanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.soulBoneModuleC = null;
-        this.hudPanel = null;
-        this.partItems = [];
-        this.currentSelectPartId = -1;
-        this.currentSoulBoneData = null;
-        this.soulBoneLv = 0;
-        this.starItems = [];
-    }
-    get getSoulBoneModuleC() {
-        if (!this.soulBoneModuleC) {
-            this.soulBoneModuleC = ModuleService.getModule(SoulBoneModuleC);
+};
+WorldTips_5_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips_5.ui')
+], WorldTips_5_Generate);
+var WorldTips_5_Generate$1 = WorldTips_5_Generate;
+
+var foreign113 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: WorldTips_5_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/common/WorldTips/WorldTips_6.ui
+ * TIME: 2024.10.24-19.45.27
+ */
+let WorldTips_6_Generate = class WorldTips_6_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        return this.soulBoneModuleC;
+        return this.mTextBlock_Internal;
     }
-    get getHudPanel() {
-        if (!this.hudPanel) {
-            this.hudPanel = mw.UIService.getUI(HUDPanel);
-        }
-        return this.hudPanel;
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
     }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.initUI();
-        this.bindButton();
-        this.initTextBlock();
-        this.initIconImage();
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTextBlock);
+        //文本多语言
     }
-    initIconImage() {
-        this.mIconCoinImage.imageGuid = GlobalData.coinIcon;
-        this.mIconDiamondImage.imageGuid = GlobalData.diamondIcon;
-        this.mIconArkImage.imageGuid = GlobalData.arkIcon;
-    }
-    initUI() {
-        soulBoneMap.forEach((value, key) => {
-            let partItem = mw.UIService.create(PartItem);
-            partItem.setData(value);
-            this.partItems.push(partItem);
-            this.mPartListCanvas.addChild(partItem.uiObject);
-        });
-        this.selectPart(0);
-    }
-    initTextBlock() {
-        this.mTitleTextBlock.text = GameConfig.Language.Text_StrengthenSoulBones.Value;
-        let afterStrengthening = GameConfig.Language.Text_AfterStrengthening.Value;
-        this.mHpTipsTextBlock.text = afterStrengthening;
-        this.mAtkTipsTextBlock.text = afterStrengthening;
-        this.mNeedTitleTextBlock.text = GameConfig.Language.Text_StrengtheningConditions.Value;
-        this.mNeedDiamondTipsTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
-        this.mNeedCoinTextBlock.text = GameConfig.Language.Text_NeedToConsume.Value;
-        this.mUpProbabilityTextBlock.text = GameConfig.Language.Text_IncreaseProbability.Value;
-        this.mStrengthenTextBlock.text = GameConfig.Language.Text_StartStrengthening.Value;
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
-        this.mUpProbabilityButton.onClicked.add(this.addUpProbabilityButton.bind(this));
-        this.mStrengthenButton.onClicked.add(this.addStrengthenButton.bind(this));
-    }
-    addCloseButton() {
-        this.hideTween();
-    }
-    updateCoinTextBlock(count) {
-        this.mCoinCountTextBlock.text = `${Utils.integerUnitConversionStr(count)}`;
-    }
-    updateArkTextBlock(arkCount) {
-        this.mArkCountTextBlock.text = `${arkCount}`;
-    }
-    updateDiamondTextBlock(count) {
-        this.mDiamondCountTextBlock.text = `${Utils.integerUnitConversionStr(count)}`;
-    }
-    selectPart(partId) {
-        if (this.currentSelectPartId >= 0)
-            this.partItems[this.currentSelectPartId].setSelect(false);
-        this.currentSelectPartId = partId;
-        this.currentSoulBoneData = soulBoneMap.get(partId);
-        this.partItems[partId].setSelect(true);
-        this.refreshContentUI();
-    }
-    refreshContentUI() {
-        this.soulBoneLv = this.getSoulBoneModuleC.getSoulBoneLv(this.currentSelectPartId);
-        this.setHeadInfo();
-        this.setPropertyInfo();
-    }
-    setHeadInfo() {
-        let iconStr = soulBoneMap.get(this.currentSelectPartId).icon.split(`_`);
-        if (iconStr[0] == `icon`) {
-            this.mIconImage.imageGuid = iconStr[1];
-        }
-        else if (iconStr[0] == `mode`) {
-            Utils.setImageByAssetIconData(this.mIconImage, iconStr[1]);
-        }
-        this.mNameTextBlock.text = StringUtil.format(GameConfig.Language.Text_StarRating.Value, this.soulBoneLv);
-        this.setStars();
-    }
-    setStars() {
-        if (!this.starItems || this.starItems.length == 0) {
-            this.starItems = [];
-            for (let i = 0; i < maxStarLv; ++i) {
-                let starItem = mw.UIService.create(StarItem);
-                this.starItems.push(starItem);
-                this.mStarCanvas.addChild(starItem.uiObject);
-            }
-        }
-        for (let i = 0; i < this.soulBoneLv; ++i) {
-            this.starItems[i].setStar(true);
-        }
-        for (let i = this.soulBoneLv; i < maxStarLv; ++i) {
-            this.starItems[i].setStar(false);
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
         }
     }
-    setPropertyInfo() {
-        this.setPropertyArrowVisibility();
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
     }
-    setPropertyArrowVisibility() {
-        if (this.soulBoneLv == maxStarLv) {
-            this.mHasMaxLvTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mHpArrowImage.visibility = mw.SlateVisibility.Collapsed;
-            this.mAtkArrowImage.visibility = mw.SlateVisibility.Collapsed;
-            this.mNeedInfoCanvas.visibility = mw.SlateVisibility.Collapsed;
-            this.mStrengthenCanvas.visibility = mw.SlateVisibility.Collapsed;
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+WorldTips_6_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips_6.ui')
+], WorldTips_6_Generate);
+var WorldTips_6_Generate$1 = WorldTips_6_Generate;
+
+var foreign114 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: WorldTips_6_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/common/WorldTips/WorldTips_7.ui
+ * TIME: 2024.10.24-19.45.27
+ */
+let WorldTips_7_Generate = class WorldTips_7_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        else {
-            this.mHasMaxLvTextBlock.visibility = mw.SlateVisibility.Collapsed;
-            this.mHpArrowImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mAtkArrowImage.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mNeedInfoCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mStrengthenCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.setHpPropertyInfo();
-            this.setAtkPropertyInfo();
-            this.setNeedInfo();
-            this.setStrengthenButtonState();
+        return this.mTextBlock_Internal;
+    }
+    get mTextBlock_1() {
+        if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock_1');
         }
+        return this.mTextBlock_1_Internal;
     }
-    setHpPropertyInfo() {
-        let currentHpMultiple = 1 + (this.soulBoneLv * upStarOffsetValue);
-        let nextHpMultiple = 1 + ((this.soulBoneLv + 1) * upStarOffsetValue);
-        this.mHpTextBlock.text = StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes.Value, currentHpMultiple);
-        this.mHpedTextBlock.text = StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes.Value, nextHpMultiple);
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
     }
-    setAtkPropertyInfo() {
-        let currentAtkMultiple = 1 + (this.soulBoneLv * upStarOffsetValue);
-        let nextAtkMultiple = 1 + ((this.soulBoneLv + 1) * upStarOffsetValue);
-        this.mAtkTextBlock.text = StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes.Value, currentAtkMultiple);
-        this.mAtkedTextBlock.text = StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes.Value, nextAtkMultiple);
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTextBlock);
+        this.initLanguage(this.mTextBlock_1);
+        //文本多语言
     }
-    setNeedInfo() {
-        this.setNeedLv();
-        this.setNeedDiamondCost();
-        this.setNeedCoinCost();
-    }
-    setNeedLv() {
-        let limitLv = this.currentSoulBoneData.limitLv;
-        this.mNeedLvCountTextBlock.text = `${StringUtil.format(GameConfig.Language.Text_NeedToReachLevel.Value, limitLv)}(${limitLv}/${this.getSoulBoneModuleC.getLevel})`;
-    }
-    setNeedDiamondCost() {
-        let diamond = this.currentSoulBoneData.diamonds[this.soulBoneLv];
-        this.mNeedDiamondCountTextBlock.text = `${diamond}/${this.getSoulBoneModuleC.getDiamond}`;
-    }
-    setNeedCoinCost() {
-        let coin = this.currentSoulBoneData.coins[this.soulBoneLv];
-        this.mNeedCoinCountTextBlock.text = `${coin}/${this.getSoulBoneModuleC.getCoin}`;
-    }
-    setStrengthenButtonState() {
-        this.mProbabilityTextBlock.text = `${GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess}:${this.getSoulBoneModuleC.getProbability}%`;
-    }
-    addUpProbabilityButton() {
-        this.getSoulBoneModuleC.upProbability(() => {
-            this.setStrengthenButtonState();
-        });
-    }
-    addStrengthenButton() {
-        if (this.currentSoulBoneData.limitLv > this.getSoulBoneModuleC.getLevel) {
-            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_NeedToReachLevel.Value, this.currentSoulBoneData.limitLv));
-            return;
-        }
-        let costCoin = this.currentSoulBoneData.coins[this.soulBoneLv];
-        if (costCoin > this.getSoulBoneModuleC.getCoin) {
-            Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
-            return;
-        }
-        let costDiamond = this.currentSoulBoneData.diamonds[this.soulBoneLv];
-        if (this.currentSoulBoneData.diamonds[this.soulBoneLv] > this.getSoulBoneModuleC.getDiamond) {
-            Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
-            return;
-        }
-        this.getSoulBoneModuleC.strengthen(() => {
-            this.refreshContentUI();
-        }, this.currentSelectPartId, costCoin, costDiamond);
-    }
-    onShow(...params) {
-        Utils.openUITween(this.rootCanvas, () => {
-            this.getHudPanel.hide();
-        }, null);
-    }
-    hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, () => {
-            this.hide();
-            this.getHudPanel.show();
-        });
-    }
-}
-class UpProbabilityPanel extends UpProbabilityPanel_Generate$1 {
-    constructor() {
-        super(...arguments);
-        this.isCanClickArkButton = true;
-        this.arkCallBack = null;
-        this.diamondCallBack = null;
-        this.closeCallBack = null;
-    }
-    onStart() {
-        this.initUI();
-        this.bindButton();
-    }
-    initUI() {
-        this.mContentTextBlock_2.text = GameConfig.Language.Text_Or.Value;
-        this.mDiamondTextBlock.text = GameConfig.Language.Text_UsingDiamonds.Value;
-        this.mArkTextBlock.text = GameConfig.Language.Text_UseTeamCoins.Value;
-    }
-    bindButton() {
-        this.mCloseButton.onClicked.add(this.addClickButton.bind(this));
-        this.mArkButton.onClicked.add(this.addArkButton.bind(this));
-        this.mDiamondButton.onClicked.add(this.addDiamondButton.bind(this));
-    }
-    addClickButton() {
-        this.hide();
-        if (this.closeCallBack)
-            this.closeCallBack();
-    }
-    addArkButton() {
-        if (!this.isCanClickArkButton)
-            return;
-        this.isCanClickArkButton = false;
-        TimeUtil.delaySecond(3).then(() => { this.isCanClickArkButton = true; });
-        if (this.arkCallBack)
-            this.arkCallBack();
-    }
-    addDiamondButton() {
-        if (this.diamondCallBack)
-            this.diamondCallBack();
-    }
-    showPanel(arkCallBack, diamondCallBack, closeCallBack, diamondProbility, arkProbility) {
-        this.isCanClickArkButton = true;
-        this.arkCallBack = arkCallBack;
-        this.diamondCallBack = diamondCallBack;
-        this.closeCallBack = closeCallBack;
-        this.mContentTextBlock_0.text = StringUtil.format(GameConfig.Language.Text_UpProbabiliotyConetntTextBlock_0.Value, costDiamondUpProbability, diamondProbility);
-        this.mContentTextBlock_1.text = StringUtil.format(GameConfig.Language.Text_UpProbabiliotyConetntTextBlock_1.Value, costArkUpProbability, arkProbility);
-        this.show();
-    }
-}
-class SoulBone extends Subdata {
-    constructor() {
-        super(...arguments);
-        this.soulBoneLvs = {};
-        this.probability = 50;
-    }
-    setSoulBoneLv(partId, lv) {
-        if (MapEx.has(this.soulBoneLvs, partId)) {
-            let oldLv = MapEx.get(this.soulBoneLvs, partId);
-            MapEx.set(this.soulBoneLvs, partId, Math.round(oldLv + lv));
-        }
-        else {
-            MapEx.set(this.soulBoneLvs, partId, Math.round(lv));
-        }
-        this.save(true);
-    }
-    getSoulBoneLv(partId) {
-        if (MapEx.has(this.soulBoneLvs, partId)) {
-            return MapEx.get(this.soulBoneLvs, partId);
-        }
-        else {
-            return 0;
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
         }
     }
-    setProbability(probability) {
-        this.probability = probability;
-        this.save(true);
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
     }
-}
-__decorate([
-    Decorator.persistence()
-], SoulBone.prototype, "soulBoneLvs", void 0);
-__decorate([
-    Decorator.persistence()
-], SoulBone.prototype, "probability", void 0);
-const soulBoneMap = new Map();
-soulBoneMap.set(0, { id: 0, name: "", icon: "450608", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(1, { id: 0, name: "", icon: "450611", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(2, { id: 0, name: "", icon: "450595", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(3, { id: 0, name: "", icon: "450603", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(4, { id: 0, name: "", icon: "450597", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(5, { id: 0, name: "", icon: "450610", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-soulBoneMap.set(6, { id: 0, name: "", icon: "450602", limitLv: 1, coins: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], diamonds: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1] });
-const maxStarLv = 10;
-const upStarOffsetValue = 0.05;
-const costDiamondUpProbability = 100;
-const costArkUpProbability = 100;
-const upProbabilityByArkCommodityId = "";
-class SoulBoneModuleC extends ModuleC {
-    constructor() {
-        super(...arguments);
-        this.upProbabilityPanel = null;
-        this.soulBonePanel = null;
-        this.hudModuleC = null;
-        this.playerModuleC = null;
-        this.adTipsPanel = null;
-        this.soulBoneLvs = {};
-        this.probability = 0;
-        this.upProbabilitySuccessCallBack = null;
-        this.strengthenSuccessCallBack = null;
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
     }
-    get getUpProbabilityPanel() {
-        if (!this.upProbabilityPanel) {
-            this.upProbabilityPanel = mw.UIService.getUI(UpProbabilityPanel);
+};
+WorldTips_7_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips_7.ui')
+], WorldTips_7_Generate);
+var WorldTips_7_Generate$1 = WorldTips_7_Generate;
+
+var foreign115 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: WorldTips_7_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/common/WorldTips/WorldTips.ui
+ * TIME: 2024.10.24-19.45.27
+ */
+let WorldTips_Generate = class WorldTips_Generate extends UIScript {
+    get mTextBlock() {
+        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
+            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
         }
-        return this.upProbabilityPanel;
+        return this.mTextBlock_Internal;
     }
-    get getSoulBonePanel() {
-        if (!this.soulBonePanel) {
-            this.soulBonePanel = mw.UIService.getUI(SoulBonePanel);
+    get mTextBlock_1() {
+        if (!this.mTextBlock_1_Internal && this.uiWidgetBase) {
+            this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock_1');
         }
-        return this.soulBonePanel;
+        return this.mTextBlock_1_Internal;
     }
-    get getHudModuleC() {
-        if (!this.hudModuleC) {
-            this.hudModuleC = ModuleService.getModule(HUDModuleC);
-        }
-        return this.hudModuleC;
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
     }
-    get getPlayerModuleC() {
-        if (!this.playerModuleC) {
-            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
-        }
-        return this.playerModuleC;
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTextBlock);
+        this.initLanguage(this.mTextBlock_1);
+        //文本多语言
     }
-    get getAdTipsPanel() {
-        if (!this.adTipsPanel) {
-            this.adTipsPanel = mw.UIService.create(AdTipsPanel);
-        }
-        return this.adTipsPanel;
-    }
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.bindAction();
-    }
-    bindAction() {
-        this.getHudModuleC.onOpenSoulBoneAction.add(this.onOpenSoulBonePanel.bind(this));
-        mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
-        Event.addLocalListener(`UpdateDiamondTextBlock`, this.addUpdateDiamondTextBlock.bind(this));
-        Event.addLocalListener(`UpdateCoinTextBlock`, this.addUpdateCoinTextBlock.bind(this));
-    }
-    addArkUpdate(amount) {
-        //刷新逻辑，amount为当前代币数量
-        console.error(`ArkModuleC addArkUpdate amount: ${amount}`);
-        this.getSoulBonePanel.updateArkTextBlock(amount);
-    }
-    addUpdateDiamondTextBlock(count) {
-        this.getSoulBonePanel.updateDiamondTextBlock(count);
-    }
-    addUpdateCoinTextBlock(count) {
-        this.getSoulBonePanel.updateCoinTextBlock(count);
-    }
-    onOpenSoulBonePanel() {
-        this.getSoulBonePanel.show();
-        mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
-        Event.dispatchToLocal(`SyncDiamondCount`);
-        Event.dispatchToLocal(`SyncCoinCount`);
-    }
-    onEnterScene(sceneType) {
-        this.initSoulBoneData();
-    }
-    initSoulBoneData() {
-        this.soulBoneLvs = this.data.soulBoneLvs;
-        this.probability = this.data.probability;
-        if (this.probability < 50)
-            this.setProbability(50);
-    }
-    getSoulBoneLv(partId) {
-        if (MapEx.has(this.soulBoneLvs, partId)) {
-            return MapEx.get(this.soulBoneLvs, partId);
-        }
-        else {
-            return 0;
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
         }
     }
-    setSoulBoneLv(partId, lv) {
-        if (MapEx.has(this.soulBoneLvs, partId)) {
-            let oldLv = MapEx.get(this.soulBoneLvs, partId);
-            MapEx.set(this.soulBoneLvs, partId, Math.round(oldLv + lv));
-        }
-        else {
-            MapEx.set(this.soulBoneLvs, partId, Math.round(lv));
-        }
-        this.server.net_setSoulBoneLv(partId, lv);
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
     }
-    get getTotalUpStarOffsetValue() {
-        if (!this.soulBoneLvs || MapEx.count(this.soulBoneLvs) == 0)
-            return 0;
-        let totalUpStarOffsetValue = 0;
-        MapEx.forEach(this.soulBoneLvs, (key, value) => {
-            totalUpStarOffsetValue += (value * upStarOffsetValue);
-        });
-        return totalUpStarOffsetValue;
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
     }
-    get getLevel() {
-        return this.getPlayerModuleC.getLv;
-    }
-    get getDiamond() {
-        return this.getPlayerModuleC.getDiamond;
-    }
-    setDiamond(diamond) {
-        this.getPlayerModuleC.saveDiamond(diamond);
-    }
-    get getCoin() {
-        return this.getPlayerModuleC.getCoin();
-    }
-    setCoin(coin) {
-        this.getPlayerModuleC.saveCoin(coin);
-    }
-    get getProbability() {
-        return Math.round(this.probability);
-    }
-    setProbability(probability) {
-        this.probability = probability;
-        this.server.net_setProbability(probability);
-    }
-    upProbability(callBack) {
-        if (this.probability >= 100) {
-            Notice.showDownNotice(`${GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess.Value}${100}%`);
-            return;
-        }
-        this.upProbabilitySuccessCallBack = callBack;
-        this.getUpProbabilityPanel.showPanel(() => {
-            mw.PurchaseService.placeOrder(upProbabilityByArkCommodityId, 1, (status, msg) => {
-                mw.PurchaseService.getArkBalance(); //刷新代币数量
-                if (status != 200)
-                    return;
-                if (this.upProbabilitySuccessCallBack)
-                    this.upProbabilitySuccessCallBack();
-            });
-        }, () => {
-            if (this.getDiamond >= costDiamondUpProbability) {
-                this.setDiamond(-costDiamondUpProbability);
-                this.setProbability(this.probability + 10);
-                if (this.upProbabilitySuccessCallBack)
-                    this.upProbabilitySuccessCallBack();
-            }
-            else {
-                Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
-                if (GlobalData.isOpenIAA) {
-                    this.getAdTipsPanel.showRewardAd(() => {
-                        Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
-                        this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                    }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
-                }
-                else {
-                    Notice.showDownNotice(`成功获得钻石+${GlobalData.addDiamondCount}`);
-                    this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                }
-            }
-        }, () => {
-        }, this.probability + 10, 100);
-    }
-    net_deliverGoods(commodityId, amount) {
-        if (commodityId == upProbabilityByArkCommodityId) {
-            this.setProbability(100);
-            if (this.upProbabilitySuccessCallBack)
-                this.upProbabilitySuccessCallBack();
-        }
-    }
-    strengthen(callBack, selectPartId, costCoin, costDiamond) {
-        this.strengthenSuccessCallBack = callBack;
-        this.setCoin(-costCoin);
-        this.setDiamond(-costDiamond);
-        this.setSoulBoneLv(selectPartId, 1);
-        if (this.strengthenSuccessCallBack)
-            this.strengthenSuccessCallBack();
-    }
-}
-class SoulBoneModuleS extends ModuleS {
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    onStart() {
-        this.bindAction();
-    }
-    bindAction() {
-        mw.PurchaseService.onOrderDelivered.add(this.addShipOrder.bind(this));
-    }
-    addShipOrder(playerId, orderId, commodityId, amount, confirmOrder) {
-        //根据playerId和commodityId来处理购买逻辑
-        this.getClient(playerId).net_deliverGoods(commodityId, amount);
-        confirmOrder(true); //调用这个方法表示确认收货成功
-    }
-    net_setProbability(probability) {
-        this.currentData.setProbability(probability);
-    }
-    net_setSoulBoneLv(partId, lv) {
-        this.currentData.setSoulBoneLv(partId, lv);
-    }
-}
-__decorate([
-    Decorator.noReply()
-], SoulBoneModuleS.prototype, "net_setProbability", null);
-__decorate([
-    Decorator.noReply()
-], SoulBoneModuleS.prototype, "net_setSoulBoneLv", null);
+};
+WorldTips_Generate = __decorate([
+    UIBind('UI/common/WorldTips/WorldTips.ui')
+], WorldTips_Generate);
+var WorldTips_Generate$1 = WorldTips_Generate;
+
+var foreign116 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: WorldTips_Generate$1
+});
 
 class WorldUI {
 }
 const worldUIs = new Map();
-worldUIs.set(1, { name: "机甲女", worldUIId: "0D9A6CAC", worldUIName: `领取限定皮肤`, npcId: "2BC98814", skinId: "163553", triggerId: "1B51B317", bagId: 20063, adsCount: 10, currentAdsCount: 0, animationIds: ["285502"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
+worldUIs.set(1, { name: "机甲女", worldUIId: "0D9A6CAC", worldUIName: `Text_ClaimLimitedSkin`, npcId: "2BC98814", skinId: "163553", triggerId: "1B51B317", bagId: 20063, adsCount: 10, currentAdsCount: 0, animationIds: ["285502"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 worldUIs.set(2, { name: "机甲男", worldUIId: "", worldUIName: ``, npcId: "117D39D8", skinId: "164428", triggerId: "1DF5F6A5", bagId: 20062, adsCount: 5, currentAdsCount: 0, animationIds: ["285416"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 worldUIs.set(3, { name: "小舞", worldUIId: "", worldUIName: ``, npcId: "210CBFFD", skinId: "163292", triggerId: "0113105D", bagId: 20061, adsCount: 5, currentAdsCount: 0, animationIds: ["284840"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 worldUIs.set(4, { name: "自动攻击男", worldUIId: "", worldUIName: ``, npcId: "21F595BD", skinId: "142399", triggerId: "0B40F8AC", bagId: 10046, adsCount: 2, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
-worldUIs.set(5, { name: "自动攻击女", worldUIId: "07D9DF79", worldUIName: `领取自动攻击`, npcId: "2F801FDC", skinId: "303702", triggerId: "3E7DEC27", bagId: 10047, adsCount: 5, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
+worldUIs.set(5, { name: "自动攻击女", worldUIId: "07D9DF79", worldUIName: `Text_ClaimAutomaticAttack`, npcId: "2F801FDC", skinId: "303702", triggerId: "3E7DEC27", bagId: 10047, adsCount: 5, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
+const needRefreshWorldUI = ["2284425C", "05994F71"];
+const needRefreshWorldUI_1 = ["307CC8EF"];
+const needRefreshWorldUI_2 = ["1E7CB2D0"];
+const needRefreshWorldUI_3 = ["2EAA4C1B"];
+const needRefreshWorldUI_4 = ["3B4347A9"];
+const needRefreshWorldUI_5 = ["06FBC7BE", "13F5AF43"];
+const needRefreshWorldUI_6 = ["030E4F84"];
+const needRefreshWorldUI_7 = ["394026C7"];
 class WorldUIModuleC extends ModuleC {
     constructor() {
         super(...arguments);
@@ -23421,15 +26663,71 @@ class WorldUIModuleC extends ModuleC {
                 mw.GameObject.asyncFindGameObjectById(value.worldUIId).then((worldUIGo) => {
                     let worldUI = worldUIGo;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(value.worldUIName);
+                    levelItem.updateLevelTextBlock(GameConfig.Language[`${value.worldUIName}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             }
         });
+        needRefreshWorldUI.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_1.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_1_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_2.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_2_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_3.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_3_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_4.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_4_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_5.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_5_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_6.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_6_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_7.forEach((value) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo) => {
+                let worldUI = worldUIGo;
+                let levelItem = mw.UIService.create(WorldTips_7_Generate$1);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
     }
     nextAds(value) {
         if (this.getBagModuleC.isHasBagId(value.bagId)) {
-            Notice.showDownNotice(`已获得，打开背包使用`);
+            Notice.showDownNotice(GameConfig.Language.Text_ObtainedOpenTheBackpackToUse.Value);
             return;
         }
         this.getAdTipsPanel.showRewardAd(() => {
@@ -23442,7 +26740,7 @@ class WorldUIModuleC extends ModuleC {
                     this.nextAds(value);
                 });
             }
-        }, `观看${value.adsCount - value.currentAdsCount}次广告\n免费获得`, `取消`, `领取`);
+        }, StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, value.adsCount - value.currentAdsCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_GetItForFree.Value);
     }
 }
 class WorldUIModuleS extends ModuleS {
@@ -23520,6 +26818,14 @@ let GameLauncher = class GameLauncher extends mw.Script {
             if (ele == null)
                 return "unknow_" + key;
             return ele.Value;
+        });
+        mw.UIScript.addBehavior("lan", (ui) => {
+            let key = ui.text;
+            if (key) {
+                let lan = GameConfig.Language.getElement(key);
+                if (lan)
+                    ui.text = (lan.Value);
+            }
         });
     }
     /**
@@ -24299,7 +27605,7 @@ var foreign100 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -24399,7 +27705,7 @@ var foreign148 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -24519,7 +27825,7 @@ var foreign78 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -26001,7 +29307,7 @@ let NewScript = class NewScript extends Script {
                 if (char.gameObjectId != Player.localPlayer.character.gameObjectId)
                     return;
                 if (this.getBagModuleC.isHasBagId(this.bagId)) {
-                    Notice.showDownNotice(`已获得，打开背包使用`);
+                    Notice.showDownNotice(GameConfig.Language.Text_ObtainedOpenTheBackpackToUse.Value);
                     return;
                 }
                 this.nextAds();
@@ -26019,7 +29325,7 @@ let NewScript = class NewScript extends Script {
                     this.nextAds();
                 });
             }
-        }, `观看${this.adsCount - this.curAdsCount}次广告\n免费获得`, `取消`, `领取`);
+        }, StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, this.adsCount - this.curAdsCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
     }
     /**
      * 周期函数 每帧执行
@@ -27073,461 +30379,8 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * AUTO GENERATE BY UI EDITOR.
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips_1.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_1_Generate = class WorldTips_1_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_1_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips_1.ui')
-], WorldTips_1_Generate);
-var WorldTips_1_Generate$1 = WorldTips_1_Generate;
-
-var foreign109 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_1_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips_2.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_2_Generate = class WorldTips_2_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TextBlock_1"));
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_2_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips_2.ui')
-], WorldTips_2_Generate);
-var WorldTips_2_Generate$1 = WorldTips_2_Generate;
-
-var foreign110 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_2_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips_3.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_3_Generate = class WorldTips_3_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TextBlock_1"));
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_3_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips_3.ui')
-], WorldTips_3_Generate);
-var WorldTips_3_Generate$1 = WorldTips_3_Generate;
-
-var foreign111 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_3_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips_4.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_4_Generate = class WorldTips_4_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_4_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips_4.ui')
-], WorldTips_4_Generate);
-var WorldTips_4_Generate$1 = WorldTips_4_Generate;
-
-var foreign112 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_4_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips_5.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_5_Generate = class WorldTips_5_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TextBlock_1"));
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_5_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips_5.ui')
-], WorldTips_5_Generate);
-var WorldTips_5_Generate$1 = WorldTips_5_Generate;
-
-var foreign113 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_5_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips_6.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_6_Generate = class WorldTips_6_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_6_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips_6.ui')
-], WorldTips_6_Generate);
-var WorldTips_6_Generate$1 = WorldTips_6_Generate;
-
-var foreign114 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_6_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips_7.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_7_Generate = class WorldTips_7_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TextBlock_1"));
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_7_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips_7.ui')
-], WorldTips_7_Generate);
-var WorldTips_7_Generate$1 = WorldTips_7_Generate;
-
-var foreign115 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_7_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
- * UI: UI/common/WorldTips/WorldTips.ui
- * TIME: 2024.10.19-11.22.57
- */
-let WorldTips_Generate = class WorldTips_Generate extends UIScript {
-    get mTextBlock() {
-        if (!this.mTextBlock_Internal && this.uiWidgetBase) {
-            this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock');
-        }
-        return this.mTextBlock_Internal;
-    }
-    onAwake() {
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        this.layer = mw.UILayerBottom;
-        this.initButtons();
-    }
-    initButtons() {
-        //按钮添加点击
-        //按钮添加点击
-        //按钮多语言
-        //文本多语言
-        this.initLanguage(this.mTextBlock);
-        //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TextBlock_1"));
-    }
-    /*初始化多语言*/
-    initLanguage(ui) {
-        let call = mw.UIScript.getBehavior("lan");
-        if (call && ui) {
-            call(ui);
-        }
-    }
-    onShow(...params) { }
-    ;
-    /*显示panel*/
-    show(...param) {
-        mw.UIService.showUI(this, this.layer, ...param);
-    }
-    /*隐藏panel*/
-    hide() {
-        mw.UIService.hideUI(this);
-    }
-};
-WorldTips_Generate = __decorate([
-    UIBind('UI/common/WorldTips/WorldTips.ui')
-], WorldTips_Generate);
-var WorldTips_Generate$1 = WorldTips_Generate;
-
-var foreign116 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    default: WorldTips_Generate$1
-});
-
-/**
- * AUTO GENERATE BY UI EDITOR.
- * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
- * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -27646,7 +30499,7 @@ var foreign141 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -27737,7 +30590,7 @@ var foreign149 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -27788,6 +30641,12 @@ let TaskItem_Generate = class TaskItem_Generate extends UIScript {
         }
         return this.mFinishButton_Internal;
     }
+    get mFinishTextBlock() {
+        if (!this.mFinishTextBlock_Internal && this.uiWidgetBase) {
+            this.mFinishTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mFinishButton/mFinishTextBlock');
+        }
+        return this.mFinishTextBlock_Internal;
+    }
     get mUnfinishTextBlock() {
         if (!this.mUnfinishTextBlock_Internal && this.uiWidgetBase) {
             this.mUnfinishTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mUnfinishTextBlock');
@@ -27813,9 +30672,9 @@ let TaskItem_Generate = class TaskItem_Generate extends UIScript {
         this.initLanguage(this.mCoinTextBlock);
         this.initLanguage(this.mExpTextBlock);
         this.initLanguage(this.mDiamondTextBlock);
+        this.initLanguage(this.mFinishTextBlock);
         this.initLanguage(this.mUnfinishTextBlock);
         //文本多语言
-        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mFinishButton/TextBlock"));
     }
     /*初始化多语言*/
     initLanguage(ui) {
@@ -27850,7 +30709,7 @@ var foreign157 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -27905,7 +30764,7 @@ var foreign159 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -27980,7 +30839,7 @@ var foreign160 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -28064,7 +30923,7 @@ var foreign161 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -28157,6 +31016,7 @@ const MWModuleMap = {
      '99C4E5454A40C61FC427EDB862680EA4': foreign25,
      'D4C04F604802C1AE6095B19172F0E134': foreign26,
      'EC8FA87B49BED23F0082059847D749D1': foreign27,
+     '2D57527C41DF26F25B17C49C54FE3BAB': foreign28,
      '159AA1104B1A8006C1E3109EEA075240': foreign29,
      '0482D8294ED7C6B824EE8FB76F64DEA8': foreign30,
      '336F8CF342D195E83F025D88E0E67CF5': foreign31,
@@ -28209,6 +31069,7 @@ const MWModuleMap = {
      '6FF376094BAB027928ADA8A4F0FFBD5B': foreign78,
      'B0214F354FA856A04434CB862696C501': foreign79,
      '37558D484E7E3EEB7CF50F83FF516D01': foreign80,
+     'D19D3A504FC18CE740F53FB3707D4919': foreign81,
      '5F4167AC4B1A67501A0DD4A98DCCE793': foreign82,
      'C2A63B424C2C17C9DE3395B59BA9444C': foreign83,
      '4CA21C094DAD2346E120EFBEA3D7736C': foreign84,
@@ -28319,6 +31180,7 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign25 || {}, "JavaScripts/config/DressData"],
 [foreign26 || {}, "JavaScripts/config/DressProgress"],
 [foreign27 || {}, "JavaScripts/config/GameConfig"],
+[foreign28 || {}, "JavaScripts/config/Language"],
 [foreign29 || {}, "JavaScripts/config/MonsterInfo"],
 [foreign30 || {}, "JavaScripts/config/Music"],
 [foreign31 || {}, "JavaScripts/config/NPC"],
@@ -28371,6 +31233,7 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign78 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
 [foreign79 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
 [foreign80 || {}, "JavaScripts/module/SignInModule/SignInModule"],
+[foreign81 || {}, "JavaScripts/module/SoulBoneModule/SoulBoneModule"],
 [foreign82 || {}, "JavaScripts/module/TaskModule/TaskData"],
 [foreign83 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
 [foreign84 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],

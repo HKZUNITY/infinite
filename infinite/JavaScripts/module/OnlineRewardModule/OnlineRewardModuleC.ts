@@ -106,8 +106,8 @@ export class OnlineRewardModuleC extends ModuleC<OnlineRewardModuleS, OnlineRewa
     public getOnlineRewrad(index: number): void {
         this.setIsGetRewards(index);
         let rewardCount = GameConfig.OnlineRewards.getElement(index + 1).RewardCount;
-        Notice.showDownNotice("奖励金币：" + rewardCount[0]);
-        Notice.showDownNotice("奖励经验：" + rewardCount[1]);
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardCoins.Value, rewardCount[0]));
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardExperience.Value, rewardCount[1]));
         this.getPlayerModuleC.saveCoinAndExp(rewardCount[0], rewardCount[1]);
     }
 }

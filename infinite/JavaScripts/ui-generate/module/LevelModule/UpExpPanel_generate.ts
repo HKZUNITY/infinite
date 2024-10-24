@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/UpExpPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
  
 @UIBind('UI/module/LevelModule/UpExpPanel.ui')
@@ -22,12 +22,26 @@ export default class UpExpPanel_Generate extends UIScript {
 		}
 		return this.mCancleUpExpFlipBook_Internal
 	}
+	private mOnHookTextBlock_Internal: mw.TextBlock
+	public get mOnHookTextBlock(): mw.TextBlock {
+		if(!this.mOnHookTextBlock_Internal&&this.uiWidgetBase) {
+			this.mOnHookTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/mOnHookTextBlock') as mw.TextBlock
+		}
+		return this.mOnHookTextBlock_Internal
+	}
 	private mCancleUpExpButton_Internal: mw.Button
 	public get mCancleUpExpButton(): mw.Button {
 		if(!this.mCancleUpExpButton_Internal&&this.uiWidgetBase) {
 			this.mCancleUpExpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton') as mw.Button
 		}
 		return this.mCancleUpExpButton_Internal
+	}
+	private mCancelOnHookTextBlock_Internal: mw.TextBlock
+	public get mCancelOnHookTextBlock(): mw.TextBlock {
+		if(!this.mCancelOnHookTextBlock_Internal&&this.uiWidgetBase) {
+			this.mCancelOnHookTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton/mCancelOnHookTextBlock') as mw.TextBlock
+		}
+		return this.mCancelOnHookTextBlock_Internal
 	}
 
 
@@ -52,14 +66,14 @@ export default class UpExpPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
+		this.initLanguage(this.mOnHookTextBlock)
+		
+	
+		this.initLanguage(this.mCancelOnHookTextBlock)
+		
+	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/CancleUpExpCanvas/TextBlock_1") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mCancleUpExpCanvas/mCancleUpExpButton/TextBlock_2") as any);
-		
-	
 	}
 	
 	/*初始化多语言*/

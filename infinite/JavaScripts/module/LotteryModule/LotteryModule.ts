@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import GlobalData from "../../const/GlobalData";
 import { Utils } from "../../Tools/utils";
 import LotteryItem_Generate from "../../ui-generate/module/LotteryModule/LotteryItem_generate";
@@ -19,20 +20,21 @@ export enum RewardType {
 }
 
 export const lotteryDatas: Map<number, { isLimit: boolean, ratio: number[], icon: string, name: string, rewardType: RewardType, reward: number, pos: mw.Vector2, bgIcon: string }> = new Map<number, { isLimit: boolean, ratio: number[], icon: string, name: string, rewardType: RewardType, reward: number, pos: mw.Vector2, bgIcon: string }>();
-lotteryDatas.set(1, { isLimit: false, ratio: [1, 500], icon: "icon_404083", name: "空奖-哈哈", rewardType: RewardType.None, reward: 1, pos: new mw.Vector2(0, 0), bgIcon: "181426" });//181426 181425 181424 181423 181420
-lotteryDatas.set(2, { isLimit: false, ratio: [501, 739], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 1, pos: new mw.Vector2(230, 0), bgIcon: "181424" });
-lotteryDatas.set(3, { isLimit: false, ratio: [740, 749], icon: "icon_103221", name: "钻石", rewardType: RewardType.Diamond, reward: 108, pos: new mw.Vector2(460, 0), bgIcon: "181423" });
-lotteryDatas.set(4, { isLimit: false, ratio: [750, 750], icon: "icon_103217", name: "钻石", rewardType: RewardType.Diamond, reward: 1088, pos: new mw.Vector2(690, 0), bgIcon: "181420" });
-lotteryDatas.set(5, { isLimit: false, ratio: [751, 978], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1, pos: new mw.Vector2(690, 230), bgIcon: "181424" });
-lotteryDatas.set(6, { isLimit: false, ratio: [979, 988], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 108, pos: new mw.Vector2(690, 460), bgIcon: "181423" });
-lotteryDatas.set(7, { isLimit: false, ratio: [989, 989], icon: "icon_148883", name: "等级", rewardType: RewardType.Lv, reward: 1088, pos: new mw.Vector2(460, 460), bgIcon: "181420" });
-lotteryDatas.set(8, { isLimit: true, ratio: [990, 995], icon: "mode_141499", name: "神级魔王", rewardType: RewardType.Bag, reward: 20058, pos: new mw.Vector2(230, 460), bgIcon: "181420" });
-lotteryDatas.set(9, { isLimit: true, ratio: [996, 999], icon: "mode_142921", name: "四代火影", rewardType: RewardType.Bag, reward: 20059, pos: new mw.Vector2(0, 460), bgIcon: "181420" });
-lotteryDatas.set(10, { isLimit: true, ratio: [1000, 1000], icon: "mode_163289", name: "美杜莎女王", rewardType: RewardType.Bag, reward: 20060, pos: new mw.Vector2(0, 230), bgIcon: "181420" });
+lotteryDatas.set(1, { isLimit: false, ratio: [1, 500], icon: "icon_404083", name: `Text_EmptyPrizeHaha`, rewardType: RewardType.None, reward: 1, pos: new mw.Vector2(0, 0), bgIcon: "181426" });//181426 181425 181424 181423 181420
+lotteryDatas.set(2, { isLimit: false, ratio: [501, 739], icon: "icon_103221", name: `Text_Diamonds`, rewardType: RewardType.Diamond, reward: 1, pos: new mw.Vector2(230, 0), bgIcon: "181424" });
+lotteryDatas.set(3, { isLimit: false, ratio: [740, 749], icon: "icon_103221", name: `Text_Diamonds`, rewardType: RewardType.Diamond, reward: 108, pos: new mw.Vector2(460, 0), bgIcon: "181423" });
+lotteryDatas.set(4, { isLimit: false, ratio: [750, 750], icon: "icon_103217", name: `Text_Diamonds`, rewardType: RewardType.Diamond, reward: 1088, pos: new mw.Vector2(690, 0), bgIcon: "181420" });
+lotteryDatas.set(5, { isLimit: false, ratio: [751, 978], icon: "icon_148883", name: `Text_Grade`, rewardType: RewardType.Lv, reward: 1, pos: new mw.Vector2(690, 230), bgIcon: "181424" });
+lotteryDatas.set(6, { isLimit: false, ratio: [979, 988], icon: "icon_148883", name: `Text_Grade`, rewardType: RewardType.Lv, reward: 108, pos: new mw.Vector2(690, 460), bgIcon: "181423" });
+lotteryDatas.set(7, { isLimit: false, ratio: [989, 989], icon: "icon_148883", name: `Text_Grade`, rewardType: RewardType.Lv, reward: 1088, pos: new mw.Vector2(460, 460), bgIcon: "181420" });
+lotteryDatas.set(8, { isLimit: true, ratio: [990, 995], icon: "mode_141499", name: `Text_GodLevelDemonKing`, rewardType: RewardType.Bag, reward: 20058, pos: new mw.Vector2(230, 460), bgIcon: "181420" });
+lotteryDatas.set(9, { isLimit: true, ratio: [996, 999], icon: "mode_142921", name: `Text_TheFourthHokage`, rewardType: RewardType.Bag, reward: 20059, pos: new mw.Vector2(0, 460), bgIcon: "181420" });
+lotteryDatas.set(10, { isLimit: true, ratio: [1000, 1000], icon: "mode_163289", name: `Text_MedusaQueen`, rewardType: RewardType.Bag, reward: 20060, pos: new mw.Vector2(0, 230), bgIcon: "181420" });
 const oneCostCoin: number = 2888888;
 const oneCostArk: number = 2;
 const tenCostCoin: number = 28888888;
 const tenCostArk: number = 20;
+const hundredCostCoin: number = 8888888888;
 const hundredCostArk: number = 200;
 const oneCommodityId: string = "7I6uNtkFmg00001Nx";
 const tenCommodityId: string = "6tOZfQYVTV90001Ny";
@@ -52,8 +54,16 @@ export class LotteryItem extends LotteryItem_Generate {
     }
 
     private initUI(): void {
-        this.mHasTextBlock.text = `已拥有`;
+        this.mHasTextBlock.text = GameConfig.Language.Text_AlreadyOwned.Value;
         this.onOffUI(false);
+
+        if (GlobalData.languageId == 0) {
+            this.mRewardTextBlock.fontSize = 12;
+            this.mRatioTextBlock.fontSize = 13;
+        } else {
+            this.mRewardTextBlock.fontSize = 23;
+            this.mRatioTextBlock.fontSize = 15;
+        }
     }
 
     private key: number = 0;
@@ -65,7 +75,7 @@ export class LotteryItem extends LotteryItem_Generate {
     private updateUI(): void {
         let lotteryData = lotteryDatas.get(this.key);
         this.mBgImage.imageGuid = lotteryData.bgIcon;
-        this.mRewardTextBlock.text = `${lotteryData.name}+${(lotteryData.rewardType == RewardType.Bag) ? 1 : lotteryData.reward}`;
+        this.mRewardTextBlock.text = `${GameConfig.Language[`${lotteryData.name}`].Value}+${(lotteryData.rewardType == RewardType.Bag) ? 1 : lotteryData.reward}`;
         let iconStr = lotteryData.icon.split(`_`);
         if (iconStr[0] == `icon`) {
             this.mIconImage.imageGuid = iconStr[1];
@@ -77,7 +87,7 @@ export class LotteryItem extends LotteryItem_Generate {
         } else {
             this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
         }
-        this.mRatioTextBlock.text = `中奖概率\n${(((lotteryData.ratio[1] - lotteryData.ratio[0] + 1) / 1000) * 100).toFixed(1)}%`;
+        this.mRatioTextBlock.text = `${GameConfig.Language.Text_WinningProbability.Value}\n${(((lotteryData.ratio[1] - lotteryData.ratio[0] + 1) / 1000) * 100).toFixed(1)}%`;
     }
 
     public onOffUI(on: boolean): void {
@@ -104,21 +114,72 @@ export class LotteryPanel extends LotteryPanel_Generate {
     }
 
     private initUI(): void {
-        this.mTitleTextBlock.text = `金币抽奖`;
+        this.mTitleTextBlock.text = GameConfig.Language.Text_GoldCoinLottery.Value;
+
         this.mIconCoinImage.imageGuid = GlobalData.coinIcon;
         this.mIconArkImage.imageGuid = GlobalData.arkIcon;
-        this.mOneCoinTextBlock.text = `抽1次`;
-        this.mOneArkTextBlock.text = `抽1次`;
-        this.mTenCoinTextBlock.text = `抽10次`;
-        this.mTenArkTextBlock.text = `抽10次`;
-        this.mHundredArkTextBlock.text = `抽100次`;
-        this.mOneCoinTipsTextBlock.text = `消耗${oneCostCoin}金币`;
-        this.mOneArkTipsTextBlock.text = `消耗${oneCostArk}派队币`;
-        this.mTenCoinTipsTextBlock.text = `消耗${tenCostCoin}金币`;
-        this.mTenArkTipsTextBlock.text = `消耗${tenCostArk}派队币`;
-        this.mHundredArkTipsTextBlock.text = `消耗${hundredCostArk}派对币`;
+
+        this.mOneCoinTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 1);
+        this.mOneCoinTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeCoins.Value, oneCostCoin);
+
+        this.mOneArkTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 1);
+        this.mOneArkTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeDispatchCoins.Value, oneCostArk);
+
+        this.mTenCoinTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 10);
+        this.mTenCoinTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeCoins.Value, tenCostCoin);
+
+        this.mTenArkTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 10);
+        this.mTenArkTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeDispatchCoins.Value, tenCostArk);
+
+        this.mHundredCoinTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 100);
+        this.mHundredCoinTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeCoins.Value, hundredCostCoin);
+
+        this.mHundredArkTextBlock.text = StringUtil.format(GameConfig.Language.Text_DrawTimes.Value, 100);
+        this.mHundredArkTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeDispatchCoins.Value, hundredCostArk);
+
+        this.mOneAdsButton.text = GameConfig.Language.Text_FreeLotteryDraw.Value;
+
         this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
         this.initItem();
+
+        if (GlobalData.languageId == 0) {
+            this.mOneCoinTextBlock.fontSize = 20;
+            this.mOneCoinTipsTextBlock.fontSize = 10;
+
+            this.mOneArkTextBlock.fontSize = 20;
+            this.mOneArkTipsTextBlock.fontSize = 17;
+
+            this.mTenCoinTextBlock.fontSize = 20;
+            this.mTenCoinTipsTextBlock.fontSize = 10;
+
+            this.mTenArkTextBlock.fontSize = 20;
+            this.mTenArkTipsTextBlock.fontSize = 15;
+
+            this.mHundredCoinTextBlock.fontSize = 20;
+            this.mHundredCoinTipsTextBlock.fontSize = 12;
+
+            this.mHundredArkTextBlock.fontSize = 20;
+            this.mHundredArkTipsTextBlock.fontSize = 15;
+
+        } else {
+            this.mOneCoinTextBlock.fontSize = 30;
+            this.mOneCoinTipsTextBlock.fontSize = 18;
+
+            this.mOneArkTextBlock.fontSize = 30;
+            this.mOneArkTipsTextBlock.fontSize = 20;
+
+            this.mTenCoinTextBlock.fontSize = 30;
+            this.mTenCoinTipsTextBlock.fontSize = 15;
+
+            this.mTenArkTextBlock.fontSize = 30;
+            this.mTenArkTipsTextBlock.fontSize = 20;
+
+            this.mHundredCoinTextBlock.fontSize = 30;
+            this.mHundredCoinTipsTextBlock.fontSize = 14;
+
+            this.mHundredArkTextBlock.fontSize = 30;
+            this.mHundredArkTipsTextBlock.fontSize = 20;
+        }
     }
 
     private isCanContinueClick: boolean = true;
@@ -126,9 +187,14 @@ export class LotteryPanel extends LotteryPanel_Generate {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
         this.mOneCoinButton.onClicked.add(this.addOneCoinButton.bind(this));
         this.mOneArkButton.onClicked.add(this.addOneArkButton.bind(this));
+
         this.mTenCoinButton.onClicked.add(this.addTenCoinButton.bind(this));
         this.mTenArkButton.onClicked.add(this.addTenArkButton.bind(this));
+
+        this.mHundredCoinButton.onClicked.add(this.addHundredCoinButton.bind(this));
         this.mHundredArkButton.onClicked.add(this.addHundredArkButton.bind(this));
+
+        this.mOneAdsButton.onClose.add(this.addOneAdsButton.bind(this));
     }
 
     private addOneCoinButton(): void {
@@ -137,7 +203,7 @@ export class LotteryPanel extends LotteryPanel_Generate {
 
     private addOneArkButton(): void {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -148,12 +214,12 @@ export class LotteryPanel extends LotteryPanel_Generate {
     }
 
     private addTenCoinButton(): void {
-        this.getLotteryModuleC.tenCoinLottery();
+        this.getLotteryModuleC.tenCoinLottery(true);
     }
 
     private addTenArkButton(): void {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -163,9 +229,13 @@ export class LotteryPanel extends LotteryPanel_Generate {
         this.getLotteryModuleC.tenArkLottery(true);
     }
 
+    private addHundredCoinButton(): void {
+        this.getLotteryModuleC.tenCoinLottery(false);
+    }
+
     private addHundredArkButton(): void {
         if (!this.isCanContinueClick) {
-            Notice.showDownNotice(`3秒冷却`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 3));
             return;
         }
         this.isCanContinueClick = false;
@@ -173,6 +243,14 @@ export class LotteryPanel extends LotteryPanel_Generate {
             this.isCanContinueClick = true;
         });
         this.getLotteryModuleC.tenArkLottery(false);
+    }
+
+    private addOneAdsButton(isSuccess: boolean): void {
+        if (!isSuccess) {
+            Notice.showDownNotice(GameConfig.Language.Text_FailedPleaseTryAgain.Value);
+            return;
+        }
+        this.getLotteryModuleC.calculateOneLottery();
     }
 
     private addCloseButton(): void {
@@ -334,7 +412,7 @@ export class LotteryResultItem extends LotteryResultItem_Generate {
     }
 
     public setTextBlock(key: number): void {
-        this.mTextBlock.text = `${lotteryDatas.get(key).name} +${lotteryDatas.get(key).reward}`;
+        this.mTextBlock.text = `${GameConfig.Language[`${lotteryDatas.get(key).name}`].Value} +${lotteryDatas.get(key).reward}`;
     }
 }
 
@@ -342,6 +420,11 @@ export class LotteryResultPanel extends LotteryResultPanel_Generate {
     protected onStart(): void {
         this.layer = mw.UILayerMiddle;
         this.bindButton();
+        this.initTextBlock();
+    }
+
+    private initTextBlock(): void {
+        this.mTitleTextBlock.text = GameConfig.Language.Text_LotteryResults.Value;
     }
 
     private bindButton(): void {
@@ -390,7 +473,7 @@ export class LotteryResultPanel extends LotteryResultPanel_Generate {
 }
 
 const lotteryTriggerMap: Map<number, { triggers: string[], worldUIIds: string[], name: string }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string }>();
-lotteryTriggerMap.set(1, { triggers: ["1784616E"], worldUIIds: ["0D23C019"], name: `金币抽奖` });
+lotteryTriggerMap.set(1, { triggers: ["1784616E"], worldUIIds: ["0D23C019"], name: `Text_GoldCoinLottery` });
 export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
     private lotteryPanel: LotteryPanel = null;
     private get getLotteryPanel(): LotteryPanel {
@@ -474,7 +557,7 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
             this.getPlayerModuleC.saveCoin(-oneCostCoin);
             this.calculateOneLottery();
         } else {
-            Notice.showDownNotice(`金币不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
             if (mw.SystemUtil.isPIE) {
                 this.calculateOneLottery();
             } else {
@@ -495,17 +578,18 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         }
     }
 
-    public tenCoinLottery(): void {
+    public tenCoinLottery(isTen: boolean): void {
         let coin = this.getPlayerModuleC.getCoin();
-        if (coin >= tenCostCoin) {
-            this.getPlayerModuleC.saveCoin(-tenCostCoin);
-            this.calculateTenLottery(true);
+        let needCostCoin = isTen ? tenCostCoin : hundredCostCoin;
+        if (coin >= needCostCoin) {
+            this.getPlayerModuleC.saveCoin(-needCostCoin);
+            this.calculateTenLottery(isTen);
         } else {
-            Notice.showDownNotice(`金币不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
             if (mw.SystemUtil.isPIE) {
-                this.calculateTenLottery(true);
+                this.calculateTenLottery(isTen);
             } else {
-                mw.PurchaseService.placeOrder(tenCommodityId, 1, (status, msg) => {
+                mw.PurchaseService.placeOrder(isTen ? tenCommodityId : hundredCommodityId, 1, (status, msg) => {
                     mw.PurchaseService.getArkBalance();//刷新代币数量
                 });
             }
@@ -533,7 +617,7 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
         }
     }
 
-    private calculateOneLottery(): void {
+    public calculateOneLottery(): void {
         let calculateKey = this.calculateKey();
         while ((lotteryDatas.get(calculateKey).isLimit) && this.isHas(lotteryDatas.get(calculateKey).reward)) {
             calculateKey = this.calculateKey();
@@ -559,7 +643,7 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
             this.saveLottery(diamond, lv, bagIds);
             this.getLotteryResultPanel.showPanel([calculateKey], true);
             if (lotteryDatas.get(calculateKey).isLimit) this.getLotteryPanel.updateItemHasState(calculateKey);
-            Notice.showDownNotice(`恭喜中奖`);
+            Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnWinningThePrize.Value);
         });
     }
 
@@ -599,7 +683,7 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
             calculateKeys.forEach((key: number) => {
                 if (lotteryDatas.get(key).isLimit) this.getLotteryPanel.updateItemHasState(key);
             });
-            Notice.showDownNotice(`恭喜中奖`);
+            Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnWinningThePrize.Value);
         });
     }
 
@@ -625,20 +709,20 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
 
     private saveLottery(diamond: number, lv: number, bagIds: number[]): void {
         if (diamond > 0) {
-            Notice.showDownNotice(`获得${diamond}钻石`);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_ObtainDiamonds.Value, diamond));
             this.getPlayerModuleC.saveDiamond(diamond);
         }
 
         if (lv > 0) {
             this.getPlayerModuleC.upLvByCount(lv);
-            Notice.showDownNotice(`等级+${lv}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_Grade.Value}+${lv}`);
         }
 
         if (bagIds && bagIds.length > 0) {
             for (let i = 0; i < bagIds.length; ++i) {
                 this.getBagModuleC.setBagId(bagIds[i]);
             }
-            Notice.showDownNotice(`打开背包使用`);
+            Notice.showDownNotice(GameConfig.Language.Text_OpenTheBackpackForUse.Value);
         }
     }
 
@@ -665,7 +749,7 @@ export class LotteryModuleC extends ModuleC<LotteryModuleS, null> {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v: mw.GameObject) => {
                     let worldUI: mw.UIWidget = v as mw.UIWidget;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(value.name);
+                    levelItem.updateLevelTextBlock(GameConfig.Language[`${value.name}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });

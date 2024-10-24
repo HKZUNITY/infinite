@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import GlobalData from "../../const/GlobalData";
 import { MapEx } from "../../Tools/MapEx";
 import { Utils } from "../../Tools/utils";
@@ -11,8 +12,8 @@ import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 
-const ringSoulNames: string[] = ["十年", "百年", "千年", "万年", "十万年", "百万年", "千万年", "万万年", "亿万年"];
-const figureStrs: string[] = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
+const ringSoulNames: string[] = ["Text_Decade", "Text_AHundredYears", "Text_Millennium", "Text_TenThousandYears", "Text_100000Years", "Text_MillionsOfYears", "Text_MillionsOfYears", "Text_Eternity", "Text_BillionsOfYears"];
+const figureStrs: string[] = ["Text_1", "Text_2", "Text_3", "Text_4", "Text_5", "Text_6", "Text_7", "Text_8", "Text_9", "Text_10"];
 const costDiamonds: number[][] = [
     [8, 28, 38, 58, 108, 198, 298],
     [18, 38, 58, 108, 198, 298, 398],
@@ -25,7 +26,7 @@ const costDiamonds: number[][] = [
     [158, 298, 498, 698, 898, 998, 1998],
     [198, 398, 598, 798, 998, 1998, 3998, 5998, 7998, 9998],
 ];
-const upSound: string = "169179";
+export const upSound: string = "169179";
 const ringSoulIconColors: string[] = ["#FFFFFFFF", "#FFFF00FF", "#FF00FFFF", "#000000FF", "#FF0000FF", "#00FF00FF", "#191970FF", "#FFC0CBFF", "#FFD700FF"];
 const ringSoulPrefabIds: string[] = [
     "322A7FF14588209BBD4B5DAF37D38FA2",
@@ -338,7 +339,7 @@ export class RingSoulModuleC extends ModuleC<RingSoulModuleS, RingSoulData> {
 
     public get isCanOpenRingSoul(): boolean {
         if (MapEx.count(this.ringSoul) == 0) {
-            Notice.showDownNotice(`还未获取魂环`);
+            Notice.showDownNotice(GameConfig.Language.Text_NotYetObtainedSoulRing.Value);
             return false;
         }
         return true;
@@ -487,6 +488,18 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
     protected onStart(): void {
         this.initUI();
         this.bindButton();
+        this.initTextBlock();
+    }
+
+    private initTextBlock(): void {
+        this.mUpTextBlock.text = GameConfig.Language.Text_ForgeSoulRings_Button.Value;
+        if (GlobalData.languageId == 0) {
+            this.mTotalRarityTextBlock.fontSize = 30;
+            this.mUpTextBlock.fontSize = 20;
+        } else {
+            this.mTotalRarityTextBlock.fontSize = 50;
+            this.mUpTextBlock.fontSize = 38;
+        }
     }
 
     private ringSoulItems: RingSoulItem[] = [];
@@ -529,18 +542,18 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
 
     private addUpButton(): void {
         if (this.ringSoulPage <= 0) {
-            Notice.showDownNotice(`联系作者修复`);
+            Notice.showDownNotice(GameConfig.Language.Text_ContactTheAuthorForRepair.Value);
             return;
         }
 
         if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
-            Notice.showDownNotice(`已满级`)
+            Notice.showDownNotice(GameConfig.Language.Text_FullLevel.Value)
             return;
         }
 
         let lv = this.getPlayerModuleC.getLv;
         if (lv < this.ringSoulPage * 10) {
-            Notice.showDownNotice(`等级不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientLevel.Value);
             return;
         }
 
@@ -552,13 +565,15 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
             SoundService.playSound(upSound);
-            Notice.showDownNotice(`锻造成功`);
+            Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyForged.Value);
         } else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                    Notice.showDownNotice(`成功获得钻石 +${GlobalData.addDiamondCount}`);
-                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount)
+                    , GameConfig.Language.Text_Cancel.Value
+                    , GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
@@ -570,7 +585,7 @@ export class RingSoulPanel extends RingSoulPanel_Generate {
     }
 
     public updateRarityTextBlock(rarity: number): void {
-        this.mTotalRarityTextBlock.text = `总加成：血量提升${1 + rarity}倍，攻击力提升${1 + rarity}倍`;
+        this.mTotalRarityTextBlock.text = StringUtil.format(GameConfig.Language.Text_TotalBonus.Value, 1 + rarity, 1 + rarity);
     }
 
     protected onShow(...params: any[]): void {
@@ -619,6 +634,16 @@ export class RingSoulItem extends RingSoulItem_Generate {
 
     protected onStart(): void {
         this.bindButton();
+        this.initTextBlock();
+    }
+
+    private initTextBlock(): void {
+        this.mUpTextBlock.text = GameConfig.Language.Text_ForgeSoulRings_Button.Value;
+        if (GlobalData.languageId == 0) {
+            this.mUpTextBlock.fontSize = 20;
+        } else {
+            this.mUpTextBlock.fontSize = 38;
+        }
     }
 
     private bindButton(): void {
@@ -629,26 +654,26 @@ export class RingSoulItem extends RingSoulItem_Generate {
                 this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
                 this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
                 SoundService.playSound(upSound);
-                Notice.showDownNotice(`恭喜你完成新手引导`);
-                Notice.showDownNotice(`奖励第一魂环 十年魂环`);
+                Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnCompletingTheBeginnerSGuide.Value);
+                Notice.showDownNotice(GameConfig.Language.Text_RewardTheFirstSoulRingWithATenYearSoulRing.Value);
             }
         });
     }
 
     private addUpButton(): void {
         if (this.ringSoulPage <= 0) {
-            Notice.showDownNotice(`联系作者修复`);
+            Notice.showDownNotice(GameConfig.Language.Text_ContactTheAuthorForRepair.Value);
             return;
         }
 
         if (this.ringSoulItemChilds.length <= this.ringSoulIndex) {
-            Notice.showDownNotice(`已满级`)
+            Notice.showDownNotice(GameConfig.Language.Text_FullLevel.Value)
             return;
         }
 
         let lv = this.getPlayerModuleC.getLv;
         if (lv < this.ringSoulPage * 10) {
-            Notice.showDownNotice(`等级不足`);
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientLevel.Value);
             return;
         }
 
@@ -660,13 +685,15 @@ export class RingSoulItem extends RingSoulItem_Generate {
             this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
             this.ringSoulItemChilds[this.ringSoulIndex - 1].setRingSoulItemChildDataByIndex(this.ringSoulIndex);
             SoundService.playSound(upSound);
-            Notice.showDownNotice(`锻造成功`);
+            Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyForged.Value);
         } else {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得钻石 +${GlobalData.addDiamondCount}`);
+                    Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                }, `免费领取${GlobalData.addDiamondCount}颗钻石`, "取消", "免费领取");
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount)
+                    , GameConfig.Language.Text_Cancel.Value
+                    , GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
@@ -698,7 +725,16 @@ export class RingSoulItemChild extends RingSoulItemChild_Generate {
     }
 
     protected onStart(): void {
+        this.initTextBlock();
+    }
 
+    private initTextBlock(): void {
+        this.mUpTextBlock.text = GameConfig.Language.Text_Upgrade.Value;
+        if (GlobalData.languageId == 0) {
+            this.mUpTextBlock.fontSize = 20;
+        } else {
+            this.mUpTextBlock.fontSize = 30;
+        }
     }
 
     private isHas: boolean = false;
@@ -717,7 +753,11 @@ export class RingSoulItemChild extends RingSoulItemChild_Generate {
 
     private updateUI(): void {
         let lv = this.getPlayerModuleC.getLv;
-        this.mNameTextBlock.text = `第${figureStrs[this.ringSoulPage - 1]}魂环\n${ringSoulNames[this.ringSoulIndex - 1]}魂环`;
+        // this.mNameTextBlock.text = `第${figureStrs[this.ringSoulPage - 1]}魂环\n${ringSoulNames[this.ringSoulIndex - 1]}魂环`;
+        this.mNameTextBlock.text = StringUtil.format(GameConfig.Language.Text_TheSoulRingSoulRing.Value,
+            GameConfig.Language[`${figureStrs[this.ringSoulPage - 1]}`].Value,
+            GameConfig.Language[`${ringSoulNames[this.ringSoulIndex - 1]}`].Value
+        );
         if (this.isHas) {
             this.mHasTextBlock.visibility = mw.SlateVisibility.Collapsed;
             this.mCostTextBlock.visibility = mw.SlateVisibility.Collapsed;
@@ -726,8 +766,12 @@ export class RingSoulItemChild extends RingSoulItemChild_Generate {
             this.mHasTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mCostTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
             this.mUpTextBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? `级可解锁` : `${this.ringSoulPage * 10}级可解锁`;
-            this.mCostTextBlock.text = `需要消耗\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex - 1]}</size></color><size=15>钻石</size>`;
+            this.mHasTextBlock.text = (lv >= this.ringSoulPage * 10) ? GameConfig.Language.Text_Unlockable.Value : StringUtil.format(GameConfig.Language.Text_UnlockableAtLevel.Value, this.ringSoulPage * 10);
+            if (GlobalData.languageId == 0) {
+                this.mCostTextBlock.text = `${GameConfig.Language.Text_Cost.Value}\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex - 1]}</size></color><size=7>${GameConfig.Language.Text_Diamonds.Value}</size>`;
+            } else {
+                this.mCostTextBlock.text = `${GameConfig.Language.Text_Cost.Value}\n<color=#00FFFF><size=30>${costDiamonds[this.ringSoulPage - 1][this.ringSoulIndex - 1]}</size></color><size=10>${GameConfig.Language.Text_Diamonds.Value}</size>`;
+            }
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import GlobalData from "../../const/GlobalData";
 import { MapEx } from "../../Tools/MapEx";
 import { Utils } from "../../Tools/utils";
@@ -29,6 +30,17 @@ export class SignInItem extends SignInItem_Generate {
 
     protected onStart(): void {
         this.bindButton();
+        this.initTextBlock();
+    }
+
+    private initTextBlock(): void {
+        if (GlobalData.languageId == 0) {
+            this.mTipsTextBlock.fontSize = 15;
+            this.mRewardTextBlock.fontSize = 15;
+        } else {
+            this.mTipsTextBlock.fontSize = 30;
+            this.mRewardTextBlock.fontSize = 20;
+        }
     }
 
     private bindButton(): void {
@@ -53,28 +65,28 @@ export class SignInItem extends SignInItem_Generate {
     private updateUI(): void {
         if (this.signIn == 1) {
             this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            this.mTipsTextBlock.text = `已领取`;
-            this.mHasTextBlock.text = `已领取`;
+            this.mTipsTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
+            this.mHasTextBlock.text = GameConfig.Language.Text_ReceivedAlready.Value;
             this.mTipsTextBlock.setFontColorByHex("00FFFFFF");
         } else {
             if (this.day < this.getSignInModuleC.getDay) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.mTipsTextBlock.text = `补签`;
+                this.mTipsTextBlock.text = GameConfig.Language.Text_SupplementarySignature.Value;
                 this.mTipsTextBlock.setFontColorByHex("FF0000FF");
             } else if (this.day == this.getSignInModuleC.getDay) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.mTipsTextBlock.text = `可领取`;
+                this.mTipsTextBlock.text = GameConfig.Language.Text_CanBeClaimed.Value;
                 this.mTipsTextBlock.setFontColorByHex("FF0000FF");
             } else if (this.day > this.getSignInModuleC.getDay) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.Collapsed;
-                this.mTipsTextBlock.text = `待领取`;
+                this.mTipsTextBlock.text = GameConfig.Language.Text_Unclaimed.Value
                 this.mTipsTextBlock.setFontColorByHex("00FFFFFF");
             }
         }
-        this.mRewardTextBlock.text = `钻石 +${rewardMap.get(this.day).rewardDiamond} 等级 +${rewardMap.get(this.day).rewardLv}`;
+        this.mRewardTextBlock.text = StringUtil.format(GameConfig.Language.Text_DiamondGrade.Value, rewardMap.get(this.day).rewardDiamond, rewardMap.get(this.day).rewardLv);
         this.mRewardTextBlock.setFontColorByHex("FF0000FF");
         this.mIconImage.imageGuid = rewardMap.get(this.day).icon;
-        this.mDayTextBlock.text = `第${this.day}天`;
+        this.mDayTextBlock.text = StringUtil.format(GameConfig.Language.Text_Day.Value, this.day);
     }
 }
 
@@ -88,6 +100,11 @@ export class SignInPanel extends SignInPanel_Generate {
     }
     protected onStart(): void {
         this.bindButton();
+        this.initTextBlock();
+    }
+
+    private initTextBlock(): void {
+        this.mTitleTextBlock.text = StringUtil.format(GameConfig.Language.Text_DayCheckIn.Value, 7);
     }
 
     private bindButton(): void {
@@ -240,22 +257,24 @@ export class SignInModuleC extends ModuleC<SignInModuleS, SignInData> {
     public tryGetReward(day: number, succeedCallback: () => void): void {
         if (!MapEx.has(this.signIn, day) || day < 1 || day > GlobalData.signInDays) return;
         if (MapEx.get(this.signIn, day) == 1) {
-            Notice.showDownNotice(`已签到`);
+            Notice.showDownNotice(GameConfig.Language.Text_SignedIn.Value);
             return;
         }
         if (this.day > day) {
             if (GlobalData.isOpenIAA) {
                 this.getAdTipsPanel.showRewardAd(() => {
-                    Notice.showDownNotice(`成功获得今日奖励`);
+                    Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedTodaySReward.Value);
                     this.getReward(day, succeedCallback);
-                }, `免费领取第${day}天奖励`, `取消`, `领取`);
+                }, StringUtil.format(GameConfig.Language.Text_FreeDayReward.Value, day)
+                    , GameConfig.Language.Text_Cancel.Value
+                    , GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 this.getReward(day, succeedCallback);
             }
         } else if (day == this.day) {
             this.getReward(day, succeedCallback);
         } else if (this.day < day) {
-            Notice.showDownNotice(`还未到签到日期`);
+            Notice.showDownNotice(GameConfig.Language.Text_TheCheckInDateHasNotYetArrived.Value);
         }
     }
 
@@ -265,7 +284,7 @@ export class SignInModuleC extends ModuleC<SignInModuleS, SignInData> {
         this.server.net_setSignIn(day);
         if (succeedCallback) succeedCallback();
 
-        Notice.showDownNotice(`成功获取今日奖励`);
+        Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedTodaySReward.Value);
 
         let diamond = rewardMap.get(day).rewardDiamond;
         if (diamond > 0) {
@@ -277,7 +296,7 @@ export class SignInModuleC extends ModuleC<SignInModuleS, SignInData> {
             this.getPlayerModuleC.upLvByCount(lv);
         }
 
-        Notice.showDownNotice(`钻石+${diamond} 等级+${lv}`);
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_DiamondGrade.Value, diamond, lv));
     }
 }
 

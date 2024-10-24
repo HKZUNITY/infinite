@@ -1,6 +1,7 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import { Utils } from "../../Tools/utils";
 import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from '../../config/GameConfig';
 import GlobalData from "../../const/GlobalData";
 import { BagInfoPanel, BagModuleC } from '../BagModule/BagModule';
 import GuidePanel from "./ui/GuidePanel";
@@ -40,13 +41,17 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
     }
-    private totalStep: number = 27;
+    private totalStep: number = 28;
     private curStep: number = -1;
     public onNextStepAction: Action = new Action();
 
+    private isHasCall: boolean = false;
     public startFirst(): void {
+        if (this.isHasCall) return;
+        this.isHasCall = true;
         if (this.data.isFirst) {
             this.onNextStepAction.add(() => {
+                console.error(this.curStep);
                 this.curStep++;
                 if (this.curStep > this.totalStep) {
                     if (!this.data.isFirst) return;
@@ -106,7 +111,7 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
                     });
                     this.guideEffectIds.length = 0;
                 }
-                Notice.showDownNotice("已到达目标点附近");
+                Notice.showDownNotice(GameConfig.Language.Text_ArrivedNearTheTargetPoint.Value);
                 if (onComplete) onComplete();
                 return;
             }
@@ -256,8 +261,8 @@ export class GuideModuleC extends ModuleC<GuideModuleS, GuideData> {
             TimeUtil.delaySecond(5).then(() => {
                 this.getGuidePanel.guideByStep(21);
                 this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
-                Notice.showDownNotice(`返回新手村`);
-                Notice.showDownNotice(`正式开启你的副本吧`);
+                Notice.showDownNotice(GameConfig.Language.Text_ReturnToNewbieVillage.Value);
+                Notice.showDownNotice(GameConfig.Language.Text_LetSOfficiallyOpenYourCopy.Value);
             });
         });
     }

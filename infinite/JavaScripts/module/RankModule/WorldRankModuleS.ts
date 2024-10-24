@@ -1,3 +1,4 @@
+import GlobalData from '../../const/GlobalData';
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import PlayerModuleS from "../PlayerModule/PlayerModuleS";
 import { PlayerData_CSR, PlayerData_CSW } from "./PlayerPropData";
@@ -167,7 +168,7 @@ export class WorldRankModuleS extends ModuleS<WorldRankModuleC, null> {
         if (this.worldDatas == null) {
             this.worldDatas = [];
         }
-        if (this.worldDatas.length < 500) {
+        if (this.worldDatas.length < GlobalData.worldRankCount) {
             if (this.worldDatas.length == 0) {
                 this.worldDatas.push(playerData_SW);
                 isPush = true;

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.26
  */
  
 @UIBind('UI/common/Loading.ui')
@@ -21,6 +21,13 @@ export default class Loading_Generate extends UIScript {
 			this.mProgressBar_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mImage/mProgressBar') as mw.ProgressBar
 		}
 		return this.mProgressBar_Internal
+	}
+	private mTipsTextBlock_Internal: mw.TextBlock
+	public get mTipsTextBlock(): mw.TextBlock {
+		if(!this.mTipsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mImage/mProgressBar/mTipsTextBlock') as mw.TextBlock
+		}
+		return this.mTipsTextBlock_Internal
 	}
 	private mTextBlock_1_Internal: mw.TextBlock
 	public get mTextBlock_1(): mw.TextBlock {
@@ -46,14 +53,14 @@ export default class Loading_Generate extends UIScript {
 		
 		//文本多语言
 		
+		this.initLanguage(this.mTipsTextBlock)
+		
+	
 		this.initLanguage(this.mTextBlock_1)
 		
 	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mImage/mProgressBar/TextBlock") as any);
-		
-	
 	}
 	
 	/*初始化多语言*/

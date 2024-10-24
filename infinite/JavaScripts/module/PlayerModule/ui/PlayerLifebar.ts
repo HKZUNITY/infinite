@@ -81,7 +81,7 @@ export default class PlayerLifebar extends mw.Script {
 
     private async onLevelChange(): Promise<void> {
         if (!this._isInit || this.playerLevel < 0) return;
-        this._hpBarUI.mLevelText.text = await Utils.getLvText(this.playerLevel, this.character?.player?.userId) + " 等级Lv." + this.playerLevel;
+        this._hpBarUI.mLevelText.text = await Utils.getLvText(this.playerLevel, this.character?.player?.userId) + ` ${GameConfig.Language.Text_Lv.Value}` + this.playerLevel;
     }
 
     private invincibleEffectId: number = null;

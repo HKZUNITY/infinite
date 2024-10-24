@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SoulBoneModule/PartItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.28
  */
  
 @UIBind('UI/module/SoulBoneModule/PartItem.ui')
@@ -22,10 +22,17 @@ export default class PartItem_Generate extends UIScript {
 		}
 		return this.mFgImage_Internal
 	}
+	private mIconBgImage_Internal: mw.Image
+	public get mIconBgImage(): mw.Image {
+		if(!this.mIconBgImage_Internal&&this.uiWidgetBase) {
+			this.mIconBgImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mIconBgImage') as mw.Image
+		}
+		return this.mIconBgImage_Internal
+	}
 	private mIconImage_Internal: mw.Image
 	public get mIconImage(): mw.Image {
 		if(!this.mIconImage_Internal&&this.uiWidgetBase) {
-			this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mIconImage') as mw.Image
+			this.mIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mIconBgImage/mIconImage') as mw.Image
 		}
 		return this.mIconImage_Internal
 	}

@@ -13,6 +13,9 @@ export default class PlayerData extends Subdata {
     public diamond: number = 0;
 
     @Decorator.persistence()
+    public bone: number = 0;
+
+    @Decorator.persistence()
     public playerLv: number = 0;
 
     @Decorator.persistence()
@@ -23,8 +26,9 @@ export default class PlayerData extends Subdata {
 
     protected initDefaultData(): void {
         this.exp = 0;
-        this.coin = 10000;
-        this.diamond = 0;
+        this.coin = 2888888;
+        this.diamond = 1;
+        this.bone = 1;
 
         this.playerLv = 0;
         this.playerHeight = 0;
@@ -89,5 +93,18 @@ export default class PlayerData extends Subdata {
 
     public getHp(): number {
         return Utils.getHp(this.playerLv);
+    }
+
+    public saveBone(bone: number): void {
+        this.bone += bone;
+        this.save(true);
+    }
+
+    public getBone(bone: number = 0): number {
+        if (bone != 0) {
+            this.bone += bone;
+            this.save(true);
+        }
+        return this.bone;
     }
 }

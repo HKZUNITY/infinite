@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -162,12 +162,26 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mPlayerButton_Internal
 	}
+	private mPlayerTextBlock_Internal: mw.TextBlock
+	public get mPlayerTextBlock(): mw.TextBlock {
+		if(!this.mPlayerTextBlock_Internal&&this.uiWidgetBase) {
+			this.mPlayerTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/PlayerCanvas/mPlayerTextBlock') as mw.TextBlock
+		}
+		return this.mPlayerTextBlock_Internal
+	}
 	private mMusicButton_Internal: mw.Button
 	public get mMusicButton(): mw.Button {
 		if(!this.mMusicButton_Internal&&this.uiWidgetBase) {
 			this.mMusicButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/MusicCanvas/mMusicButton') as mw.Button
 		}
 		return this.mMusicButton_Internal
+	}
+	private mMusicTextBlock_Internal: mw.TextBlock
+	public get mMusicTextBlock(): mw.TextBlock {
+		if(!this.mMusicTextBlock_Internal&&this.uiWidgetBase) {
+			this.mMusicTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/MusicCanvas/mMusicTextBlock') as mw.TextBlock
+		}
+		return this.mMusicTextBlock_Internal
 	}
 	private mHomeButton_Internal: mw.Button
 	public get mHomeButton(): mw.Button {
@@ -176,6 +190,13 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mHomeButton_Internal
 	}
+	private mHomeTextBlock_Internal: mw.TextBlock
+	public get mHomeTextBlock(): mw.TextBlock {
+		if(!this.mHomeTextBlock_Internal&&this.uiWidgetBase) {
+			this.mHomeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/HomeCanvas/mHomeTextBlock') as mw.TextBlock
+		}
+		return this.mHomeTextBlock_Internal
+	}
 	private mShopButton_Internal: mw.Button
 	public get mShopButton(): mw.Button {
 		if(!this.mShopButton_Internal&&this.uiWidgetBase) {
@@ -183,12 +204,26 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mShopButton_Internal
 	}
+	private mShopTextBlock_Internal: mw.TextBlock
+	public get mShopTextBlock(): mw.TextBlock {
+		if(!this.mShopTextBlock_Internal&&this.uiWidgetBase) {
+			this.mShopTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ShopCanvas/mShopTextBlock') as mw.TextBlock
+		}
+		return this.mShopTextBlock_Internal
+	}
 	private mRankButton_Internal: mw.Button
 	public get mRankButton(): mw.Button {
 		if(!this.mRankButton_Internal&&this.uiWidgetBase) {
 			this.mRankButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RankCanvas/mRankButton') as mw.Button
 		}
 		return this.mRankButton_Internal
+	}
+	private mRankTextBlock_Internal: mw.TextBlock
+	public get mRankTextBlock(): mw.TextBlock {
+		if(!this.mRankTextBlock_Internal&&this.uiWidgetBase) {
+			this.mRankTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RankCanvas/mRankTextBlock') as mw.TextBlock
+		}
+		return this.mRankTextBlock_Internal
 	}
 	private mLotteryButton_Internal: mw.Button
 	public get mLotteryButton(): mw.Button {
@@ -239,6 +274,13 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mTaskButton_Internal
 	}
+	private mTaskTextBlock_Internal: mw.TextBlock
+	public get mTaskTextBlock(): mw.TextBlock {
+		if(!this.mTaskTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTaskTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/TaskCanvas/mTaskTextBlock') as mw.TextBlock
+		}
+		return this.mTaskTextBlock_Internal
+	}
 	private mTaskPointImage_Internal: mw.Image
 	public get mTaskPointImage(): mw.Image {
 		if(!this.mTaskPointImage_Internal&&this.uiWidgetBase) {
@@ -252,6 +294,13 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mSignInButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SignInCanvas/mSignInButton') as mw.Button
 		}
 		return this.mSignInButton_Internal
+	}
+	private mSignInTextBlock_Internal: mw.TextBlock
+	public get mSignInTextBlock(): mw.TextBlock {
+		if(!this.mSignInTextBlock_Internal&&this.uiWidgetBase) {
+			this.mSignInTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SignInCanvas/mSignInTextBlock') as mw.TextBlock
+		}
+		return this.mSignInTextBlock_Internal
 	}
 	private mSignInImage_Internal: mw.Image
 	public get mSignInImage(): mw.Image {
@@ -267,12 +316,26 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mAdsButton_Internal
 	}
+	private mAdsTextBlock_Internal: mw.TextBlock
+	public get mAdsTextBlock(): mw.TextBlock {
+		if(!this.mAdsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mAdsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/AdsCanvas/mAdsTextBlock') as mw.TextBlock
+		}
+		return this.mAdsTextBlock_Internal
+	}
 	private mArkButton_Internal: mw.Button
 	public get mArkButton(): mw.Button {
 		if(!this.mArkButton_Internal&&this.uiWidgetBase) {
 			this.mArkButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ArkCanvas/mArkButton') as mw.Button
 		}
 		return this.mArkButton_Internal
+	}
+	private mArkTextBlock_Internal: mw.TextBlock
+	public get mArkTextBlock(): mw.TextBlock {
+		if(!this.mArkTextBlock_Internal&&this.uiWidgetBase) {
+			this.mArkTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ArkCanvas/mArkTextBlock') as mw.TextBlock
+		}
+		return this.mArkTextBlock_Internal
 	}
 	private mArkImage_Internal: mw.Image
 	public get mArkImage(): mw.Image {
@@ -288,12 +351,26 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mGetButton_Internal
 	}
+	private mGetTextBlock_Internal: mw.TextBlock
+	public get mGetTextBlock(): mw.TextBlock {
+		if(!this.mGetTextBlock_Internal&&this.uiWidgetBase) {
+			this.mGetTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/GetCanvas/mGetTextBlock') as mw.TextBlock
+		}
+		return this.mGetTextBlock_Internal
+	}
 	private mRingSoulButton_Internal: mw.Button
 	public get mRingSoulButton(): mw.Button {
 		if(!this.mRingSoulButton_Internal&&this.uiWidgetBase) {
 			this.mRingSoulButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RingSoulCanvas/mRingSoulButton') as mw.Button
 		}
 		return this.mRingSoulButton_Internal
+	}
+	private mRingSoulTextBlock_Internal: mw.TextBlock
+	public get mRingSoulTextBlock(): mw.TextBlock {
+		if(!this.mRingSoulTextBlock_Internal&&this.uiWidgetBase) {
+			this.mRingSoulTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/RingSoulCanvas/mRingSoulTextBlock') as mw.TextBlock
+		}
+		return this.mRingSoulTextBlock_Internal
 	}
 	private mRingSoulPointImage_Internal: mw.Image
 	public get mRingSoulPointImage(): mw.Image {
@@ -309,6 +386,13 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mNewPeopleButton_Internal
 	}
+	private mNewPeopleTextBlock_Internal: mw.TextBlock
+	public get mNewPeopleTextBlock(): mw.TextBlock {
+		if(!this.mNewPeopleTextBlock_Internal&&this.uiWidgetBase) {
+			this.mNewPeopleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/NewPeopleCanvas/mNewPeopleTextBlock') as mw.TextBlock
+		}
+		return this.mNewPeopleTextBlock_Internal
+	}
 	private mNewPeoplePointImage_Internal: mw.Image
 	public get mNewPeoplePointImage(): mw.Image {
 		if(!this.mNewPeoplePointImage_Internal&&this.uiWidgetBase) {
@@ -322,6 +406,13 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mSwordButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SwordCanvas/mSwordButton') as mw.Button
 		}
 		return this.mSwordButton_Internal
+	}
+	private mSwordTextBlock_Internal: mw.TextBlock
+	public get mSwordTextBlock(): mw.TextBlock {
+		if(!this.mSwordTextBlock_Internal&&this.uiWidgetBase) {
+			this.mSwordTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/SwordCanvas/mSwordTextBlock') as mw.TextBlock
+		}
+		return this.mSwordTextBlock_Internal
 	}
 	private mSoulBoneButton_Internal: mw.Button
 	public get mSoulBoneButton(): mw.Button {
@@ -505,6 +596,13 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mInvincibleButton_Internal
 	}
+	private mTipsInvincibleTextBlock_Internal: mw.TextBlock
+	public get mTipsInvincibleTextBlock(): mw.TextBlock {
+		if(!this.mTipsInvincibleTextBlock_Internal&&this.uiWidgetBase) {
+			this.mTipsInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas/mTipsInvincibleTextBlock') as mw.TextBlock
+		}
+		return this.mTipsInvincibleTextBlock_Internal
+	}
 	private mInvincibleTextBlock_Internal: mw.TextBlock
 	public get mInvincibleTextBlock(): mw.TextBlock {
 		if(!this.mInvincibleTextBlock_Internal&&this.uiWidgetBase) {
@@ -519,6 +617,13 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mUpLvButton_Internal
 	}
+	private mUpExpTextBlock_Internal: mw.TextBlock
+	public get mUpExpTextBlock(): mw.TextBlock {
+		if(!this.mUpExpTextBlock_Internal&&this.uiWidgetBase) {
+			this.mUpExpTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/UpExpCanvas/mUpExpTextBlock') as mw.TextBlock
+		}
+		return this.mUpExpTextBlock_Internal
+	}
 	private mUpExpFlipBook_Internal: mw.FlipBook
 	public get mUpExpFlipBook(): mw.FlipBook {
 		if(!this.mUpExpFlipBook_Internal&&this.uiWidgetBase) {
@@ -532,6 +637,20 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mUpExpButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/UpExpCanvas/mUpExpButton') as mw.Button
 		}
 		return this.mUpExpButton_Internal
+	}
+	private mBoneextBlock_Internal: mw.TextBlock
+	public get mBoneextBlock(): mw.TextBlock {
+		if(!this.mBoneextBlock_Internal&&this.uiWidgetBase) {
+			this.mBoneextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/BoneCanvas/mBoneextBlock') as mw.TextBlock
+		}
+		return this.mBoneextBlock_Internal
+	}
+	private mAddBoneButton_Internal: mw.Button
+	public get mAddBoneButton(): mw.Button {
+		if(!this.mAddBoneButton_Internal&&this.uiWidgetBase) {
+			this.mAddBoneButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MiddleTopCanvas/BoneCanvas/mAddBoneButton') as mw.Button
+		}
+		return this.mAddBoneButton_Internal
 	}
 	private mCoinTextBlock_Internal: mw.TextBlock
 	public get mCoinTextBlock(): mw.TextBlock {
@@ -603,12 +722,26 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mDeadCanvas_Internal
 	}
+	private mDeadTextBlock_Internal: mw.TextBlock
+	public get mDeadTextBlock(): mw.TextBlock {
+		if(!this.mDeadTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDeadTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadTextBlock') as mw.TextBlock
+		}
+		return this.mDeadTextBlock_Internal
+	}
 	private mDeadCountDownTextBlock_Internal: mw.TextBlock
 	public get mDeadCountDownTextBlock(): mw.TextBlock {
 		if(!this.mDeadCountDownTextBlock_Internal&&this.uiWidgetBase) {
 			this.mDeadCountDownTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadCountDownTextBlock') as mw.TextBlock
 		}
 		return this.mDeadCountDownTextBlock_Internal
+	}
+	private mDeadTipsTextBlock_Internal: mw.TextBlock
+	public get mDeadTipsTextBlock(): mw.TextBlock {
+		if(!this.mDeadTipsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDeadTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDeadCanvas/mDeadTipsTextBlock') as mw.TextBlock
+		}
+		return this.mDeadTipsTextBlock_Internal
 	}
 
 
@@ -797,6 +930,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mUpExpButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mAddBoneButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mAddBoneButton");
+		});
+		this.mAddBoneButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mAddCoinButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mAddCoinButton");
 		});
@@ -828,10 +967,49 @@ export default class HUDPanel_Generate extends UIScript {
 		this.initLanguage(this.mAutoAtkTextBlock)
 		
 	
+		this.initLanguage(this.mPlayerTextBlock)
+		
+	
+		this.initLanguage(this.mMusicTextBlock)
+		
+	
+		this.initLanguage(this.mHomeTextBlock)
+		
+	
+		this.initLanguage(this.mShopTextBlock)
+		
+	
+		this.initLanguage(this.mRankTextBlock)
+		
+	
 		this.initLanguage(this.mLotteryTextBlock)
 		
 	
 		this.initLanguage(this.mOnlineRewardTextBlock)
+		
+	
+		this.initLanguage(this.mTaskTextBlock)
+		
+	
+		this.initLanguage(this.mSignInTextBlock)
+		
+	
+		this.initLanguage(this.mAdsTextBlock)
+		
+	
+		this.initLanguage(this.mArkTextBlock)
+		
+	
+		this.initLanguage(this.mGetTextBlock)
+		
+	
+		this.initLanguage(this.mRingSoulTextBlock)
+		
+	
+		this.initLanguage(this.mNewPeopleTextBlock)
+		
+	
+		this.initLanguage(this.mSwordTextBlock)
 		
 	
 		this.initLanguage(this.mSoulBoneTextBlock)
@@ -855,7 +1033,16 @@ export default class HUDPanel_Generate extends UIScript {
 		this.initLanguage(this.mExpTextBlock)
 		
 	
+		this.initLanguage(this.mTipsInvincibleTextBlock)
+		
+	
 		this.initLanguage(this.mInvincibleTextBlock)
+		
+	
+		this.initLanguage(this.mUpExpTextBlock)
+		
+	
+		this.initLanguage(this.mBoneextBlock)
 		
 	
 		this.initLanguage(this.mCoinTextBlock)
@@ -873,62 +1060,17 @@ export default class HUDPanel_Generate extends UIScript {
 		this.initLanguage(this.mKillTipTextBlock3)
 		
 	
+		this.initLanguage(this.mDeadTextBlock)
+		
+	
 		this.initLanguage(this.mDeadCountDownTextBlock)
+		
+	
+		this.initLanguage(this.mDeadTipsTextBlock)
 		
 	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/PlayerCanvas/ShopTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/MusicCanvas/MusicTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ShopCanvas/ShopTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RankCanvas/RankTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/TaskCanvas/TaskTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/SignInCanvas/SignInTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/AdsCanvas/AdsTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ArkCanvas/ArkTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/GetCanvas/GetTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RingSoulCanvas/RingSoulTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/NewPeopleCanvas/NewPeopleTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/SwordCanvas/SwordTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/mInvincibleCanvas/InvincibleTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/UpExpCanvas/UpExpTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock") as any);
-		
-	
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTipsTextBlock") as any);
-		
-	
 	}
 	
 	/*初始化多语言*/

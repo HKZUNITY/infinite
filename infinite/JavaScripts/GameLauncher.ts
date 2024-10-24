@@ -94,6 +94,14 @@ export default class GameLauncher extends mw.Script {
             if (ele == null) return "unknow_" + key;
             return ele.Value;
         });
+
+        mw.UIScript.addBehavior("lan", (ui: mw.StaleButton | mw.TextBlock) => {
+            let key: string = ui.text;
+            if (key) {
+                let lan = GameConfig.Language.getElement(key);
+                if (lan) ui.text = (lan.Value);
+            }
+        });
     }
 
     /**

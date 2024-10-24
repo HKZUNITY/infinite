@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.28
  */
  
 @UIBind('UI/module/LotteryModule/LotteryPanel.ui')
@@ -162,6 +162,48 @@ export default class LotteryPanel_Generate extends UIScript {
 		}
 		return this.mHundredArkTipsTextBlock_Internal
 	}
+	private mHundredCoinCanvas_Internal: mw.Canvas
+	public get mHundredCoinCanvas(): mw.Canvas {
+		if(!this.mHundredCoinCanvas_Internal&&this.uiWidgetBase) {
+			this.mHundredCoinCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas') as mw.Canvas
+		}
+		return this.mHundredCoinCanvas_Internal
+	}
+	private mHundredCoinButton_Internal: mw.Button
+	public get mHundredCoinButton(): mw.Button {
+		if(!this.mHundredCoinButton_Internal&&this.uiWidgetBase) {
+			this.mHundredCoinButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas/mHundredCoinButton') as mw.Button
+		}
+		return this.mHundredCoinButton_Internal
+	}
+	private mHundredCoinTextBlock_Internal: mw.TextBlock
+	public get mHundredCoinTextBlock(): mw.TextBlock {
+		if(!this.mHundredCoinTextBlock_Internal&&this.uiWidgetBase) {
+			this.mHundredCoinTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas/mHundredCoinTextBlock') as mw.TextBlock
+		}
+		return this.mHundredCoinTextBlock_Internal
+	}
+	private mHundredCoinTipsTextBlock_Internal: mw.TextBlock
+	public get mHundredCoinTipsTextBlock(): mw.TextBlock {
+		if(!this.mHundredCoinTipsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mHundredCoinTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mHundredCoinCanvas/mHundredCoinTipsTextBlock') as mw.TextBlock
+		}
+		return this.mHundredCoinTipsTextBlock_Internal
+	}
+	private mOneAdsCanvas_Internal: mw.Canvas
+	public get mOneAdsCanvas(): mw.Canvas {
+		if(!this.mOneAdsCanvas_Internal&&this.uiWidgetBase) {
+			this.mOneAdsCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneAdsCanvas') as mw.Canvas
+		}
+		return this.mOneAdsCanvas_Internal
+	}
+	private mOneAdsButton_Internal: mw.AdsButton
+	public get mOneAdsButton(): mw.AdsButton {
+		if(!this.mOneAdsButton_Internal&&this.uiWidgetBase) {
+			this.mOneAdsButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mCanvas/mOneAdsCanvas/mOneAdsButton') as mw.AdsButton
+		}
+		return this.mOneAdsButton_Internal
+	}
 	private mMoneyCanvas_Internal: mw.Canvas
 	public get mMoneyCanvas(): mw.Canvas {
 		if(!this.mMoneyCanvas_Internal&&this.uiWidgetBase) {
@@ -254,6 +296,12 @@ export default class LotteryPanel_Generate extends UIScript {
 		this.mHundredArkButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mHundredCoinButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mHundredCoinButton");
+		});
+		this.mHundredCoinButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
 		});
@@ -295,6 +343,12 @@ export default class LotteryPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mHundredArkTipsTextBlock)
+		
+	
+		this.initLanguage(this.mHundredCoinTextBlock)
+		
+	
+		this.initLanguage(this.mHundredCoinTipsTextBlock)
 		
 	
 		this.initLanguage(this.mCoinCountTextBlock)

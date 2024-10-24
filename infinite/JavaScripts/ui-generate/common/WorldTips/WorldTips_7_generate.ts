@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_7.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
  
 @UIBind('UI/common/WorldTips/WorldTips_7.ui')
@@ -14,6 +14,13 @@ export default class WorldTips_7_Generate extends UIScript {
 			this.mTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock') as mw.TextBlock
 		}
 		return this.mTextBlock_Internal
+	}
+	private mTextBlock_1_Internal: mw.TextBlock
+	public get mTextBlock_1(): mw.TextBlock {
+		if(!this.mTextBlock_1_Internal&&this.uiWidgetBase) {
+			this.mTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mTextBlock_1') as mw.TextBlock
+		}
+		return this.mTextBlock_1_Internal
 	}
 
 
@@ -35,11 +42,11 @@ export default class WorldTips_7_Generate extends UIScript {
 		this.initLanguage(this.mTextBlock)
 		
 	
-		//文本多语言
-		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/TextBlock_1") as any);
+		this.initLanguage(this.mTextBlock_1)
 		
 	
+		//文本多语言
+		
 	}
 	
 	/*初始化多语言*/

@@ -1,4 +1,6 @@
 import { Notice } from "../../../common/notice/Notice";
+import { GameConfig } from "../../../config/GameConfig";
+import GlobalData from "../../../const/GlobalData";
 import { Utils } from "../../../Tools/utils";
 import UpPanel_Generate from "../../../ui-generate/module/AdsModule/UpPanel_generate";
 import TaskModuleC from "../../TaskModule/TaskModuleC";
@@ -15,8 +17,21 @@ export default class UpPanel extends UpPanel_Generate {
 	protected onStart(): void {
 		this.canUpdate = false;
 		this.layer = mw.UILayerDialog;
-
+		this.initTextBlock();
 		this.bindButtons();
+	}
+
+	private initTextBlock(): void {
+		this.mTitleTxt.text = GameConfig.Language.Text_AdvertisingRewards.Value;
+		if (GlobalData.languageId == 0) {
+			this.mTitleTxt.fontSize = 20;
+			this.mContentTxt.fontSize = 30;
+			this.mContentTxt_1.fontSize = 30;
+		} else {
+			this.mTitleTxt.fontSize = 35;
+			this.mContentTxt.fontSize = 35;
+			this.mContentTxt_1.fontSize = 35;
+		}
 	}
 
 	private bindButtons(): void {
@@ -27,7 +42,7 @@ export default class UpPanel extends UpPanel_Generate {
 
 	private onClickYesButton(isSuccess: boolean): void {
 		if (!isSuccess) {
-			Notice.showDownNotice(`${this.mYesBtn.text}失败，请重试`);
+			Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FailedPleaseTryAgain.Value, this.mYesBtn.text));
 			return;
 		}
 		if (this.yesCallback) {
@@ -39,7 +54,7 @@ export default class UpPanel extends UpPanel_Generate {
 	private isCanUp: boolean = true;
 	private onClickUpButton(): void {
 		if (!this.isCanUp) {
-			Notice.showDownNotice(`别点太快、会卡哦`);
+			Notice.showDownNotice(GameConfig.Language.Text_DontClickTooFastItWillGetStuck.Value);
 			return;
 		}
 		this.isCanUp = false;
@@ -55,7 +70,7 @@ export default class UpPanel extends UpPanel_Generate {
 
 	private yesCallback: () => void = null;
 	private upCallback: () => void = null;
-	public showRewardAd(yesCallback: () => void, upCallback: () => void, titleName: string, contentText: string, contentText_1: string, noText: string = "取消", yesText: string = "领取", upText: string = "升级"): void {
+	public showRewardAd(yesCallback: () => void, upCallback: () => void, titleName: string, contentText: string, contentText_1: string, noText: string, yesText: string, upText: string): void {
 		this.yesCallback = yesCallback;
 		this.upCallback = upCallback;
 		this.mTitleTxt.text = titleName;

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
  
 @UIBind('UI/module/GuideModule/GuideUI.ui')
@@ -50,12 +50,19 @@ export default class GuideUI_Generate extends UIScript {
 		}
 		return this.image_Internal
 	}
-	private text_Internal: mw.TextBlock
-	public get text(): mw.TextBlock {
-		if(!this.text_Internal&&this.uiWidgetBase) {
-			this.text_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/container/text') as mw.TextBlock
+	private mContentTextBlock_Internal: mw.TextBlock
+	public get mContentTextBlock(): mw.TextBlock {
+		if(!this.mContentTextBlock_Internal&&this.uiWidgetBase) {
+			this.mContentTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/container/mContentTextBlock') as mw.TextBlock
 		}
-		return this.text_Internal
+		return this.mContentTextBlock_Internal
+	}
+	private mContinueClickTextBlock_Internal: mw.TextBlock
+	public get mContinueClickTextBlock(): mw.TextBlock {
+		if(!this.mContinueClickTextBlock_Internal&&this.uiWidgetBase) {
+			this.mContinueClickTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/container/mContinueClickTextBlock') as mw.TextBlock
+		}
+		return this.mContinueClickTextBlock_Internal
 	}
 	private guide_Internal: mw.Image
 	public get guide(): mw.Image {
@@ -102,14 +109,14 @@ export default class GuideUI_Generate extends UIScript {
 		
 		//文本多语言
 		
-		this.initLanguage(this.text)
+		this.initLanguage(this.mContentTextBlock)
+		
+	
+		this.initLanguage(this.mContinueClickTextBlock)
 		
 	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/container/TextBlock") as any);
-		
-	
 	}
 	
 	/*初始化多语言*/

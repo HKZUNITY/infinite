@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.10.19-11.22.58
+ * TIME: 2024.10.24-19.45.27
  */
  
 @UIBind('UI/module/TaskModule/TaskItem.ui')
@@ -64,6 +64,13 @@ export default class TaskItem_Generate extends UIScript {
 		}
 		return this.mFinishButton_Internal
 	}
+	private mFinishTextBlock_Internal: mw.TextBlock
+	public get mFinishTextBlock(): mw.TextBlock {
+		if(!this.mFinishTextBlock_Internal&&this.uiWidgetBase) {
+			this.mFinishTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mFinishButton/mFinishTextBlock') as mw.TextBlock
+		}
+		return this.mFinishTextBlock_Internal
+	}
 	private mUnfinishTextBlock_Internal: mw.TextBlock
 	public get mUnfinishTextBlock(): mw.TextBlock {
 		if(!this.mUnfinishTextBlock_Internal&&this.uiWidgetBase) {
@@ -106,14 +113,14 @@ export default class TaskItem_Generate extends UIScript {
 		this.initLanguage(this.mDiamondTextBlock)
 		
 	
+		this.initLanguage(this.mFinishTextBlock)
+		
+	
 		this.initLanguage(this.mUnfinishTextBlock)
 		
 	
 		//文本多语言
 		
-		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mFinishButton/TextBlock") as any);
-		
-	
 	}
 	
 	/*初始化多语言*/

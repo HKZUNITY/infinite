@@ -1,4 +1,5 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import { MapEx } from "../../Tools/MapEx";
 import { Utils } from "../../Tools/utils";
 import LevelItem_Generate from "../../ui-generate/module/LevelModule/LevelItem_generate";
@@ -22,6 +23,12 @@ export class UpExpPanel extends UpExpPanel_Generate {
         this.layer = mw.UILayerTop;
         this.initUI();
         this.bindButton();
+        this.initTextBlock();
+    }
+
+    private initTextBlock(): void {
+        this.mOnHookTextBlock.text = GameConfig.Language.Text_HangingOnTheHook.Value;
+        this.mCancelOnHookTextBlock.text = GameConfig.Language.Text_CancelAfk.Value;
     }
 
     private initUI(): void {
@@ -65,13 +72,13 @@ export class LevelData extends Subdata {
     }
 }
 
-const transferMap: Map<number, { triggerIds: string[], worldUIIds: string[], targetLoc: mw.Vector, name: string, limitLevel: number }>
-    = new Map<number, { triggerIds: string[], worldUIIds: string[], targetLoc: mw.Vector, name: string, limitLevel: number }>();
-transferMap.set(1, { triggerIds: ["19DDCA11"], worldUIIds: ["34DE2A28"], targetLoc: new mw.Vector(-4065, 6446, 2000), name: `级解锁\n新手村`, limitLevel: 1 });
-transferMap.set(2, { triggerIds: ["3E8FFFFB"], worldUIIds: ["361F265D"], targetLoc: new mw.Vector(-5260, -3226, 1700), name: `级解锁\n中级狩猎场`, limitLevel: 18 });
-transferMap.set(3, { triggerIds: ["0CEEF058"], worldUIIds: ["18EED1DD"], targetLoc: new mw.Vector(3246, -19119, 1700), name: `级解锁\n高级狩猎场`, limitLevel: 68 });
-transferMap.set(4, { triggerIds: ["1849DDD5"], worldUIIds: ["2789D9BE"], targetLoc: new mw.Vector(-9170, -9478, 400), name: `级解锁\n10万年魂兽`, limitLevel: 288 });
-transferMap.set(5, { triggerIds: ["3FDFD371"], worldUIIds: ["27AE1609"], targetLoc: new mw.Vector(-9687, 9475, 4200), name: `级解锁\n神级狩猎场`, limitLevel: 98 });
+const transferMap: Map<number, { desc: string, triggerIds: string[], worldUIIds: string[], targetLoc: mw.Vector, name: string, limitLevel: number }>
+    = new Map<number, { desc: string, triggerIds: string[], worldUIIds: string[], targetLoc: mw.Vector, name: string, limitLevel: number }>();
+transferMap.set(1, { desc: "新手村", triggerIds: ["19DDCA11"], worldUIIds: ["34DE2A28"], targetLoc: new mw.Vector(-4065, 6446, 2000), name: `Text_NoviceVillage`, limitLevel: 1 });
+transferMap.set(2, { desc: "中级狩猎场", triggerIds: ["3E8FFFFB"], worldUIIds: ["361F265D"], targetLoc: new mw.Vector(-5260, -3226, 1700), name: `Text_IntermediateHuntingGround`, limitLevel: 18 });
+transferMap.set(3, { desc: "高级狩猎场", triggerIds: ["0CEEF058"], worldUIIds: ["18EED1DD"], targetLoc: new mw.Vector(3246, -19119, 1700), name: `Text_AdvancedHuntingGround`, limitLevel: 68 });
+transferMap.set(4, { desc: "10万年魂兽", triggerIds: ["1849DDD5"], worldUIIds: ["2789D9BE"], targetLoc: new mw.Vector(-9170, -9478, 400), name: `Text_100000YearSoulBeast`, limitLevel: 288 });
+transferMap.set(5, { desc: "神级狩猎场", triggerIds: ["3FDFD371"], worldUIIds: ["27AE1609"], targetLoc: new mw.Vector(-9687, 9475, 4200), name: `Text_GodLevelHuntingGround`, limitLevel: 98 });
 
 export class LevelPanel extends LevelPanel_Generate {
     protected onStart(): void {
@@ -79,7 +86,7 @@ export class LevelPanel extends LevelPanel_Generate {
     }
 
     public updateLevelTextBlock(key: number, level: number): void {
-        this.mLevelTextBlock.text = `${level}级\n${levelMap.get(key).name}`;
+        this.mLevelTextBlock.text = `${level}${GameConfig.Language.Text_Level.Value}\n${levelMap.get(key).name}`;
         this.show();
     }
 }
@@ -94,12 +101,12 @@ export class LevelItem extends LevelItem_Generate {
     }
 }
 
-const levelMap: Map<number, { triggers: string[], worldUIIds: string[], name: string, limitLevel: number }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string, limitLevel: number }>();
-levelMap.set(1, { triggers: ["0531B54C"], worldUIIds: ["081A5D07"], name: `黑悟空关卡`, limitLevel: 38 });
+const levelMap: Map<number, { desc: string, triggers: string[], worldUIIds: string[], name: string, limitLevel: number }> = new Map<number, { desc: string, triggers: string[], worldUIIds: string[], name: string, limitLevel: number }>();
+levelMap.set(1, { desc: "黑悟空关卡", triggers: ["0531B54C"], worldUIIds: ["081A5D07"], name: `Text_BlackMonkeyKingLevel`, limitLevel: 38 });
 
-const arenaMap: Map<number, { triggers: string[], worldUIIds: string[], name: string, limitLevel: number, targetLoc: mw.Vector }> = new Map<number, { triggers: string[], worldUIIds: string[], name: string, limitLevel: number, targetLoc: mw.Vector }>();
-arenaMap.set(1, { triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `百万年魂兽`, limitLevel: 588, targetLoc: new mw.Vector(5500, 10500, 2200) });
-arenaMap.set(2, { triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `回城`, limitLevel: 588, targetLoc: new mw.Vector(-4065, 6446, 2000) });
+const arenaMap: Map<number, { desc: string, triggers: string[], worldUIIds: string[], name: string, limitLevel: number, targetLoc: mw.Vector }> = new Map<number, { desc: string, triggers: string[], worldUIIds: string[], name: string, limitLevel: number, targetLoc: mw.Vector }>();
+arenaMap.set(1, { desc: "百万年魂兽", triggers: ["2CBAFC8A"], worldUIIds: ["063EA403"], name: `Text_MillionYearSoulBeast`, limitLevel: 588, targetLoc: new mw.Vector(5500, 10500, 2200) });
+arenaMap.set(2, { desc: "回城", triggers: ["31B6EFEC"], worldUIIds: ["2FFBFC31"], name: `Text_ReturningToTheCity`, limitLevel: 588, targetLoc: new mw.Vector(-4065, 6446, 2000) });
 export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
     private levelPanel: LevelPanel = null;
     private get getLevelPanel(): LevelPanel {
@@ -153,14 +160,14 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
     }
 
     private initTransfer(): void {
-        transferMap.forEach((value: { triggerIds: string[]; worldUIIds: string[]; targetLoc: mw.Vector; name: string; limitLevel: number; }, key: number) => {
+        transferMap.forEach((value: { desc: string; triggerIds: string[]; worldUIIds: string[]; targetLoc: mw.Vector; name: string; limitLevel: number; }, key: number) => {
             value.triggerIds.forEach((triggerId: string) => {
                 mw.GameObject.asyncFindGameObjectById(triggerId).then((go: mw.GameObject) => {
                     let trigger = go as mw.Trigger;
                     trigger.onEnter.add((character: mw.Character) => {
                         if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
-                            Notice.showDownNotice(`请先将等级提升至${value.limitLevel}级`);
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
@@ -171,7 +178,7 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v: mw.GameObject) => {
                     let worldUI: mw.UIWidget = v as mw.UIWidget;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(`${value.limitLevel}${value.name}`);
+                    levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelUnlock.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -182,7 +189,7 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
                     (v as mw.Trigger).onEnter.add((char: mw.Character) => {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId) return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
-                            Notice.showDownNotice(`请先将等级提升至${value.limitLevel}级`);
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.server.net_startLevel(key);
@@ -194,7 +201,7 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v: mw.GameObject) => {
                     let worldUI: mw.UIWidget = v as mw.UIWidget;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(`${value.limitLevel}级开启\n${value.name}`);
+                    levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelOpen.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });
@@ -205,7 +212,7 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
                     (v as mw.Trigger).onEnter.add((char: mw.Character) => {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId) return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
-                            Notice.showDownNotice(`请先将等级提升至${value.limitLevel}级`);
+                            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
@@ -217,7 +224,7 @@ export class LevelModuleC extends ModuleC<LevelModuleS, LevelData> {
                 mw.GameObject.asyncFindGameObjectById(worldId).then((v: mw.GameObject) => {
                     let worldUI: mw.UIWidget = v as mw.UIWidget;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(`${value.limitLevel}级开启\n${value.name}`);
+                    levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelOpen.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             });

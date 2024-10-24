@@ -1,3 +1,4 @@
+import { GameConfig } from "../../../config/GameConfig";
 import GlobalData from "../../../const/GlobalData";
 import { ObjectPoolServices } from "../../../Tools/ObjectPool";
 import { Utils } from "../../../Tools/utils";
@@ -33,7 +34,7 @@ export class WorldRankItem {
 		this.mRankTextBlock.text = rank.toString();
 		this.mNameTextBlock.text = name;
 		if (lv == 0) {
-			this.mLvTextBlock.text = "暂无";
+			this.mLvTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
 		} else {
 			this.mLvTextBlock.text = await Utils.getLvText(lv, userId);
 		}
@@ -83,17 +84,17 @@ export class RankItem {
 		this.mRankTextBlock.text = rank.toString();
 		this.mNameTextBlock.text = name;
 		if (lv == 0) {
-			this.mLvTextBlock.text = "暂无";
+			this.mLvTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
 		} else {
 			this.mLvTextBlock.text = await Utils.getLvText(lv, userId);
 		}
 		if (height == 0) {
-			this.mHeightTextBlock.text = "暂无";
+			this.mHeightTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
 		} else {
 			this.mHeightTextBlock.text = height.toString();
 		}
 		if (kill == 0) {
-			this.mKillTextBlock.text = "暂无";
+			this.mKillTextBlock.text = GameConfig.Language.Text_CurrentlyUnavailable.Value;
 		} else {
 			this.mKillTextBlock.text = kill.toString();
 		}
@@ -128,6 +129,66 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 	protected onStart(): void {
 		this.initData();
 		this.bindButton();
+		this.initTextBlock();
+	}
+
+	private initTextBlock(): void {
+		this.mRoomRankTextBlock.text = GameConfig.Language.Text_Ranking.Value;
+		this.mRoomNameTextBlock.text = GameConfig.Language.Text_Name.Value;
+		this.mRoomLvTextBlock.text = GameConfig.Language.Text_Grade.Value;
+		this.mRoomHeightTextBlock.text = GameConfig.Language.Text_Height.Value;
+		this.mRoomKillTextBlock.text = GameConfig.Language.Text_Kill.Value;
+
+		this.mRankLvTextBlock.text = GameConfig.Language.Text_LevelMode.Value;
+		this.mRankHeightTextBlock.text = GameConfig.Language.Text_HeightMode.Value;
+		this.mRankKillTextBlock.text = GameConfig.Language.Text_KillMode.Value;
+
+		this.mWorldRankTextBlock.text = GameConfig.Language.Text_Ranking.Value;
+		this.mWorldNameTextBlock.text = GameConfig.Language.Text_Name.Value;
+		this.mWorldLvTextBlock.text = GameConfig.Language.Text_Grade.Value;
+
+		this.mRoomTextBlock.text = GameConfig.Language.Text_SwitchRoomLeaderboard.Value;
+		this.mWorldTextBlock.text = GameConfig.Language.Text_SwitchToTheFullServerRankingList.Value;
+
+		if (GlobalData.languageId == 0) {
+			this.mRoomRankTextBlock.fontSize = 35;
+			this.mRoomNameTextBlock.fontSize = 35;
+			this.mRoomLvTextBlock.fontSize = 35;
+			this.mRoomHeightTextBlock.fontSize = 35;
+			this.mRoomKillTextBlock.fontSize = 35;
+
+			this.mRankLvTextBlock.fontSize = 25;
+			this.mRankHeightTextBlock.fontSize = 25;
+			this.mRankKillTextBlock.fontSize = 25;
+
+			this.mWorldRankTextBlock.fontSize = 35;
+			this.mWorldNameTextBlock.fontSize = 35;
+			this.mWorldLvTextBlock.fontSize = 35;
+
+			this.mRoomTextBlock.fontSize = 15;
+			this.mWorldTextBlock.fontSize = 15;
+
+			this.mTitleTextBlock.fontSize = 30;
+		} else {
+			this.mRoomRankTextBlock.fontSize = 60;
+			this.mRoomNameTextBlock.fontSize = 60;
+			this.mRoomLvTextBlock.fontSize = 60;
+			this.mRoomHeightTextBlock.fontSize = 60;
+			this.mRoomKillTextBlock.fontSize = 60;
+
+			this.mRankLvTextBlock.fontSize = 35;
+			this.mRankHeightTextBlock.fontSize = 35;
+			this.mRankKillTextBlock.fontSize = 35;
+
+			this.mWorldRankTextBlock.fontSize = 60;
+			this.mWorldNameTextBlock.fontSize = 60;
+			this.mWorldLvTextBlock.fontSize = 60;
+
+			this.mRoomTextBlock.fontSize = 25;
+			this.mWorldTextBlock.fontSize = 25;
+
+			this.mTitleTextBlock.fontSize = 80;
+		}
 	}
 
 	private initData(): void {
@@ -160,8 +221,8 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 		this.currentShowCanvas = ShowCanvasType.Room;
 		this.mRoomCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
 		this.mWorldCanvas.visibility = mw.SlateVisibility.Collapsed;
-		this.mRankDesTextBlock.text = "你所在房间内的排行榜。\n点击右侧排行模式按钮会刷新排行榜模式。";
-		this.mTitleTextBlock.text = "房间排行榜";
+		this.mRankDesTextBlock.text = GameConfig.Language.Text_TheRankingListInYourRoom.Value;
+		this.mTitleTextBlock.text = GameConfig.Language.Text_RoomRanking.Value;
 	}
 
 	private showWorldCanvas(): void {
@@ -169,8 +230,8 @@ export class WorldRankPanel extends WorldRankPanel_Generate {
 		this.currentShowCanvas = ShowCanvasType.World;
 		this.mRoomCanvas.visibility = mw.SlateVisibility.Collapsed;
 		this.mWorldCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-		this.mRankDesTextBlock.text = `全服前${500}名\n段位 Lv.等级排行。`;
-		this.mTitleTextBlock.text = "全服排行榜";
+		this.mRankDesTextBlock.text = StringUtil.format(GameConfig.Language.Text_TopInTheEntireServer.Value, GlobalData.worldRankCount);
+		this.mTitleTextBlock.text = GameConfig.Language.Text_FullServerRankingList.Value;
 	}
 
 	protected onShow(...params: any[]): void {

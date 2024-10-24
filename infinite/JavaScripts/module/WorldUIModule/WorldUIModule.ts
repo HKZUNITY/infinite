@@ -1,5 +1,14 @@
 ﻿import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import { Utils } from "../../Tools/utils";
+import WorldTips_1_Generate from "../../ui-generate/common/WorldTips/WorldTips_1_generate";
+import WorldTips_2_Generate from "../../ui-generate/common/WorldTips/WorldTips_2_generate";
+import WorldTips_3_Generate from "../../ui-generate/common/WorldTips/WorldTips_3_generate";
+import WorldTips_4_Generate from "../../ui-generate/common/WorldTips/WorldTips_4_generate";
+import WorldTips_5_Generate from "../../ui-generate/common/WorldTips/WorldTips_5_generate";
+import WorldTips_6_Generate from "../../ui-generate/common/WorldTips/WorldTips_6_generate";
+import WorldTips_7_Generate from "../../ui-generate/common/WorldTips/WorldTips_7_generate";
+import WorldTips_Generate from "../../ui-generate/common/WorldTips/WorldTips_generate";
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
 import { BagModuleC } from "../BagModule/BagModule";
 import { LevelItem } from "../LevelModule/LevelModule";
@@ -23,11 +32,20 @@ export class WorldUI {
 }
 
 const worldUIs: Map<number, WorldUI> = new Map<number, WorldUI>();
-worldUIs.set(1, { name: "机甲女", worldUIId: "0D9A6CAC", worldUIName: `领取限定皮肤`, npcId: "2BC98814", skinId: "163553", triggerId: "1B51B317", bagId: 20063, adsCount: 10, currentAdsCount: 0, animationIds: ["285502"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
+worldUIs.set(1, { name: "机甲女", worldUIId: "0D9A6CAC", worldUIName: `Text_ClaimLimitedSkin`, npcId: "2BC98814", skinId: "163553", triggerId: "1B51B317", bagId: 20063, adsCount: 10, currentAdsCount: 0, animationIds: ["285502"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 worldUIs.set(2, { name: "机甲男", worldUIId: "", worldUIName: ``, npcId: "117D39D8", skinId: "164428", triggerId: "1DF5F6A5", bagId: 20062, adsCount: 5, currentAdsCount: 0, animationIds: ["285416"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 worldUIs.set(3, { name: "小舞", worldUIId: "", worldUIName: ``, npcId: "210CBFFD", skinId: "163292", triggerId: "0113105D", bagId: 20061, adsCount: 5, currentAdsCount: 0, animationIds: ["284840"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 worldUIs.set(4, { name: "自动攻击男", worldUIId: "", worldUIName: ``, npcId: "21F595BD", skinId: "142399", triggerId: "0B40F8AC", bagId: 10046, adsCount: 2, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
-worldUIs.set(5, { name: "自动攻击女", worldUIId: "07D9DF79", worldUIName: `领取自动攻击`, npcId: "2F801FDC", skinId: "303702", triggerId: "3E7DEC27", bagId: 10047, adsCount: 5, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
+worldUIs.set(5, { name: "自动攻击女", worldUIId: "07D9DF79", worldUIName: `Text_ClaimAutomaticAttack`, npcId: "2F801FDC", skinId: "303702", triggerId: "3E7DEC27", bagId: 10047, adsCount: 5, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
+
+const needRefreshWorldUI: string[] = ["2284425C", "05994F71"];
+const needRefreshWorldUI_1: string[] = ["307CC8EF"];
+const needRefreshWorldUI_2: string[] = ["1E7CB2D0"];
+const needRefreshWorldUI_3: string[] = ["2EAA4C1B"];
+const needRefreshWorldUI_4: string[] = ["3B4347A9"];
+const needRefreshWorldUI_5: string[] = ["06FBC7BE", "13F5AF43"];
+const needRefreshWorldUI_6: string[] = ["030E4F84"];
+const needRefreshWorldUI_7: string[] = ["394026C7"];
 export class WorldUIModuleC extends ModuleC<WorldUIModuleS, null> {
     private adTipsPanel: AdTipsPanel = null;
     private get getAdTipsPanel(): AdTipsPanel {
@@ -47,7 +65,6 @@ export class WorldUIModuleC extends ModuleC<WorldUIModuleS, null> {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -148,16 +165,73 @@ export class WorldUIModuleC extends ModuleC<WorldUIModuleS, null> {
                 mw.GameObject.asyncFindGameObjectById(value.worldUIId).then((worldUIGo: mw.GameObject) => {
                     let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
                     let levelItem = mw.UIService.create(LevelItem);
-                    levelItem.updateLevelTextBlock(value.worldUIName);
+                    levelItem.updateLevelTextBlock(GameConfig.Language[`${value.worldUIName}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
                 });
             }
+        });
+
+        needRefreshWorldUI.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_1.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_1_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_2.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_2_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_3.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_3_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_4.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_4_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_5.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_5_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_6.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_6_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
+        });
+        needRefreshWorldUI_7.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo: mw.GameObject) => {
+                let worldUI: mw.UIWidget = worldUIGo as mw.UIWidget;
+                let levelItem = mw.UIService.create(WorldTips_7_Generate);
+                worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
+            });
         });
     }
 
     private nextAds(value: WorldUI): void {
         if (this.getBagModuleC.isHasBagId(value.bagId)) {
-            Notice.showDownNotice(`已获得，打开背包使用`);
+            Notice.showDownNotice(GameConfig.Language.Text_ObtainedOpenTheBackpackToUse.Value);
             return;
         }
         this.getAdTipsPanel.showRewardAd(() => {
@@ -169,7 +243,9 @@ export class WorldUIModuleC extends ModuleC<WorldUIModuleS, null> {
                     this.nextAds(value);
                 });
             }
-        }, `观看${value.adsCount - value.currentAdsCount}次广告\n免费获得`, `取消`, `领取`);
+        }, StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, value.adsCount - value.currentAdsCount)
+            , GameConfig.Language.Text_Cancel.Value
+            , GameConfig.Language.Text_GetItForFree.Value);
     }
 }
 

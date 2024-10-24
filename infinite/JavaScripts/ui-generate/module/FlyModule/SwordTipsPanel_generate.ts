@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordTipsPanel.ui
- * TIME: 2024.10.19-11.22.57
+ * TIME: 2024.10.24-19.45.27
  */
  
 @UIBind('UI/module/FlyModule/SwordTipsPanel.ui')
@@ -15,12 +15,26 @@ export default class SwordTipsPanel_Generate extends UIScript {
 		}
 		return this.mCloseButton_Internal
 	}
-	private mContentTextBlock_Internal: mw.TextBlock
-	public get mContentTextBlock(): mw.TextBlock {
-		if(!this.mContentTextBlock_Internal&&this.uiWidgetBase) {
-			this.mContentTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock') as mw.TextBlock
+	private mContentTextBlock_0_Internal: mw.TextBlock
+	public get mContentTextBlock_0(): mw.TextBlock {
+		if(!this.mContentTextBlock_0_Internal&&this.uiWidgetBase) {
+			this.mContentTextBlock_0_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_0') as mw.TextBlock
 		}
-		return this.mContentTextBlock_Internal
+		return this.mContentTextBlock_0_Internal
+	}
+	private mContentTextBlock_1_Internal: mw.TextBlock
+	public get mContentTextBlock_1(): mw.TextBlock {
+		if(!this.mContentTextBlock_1_Internal&&this.uiWidgetBase) {
+			this.mContentTextBlock_1_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_1') as mw.TextBlock
+		}
+		return this.mContentTextBlock_1_Internal
+	}
+	private mContentTextBlock_2_Internal: mw.TextBlock
+	public get mContentTextBlock_2(): mw.TextBlock {
+		if(!this.mContentTextBlock_2_Internal&&this.uiWidgetBase) {
+			this.mContentTextBlock_2_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainCanvas/BgImage/mContentTextBlock_2') as mw.TextBlock
+		}
+		return this.mContentTextBlock_2_Internal
 	}
 	private mDiamondButton_Internal: mw.Button
 	public get mDiamondButton(): mw.Button {
@@ -85,7 +99,13 @@ export default class SwordTipsPanel_Generate extends UIScript {
 		
 		//文本多语言
 		
-		this.initLanguage(this.mContentTextBlock)
+		this.initLanguage(this.mContentTextBlock_0)
+		
+	
+		this.initLanguage(this.mContentTextBlock_1)
+		
+	
+		this.initLanguage(this.mContentTextBlock_2)
 		
 	
 		this.initLanguage(this.mDiamondTextBlock)

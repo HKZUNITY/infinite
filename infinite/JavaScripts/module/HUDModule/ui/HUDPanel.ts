@@ -8,6 +8,7 @@ import { ColdWeapon } from "../../../Prefabs/冷兵器/Script/ColdWeapon";
 import Console from "../../../Tools/Console";
 import { Tween, Utils, cubicBezier } from "../../../Tools/utils";
 import { Notice } from "../../../common/notice/Notice";
+import { GameConfig } from "../../../config/GameConfig";
 import GlobalData from "../../../const/GlobalData";
 import HUDPanel_Generate from "../../../ui-generate/module/HUDModule/HUDPanel_generate";
 import KillTipItem_Generate from "../../../ui-generate/module/HUDModule/KillTipItem_generate";
@@ -41,6 +42,42 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.bindButtons();
 		this.initUI();
 		this.initRoleData();
+		this.initTextBlock();
+	}
+
+	private initTextBlock(): void {
+		this.mFlyTextBlock.text = GameConfig.Language.Text_SwordFlying.Value;
+		this.mAutoAtkTextBlock.text = GameConfig.Language.Text_AutomaticAttack.Value;
+		this.mMusicTextBlock.text = GameConfig.Language.Text_BackgroundMusic.Value;
+		this.mHomeTextBlock.text = GameConfig.Language.Text_ClickOnMeToGoHome.Value;
+		this.mShopTextBlock.text = GameConfig.Language.Text_Knapsack.Value;
+		this.mRankTextBlock.text = GameConfig.Language.Text_RankingList.Value;
+		this.mLotteryTextBlock.text = GameConfig.Language.Text_GoldCoinLottery.Value;
+		this.mTaskTextBlock.text = GameConfig.Language.Text_CollectingTasks.Value;
+		this.mSignInTextBlock.text = GameConfig.Language.Text_SignIn.Value;
+		this.mAdsTextBlock.text = GameConfig.Language.Text_FreeUpgrade_Simoleness.Value;
+		this.mArkTextBlock.text = GameConfig.Language.Text_RechargeDiamonds.Value;
+		this.mGetTextBlock.text = GameConfig.Language.Text_ExchangeRewards.Value;
+		this.mRingSoulTextBlock.text = GameConfig.Language.Text_ForgeSoulRings.Value;
+		this.mNewPeopleTextBlock.text = GameConfig.Language.Text_NoviceGiftPack.Value;
+		this.mSwordTextBlock.text = GameConfig.Language.Text_SwordFlying.Value;
+		this.mSoulBoneTextBlock.text = GameConfig.Language.Text_ForgeSoulBones.Value;
+		this.mTipsInvincibleTextBlock.text = GameConfig.Language.Text_DoYouWantToActivateTeammateAccidentalInjury.Value;
+		this.mUpExpTextBlock.text = GameConfig.Language.Text_EnableAfk.Value;
+
+		if (GlobalData.languageId == 0) {
+			this.mTipsInvincibleTextBlock.fontSize = 10;
+			this.mInvincibleTextBlock.fontSize = 15;
+			this.mShopTextBlock.fontSize = 18;
+			this.mArkTextBlock.fontSize = 18;
+			this.mGetTextBlock.fontSize = 18;
+		} else {
+			this.mTipsInvincibleTextBlock.fontSize = 18;
+			this.mInvincibleTextBlock.fontSize = 25;
+			this.mShopTextBlock.fontSize = 20;
+			this.mArkTextBlock.fontSize = 20;
+			this.mGetTextBlock.fontSize = 20;
+		}
 	}
 
 	/**绑定按钮 */
@@ -83,6 +120,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mAddDiamondButton.onClicked.add(() => {
 			this.getHudModuleC.onAddDiamondAction.call();
 		});
+		this.mAddBoneButton.onClicked.add(() => {
+			this.getHudModuleC.onAddBoneAction.call();
+		});
 		this.mAdsButton.onClicked.add(() => {
 			this.getHudModuleC.onAdsAction.call();
 		});
@@ -93,10 +133,10 @@ export default class HUDPanel extends HUDPanel_Generate {
 			this.getHudModuleC.onOpenRingSoulAction.call();
 		});
 		let isInvincible: boolean = false;
-		this.mInvincibleTextBlock.text = "已关闭防御";
+		this.mInvincibleTextBlock.text = GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
 		this.mInvincibleButton.onClicked.add(() => {
 			isInvincible = !isInvincible;
-			this.mInvincibleTextBlock.text = isInvincible ? "已开启防御" : "已关闭防御";
+			this.mInvincibleTextBlock.text = isInvincible ? GameConfig.Language.Text_DefenseActivated.Value : GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
 			this.getHudModuleC.onInvincibleAction.call(isInvincible);
 		});
 		this.mOnlineRewardButton.normalImageGuid = "193281";
@@ -105,11 +145,11 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.bindMusicButton();
 
 		let isOpenRingSoul: boolean = true;
-		this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? "收起" : "开启";
+		this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? GameConfig.Language.Text_PutItAway.Value : GameConfig.Language.Text_Open.Value;
 		this.mOnOffRingSoulButton.onClicked.add(() => {
 			if (!this.getRingSoulModuleC.isCanOpenRingSoul) return;
 			if (!this.isCanOnRingSoul) {
-				Notice.showDownNotice(`5秒冷却`);
+				Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 5));
 				return;
 			}
 			this.isCanOnRingSoul = false;
@@ -117,7 +157,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 				this.isCanOnRingSoul = true;
 			});
 			isOpenRingSoul = !isOpenRingSoul;
-			this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? "收起" : "开启";
+			this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? GameConfig.Language.Text_PutItAway.Value : GameConfig.Language.Text_Open.Value;
 			this.getHudModuleC.onOnOffRingSoulAction.call(isOpenRingSoul);
 		});
 		this.mArkButton.onClicked.add(() => {
@@ -158,7 +198,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 	public updateInvincibleCanvasState(visibility: boolean): void {
 		Utils.setWidgetVisibility(this.mInvincibleCanvas, visibility ? mw.SlateVisibility.SelfHitTestInvisible : mw.SlateVisibility.Collapsed);
-		this.mInvincibleTextBlock.text = visibility ? "已开启防御" : "已关闭防御";
+		this.mInvincibleTextBlock.text = visibility ? GameConfig.Language.Text_DefenseActivated.Value : GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
 	}
 
 	private isCanOnRingSoul: boolean = true;
@@ -288,7 +328,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 	private killTipsTimeOutId1: any = null;
 	private killTipsTimeOutId2: any = null;
 	public showKillTips1(killTips: string, killerName: string, killedName: string): void {
-		Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + " 击败了 " + killedName + "</size>" + "</color>"
+		Notice.showDownNotice("<color=#lime>" + "<size=18>" + killerName + ` ${GameConfig.Language.Text_Defeated.Value} ` + killedName + "</size>" + "</color>"
 			+ "\n" + "<color=#red>" + killTips + "</color>");
 	}
 
@@ -303,9 +343,9 @@ export default class HUDPanel extends HUDPanel_Generate {
 		if (killTipType == KillTipType.None) return;
 		this.clearKillTipsTimeOutId2();
 		if (killTipType == KillTipType.Killed) {
-			this.mKillTipTextBlock3.text = "你已被 " + killerName + " 击败";
+			this.mKillTipTextBlock3.text = StringUtil.format(GameConfig.Language.Text_YouHaveBeenDefeatedBy.Value, killerName);
 		} else if (killTipType == KillTipType.revenge) {
-			this.mKillTipTextBlock3.text = "击败 " + killedName + " 完成复仇";
+			this.mKillTipTextBlock3.text = StringUtil.format(GameConfig.Language.Text_DefeatToCompleteRevenge.Value, killedName);
 		}
 		Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
 		this.killTipsTimeOutId2 = setTimeout(() => {
@@ -330,14 +370,14 @@ export default class HUDPanel extends HUDPanel_Generate {
 	}
 
 	public async updateLvExpCoin(lv: number, exp: number, coin: number, addAtk: number): Promise<void> {
-		this.mLvTextBlock.text = `等级 ${await Utils.getLvText(lv, Player.localPlayer.userId)}`;
+		this.mLvTextBlock.text = `${GameConfig.Language.Text_Grade_MaoHao.Value}${await Utils.getLvText(lv, Player.localPlayer.userId)}`;
 		this.mExpProgressBar.currentValue = exp / ((lv + 1) * GlobalData.upgradeExpMultiple);
-		this.mExpTextBlock.text = `经验：${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
+		this.mExpTextBlock.text = `${GameConfig.Language.Text_Experience.Value}${Math.round(exp).toFixed(0)}/${((lv + 1) * GlobalData.upgradeExpMultiple)}`;
 		this.mCoinTextBlock.text = `${Utils.integerUnitConversionStr(Math.round(coin))}`
 		Event.dispatchToLocal(`UpdateCoinTextBlock`, coin);
 		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;
-		this.mAtkTextBlock.text = "攻击力：" + atk;
+		this.mAtkTextBlock.text = `${GameConfig.Language.Text_Aggressivity.Value}${atk}`;
 		ColdWeapon.getInstance().updateHitDamage(atk);
 
 		if (!this.isUnlockSkill_1) {
@@ -347,7 +387,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 				this.mSkillCDTextBlock_1.text = ``;
 			} else {
 				this.mSkillCDTextBlock_1.fontSize = 25;
-				this.mSkillCDTextBlock_1.text = `${GlobalData.skillLvLimit_1}级解锁`;
+				this.mSkillCDTextBlock_1.text = `${GlobalData.skillLvLimit_1}${GameConfig.Language.Text_LevelUnlock.Value}`;
 			}
 		}
 	}
@@ -355,8 +395,12 @@ export default class HUDPanel extends HUDPanel_Generate {
 	public updateAtk(lv: number, addAtk: number): void {
 		let atk = Math.round(Utils.getAtk(lv) * addAtk);
 		GlobalData.atk = atk;
-		this.mAtkTextBlock.text = "攻击力：" + atk;
+		this.mAtkTextBlock.text = `${GameConfig.Language.Text_Aggressivity.Value}${atk}`;
 		ColdWeapon.getInstance().updateHitDamage(atk);
+	}
+
+	public updateBone(bone: number): void {
+		this.mBoneextBlock.text = `${bone}`;
 	}
 
 	public updateCoin(coin: number): void {
@@ -379,7 +423,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		GlobalData.hp = maxHp;
 		if (curHp > maxHp) curHp = maxHp;
 		this.mHpProgressBar.currentValue = curHp / maxHp;
-		this.mHpTextBlock.text = `血量：${curHp}/${maxHp}`;
+		this.mHpTextBlock.text = `${GameConfig.Language.Text_BloodVolume.Value}${curHp}/${maxHp}`;
 
 		if (this.mHpProgressBar.currentValue == 1) {
 			this.endDeadCountDown();
@@ -398,8 +442,8 @@ export default class HUDPanel extends HUDPanel_Generate {
 	private atk(index: number): void {
 		this.mAtkButton.onPressed.add(() => {
 			if (this.getHudModuleC.getMp < 5) {
-				Notice.showDownNotice(`${GlobalData.mpStr}不足`);
-				Notice.showDownNotice(`升级增加${GlobalData.mpStr}储量`);
+				Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
+				Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
 				return;
 			}
 			if (this.curInputIndex != -1) return;
@@ -419,16 +463,16 @@ export default class HUDPanel extends HUDPanel_Generate {
 	private isUnlockSkill_1: boolean = false;
 	private skillIsCanAtk_1: boolean = true;
 	private initSkill_1(): void {
-		this.mSkillTextBlock_1.text = `<size=20>${GlobalData.skillName_1}</size>\n<size=10>${GlobalData.skillContinue_1}秒内攻击力翻倍</size>`;
+		this.mSkillTextBlock_1.text = `<size=20>${GlobalData.skillName_1}</size>\n<size=10>${GlobalData.skillContinue_1}${GameConfig.Language.Text_DoubleTheAttackPowerWithinSeconds.Value}</size>`;
 		this.mSkillMaskButton_1.fanShapedValue = 1;
 		this.mSkillMaskButton_1.clickedDelegate.add(() => {
 			Event.dispatchToLocal("PlayButtonClick", this.mSkillMaskButton_1.name);
 			if (!this.isUnlockSkill_1) {
-				Notice.showDownNotice(`${GlobalData.skillLvLimit_1}级开启${GlobalData.skillName_1}`);
+				Notice.showDownNotice(`${GlobalData.skillLvLimit_1}${GameConfig.Language.Text_LevelOpen.Value}${GlobalData.skillName_1}`);
 				return;
 			}
 			if (!this.skillIsCanAtk_1) {
-				Notice.showDownNotice(`技能还没准备好`);
+				Notice.showDownNotice(GameConfig.Language.Text_TheSkillsAreNotReadyYet.Value);
 				return;
 			}
 			this.getHudModuleC.onSkillAction.call((isCakAtk: boolean) => {
@@ -946,7 +990,11 @@ export default class HUDPanel extends HUDPanel_Generate {
 
 export class KillTipItem extends KillTipItem_Generate {
 	protected onAwake(): void {
+		this.initTextBlock();
+	}
 
+	private initTextBlock(): void {
+		this.mKillTextBlock.text = ` ${GameConfig.Language.Text_Defeated.Value} `
 	}
 
 	public setInfo(killTipDatas: KillTipData): void {

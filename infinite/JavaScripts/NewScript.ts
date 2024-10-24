@@ -45,7 +45,7 @@ export default class NewScript extends Script {
             trigger.onEnter.add((char: mw.Character) => {
                 if (char.gameObjectId != Player.localPlayer.character.gameObjectId) return;
                 if (this.getBagModuleC.isHasBagId(this.bagId)) {
-                    Notice.showDownNotice(`已获得，打开背包使用`);
+                    Notice.showDownNotice(GameConfig.Language.Text_ObtainedOpenTheBackpackToUse.Value);
                     return;
                 }
                 this.nextAds();
@@ -64,7 +64,9 @@ export default class NewScript extends Script {
                     this.nextAds();
                 });
             }
-        }, `观看${this.adsCount - this.curAdsCount}次广告\n免费获得`, `取消`, `领取`);
+        }, StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, this.adsCount - this.curAdsCount)
+            , GameConfig.Language.Text_Cancel.Value
+            , GameConfig.Language.Text_FreeToReceive.Value);
     }
 
     /**

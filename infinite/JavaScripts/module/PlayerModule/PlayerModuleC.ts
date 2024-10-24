@@ -3,6 +3,7 @@ import { Utils } from "../../Tools/utils";
 import { ExplosiveCoins } from "../../common/ExplosiveCoins";
 import { FlyText } from "../../common/FlyText";
 import { Notice } from "../../common/notice/Notice";
+import { GameConfig } from "../../config/GameConfig";
 import GlobalData from "../../const/GlobalData";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import TaskModuleC from "../TaskModule/TaskModuleC";
@@ -48,13 +49,18 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         Event.addLocalListener(`SyncCoinCount`, () => {
             Event.dispatchToLocal(`UpdateCoinTextBlock`, this.getCoin());
         });
+        Event.addLocalListener(`SyncBoneCount`, () => {
+            Event.dispatchToLocal(`UpdateBoneTextBlock`, this.getBone);
+        });
     }
 
     protected onEnterScene(sceneType: number): void {
         this.coin = this.data.coin;
         this.diamond = this.data.diamond;
+        this.bone = this.data.bone;
         this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.coin, true);
         this.getHudModuleC.updateDiamond(this.diamond);
+        this.getHudModuleC.updateBone(this.bone);
     }
 
     protected onUpdate(dt: number): void {
@@ -72,8 +78,8 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         FlyText.instance.showFlyText("-" + damage, hitPoint, fontColor[0], fontColor[1]);
         if (isDie) {
             ExplosiveCoins.instance.explosiveCoins(new mw.Vector(hitPoint.x, hitPoint.y, hitPoint.z / 2), maxHp / 10, Utils.getRandomInteger(5, 10));
-            Notice.showDownNotice("增加" + maxHp / 10 + "金币");
-            Notice.showDownNotice("增加" + maxHp / 10 + "经验");
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_IncreaseCoins.Value, maxHp / 10));
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_IncreaseExperience.Value, maxHp / 10));
         }
     }
 
@@ -81,9 +87,9 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         let playerLv = this.data.playerLv;
         this.getHudModuleC.updateLvExpCoin(playerLv, this.data.exp, this.data.coin, isAddLv);
         if (this.data.coin != this.coin) this.coin = this.data.coin;
-        if (coin > 0) Notice.showDownNotice(`获得${coin}金币`);
+        if (coin > 0) Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_GetCoins.Value, coin));
         if (isAddLv) {
-            Notice.showDownNotice("等级提升至 " + await Utils.getLvText(playerLv, this.localPlayer.userId) + " Lv." + playerLv);
+            Notice.showDownNotice(`${GameConfig.Language.Text_UpgradeLevelTo.Value} ` + await Utils.getLvText(playerLv, this.localPlayer.userId) + " Lv." + playerLv);
             this.getTaskModuleC.upLv(playerLv);
         }
     }
@@ -135,13 +141,32 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         return this.diamond;
     }
 
+    private bone: number = 0;
+    public saveBone(value: number): void {
+        this.bone += value;
+        this.getHudModuleC.updateBone(this.bone);
+        Event.dispatchToLocal(`UpdateBoneTextBlock`, this.getBone);
+        this.server.net_saveBone(value);
+    }
+
+    public get getBone(): number {
+        return this.bone;
+    }
+
+    public net_setBone(bone: number): void {
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_RewardSoulBone.Value, bone - this.bone));
+        this.bone = bone;
+        this.getHudModuleC.updateBone(this.bone);
+        Event.dispatchToLocal(`UpdateBoneTextBlock`, this.getBone);
+    }
+
     /**
      * 更新金币
      * @param value 
      */
     public net_updateCoin(value: number): void {
         this.getHudModuleC.updateCoin(this.data.coin + value);
-        Notice.showDownNotice("获得" + value + "金币");
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_GetCoins.Value, value));
     }
 
     public saveCoinAndExp(coin: number, exp: number): void {
@@ -177,7 +202,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
     private invincible: boolean = false;
     public isInvincible(isInvincible: boolean): void {
         if (this.invincible == isInvincible) return;
-        Notice.showDownNotice(isInvincible ? "已开启防御" : "已关闭防御");
+        Notice.showDownNotice(isInvincible ? GameConfig.Language.Text_DefenseActivated.Value : GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value);
         this.invincible = isInvincible;
         this.server.net_isInvincible(isInvincible);
     }

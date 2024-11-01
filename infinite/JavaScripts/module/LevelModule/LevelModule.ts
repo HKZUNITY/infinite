@@ -86,7 +86,7 @@ export class LevelPanel extends LevelPanel_Generate {
     }
 
     public updateLevelTextBlock(key: number, level: number): void {
-        this.mLevelTextBlock.text = `${level}${GameConfig.Language.Text_Level.Value}\n${levelMap.get(key).name}`;
+        this.mLevelTextBlock.text = `${level}${GameConfig.Language.Text_Level.Value}\n${GameConfig.Language[`${levelMap.get(key).name}`].Value}`;
         this.show();
     }
 }

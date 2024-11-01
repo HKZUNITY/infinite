@@ -142,7 +142,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         let names: string[] = [];
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
         names.push(Utils.randomNpcName(monsterId));
-        this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
+        this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1], true);
         this.saveBone(sendPlayer, hp);
     }
 
@@ -159,8 +159,8 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
         // this.getTaskModuleS.killMonster(sendPlayer, monsterId);//TODO
         let names: string[] = [];
         names.push(this.getWorldModuleS.getNameByUserId(sendPlayer.userId));
-        names.push(`${level}级${Utils.randomNpcName(monsterId)}`);
-        this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1]);
+        names.push(`${level}-${Utils.randomNpcName(monsterId)}`);
+        this.getAllClient().net_killTip(sendPlayer.userId, names[0], "-1", names[1], true, true);
         this.getLevelModuleS.startLevel(sendPlayer, key);
         this.saveBone(sendPlayer, hp);
     }

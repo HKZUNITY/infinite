@@ -614,25 +614,42 @@ export class Utils {
     public static randomNpcName(monsterId: number): string {
         switch (monsterId) {
             case 1:
-                return GameConfig.Language.Text_WarcraftMedusa.Value;
+                return `Text_WarcraftMedusa`;
             case 2:
-                return GameConfig.Language.Text_WarcraftColorfulSpider.Value;
+                return `Text_WarcraftColorfulSpider`;
             case 3:
-                return GameConfig.Language.Text_WarcraftSpiderSpirit.Value;
+                return `Text_WarcraftSpiderSpirit`;
             case 4:
-                return GameConfig.Language.Text_DragonSWarcraft.Value;
+                return `Text_DragonSWarcraft`;
             case 5:
-                return GameConfig.Language.Text_Zombies.Value;
+                return `Text_Zombies`;
             case 6:
-                return GameConfig.Language.Text_MutatedPuppet.Value;
+                return `Text_MutatedPuppet`;
             case 100:
-                return GameConfig.Language.Text_BlackWukong.Value;
+                return `Text_BlackWukong`;
         }
-        if (GlobalData.languageId == 0) {
-            return GameConfig.Language.Text_MickeyMouse.Value;
-        } else {
-            return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
-        }
+
+        // switch (monsterId) {
+        //     case 1:
+        //         return GameConfig.Language.Text_WarcraftMedusa.Value;
+        //     case 2:
+        //         return GameConfig.Language.Text_WarcraftColorfulSpider.Value;
+        //     case 3:
+        //         return GameConfig.Language.Text_WarcraftSpiderSpirit.Value;
+        //     case 4:
+        //         return GameConfig.Language.Text_DragonSWarcraft.Value;
+        //     case 5:
+        //         return GameConfig.Language.Text_Zombies.Value;
+        //     case 6:
+        //         return GameConfig.Language.Text_MutatedPuppet.Value;
+        //     case 100:
+        //         return GameConfig.Language.Text_BlackWukong.Value;
+        // }
+        // if (GlobalData.languageId == 0) {
+        //     return GameConfig.Language.Text_MickeyMouse.Value;
+        // } else {
+        //     return this.npcNames[this.getRandomInteger(0, this.npcNames.length - 1)];
+        // }
     }
 
     // private static tens: string[] = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];

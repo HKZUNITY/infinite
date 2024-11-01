@@ -1,5 +1,6 @@
 ﻿import { Notice } from "../../common/notice/Notice";
 import { GameConfig } from "../../config/GameConfig";
+import GlobalData from "../../const/GlobalData";
 import { Utils } from "../../Tools/utils";
 import WorldTips_1_Generate from "../../ui-generate/common/WorldTips/WorldTips_1_generate";
 import WorldTips_2_Generate from "../../ui-generate/common/WorldTips/WorldTips_2_generate";
@@ -12,6 +13,7 @@ import WorldTips_Generate from "../../ui-generate/common/WorldTips/WorldTips_gen
 import AdTipsPanel from "../AdsModule/ui/AdTipsPanel";
 import { BagModuleC } from "../BagModule/BagModule";
 import { LevelItem } from "../LevelModule/LevelModule";
+import PlayerModuleC from "../PlayerModule/PlayerModuleC";
 
 export class WorldUI {
     /** 世界UI的ID */
@@ -37,6 +39,7 @@ worldUIs.set(2, { name: "机甲男", worldUIId: "", worldUIName: ``, npcId: "117
 worldUIs.set(3, { name: "小舞", worldUIId: "", worldUIName: ``, npcId: "210CBFFD", skinId: "163292", triggerId: "0113105D", bagId: 20061, adsCount: 5, currentAdsCount: 0, animationIds: ["284840"], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 worldUIs.set(4, { name: "自动攻击男", worldUIId: "", worldUIName: ``, npcId: "21F595BD", skinId: "142399", triggerId: "0B40F8AC", bagId: 10046, adsCount: 2, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
 worldUIs.set(5, { name: "自动攻击女", worldUIId: "07D9DF79", worldUIName: `Text_ClaimAutomaticAttack`, npcId: "2F801FDC", skinId: "303702", triggerId: "3E7DEC27", bagId: 10047, adsCount: 5, currentAdsCount: 0, animationIds: ["85125", "20267"], delayPlayEffects: [350, 250], effectIds: ["168946", "168946"], effectLocs: [new mw.Vector(180, 30, 70), new mw.Vector(-90, 20, 0)] });
+worldUIs.set(6, { name: "大量钻石", worldUIId: "325C5022", worldUIName: `Text_LotsOfDiamonds`, npcId: "", skinId: "", triggerId: "", bagId: -1, adsCount: 0, currentAdsCount: 0, animationIds: [], delayPlayEffects: [], effectIds: [], effectLocs: [] });
 
 const needRefreshWorldUI: string[] = ["2284425C", "05994F71"];
 const needRefreshWorldUI_1: string[] = ["307CC8EF"];
@@ -46,6 +49,7 @@ const needRefreshWorldUI_4: string[] = ["3B4347A9"];
 const needRefreshWorldUI_5: string[] = ["06FBC7BE", "13F5AF43"];
 const needRefreshWorldUI_6: string[] = ["030E4F84"];
 const needRefreshWorldUI_7: string[] = ["394026C7"];
+const diamondTrigger: string[] = ["1271E55D"];
 export class WorldUIModuleC extends ModuleC<WorldUIModuleS, null> {
     private adTipsPanel: AdTipsPanel = null;
     private get getAdTipsPanel(): AdTipsPanel {
@@ -61,6 +65,14 @@ export class WorldUIModuleC extends ModuleC<WorldUIModuleS, null> {
             this.bagModuleC = ModuleService.getModule(BagModuleC);
         }
         return this.bagModuleC;
+    }
+
+    private playerModuleC: PlayerModuleC = null;
+    private get getPlayerModuleC(): PlayerModuleC {
+        if (!this.playerModuleC) {
+            this.playerModuleC = ModuleService.getModule(PlayerModuleC);
+        }
+        return this.playerModuleC;
     }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
@@ -227,6 +239,33 @@ export class WorldUIModuleC extends ModuleC<WorldUIModuleS, null> {
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
             });
         });
+
+        diamondTrigger.forEach((value: string) => {
+            mw.GameObject.asyncFindGameObjectById(value).then((triggerGo: mw.GameObject) => {
+                let trigger = triggerGo as mw.Trigger;
+                trigger.onEnter.add((character: mw.Character) => {
+                    if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
+                    this.getDiamonds();
+                });
+            });
+        });
+    }
+
+    private currentGetDiamondCount: number = 10;
+    private getDiamonds(): void {
+        if (GlobalData.isOpenIAA) {
+            this.getAdTipsPanel.showRewardAd(() => {
+                Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount * this.currentGetDiamondCount));
+                this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount * this.currentGetDiamondCount);
+                this.currentGetDiamondCount++;
+            }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount * this.currentGetDiamondCount)
+                , GameConfig.Language.Text_Cancel.Value
+                , GameConfig.Language.Text_FreeToReceive.Value);
+        } else {
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount * this.currentGetDiamondCount));
+            this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount * this.currentGetDiamondCount);
+            this.currentGetDiamondCount++;
+        }
     }
 
     private nextAds(value: WorldUI): void {

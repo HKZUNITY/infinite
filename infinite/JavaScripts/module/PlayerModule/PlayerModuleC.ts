@@ -207,7 +207,15 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         this.server.net_isInvincible(isInvincible);
     }
 
-    public net_killTip(killerUserId: string, killerName: string, killedUserId: string, killedName: string): void {
+    public net_killTip(killerUserId: string, killerName: string, killedUserId: string, killedName: string, isKillNpc: boolean = false, isSplit: boolean = false): void {
+        if (isKillNpc) {
+            if (isSplit) {
+                let strs = killedName.split(`-`);
+                killedName = `${strs[0]}${GameConfig.Language.Text_Level.Value}${GameConfig.Language[`${strs[1]}`].Value}`
+            } else {
+                killedName = GameConfig.Language[`${killedName}`].Value;
+            }
+        }
         this.getHudModuleC.killTip(killerUserId, killerName, killedUserId, killedName);
     }
 

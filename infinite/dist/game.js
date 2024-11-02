@@ -21993,7 +21993,7 @@ class PlayerModuleS extends ModuleS {
         this.currentData.saveBone(value);
     }
     saveBone(player, hp) {
-        let bone = DataCenterS.getData(player, PlayerData).getBone(1);
+        let bone = DataCenterS.getData(player, PlayerData).getBone(Utils.getRandomInteger(1, 5) == 1 ? Utils.getRandomInteger(1, 20) : Utils.getRandomInteger(20, 100));
         this.getClient(player).net_setBone(bone);
     }
     /**
@@ -24688,9 +24688,11 @@ class GiftBagPanel extends GiftBagPanel_Generate$1 {
         this.mInputBox.hintString = GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value;
         if (GlobalData.languageId == 0) {
             this.mInputTipsTextBlock.fontSize = 28;
+            this.mInputBox.hintString = ``;
         }
         else {
             this.mInputTipsTextBlock.fontSize = 60;
+            this.mInputBox.hintString = GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value;
         }
     }
     bindButton() {

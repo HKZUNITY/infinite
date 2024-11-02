@@ -367,7 +367,7 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
     }
 
     public saveBone(player: mw.Player, hp: number): void {
-        let bone = DataCenterS.getData(player, PlayerData).getBone(1);
+        let bone = DataCenterS.getData(player, PlayerData).getBone(Utils.getRandomInteger(1, 5) == 1 ? Utils.getRandomInteger(1, 20) : Utils.getRandomInteger(20, 100));
         this.getClient(player).net_setBone(bone);
     }
 

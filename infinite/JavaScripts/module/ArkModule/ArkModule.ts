@@ -430,6 +430,7 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
         }
         return this.arkModuleC;
     }
+
     protected onStart(): void {
         this.initUI();
         this.bindButton();
@@ -443,8 +444,10 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
 
         if (GlobalData.languageId == 0) {
             this.mInputTipsTextBlock.fontSize = 28;
+            this.mInputBox.hintString = ``;
         } else {
             this.mInputTipsTextBlock.fontSize = 60;
+            this.mInputBox.hintString = GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value;
         }
     }
 

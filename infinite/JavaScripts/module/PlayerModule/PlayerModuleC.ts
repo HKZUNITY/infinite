@@ -61,6 +61,7 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         this.getHudModuleC.updateLvExpCoin(this.data.playerLv, this.data.exp, this.coin, true);
         this.getHudModuleC.updateDiamond(this.diamond);
         this.getHudModuleC.updateBone(this.bone);
+        this.initDayStr();
     }
 
     protected onUpdate(dt: number): void {
@@ -248,5 +249,20 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         });
         this.server.net_skill_1();
         SoundService.playSound(GlobalData.skillSoundId_1);
+    }
+
+    private initDayStr(): void {
+        if (GlobalData.languageId == 0) return;
+        this.dayStr = this.data.dayStr;
+        TimeUtil.delaySecond(30).then(() => {
+            if (this.dayStr != Utils.getDay()) {
+                this.getHudModuleC.showDayStr();
+            }
+        });
+    }
+
+    private dayStr: string = "";
+    public setDayStr(datStr: string): void {
+        this.server.net_setDayStr(datStr);
     }
 }

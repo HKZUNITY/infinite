@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SoulBoneModule/StarItem.ui
- * TIME: 2024.10.24-19.45.28
+ * TIME: 2024.11.04-19.49.53
  */
  
 @UIBind('UI/module/SoulBoneModule/StarItem.ui')

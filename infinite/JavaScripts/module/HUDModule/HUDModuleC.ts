@@ -670,6 +670,18 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         if (!worldConfigDatas || worldConfigDatas.length == 0) return;
         Utils.setWorldConfigData(worldConfigDatas);
     }
+
+    public showDayStr(): void {
+        this.getHudPanel.showDayStr();
+    }
+
+    public getDayStr(): void {
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_GetDiamondsForFree.Value, 1088));
+        Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_GetCoins.Value, 28888888));
+        this.getPlayerModuleC.saveDiamond(1088);
+        this.getPlayerModuleC.saveCoin(28888888);
+        this.getPlayerModuleC.setDayStr(Utils.getDay());
+    }
 }
 
 export class KillTipData {

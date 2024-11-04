@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.10.24-19.45.27
+ * TIME: 2024.11.04-19.49.52
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -680,6 +680,69 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mAddDiamondButton_Internal
 	}
+	private mDayStrCanvas_Internal: mw.Canvas
+	public get mDayStrCanvas(): mw.Canvas {
+		if(!this.mDayStrCanvas_Internal&&this.uiWidgetBase) {
+			this.mDayStrCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas') as mw.Canvas
+		}
+		return this.mDayStrCanvas_Internal
+	}
+	private mDayStr1Canvas_Internal: mw.Canvas
+	public get mDayStr1Canvas(): mw.Canvas {
+		if(!this.mDayStr1Canvas_Internal&&this.uiWidgetBase) {
+			this.mDayStr1Canvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStr1Canvas') as mw.Canvas
+		}
+		return this.mDayStr1Canvas_Internal
+	}
+	private mDayStr1IconImage_Internal: mw.Image
+	public get mDayStr1IconImage(): mw.Image {
+		if(!this.mDayStr1IconImage_Internal&&this.uiWidgetBase) {
+			this.mDayStr1IconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStr1Canvas/mDayStr1IconImage') as mw.Image
+		}
+		return this.mDayStr1IconImage_Internal
+	}
+	private mDayStr1TextBlock_Internal: mw.TextBlock
+	public get mDayStr1TextBlock(): mw.TextBlock {
+		if(!this.mDayStr1TextBlock_Internal&&this.uiWidgetBase) {
+			this.mDayStr1TextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStr1Canvas/mDayStr1TextBlock') as mw.TextBlock
+		}
+		return this.mDayStr1TextBlock_Internal
+	}
+	private mDayStr2Canvas_Internal: mw.Canvas
+	public get mDayStr2Canvas(): mw.Canvas {
+		if(!this.mDayStr2Canvas_Internal&&this.uiWidgetBase) {
+			this.mDayStr2Canvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStr2Canvas') as mw.Canvas
+		}
+		return this.mDayStr2Canvas_Internal
+	}
+	private mDayStr2IconImage_Internal: mw.Image
+	public get mDayStr2IconImage(): mw.Image {
+		if(!this.mDayStr2IconImage_Internal&&this.uiWidgetBase) {
+			this.mDayStr2IconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStr2Canvas/mDayStr2IconImage') as mw.Image
+		}
+		return this.mDayStr2IconImage_Internal
+	}
+	private mDayStr2TextBlock_Internal: mw.TextBlock
+	public get mDayStr2TextBlock(): mw.TextBlock {
+		if(!this.mDayStr2TextBlock_Internal&&this.uiWidgetBase) {
+			this.mDayStr2TextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStr2Canvas/mDayStr2TextBlock') as mw.TextBlock
+		}
+		return this.mDayStr2TextBlock_Internal
+	}
+	private mDayStrButton_Internal: mw.Button
+	public get mDayStrButton(): mw.Button {
+		if(!this.mDayStrButton_Internal&&this.uiWidgetBase) {
+			this.mDayStrButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStrButton') as mw.Button
+		}
+		return this.mDayStrButton_Internal
+	}
+	private mDayStrTimeTextBlock_Internal: mw.TextBlock
+	public get mDayStrTimeTextBlock(): mw.TextBlock {
+		if(!this.mDayStrTimeTextBlock_Internal&&this.uiWidgetBase) {
+			this.mDayStrTimeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mDayStrCanvas/mDayStrButton/mDayStrTimeTextBlock') as mw.TextBlock
+		}
+		return this.mDayStrTimeTextBlock_Internal
+	}
 	private mKillTipCanvas_Internal: mw.Canvas
 	public get mKillTipCanvas(): mw.Canvas {
 		if(!this.mKillTipCanvas_Internal&&this.uiWidgetBase) {
@@ -948,6 +1011,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mAddDiamondButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mDayStrButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mDayStrButton");
+		});
+		this.mDayStrButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		//按钮多语言
 		
 		//文本多语言
@@ -1049,6 +1118,15 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.mDiamondTextBlock)
+		
+	
+		this.initLanguage(this.mDayStr1TextBlock)
+		
+	
+		this.initLanguage(this.mDayStr2TextBlock)
+		
+	
+		this.initLanguage(this.mDayStrTimeTextBlock)
 		
 	
 		this.initLanguage(this.mKillTipTextBlock1)

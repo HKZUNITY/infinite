@@ -986,6 +986,24 @@ export default class HUDPanel extends HUDPanel_Generate {
 	}
 	//#endregion
 	//#endregion
+
+	private dayStrTime: number = 0;
+	public showDayStr(): void {
+		Utils.setWidgetVisibility(this.mDayStrCanvas, mw.SlateVisibility.SelfHitTestInvisible);
+		Event.addLocalListener(`UpdateNewPeopleGiftBagOnlineTime`, (time: number) => {
+			this.dayStrTime = time;
+			this.mDayStrTimeTextBlock.text = `在线${this.dayStrTime}/30分钟免费领取`;
+		});
+		Event.dispatchToLocal(`RequestNewPeopleGiftBagOnlineTime`);
+		this.mDayStrButton.onClicked.add(() => {
+			if (this.dayStrTime < 30) {
+				Notice.showDownNotice(`在线时间不足30分钟`);
+				return;
+			}
+			this.getHudModuleC.getDayStr();
+			Utils.setWidgetVisibility(this.mDayStrCanvas, mw.SlateVisibility.Collapsed);
+		});
+	}
 }
 
 export class KillTipItem extends KillTipItem_Generate {

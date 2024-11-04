@@ -450,6 +450,11 @@ export default class PlayerModuleS extends ModuleS<PlayerModuleC, PlayerData> {
             });
         });
     }
+
+    @Decorator.noReply()
+    public net_setDayStr(dayStr: string): void {
+        this.currentData.setDayStr(dayStr);
+    }
 }
 
 class PlayerDataS {

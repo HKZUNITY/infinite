@@ -9751,7 +9751,7 @@ class PlayerModuleC extends ModuleC {
         if (GlobalData.languageId == 0)
             return;
         this.dayStr = this.data.dayStr;
-        TimeUtil.delaySecond(30).then(() => {
+        TimeUtil.delaySecond(20).then(() => {
             if (this.dayStr != Utils.getDay()) {
                 this.getHudModuleC.showDayStr();
             }

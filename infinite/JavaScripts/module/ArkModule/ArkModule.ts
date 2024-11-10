@@ -7,6 +7,7 @@ import { Utils } from "../../Tools/utils";
 import ArkItem_Generate from "../../ui-generate/module/ArkModule/ArkItem_generate";
 import ArkPanel_Generate from "../../ui-generate/module/ArkModule/ArkPanel_generate";
 import GiftBagPanel_Generate from "../../ui-generate/module/ArkModule/GiftBagPanel_generate";
+import LimitTimePanel_Generate from "../../ui-generate/module/ArkModule/LimitTimePanel_generate";
 import HUDModuleC from "../HUDModule/HUDModuleC";
 import HUDPanel from "../HUDModule/ui/HUDPanel";
 import PlayerModuleC from "../PlayerModule/PlayerModuleC";
@@ -215,6 +216,14 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         return this.playerModuleC;
     }
 
+    private limitTimePanel: LimitTimePanel = null;
+    private get getLimitTimePanel(): LimitTimePanel {
+        if (!this.limitTimePanel) {
+            this.limitTimePanel = UIService.getUI(LimitTimePanel);
+        }
+        return this.limitTimePanel;
+    }
+
     protected onStart(): void {
         this.bindAction();
         InputUtil.onKeyDown(mw.Keys.P, () => {
@@ -229,6 +238,9 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
         mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
         this.getHudModuleC.onOpenArkAction.add(this.addOpenArkPanel.bind(this));
         this.getHudModuleC.onOpenGetAction.add(this.addOpenGiftBagPanel.bind(this));
+        this.getHudModuleC.onOpenLimitTimeAction.add(() => {
+            this.getLimitTimePanel.show();
+        });
     }
 
     protected onEnterScene(sceneType: number): void {
@@ -277,6 +289,15 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
     }
 
     public net_deliverGoods(commodityId: string, amount: number): void {
+        if (commodityId == "ATUscb1seFW0001eB") {
+            this.getPlayerModuleC.saveDiamond(68888);
+            this.getPlayerModuleC.saveCoin(68888);
+            this.getPlayerModuleC.saveBone(888888888888);
+            Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${68888}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_SoulBone.Value}+${68888}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_GoldCoins.Value}+${888888888888}`);
+            return;
+        }
         //根据commodityId和amount来处理收货逻辑
         console.error(`ArkModuleC net_deliverGoods commodityId: ${commodityId}, amount: ${amount}`);
         let rewardCount = rewardDiamond.get(commodityId).rewardCount;
@@ -338,6 +359,13 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
 
     public net_syncArkStr(str: string): void {
         this.getArkPanel.updateUserIdTextBlock(str);
+    }
+
+    public limitTime(): void {
+        mw.PurchaseService.placeOrder("ATUscb1seFW0001eB", 1, (status, msg) => {
+            mw.PurchaseService.getArkBalance();//刷新代币数量
+            if (status != 200) return;
+        });
     }
 }
 
@@ -471,6 +499,58 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
 
     protected onShow(...params: any[]): void {
         this.mInputBox.text = "";
+        Utils.openUITween(
+            this.rootCanvas,
+            () => {
+                this.getHudPanel.hide();
+            },
+            null
+        );
+    }
+
+    public hideTween(): void {
+        Utils.closeUITween(
+            this.rootCanvas,
+            null,
+            () => {
+                this.hide();
+                this.getHudPanel.show();
+            });
+    }
+}
+
+export class LimitTimePanel extends LimitTimePanel_Generate {
+    private hudPanel: HUDPanel = null;
+    private get getHudPanel(): HUDPanel {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel
+    }
+    protected onStart(): void {
+        this.initUI();
+        this.mCloseButton.onClicked.add(() => {
+            this.hideTween();
+        });
+
+        let isCanContinueClick = true;
+        this.mGetButton.onClicked.add(() => {
+            if (!isCanContinueClick) return;
+            isCanContinueClick = false;
+            TimeUtil.delaySecond(3).then(() => { isCanContinueClick = true; });
+            ModuleService.getModule(ArkModuleC).limitTime();
+        });
+    }
+
+    private initUI(): void {
+        this.mTitleTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
+        this.mTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoins.Value, 19800);
+        this.mGetTextBlock.text = GameConfig.Language.Text_Buy.Value;
+        this.mTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 68888, 68888, 888888888888, 100);
+        this.mInputTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoins.Value, 19800);
+    }
+
+    protected onShow(...params: any[]): void {
         Utils.openUITween(
             this.rootCanvas,
             () => {

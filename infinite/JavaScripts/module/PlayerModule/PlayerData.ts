@@ -27,6 +27,9 @@ export default class PlayerData extends Subdata {
     @Decorator.persistence()
     public dayStr: string = "";
 
+    @Decorator.persistence()
+    public titleName: string = "";
+
     protected initDefaultData(): void {
         this.exp = 0;
         this.coin = 2888888;
@@ -114,5 +117,14 @@ export default class PlayerData extends Subdata {
     public setDayStr(dayStr: string): void {
         this.dayStr = dayStr;
         this.save(true);
+    }
+
+    public setTitleName(titleName: string): void {
+        this.titleName = titleName;
+        this.save(false);
+    }
+
+    public get getTitleName(): string {
+        return this.titleName;
     }
 }

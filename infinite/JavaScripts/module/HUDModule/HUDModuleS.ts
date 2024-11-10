@@ -1,5 +1,6 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import { Utils } from "../../Tools/utils";
+import PlayerData from '../PlayerModule/PlayerData';
 import { WorldConfigData } from '../RankModule/PlayerPropData';
 import HUDModuleC from "./HUDModuleC";
 
@@ -112,14 +113,55 @@ export default class HUDModuleS extends ModuleS<HUDModuleC, null> {
     }
 
     private async syncWorldConfigData(player: mw.Player): Promise<void> {
-        // if (!this.worldConfigDatas || this.worldConfigDatas.length == 0)
         await this.initWorldConfigDatas();
+        if (!this.worldConfigDatas || this.worldConfigDatas.length == 0) return;
+        let titleName = DataCenterS.getData(player, PlayerData).getTitleName;
+        if (titleName || titleName.length > 0) {
+            let isHas: boolean = false;
+            for (let i = 0; i < this.worldConfigDatas.length; ++i) {
+                if (this.worldConfigDatas[i].userId == player.userId) {
+                    isHas = true;
+                    if (this.worldConfigDatas[i].titleName != titleName) {
+                        this.worldConfigDatas[i].titleName = titleName;
+                        this.setCustomData("WorldConfigData", this.worldConfigDatas);
+                        break;
+                    }
+                }
+            }
+            if (!isHas) {
+                let worldConfigData = new WorldConfigData();
+                worldConfigData.test = `-1`;
+                worldConfigData.userId = player.userId;
+                worldConfigData.titleName = titleName;
+                this.worldConfigDatas.push(worldConfigData);
+                this.setCustomData("WorldConfigData", this.worldConfigDatas);
+            }
+        }
         this.getClient(player).net_syncWorldConfigData(this.worldConfigDatas);
+    }
+
+    public net_modifyTitleName(titleName: string): void {
+        let player = this.currentPlayer;
+        DataCenterS.getData(player, PlayerData).setTitleName(titleName);
+        this.initWorldConfigDatas().then(() => {
+            let worldConfigData = new WorldConfigData();
+            worldConfigData.test = `-1`;
+            worldConfigData.userId = player.userId;
+            worldConfigData.titleName = titleName;
+            this.worldConfigDatas.push(worldConfigData);
+            this.setCustomData("WorldConfigData", this.worldConfigDatas);
+        });
     }
 
     public async getCustomdata(key: string): Promise<any> {
         let data = null;
         data = await GeneralManager.asyncRpcGetData(key);
         return data;
+    }
+
+    public async setCustomData(saveKey: string, dataInfo: any): Promise<boolean> {
+        let code: mw.DataStorageResultCode = null;
+        code = await DataStorage.asyncSetData(saveKey, dataInfo);
+        return code == mw.DataStorageResultCode.Success;
     }
 }

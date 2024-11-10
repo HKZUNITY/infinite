@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.21
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -435,6 +435,27 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mSoulBonePointImage_Internal
 	}
+	private mLimitTimeButton_Internal: mw.Button
+	public get mLimitTimeButton(): mw.Button {
+		if(!this.mLimitTimeButton_Internal&&this.uiWidgetBase) {
+			this.mLimitTimeButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LimitTimeCanvas/mLimitTimeButton') as mw.Button
+		}
+		return this.mLimitTimeButton_Internal
+	}
+	private mLimitTimeTextBlock_Internal: mw.TextBlock
+	public get mLimitTimeTextBlock(): mw.TextBlock {
+		if(!this.mLimitTimeTextBlock_Internal&&this.uiWidgetBase) {
+			this.mLimitTimeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LimitTimeCanvas/mLimitTimeTextBlock') as mw.TextBlock
+		}
+		return this.mLimitTimeTextBlock_Internal
+	}
+	private mLimitTimePointImage_Internal: mw.Image
+	public get mLimitTimePointImage(): mw.Image {
+		if(!this.mLimitTimePointImage_Internal&&this.uiWidgetBase) {
+			this.mLimitTimePointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LimitTimeCanvas/mLimitTimePointImage') as mw.Image
+		}
+		return this.mLimitTimePointImage_Internal
+	}
 	private mMusicCanvas_Internal: mw.Canvas
 	public get mMusicCanvas(): mw.Canvas {
 		if(!this.mMusicCanvas_Internal&&this.uiWidgetBase) {
@@ -498,6 +519,13 @@ export default class HUDPanel_Generate extends UIScript {
 		}
 		return this.mRoleCanvas_G_Internal
 	}
+	private mUpLvButton_Internal: mw.Button
+	public get mUpLvButton(): mw.Button {
+		if(!this.mUpLvButton_Internal&&this.uiWidgetBase) {
+			this.mUpLvButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mUpLvButton') as mw.Button
+		}
+		return this.mUpLvButton_Internal
+	}
 	private mRoleCanvas_Internal: mw.Canvas
 	public get mRoleCanvas(): mw.Canvas {
 		if(!this.mRoleCanvas_Internal&&this.uiWidgetBase) {
@@ -511,6 +539,20 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mRoleIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mRoleCanvas/mRoleIconImage') as mw.Image
 		}
 		return this.mRoleIconImage_Internal
+	}
+	private mClickHeadButton_Internal: mw.Button
+	public get mClickHeadButton(): mw.Button {
+		if(!this.mClickHeadButton_Internal&&this.uiWidgetBase) {
+			this.mClickHeadButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mRoleCanvas/mClickHeadButton') as mw.Button
+		}
+		return this.mClickHeadButton_Internal
+	}
+	private mHeadTipsTextBlock_Internal: mw.TextBlock
+	public get mHeadTipsTextBlock(): mw.TextBlock {
+		if(!this.mHeadTipsTextBlock_Internal&&this.uiWidgetBase) {
+			this.mHeadTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mRoleCanvas/mHeadTipsTextBlock') as mw.TextBlock
+		}
+		return this.mHeadTipsTextBlock_Internal
 	}
 	private mAtkTextBlock_Internal: mw.TextBlock
 	public get mAtkTextBlock(): mw.TextBlock {
@@ -609,13 +651,6 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas/mInvincibleTextBlock') as mw.TextBlock
 		}
 		return this.mInvincibleTextBlock_Internal
-	}
-	private mUpLvButton_Internal: mw.Button
-	public get mUpLvButton(): mw.Button {
-		if(!this.mUpLvButton_Internal&&this.uiWidgetBase) {
-			this.mUpLvButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mUpLvButton') as mw.Button
-		}
-		return this.mUpLvButton_Internal
 	}
 	private mUpExpTextBlock_Internal: mw.TextBlock
 	public get mUpExpTextBlock(): mw.TextBlock {
@@ -951,6 +986,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mSoulBoneButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mLimitTimeButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mLimitTimeButton");
+		});
+		this.mLimitTimeButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseMusicBtn.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
 		});
@@ -975,16 +1016,22 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mRightMusicBtn.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
-		this.mInvincibleButton.onClicked.add(()=>{
-			Event.dispatchToLocal("PlayButtonClick", "mInvincibleButton");
-		});
-		this.mInvincibleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-		
-	
 		this.mUpLvButton.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mUpLvButton");
 		});
 		this.mUpLvButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mClickHeadButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mClickHeadButton");
+		});
+		this.mClickHeadButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
+		this.mInvincibleButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mInvincibleButton");
+		});
+		this.mInvincibleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
 		this.mUpExpButton.onClicked.add(()=>{
@@ -1084,7 +1131,13 @@ export default class HUDPanel_Generate extends UIScript {
 		this.initLanguage(this.mSoulBoneTextBlock)
 		
 	
+		this.initLanguage(this.mLimitTimeTextBlock)
+		
+	
 		this.initLanguage(this.mMusicText)
+		
+	
+		this.initLanguage(this.mHeadTipsTextBlock)
 		
 	
 		this.initLanguage(this.mAtkTextBlock)

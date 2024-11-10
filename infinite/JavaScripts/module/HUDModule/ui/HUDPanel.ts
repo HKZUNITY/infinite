@@ -64,6 +64,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mSoulBoneTextBlock.text = GameConfig.Language.Text_ForgeSoulBones.Value;
 		this.mTipsInvincibleTextBlock.text = GameConfig.Language.Text_DoYouWantToActivateTeammateAccidentalInjury.Value;
 		this.mUpExpTextBlock.text = GameConfig.Language.Text_EnableAfk.Value;
+		this.mLimitTimeTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
 
 		if (GlobalData.languageId == 0) {
 			this.mTipsInvincibleTextBlock.fontSize = 10;
@@ -71,6 +72,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 			this.mShopTextBlock.fontSize = 18;
 			this.mArkTextBlock.fontSize = 18;
 			this.mGetTextBlock.fontSize = 18;
+			this.mLimitTimeTextBlock.fontSize = 15;
 		} else {
 			this.mTipsInvincibleTextBlock.fontSize = 18;
 			this.mInvincibleTextBlock.fontSize = 25;
@@ -191,6 +193,12 @@ export default class HUDPanel extends HUDPanel_Generate {
 		});
 		this.mSoulBoneButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenSoulBoneAction.call();
+		});
+		this.mClickHeadButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenTitleNameAction.call();
+		});
+		this.mLimitTimeButton.onClicked.add(() => {
+			this.getHudModuleC.onOpenLimitTimeAction.call();
 		});
 		this.initSkill_1();
 		this.initAutoAtk();

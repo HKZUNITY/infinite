@@ -928,7 +928,7 @@ var foreign26 = /*#__PURE__*/Object.freeze({
     DressProgressConfig: DressProgressConfig
 });
 
-const EXCELDATA$8 = [["Id", "Name", "Value", "Value_Ch", "Value_Cht", "Value_J", "Value_K"], ["", "Key|ReadByName", "MainLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage"], [1, "Text_AfterStrengthening", "After\nStrengthening", "强化后", "强化後", "強化されます", "강화된 후"], [2, "Text_StarRating", "{0} Star Rating", "{0}星级", "{0}星級", "{0}つ星", "{0}성급"], [3, "Text_NeedToReachLevel", "Need To Reach Level {0}", "需要等级达到{0}级", "需要等級達到{0}級", "要求レベルが{0}レベルに達する", "레벨 {0} 레벨 달성 필요"], [4, "Text_IncreaseBloodVolumeByTimes", "Blood Volume Increase\n{0} Times", "血量提升{0}倍", "血量提升{0}倍", "血液量が{0}倍に上昇", "혈액량 {0}배 증가"], [5, "Text_AttackPowerIncreasedByTimes", "Attack Power Enhancement\n{0} Times", "攻击力提升{0}倍", "攻擊力提升{0}倍", "攻撃力{0}倍アップ", "공격력 {0}배 증가"], [6, "Text_StrengthenSoulBones", "Strengthen Soul Bones", "强化魂骨", "强化魂骨", "魂の骨を強化する", "혼골 강화"], [7, "Text_NeedToConsume", "Need To Consume", "需要消耗", "需要消耗", "消費する必要がある", "필요 소비"], [8, "Text_Diamonds", "Diamonds", "钻石", "鑽石", "ダイヤモンド", "다이아몬드"], [9, "Text_GoldCoins", "Gold Coins", "金币", "金幣", "金貨", "금화"], [10, "Text_StrengtheningConditions", "Strengthening Conditions", "强化条件", "强化條件", "強化条件", "조건을 강화하다"], [11, "Text_EnhanceTheProbabilityOfSuccess", "Strengthening Success\nProbability: {0}%", "强化成功\n概率：{0}%", "强化成功\n概率：{0}%", "強化に成功\n確率：{0}%", "강화 성공\n확률: {0}%"], [12, "Text_IncreaseProbability", "Increase\nProbability", "提升概率", "提升概率", "かくりつを上げる", "확률 증가"], [13, "Text_StartStrengthening", "Start\nStrengthening", "开始强化", "開始强化", "強化を開始", "강화 시작"], [14, "Text_TeamCoin", "Team Coin", "派队币", "派隊幣", "派隊貨幣", "파티 머니"], [15, "Text_Buy", "Buy", "购买", "購買", "購入する", "구매"], [16, "Text_Or", "Or", "或", "或", "または", "또는"], [17, "Text_UpProbabiliotyConetntTextBlock_0", "Consume {0} Diamonds\nEnhancement Probability\nIncreased To {1}%", "消耗{0}钻石\n强化概率提升到{1}%", "消耗{0}鑽石\n强化概率提升到{1}%", "{0}ダイヤモンド消費\n強化確率が{1}%に向上", "{0} 다이아 소모\n강화 확률을 {1}%까지 증가"], [18, "Text_UpProbabiliotyConetntTextBlock_1", "Consume {0} Team Coins\nEnhance The Probability\nTo {1}%", "消耗{0}派队币\n强化概率提升到{1}%", "消耗{0}派隊幣\n强化概率提升到{1}%", "{0}パーティー貨幣を消費する\n強化確率が{1}%にアップ", "{0} 파티 코인 소모\n강화 확률을 {1}%까지 증가"], [19, "Text_UsingDiamonds", "Using Diamonds", "使用钻石", "使用鑽石", "ダイヤモンドを使う", "다이아몬드 사용"], [20, "Text_UseTeamCoins", "Use Team Coins", "使用派队币", "使用派隊幣", "ディスパッチ通貨の使用", "파티 코인 사용"], [21, "Text_DiamondShortage", "Diamond Shortage", "钻石不足", "鑽石不足", "ダイヤ不足", "다이아 부족"], [22, "Text_InsufficientGoldCoins", "Insufficient Gold Coins", "金币不足", "金幣不足", "金貨不足", "금화 부족"], [23, "Text_SuccessfullyObtainedDiamonds", "Successfully Obtained Diamonds+{0}", "成功获得钻石+{0}", "成功獲得鑽石+{0}", "ダイヤモンド+{0}の獲得に成功", "다이아 +{0} 획득 성공"], [24, "Text_GetDiamondsForFree", "Get {0} Diamonds For Free", "免费领取{0}颗钻石", "免費領取{0}顆鑽石", "{0}個のダイヤモンドを無料で受け取ります", "{0}개 다이아 무료 수령"], [25, "Text_Cancel", "Cancel", "取消", "取消", "キャンセル", "취소"], [26, "Text_FreeToReceive", "Free To Receive", "免费领取", "免費領取", "無料で受け取る", "무료 수령"], [27, "Text_FullLevel", "Full Level", "已满级", "已滿級", "フルレベル", "만급"], [28, "Text_HeadSoulBone", "Head Soul Bone", "头部魂骨", "頭部魂骨", "頭部魂骨", "머리의 혼골"], [29, "Text_ExternalSoulBone", "External Soul Bone", "外附魂骨", "外附魂骨", "外付魂骨", "외부혼골"], [30, "Text_TorsoSoulBone", "Torso Soul Bone", "躯干魂骨", "軀幹魂骨", "体幹魂骨", "몸통 혼골"], [31, "Text_WaistSoulBone", "Waist Soul Bone", "腰部魂骨", "腰部魂骨", "腰部魂骨", "허리의 혼골"], [32, "Text_ArmSoulBone", "Arm Soul Bone", "手臂魂骨", "手臂魂骨", "腕の魂骨", "팔의 혼골"], [33, "Text_LegSoulBone", "Leg Soul Bone", "腿部魂骨", "腿部魂骨", "足の魂骨", "다리 혼골"], [34, "Text_FootSoulBone", "Foot Soul Bone", "脚部魂骨", "脚部魂骨", "足魂骨", "발의 혼골"], [35, "Text_GoTo", "Go To", "前往", null, null, null], [36, "Text_GodLevelHuntingGround", "God Level Hunting Ground", "神级狩猎场", null, null, null], [37, "Text_NoviceVillage", "Novice Village", "新手村", null, null, null], [38, "Text_IntermediateHuntingGround", "Intermediate Hunting Ground", "中级狩猎场", null, null, null], [39, "Text_AdvancedHuntingGround", "Advanced Hunting Ground", "高级狩猎场", null, null, null], [40, "Text_HuntAndKill", "Hunt And Kill", "猎杀", null, null, null], [41, "Text_100000YearSoulBeast", "100000 Year Soul Beast", "10万年魂兽", null, null, null], [42, "Text_LoadingMapResourcesPleaseBePatient", "Loading Map Resources, Please Be Patient", "正在加载地图资源，请耐心等待", null, null, null], [43, "Text_AdvertisingRewards", "Advertising Rewards", "广告奖励", null, null, null], [44, "Text_WatchTheAdvertisementTimesGetItForFree", "Watch The Advertisement {0} Times\nGet It For Free", "观看{0}次广告\n免费获得", null, null, null], [45, "Text_TakeYouToGetItForFree", "Take You To Get It For Free", "带你去免费获得", null, null, null], [46, "Text_GetItForFree", "Get It For Free", "免费获得", null, null, null], [47, "Text_GetGoldCoinsForFree", "Get {0} Gold Coins For Free", "免费领取{0}金币", null, null, null], [48, "Text_SuccessfullyObtainedCoins", "Successfully Obtained Coins", "成功获得金币", null, null, null], [49, "Text_GetFreeDiamonds", "Get {0} Free Diamonds", "免费领取{0}颗钻石", null, null, null], [50, "Text_FreeLevelUpgradeByLevel", "Free Level Upgrade By {0} Level", "等级免费提升{0}级", null, null, null], [51, "Text_FreeUpgrade", "Free Upgrade", "免费提升", null, null, null], [52, "Text_FreeDayReward", "Free {0}st Day Reward", "免费领取第{0}天奖励", null, null, null], [53, "Text_FailedPleaseTryAgain", "{0} Failed, Please Try Again", "{0}失败，请重试", null, null, null], [54, "Text_DontClickTooFastItWillGetStuck", "Don't Click Too Fast, It Will Get Stuck", "别点太快、会卡哦", null, null, null], [55, "Text_DirectlyUpgradeTheLevel", "Directly Upgrade The Level", "直接提升等级", null, null, null], [56, "Text_Determine", "Determine", "确定", null, null, null], [57, "Text_UpgradeLevel", "Upgrade Level", "升级等级", null, null, null], [58, "Text_UseDiamondsUpgradeLevel", "Use {0} Diamonds\nUpgrade Level", "使用5个钻石\n提升等级", null, null, null], [59, "Text_PleaseEnterTheRedemptionCode", "Please Enter The Redemption Code", "请输入兑换码", null, null, null], [60, "Text_Exchange", "Exchange", "兑换", null, null, null], [61, "Text_PleaseEnterTheRedemptionCodeProvidedByTheAuthorCanBeRedeemedForRewards", "Please Enter The Redemption Code Provided By The Author\nCan Be Redeemed For Rewards", "请输入作者提供的兑换码\n即可兑换奖励", null, null, null], [62, "Text_GiftPackExchange", "Gift Pack Exchange", "礼包兑换", null, null, null], [63, "Text_AlreadyredeemedNoNeedToRedeemAgain", "Already Redeemed, No Need To Redeem Again", "已兑换，无需重复兑换", null, null, null], [64, "Text_CollectionFailed", "Collection Failed", "领取失败", null, null, null], [65, "Text_GiftPackRedemptionCodeError", "Gift Pack Redemption Code Error", "礼包兑换码错误", null, null, null], [66, "Text_Grade", "Grade", "等级", null, null, null], [67, "Text_ExchangeSuccessful", "Exchange Successful", "兑换成功", null, null, null], [68, "Text_CoolForSeconds", "Cool For {0} Seconds", "冷却{0}秒", null, null, null], [69, "Text_SoldouttodayPleaseReplaceWithOtherProductsToPurchase", "Sold Out Today, Please Replace With Other Products To Purchase", "今日已售空,请更换其他商品购买", null, null, null], [70, "Text_Rechargediamonds", "Recharge Diamonds", "充值钻石", null, null, null], [71, "Text_Nopurchaserestrictions", "No purchase Restrictions", "不限购", null, null, null], [72, "Text_Soldouttoday", "Sold Out Today", "今日已售空", null, null, null], [73, "Text_Limitedtoonepurchaseperday", "Limited To One Purchase Per Day", "每天限购一次", null, null, null], [74, "Text_BagTabTextBlock", "Martial Soul|Soul Master|Soul Bone|Soul Beast", "武魂|魂师|魂骨|魂兽", null, null, null], [75, "Text_AutomaticAttackFist_Male", "Automatic Attack Fist (Male)", "自动攻击拳(男)", null, null, null], [76, "Text_AutomaticAttackFist_Female", "Automatic Attack Fist (Female)", "自动攻击拳(女)", null, null, null], [77, "Text_MechSlashWindSlash_Male", "Mech Slash Wind Slash (Male)", "机甲斩狂风斩(男)", null, null, null], [78, "Text_MechSlashWindSlash_Female", "Mech Slash Wind Slash (Female)", "机甲斩狂风斩(女)", null, null, null], [79, "Text_GoldenHoopRod_Powder", "Golden Hoop Rod (Powder)", "金箍棒(粉)", null, null, null], [80, "Text_GoldenHoopRod_Purple", "Golden Hoop Rod (Purple)", "金箍棒(紫)", null, null, null], [81, "Text_HaotianHammer", "Haotian Hammer", "昊天锤", null, null, null], [82, "Text_TridentOfTheSeaGod", "Trident Of The Sea God", "海神三叉戟", null, null, null], [83, "Text_CyberComesWithALongSpear", "Cyber Comes With A Long Spear", "赛博自来也长枪", null, null, null], [84, "Text_SeaKingDoubleHeadedKnife", "Sea King Double Headed Knife", "海王双头刀", null, null, null], [85, "Text_CaptainAmericaSHammer", "Captain America'S Hammer", "美国队长神锤", null, null, null], [86, "Text_VenomAxe", "Venom Axe", "毒液斧头", null, null, null], [87, "Text_MiebaAxe", "Mieba Axe", "灭霸斧", null, null, null], [88, "Text_NarutoWieldingASword", "Naruto Wielding A Sword", "鸣人手里剑", null, null, null], [89, "Text_FutureWarriorGoldenSword", "Future Warrior Golden Sword", "未来战士黄金剑", null, null, null], [90, "Text_ForestSentinelMagicBattle", "Forest Sentinel Magic Battle", "森林哨兵魔法仗", null, null, null], [91, "Text_Pistol_SonicSpecific", "Pistol (Sonic Specific)", "手枪\n索尼克专用", null, null, null], [92, "Text_SignalGun_SpecificallyForPinkHairMonster", "Signal Gun\nSpecifically For Pink Hair Monster", "信号枪\n粉毛怪专用", null, null, null], [93, "Text_Knife_ForTsunade", "Knife (For Tsunade)", "刀(纲手专用)", null, null, null], [94, "Text_Knife_ExclusiveToLilock", "Knife (Exclusive To Lilock)", "刀(李洛克专用)", null, null, null], [95, "Text_Sickle_ForDriedPersimmonGhostShark", "Sickle\nFor Dried Persimmon Ghost Shark", "镰刀\n干柿鬼鲛专用", null, null, null], [96, "Text_Sickle_ExclusivelyForCyberGirls", "Sickle\nExclusively For Cyber Girls", "镰刀\n赛博女孩专用", null, null, null], [97, "Text_IceSword_ExclusivelyForBlackWidow", "Ice Sword\nExclusively For Black Widow", "冰封剑\n黑寡妇专用", null, null, null], [98, "Text_MonsterClawKnife", "Monster Claw Knife", "怪物爪刀", null, null, null], [99, "Text_Machete_KakashiSpecific", "Machete (Kakashi Specific)", "大砍刀\n卡卡西专用", null, null, null], [100, "Text_TheStaff_ExclusivelyForUchihaItachi", "The Staff\nExclusively For Uchiha Itachi", "法杖\n宇智波鼬专用", null, null, null], [101, "Text_WaterGun", "Water Gun", "水枪", null, null, null], [102, "Text_IceDiamondSword", "Ice Diamond Sword", "冰钻剑", null, null, null], [103, "Text_ButcherSKnife", "Butcher 'S Knife", "屠刀", null, null, null], [104, "Text_BlueStaff_LokiSpecific", "Blue Staff (Loki Specific)", "蓝色法杖\n洛基专用", null, null, null], [105, "Text_Sickle_SunGodExclusive", "Sickle (Sun God Exclusive)", "镰刀\n太阳神专用", null, null, null], [106, "Text_DemonSword_ExclusivelyForUchihaMadara", "Demon Sword\nExclusively For Uchiha Madara", "恶魔剑\n宇智波斑爷专用", null, null, null], [107, "Text_Sword_SpecificallyDesignedForNanorobots", "Sword\nSpecifically Designed For Nanorobots", "剑(纳米机器人专用)", null, null, null], [108, "Text_Sickle_DeadpoolSpecific", "Sickle (Deadpool Specific)", "镰刀(死侍专用)", null, null, null], [109, "Text_FluorescentSword_ForVolcanoSentinelsOnly", "Fluorescent Sword\nFor Volcano Sentinels Only", "荧光剑\n火山哨兵专用", null, null, null], [110, "Text_FanaticalSword_ExclusiveToCrimsonWitch", "Fanatical Sword\nExclusive To Crimson Witch", "狂热剑\n绯红女巫专用", null, null, null], [111, "Text_InflatableHammer", "Inflatable Hammer", "充气锤子", null, null, null], [112, "Text_WoodenStaff_VenomSpiderManSpecific", "Wooden Staff\nVenom Spider Man Specific", "木法杖\n毒液蜘蛛侠专用", null, null, null], [113, "Text_GuaziShield", "Guazi Shield", "瓜子盾", null, null, null], [114, "Text_Shield_HulkExclusive", "Shield (Hulk Exclusive)", "盾(浩克专用)", null, null, null], [115, "Text_UltimateIceRingSword", "Ultimate Ice Ring Sword", "终极冰环剑", null, null, null], [116, "Text_BulletSprayGun_ForHinata", "Bullet Spray Gun (For Hinata)", "散弹喷枪\n雏田专用", null, null, null], [117, "Text_Firearms_LuffySpecific", "Firearms (Luffy Specific)", "火枪(路飞专用)", null, null, null], [118, "Text_PurpleLightSword_SpecialForSasuke", "Purple Light Sword\nSpecial For Sasuke", "紫光剑\n佐助专用", null, null, null], [119, "Text_LaserGun_TenjinSpecific", "Laser Gun (Tenjin Specific)", "激光枪(天神专用)", null, null, null], [120, "Text_Sword_ExclusivelyForWolverine", "Sword\nExclusively For Wolverine", "剑(金刚狼专用)", null, null, null], [121, "Text_LaserGun_IronManSpecific", "Laser Gun (Iron Man Specific)", "激光枪(钢铁侠专用)", null, null, null], [122, "Text_CoupleMechSet_Female", "Couple Mech Set (Female)", "情侣机甲套装(女)", null, null, null], [123, "Text_CoupleMechSet_Male", "Couple Mech Set (Male)", "情侣机甲套装(男)", null, null, null], [124, "Text_XiaoWuJie", "Xiao Wu Jie", "小舞姐", null, null, null], [125, "Text_BlueSilverEmperor", "Blue Silver Emperor", "蓝银皇", null, null, null], [126, "Text_UniformGirl", "Uniform Girl", "制服女孩", null, null, null], [127, "Text_TangSan", "Tang San", "唐三", null, null, null], [128, "Text_TheGoldenPrince", "The Golden Prince", "黄金王子", null, null, null], [129, "Text_JkGirl", "Jk Girl", "JK女孩", null, null, null], [130, "Text_XiaolanLong", "Xiaolan Long", "小蓝龙", null, null, null], [131, "Text_LittleGreenDragon", "Little Green Dragon", "小绿龙", null, null, null], [132, "Text_LittleBlackDragon", "Little Black Dragon", "小黑龙", null, null, null], [133, "Text_LittleOrangeDragon", "Little Orange Dragon", "小橘龙", null, null, null], [134, "Text_GodLevelDemonKing", "God Level Demon King", "神级魔王", null, null, null], [135, "Text_TheFourthHokage", "The Fourth Hokage", "四代火影", null, null, null], [136, "Text_MedusaQueen", "Medusa Queen", "美杜莎女王", null, null, null], [137, "Text_FoxEaredGirl", "Fox Eared Girl", "狐耳少女", null, null, null], [138, "Text_EvilMessenger", "Evil Messenger", "邪恶使者", null, null, null], [139, "Text_LongCoatForWomen", "Long Coat For Women", "长款大衣女", null, null, null], [140, "Text_Spongebob", "Spongebob", "海绵宝宝", null, null, null], [141, "Text_IronMan", "Iron Man", "钢铁侠", null, null, null], [142, "Text_Thanos", "Thanos", "灭霸", null, null, null], [143, "Text_HedgehogBoy", "Hedgehog Boy", "刺猬小子", null, null, null], [144, "Text_EvilMessenger1", "Evil Messenger", "邪恶使者", null, null, null], [145, "Text_BlueClothedMan", "Blue Clothed Man", "蓝衣男", null, null, null], [146, "Text_BlackClothedMan", "Black Clothed Man", "黑衣男", null, null, null], [147, "Text_Doom", "Doom", "毁灭战士", null, null, null], [148, "Text_ThunderGod", "Thunder God", "雷神", null, null, null], [149, "Text_BlackWidow", "Black Widow", "黑寡妇", null, null, null], [150, "Text_CuteGirl", "Cute Girl", "可爱女", null, null, null], [151, "Text_MarukoHeadGirl", "Maruko Head Girl", "丸子头女", null, null, null], [152, "Text_WesternGoddess", "Western Goddess", "西方神女", null, null, null], [153, "Text_BlackDressGirl", "Black Dress Girl", "黑裙少女", null, null, null], [154, "Text_ShortHairedWoman", "Short Haired Woman", "短发女", null, null, null], [155, "Text_QipaoWomen", "Qipao Women", "旗袍女", null, null, null], [156, "Text_ClothedMan", "Clothed Man", "披风男", null, null, null], [157, "Text_LongHairedWoman", "Long Haired Woman", "长发女", null, null, null], [158, "Text_DoublePonytailGirl1", "Double Ponytail Girl", "双马尾女", null, null, null], [159, "Text_WomenWithLongHairAndShortSkirts", "Women With Long Hair\nShort Skirts", "长发短裙女", null, null, null], [160, "Text_DoublePonytailGirl2", "Double Ponytail Girl", "双马尾女", null, null, null], [161, "Text_DoublePonytailGirl3", "Double Ponytail Girl", "双马尾女", null, null, null], [162, "Text_PleatedSkirtGirl", "Pleated Skirt Girl", "百褶裙女孩", null, null, null], [163, "Text_ShortHairedFashionableWomen", "Short Haired\nFashionable Women", "短发时尚女", null, null, null], [164, "Text_LongPonytailGirl", "Long Ponytail Girl", "长马尾女孩", null, null, null], [165, "Text_LongEaredGirl", "Long Eared Girl", "长耳女", null, null, null], [166, "Text_LongHairedWomanInWindbreaker", "Long Haired\nWoman In Windbreaker", "风衣长发女", null, null, null], [167, "Text_DevilHornGirl", "Devil Horn Girl", "恶魔角女", null, null, null], [168, "Text_KimonoGirl", "Kimono Girl", "和服女", null, null, null], [169, "Text_HairpinGirl", "Hairpin Girl", "发卡女", null, null, null], [170, "Text_MaidSuitForWomen", "Maid Suit For Women", "女仆套装女", null, null, null], [171, "Text_HatGirl", "Hat Girl", "帽子女", null, null, null], [172, "Text_MagicalGirl", "Magical Girl", "魔法女孩", null, null, null], [173, "Text_LongSkirtWomen", "Long Skirt Women", "长裙女", null, null, null], [174, "Text_KillerWoman", "Killer Woman", "杀手女", null, null, null], [175, "Text_WitchDoctor", "Witch Doctor", "巫医", null, null, null], [176, "Text_LongLeggedMom", "Long Legged Mom", "长腿妈妈", null, null, null], [177, "Text_XuanKui", "Xuan Kui", "玄魁", null, null, null], [178, "Text_EvilWitch", "Evil Witch", "邪恶女巫", null, null, null], [179, "Text_LittleUglyGirl", "Little Ugly Girl", "小丑女", null, null, null], [180, "Text_HalloweenGirl", "Halloween Girl", "万圣节女", null, null, null], [181, "Text_Butcher", "Butcher", "屠夫", null, null, null], [182, "Text_DeanOfMolewoodCollege", "Dean Of Molewood College", "魔莱坞学院院长", null, null, null], [183, "Text_MistyGhostShadow", "Misty Ghost Shadow", "迷雾鬼影", null, null, null], [184, "Text_BlueHairedMonster", "Blue Haired Monster", "蓝毛怪", null, null, null], [185, "Text_DogHeadedCaterpillar", "Dog Headed Caterpillar", "狗头毛毛虫", null, null, null], [186, "Text_PinkHairedMonster", "Pink Haired Monster", "粉毛怪", null, null, null], [187, "Text_SonicAdvance", "Sonic Advance", "索尼克", null, null, null], [188, "Text_RainbowFriends", "Rainbow Friends", "Rainbow friends", null, null, null], [189, "Text_SeaGod", "Sea God", "海神", null, null, null], [190, "Text_DevilSWings", "Devil'S Wings", "恶魔翅膀", null, null, null], [191, "Text_DevilSCorner", "Devil'S Corner", "恶魔角", null, null, null], [192, "Text_DevilSTail", "Devil'S Tail", "恶魔尾巴", null, null, null], [193, "Text_DemonSkull", "Demon Skull", "恶魔头骨", null, null, null], [194, "Text_DevilSThreeHeadedDog", "Devil'S Three Headed Dog", "恶魔三头犬", null, null, null], [195, "Text_AngelWings", "Angel Wings", "天使翅膀", null, null, null], [196, "Text_AngelSpider", "Angel Spider", "天使蜘蛛", null, null, null], [197, "Text_FoxSTail", "Fox'S Tail", "狐狸尾巴", null, null, null], [198, "Text_FoxEars", "Fox Ears", "狐狸耳朵", null, null, null], [199, "Text_WavingScarf", "Waving Scarf", "挥动的围巾", null, null, null], [200, "Text_LightningWings", "Lightning Wings", "闪电翅膀", null, null, null], [201, "Text_Glasses", "Glasses", "眼镜", null, null, null], [202, "Text_PhotographyRobot", "Photography Robot", "拍照机器人", null, null, null], [203, "Text_Veil", "Veil", "面纱", null, null, null], [204, "Text_RocketLauncher", "Rocket Launcher", "火箭发射器", null, null, null], [205, "Text_SniperGunBody", "Sniper Gun Body", "狙击枪枪身", null, null, null], [206, "Text_CuteWesternDragon", "Cute Western Dragon", "可爱西方龙", null, null, null], [207, "Text_Loong", "Loong", "龙", null, null, null], [208, "Text_EmperorDragon", "Emperor Dragon", "帝王龙", null, null, null], [209, "Text_HellDragon", "Hell Dragon", "地狱龙", null, null, null], [210, "Text_CandyDragon", "Candy Dragon", "糖果龙", null, null, null], [211, "Text_WuShilong", "Wu Shilong", "武士龙", null, null, null], [212, "Text_CrystalWings", "Crystal Wings", "水晶翅膀", null, null, null], [213, "Text_KillingWings", "Killing Wings", "杀戮翅膀", null, null, null], [214, "Text_HellSWings", "Hell'S Wings", "地狱翅膀", null, null, null], [215, "Text_FairyWings", "Fairy Wings", "精灵翅膀", null, null, null], [216, "Text_FlameWings", "Flame Wings", "火焰翅膀", null, null, null], [217, "Text_BigSword", "Big Sword", "大剑", null, null, null], [218, "Text_AngelSword", "Angel Sword", "天使剑", null, null, null], [219, "Text_Snaker", "Snaker", "蛇女", null, null, null], [220, "Text_ASpider", "A Spider", "络新妇", null, null, null], [221, "Text_BigSpider", "Big Spider", "大蜘蛛", null, null, null], [222, "Text_SmallFaceHuggingPurpleSpider", "Small Face Hugging\nPurple Spider", "小型抱脸紫蜘蛛", null, null, null], [223, "Text_SmallBlushingSpider", "Small Blushing Spider", "小型抱脸红蜘蛛", null, null, null], [224, "Text_SmallFaceHuggingGreenSpider", "Small Face Hugging\nGreen Spider", "小型抱脸绿蜘蛛", null, null, null], [225, "Text_SmallFaceHuggingBlueSpider", "Small Face Hugging\nBlue Spider", "小型抱脸蓝蜘蛛", null, null, null], [226, "Text_Xiaolong", "Xiaolong", "小龙", null, null, null], [227, "Text_CartoonWoodenDragon", "Cartoon Wooden Dragon", "卡通木龙", null, null, null], [228, "Text_RedDragon", "Red Dragon", "红龙", null, null, null], [229, "Text_Huanglong", "Huanglong", "黄龙", null, null, null], [230, "Text_BlueDragon", "Blue Dragon", "蓝龙", null, null, null], [231, "Text_TheGodOfOtter", "The God Of Otter", "奥特之神", null, null, null], [232, "Text_SuccessfullyActivatedAutomaticAttack", "Successfully Activated Automatic Attack", "成功开启自动攻击", null, null, null], [233, "Text_FailedToObtainAutomaticAttackSoul", "Failed To Obtain Automatic Attack Soul", "未获得自动攻击武魂", null, null, null], [234, "Text_SuccessfullyDisabledAutomaticAttack", "Successfully Disabled Automatic Attack", "成功关闭自动攻击", null, null, null], [235, "Text_Obtained", "Obtained", "已获得", null, null, null], [236, "Text_CongratulationsOnObtaining", "Congratulations On Obtaining", "恭喜获得", null, null, null], [237, "Text_SoulPower", "Soul Power", "魂力", null, null, null], [238, "Text_MartialSoul", "Martial Soul", "武魂", null, null, null], [239, "Text_SoulMaster", "Soul Master", "魂师", null, null, null], [240, "Text_SoulBone", "Soul Bone", "魂骨", null, null, null], [241, "Text_Ayakashi", "Ayakashi", "魂兽", null, null, null], [242, "Text_Ordinary", "Ordinary", "普通", null, null, null], [243, "Text_Rare", "Rare", "稀有", null, null, null], [244, "Text_Epic", "Epic", "史诗", null, null, null], [245, "Text_Legend", "Legend", "传说", null, null, null], [246, "Text_KillingGodDomain", "Killing God Domain", "杀神领域", null, null, null], [247, "Text_DoushenContinent_MySoulRingUnlimitedUpgrade", "Doushen Continent (My Soul Ring Unlimited Upgrade)", "斗神大陆(我的魂环无限升级)", null, null, null], [248, "Text_InTheEquipment", "In The Equipment", "装备中", null, null, null], [249, "Text_InUse", "In Use", "使用中", null, null, null], [250, "Text_FollowIn", "Follow In", "跟随中", null, null, null], [251, "Text_BeginnerGiftPackAcquisition", "Beginner Gift Pack Acquisition", "新手礼包获取", null, null, null], [252, "Text_GoldCoinLotteryToObtain", "Gold Coin Lottery To Obtain", "金币抽奖获取", null, null, null], [253, "Text_PleaseCompleteTheBeginnerGuideFirst", "Please Complete The Beginner Guide First", "请先完成新手引导", null, null, null], [254, "Text_ObtainByWatchingAdvertisements", "Obtain By Watching Advertisements", "看广告获得", null, null, null], [255, "Text_OldPlayersReturningToObtain", "Old Players Returning To Obtain", "老玩家回归获得", null, null, null], [256, "Text_NotObtained", "Not Obtained", "未获得", null, null, null], [257, "Text_StartGuiding", "Start Guiding", "开始引导", null, null, null], [258, "Text_PurchaseSuccessful", "Purchase Successful", "购买成功", null, null, null], [259, "Text_EquipmentSuccessful", "Equipment Successful", "装备成功", null, null, null], [260, "Text_WearingSuccessfully", "Wearing Successfully", "穿戴成功", null, null, null], [261, "Text_FollowSuccess", "Follow Success", "跟随成功", null, null, null], [262, "Text_TheFunctionIsNotYetOpen_PleaseStayTuned", "The Function Is Not Yet Open, Please Stay Tuned", "功能暂未开放，敬请期待", null, null, null], [263, "Text_RecoveryWasSuccessful", "Recovery Was Successful", "恢复成功", null, null, null], [264, "Text_RemovedSuccessfully", "Removed Successfully", "卸下成功", null, null, null], [265, "Text_SuccessfullyDiscardedPet", "Successfully Discarded Pet", "丢掉宠物成功", null, null, null], [266, "Text_RestoreInitialImage", "Restore Initial Image", "恢复初始形象", null, null, null], [267, "Text_RemoveAllEquipment", "Remove All Equipment", "卸下所有装备", null, null, null], [268, "Text_CancelPetFollowing", "Cancel Pet Following", "取消宠物跟随", null, null, null], [269, "Text_ClickToUse", "Click To Use", "点击使用", null, null, null], [270, "Text_AlreadyOwned", "Already Owned", "已拥有", null, null, null], [271, "Text_ClickToGet", "Click To Get", "点击获得", null, null, null], [272, "Text_NotOwned", "Not Owned", "未拥有", null, null, null], [273, "Text_Use", "Use", "使用", null, null, null], [274, "Text_PurchaseCoins", "Purchase Coins", "金币购买", null, null, null], [275, "Text_Introduce", "Introduce", "介绍", null, null, null], [276, "Text_IncreasedHealthAndAttackPowerAfterUse", "Increased Health And Attack Power After Use", "使用后血量和攻击力提升", null, null, null], [277, "Text_Times", "Times", "倍", null, null, null], [278, "Text_ConsumingDiamondsToPurchase", "Consuming {0} Diamonds\nTo Purchase", "消耗{0}钻石购买", null, null, null], [279, "Text_ConsumeTeamCoinsToPurchase", "Consume {0} Team Coins\nTo Purchase", "消耗{0}派队币购买", null, null, null], [280, "Text_YujianFlyingMall", "Yujian Flying Mall", "御剑飞行商城", null, null, null], [281, "Text_RoyalSwordFlyingBonus", "Royal Sword Flying Bonus", "御剑飞行总加成", null, null, null], [282, "Text_MitsurugiSmartKiller", "Mitsurugi - Smart Killer", "御剑_智弑者", null, null, null], [283, "Text_MitsurugiGoldenSword", "Mitsurugi - Golden Sword", "御剑_黄金剑", null, null, null], [284, "Text_MitsurugiIceDiamondSword", "Mitsurugi - Ice Diamond Sword", "御剑_冰钻剑", null, null, null], [285, "Text_MitsurugiDemonSword", "Mitsurugi - Demon Sword", "御剑_恶魔剑", null, null, null], [286, "Text_MitsurugiBrokenCrazySword", "Mitsurugi - Broken Crazy Sword", "御剑_断狂剑", null, null, null], [287, "Text_MitsurugiAerocraft", "Mitsurugi - Aerocraft", "御剑_飞行器", null, null, null], [288, "Text_MitsurugiImperialSwordDart", "Mitsurugi - Imperial Sword Dart", "御剑_飞镖", null, null, null], [289, "Text_MitsurugiSmallBicycle", "Mitsurugi - Small Bicycle", "御剑_小单车", null, null, null], [290, "Text_MitsurugiAnywayHeShandsome", "Mitsurugi - Anyway, He's Handsome", "御剑_反正很帅", null, null, null], [291, "Text_MitsurugiSkate", "Mitsurugi - Skate", "御剑_滑板", null, null, null], [292, "Text_MitsurugiLittleGreenDragon", "Mitsurugi - Little Green Dragon", "御剑_小绿龙", null, null, null], [293, "Text_MitsurugiXiaolanLong", "Mitsurugi - Xiaolan Long", "御剑_小蓝龙", null, null, null], [294, "Text_MitsurugiLittleFireDragon", "Mitsurugi - Little Fire Dragon", "御剑_小火龙", null, null, null], [295, "Text_YujianFlyingHasBeenSuccessfullyPurchased", "Yujian Flying Has Been Successfully Purchased", "御剑飞行购买成功", null, null, null], [296, "Text_EquippingSwordFlying", "Equipping Sword Flying", "装备御剑飞行", null, null, null], [297, "Text_FlyingWithoutEquippedSword", "Flying Without Equipped Sword", "未装备御剑飞行", null, null, null], [298, "Text_RemoveTheImperialSwordAndFly", "Remove The Imperial Sword And Fly", "卸下御剑飞行", null, null, null], [299, "Text_IncreaseBloodVolumeByTimes_Nowrap", "Blood Volume Increase {0} Times", "血量提升{0}倍", "血量提升{0}倍", "血液量が{0}倍に上昇", "혈액량 {0}배 증가"], [300, "Text_AttackPowerIncreasedByTimes_Nowrap", "Attack Power Enhancement {0} Times", "攻击力提升{0}倍", "攻擊力提升{0}倍", "攻撃力{0}倍アップ", "공격력 {0}배 증가"], [301, "Text_ClickAnywhereToContinue", "Click anywhere to continue", "点击任意位置继续……", null, null, null], [302, "Text_Guid_0", "Welcome to\n{0}\nLet me introduce you to all the button operations.", "欢迎来到\n{0}\n我来给你介绍一下所有按钮操作吧。", null, null, null], [303, "Text_Guid_1", "Move button, click and drag to control the character's movement.", "移动按钮，点击后拖拽可以控制角色移动。", null, null, null], [304, "Text_Guid_2", "View movement area, click and drag here to control the screen view.", "视角移动区域，点击拖动这里可以控制屏幕视角。", null, null, null], [305, "Text_Guid_3", "Jump button, continuous clicking will perform a two-stage jump, which will consume {0}", "跳跃按钮，连续点击会进行二段跳，会消耗{0}", null, null, null], [306, "Text_Guid_4", "Sword flying, can fly", "御剑飞行，可以飞行", null, null, null], [307, "Text_Guid_5", "Attack button, continuous clicking can release cool combos, which will consume {0}", "攻击按钮，连续点击可释放炫酷的连招，会消耗{0}", null, null, null], [308, "Text_Guid_6", "Automatic attack button, enable automatic attack", "自动攻击按钮、开启自动攻击", null, null, null], [309, "Text_Guid_7", "Activate the soul ring button to display the soul ring.", "开启魂环按钮，可展示魂环。", null, null, null], [310, "Text_Guid_8", "Background music button, open to change background music and switch background music on/off.", "背景音乐按钮，打开可更换背景音乐以及开关背景音乐。", null, null, null], [311, "Text_Guid_9", "Click the 'I'm Home' button, and when you're stuck in the map and unable to move, you can try clicking on 'I'll Try'.", "点我回家按钮，当你被卡在地图中无法移动时可以点击我试试哦。", null, null, null], [312, "Text_Guid_10", "The backpack button, the fastest way to level up is to search for martial souls, professions, soul bones, and pets in the map.", "背包按钮，提升等级最快的办法就是在地图中寻找武魂、职业、魂骨、宠物。", null, null, null], [313, "Text_Guid_11", "The leaderboard button can be opened to view the in room leaderboard and world leaderboard. Come and check your ranking in Douluo Continent.", "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗罗大陆的排名是多少吧。", null, null, null], [314, "Text_Guid_12", "Gold coin lottery button, where you can redeem diamonds, levels, and skins for coins that you can't spend all", "金币抽奖按钮，花不完的金币在这里可以兑现 钻石、等级、皮肤哦", null, null, null], [315, "Text_Guid_13", "The online reward button allows you to receive a large amount of coins and experience to quickly upgrade your level. You can quickly upgrade to a banned Douluo within 10 minutes of being online.", "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到封号斗罗。", null, null, null], [316, "Text_Guid_14", "Task button, completing tasks can earn a large amount of coins and experience to quickly level up, and you can immediately upgrade to god level.", "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到神级。", null, null, null], [317, "Text_Guid_15", "Check in button, log in to the game, check in to receive a large amount of diamonds and levels.", "签到按钮，登录游戏签到领取大量钻石和等级。", null, null, null], [318, "Text_Guid_16", "There are many benefits, the fastest way to level up, unlimited upgrades, and become a shortcut to becoming a god level.", "福利多多，最快提升等级的办法，无限升级，成为神级的捷径。", null, null, null], [319, "Text_Guid_17", "Sword flying, equipped to fly.", "御剑飞行，装备后可飞行。", null, null, null], [320, "Text_Guid_18", "Recharge diamonds to quickly increase the lifespan of soul rings and reach up to one million grade levels.", "充值钻石，可充值大量钻石快速提升魂环年限、最快达到百万年级别。", null, null, null], [321, "Text_Guid_19", "Redeem rewards, receive redemption codes to redeem rewards, diamonds+levels.", "兑换奖励，领取兑换码兑换奖励，钻石+等级。", null, null, null], [322, "Text_Guid_20", "Newbie Gift Pack Button, Get Newbie Gift Pack", "新手礼包按钮，领取新手大礼包", null, null, null], [323, "Text_Guid_21", "Forge soul ring button, can forge soul rings, making your soul rings reach 100000 levels, and the tenth ring can reach millions of levels", "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", null, null, null], [324, "Text_Guid_22", "The hang up button automatically upgrades without the need for operation when turned on.", "挂机按钮，开启后、无需操作自动升级。", null, null, null], [325, "Text_Guid_23", "Activate defense and avoid being accidentally injured by teammates.", "开启防御，不会被队友误伤。", null, null, null], [326, "Text_Guid_24", "Character attributes, health, {0}, attack power will increase with level.", "角色属性，血量、{0}，攻击力会随等级提升而提升。", null, null, null], [327, "Text_Guid_25", "Quickly increase coins to directly purchase martial souls and soul bones.", "可快速增加金币直接购买武魂、魂骨。", null, null, null], [328, "Text_Guid_26", "Can quickly increase diamond forged soul rings.", "可快速增加钻石锻造魂环。", null, null, null], [329, "Text_Guid_27", "Introduction completed, welcome to leave a message in the gaming community. Follow my signpost and I'll take you to find the martial soul and soul bone.", "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", null, null, null], [330, "Text_Guid_28", "Forge Soul Bones", "锻造魂骨", null, null, null], [331, "Text_ArrivedNearTheTargetPoint", "Arrived Near The Target Point", "已到达目标点附近", null, null, null], [332, "Text_ReturnToNewbieVillage", "Return To Newbie Village", "返回新手村", null, null, null], [333, "Text_LetSOfficiallyOpenYourCopy", "Let'S Officially Open Your Copy", "正式开启你的副本吧", null, null, null], [334, "Text_Beat", "Beat", "击败", null, null, null], [335, "Text_SwordFlying", "Sword", "御剑飞行", null, null, null], [336, "Text_AutomaticAttack", "Automatic", "自动攻击", null, null, null], [337, "Text_BackgroundMusic", "Music", "背景音乐", null, null, null], [338, "Text_ClickOnMeToGoHome", "Home", "点我回家", null, null, null], [339, "Text_Knapsack", "Knapsack", "背包", null, null, null], [340, "Text_RankingList", "Ranking", "排行榜", null, null, null], [341, "Text_GoldCoinLottery", "Lottery", "金币抽奖", null, null, null], [342, "Text_CollectingTasks", "Tasks", "领取任务", null, null, null], [343, "Text_SignIn", "Sign In", "签到", null, null, null], [344, "Text_RechargeDiamonds", "Diamonds", "充值钻石", null, null, null], [345, "Text_ExchangeRewards", "Exchange", "兑换奖励", null, null, null], [346, "Text_ForgeSoulRings", "Rings", "锻造魂环", null, null, null], [347, "Text_NoviceGiftPack", "Gift Pack", "新手礼包", null, null, null], [348, "Text_ForgeSoulBones", "Bones", "锻造魂骨", null, null, null], [349, "Text_DoYouWantToActivateTeammateAccidentalInjury", "Do You Want To Activate Teammate Accidental Injury", "是否开启队友误伤", null, null, null], [350, "Text_EnableAfk", "Enable Afk", "开启挂机", null, null, null], [351, "Text_DefenseHasBeenTurnedOff", "Defense Has Been Turned Off", "已关闭防御", null, null, null], [352, "Text_DefenseActivated", "Defense Activated", "已开启防御", null, null, null], [353, "Text_PutItAway", "Off", "收起", null, null, null], [354, "Text_Open", "On", "开启", null, null, null], [355, "Text_Defeated", "Defeated", "击败了", null, null, null], [356, "Text_YouHaveBeenDefeatedBy", "You Have Been Defeated By {0}", "你已被 {0} 击败", null, null, null], [357, "Text_DefeatToCompleteRevenge", "Defeat {0} To Complete Revenge", "击败 {0} 完成复仇", null, null, null], [358, "Text_Grade_MaoHao", "Grade:", "等级：", null, null, null], [359, "Text_Experience", "Experience:", "经验：", null, null, null], [360, "Text_Aggressivity", "Aggressivity:", "攻击力：", null, null, null], [361, "Text_LevelUnlock", "Level Unlock", "级解锁", null, null, null], [362, "Text_BloodVolume", "Blood Volume:", "血量：", null, null, null], [363, "Text_Insufficient", "Insufficient", "不足", null, null, null], [364, "Text_UpgradeToIncreaseReserves", "Upgrade To Increase {0} Reserves", "升级增加{0}储量", null, null, null], [365, "Text_DoubleTheAttackPowerWithinSeconds", "Seconds", "秒内攻击力翻倍", null, null, null], [366, "Text_LevelOpen", "Level Open", "级开启", null, null, null], [367, "Text_TheSkillsAreNotReadyYet", "The Skills Are Not Ready Yet", "技能还没准备好", null, null, null], [368, "Text_UpgradeSuccessLevel", "Upgrade Success Level+{0}", "升级成功 等级+{0}", null, null, null], [369, "Text_ContinuouslyEliminatePeople_2", "Continuously Eliminate 2 People!", "连续消灭2人！势不可当！", null, null, null], [370, "Text_ContinuouslyEliminatePeople_3", "Continuously Eliminate 3 People!", "连续消灭3人！勇冠三军！", null, null, null], [371, "Text_ContinuouslyEliminatePeople_4", "Continuously Eliminate 4 People!", "连续消灭4人！无人能敌！", null, null, null], [372, "Text_ContinuouslyEliminatePeople_5", "Continuously Eliminate 5 People!", "连续消灭5人！横扫千军！", null, null, null], [373, "Text_ContinuouslyEliminatePeople_6", "Continuously Eliminate 6 People!", "连续消灭6人！接近神了！", null, null, null], [374, "Text_ContinuouslyEliminatePeople_7", "Continuously Eliminate {0} People!", "连续消灭{0}人！超越神了！", null, null, null], [375, "Text_FreeUpgrade_Simoleness", "Upgrade", "免费升级", null, null, null], [376, "Text_HangingOnTheHook", "Hanging On The Hook", "挂机中", null, null, null], [377, "Text_CancelAfk", "Cancel Afk", "取消挂机", null, null, null], [378, "Text_Level", "Level", "级", null, null, null], [379, "Text_BlackMonkeyKingLevel", "Black Monkey King", "黑悟空关卡", null, null, null], [380, "Text_MillionYearSoulBeast", "Million Year Soul Beast", "百万年魂兽", null, null, null], [381, "Text_ReturningToTheCity", "Returning To The City", "回城", null, null, null], [382, "Text_PleaseFirstRaiseTheLevelToLevel", "Please First Raise The Level To {0} Level", "请先将等级提升至{0}级", null, null, null], [383, "Text_EmptyPrizeHaha", "Empty Prize - Haha", "空奖-哈哈", null, null, null], [384, "Text_WinningProbability", "Winning Probability", "中奖概率", null, null, null], [385, "Text_DrawTimes", "Draw {0} Times", "抽{0}次", null, null, null], [386, "Text_ConsumeCoins", "Consume {0} Coins", "消耗{0}金币", null, null, null], [387, "Text_ConsumeDispatchCoins", "Consume {0} Dispatch Coins", "消耗{0}派队币", null, null, null], [388, "Text_FreeLotteryDraw", "Free\nLottery Draw", "免费抽奖", null, null, null], [389, "Text_LotteryResults", "Lottery Results", "抽奖结果", null, null, null], [390, "Text_CongratulationsOnWinningThePrize", "Congratulations On Winning The Prize", "恭喜中奖", null, null, null], [391, "Text_ObtainDiamonds", "Obtain {0} Diamonds", "获得{0}钻石", null, null, null], [392, "Text_OpenTheBackpackForUse", "Open The Backpack For Use", "打开背包使用", null, null, null], [393, "Text_FirstDay", "First Day", "第一天", null, null, null], [394, "Text_TheSecondDay", "The Second Day", "第二天", null, null, null], [395, "Text_ReturnGiftPackageForVeteranPlayers", "Return Gift Package For Veteran Players", "老玩家回归礼包", null, null, null], [396, "Text_OnlineTimeIsLessThanMinutes", "Online Time Is Less Than {0} Minutes", "在线时间不足{0}分钟", null, null, null], [397, "Text_ReceivedSuccessfully", "Received Successfully", "领取成功", null, null, null], [398, "Text_CannotBeClaimedRepeatedly", "Cannot Be Claimed Repeatedly", "不能重复领取", null, null, null], [399, "Text_PleaseComeBackToCollectOnTheThDay", "Please Come Back To Collect On The {0} Th Day", "请第{0}天再来领取", null, null, null], [400, "Text_OpenTheBackpackAndUseItAfterReceivingIt", "Open The Backpack And Use It After Receiving It", "领取后打开背包使用", null, null, null], [401, "Text_OnlineMinutes", "Online {0} Minutes ({1}/{2})", "在线{0}分钟({1}/{2})", null, null, null], [402, "Text_ReceivedAlready", "Received Already", "已领取", null, null, null], [403, "Text_OnlineRewards", "Online Rewards", "在线奖励", null, null, null], [404, "Text_CanBeClaimed", "Can Be Claimed", "可领取", null, null, null], [405, "Text_InsufficientOnlineTime", "Insufficient Online Time", "在线时间不足", null, null, null], [406, "Text_ClaimRewards", "Claim Rewards", "领取奖励", null, null, null], [407, "Text_ReceivedReward", "Received Reward", "已领取奖励", null, null, null], [408, "Text_RewardCoins", "Reward {0} Coins", "奖励{0}金币", null, null, null], [409, "Text_RewardExperience", "Reward {0} Experience", "奖励{0}经验", null, null, null], [410, "Text_RewardDiamonds", "Reward {0} Diamonds", "奖励{0}钻石", null, null, null], [411, "Text_Lv", "Lv.", "等级Lv.", null, null, null], [412, "Text_IncreaseCoins", "Increase {0} Coins", "增加{0}金币", null, null, null], [413, "Text_IncreaseExperience", "Increase {0} Experience", "增加{0}经验", null, null, null], [414, "Text_GetCoins", "Get {0} Coins", "获得{0}金币", null, null, null], [415, "Text_UpgradeLevelTo", "Upgrade Level To", "等级提升至", null, null, null], [416, "Text_CurrentlyUnavailable", "0", "暂无", null, null, null], [417, "Text_Ranking", "Ranking", "排名", null, null, null], [418, "Text_Name", "Name", "名字", null, null, null], [419, "Text_Height", "Height", "高度", null, null, null], [420, "Text_Kill", "Kill", "击杀", null, null, null], [421, "Text_LevelMode", "Level Mode", "等级模式", null, null, null], [422, "Text_HeightMode", "Height Mode", "高度模式", null, null, null], [423, "Text_KillMode", "Kill Mode", "击杀模式", null, null, null], [424, "Text_SwitchRoomLeaderboard", "Switch Room Leaderboard", "切换房间排行榜", null, null, null], [425, "Text_SwitchToTheFullServerRankingList", "Switch To The Full Server Ranking List", "切换全服排行榜", null, null, null], [426, "Text_TheRankingListInYourRoom", "The Ranking List In Your Room\nClicking The Ranking Mode Button \nOn The Right Will Refresh The Ranking Mode", "你所在房间内的排行榜。\n点击右侧排行模式按钮会刷新排行榜模式。", null, null, null], [427, "Text_RoomRanking", "Room Ranking", "房间排行榜", null, null, null], [428, "Text_TopInTheEntireServer", "Top {0} In The Entire Server\nRank Lv. Rank Ranking", "全服前{0}名\n段位 Lv.等级排行。", null, null, null], [429, "Text_FullServerRankingList", "Full Server Ranking List", "全服排行榜", null, null, null], [430, "Text_DonTClickTooQuicklyWithYourLittleHand", "Don'T Click Too Quickly With Your Little Hand~", "小手别点太快哟~", null, null, null], [431, "Text_Decade", "Decade", "十年", null, null, null], [432, "Text_AHundredYears", "A Hundred Years", "百年", null, null, null], [433, "Text_Millennium", "Millennium", "千年", null, null, null], [434, "Text_TenThousandYears", "Ten Thousand Years", "万年", null, null, null], [435, "Text_100000Years", "100000 Years", "十万年", null, null, null], [436, "Text_MillionsOfYears", "Millions Of Years", "百万年", null, null, null], [437, "Text_Eternity", "Eternity", "万万年", null, null, null], [438, "Text_BillionsOfYears", "Billions Of Years", "亿万年", null, null, null], [439, "Text_1", "1", "一", null, null, null], [440, "Text_2", "2", "二", null, null, null], [441, "Text_3", "3", "三", null, null, null], [442, "Text_4", "4", "四", null, null, null], [443, "Text_5", "5", "五", null, null, null], [444, "Text_6", "6", "六", null, null, null], [445, "Text_7", "7", "七", null, null, null], [446, "Text_8", "8", "八", null, null, null], [447, "Text_9", "9", "九", null, null, null], [448, "Text_10", "10", "十", null, null, null], [449, "Text_NotYetObtainedSoulRing", "Not Yet Obtained Soul Ring", "还未获取魂环", null, null, null], [450, "Text_ContactTheAuthorForRepair", "Contact The Author For Repair", "联系作者修复", null, null, null], [451, "Text_InsufficientLevel", "Insufficient Level", "等级不足", null, null, null], [452, "Text_SuccessfullyForged", "Successfully Forged", "锻造成功", null, null, null], [453, "Text_TotalBonus", "Total Bonus: Health Increased By {0} Times, Attack Power Increased By {1} Times", "总加成：血量提升{0}倍，攻击力提升{1}倍", null, null, null], [454, "Text_CongratulationsOnCompletingTheBeginnerSGuide", "Congratulations On Completing The Beginner'S Guide", "恭喜你完成新手引导", null, null, null], [455, "Text_RewardTheFirstSoulRingWithATenYearSoulRing", "Reward The First Soul Ring With A Ten-Year Soul Ring", "奖励第一魂环 十年魂环", null, null, null], [456, "Text_TheSoulRingSoulRing", "The {0} Soul Ring\n{1} Soul Ring", "第{0}魂环\n{1}魂环 ", null, null, null], [457, "Text_UnlockableAtLevel", "Unlockable At Level {0}", "{0}级可解锁", null, null, null], [458, "Text_Cost", "Cost", "需要消耗", null, null, null], [459, "Text_SoulRing", "Soul Ring", "魂环", null, null, null], [460, "Text_Unlockable", "Unlockable", "可解锁", null, null, null], [461, "Text_SupplementarySignature", "Supplementary Signature", "补签", null, null, null], [462, "Text_Unclaimed", "Unclaimed", "待领取", null, null, null], [463, "Text_DiamondGrade", "Diamond+{0} Grade+{1}", "钻石 +{0} 等级 +{1}", null, null, null], [464, "Text_Day", "Day {0}", "第{0}天", null, null, null], [465, "Text_DayCheckIn", "{0} Day Check-In", "{0}日签到", null, null, null], [466, "Text_SignedIn", "Signed In", "已签到", null, null, null], [467, "Text_SuccessfullyObtainedTodaySReward", "Successfully Obtained Today'S Reward", "成功获得今日奖励", null, null, null], [468, "Text_TheCheckInDateHasNotYetArrived", "The Check-In Date Has Not Yet Arrived", "还未到签到日期", null, null, null], [469, "Text_DailyLoginToGames", "Daily Login To Games（{0}/{1}）", "每日登陆游戏（{0}/{1}）", null, null, null], [470, "Text_DailyOnlineMinutes", "Daily Online {2} Minutes（{0}/{1}）", "每日在线时长{2}分钟（{0}/{1}）", null, null, null], [471, "Text_DefeatMedusaEveryDay", "Defeat {2} Medusa Every Day（{0}/{1}）", "每日击败{2}只美杜莎（{0}/{1}）", null, null, null], [472, "Text_DefeatSpiderSpiritsDaily", "Defeat {2} Spider Spirits Daily（{0}/{1}）", "每日击败{2}只蜘蛛精（{0}/{1}）", null, null, null], [473, "Text_DefeatDazzlingSpidersDaily", "Defeat {2} Dazzling Spiders Daily（{0}/{1}）", "每日击败{2}只炫彩蜘蛛（{0}/{1}）", null, null, null], [474, "Text_DefeatDragonBeastsDaily", "Defeat {2} Dragon Beasts Daily（{0}/{1}）", "每日击败{2}只龙兽（{0}/{1}）", null, null, null], [475, "Text_DefeatZombiesDaily", "Defeat {2} Zombies Daily（{0}/{1}）", "每日击败{2}只丧尸（{0}/{1}）", null, null, null], [476, "Text_DefeatMutatedPuppetsDaily", "Defeat {2} Mutated Puppets Daily（{0}/{1}）", "每日击败{2}只变异布偶（{0}/{1}）", null, null, null], [477, "Text_DefeatPlayersDaily", "Defeat {2} Players Daily（{0}/{1}）", "每日击败{2}名玩家（{0}/{1}）", null, null, null], [478, "Text_DailyLevelIncreaseByLevels", "Daily Level Increase By {2} Levels（{0}/{1}）", "每日等级提升{2}级（{0}/{1}）", null, null, null], [479, "Text_PickUpTreasuresEveryDay", "Pick Up {2} Treasures Every Day（{0}/{1}）", "每日捡到{2}个秘宝（{0}/{1}）", null, null, null], [480, "Text_WatchAdsPerDay", "Watch {2} Ads Per Day（{0}/{1}）", "每日观看{2}次广告（{0}/{1}）", null, null, null], [481, "Text_LoginDaysAWeek", "Login {2} Days A Week（{0}/{1}）", "每周登录{2}天（{0}/{1}）", null, null, null], [482, "Text_UpTo30MinutesAndDaysPerWeek", "Up To 30 Minutes And {2} Days Per Week（{0}/{1}）", "每周时长达到30分钟{2}天（{0}/{1}）", null, null, null], [483, "Text_DefeatMedusaEveryWeek", "Defeat {2} Medusa Every Week（{0}/{1}）", "每周击败{2}只美杜莎（{0}/{1}）", null, null, null], [484, "Text_DefeatSpiderSpiritsEveryWeek", "Defeat {2} Spider Spirits Every Week（{0}/{1}）", "每周击败{2}只蜘蛛精（{0}/{1}）", null, null, null], [485, "Text_DefeatDazzlingSpidersEveryWeek", "Defeat {2} Dazzling Spiders Every Week（{0}/{1}）", "每周击败{2}只炫彩蜘蛛（{0}/{1}）", null, null, null], [486, "Text_DefeatDragonBeastsEveryWeek", "Defeat {2} Dragon Beasts Every Week（{0}/{1}）", "每周击败{2}只龙兽（{0}/{1}）", null, null, null], [487, "Text_DefeatZombiesEveryWeek", "Defeat {2} Zombies Every Week（{0}/{1}）", "每周击败{2}只丧尸（{0}/{1}）", null, null, null], [488, "Text_DefeatMutatedPuppetsEveryWeek", "Defeat {2} Mutated Puppets Every Week（{0}/{1}）", "每周击败{2}只变异布偶（{0}/{1}）", null, null, null], [489, "Text_DefeatPlayersPerWeek", "Defeat {2} Players Per Week（{0}/{1}）", "每周击败{2}名玩家（{0}/{1}）", null, null, null], [490, "Text_UpgradeByLevelsPerWeek", "Upgrade By {2} Levels Per Week（{0}/{1}）", "每周等级提升{2}级（{0}/{1}）", null, null, null], [491, "Text_PickUpTreasuresEveryWeek", "Pick Up {2} Treasures Every Week（{0}/{1}）", "每周捡到{2}个秘宝（{0}/{1}）", null, null, null], [492, "Text_WatchAdsPerWeek", "Watch {2} Ads Per Week（{0}/{1}）", "每周观看{2}次广告（{0}/{1}）", null, null, null], [493, "Text_DailyTasks", "Daily Tasks", "每日任务", null, null, null], [494, "Text_AllTasksHaveBeenCompletedWaitingForRefresh", "All Tasks Have Been Completed, Waiting For Refresh", "任务已全部完成，等待刷新...", null, null, null], [495, "Text_WeeklyTasks", "Weekly Tasks", "每周任务", null, null, null], [496, "Text_RemainingHours", "Remaining: {0} Hours", "剩余：{0}小时", null, null, null], [497, "Text_RemainingDays", "Remaining: {0} Days", "剩余：{0}天", null, null, null], [498, "Text_HangInTheAir", "Hang In The Air", "未完成", null, null, null], [499, "Text_NotEquippedWithYetGoFind", "Not Equipped With {0} Yet, Go Find {1}", "还未装备{0},去寻找{1}", null, null, null], [500, "Text_WarcraftMedusa", "Warcraft Medusa", "魔兽美杜莎", null, null, null], [501, "Text_WarcraftColorfulSpider", "Warcraft Colorful Spider", "魔兽炫彩蜘蛛", null, null, null], [502, "Text_WarcraftSpiderSpirit", "Warcraft Spider Spirit", "魔兽蜘蛛精", null, null, null], [503, "Text_DragonSWarcraft", "Dragon'S Warcraft", "龙之魔兽", null, null, null], [504, "Text_Zombies", "Zombies", "丧尸", null, null, null], [505, "Text_MutatedPuppet", "Mutated Puppet", "变异布偶", null, null, null], [506, "Text_BlackWukong", "Black Wukong", "黑悟空", null, null, null], [507, "Text_MickeyMouse", "Mickey Mouse", "魔兽米老鼠", null, null, null], [508, "Text_LevelSoulMaster1", "{0} Level Soul Master", "{0}级 魂士", null, null, null], [509, "Text_LevelSoulMaster2", "{0} Level Soul Master", "{0}级 魂师", null, null, null], [510, "Text_LevelSoulMaster3", "{0} Level Soul Master", "{0}级 大魂师", null, null, null], [511, "Text_LevelSoulSovereign", "{0} Level Soul Sovereign", "{0}级 魂尊", null, null, null], [512, "Text_LevelSoulSect", "{0} Level Soul Sect", "{0}级 魂宗", null, null, null], [513, "Text_LevelSoulKing", "{0} Level Soul King", "{0}级 魂王", null, null, null], [514, "Text_LevelSoulEmperor", "{0} Level Soul Emperor", "{0}级 魂帝", null, null, null], [515, "Text_LevelSoulSaint", "{0} Level Soul Saint", "{0}级 魂圣", null, null, null], [516, "Text_LevelContra", "{0} Level Contra", "{0}级 魂斗罗", null, null, null], [517, "Text_LevelBannedDouluo", "{0} Level Banned Douluo", "{0}级 封号斗罗", null, null, null], [518, "Text_LevelPeakDouluo", "{0} Level Peak Douluo", "{0}级 巅峰斗罗", null, null, null], [519, "Text_LevelDemigod", "{0} Level Demigod", "{0}级 半神", null, null, null], [520, "Text_LevelDivineOfficer", "{0} Level Divine Officer", "{0}级 神官", null, null, null], [521, "Text_LevelTrueGodLevel", "{0} Level True God Level", "{0}级 真神级", null, null, null], [522, "Text_LevelSuperGodLevel", "{0} Level Super God Level", "{0}级 超神级", null, null, null], [523, "Text_LevelSuperGodPeak", "{0} Level Super God Peak", "{0}级 超神巅峰", null, null, null], [524, "Text_LevelDivineKing", "{0} Level Divine King", "{0}级 神王", null, null, null], [525, "Text_LevelEternalImmortalEmperor", "{0} Level Eternal Immortal Emperor", "{0}级 万古仙帝", null, null, null], [526, "Text_EternalImmortalEmperor", "Eternal Immortal Emperor", "万古仙帝", null, null, null], [527, "Text_MartialSoulMechSlashWindSlash_Male", "Martial Soul - Mech Slash Wind Slash (Male)", "武魂-机甲斩狂风斩(男)", null, null, null], [528, "Text_MartialSoulMechSlashWindSlash_Female", "Martial Soul - Mech Slash Wind Slash (Female)", "武魂-机甲斩狂风斩(女)", null, null, null], [529, "Text_GoldenHoopRodPowderUniformGirl", "Golden Hoop Rod (Powder)+Uniform Girl", "金箍棒(粉)+制服女孩", null, null, null], [530, "HaotianHammerTangSan_GoldenHoopRodPurpleBlueSilverEmperor", "Haotian Hammer+Tang San\nGolden Hoop Rod (Purple)+Blue Silver Emperor", "昊天锤+唐三\n金箍棒(紫)+蓝银皇", null, null, null], [531, "Text_TheGoldenPrinceJkGirl", "The Golden Prince+Jk Girl", "黄金王子+JK女孩", null, null, null], [532, "Text_XiaolanGreenBlackOrangeDragon", "Xiaolan Long+Little Green Dragon\nLittle Black Dragon+Little Orange Dragon", "小蓝龙+小绿龙\n小黑龙+小橘龙", null, null, null], [533, "Text_ProbabilityIncreaseSuccess", "Probability Increase Success", "概率提升成功", null, null, null], [534, "Text_SoulBoneStrengtheningSuccessful", "Soul Bone Strengthening Successful", "魂骨强化成功", null, null, null], [535, "Text_SoulBoneStrengtheningFailed", "Soul Bone Strengthening Failed", "魂骨强化失败", null, null, null], [536, "Text_ClaimLimitedSkin", "Claim Limited Skin", "领取限定皮肤", null, null, null], [537, "Text_ClaimAutomaticAttack", "Claim Automatic Attack", "领取自动攻击", null, null, null], [538, "Text_ObtainedOpenTheBackpackToUse", "Obtained, Open The Backpack To Use", "已获得，打开背包使用", null, null, null], [539, "Text_Music_1", "Open World", "开放世界", null, null, null], [540, "Text_Music_2", "Stay", "留下来", null, null, null], [541, "Text_Music_3", "Bad Guy", "坏人", null, null, null], [542, "Text_Music_4", "I Will Survive", "我会活下去", null, null, null], [543, "Text_Music_5", "Let Me Love You", "让我爱你", null, null, null], [544, "Text_Music_6", "Running Up That Hill", "跑上那座山", null, null, null], [545, "Text_Music_7", "Love To Hate Me", "爱恨我", null, null, null], [546, "Text_Music_8", "Tomboy", "假小子", null, null, null], [547, "Text_Music_9", "Shut Down", "关闭", null, null, null], [548, "Text_Music_10", "Celestial", "天空的", null, null, null], [549, "Text_Music_11", "As It Was", "事实上", null, null, null], [550, "Text_Music_12", "Good Morning", "早上好", null, null, null], [551, "Text_Music_13", "Alone", "独自一人", null, null, null], [552, "Text_Music_14", "Chanderiler", "钱德里勒", null, null, null], [553, "Text_Music_15", "Don'T Wanna Know", "不想知道", null, null, null], [554, "Text_Music_16", "Mood", "心情", null, null, null], [555, "Text_Music_17", "Moon", "金轮", null, null, null], [556, "Text_Music_18", "I Don'T Know What It'S Called", "不知道叫啥", null, null, null], [557, "Text_Music_19", "I Don'T Know What It'S Called", "也不知道叫啥", null, null, null], [558, "Text_RewardSoulBone", "Reward {0} Soul Bone", "奖励{0}魂骨碎片", null, null, null], [559, "Text_InsufficientSoulBoneFragments", "Insufficient Soul Bone Fragments", "魂骨碎片不足", null, null, null], [560, "Text_GetFreeBones", "Get {0} Free Bones", "免费领取{0}魂骨碎片", null, null, null], [561, "Text_SuccessfullyObtainedBones", "Successfully Obtained Bones+{0}", "成功获得魂骨碎片+{0}", null, null, null], [562, "Text_Upgrade", "Upgrade", "升级", null, null, null], [563, "Text_ForgeSoulRings_Button", "Forge Soul Rings", "锻造魂环", null, null, null], [564, "Text_LotsOfDiamonds", "Lots Of Diamonds", "领取大量钻石\n下次翻倍", null, null, null], [565, "Text_BillionsOfYears_10", "10 Billions Of Years", "十亿万年", null, null, null], [566, "Text_TensOfBillionsOfYears", "Tens Of Billions Of Years", "百亿万年", null, null, null], [567, "Text_HundredsOfBillionsOfYears", "Hundreds Of Billions Of Years", "千亿万年", null, null, null]];
+const EXCELDATA$8 = [["Id", "Name", "Value", "Value_Ch", "Value_Cht", "Value_J", "Value_K"], ["", "Key|ReadByName", "MainLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage", "ChildLanguage"], [1, "Text_AfterStrengthening", "After\nStrengthening", "强化后", "强化後", "強化されます", "강화된 후"], [2, "Text_StarRating", "{0} Star Rating", "{0}星级", "{0}星級", "{0}つ星", "{0}성급"], [3, "Text_NeedToReachLevel", "Need To Reach Level {0}", "需要等级达到{0}级", "需要等級達到{0}級", "要求レベルが{0}レベルに達する", "레벨 {0} 레벨 달성 필요"], [4, "Text_IncreaseBloodVolumeByTimes", "Blood Volume Increase\n{0} Times", "血量提升{0}倍", "血量提升{0}倍", "血液量が{0}倍に上昇", "혈액량 {0}배 증가"], [5, "Text_AttackPowerIncreasedByTimes", "Attack Power Enhancement\n{0} Times", "攻击力提升{0}倍", "攻擊力提升{0}倍", "攻撃力{0}倍アップ", "공격력 {0}배 증가"], [6, "Text_StrengthenSoulBones", "Strengthen Soul Bones", "强化魂骨", "强化魂骨", "魂の骨を強化する", "혼골 강화"], [7, "Text_NeedToConsume", "Need To Consume", "需要消耗", "需要消耗", "消費する必要がある", "필요 소비"], [8, "Text_Diamonds", "Diamonds", "钻石", "鑽石", "ダイヤモンド", "다이아몬드"], [9, "Text_GoldCoins", "Gold Coins", "金币", "金幣", "金貨", "금화"], [10, "Text_StrengtheningConditions", "Strengthening Conditions", "强化条件", "强化條件", "強化条件", "조건을 강화하다"], [11, "Text_EnhanceTheProbabilityOfSuccess", "Strengthening Success\nProbability: {0}%", "强化成功\n概率：{0}%", "强化成功\n概率：{0}%", "強化に成功\n確率：{0}%", "강화 성공\n확률: {0}%"], [12, "Text_IncreaseProbability", "Increase\nProbability", "提升概率", "提升概率", "かくりつを上げる", "확률 증가"], [13, "Text_StartStrengthening", "Start\nStrengthening", "开始强化", "開始强化", "強化を開始", "강화 시작"], [14, "Text_TeamCoin", "Team Coin", "派队币", "派隊幣", "派隊貨幣", "파티 머니"], [15, "Text_Buy", "Buy", "购买", "購買", "購入する", "구매"], [16, "Text_Or", "Or", "或", "或", "または", "또는"], [17, "Text_UpProbabiliotyConetntTextBlock_0", "Consume {0} Diamonds\nEnhancement Probability\nIncreased To {1}%", "消耗{0}钻石\n强化概率提升到{1}%", "消耗{0}鑽石\n强化概率提升到{1}%", "{0}ダイヤモンド消費\n強化確率が{1}%に向上", "{0} 다이아 소모\n강화 확률을 {1}%까지 증가"], [18, "Text_UpProbabiliotyConetntTextBlock_1", "Consume {0} Team Coins\nEnhance The Probability\nTo {1}%", "消耗{0}派队币\n强化概率提升到{1}%", "消耗{0}派隊幣\n强化概率提升到{1}%", "{0}パーティー貨幣を消費する\n強化確率が{1}%にアップ", "{0} 파티 코인 소모\n강화 확률을 {1}%까지 증가"], [19, "Text_UsingDiamonds", "Using Diamonds", "使用钻石", "使用鑽石", "ダイヤモンドを使う", "다이아몬드 사용"], [20, "Text_UseTeamCoins", "Use Team Coins", "使用派队币", "使用派隊幣", "ディスパッチ通貨の使用", "파티 코인 사용"], [21, "Text_DiamondShortage", "Diamond Shortage", "钻石不足", "鑽石不足", "ダイヤ不足", "다이아 부족"], [22, "Text_InsufficientGoldCoins", "Insufficient Gold Coins", "金币不足", "金幣不足", "金貨不足", "금화 부족"], [23, "Text_SuccessfullyObtainedDiamonds", "Successfully Obtained Diamonds+{0}", "成功获得钻石+{0}", "成功獲得鑽石+{0}", "ダイヤモンド+{0}の獲得に成功", "다이아 +{0} 획득 성공"], [24, "Text_GetDiamondsForFree", "Get {0} Diamonds For Free", "免费领取{0}颗钻石", "免費領取{0}顆鑽石", "{0}個のダイヤモンドを無料で受け取ります", "{0}개 다이아 무료 수령"], [25, "Text_Cancel", "Cancel", "取消", "取消", "キャンセル", "취소"], [26, "Text_FreeToReceive", "Free To Receive", "免费领取", "免費領取", "無料で受け取る", "무료 수령"], [27, "Text_FullLevel", "Full Level", "已满级", "已滿級", "フルレベル", "만급"], [28, "Text_HeadSoulBone", "Head Soul Bone", "头部魂骨", "頭部魂骨", "頭部魂骨", "머리의 혼골"], [29, "Text_ExternalSoulBone", "External Soul Bone", "外附魂骨", "外附魂骨", "外付魂骨", "외부혼골"], [30, "Text_TorsoSoulBone", "Torso Soul Bone", "躯干魂骨", "軀幹魂骨", "体幹魂骨", "몸통 혼골"], [31, "Text_WaistSoulBone", "Waist Soul Bone", "腰部魂骨", "腰部魂骨", "腰部魂骨", "허리의 혼골"], [32, "Text_ArmSoulBone", "Arm Soul Bone", "手臂魂骨", "手臂魂骨", "腕の魂骨", "팔의 혼골"], [33, "Text_LegSoulBone", "Leg Soul Bone", "腿部魂骨", "腿部魂骨", "足の魂骨", "다리 혼골"], [34, "Text_FootSoulBone", "Foot Soul Bone", "脚部魂骨", "脚部魂骨", "足魂骨", "발의 혼골"], [35, "Text_GoTo", "Go To", "前往", null, null, null], [36, "Text_GodLevelHuntingGround", "God Level Hunting Ground", "神级狩猎场", null, null, null], [37, "Text_NoviceVillage", "Novice Village", "新手村", null, null, null], [38, "Text_IntermediateHuntingGround", "Intermediate Hunting Ground", "中级狩猎场", null, null, null], [39, "Text_AdvancedHuntingGround", "Advanced Hunting Ground", "高级狩猎场", null, null, null], [40, "Text_HuntAndKill", "Hunt And Kill", "猎杀", null, null, null], [41, "Text_100000YearSoulBeast", "100000 Year Soul Beast", "10万年魂兽", null, null, null], [42, "Text_LoadingMapResourcesPleaseBePatient", "Loading Map Resources, Please Be Patient", "正在加载地图资源，请耐心等待", null, null, null], [43, "Text_AdvertisingRewards", "Advertising Rewards", "广告奖励", null, null, null], [44, "Text_WatchTheAdvertisementTimesGetItForFree", "Watch The Advertisement {0} Times\nGet It For Free", "观看{0}次广告\n免费获得", null, null, null], [45, "Text_TakeYouToGetItForFree", "Take You To Get It For Free", "带你去免费获得", null, null, null], [46, "Text_GetItForFree", "Get It For Free", "免费获得", null, null, null], [47, "Text_GetGoldCoinsForFree", "Get {0} Gold Coins For Free", "免费领取{0}金币", null, null, null], [48, "Text_SuccessfullyObtainedCoins", "Successfully Obtained Coins", "成功获得金币", null, null, null], [49, "Text_GetFreeDiamonds", "Get {0} Free Diamonds", "免费领取{0}颗钻石", null, null, null], [50, "Text_FreeLevelUpgradeByLevel", "Free Level Upgrade By {0} Level", "等级免费提升{0}级", null, null, null], [51, "Text_FreeUpgrade", "Free Upgrade", "免费提升", null, null, null], [52, "Text_FreeDayReward", "Free {0}st Day Reward", "免费领取第{0}天奖励", null, null, null], [53, "Text_FailedPleaseTryAgain", "{0} Failed, Please Try Again", "{0}失败，请重试", null, null, null], [54, "Text_DontClickTooFastItWillGetStuck", "Don't Click Too Fast, It Will Get Stuck", "别点太快、会卡哦", null, null, null], [55, "Text_DirectlyUpgradeTheLevel", "Directly Upgrade The Level", "直接提升等级", null, null, null], [56, "Text_Determine", "Determine", "确定", null, null, null], [57, "Text_UpgradeLevel", "Upgrade Level", "升级等级", null, null, null], [58, "Text_UseDiamondsUpgradeLevel", "Use {0} Diamonds\nUpgrade Level", "使用5个钻石\n提升等级", null, null, null], [59, "Text_PleaseEnterTheRedemptionCode", "Please Enter The Redemption Code", "请输入兑换码", null, null, null], [60, "Text_Exchange", "Exchange", "兑换", null, null, null], [61, "Text_PleaseEnterTheRedemptionCodeProvidedByTheAuthorCanBeRedeemedForRewards", "Please Enter The Redemption Code Provided By The Author\nCan Be Redeemed For Rewards", "请输入作者提供的兑换码\n即可兑换奖励", null, null, null], [62, "Text_GiftPackExchange", "Gift Pack Exchange", "礼包兑换", null, null, null], [63, "Text_AlreadyredeemedNoNeedToRedeemAgain", "Already Redeemed, No Need To Redeem Again", "已兑换，无需重复兑换", null, null, null], [64, "Text_CollectionFailed", "Collection Failed", "领取失败", null, null, null], [65, "Text_GiftPackRedemptionCodeError", "Gift Pack Redemption Code Error", "礼包兑换码错误", null, null, null], [66, "Text_Grade", "Grade", "等级", null, null, null], [67, "Text_ExchangeSuccessful", "Exchange Successful", "兑换成功", null, null, null], [68, "Text_CoolForSeconds", "Cool For {0} Seconds", "冷却{0}秒", null, null, null], [69, "Text_SoldouttodayPleaseReplaceWithOtherProductsToPurchase", "Sold Out Today, Please Replace With Other Products To Purchase", "今日已售空,请更换其他商品购买", null, null, null], [70, "Text_Rechargediamonds", "Recharge Diamonds", "充值钻石", null, null, null], [71, "Text_Nopurchaserestrictions", "No purchase Restrictions", "不限购", null, null, null], [72, "Text_Soldouttoday", "Sold Out Today", "今日已售空", null, null, null], [73, "Text_Limitedtoonepurchaseperday", "Limited To One Purchase Per Day", "每天限购一次", null, null, null], [74, "Text_BagTabTextBlock", "Martial Soul|Soul Master|Soul Bone|Soul Beast", "武魂|魂师|魂骨|魂兽", null, null, null], [75, "Text_AutomaticAttackFist_Male", "Automatic Attack Fist (Male)", "自动攻击拳(男)", null, null, null], [76, "Text_AutomaticAttackFist_Female", "Automatic Attack Fist (Female)", "自动攻击拳(女)", null, null, null], [77, "Text_MechSlashWindSlash_Male", "Mech Slash Wind Slash (Male)", "机甲斩狂风斩(男)", null, null, null], [78, "Text_MechSlashWindSlash_Female", "Mech Slash Wind Slash (Female)", "机甲斩狂风斩(女)", null, null, null], [79, "Text_GoldenHoopRod_Powder", "Golden Hoop Rod (Powder)", "金箍棒(粉)", null, null, null], [80, "Text_GoldenHoopRod_Purple", "Golden Hoop Rod (Purple)", "金箍棒(紫)", null, null, null], [81, "Text_HaotianHammer", "Haotian Hammer", "昊天锤", null, null, null], [82, "Text_TridentOfTheSeaGod", "Trident Of The Sea God", "海神三叉戟", null, null, null], [83, "Text_CyberComesWithALongSpear", "Cyber Comes With A Long Spear", "赛博自来也长枪", null, null, null], [84, "Text_SeaKingDoubleHeadedKnife", "Sea King Double Headed Knife", "海王双头刀", null, null, null], [85, "Text_CaptainAmericaSHammer", "Captain America'S Hammer", "美国队长神锤", null, null, null], [86, "Text_VenomAxe", "Venom Axe", "毒液斧头", null, null, null], [87, "Text_MiebaAxe", "Mieba Axe", "灭霸斧", null, null, null], [88, "Text_NarutoWieldingASword", "Naruto Wielding A Sword", "鸣人手里剑", null, null, null], [89, "Text_FutureWarriorGoldenSword", "Future Warrior Golden Sword", "未来战士黄金剑", null, null, null], [90, "Text_ForestSentinelMagicBattle", "Forest Sentinel Magic Battle", "森林哨兵魔法仗", null, null, null], [91, "Text_Pistol_SonicSpecific", "Pistol (Sonic Specific)", "手枪\n索尼克专用", null, null, null], [92, "Text_SignalGun_SpecificallyForPinkHairMonster", "Signal Gun\nSpecifically For Pink Hair Monster", "信号枪\n粉毛怪专用", null, null, null], [93, "Text_Knife_ForTsunade", "Knife (For Tsunade)", "刀(纲手专用)", null, null, null], [94, "Text_Knife_ExclusiveToLilock", "Knife (Exclusive To Lilock)", "刀(李洛克专用)", null, null, null], [95, "Text_Sickle_ForDriedPersimmonGhostShark", "Sickle\nFor Dried Persimmon Ghost Shark", "镰刀\n干柿鬼鲛专用", null, null, null], [96, "Text_Sickle_ExclusivelyForCyberGirls", "Sickle\nExclusively For Cyber Girls", "镰刀\n赛博女孩专用", null, null, null], [97, "Text_IceSword_ExclusivelyForBlackWidow", "Ice Sword\nExclusively For Black Widow", "冰封剑\n黑寡妇专用", null, null, null], [98, "Text_MonsterClawKnife", "Monster Claw Knife", "怪物爪刀", null, null, null], [99, "Text_Machete_KakashiSpecific", "Machete (Kakashi Specific)", "大砍刀\n卡卡西专用", null, null, null], [100, "Text_TheStaff_ExclusivelyForUchihaItachi", "The Staff\nExclusively For Uchiha Itachi", "法杖\n宇智波鼬专用", null, null, null], [101, "Text_WaterGun", "Water Gun", "水枪", null, null, null], [102, "Text_IceDiamondSword", "Ice Diamond Sword", "冰钻剑", null, null, null], [103, "Text_ButcherSKnife", "Butcher 'S Knife", "屠刀", null, null, null], [104, "Text_BlueStaff_LokiSpecific", "Blue Staff (Loki Specific)", "蓝色法杖\n洛基专用", null, null, null], [105, "Text_Sickle_SunGodExclusive", "Sickle (Sun God Exclusive)", "镰刀\n太阳神专用", null, null, null], [106, "Text_DemonSword_ExclusivelyForUchihaMadara", "Demon Sword\nExclusively For Uchiha Madara", "恶魔剑\n宇智波斑爷专用", null, null, null], [107, "Text_Sword_SpecificallyDesignedForNanorobots", "Sword\nSpecifically Designed For Nanorobots", "剑(纳米机器人专用)", null, null, null], [108, "Text_Sickle_DeadpoolSpecific", "Sickle (Deadpool Specific)", "镰刀(死侍专用)", null, null, null], [109, "Text_FluorescentSword_ForVolcanoSentinelsOnly", "Fluorescent Sword\nFor Volcano Sentinels Only", "荧光剑\n火山哨兵专用", null, null, null], [110, "Text_FanaticalSword_ExclusiveToCrimsonWitch", "Fanatical Sword\nExclusive To Crimson Witch", "狂热剑\n绯红女巫专用", null, null, null], [111, "Text_InflatableHammer", "Inflatable Hammer", "充气锤子", null, null, null], [112, "Text_WoodenStaff_VenomSpiderManSpecific", "Wooden Staff\nVenom Spider Man Specific", "木法杖\n毒液蜘蛛侠专用", null, null, null], [113, "Text_GuaziShield", "Guazi Shield", "瓜子盾", null, null, null], [114, "Text_Shield_HulkExclusive", "Shield (Hulk Exclusive)", "盾(浩克专用)", null, null, null], [115, "Text_UltimateIceRingSword", "Ultimate Ice Ring Sword", "终极冰环剑", null, null, null], [116, "Text_BulletSprayGun_ForHinata", "Bullet Spray Gun (For Hinata)", "散弹喷枪\n雏田专用", null, null, null], [117, "Text_Firearms_LuffySpecific", "Firearms (Luffy Specific)", "火枪(路飞专用)", null, null, null], [118, "Text_PurpleLightSword_SpecialForSasuke", "Purple Light Sword\nSpecial For Sasuke", "紫光剑\n佐助专用", null, null, null], [119, "Text_LaserGun_TenjinSpecific", "Laser Gun (Tenjin Specific)", "激光枪(天神专用)", null, null, null], [120, "Text_Sword_ExclusivelyForWolverine", "Sword\nExclusively For Wolverine", "剑(金刚狼专用)", null, null, null], [121, "Text_LaserGun_IronManSpecific", "Laser Gun (Iron Man Specific)", "激光枪(钢铁侠专用)", null, null, null], [122, "Text_CoupleMechSet_Female", "Couple Mech Set (Female)", "情侣机甲套装(女)", null, null, null], [123, "Text_CoupleMechSet_Male", "Couple Mech Set (Male)", "情侣机甲套装(男)", null, null, null], [124, "Text_XiaoWuJie", "Xiao Wu Jie", "小舞姐", null, null, null], [125, "Text_BlueSilverEmperor", "Blue Silver Emperor", "蓝银皇", null, null, null], [126, "Text_UniformGirl", "Uniform Girl", "制服女孩", null, null, null], [127, "Text_TangSan", "Tang San", "唐三", null, null, null], [128, "Text_TheGoldenPrince", "The Golden Prince", "黄金王子", null, null, null], [129, "Text_JkGirl", "Jk Girl", "JK女孩", null, null, null], [130, "Text_XiaolanLong", "Xiaolan Long", "小蓝龙", null, null, null], [131, "Text_LittleGreenDragon", "Little Green Dragon", "小绿龙", null, null, null], [132, "Text_LittleBlackDragon", "Little Black Dragon", "小黑龙", null, null, null], [133, "Text_LittleOrangeDragon", "Little Orange Dragon", "小橘龙", null, null, null], [134, "Text_GodLevelDemonKing", "God Level Demon King", "神级魔王", null, null, null], [135, "Text_TheFourthHokage", "The Fourth Hokage", "四代火影", null, null, null], [136, "Text_MedusaQueen", "Medusa Queen", "美杜莎女王", null, null, null], [137, "Text_FoxEaredGirl", "Fox Eared Girl", "狐耳少女", null, null, null], [138, "Text_EvilMessenger", "Evil Messenger", "邪恶使者", null, null, null], [139, "Text_LongCoatForWomen", "Long Coat For Women", "长款大衣女", null, null, null], [140, "Text_Spongebob", "Spongebob", "海绵宝宝", null, null, null], [141, "Text_IronMan", "Iron Man", "钢铁侠", null, null, null], [142, "Text_Thanos", "Thanos", "灭霸", null, null, null], [143, "Text_HedgehogBoy", "Hedgehog Boy", "刺猬小子", null, null, null], [144, "Text_EvilMessenger1", "Evil Messenger", "邪恶使者", null, null, null], [145, "Text_BlueClothedMan", "Blue Clothed Man", "蓝衣男", null, null, null], [146, "Text_BlackClothedMan", "Black Clothed Man", "黑衣男", null, null, null], [147, "Text_Doom", "Doom", "毁灭战士", null, null, null], [148, "Text_ThunderGod", "Thunder God", "雷神", null, null, null], [149, "Text_BlackWidow", "Black Widow", "黑寡妇", null, null, null], [150, "Text_CuteGirl", "Cute Girl", "可爱女", null, null, null], [151, "Text_MarukoHeadGirl", "Maruko Head Girl", "丸子头女", null, null, null], [152, "Text_WesternGoddess", "Western Goddess", "西方神女", null, null, null], [153, "Text_BlackDressGirl", "Black Dress Girl", "黑裙少女", null, null, null], [154, "Text_ShortHairedWoman", "Short Haired Woman", "短发女", null, null, null], [155, "Text_QipaoWomen", "Qipao Women", "旗袍女", null, null, null], [156, "Text_ClothedMan", "Clothed Man", "披风男", null, null, null], [157, "Text_LongHairedWoman", "Long Haired Woman", "长发女", null, null, null], [158, "Text_DoublePonytailGirl1", "Double Ponytail Girl", "双马尾女", null, null, null], [159, "Text_WomenWithLongHairAndShortSkirts", "Women With Long Hair\nShort Skirts", "长发短裙女", null, null, null], [160, "Text_DoublePonytailGirl2", "Double Ponytail Girl", "双马尾女", null, null, null], [161, "Text_DoublePonytailGirl3", "Double Ponytail Girl", "双马尾女", null, null, null], [162, "Text_PleatedSkirtGirl", "Pleated Skirt Girl", "百褶裙女孩", null, null, null], [163, "Text_ShortHairedFashionableWomen", "Short Haired\nFashionable Women", "短发时尚女", null, null, null], [164, "Text_LongPonytailGirl", "Long Ponytail Girl", "长马尾女孩", null, null, null], [165, "Text_LongEaredGirl", "Long Eared Girl", "长耳女", null, null, null], [166, "Text_LongHairedWomanInWindbreaker", "Long Haired\nWoman In Windbreaker", "风衣长发女", null, null, null], [167, "Text_DevilHornGirl", "Devil Horn Girl", "恶魔角女", null, null, null], [168, "Text_KimonoGirl", "Kimono Girl", "和服女", null, null, null], [169, "Text_HairpinGirl", "Hairpin Girl", "发卡女", null, null, null], [170, "Text_MaidSuitForWomen", "Maid Suit For Women", "女仆套装女", null, null, null], [171, "Text_HatGirl", "Hat Girl", "帽子女", null, null, null], [172, "Text_MagicalGirl", "Magical Girl", "魔法女孩", null, null, null], [173, "Text_LongSkirtWomen", "Long Skirt Women", "长裙女", null, null, null], [174, "Text_KillerWoman", "Killer Woman", "杀手女", null, null, null], [175, "Text_WitchDoctor", "Witch Doctor", "巫医", null, null, null], [176, "Text_LongLeggedMom", "Long Legged Mom", "长腿妈妈", null, null, null], [177, "Text_XuanKui", "Xuan Kui", "玄魁", null, null, null], [178, "Text_EvilWitch", "Evil Witch", "邪恶女巫", null, null, null], [179, "Text_LittleUglyGirl", "Little Ugly Girl", "小丑女", null, null, null], [180, "Text_HalloweenGirl", "Halloween Girl", "万圣节女", null, null, null], [181, "Text_Butcher", "Butcher", "屠夫", null, null, null], [182, "Text_DeanOfMolewoodCollege", "Dean Of Molewood College", "魔莱坞学院院长", null, null, null], [183, "Text_MistyGhostShadow", "Misty Ghost Shadow", "迷雾鬼影", null, null, null], [184, "Text_BlueHairedMonster", "Blue Haired Monster", "蓝毛怪", null, null, null], [185, "Text_DogHeadedCaterpillar", "Dog Headed Caterpillar", "狗头毛毛虫", null, null, null], [186, "Text_PinkHairedMonster", "Pink Haired Monster", "粉毛怪", null, null, null], [187, "Text_SonicAdvance", "Sonic Advance", "索尼克", null, null, null], [188, "Text_RainbowFriends", "Rainbow Friends", "Rainbow friends", null, null, null], [189, "Text_SeaGod", "Sea God", "海神", null, null, null], [190, "Text_DevilSWings", "Devil'S Wings", "恶魔翅膀", null, null, null], [191, "Text_DevilSCorner", "Devil'S Corner", "恶魔角", null, null, null], [192, "Text_DevilSTail", "Devil'S Tail", "恶魔尾巴", null, null, null], [193, "Text_DemonSkull", "Demon Skull", "恶魔头骨", null, null, null], [194, "Text_DevilSThreeHeadedDog", "Devil'S Three Headed Dog", "恶魔三头犬", null, null, null], [195, "Text_AngelWings", "Angel Wings", "天使翅膀", null, null, null], [196, "Text_AngelSpider", "Angel Spider", "天使蜘蛛", null, null, null], [197, "Text_FoxSTail", "Fox'S Tail", "狐狸尾巴", null, null, null], [198, "Text_FoxEars", "Fox Ears", "狐狸耳朵", null, null, null], [199, "Text_WavingScarf", "Waving Scarf", "挥动的围巾", null, null, null], [200, "Text_LightningWings", "Lightning Wings", "闪电翅膀", null, null, null], [201, "Text_Glasses", "Glasses", "眼镜", null, null, null], [202, "Text_PhotographyRobot", "Photography Robot", "拍照机器人", null, null, null], [203, "Text_Veil", "Veil", "面纱", null, null, null], [204, "Text_RocketLauncher", "Rocket Launcher", "火箭发射器", null, null, null], [205, "Text_SniperGunBody", "Sniper Gun Body", "狙击枪枪身", null, null, null], [206, "Text_CuteWesternDragon", "Cute Western Dragon", "可爱西方龙", null, null, null], [207, "Text_Loong", "Loong", "龙", null, null, null], [208, "Text_EmperorDragon", "Emperor Dragon", "帝王龙", null, null, null], [209, "Text_HellDragon", "Hell Dragon", "地狱龙", null, null, null], [210, "Text_CandyDragon", "Candy Dragon", "糖果龙", null, null, null], [211, "Text_WuShilong", "Wu Shilong", "武士龙", null, null, null], [212, "Text_CrystalWings", "Crystal Wings", "水晶翅膀", null, null, null], [213, "Text_KillingWings", "Killing Wings", "杀戮翅膀", null, null, null], [214, "Text_HellSWings", "Hell'S Wings", "地狱翅膀", null, null, null], [215, "Text_FairyWings", "Fairy Wings", "精灵翅膀", null, null, null], [216, "Text_FlameWings", "Flame Wings", "火焰翅膀", null, null, null], [217, "Text_BigSword", "Big Sword", "大剑", null, null, null], [218, "Text_AngelSword", "Angel Sword", "天使剑", null, null, null], [219, "Text_Snaker", "Snaker", "蛇女", null, null, null], [220, "Text_ASpider", "A Spider", "络新妇", null, null, null], [221, "Text_BigSpider", "Big Spider", "大蜘蛛", null, null, null], [222, "Text_SmallFaceHuggingPurpleSpider", "Small Face Hugging\nPurple Spider", "小型抱脸紫蜘蛛", null, null, null], [223, "Text_SmallBlushingSpider", "Small Blushing Spider", "小型抱脸红蜘蛛", null, null, null], [224, "Text_SmallFaceHuggingGreenSpider", "Small Face Hugging\nGreen Spider", "小型抱脸绿蜘蛛", null, null, null], [225, "Text_SmallFaceHuggingBlueSpider", "Small Face Hugging\nBlue Spider", "小型抱脸蓝蜘蛛", null, null, null], [226, "Text_Xiaolong", "Xiaolong", "小龙", null, null, null], [227, "Text_CartoonWoodenDragon", "Cartoon Wooden Dragon", "卡通木龙", null, null, null], [228, "Text_RedDragon", "Red Dragon", "红龙", null, null, null], [229, "Text_Huanglong", "Huanglong", "黄龙", null, null, null], [230, "Text_BlueDragon", "Blue Dragon", "蓝龙", null, null, null], [231, "Text_TheGodOfOtter", "The God Of Otter", "奥特之神", null, null, null], [232, "Text_SuccessfullyActivatedAutomaticAttack", "Successfully Activated Automatic Attack", "成功开启自动攻击", null, null, null], [233, "Text_FailedToObtainAutomaticAttackSoul", "Failed To Obtain Automatic Attack Soul", "未获得自动攻击武魂", null, null, null], [234, "Text_SuccessfullyDisabledAutomaticAttack", "Successfully Disabled Automatic Attack", "成功关闭自动攻击", null, null, null], [235, "Text_Obtained", "Obtained", "已获得", null, null, null], [236, "Text_CongratulationsOnObtaining", "Congratulations On Obtaining", "恭喜获得", null, null, null], [237, "Text_SoulPower", "Soul Power", "魂力", null, null, null], [238, "Text_MartialSoul", "Martial Soul", "武魂", null, null, null], [239, "Text_SoulMaster", "Soul Master", "魂师", null, null, null], [240, "Text_SoulBone", "Soul Bone", "魂骨", null, null, null], [241, "Text_Ayakashi", "Ayakashi", "魂兽", null, null, null], [242, "Text_Ordinary", "Ordinary", "普通", null, null, null], [243, "Text_Rare", "Rare", "稀有", null, null, null], [244, "Text_Epic", "Epic", "史诗", null, null, null], [245, "Text_Legend", "Legend", "传说", null, null, null], [246, "Text_KillingGodDomain", "Killing God Domain", "杀神领域", null, null, null], [247, "Text_DoushenContinent_MySoulRingUnlimitedUpgrade", "Doushen Continent (My Soul Ring Unlimited Upgrade)", "斗神大陆(我的魂环无限升级)", null, null, null], [248, "Text_InTheEquipment", "In The Equipment", "装备中", null, null, null], [249, "Text_InUse", "In Use", "使用中", null, null, null], [250, "Text_FollowIn", "Follow In", "跟随中", null, null, null], [251, "Text_BeginnerGiftPackAcquisition", "Beginner Gift Pack Acquisition", "新手礼包获取", null, null, null], [252, "Text_GoldCoinLotteryToObtain", "Gold Coin Lottery To Obtain", "金币抽奖获取", null, null, null], [253, "Text_PleaseCompleteTheBeginnerGuideFirst", "Please Complete The Beginner Guide First", "请先完成新手引导", null, null, null], [254, "Text_ObtainByWatchingAdvertisements", "Obtain By Watching Advertisements", "看广告获得", null, null, null], [255, "Text_OldPlayersReturningToObtain", "Old Players Returning To Obtain", "老玩家回归获得", null, null, null], [256, "Text_NotObtained", "Not Obtained", "未获得", null, null, null], [257, "Text_StartGuiding", "Start Guiding", "开始引导", null, null, null], [258, "Text_PurchaseSuccessful", "Purchase Successful", "购买成功", null, null, null], [259, "Text_EquipmentSuccessful", "Equipment Successful", "装备成功", null, null, null], [260, "Text_WearingSuccessfully", "Wearing Successfully", "穿戴成功", null, null, null], [261, "Text_FollowSuccess", "Follow Success", "跟随成功", null, null, null], [262, "Text_TheFunctionIsNotYetOpen_PleaseStayTuned", "The Function Is Not Yet Open, Please Stay Tuned", "功能暂未开放，敬请期待", null, null, null], [263, "Text_RecoveryWasSuccessful", "Recovery Was Successful", "恢复成功", null, null, null], [264, "Text_RemovedSuccessfully", "Removed Successfully", "卸下成功", null, null, null], [265, "Text_SuccessfullyDiscardedPet", "Successfully Discarded Pet", "丢掉宠物成功", null, null, null], [266, "Text_RestoreInitialImage", "Restore Initial Image", "恢复初始形象", null, null, null], [267, "Text_RemoveAllEquipment", "Remove All Equipment", "卸下所有装备", null, null, null], [268, "Text_CancelPetFollowing", "Cancel Pet Following", "取消宠物跟随", null, null, null], [269, "Text_ClickToUse", "Click To Use", "点击使用", null, null, null], [270, "Text_AlreadyOwned", "Already Owned", "已拥有", null, null, null], [271, "Text_ClickToGet", "Click To Get", "点击获得", null, null, null], [272, "Text_NotOwned", "Not Owned", "未拥有", null, null, null], [273, "Text_Use", "Use", "使用", null, null, null], [274, "Text_PurchaseCoins", "Purchase Coins", "金币购买", null, null, null], [275, "Text_Introduce", "Introduce", "介绍", null, null, null], [276, "Text_IncreasedHealthAndAttackPowerAfterUse", "Increased Health And Attack Power After Use", "使用后血量和攻击力提升", null, null, null], [277, "Text_Times", "Times", "倍", null, null, null], [278, "Text_ConsumingDiamondsToPurchase", "Consuming {0} Diamonds\nTo Purchase", "消耗{0}钻石购买", null, null, null], [279, "Text_ConsumeTeamCoinsToPurchase", "Consume {0} Team Coins\nTo Purchase", "消耗{0}派队币购买", null, null, null], [280, "Text_YujianFlyingMall", "Yujian Flying Mall", "御剑飞行商城", null, null, null], [281, "Text_RoyalSwordFlyingBonus", "Royal Sword Flying Bonus", "御剑飞行总加成", null, null, null], [282, "Text_MitsurugiSmartKiller", "Mitsurugi - Smart Killer", "御剑_智弑者", null, null, null], [283, "Text_MitsurugiGoldenSword", "Mitsurugi - Golden Sword", "御剑_黄金剑", null, null, null], [284, "Text_MitsurugiIceDiamondSword", "Mitsurugi - Ice Diamond Sword", "御剑_冰钻剑", null, null, null], [285, "Text_MitsurugiDemonSword", "Mitsurugi - Demon Sword", "御剑_恶魔剑", null, null, null], [286, "Text_MitsurugiBrokenCrazySword", "Mitsurugi - Broken Crazy Sword", "御剑_断狂剑", null, null, null], [287, "Text_MitsurugiAerocraft", "Mitsurugi - Aerocraft", "御剑_飞行器", null, null, null], [288, "Text_MitsurugiImperialSwordDart", "Mitsurugi - Imperial Sword Dart", "御剑_飞镖", null, null, null], [289, "Text_MitsurugiSmallBicycle", "Mitsurugi - Small Bicycle", "御剑_小单车", null, null, null], [290, "Text_MitsurugiAnywayHeShandsome", "Mitsurugi - Anyway, He's Handsome", "御剑_反正很帅", null, null, null], [291, "Text_MitsurugiSkate", "Mitsurugi - Skate", "御剑_滑板", null, null, null], [292, "Text_MitsurugiLittleGreenDragon", "Mitsurugi - Little Green Dragon", "御剑_小绿龙", null, null, null], [293, "Text_MitsurugiXiaolanLong", "Mitsurugi - Xiaolan Long", "御剑_小蓝龙", null, null, null], [294, "Text_MitsurugiLittleFireDragon", "Mitsurugi - Little Fire Dragon", "御剑_小火龙", null, null, null], [295, "Text_YujianFlyingHasBeenSuccessfullyPurchased", "Yujian Flying Has Been Successfully Purchased", "御剑飞行购买成功", null, null, null], [296, "Text_EquippingSwordFlying", "Equipping Sword Flying", "装备御剑飞行", null, null, null], [297, "Text_FlyingWithoutEquippedSword", "Flying Without Equipped Sword", "未装备御剑飞行", null, null, null], [298, "Text_RemoveTheImperialSwordAndFly", "Remove The Imperial Sword And Fly", "卸下御剑飞行", null, null, null], [299, "Text_IncreaseBloodVolumeByTimes_Nowrap", "Blood Volume Increase {0} Times", "血量提升{0}倍", "血量提升{0}倍", "血液量が{0}倍に上昇", "혈액량 {0}배 증가"], [300, "Text_AttackPowerIncreasedByTimes_Nowrap", "Attack Power Enhancement {0} Times", "攻击力提升{0}倍", "攻擊力提升{0}倍", "攻撃力{0}倍アップ", "공격력 {0}배 증가"], [301, "Text_ClickAnywhereToContinue", "Click anywhere to continue", "点击任意位置继续……", null, null, null], [302, "Text_Guid_0", "Welcome to\n{0}\nLet me introduce you to all the button operations.", "欢迎来到\n{0}\n我来给你介绍一下所有按钮操作吧。", null, null, null], [303, "Text_Guid_1", "Move button, click and drag to control the character's movement.", "移动按钮，点击后拖拽可以控制角色移动。", null, null, null], [304, "Text_Guid_2", "View movement area, click and drag here to control the screen view.", "视角移动区域，点击拖动这里可以控制屏幕视角。", null, null, null], [305, "Text_Guid_3", "Jump button, continuous clicking will perform a two-stage jump, which will consume {0}", "跳跃按钮，连续点击会进行二段跳，会消耗{0}", null, null, null], [306, "Text_Guid_4", "Sword flying, can fly", "御剑飞行，可以飞行", null, null, null], [307, "Text_Guid_5", "Attack button, continuous clicking can release cool combos, which will consume {0}", "攻击按钮，连续点击可释放炫酷的连招，会消耗{0}", null, null, null], [308, "Text_Guid_6", "Automatic attack button, enable automatic attack", "自动攻击按钮、开启自动攻击", null, null, null], [309, "Text_Guid_7", "Activate the soul ring button to display the soul ring.", "开启魂环按钮，可展示魂环。", null, null, null], [310, "Text_Guid_8", "Background music button, open to change background music and switch background music on/off.", "背景音乐按钮，打开可更换背景音乐以及开关背景音乐。", null, null, null], [311, "Text_Guid_9", "Click the 'I'm Home' button, and when you're stuck in the map and unable to move, you can try clicking on 'I'll Try'.", "点我回家按钮，当你被卡在地图中无法移动时可以点击我试试哦。", null, null, null], [312, "Text_Guid_10", "The backpack button, the fastest way to level up is to search for martial souls, professions, soul bones, and pets in the map.", "背包按钮，提升等级最快的办法就是在地图中寻找武魂、职业、魂骨、宠物。", null, null, null], [313, "Text_Guid_11", "The leaderboard button can be opened to view the in room leaderboard and world leaderboard. Come and check your ranking in Douluo Continent.", "排行榜按钮，打开可以进行查看房间内排行榜和世界排行榜，快来查看你在斗罗大陆的排名是多少吧。", null, null, null], [314, "Text_Guid_12", "Gold coin lottery button, where you can redeem diamonds, levels, and skins for coins that you can't spend all", "金币抽奖按钮，花不完的金币在这里可以兑现 钻石、等级、皮肤哦", null, null, null], [315, "Text_Guid_13", "The online reward button allows you to receive a large amount of coins and experience to quickly upgrade your level. You can quickly upgrade to a banned Douluo within 10 minutes of being online.", "在线奖励按钮，可以领取大量金币和经验来快速提升等级，在线10分钟即可快速升级到封号斗罗。", null, null, null], [316, "Text_Guid_14", "Task button, completing tasks can earn a large amount of coins and experience to quickly level up, and you can immediately upgrade to god level.", "任务按钮，完成任务可以领取大量金币和经验来快速提升等级，马上就可升级到神级。", null, null, null], [317, "Text_Guid_15", "Check in button, log in to the game, check in to receive a large amount of diamonds and levels.", "签到按钮，登录游戏签到领取大量钻石和等级。", null, null, null], [318, "Text_Guid_16", "There are many benefits, the fastest way to level up, unlimited upgrades, and become a shortcut to becoming a god level.", "福利多多，最快提升等级的办法，无限升级，成为神级的捷径。", null, null, null], [319, "Text_Guid_17", "Sword flying, equipped to fly.", "御剑飞行，装备后可飞行。", null, null, null], [320, "Text_Guid_18", "Recharge diamonds to quickly increase the lifespan of soul rings and reach up to one million grade levels.", "充值钻石，可充值大量钻石快速提升魂环年限、最快达到百万年级别。", null, null, null], [321, "Text_Guid_19", "Redeem rewards, receive redemption codes to redeem rewards, diamonds+levels.", "兑换奖励，领取兑换码兑换奖励，钻石+等级。", null, null, null], [322, "Text_Guid_20", "Newbie Gift Pack Button, Get Newbie Gift Pack", "新手礼包按钮，领取新手大礼包", null, null, null], [323, "Text_Guid_21", "Forge soul ring button, can forge soul rings, making your soul rings reach 100000 levels, and the tenth ring can reach millions of levels", "锻造魂环按钮，可以锻造魂环，使自己的魂环都达到十万年级别，第十环可以达到百万年级别", null, null, null], [324, "Text_Guid_22", "The hang up button automatically upgrades without the need for operation when turned on.", "挂机按钮，开启后、无需操作自动升级。", null, null, null], [325, "Text_Guid_23", "Activate defense and avoid being accidentally injured by teammates.", "开启防御，不会被队友误伤。", null, null, null], [326, "Text_Guid_24", "Character attributes, health, {0}, attack power will increase with level.", "角色属性，血量、{0}，攻击力会随等级提升而提升。", null, null, null], [327, "Text_Guid_25", "Quickly increase coins to directly purchase martial souls and soul bones.", "可快速增加金币直接购买武魂、魂骨。", null, null, null], [328, "Text_Guid_26", "Can quickly increase diamond forged soul rings.", "可快速增加钻石锻造魂环。", null, null, null], [329, "Text_Guid_27", "Introduction completed, welcome to leave a message in the gaming community. Follow my signpost and I'll take you to find the martial soul and soul bone.", "介绍完毕，欢迎游戏圈留言。跟我路标走，带你去找武魂、魂骨。", null, null, null], [330, "Text_Guid_28", "Forge Soul Bones", "锻造魂骨", null, null, null], [331, "Text_ArrivedNearTheTargetPoint", "Arrived Near The Target Point", "已到达目标点附近", null, null, null], [332, "Text_ReturnToNewbieVillage", "Return To Newbie Village", "返回新手村", null, null, null], [333, "Text_LetSOfficiallyOpenYourCopy", "Let'S Officially Open Your Copy", "正式开启你的副本吧", null, null, null], [334, "Text_Beat", "Beat", "击败", null, null, null], [335, "Text_SwordFlying", "Sword", "御剑飞行", null, null, null], [336, "Text_AutomaticAttack", "Automatic", "自动攻击", null, null, null], [337, "Text_BackgroundMusic", "Music", "背景音乐", null, null, null], [338, "Text_ClickOnMeToGoHome", "Home", "点我回家", null, null, null], [339, "Text_Knapsack", "Knapsack", "背包", null, null, null], [340, "Text_RankingList", "Ranking", "排行榜", null, null, null], [341, "Text_GoldCoinLottery", "Lottery", "金币抽奖", null, null, null], [342, "Text_CollectingTasks", "Tasks", "领取任务", null, null, null], [343, "Text_SignIn", "Sign In", "签到", null, null, null], [344, "Text_RechargeDiamonds", "Diamonds", "充值钻石", null, null, null], [345, "Text_ExchangeRewards", "Exchange", "兑换奖励", null, null, null], [346, "Text_ForgeSoulRings", "Rings", "锻造魂环", null, null, null], [347, "Text_NoviceGiftPack", "Gift Pack", "新手礼包", null, null, null], [348, "Text_ForgeSoulBones", "Bones", "锻造魂骨", null, null, null], [349, "Text_DoYouWantToActivateTeammateAccidentalInjury", "Do You Want To Activate Teammate Accidental Injury", "是否开启队友误伤", null, null, null], [350, "Text_EnableAfk", "Enable Afk", "开启挂机", null, null, null], [351, "Text_DefenseHasBeenTurnedOff", "Defense Has Been Turned Off", "已关闭防御", null, null, null], [352, "Text_DefenseActivated", "Defense Activated", "已开启防御", null, null, null], [353, "Text_PutItAway", "Off", "收起", null, null, null], [354, "Text_Open", "On", "开启", null, null, null], [355, "Text_Defeated", "Defeated", "击败了", null, null, null], [356, "Text_YouHaveBeenDefeatedBy", "You Have Been Defeated By {0}", "你已被 {0} 击败", null, null, null], [357, "Text_DefeatToCompleteRevenge", "Defeat {0} To Complete Revenge", "击败 {0} 完成复仇", null, null, null], [358, "Text_Grade_MaoHao", "Grade:", "等级：", null, null, null], [359, "Text_Experience", "Experience:", "经验：", null, null, null], [360, "Text_Aggressivity", "Aggressivity:", "攻击力：", null, null, null], [361, "Text_LevelUnlock", "Level Unlock", "级解锁", null, null, null], [362, "Text_BloodVolume", "Blood Volume:", "血量：", null, null, null], [363, "Text_Insufficient", "Insufficient", "不足", null, null, null], [364, "Text_UpgradeToIncreaseReserves", "Upgrade To Increase {0} Reserves", "升级增加{0}储量", null, null, null], [365, "Text_DoubleTheAttackPowerWithinSeconds", "Seconds", "秒内攻击力翻倍", null, null, null], [366, "Text_LevelOpen", "Level Open", "级开启", null, null, null], [367, "Text_TheSkillsAreNotReadyYet", "The Skills Are Not Ready Yet", "技能还没准备好", null, null, null], [368, "Text_UpgradeSuccessLevel", "Upgrade Success Level+{0}", "升级成功 等级+{0}", null, null, null], [369, "Text_ContinuouslyEliminatePeople_2", "Continuously Eliminate 2 People!", "连续消灭2人！势不可当！", null, null, null], [370, "Text_ContinuouslyEliminatePeople_3", "Continuously Eliminate 3 People!", "连续消灭3人！勇冠三军！", null, null, null], [371, "Text_ContinuouslyEliminatePeople_4", "Continuously Eliminate 4 People!", "连续消灭4人！无人能敌！", null, null, null], [372, "Text_ContinuouslyEliminatePeople_5", "Continuously Eliminate 5 People!", "连续消灭5人！横扫千军！", null, null, null], [373, "Text_ContinuouslyEliminatePeople_6", "Continuously Eliminate 6 People!", "连续消灭6人！接近神了！", null, null, null], [374, "Text_ContinuouslyEliminatePeople_7", "Continuously Eliminate {0} People!", "连续消灭{0}人！超越神了！", null, null, null], [375, "Text_FreeUpgrade_Simoleness", "Upgrade", "免费升级", null, null, null], [376, "Text_HangingOnTheHook", "Hanging On The Hook", "挂机中", null, null, null], [377, "Text_CancelAfk", "Cancel Afk", "取消挂机", null, null, null], [378, "Text_Level", "Level", "级", null, null, null], [379, "Text_BlackMonkeyKingLevel", "Black Monkey King", "黑悟空关卡", null, null, null], [380, "Text_MillionYearSoulBeast", "Million Year Soul Beast", "百万年魂兽", null, null, null], [381, "Text_ReturningToTheCity", "Returning To The City", "回城", null, null, null], [382, "Text_PleaseFirstRaiseTheLevelToLevel", "Please First Raise The Level To {0} Level", "请先将等级提升至{0}级", null, null, null], [383, "Text_EmptyPrizeHaha", "Empty Prize - Haha", "空奖-哈哈", null, null, null], [384, "Text_WinningProbability", "Winning Probability", "中奖概率", null, null, null], [385, "Text_DrawTimes", "Draw {0} Times", "抽{0}次", null, null, null], [386, "Text_ConsumeCoins", "Consume {0} Coins", "消耗{0}金币", null, null, null], [387, "Text_ConsumeDispatchCoins", "Consume {0} Dispatch Coins", "消耗{0}派队币", null, null, null], [388, "Text_FreeLotteryDraw", "Free\nLottery Draw", "免费抽奖", null, null, null], [389, "Text_LotteryResults", "Lottery Results", "抽奖结果", null, null, null], [390, "Text_CongratulationsOnWinningThePrize", "Congratulations On Winning The Prize", "恭喜中奖", null, null, null], [391, "Text_ObtainDiamonds", "Obtain {0} Diamonds", "获得{0}钻石", null, null, null], [392, "Text_OpenTheBackpackForUse", "Open The Backpack For Use", "打开背包使用", null, null, null], [393, "Text_FirstDay", "First Day", "第一天", null, null, null], [394, "Text_TheSecondDay", "The Second Day", "第二天", null, null, null], [395, "Text_ReturnGiftPackageForVeteranPlayers", "Return Gift Package For Veteran Players", "老玩家回归礼包", null, null, null], [396, "Text_OnlineTimeIsLessThanMinutes", "Online Time Is Less Than {0} Minutes", "在线时间不足{0}分钟", null, null, null], [397, "Text_ReceivedSuccessfully", "Received Successfully", "领取成功", null, null, null], [398, "Text_CannotBeClaimedRepeatedly", "Cannot Be Claimed Repeatedly", "不能重复领取", null, null, null], [399, "Text_PleaseComeBackToCollectOnTheThDay", "Please Come Back To Collect On The {0} Th Day", "请第{0}天再来领取", null, null, null], [400, "Text_OpenTheBackpackAndUseItAfterReceivingIt", "Open The Backpack And Use It After Receiving It", "领取后打开背包使用", null, null, null], [401, "Text_OnlineMinutes", "Online {0} Minutes ({1}/{2})", "在线{0}分钟({1}/{2})", null, null, null], [402, "Text_ReceivedAlready", "Received Already", "已领取", null, null, null], [403, "Text_OnlineRewards", "Online Rewards", "在线奖励", null, null, null], [404, "Text_CanBeClaimed", "Can Be Claimed", "可领取", null, null, null], [405, "Text_InsufficientOnlineTime", "Insufficient Online Time", "在线时间不足", null, null, null], [406, "Text_ClaimRewards", "Claim Rewards", "领取奖励", null, null, null], [407, "Text_ReceivedReward", "Received Reward", "已领取奖励", null, null, null], [408, "Text_RewardCoins", "Reward {0} Coins", "奖励{0}金币", null, null, null], [409, "Text_RewardExperience", "Reward {0} Experience", "奖励{0}经验", null, null, null], [410, "Text_RewardDiamonds", "Reward {0} Diamonds", "奖励{0}钻石", null, null, null], [411, "Text_Lv", "Lv.", "等级Lv.", null, null, null], [412, "Text_IncreaseCoins", "Increase {0} Coins", "增加{0}金币", null, null, null], [413, "Text_IncreaseExperience", "Increase {0} Experience", "增加{0}经验", null, null, null], [414, "Text_GetCoins", "Get {0} Coins", "获得{0}金币", null, null, null], [415, "Text_UpgradeLevelTo", "Upgrade Level To", "等级提升至", null, null, null], [416, "Text_CurrentlyUnavailable", "0", "暂无", null, null, null], [417, "Text_Ranking", "Ranking", "排名", null, null, null], [418, "Text_Name", "Name", "名字", null, null, null], [419, "Text_Height", "Height", "高度", null, null, null], [420, "Text_Kill", "Kill", "击杀", null, null, null], [421, "Text_LevelMode", "Level Mode", "等级模式", null, null, null], [422, "Text_HeightMode", "Height Mode", "高度模式", null, null, null], [423, "Text_KillMode", "Kill Mode", "击杀模式", null, null, null], [424, "Text_SwitchRoomLeaderboard", "Switch Room Leaderboard", "切换房间排行榜", null, null, null], [425, "Text_SwitchToTheFullServerRankingList", "Switch To The Full Server Ranking List", "切换全服排行榜", null, null, null], [426, "Text_TheRankingListInYourRoom", "The Ranking List In Your Room\nClicking The Ranking Mode Button \nOn The Right Will Refresh The Ranking Mode", "你所在房间内的排行榜。\n点击右侧排行模式按钮会刷新排行榜模式。", null, null, null], [427, "Text_RoomRanking", "Room Ranking", "房间排行榜", null, null, null], [428, "Text_TopInTheEntireServer", "Top {0} In The Entire Server\nRank Lv. Rank Ranking", "全服前{0}名\n段位 Lv.等级排行。", null, null, null], [429, "Text_FullServerRankingList", "Full Server Ranking List", "全服排行榜", null, null, null], [430, "Text_DonTClickTooQuicklyWithYourLittleHand", "Don'T Click Too Quickly With Your Little Hand~", "小手别点太快哟~", null, null, null], [431, "Text_Decade", "Decade", "十年", null, null, null], [432, "Text_AHundredYears", "A Hundred Years", "百年", null, null, null], [433, "Text_Millennium", "Millennium", "千年", null, null, null], [434, "Text_TenThousandYears", "Ten Thousand Years", "万年", null, null, null], [435, "Text_100000Years", "100000 Years", "十万年", null, null, null], [436, "Text_MillionsOfYears", "Millions Of Years", "百万年", null, null, null], [437, "Text_Eternity", "Eternity", "万万年", null, null, null], [438, "Text_BillionsOfYears", "Billions Of Years", "亿万年", null, null, null], [439, "Text_1", "1", "一", null, null, null], [440, "Text_2", "2", "二", null, null, null], [441, "Text_3", "3", "三", null, null, null], [442, "Text_4", "4", "四", null, null, null], [443, "Text_5", "5", "五", null, null, null], [444, "Text_6", "6", "六", null, null, null], [445, "Text_7", "7", "七", null, null, null], [446, "Text_8", "8", "八", null, null, null], [447, "Text_9", "9", "九", null, null, null], [448, "Text_10", "10", "十", null, null, null], [449, "Text_NotYetObtainedSoulRing", "Not Yet Obtained Soul Ring", "还未获取魂环", null, null, null], [450, "Text_ContactTheAuthorForRepair", "Contact The Author For Repair", "联系作者修复", null, null, null], [451, "Text_InsufficientLevel", "Insufficient Level", "等级不足", null, null, null], [452, "Text_SuccessfullyForged", "Successfully Forged", "锻造成功", null, null, null], [453, "Text_TotalBonus", "Total Bonus: Health Increased By {0} Times, Attack Power Increased By {1} Times", "总加成：血量提升{0}倍，攻击力提升{1}倍", null, null, null], [454, "Text_CongratulationsOnCompletingTheBeginnerSGuide", "Congratulations On Completing The Beginner'S Guide", "恭喜你完成新手引导", null, null, null], [455, "Text_RewardTheFirstSoulRingWithATenYearSoulRing", "Reward The First Soul Ring With A Ten-Year Soul Ring", "奖励第一魂环 十年魂环", null, null, null], [456, "Text_TheSoulRingSoulRing", "The {0} Soul Ring\n{1} Soul Ring", "第{0}魂环\n{1}魂环 ", null, null, null], [457, "Text_UnlockableAtLevel", "Unlockable At Level {0}", "{0}级可解锁", null, null, null], [458, "Text_Cost", "Cost", "需要消耗", null, null, null], [459, "Text_SoulRing", "Soul Ring", "魂环", null, null, null], [460, "Text_Unlockable", "Unlockable", "可解锁", null, null, null], [461, "Text_SupplementarySignature", "Supplementary Signature", "补签", null, null, null], [462, "Text_Unclaimed", "Unclaimed", "待领取", null, null, null], [463, "Text_DiamondGrade", "Diamond+{0} Grade+{1}", "钻石 +{0} 等级 +{1}", null, null, null], [464, "Text_Day", "Day {0}", "第{0}天", null, null, null], [465, "Text_DayCheckIn", "{0} Day Check-In", "{0}日签到", null, null, null], [466, "Text_SignedIn", "Signed In", "已签到", null, null, null], [467, "Text_SuccessfullyObtainedTodaySReward", "Successfully Obtained Today'S Reward", "成功获得今日奖励", null, null, null], [468, "Text_TheCheckInDateHasNotYetArrived", "The Check-In Date Has Not Yet Arrived", "还未到签到日期", null, null, null], [469, "Text_DailyLoginToGames", "Daily Login To Games（{0}/{1}）", "每日登陆游戏（{0}/{1}）", null, null, null], [470, "Text_DailyOnlineMinutes", "Daily Online {2} Minutes（{0}/{1}）", "每日在线时长{2}分钟（{0}/{1}）", null, null, null], [471, "Text_DefeatMedusaEveryDay", "Defeat {2} Medusa Every Day（{0}/{1}）", "每日击败{2}只美杜莎（{0}/{1}）", null, null, null], [472, "Text_DefeatSpiderSpiritsDaily", "Defeat {2} Spider Spirits Daily（{0}/{1}）", "每日击败{2}只蜘蛛精（{0}/{1}）", null, null, null], [473, "Text_DefeatDazzlingSpidersDaily", "Defeat {2} Dazzling Spiders Daily（{0}/{1}）", "每日击败{2}只炫彩蜘蛛（{0}/{1}）", null, null, null], [474, "Text_DefeatDragonBeastsDaily", "Defeat {2} Dragon Beasts Daily（{0}/{1}）", "每日击败{2}只龙兽（{0}/{1}）", null, null, null], [475, "Text_DefeatZombiesDaily", "Defeat {2} Zombies Daily（{0}/{1}）", "每日击败{2}只丧尸（{0}/{1}）", null, null, null], [476, "Text_DefeatMutatedPuppetsDaily", "Defeat {2} Mutated Puppets Daily（{0}/{1}）", "每日击败{2}只变异布偶（{0}/{1}）", null, null, null], [477, "Text_DefeatPlayersDaily", "Defeat {2} Players Daily（{0}/{1}）", "每日击败{2}名玩家（{0}/{1}）", null, null, null], [478, "Text_DailyLevelIncreaseByLevels", "Daily Level Increase By {2} Levels（{0}/{1}）", "每日等级提升{2}级（{0}/{1}）", null, null, null], [479, "Text_PickUpTreasuresEveryDay", "Pick Up {2} Treasures Every Day（{0}/{1}）", "每日捡到{2}个秘宝（{0}/{1}）", null, null, null], [480, "Text_WatchAdsPerDay", "Watch {2} Ads Per Day（{0}/{1}）", "每日观看{2}次广告（{0}/{1}）", null, null, null], [481, "Text_LoginDaysAWeek", "Login {2} Days A Week（{0}/{1}）", "每周登录{2}天（{0}/{1}）", null, null, null], [482, "Text_UpTo30MinutesAndDaysPerWeek", "Up To 30 Minutes And {2} Days Per Week（{0}/{1}）", "每周时长达到30分钟{2}天（{0}/{1}）", null, null, null], [483, "Text_DefeatMedusaEveryWeek", "Defeat {2} Medusa Every Week（{0}/{1}）", "每周击败{2}只美杜莎（{0}/{1}）", null, null, null], [484, "Text_DefeatSpiderSpiritsEveryWeek", "Defeat {2} Spider Spirits Every Week（{0}/{1}）", "每周击败{2}只蜘蛛精（{0}/{1}）", null, null, null], [485, "Text_DefeatDazzlingSpidersEveryWeek", "Defeat {2} Dazzling Spiders Every Week（{0}/{1}）", "每周击败{2}只炫彩蜘蛛（{0}/{1}）", null, null, null], [486, "Text_DefeatDragonBeastsEveryWeek", "Defeat {2} Dragon Beasts Every Week（{0}/{1}）", "每周击败{2}只龙兽（{0}/{1}）", null, null, null], [487, "Text_DefeatZombiesEveryWeek", "Defeat {2} Zombies Every Week（{0}/{1}）", "每周击败{2}只丧尸（{0}/{1}）", null, null, null], [488, "Text_DefeatMutatedPuppetsEveryWeek", "Defeat {2} Mutated Puppets Every Week（{0}/{1}）", "每周击败{2}只变异布偶（{0}/{1}）", null, null, null], [489, "Text_DefeatPlayersPerWeek", "Defeat {2} Players Per Week（{0}/{1}）", "每周击败{2}名玩家（{0}/{1}）", null, null, null], [490, "Text_UpgradeByLevelsPerWeek", "Upgrade By {2} Levels Per Week（{0}/{1}）", "每周等级提升{2}级（{0}/{1}）", null, null, null], [491, "Text_PickUpTreasuresEveryWeek", "Pick Up {2} Treasures Every Week（{0}/{1}）", "每周捡到{2}个秘宝（{0}/{1}）", null, null, null], [492, "Text_WatchAdsPerWeek", "Watch {2} Ads Per Week（{0}/{1}）", "每周观看{2}次广告（{0}/{1}）", null, null, null], [493, "Text_DailyTasks", "Daily Tasks", "每日任务", null, null, null], [494, "Text_AllTasksHaveBeenCompletedWaitingForRefresh", "All Tasks Have Been Completed, Waiting For Refresh", "任务已全部完成，等待刷新...", null, null, null], [495, "Text_WeeklyTasks", "Weekly Tasks", "每周任务", null, null, null], [496, "Text_RemainingHours", "Remaining: {0} Hours", "剩余：{0}小时", null, null, null], [497, "Text_RemainingDays", "Remaining: {0} Days", "剩余：{0}天", null, null, null], [498, "Text_HangInTheAir", "Hang In The Air", "未完成", null, null, null], [499, "Text_NotEquippedWithYetGoFind", "Not Equipped With {0} Yet, Go Find {1}", "还未装备{0},去寻找{1}", null, null, null], [500, "Text_WarcraftMedusa", "Warcraft Medusa", "魔兽美杜莎", null, null, null], [501, "Text_WarcraftColorfulSpider", "Warcraft Colorful Spider", "魔兽炫彩蜘蛛", null, null, null], [502, "Text_WarcraftSpiderSpirit", "Warcraft Spider Spirit", "魔兽蜘蛛精", null, null, null], [503, "Text_DragonSWarcraft", "Dragon'S Warcraft", "龙之魔兽", null, null, null], [504, "Text_Zombies", "Zombies", "丧尸", null, null, null], [505, "Text_MutatedPuppet", "Mutated Puppet", "变异布偶", null, null, null], [506, "Text_BlackWukong", "Black Wukong", "黑悟空", null, null, null], [507, "Text_MickeyMouse", "Mickey Mouse", "魔兽米老鼠", null, null, null], [508, "Text_LevelSoulMaster1", "{0} Level Soul Master", "{0}级 魂士", null, null, null], [509, "Text_LevelSoulMaster2", "{0} Level Soul Master", "{0}级 魂师", null, null, null], [510, "Text_LevelSoulMaster3", "{0} Level Soul Master", "{0}级 大魂师", null, null, null], [511, "Text_LevelSoulSovereign", "{0} Level Soul Sovereign", "{0}级 魂尊", null, null, null], [512, "Text_LevelSoulSect", "{0} Level Soul Sect", "{0}级 魂宗", null, null, null], [513, "Text_LevelSoulKing", "{0} Level Soul King", "{0}级 魂王", null, null, null], [514, "Text_LevelSoulEmperor", "{0} Level Soul Emperor", "{0}级 魂帝", null, null, null], [515, "Text_LevelSoulSaint", "{0} Level Soul Saint", "{0}级 魂圣", null, null, null], [516, "Text_LevelContra", "{0} Level Contra", "{0}级 魂斗罗", null, null, null], [517, "Text_LevelBannedDouluo", "{0} Level Banned Douluo", "{0}级 封号斗罗", null, null, null], [518, "Text_LevelPeakDouluo", "{0} Level Peak Douluo", "{0}级 巅峰斗罗", null, null, null], [519, "Text_LevelDemigod", "{0} Level Demigod", "{0}级 半神", null, null, null], [520, "Text_LevelDivineOfficer", "{0} Level Divine Officer", "{0}级 神官", null, null, null], [521, "Text_LevelTrueGodLevel", "{0} Level True God Level", "{0}级 真神级", null, null, null], [522, "Text_LevelSuperGodLevel", "{0} Level Super God Level", "{0}级 超神级", null, null, null], [523, "Text_LevelSuperGodPeak", "{0} Level Super God Peak", "{0}级 超神巅峰", null, null, null], [524, "Text_LevelDivineKing", "{0} Level Divine King", "{0}级 神王", null, null, null], [525, "Text_LevelEternalImmortalEmperor", "{0} Level Eternal Immortal Emperor", "{0}级 万古仙帝", null, null, null], [526, "Text_EternalImmortalEmperor", "Eternal Immortal Emperor", "万古仙帝", null, null, null], [527, "Text_MartialSoulMechSlashWindSlash_Male", "Martial Soul - Mech Slash Wind Slash (Male)", "武魂-机甲斩狂风斩(男)", null, null, null], [528, "Text_MartialSoulMechSlashWindSlash_Female", "Martial Soul - Mech Slash Wind Slash (Female)", "武魂-机甲斩狂风斩(女)", null, null, null], [529, "Text_GoldenHoopRodPowderUniformGirl", "Golden Hoop Rod (Powder)+Uniform Girl", "金箍棒(粉)+制服女孩", null, null, null], [530, "HaotianHammerTangSan_GoldenHoopRodPurpleBlueSilverEmperor", "Haotian Hammer+Tang San\nGolden Hoop Rod (Purple)+Blue Silver Emperor", "昊天锤+唐三\n金箍棒(紫)+蓝银皇", null, null, null], [531, "Text_TheGoldenPrinceJkGirl", "The Golden Prince+Jk Girl", "黄金王子+JK女孩", null, null, null], [532, "Text_XiaolanGreenBlackOrangeDragon", "Xiaolan Long+Little Green Dragon\nLittle Black Dragon+Little Orange Dragon", "小蓝龙+小绿龙\n小黑龙+小橘龙", null, null, null], [533, "Text_ProbabilityIncreaseSuccess", "Probability Increase Success", "概率提升成功", null, null, null], [534, "Text_SoulBoneStrengtheningSuccessful", "Soul Bone Strengthening Successful", "魂骨强化成功", null, null, null], [535, "Text_SoulBoneStrengtheningFailed", "Soul Bone Strengthening Failed", "魂骨强化失败", null, null, null], [536, "Text_ClaimLimitedSkin", "Claim Limited Skin", "领取限定皮肤", null, null, null], [537, "Text_ClaimAutomaticAttack", "Claim Automatic Attack", "领取自动攻击", null, null, null], [538, "Text_ObtainedOpenTheBackpackToUse", "Obtained, Open The Backpack To Use", "已获得，打开背包使用", null, null, null], [539, "Text_Music_1", "Open World", "开放世界", null, null, null], [540, "Text_Music_2", "Stay", "留下来", null, null, null], [541, "Text_Music_3", "Bad Guy", "坏人", null, null, null], [542, "Text_Music_4", "I Will Survive", "我会活下去", null, null, null], [543, "Text_Music_5", "Let Me Love You", "让我爱你", null, null, null], [544, "Text_Music_6", "Running Up That Hill", "跑上那座山", null, null, null], [545, "Text_Music_7", "Love To Hate Me", "爱恨我", null, null, null], [546, "Text_Music_8", "Tomboy", "假小子", null, null, null], [547, "Text_Music_9", "Shut Down", "关闭", null, null, null], [548, "Text_Music_10", "Celestial", "天空的", null, null, null], [549, "Text_Music_11", "As It Was", "事实上", null, null, null], [550, "Text_Music_12", "Good Morning", "早上好", null, null, null], [551, "Text_Music_13", "Alone", "独自一人", null, null, null], [552, "Text_Music_14", "Chanderiler", "钱德里勒", null, null, null], [553, "Text_Music_15", "Don'T Wanna Know", "不想知道", null, null, null], [554, "Text_Music_16", "Mood", "心情", null, null, null], [555, "Text_Music_17", "Moon", "金轮", null, null, null], [556, "Text_Music_18", "I Don'T Know What It'S Called", "不知道叫啥", null, null, null], [557, "Text_Music_19", "I Don'T Know What It'S Called", "也不知道叫啥", null, null, null], [558, "Text_RewardSoulBone", "Reward {0} Soul Bone", "奖励{0}魂骨碎片", null, null, null], [559, "Text_InsufficientSoulBoneFragments", "Insufficient Soul Bone Fragments", "魂骨碎片不足", null, null, null], [560, "Text_GetFreeBones", "Get {0} Free Bones", "免费领取{0}魂骨碎片", null, null, null], [561, "Text_SuccessfullyObtainedBones", "Successfully Obtained Bones+{0}", "成功获得魂骨碎片+{0}", null, null, null], [562, "Text_Upgrade", "Upgrade", "升级", null, null, null], [563, "Text_ForgeSoulRings_Button", "Forge Soul Rings", "锻造魂环", null, null, null], [564, "Text_LotsOfDiamonds", "Lots Of Diamonds", "领取大量钻石\n下次翻倍", null, null, null], [565, "Text_BillionsOfYears_10", "10 Billions Of Years", "十亿万年", null, null, null], [566, "Text_TensOfBillionsOfYears", "Tens Of Billions Of Years", "百亿万年", null, null, null], [567, "Text_HundredsOfBillionsOfYears", "Hundreds Of Billions Of Years", "千亿万年", null, null, null], [568, "Text_ModifyTheTitle", "Modify The Title", "修改称号", null, null, null], [569, "Text_TitleNameTips", "Level reached {0}\nConsuming {1} diamonds modifies the title.", "等级达到{0}级\n消耗{1}钻石即可修改称号", null, null, null], [570, "Text_PleaseEnterTheTitle", "Please Enter The Title", "请输入称号", null, null, null], [571, "Text_ModifiedSuccessfully", "Modified Successfully", "修改成功", null, null, null], [572, "Text_RestartTheGameToTakeEffect", "Restart The Game To Take Effect", "重启游戏即可生效", null, null, null], [573, "Text_FlashSales", "Flash Sales", "限时特惠", null, null, null], [574, "Text_ConsumeTeamCoins", "Consume {0} Team Coins", "消耗{0}派队币", null, null, null], [575, "Text_FlashTips", "Diamond +{0}\nSoul Bone Fragment +{1}\nGold +{2}\nIs Equal To {3} 100 Draws.", "钻石+{0}\n魂骨碎片+{1}\n金币+{2} \n等于 {3}次100连抽", null, null, null]];
 class LanguageConfig extends ConfigBase {
     constructor() {
         super(EXCELDATA$8);
@@ -2663,6 +2663,34 @@ class LanguageConfig extends ConfigBase {
     /**千亿万年*/
     get Text_HundredsOfBillionsOfYears() { return this.getElement(567); }
     ;
+    /**修改称号*/
+    get Text_ModifyTheTitle() { return this.getElement(568); }
+    ;
+    /**等级达到{0}级
+消耗{1}钻石即可修改称号*/
+    get Text_TitleNameTips() { return this.getElement(569); }
+    ;
+    /**请输入称号*/
+    get Text_PleaseEnterTheTitle() { return this.getElement(570); }
+    ;
+    /**修改成功*/
+    get Text_ModifiedSuccessfully() { return this.getElement(571); }
+    ;
+    /**重启游戏即可生效*/
+    get Text_RestartTheGameToTakeEffect() { return this.getElement(572); }
+    ;
+    /**限时特惠*/
+    get Text_FlashSales() { return this.getElement(573); }
+    ;
+    /**消耗{0}派队币*/
+    get Text_ConsumeTeamCoins() { return this.getElement(574); }
+    ;
+    /**钻石+{0}
+魂骨碎片+{1}
+金币+{2}
+等于 {3}次100连抽*/
+    get Text_FlashTips() { return this.getElement(575); }
+    ;
 }
 
 var foreign28 = /*#__PURE__*/Object.freeze({
@@ -3275,7 +3303,7 @@ class Console {
     }
 }
 
-var foreign98 = /*#__PURE__*/Object.freeze({
+var foreign99 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Console
 });
@@ -3953,7 +3981,7 @@ var PrefabEvent;
     initEvent();
 })(PrefabEvent || (PrefabEvent = {}));
 
-var foreign97 = /*#__PURE__*/Object.freeze({
+var foreign98 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; }
 });
@@ -4739,7 +4767,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
     return solve;
 }
 
-var foreign103 = /*#__PURE__*/Object.freeze({
+var foreign104 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Tween: Tween$2,
     Utils: Utils,
@@ -4751,7 +4779,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -4816,7 +4844,7 @@ Loading_Generate = __decorate([
 ], Loading_Generate);
 var Loading_Generate$1 = Loading_Generate;
 
-var foreign105 = /*#__PURE__*/Object.freeze({
+var foreign106 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Loading_Generate$1
 });
@@ -4873,7 +4901,7 @@ var foreign7 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -4930,7 +4958,7 @@ NoticeView_Generate = __decorate([
 ], NoticeView_Generate);
 var NoticeView_Generate$1 = NoticeView_Generate;
 
-var foreign106 = /*#__PURE__*/Object.freeze({
+var foreign107 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NoticeView_Generate$1
 });
@@ -4940,7 +4968,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -4986,7 +5014,7 @@ TopNoticeItem_Generate = __decorate([
 ], TopNoticeItem_Generate);
 var TopNoticeItem_Generate$1 = TopNoticeItem_Generate;
 
-var foreign107 = /*#__PURE__*/Object.freeze({
+var foreign108 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TopNoticeItem_Generate$1
 });
@@ -6425,7 +6453,7 @@ __decorate([
     mw.Property({ replicated: true, onChanged: "client_OnChangeCharGuid" })
 ], WeaponData.prototype, "charGuid", void 0);
 
-var foreign94 = /*#__PURE__*/Object.freeze({
+var foreign95 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AnimationInfo: AnimationInfo$2,
     NodeInfo: NodeInfo,
@@ -6501,7 +6529,7 @@ class SkillRectCheck {
 }
 SkillRectCheck.showRect = true;
 
-var foreign91 = /*#__PURE__*/Object.freeze({
+var foreign92 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SkillRectCheck: SkillRectCheck
 });
@@ -6701,7 +6729,7 @@ class WeaponManager extends WeaponManagerSvr {
 WeaponManager._Instance = null;
 WeaponManager.GetInstance();
 
-var foreign95 = /*#__PURE__*/Object.freeze({
+var foreign96 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponManager: WeaponManager
 });
@@ -6847,7 +6875,7 @@ class ColdWeapon {
     }
 }
 
-var foreign90 = /*#__PURE__*/Object.freeze({
+var foreign91 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColdWeapon: ColdWeapon
 });
@@ -6992,7 +7020,7 @@ var MapEx;
     MapEx.copy = copy;
 })(MapEx || (MapEx = {}));
 
-var foreign101 = /*#__PURE__*/Object.freeze({
+var foreign102 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get MapEx () { return MapEx; }
 });
@@ -7002,7 +7030,7 @@ var foreign101 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -7118,7 +7146,7 @@ BagInfoPanel_Generate = __decorate([
 ], BagInfoPanel_Generate);
 var BagInfoPanel_Generate$1 = BagInfoPanel_Generate;
 
-var foreign122 = /*#__PURE__*/Object.freeze({
+var foreign124 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagInfoPanel_Generate$1
 });
@@ -7128,7 +7156,7 @@ var foreign122 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -7210,7 +7238,7 @@ BagItem_Generate = __decorate([
 ], BagItem_Generate);
 var BagItem_Generate$1 = BagItem_Generate;
 
-var foreign123 = /*#__PURE__*/Object.freeze({
+var foreign125 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagItem_Generate$1
 });
@@ -7220,7 +7248,7 @@ var foreign123 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -7306,7 +7334,7 @@ BagPanel_Generate = __decorate([
 ], BagPanel_Generate);
 var BagPanel_Generate$1 = BagPanel_Generate;
 
-var foreign124 = /*#__PURE__*/Object.freeze({
+var foreign126 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagPanel_Generate$1
 });
@@ -7316,7 +7344,7 @@ var foreign124 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -7372,7 +7400,7 @@ BagTab_Generate = __decorate([
 ], BagTab_Generate);
 var BagTab_Generate$1 = BagTab_Generate;
 
-var foreign125 = /*#__PURE__*/Object.freeze({
+var foreign127 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: BagTab_Generate$1
 });
@@ -7382,7 +7410,7 @@ var foreign125 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.21
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -7452,7 +7480,7 @@ AdsTipsPanel_Generate = __decorate([
 ], AdsTipsPanel_Generate);
 var AdsTipsPanel_Generate$1 = AdsTipsPanel_Generate;
 
-var foreign117 = /*#__PURE__*/Object.freeze({
+var foreign118 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: AdsTipsPanel_Generate$1
 });
@@ -7462,7 +7490,7 @@ var foreign117 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/UpPanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.21
  */
 let UpPanel_Generate = class UpPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -7550,7 +7578,7 @@ UpPanel_Generate = __decorate([
 ], UpPanel_Generate);
 var UpPanel_Generate$1 = UpPanel_Generate;
 
-var foreign118 = /*#__PURE__*/Object.freeze({
+var foreign119 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: UpPanel_Generate$1
 });
@@ -7655,7 +7683,7 @@ var foreign46 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let SwordItem_Generate = class SwordItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -7787,7 +7815,7 @@ SwordItem_Generate = __decorate([
 ], SwordItem_Generate);
 var SwordItem_Generate$1 = SwordItem_Generate;
 
-var foreign126 = /*#__PURE__*/Object.freeze({
+var foreign128 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SwordItem_Generate$1
 });
@@ -7797,7 +7825,7 @@ var foreign126 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let SwordPanel_Generate = class SwordPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -7904,7 +7932,7 @@ SwordPanel_Generate = __decorate([
 ], SwordPanel_Generate);
 var SwordPanel_Generate$1 = SwordPanel_Generate;
 
-var foreign127 = /*#__PURE__*/Object.freeze({
+var foreign129 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SwordPanel_Generate$1
 });
@@ -7914,7 +7942,7 @@ var foreign127 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/FlyModule/SwordTipsPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -8018,7 +8046,7 @@ SwordTipsPanel_Generate = __decorate([
 ], SwordTipsPanel_Generate);
 var SwordTipsPanel_Generate$1 = SwordTipsPanel_Generate;
 
-var foreign128 = /*#__PURE__*/Object.freeze({
+var foreign130 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SwordTipsPanel_Generate$1
 });
@@ -8028,7 +8056,7 @@ var foreign128 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.21
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -8397,6 +8425,24 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mSoulBonePointImage_Internal;
     }
+    get mLimitTimeButton() {
+        if (!this.mLimitTimeButton_Internal && this.uiWidgetBase) {
+            this.mLimitTimeButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LimitTimeCanvas/mLimitTimeButton');
+        }
+        return this.mLimitTimeButton_Internal;
+    }
+    get mLimitTimeTextBlock() {
+        if (!this.mLimitTimeTextBlock_Internal && this.uiWidgetBase) {
+            this.mLimitTimeTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LimitTimeCanvas/mLimitTimeTextBlock');
+        }
+        return this.mLimitTimeTextBlock_Internal;
+    }
+    get mLimitTimePointImage() {
+        if (!this.mLimitTimePointImage_Internal && this.uiWidgetBase) {
+            this.mLimitTimePointImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/LimitTimeCanvas/mLimitTimePointImage');
+        }
+        return this.mLimitTimePointImage_Internal;
+    }
     get mMusicCanvas() {
         if (!this.mMusicCanvas_Internal && this.uiWidgetBase) {
             this.mMusicCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mMusicCanvas');
@@ -8451,6 +8497,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         }
         return this.mRoleCanvas_G_Internal;
     }
+    get mUpLvButton() {
+        if (!this.mUpLvButton_Internal && this.uiWidgetBase) {
+            this.mUpLvButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mUpLvButton');
+        }
+        return this.mUpLvButton_Internal;
+    }
     get mRoleCanvas() {
         if (!this.mRoleCanvas_Internal && this.uiWidgetBase) {
             this.mRoleCanvas_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mRoleCanvas');
@@ -8462,6 +8514,18 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mRoleIconImage_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mRoleCanvas/mRoleIconImage');
         }
         return this.mRoleIconImage_Internal;
+    }
+    get mClickHeadButton() {
+        if (!this.mClickHeadButton_Internal && this.uiWidgetBase) {
+            this.mClickHeadButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mRoleCanvas/mClickHeadButton');
+        }
+        return this.mClickHeadButton_Internal;
+    }
+    get mHeadTipsTextBlock() {
+        if (!this.mHeadTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mHeadTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mRoleCanvas/mHeadTipsTextBlock');
+        }
+        return this.mHeadTipsTextBlock_Internal;
     }
     get mAtkTextBlock() {
         if (!this.mAtkTextBlock_Internal && this.uiWidgetBase) {
@@ -8546,12 +8610,6 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mInvincibleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mInvincibleCanvas/mInvincibleTextBlock');
         }
         return this.mInvincibleTextBlock_Internal;
-    }
-    get mUpLvButton() {
-        if (!this.mUpLvButton_Internal && this.uiWidgetBase) {
-            this.mUpLvButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mRoleCanvas_G/mUpLvButton');
-        }
-        return this.mUpLvButton_Internal;
     }
     get mUpExpTextBlock() {
         if (!this.mUpExpTextBlock_Internal && this.uiWidgetBase) {
@@ -8812,6 +8870,10 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mSoulBoneButton");
         });
         this.mSoulBoneButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mLimitTimeButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mLimitTimeButton");
+        });
+        this.mLimitTimeButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mCloseMusicBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
         });
@@ -8828,14 +8890,18 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mRightMusicBtn");
         });
         this.mRightMusicBtn.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
-        this.mInvincibleButton.onClicked.add(() => {
-            Event.dispatchToLocal("PlayButtonClick", "mInvincibleButton");
-        });
-        this.mInvincibleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mUpLvButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpLvButton");
         });
         this.mUpLvButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mClickHeadButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mClickHeadButton");
+        });
+        this.mClickHeadButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mInvincibleButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mInvincibleButton");
+        });
+        this.mInvincibleButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mUpExpButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpExpButton");
         });
@@ -8879,7 +8945,9 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.mNewPeopleTextBlock);
         this.initLanguage(this.mSwordTextBlock);
         this.initLanguage(this.mSoulBoneTextBlock);
+        this.initLanguage(this.mLimitTimeTextBlock);
         this.initLanguage(this.mMusicText);
+        this.initLanguage(this.mHeadTipsTextBlock);
         this.initLanguage(this.mAtkTextBlock);
         this.initLanguage(this.mLvTextBlock);
         this.initLanguage(this.mHpTextBlock);
@@ -8925,7 +8993,7 @@ HUDPanel_Generate = __decorate([
 ], HUDPanel_Generate);
 var HUDPanel_Generate$1 = HUDPanel_Generate;
 
-var foreign130 = /*#__PURE__*/Object.freeze({
+var foreign132 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: HUDPanel_Generate$1
 });
@@ -8935,7 +9003,7 @@ var foreign130 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.21
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -9007,7 +9075,7 @@ KillTipItem_Generate = __decorate([
 ], KillTipItem_Generate);
 var KillTipItem_Generate$1 = KillTipItem_Generate;
 
-var foreign131 = /*#__PURE__*/Object.freeze({
+var foreign133 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: KillTipItem_Generate$1
 });
@@ -9017,7 +9085,7 @@ var foreign131 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
     get mMainCanvas() {
@@ -9091,7 +9159,7 @@ RingSoulItem_Generate = __decorate([
 ], RingSoulItem_Generate);
 var RingSoulItem_Generate$1 = RingSoulItem_Generate;
 
-var foreign144 = /*#__PURE__*/Object.freeze({
+var foreign147 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItem_Generate$1
 });
@@ -9101,7 +9169,7 @@ var foreign144 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulItemChild.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let RingSoulItemChild_Generate = class RingSoulItemChild_Generate extends UIScript {
     get mCanvas() {
@@ -9198,7 +9266,7 @@ RingSoulItemChild_Generate = __decorate([
 ], RingSoulItemChild_Generate);
 var RingSoulItemChild_Generate$1 = RingSoulItemChild_Generate;
 
-var foreign145 = /*#__PURE__*/Object.freeze({
+var foreign148 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulItemChild_Generate$1
 });
@@ -9208,7 +9276,7 @@ var foreign145 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/RingSoulModule/RingSoulPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -9322,7 +9390,7 @@ RingSoulPanel_Generate = __decorate([
 ], RingSoulPanel_Generate);
 var RingSoulPanel_Generate$1 = RingSoulPanel_Generate;
 
-var foreign146 = /*#__PURE__*/Object.freeze({
+var foreign149 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RingSoulPanel_Generate$1
 });
@@ -9762,7 +9830,7 @@ class PlayerModuleC extends ModuleC {
     }
 }
 
-var foreign64 = /*#__PURE__*/Object.freeze({
+var foreign65 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerModuleC
 });
@@ -10515,7 +10583,7 @@ class RingSoulItemChild extends RingSoulItemChild_Generate$1 {
     }
 }
 
-var foreign74 = /*#__PURE__*/Object.freeze({
+var foreign75 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RingSoulData: RingSoulData,
     RingSoulGo: RingSoulGo,
@@ -10645,12 +10713,14 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mSoulBoneTextBlock.text = GameConfig.Language.Text_ForgeSoulBones.Value;
         this.mTipsInvincibleTextBlock.text = GameConfig.Language.Text_DoYouWantToActivateTeammateAccidentalInjury.Value;
         this.mUpExpTextBlock.text = GameConfig.Language.Text_EnableAfk.Value;
+        this.mLimitTimeTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
         if (GlobalData.languageId == 0) {
             this.mTipsInvincibleTextBlock.fontSize = 10;
             this.mInvincibleTextBlock.fontSize = 15;
             this.mShopTextBlock.fontSize = 18;
             this.mArkTextBlock.fontSize = 18;
             this.mGetTextBlock.fontSize = 18;
+            this.mLimitTimeTextBlock.fontSize = 15;
         }
         else {
             this.mTipsInvincibleTextBlock.fontSize = 18;
@@ -10771,6 +10841,12 @@ class HUDPanel extends HUDPanel_Generate$1 {
         });
         this.mSoulBoneButton.onClicked.add(() => {
             this.getHudModuleC.onOpenSoulBoneAction.call();
+        });
+        this.mClickHeadButton.onClicked.add(() => {
+            this.getHudModuleC.onOpenTitleNameAction.call();
+        });
+        this.mLimitTimeButton.onClicked.add(() => {
+            this.getHudModuleC.onOpenLimitTimeAction.call();
         });
         this.initSkill_1();
         this.initAutoAtk();
@@ -11500,7 +11576,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let LevelItem_Generate = class LevelItem_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -11546,7 +11622,7 @@ LevelItem_Generate = __decorate([
 ], LevelItem_Generate);
 var LevelItem_Generate$1 = LevelItem_Generate;
 
-var foreign132 = /*#__PURE__*/Object.freeze({
+var foreign135 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LevelItem_Generate$1
 });
@@ -11556,7 +11632,7 @@ var foreign132 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/LevelPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.23
  */
 let LevelPanel_Generate = class LevelPanel_Generate extends UIScript {
     get mLevelTextBlock() {
@@ -11602,7 +11678,7 @@ LevelPanel_Generate = __decorate([
 ], LevelPanel_Generate);
 var LevelPanel_Generate$1 = LevelPanel_Generate;
 
-var foreign133 = /*#__PURE__*/Object.freeze({
+var foreign136 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LevelPanel_Generate$1
 });
@@ -11612,7 +11688,7 @@ var foreign133 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/UpExpPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.23
  */
 let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
     get mCancleUpExpCanvas() {
@@ -11687,7 +11763,7 @@ UpExpPanel_Generate = __decorate([
 ], UpExpPanel_Generate);
 var UpExpPanel_Generate$1 = UpExpPanel_Generate;
 
-var foreign134 = /*#__PURE__*/Object.freeze({
+var foreign137 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: UpExpPanel_Generate$1
 });
@@ -11703,6 +11779,7 @@ class PlayerData extends Subdata {
         this.playerHeight = 0;
         this.playerKill = 0;
         this.dayStr = "";
+        this.titleName = "";
     }
     initDefaultData() {
         this.exp = 0;
@@ -11778,6 +11855,13 @@ class PlayerData extends Subdata {
         this.dayStr = dayStr;
         this.save(true);
     }
+    setTitleName(titleName) {
+        this.titleName = titleName;
+        this.save(false);
+    }
+    get getTitleName() {
+        return this.titleName;
+    }
 }
 __decorate([
     Decorator.persistence()
@@ -11803,8 +11887,11 @@ __decorate([
 __decorate([
     Decorator.persistence()
 ], PlayerData.prototype, "dayStr", void 0);
+__decorate([
+    Decorator.persistence()
+], PlayerData.prototype, "titleName", void 0);
 
-var foreign63 = /*#__PURE__*/Object.freeze({
+var foreign64 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerData
 });
@@ -12182,7 +12269,7 @@ __decorate([
     Decorator.noReply()
 ], LevelModuleS.prototype, "net_onOffUpExp", null);
 
-var foreign55 = /*#__PURE__*/Object.freeze({
+var foreign56 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     LevelData: LevelData,
     LevelItem: LevelItem,
@@ -13025,7 +13112,7 @@ class ObjPool {
     }
 }
 
-var foreign102 = /*#__PURE__*/Object.freeze({
+var foreign103 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ObjPool: ObjPool,
     get ObjectPoolServices () { return ObjectPoolServices; }
@@ -13036,7 +13123,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -13098,7 +13185,7 @@ OnlineRewardPanel_Generate = __decorate([
 ], OnlineRewardPanel_Generate);
 var OnlineRewardPanel_Generate$1 = OnlineRewardPanel_Generate;
 
-var foreign142 = /*#__PURE__*/Object.freeze({
+var foreign145 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardPanel_Generate$1
 });
@@ -13519,7 +13606,7 @@ class OnlineRewardItem {
     }
 }
 
-var foreign62 = /*#__PURE__*/Object.freeze({
+var foreign63 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardItem: OnlineRewardItem,
     OnlineRewardPanel: OnlineRewardPanel
@@ -13636,7 +13723,7 @@ var OnlineRewardItemState;
     OnlineRewardItemState[OnlineRewardItemState["getReward"] = 2] = "getReward";
 })(OnlineRewardItemState || (OnlineRewardItemState = {}));
 
-var foreign60 = /*#__PURE__*/Object.freeze({
+var foreign61 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get OnlineRewardItemState () { return OnlineRewardItemState; },
     OnlineRewardModuleC: OnlineRewardModuleC
@@ -13647,7 +13734,7 @@ var foreign60 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SoulBoneModule/PartItem.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let PartItem_Generate = class PartItem_Generate extends UIScript {
     get mBgImage() {
@@ -13727,7 +13814,7 @@ PartItem_Generate = __decorate([
 ], PartItem_Generate);
 var PartItem_Generate$1 = PartItem_Generate;
 
-var foreign153 = /*#__PURE__*/Object.freeze({
+var foreign156 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PartItem_Generate$1
 });
@@ -13737,7 +13824,7 @@ var foreign153 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SoulBoneModule/SoulBonePanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let SoulBonePanel_Generate = class SoulBonePanel_Generate extends UIScript {
     get mMainCanvas() {
@@ -14197,7 +14284,7 @@ SoulBonePanel_Generate = __decorate([
 ], SoulBonePanel_Generate);
 var SoulBonePanel_Generate$1 = SoulBonePanel_Generate;
 
-var foreign154 = /*#__PURE__*/Object.freeze({
+var foreign157 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SoulBonePanel_Generate$1
 });
@@ -14207,7 +14294,7 @@ var foreign154 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SoulBoneModule/StarItem.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let StarItem_Generate = class StarItem_Generate extends UIScript {
     get mBgImage() {
@@ -14258,7 +14345,7 @@ StarItem_Generate = __decorate([
 ], StarItem_Generate);
 var StarItem_Generate$1 = StarItem_Generate;
 
-var foreign155 = /*#__PURE__*/Object.freeze({
+var foreign158 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: StarItem_Generate$1
 });
@@ -14268,7 +14355,7 @@ var foreign155 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SoulBoneModule/UpProbabilityPanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let UpProbabilityPanel_Generate = class UpProbabilityPanel_Generate extends UIScript {
     get mCloseButton() {
@@ -14372,7 +14459,7 @@ UpProbabilityPanel_Generate = __decorate([
 ], UpProbabilityPanel_Generate);
 var UpProbabilityPanel_Generate$1 = UpProbabilityPanel_Generate;
 
-var foreign156 = /*#__PURE__*/Object.freeze({
+var foreign159 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: UpProbabilityPanel_Generate$1
 });
@@ -15078,7 +15165,7 @@ __decorate([
     Decorator.noReply()
 ], SoulBoneModuleS.prototype, "net_setSoulBoneLv", null);
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PartItem: PartItem,
     SoulBone: SoulBone,
@@ -15088,6 +15175,177 @@ var foreign81 = /*#__PURE__*/Object.freeze({
     SoulBonePanel: SoulBonePanel,
     StarItem: StarItem,
     UpProbabilityPanel: UpProbabilityPanel
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/HUDModule/TitleNamePanel.ui
+ * TIME: 2024.11.10-13.05.22
+ */
+let TitleNamePanel_Generate = class TitleNamePanel_Generate extends UIScript {
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
+    }
+    get mInputBox() {
+        if (!this.mInputBox_Internal && this.uiWidgetBase) {
+            this.mInputBox_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mInputBox');
+        }
+        return this.mInputBox_Internal;
+    }
+    get mInputTipsTextBlock() {
+        if (!this.mInputTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mInputTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mInputBox/mInputTipsTextBlock');
+        }
+        return this.mInputTipsTextBlock_Internal;
+    }
+    get mGetButton() {
+        if (!this.mGetButton_Internal && this.uiWidgetBase) {
+            this.mGetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mGetButton');
+        }
+        return this.mGetButton_Internal;
+    }
+    get mGetTextBlock() {
+        if (!this.mGetTextBlock_Internal && this.uiWidgetBase) {
+            this.mGetTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mGetButton/mGetTextBlock');
+        }
+        return this.mGetTextBlock_Internal;
+    }
+    get mTipsTextBlock() {
+        if (!this.mTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTipsTextBlock');
+        }
+        return this.mTipsTextBlock_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mGetButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mGetButton");
+        });
+        this.mGetButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
+        this.initLanguage(this.mInputTipsTextBlock);
+        this.initLanguage(this.mGetTextBlock);
+        this.initLanguage(this.mTipsTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+TitleNamePanel_Generate = __decorate([
+    UIBind('UI/module/HUDModule/TitleNamePanel.ui')
+], TitleNamePanel_Generate);
+var TitleNamePanel_Generate$1 = TitleNamePanel_Generate;
+
+var foreign134 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TitleNamePanel_Generate$1
+});
+
+/**
+ * AUTHOR: 爱玩游戏的小胖子
+ * TIME: 2024.11.10-12.04.18
+ * ATTENTION: onStart 等UI脚本自带函数不可改写为异步执行，有需求的异步逻辑请使用函数封装，通过函数接口在内部使用
+ */
+class TitleNamePanel extends TitleNamePanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.hudPanel = null;
+    }
+    get getHudPanel() {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    /**
+     * 构造UI文件成功后，在合适的时机最先初始化一次
+     */
+    onStart() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = UILayerMiddle;
+        this.initUI();
+        this.bindButton();
+    }
+    initUI() {
+        this.mTitleTextBlock.text = GameConfig.Language.Text_ModifyTheTitle.Value;
+        this.mGetTextBlock.text = GameConfig.Language.Text_ModifyTheTitle.Value;
+        this.mInputTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_TitleNameTips.Value, 170, 1000);
+        this.mInputBox.hintString = GameConfig.Language.Text_PleaseEnterTheTitle.Value;
+        this.mTipsTextBlock.text = GameConfig.Language.Text_RestartTheGameToTakeEffect.Value;
+        if (GlobalData.languageId == 0) {
+            this.mInputTipsTextBlock.fontSize = 35;
+        }
+    }
+    bindButton() {
+        this.mCloseButton.onClicked.add(() => {
+            this.hideTween();
+        });
+        this.mGetButton.onClicked.add(() => {
+            let titleName = this.mInputBox.text;
+            if (!titleName || titleName.length == 0) {
+                console.warn(`不能为空`);
+                return;
+            }
+            ModuleService.getModule(HUDModuleC).modifyTitleName(titleName);
+        });
+    }
+    onShow(...params) {
+        this.mInputBox.text = "";
+        Utils.openUITween(this.rootCanvas, () => {
+            this.getHudPanel.hide();
+        }, null);
+    }
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+            this.getHudPanel.show();
+        });
+    }
+}
+
+var foreign55 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: TitleNamePanel
 });
 
 class HUDModuleC extends ModuleC {
@@ -15105,6 +15363,7 @@ class HUDModuleC extends ModuleC {
         this.bagModuleC = null;
         this.flyModuleC = null;
         this.levelModuleC = null;
+        this.titleNamePanel = null;
         /**跳跃事件 */
         this.onJumpAction = new Action();
         /**打开HUD事件 */
@@ -15142,6 +15401,8 @@ class HUDModuleC extends ModuleC {
         this.onOnOffFlyAction = new Action1();
         this.onSkillAction = new Action1();
         this.onOpenAutoAtkAction = new Action2();
+        this.onOpenTitleNameAction = new Action();
+        this.onOpenLimitTimeAction = new Action();
         /**全局UI点击音效唯一标识 */
         this.uiClickSoundId = null;
         this.lv = 0;
@@ -15258,6 +15519,12 @@ class HUDModuleC extends ModuleC {
             this.levelModuleC = ModuleService.getModule(LevelModuleC);
         }
         return this.levelModuleC;
+    }
+    get getTitleNamePanel() {
+        if (!this.titleNamePanel) {
+            this.titleNamePanel = UIService.getUI(TitleNamePanel);
+        }
+        return this.titleNamePanel;
     }
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     onStart() {
@@ -15377,6 +15644,9 @@ class HUDModuleC extends ModuleC {
                 return;
             }
             this.getPlayerModuleC.skill_1();
+        });
+        this.onOpenTitleNameAction.add(() => {
+            this.getTitleNamePanel.show();
         });
     }
     onEnterScene(sceneType) {
@@ -15724,6 +15994,20 @@ class HUDModuleC extends ModuleC {
         this.getPlayerModuleC.saveCoin(28888888);
         this.getPlayerModuleC.setDayStr(Utils.getDay());
     }
+    modifyTitleName(titleName) {
+        if (this.getPlayerModuleC.getLv < 170) {
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientLevel.Value);
+            return;
+        }
+        if (this.getPlayerModuleC.getDiamond < 1000) {
+            Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
+            return;
+        }
+        this.getPlayerModuleC.saveDiamond(-1000);
+        Notice.showDownNotice(GameConfig.Language.Text_ModifiedSuccessfully.Value);
+        Notice.showDownNotice(GameConfig.Language.Text_RestartTheGameToTakeEffect.Value);
+        this.server.net_modifyTitleName(titleName);
+    }
 }
 class KillTipData {
 }
@@ -15906,7 +16190,7 @@ __decorate([
     Decorator.persistence()
 ], TaskData.prototype, "weeklyTasks", void 0);
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     Task: Task,
     TaskData: TaskData,
@@ -15919,7 +16203,7 @@ var foreign82 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.23
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTaskTitleTextBlock() {
@@ -16040,7 +16324,7 @@ TaskPanel_Generate = __decorate([
 ], TaskPanel_Generate);
 var TaskPanel_Generate$1 = TaskPanel_Generate;
 
-var foreign158 = /*#__PURE__*/Object.freeze({
+var foreign161 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel_Generate$1
 });
@@ -16458,7 +16742,7 @@ class TaskItem {
     }
 }
 
-var foreign85 = /*#__PURE__*/Object.freeze({
+var foreign86 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskPanel
 });
@@ -16884,7 +17168,7 @@ class TaskModuleC extends ModuleC {
     }
 }
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign84 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleC
 });
@@ -16970,7 +17254,7 @@ var foreign45 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.23
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -17082,7 +17366,7 @@ GuideUI_Generate = __decorate([
 ], GuideUI_Generate);
 var GuideUI_Generate$1 = GuideUI_Generate;
 
-var foreign129 = /*#__PURE__*/Object.freeze({
+var foreign131 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GuideUI_Generate$1
 });
@@ -17709,7 +17993,7 @@ var foreign50 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.23
  */
 let LotteryItem_Generate = class LotteryItem_Generate extends UIScript {
     get mBgImage() {
@@ -17811,7 +18095,7 @@ LotteryItem_Generate = __decorate([
 ], LotteryItem_Generate);
 var LotteryItem_Generate$1 = LotteryItem_Generate;
 
-var foreign135 = /*#__PURE__*/Object.freeze({
+var foreign138 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LotteryItem_Generate$1
 });
@@ -17821,7 +18105,7 @@ var foreign135 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.23
  */
 let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -18113,7 +18397,7 @@ LotteryPanel_Generate = __decorate([
 ], LotteryPanel_Generate);
 var LotteryPanel_Generate$1 = LotteryPanel_Generate;
 
-var foreign136 = /*#__PURE__*/Object.freeze({
+var foreign139 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LotteryPanel_Generate$1
 });
@@ -18123,7 +18407,7 @@ var foreign136 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.23
  */
 let LotteryResultItem_Generate = class LotteryResultItem_Generate extends UIScript {
     get mTextBlock() {
@@ -18169,7 +18453,7 @@ LotteryResultItem_Generate = __decorate([
 ], LotteryResultItem_Generate);
 var LotteryResultItem_Generate$1 = LotteryResultItem_Generate;
 
-var foreign137 = /*#__PURE__*/Object.freeze({
+var foreign140 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LotteryResultItem_Generate$1
 });
@@ -18179,7 +18463,7 @@ var foreign137 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LotteryModule/LotteryResultPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.23
  */
 let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UIScript {
     get mBgImage() {
@@ -18253,7 +18537,7 @@ LotteryResultPanel_Generate = __decorate([
 ], LotteryResultPanel_Generate);
 var LotteryResultPanel_Generate$1 = LotteryResultPanel_Generate;
 
-var foreign138 = /*#__PURE__*/Object.freeze({
+var foreign141 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: LotteryResultPanel_Generate$1
 });
@@ -18933,7 +19217,7 @@ class LotteryModuleS extends ModuleS {
     }
 }
 
-var foreign56 = /*#__PURE__*/Object.freeze({
+var foreign57 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     LotteryItem: LotteryItem,
     LotteryModuleC: LotteryModuleC,
@@ -20306,7 +20590,7 @@ class WorldConfigData {
     }
 }
 
-var foreign70 = /*#__PURE__*/Object.freeze({
+var foreign71 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PlayerData_CSR: PlayerData_CSR,
     PlayerData_CSW: PlayerData_CSW,
@@ -20598,7 +20882,7 @@ __decorate([
     Decorator.noReply()
 ], WorldRankModuleS.prototype, "net_onEnterScene", null);
 
-var foreign73 = /*#__PURE__*/Object.freeze({
+var foreign74 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WorldRankModuleS: WorldRankModuleS
 });
@@ -20659,7 +20943,7 @@ __decorate([
     Decorator.persistence()
 ], OnlineRewardData.prototype, "isGetRewards", void 0);
 
-var foreign59 = /*#__PURE__*/Object.freeze({
+var foreign60 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardData
 });
@@ -20704,7 +20988,7 @@ __decorate([
     Decorator.noReply()
 ], OnlineRewardModuleS.prototype, "net_saveIsGetRewards", null);
 
-var foreign61 = /*#__PURE__*/Object.freeze({
+var foreign62 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     OnlineRewardModuleS: OnlineRewardModuleS
 });
@@ -20714,7 +20998,7 @@ var foreign61 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let SignInItem_Generate = class SignInItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -20827,7 +21111,7 @@ SignInItem_Generate = __decorate([
 ], SignInItem_Generate);
 var SignInItem_Generate$1 = SignInItem_Generate;
 
-var foreign151 = /*#__PURE__*/Object.freeze({
+var foreign154 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInItem_Generate$1
 });
@@ -20837,7 +21121,7 @@ var foreign151 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/SignInModule/SignInPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let SignInPanel_Generate = class SignInPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -20899,7 +21183,7 @@ SignInPanel_Generate = __decorate([
 ], SignInPanel_Generate);
 var SignInPanel_Generate$1 = SignInPanel_Generate;
 
-var foreign152 = /*#__PURE__*/Object.freeze({
+var foreign155 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: SignInPanel_Generate$1
 });
@@ -21194,7 +21478,7 @@ class SignInModuleS extends ModuleS {
     }
 }
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SignInData: SignInData,
     SignInItem: SignInItem,
@@ -21422,7 +21706,7 @@ __decorate([
     Decorator.noReply()
 ], TaskModuleS.prototype, "net_resetWeeklyTask", null);
 
-var foreign84 = /*#__PURE__*/Object.freeze({
+var foreign85 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskModuleS
 });
@@ -21432,7 +21716,7 @@ var foreign84 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -21498,7 +21782,7 @@ PlayerLifebar_Generate = __decorate([
 ], PlayerLifebar_Generate);
 var PlayerLifebar_Generate$1 = PlayerLifebar_Generate;
 
-var foreign143 = /*#__PURE__*/Object.freeze({
+var foreign146 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar_Generate$1
 });
@@ -21768,7 +22052,7 @@ PlayerLifebar = __decorate([
 ], PlayerLifebar);
 var PlayerLifebar$1 = PlayerLifebar;
 
-var foreign66 = /*#__PURE__*/Object.freeze({
+var foreign67 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerLifebar$1
 });
@@ -22210,7 +22494,7 @@ class PlayerDataS {
     }
 }
 
-var foreign65 = /*#__PURE__*/Object.freeze({
+var foreign66 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: PlayerModuleS
 });
@@ -22383,7 +22667,7 @@ var foreign4 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -22435,7 +22719,7 @@ EnemyLifebar_Generate = __decorate([
 ], EnemyLifebar_Generate);
 var EnemyLifebar_Generate$1 = EnemyLifebar_Generate;
 
-var foreign104 = /*#__PURE__*/Object.freeze({
+var foreign105 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: EnemyLifebar_Generate$1
 });
@@ -23958,7 +24242,7 @@ var foreign15 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -24019,7 +24303,7 @@ TestPanel_Generate = __decorate([
 ], TestPanel_Generate);
 var TestPanel_Generate$1 = TestPanel_Generate;
 
-var foreign108 = /*#__PURE__*/Object.freeze({
+var foreign109 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TestPanel_Generate$1
 });
@@ -24069,7 +24353,7 @@ var foreign16 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.21
  */
 let ArkItem_Generate = class ArkItem_Generate extends UIScript {
     get mIconImage() {
@@ -24188,7 +24472,7 @@ ArkItem_Generate = __decorate([
 ], ArkItem_Generate);
 var ArkItem_Generate$1 = ArkItem_Generate;
 
-var foreign119 = /*#__PURE__*/Object.freeze({
+var foreign120 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ArkItem_Generate$1
 });
@@ -24198,7 +24482,7 @@ var foreign119 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/ArkPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.21
  */
 let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -24292,7 +24576,7 @@ ArkPanel_Generate = __decorate([
 ], ArkPanel_Generate);
 var ArkPanel_Generate$1 = ArkPanel_Generate;
 
-var foreign120 = /*#__PURE__*/Object.freeze({
+var foreign121 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ArkPanel_Generate$1
 });
@@ -24302,7 +24586,7 @@ var foreign120 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ArkModule/GiftBagPanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.21
  */
 let GiftBagPanel_Generate = class GiftBagPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -24388,9 +24672,106 @@ GiftBagPanel_Generate = __decorate([
 ], GiftBagPanel_Generate);
 var GiftBagPanel_Generate$1 = GiftBagPanel_Generate;
 
-var foreign121 = /*#__PURE__*/Object.freeze({
+var foreign122 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: GiftBagPanel_Generate$1
+});
+
+/**
+ * AUTO GENERATE BY UI EDITOR.
+ * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
+ * AUTHOR: 爱玩游戏的小胖子
+ * UI: UI/module/ArkModule/LimitTimePanel.ui
+ * TIME: 2024.11.10-13.05.21
+ */
+let LimitTimePanel_Generate = class LimitTimePanel_Generate extends UIScript {
+    get mTitleTextBlock() {
+        if (!this.mTitleTextBlock_Internal && this.uiWidgetBase) {
+            this.mTitleTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/TitleBgImage/mTitleTextBlock');
+        }
+        return this.mTitleTextBlock_Internal;
+    }
+    get mTipsTextBlock() {
+        if (!this.mTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mTipsTextBlock');
+        }
+        return this.mTipsTextBlock_Internal;
+    }
+    get mGetButton() {
+        if (!this.mGetButton_Internal && this.uiWidgetBase) {
+            this.mGetButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mGetButton');
+        }
+        return this.mGetButton_Internal;
+    }
+    get mGetTextBlock() {
+        if (!this.mGetTextBlock_Internal && this.uiWidgetBase) {
+            this.mGetTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mGetButton/mGetTextBlock');
+        }
+        return this.mGetTextBlock_Internal;
+    }
+    get mInputTipsTextBlock() {
+        if (!this.mInputTipsTextBlock_Internal && this.uiWidgetBase) {
+            this.mInputTipsTextBlock_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/MainBgImage/mGetButton/mInputTipsTextBlock');
+        }
+        return this.mInputTipsTextBlock_Internal;
+    }
+    get mCloseButton() {
+        if (!this.mCloseButton_Internal && this.uiWidgetBase) {
+            this.mCloseButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/mCloseButton');
+        }
+        return this.mCloseButton_Internal;
+    }
+    onAwake() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        this.layer = mw.UILayerBottom;
+        this.initButtons();
+    }
+    initButtons() {
+        //按钮添加点击
+        //按钮添加点击
+        this.mGetButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mGetButton");
+        });
+        this.mGetButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mCloseButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
+        });
+        this.mCloseButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        //按钮多语言
+        //文本多语言
+        this.initLanguage(this.mTitleTextBlock);
+        this.initLanguage(this.mTipsTextBlock);
+        this.initLanguage(this.mGetTextBlock);
+        this.initLanguage(this.mInputTipsTextBlock);
+        //文本多语言
+    }
+    /*初始化多语言*/
+    initLanguage(ui) {
+        let call = mw.UIScript.getBehavior("lan");
+        if (call && ui) {
+            call(ui);
+        }
+    }
+    onShow(...params) { }
+    ;
+    /*显示panel*/
+    show(...param) {
+        mw.UIService.showUI(this, this.layer, ...param);
+    }
+    /*隐藏panel*/
+    hide() {
+        mw.UIService.hideUI(this);
+    }
+};
+LimitTimePanel_Generate = __decorate([
+    UIBind('UI/module/ArkModule/LimitTimePanel.ui')
+], LimitTimePanel_Generate);
+var LimitTimePanel_Generate$1 = LimitTimePanel_Generate;
+
+var foreign123 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    default: LimitTimePanel_Generate$1
 });
 
 const rewardDiamond = new Map();
@@ -24559,6 +24940,7 @@ class ArkModuleC extends ModuleC {
         this.giftBagPanel = null;
         this.hudModuleC = null;
         this.playerModuleC = null;
+        this.limitTimePanel = null;
         this.isCanContinueClick = true;
         this.isLimitStrs = {};
         this.isCanGetGiftBag = true;
@@ -24587,6 +24969,12 @@ class ArkModuleC extends ModuleC {
         }
         return this.playerModuleC;
     }
+    get getLimitTimePanel() {
+        if (!this.limitTimePanel) {
+            this.limitTimePanel = UIService.getUI(LimitTimePanel);
+        }
+        return this.limitTimePanel;
+    }
     onStart() {
         this.bindAction();
         InputUtil.onKeyDown(mw.Keys.P, () => {
@@ -24600,6 +24988,9 @@ class ArkModuleC extends ModuleC {
         mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
         this.getHudModuleC.onOpenArkAction.add(this.addOpenArkPanel.bind(this));
         this.getHudModuleC.onOpenGetAction.add(this.addOpenGiftBagPanel.bind(this));
+        this.getHudModuleC.onOpenLimitTimeAction.add(() => {
+            this.getLimitTimePanel.show();
+        });
     }
     onEnterScene(sceneType) {
         this.isLimitStrs = this.data.isLimitStrs;
@@ -24648,6 +25039,15 @@ class ArkModuleC extends ModuleC {
         }
     }
     net_deliverGoods(commodityId, amount) {
+        if (commodityId == "ATUscb1seFW0001eB") {
+            this.getPlayerModuleC.saveDiamond(68888);
+            this.getPlayerModuleC.saveCoin(68888);
+            this.getPlayerModuleC.saveBone(888888888888);
+            Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${68888}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_SoulBone.Value}+${68888}`);
+            Notice.showDownNotice(`${GameConfig.Language.Text_GoldCoins.Value}+${888888888888}`);
+            return;
+        }
         //根据commodityId和amount来处理收货逻辑
         console.error(`ArkModuleC net_deliverGoods commodityId: ${commodityId}, amount: ${amount}`);
         let rewardCount = rewardDiamond.get(commodityId).rewardCount;
@@ -24701,6 +25101,13 @@ class ArkModuleC extends ModuleC {
     }
     net_syncArkStr(str) {
         this.getArkPanel.updateUserIdTextBlock(str);
+    }
+    limitTime() {
+        mw.PurchaseService.placeOrder("ATUscb1seFW0001eB", 1, (status, msg) => {
+            mw.PurchaseService.getArkBalance(); //刷新代币数量
+            if (status != 200)
+                return;
+        });
     }
 }
 class ArkModuleS extends ModuleS {
@@ -24840,6 +25247,50 @@ class GiftBagPanel extends GiftBagPanel_Generate$1 {
         });
     }
 }
+class LimitTimePanel extends LimitTimePanel_Generate$1 {
+    constructor() {
+        super(...arguments);
+        this.hudPanel = null;
+    }
+    get getHudPanel() {
+        if (!this.hudPanel) {
+            this.hudPanel = mw.UIService.getUI(HUDPanel);
+        }
+        return this.hudPanel;
+    }
+    onStart() {
+        this.initUI();
+        this.mCloseButton.onClicked.add(() => {
+            this.hideTween();
+        });
+        let isCanContinueClick = true;
+        this.mGetButton.onClicked.add(() => {
+            if (!isCanContinueClick)
+                return;
+            isCanContinueClick = false;
+            TimeUtil.delaySecond(3).then(() => { isCanContinueClick = true; });
+            ModuleService.getModule(ArkModuleC).limitTime();
+        });
+    }
+    initUI() {
+        this.mTitleTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
+        this.mTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoins.Value, 19800);
+        this.mGetTextBlock.text = GameConfig.Language.Text_Buy.Value;
+        this.mTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 68888, 68888, 888888888888, 100);
+        this.mInputTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoins.Value, 19800);
+    }
+    onShow(...params) {
+        Utils.openUITween(this.rootCanvas, () => {
+            this.getHudPanel.hide();
+        }, null);
+    }
+    hideTween() {
+        Utils.closeUITween(this.rootCanvas, null, () => {
+            this.hide();
+            this.getHudPanel.show();
+        });
+    }
+}
 class GiftBagData {
 }
 var GiftBagCood;
@@ -24858,7 +25309,8 @@ var foreign47 = /*#__PURE__*/Object.freeze({
     ArkPanel: ArkPanel,
     get GiftBagCood () { return GiftBagCood; },
     GiftBagData: GiftBagData,
-    GiftBagPanel: GiftBagPanel
+    GiftBagPanel: GiftBagPanel,
+    LimitTimePanel: LimitTimePanel
 });
 
 class HUDModuleS extends ModuleS {
@@ -24924,14 +25376,54 @@ class HUDModuleS extends ModuleS {
         this.worldConfigDatas = (await this.getCustomdata("WorldConfigData"));
     }
     async syncWorldConfigData(player) {
-        // if (!this.worldConfigDatas || this.worldConfigDatas.length == 0)
         await this.initWorldConfigDatas();
+        if (!this.worldConfigDatas || this.worldConfigDatas.length == 0)
+            return;
+        let titleName = DataCenterS.getData(player, PlayerData).getTitleName;
+        if (titleName || titleName.length > 0) {
+            let isHas = false;
+            for (let i = 0; i < this.worldConfigDatas.length; ++i) {
+                if (this.worldConfigDatas[i].userId == player.userId) {
+                    isHas = true;
+                    if (this.worldConfigDatas[i].titleName != titleName) {
+                        this.worldConfigDatas[i].titleName = titleName;
+                        this.setCustomData("WorldConfigData", this.worldConfigDatas);
+                        break;
+                    }
+                }
+            }
+            if (!isHas) {
+                let worldConfigData = new WorldConfigData();
+                worldConfigData.test = `-1`;
+                worldConfigData.userId = player.userId;
+                worldConfigData.titleName = titleName;
+                this.worldConfigDatas.push(worldConfigData);
+                this.setCustomData("WorldConfigData", this.worldConfigDatas);
+            }
+        }
         this.getClient(player).net_syncWorldConfigData(this.worldConfigDatas);
+    }
+    net_modifyTitleName(titleName) {
+        let player = this.currentPlayer;
+        DataCenterS.getData(player, PlayerData).setTitleName(titleName);
+        this.initWorldConfigDatas().then(() => {
+            let worldConfigData = new WorldConfigData();
+            worldConfigData.test = `-1`;
+            worldConfigData.userId = player.userId;
+            worldConfigData.titleName = titleName;
+            this.worldConfigDatas.push(worldConfigData);
+            this.setCustomData("WorldConfigData", this.worldConfigDatas);
+        });
     }
     async getCustomdata(key) {
         let data = null;
         data = await GeneralManager.asyncRpcGetData(key);
         return data;
+    }
+    async setCustomData(saveKey, dataInfo) {
+        let code = null;
+        code = await DataStorage.asyncSetData(saveKey, dataInfo);
+        return code == mw.DataStorageResultCode.Success;
     }
 }
 __decorate([
@@ -24954,7 +25446,7 @@ var foreign53 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeopleItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let NewPeopleItem_Generate = class NewPeopleItem_Generate extends UIScript {
     get mDayTextBlock() {
@@ -25115,7 +25607,7 @@ NewPeopleItem_Generate = __decorate([
 ], NewPeopleItem_Generate);
 var NewPeopleItem_Generate$1 = NewPeopleItem_Generate;
 
-var foreign139 = /*#__PURE__*/Object.freeze({
+var foreign142 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NewPeopleItem_Generate$1
 });
@@ -25125,7 +25617,7 @@ var foreign139 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/NewPeopleModule/NewPeoplePanel.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let NewPeoplePanel_Generate = class NewPeoplePanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -25194,7 +25686,7 @@ NewPeoplePanel_Generate = __decorate([
 ], NewPeoplePanel_Generate);
 var NewPeoplePanel_Generate$1 = NewPeoplePanel_Generate;
 
-var foreign140 = /*#__PURE__*/Object.freeze({
+var foreign143 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NewPeoplePanel_Generate$1
 });
@@ -25514,7 +26006,7 @@ class NewPeopleItem extends NewPeopleItem_Generate$1 {
     }
 }
 
-var foreign57 = /*#__PURE__*/Object.freeze({
+var foreign58 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     NewPeopleData: NewPeopleData,
     NewPeopleItem: NewPeopleItem,
@@ -25528,7 +26020,7 @@ var foreign57 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -25774,7 +26266,7 @@ WorldRankPanel_Generate = __decorate([
 ], WorldRankPanel_Generate);
 var WorldRankPanel_Generate$1 = WorldRankPanel_Generate;
 
-var foreign163 = /*#__PURE__*/Object.freeze({
+var foreign166 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankPanel_Generate$1
 });
@@ -26060,7 +26552,7 @@ var ShowCanvasType;
     ShowCanvasType[ShowCanvasType["World"] = 2] = "World";
 })(ShowCanvasType || (ShowCanvasType = {}));
 
-var foreign71 = /*#__PURE__*/Object.freeze({
+var foreign72 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     RankItem: RankItem,
     get ShowCanvasType () { return ShowCanvasType; },
@@ -26224,7 +26716,7 @@ var RankType;
     RankType[RankType["Kill"] = 3] = "Kill";
 })(RankType || (RankType = {}));
 
-var foreign72 = /*#__PURE__*/Object.freeze({
+var foreign73 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get RankType () { return RankType; },
     WorldRankModuleC: WorldRankModuleC
@@ -26235,7 +26727,7 @@ var foreign72 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_1.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_1_Generate = class WorldTips_1_Generate extends UIScript {
     get mTextBlock() {
@@ -26281,7 +26773,7 @@ WorldTips_1_Generate = __decorate([
 ], WorldTips_1_Generate);
 var WorldTips_1_Generate$1 = WorldTips_1_Generate;
 
-var foreign109 = /*#__PURE__*/Object.freeze({
+var foreign110 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_1_Generate$1
 });
@@ -26291,7 +26783,7 @@ var foreign109 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_2.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_2_Generate = class WorldTips_2_Generate extends UIScript {
     get mTextBlock() {
@@ -26344,7 +26836,7 @@ WorldTips_2_Generate = __decorate([
 ], WorldTips_2_Generate);
 var WorldTips_2_Generate$1 = WorldTips_2_Generate;
 
-var foreign110 = /*#__PURE__*/Object.freeze({
+var foreign111 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_2_Generate$1
 });
@@ -26354,7 +26846,7 @@ var foreign110 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_3.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_3_Generate = class WorldTips_3_Generate extends UIScript {
     get mTextBlock() {
@@ -26407,7 +26899,7 @@ WorldTips_3_Generate = __decorate([
 ], WorldTips_3_Generate);
 var WorldTips_3_Generate$1 = WorldTips_3_Generate;
 
-var foreign111 = /*#__PURE__*/Object.freeze({
+var foreign112 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_3_Generate$1
 });
@@ -26417,7 +26909,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_4.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_4_Generate = class WorldTips_4_Generate extends UIScript {
     get mTextBlock() {
@@ -26463,7 +26955,7 @@ WorldTips_4_Generate = __decorate([
 ], WorldTips_4_Generate);
 var WorldTips_4_Generate$1 = WorldTips_4_Generate;
 
-var foreign112 = /*#__PURE__*/Object.freeze({
+var foreign113 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_4_Generate$1
 });
@@ -26473,7 +26965,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_5.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_5_Generate = class WorldTips_5_Generate extends UIScript {
     get mTextBlock() {
@@ -26526,7 +27018,7 @@ WorldTips_5_Generate = __decorate([
 ], WorldTips_5_Generate);
 var WorldTips_5_Generate$1 = WorldTips_5_Generate;
 
-var foreign113 = /*#__PURE__*/Object.freeze({
+var foreign114 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_5_Generate$1
 });
@@ -26536,7 +27028,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_6.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_6_Generate = class WorldTips_6_Generate extends UIScript {
     get mTextBlock() {
@@ -26582,7 +27074,7 @@ WorldTips_6_Generate = __decorate([
 ], WorldTips_6_Generate);
 var WorldTips_6_Generate$1 = WorldTips_6_Generate;
 
-var foreign114 = /*#__PURE__*/Object.freeze({
+var foreign115 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_6_Generate$1
 });
@@ -26592,7 +27084,7 @@ var foreign114 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips_7.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_7_Generate = class WorldTips_7_Generate extends UIScript {
     get mTextBlock() {
@@ -26645,7 +27137,7 @@ WorldTips_7_Generate = __decorate([
 ], WorldTips_7_Generate);
 var WorldTips_7_Generate$1 = WorldTips_7_Generate;
 
-var foreign115 = /*#__PURE__*/Object.freeze({
+var foreign116 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_7_Generate$1
 });
@@ -26655,7 +27147,7 @@ var foreign115 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/WorldTips/WorldTips.ui
- * TIME: 2024.11.04-19.49.51
+ * TIME: 2024.11.10-13.05.21
  */
 let WorldTips_Generate = class WorldTips_Generate extends UIScript {
     get mTextBlock() {
@@ -26708,7 +27200,7 @@ WorldTips_Generate = __decorate([
 ], WorldTips_Generate);
 var WorldTips_Generate$1 = WorldTips_Generate;
 
-var foreign116 = /*#__PURE__*/Object.freeze({
+var foreign117 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldTips_Generate$1
 });
@@ -26942,7 +27434,7 @@ class WorldUIModuleS extends ModuleS {
     }
 }
 
-var foreign88 = /*#__PURE__*/Object.freeze({
+var foreign89 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WorldUI: WorldUI,
     WorldUIModuleC: WorldUIModuleC,
@@ -27455,7 +27947,7 @@ var foreign44 = /*#__PURE__*/Object.freeze({
 //     }
 // }
 
-var foreign58 = /*#__PURE__*/Object.freeze({
+var foreign59 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
@@ -27478,7 +27970,7 @@ __decorate([
     Decorator.persistence()
 ], PropData.prototype, "props", void 0);
 
-var foreign67 = /*#__PURE__*/Object.freeze({
+var foreign68 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropData: PropData
 });
@@ -27533,7 +28025,7 @@ class PropModuleC extends ModuleC {
     }
 }
 
-var foreign68 = /*#__PURE__*/Object.freeze({
+var foreign69 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropModuleC: PropModuleC
 });
@@ -27616,7 +28108,7 @@ class PropModuleS extends ModuleS {
     }
 }
 
-var foreign69 = /*#__PURE__*/Object.freeze({
+var foreign70 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     PropModuleS: PropModuleS
 });
@@ -27650,7 +28142,7 @@ __decorate([
     Decorator.persistence()
 ], ShopData.prototype, "useWeaponId", void 0);
 
-var foreign75 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopData
 });
@@ -27787,7 +28279,7 @@ class TouchData {
     }
 }
 
-var foreign100 = /*#__PURE__*/Object.freeze({
+var foreign101 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     InputManagers: InputManagers,
     TouchData: TouchData
@@ -27798,7 +28290,7 @@ var foreign100 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -27888,7 +28380,7 @@ NPCHead_Generate = __decorate([
 ], NPCHead_Generate);
 var NPCHead_Generate$1 = NPCHead_Generate;
 
-var foreign148 = /*#__PURE__*/Object.freeze({
+var foreign151 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NPCHead_Generate$1
 });
@@ -27898,7 +28390,7 @@ var foreign148 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -27966,7 +28458,7 @@ CostPanel_Generate = __decorate([
 ], CostPanel_Generate);
 var CostPanel_Generate$1 = CostPanel_Generate;
 
-var foreign147 = /*#__PURE__*/Object.freeze({
+var foreign150 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel_Generate$1
 });
@@ -28008,7 +28500,7 @@ class CostPanel extends CostPanel_Generate$1 {
     }
 }
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: CostPanel
 });
@@ -28018,7 +28510,7 @@ var foreign78 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -28129,7 +28621,7 @@ ShopPanel_Generate = __decorate([
 ], ShopPanel_Generate);
 var ShopPanel_Generate$1 = ShopPanel_Generate;
 
-var foreign150 = /*#__PURE__*/Object.freeze({
+var foreign153 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel_Generate$1
 });
@@ -28291,7 +28783,7 @@ class ShopItem {
     }
 }
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopPanel
 });
@@ -28672,7 +29164,7 @@ class ShopModuleC extends ModuleC {
     }
 }
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleC
 });
@@ -28727,7 +29219,7 @@ __decorate([
     Decorator.noReply()
 ], ShopModuleS.prototype, "net_saveUseWeaponId", null);
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopModuleS
 });
@@ -29302,7 +29794,7 @@ var TrampolineRescourse;
     TrampolineRescourse["Roll"] = "14736";
 })(TrampolineRescourse || (TrampolineRescourse = {}));
 
-var foreign86 = /*#__PURE__*/Object.freeze({
+var foreign87 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType$1; },
     OBB: OBB,
@@ -29457,7 +29949,7 @@ var ListenerEventsType;
     ListenerEventsType["ServerToAllClient_HideJumpRecordUI"] = "ServerToAllClient_HideJumpRecordUI";
 })(ListenerEventsType || (ListenerEventsType = {}));
 
-var foreign87 = /*#__PURE__*/Object.freeze({
+var foreign88 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get ListenerEventsType () { return ListenerEventsType; },
     default: P_Game_Trampoline
@@ -29545,7 +30037,7 @@ NewScript = __decorate([
 ], NewScript);
 var NewScript$1 = NewScript;
 
-var foreign89 = /*#__PURE__*/Object.freeze({
+var foreign90 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: NewScript$1
 });
@@ -30209,7 +30701,7 @@ __decorate([
     RemoteFunction(mw.Client, mw.Multicast)
 ], WeaponClient.prototype, "client_PlayEffect", null);
 
-var foreign93 = /*#__PURE__*/Object.freeze({
+var foreign94 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponClient: WeaponClient
 });
@@ -30337,7 +30829,7 @@ __decorate([
     RemoteFunction(mw.Server)
 ], WeaponServer.prototype, "server_setChar", null);
 
-var foreign96 = /*#__PURE__*/Object.freeze({
+var foreign97 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponServer: WeaponServer
 });
@@ -30365,7 +30857,7 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
-var foreign92 = /*#__PURE__*/Object.freeze({
+var foreign93 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Weapon$1
 });
@@ -30563,7 +31055,7 @@ class KeyActionManager {
     }
 }
 
-var foreign99 = /*#__PURE__*/Object.freeze({
+var foreign100 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: FreeCamera$1
 });
@@ -30573,7 +31065,7 @@ var foreign99 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -30682,7 +31174,7 @@ OnlineRewardItem_Generate = __decorate([
 ], OnlineRewardItem_Generate);
 var OnlineRewardItem_Generate$1 = OnlineRewardItem_Generate;
 
-var foreign141 = /*#__PURE__*/Object.freeze({
+var foreign144 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: OnlineRewardItem_Generate$1
 });
@@ -30692,7 +31184,7 @@ var foreign141 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -30773,7 +31265,7 @@ ShopItem_Generate = __decorate([
 ], ShopItem_Generate);
 var ShopItem_Generate$1 = ShopItem_Generate;
 
-var foreign149 = /*#__PURE__*/Object.freeze({
+var foreign152 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ShopItem_Generate$1
 });
@@ -30783,7 +31275,7 @@ var foreign149 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.23
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -30892,7 +31384,7 @@ TaskItem_Generate = __decorate([
 ], TaskItem_Generate);
 var TaskItem_Generate$1 = TaskItem_Generate;
 
-var foreign157 = /*#__PURE__*/Object.freeze({
+var foreign160 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: TaskItem_Generate$1
 });
@@ -30902,7 +31394,7 @@ var foreign157 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.11.04-19.49.52
+ * TIME: 2024.11.10-13.05.22
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -30947,7 +31439,7 @@ ImpactRadiusWindow_Generate = __decorate([
 ], ImpactRadiusWindow_Generate);
 var ImpactRadiusWindow_Generate$1 = ImpactRadiusWindow_Generate;
 
-var foreign159 = /*#__PURE__*/Object.freeze({
+var foreign162 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: ImpactRadiusWindow_Generate$1
 });
@@ -30957,7 +31449,7 @@ var foreign159 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -31022,7 +31514,7 @@ JumpRecordUI_Generate = __decorate([
 ], JumpRecordUI_Generate);
 var JumpRecordUI_Generate$1 = JumpRecordUI_Generate;
 
-var foreign160 = /*#__PURE__*/Object.freeze({
+var foreign163 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: JumpRecordUI_Generate$1
 });
@@ -31032,7 +31524,7 @@ var foreign160 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -31106,7 +31598,7 @@ RankItem_Generate = __decorate([
 ], RankItem_Generate);
 var RankItem_Generate$1 = RankItem_Generate;
 
-var foreign161 = /*#__PURE__*/Object.freeze({
+var foreign164 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: RankItem_Generate$1
 });
@@ -31116,7 +31608,7 @@ var foreign161 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.11.04-19.49.53
+ * TIME: 2024.11.10-13.05.22
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -31176,7 +31668,7 @@ WorldRankItem_Generate = __decorate([
 ], WorldRankItem_Generate);
 var WorldRankItem_Generate$1 = WorldRankItem_Generate;
 
-var foreign162 = /*#__PURE__*/Object.freeze({
+var foreign165 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: WorldRankItem_Generate$1
 });
@@ -31236,115 +31728,118 @@ const MWModuleMap = {
      'FD862E054AB9D48653FA0EA16B234198': foreign52,
      '11907A164C7CB34C30CA6D959138FC0F': foreign53,
      '3CD445AB4C6DC67B35D60DA472014379': foreign54,
-     '83D94B2C4BAC128653321D91B6B11A9F': foreign55,
-     'F29D351A434FCFDAFF6562A4E43888BA': foreign56,
-     '7D7C982D4709FA67C72375A09BB18ECA': foreign57,
-     '0F95A3C34E76FB1EC85217AAE2F7D8ED': foreign58,
-     '68E90BBE443B0F584B447BB6471F9698': foreign59,
-     '0BF71D314247D4EE9739E385C563DF47': foreign60,
-     '57E0650848E7948CD2BAE083B45540F9': foreign61,
-     '6ECF455744EA2C8A66C15CBE0F9D4732': foreign62,
-     'B5ED482B492E893B56A1FD98DB7F2BD8': foreign63,
-     'EBD3FCE849D367C6A0336B9A451A5330': foreign64,
-     '302392054A313F839CE35097B9BB635F': foreign65,
-     'FFB257A546DFC37AAC922E8047B291CA': foreign66,
-     'B0AE81964A685F8B31B8DFA7B392849D': foreign67,
-     '1669FAF94795EF1ACBA7FE9C800B117B': foreign68,
-     '165F15B348A03E72BD290BB61AC4BF8B': foreign69,
-     '357E9DA2462F9CE7CF4B43B0AA9DC354': foreign70,
-     'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign71,
-     '2909A3E141653B96AD1695BB3D9FD3E7': foreign72,
-     '459EAC1C45A11267216B289C90BC7AC5': foreign73,
-     '8B404A71482B2B7A44BB8A85E26C05E7': foreign74,
-     '0E7769194FC879692CDC4E91F3CA47D3': foreign75,
-     'EE9111164BB56CAF9589D28E0A80DCB7': foreign76,
-     'B9E68E6F47D05B8922EB89976547D0ED': foreign77,
-     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign78,
-     'B0214F354FA856A04434CB862696C501': foreign79,
-     '37558D484E7E3EEB7CF50F83FF516D01': foreign80,
-     'D19D3A504FC18CE740F53FB3707D4919': foreign81,
-     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign82,
-     'C2A63B424C2C17C9DE3395B59BA9444C': foreign83,
-     '4CA21C094DAD2346E120EFBEA3D7736C': foreign84,
-     'E8535D714F5BFEC20EF595B175FA24BD': foreign85,
-     '1884D48A4EBB982234611D9DD0E1A853': foreign86,
-     '0568B98E45100A88DECA3E894117DA12': foreign87,
-     'BCDAFE1B477DCC490B7E479AC5D8C614': foreign88,
-     '2FF8A8EA49762A86C34B39BBF1EF1109': foreign89,
-     '4A4C950D496FFCD7471A22924E8F3AE4': foreign90,
-     '586A140B4F5148B73C6201AF3EDA5701': foreign91,
-     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign92,
-     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign93,
-     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign94,
-     'E76AEC2E4B56116E911A1B86036607DC': foreign95,
-     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign96,
-     'B557F99E4E5DD1260BBC268B1579FDF6': foreign97,
-     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign98,
-     '72BDC1A847C3175B60A8E7B540400F62': foreign99,
-     'B6D27EAC444C85D1D925F986D613D5B3': foreign100,
-     'EFFEC0C44629992590058E96821DF5A4': foreign101,
-     'C21422064060FC0412F08EAAD527453E': foreign102,
-     'E08DC42B45A65EE74232E6B7819467BF': foreign103,
-     '9A29CFAC457713D31702BF919B762966': foreign104,
-     '4244ACB14A814AA70C452CB4CFEBB75D': foreign105,
-     'FAAB758A46290493F8E43BA2B90FE5D8': foreign106,
-     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign107,
-     '2C5FEBB74325C7CDDE604EB4590142F0': foreign108,
-     '2DC073C94D179CA85319478F3C46B3F5': foreign109,
-     'D4EDE83847B2782F3A5116BF65D6C435': foreign110,
-     'D359A7694332F95931151EB588C1AF5E': foreign111,
-     'FF86E530405894648CE968B30C525E68': foreign112,
-     '4EEC08894BAC06915772E5B74249D323': foreign113,
-     'B22F1A0D4F964B7A07C054991CAEEB19': foreign114,
-     'F2A5C8E04849C54D927A978574E27E4F': foreign115,
-     'AC60C05B4C542CC8914005A59DEB58FA': foreign116,
-     '9F6B6A8C43A7F31DDB111384318E84E0': foreign117,
-     'E4A7B6B447E4FEB9A79E10A542D8CCBA': foreign118,
-     'EAB0F5684D052B2B639F49AF734B6428': foreign119,
-     'E295F53E4A850B613CDDF19BE7BA2152': foreign120,
-     'ED85D676440DC49934CD7F8884E0F392': foreign121,
-     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign122,
-     '4017F2464551598B868EECA194CC198A': foreign123,
-     '38D734224F75800856A0C69917B88EF8': foreign124,
-     '2987FCF94860A2648A6FA88D34EFA05A': foreign125,
-     '524BCC62487C082CECA561B07841E717': foreign126,
-     '7A1BDAA348138C0EA4A3A79A331D023B': foreign127,
-     '7DC553CD47B386E860AD1FAB1D5CF9C9': foreign128,
-     'CEE46C5B4475EE568570CBA41D68EE0C': foreign129,
-     '51FD3899419F676C5D82C682439BFAFE': foreign130,
-     '92FA042A4FD4838557550FAACC252FDF': foreign131,
-     '97EB0171476F91CD15A883839DACE05F': foreign132,
-     '4CB823DD4201B2F6C9133CA164CC27C1': foreign133,
-     '8645187F4117038772D699B1E160B075': foreign134,
-     '19ADE23D4CBFC9E493C4E796F692FC19': foreign135,
-     '603E72F745C5AB118A914A9B7158BE42': foreign136,
-     '785A4C0942F9EE0121164A936B32CD1A': foreign137,
-     '276281AF45140E4A764B7193EB07F964': foreign138,
-     '7B477BE24A5D7B26F1D36B9DE347D86C': foreign139,
-     '734BD21D40C070408E4722AA727C7AAC': foreign140,
-     'FFAA0B1841347CE8BB80ED8EA9335519': foreign141,
-     '0EE04F42462FE0DADBF4668AD079F570': foreign142,
-     'D84A334C40B33A813552FF903364539E': foreign143,
-     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign144,
-     '51DC73A84B35897D52C83693B7DD046D': foreign145,
-     'D184468C4590DA86174C9FB293C6F14A': foreign146,
-     '075AF2584F411C88705182871B9DFB78': foreign147,
-     '137112BE4F0726F6AD61EFBED47C639E': foreign148,
-     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign149,
-     '0D1CAB354779E284B6E58B91C82ABE07': foreign150,
-     '533234054C42D87B47A4BE88C2587EC9': foreign151,
-     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign152,
-     'C21F29B14F177E9F401F15994B1D7844': foreign153,
-     'E7EA80BF43AF2B3739FCDCA2732779F2': foreign154,
-     'D7FF2665439A6737640918A40438EB1F': foreign155,
-     '1B46FD584FBEE6D4F5A4C1A45840B20F': foreign156,
-     '0C684B0C46414ED7D11529BA94FD6935': foreign157,
-     '10B4E9EA45C85246C9717EA276C7774B': foreign158,
-     '26DC6E0D40A865057A807DADF4A80DCB': foreign159,
-     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign160,
-     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign161,
-     '368482014D69E4E894C63192B0F17B63': foreign162,
-     '265FA5C440300C2875B6699C5F8B36C7': foreign163,
+     '68C015764498AE34C011B3A08A747D27': foreign55,
+     '83D94B2C4BAC128653321D91B6B11A9F': foreign56,
+     'F29D351A434FCFDAFF6562A4E43888BA': foreign57,
+     '7D7C982D4709FA67C72375A09BB18ECA': foreign58,
+     '0F95A3C34E76FB1EC85217AAE2F7D8ED': foreign59,
+     '68E90BBE443B0F584B447BB6471F9698': foreign60,
+     '0BF71D314247D4EE9739E385C563DF47': foreign61,
+     '57E0650848E7948CD2BAE083B45540F9': foreign62,
+     '6ECF455744EA2C8A66C15CBE0F9D4732': foreign63,
+     'B5ED482B492E893B56A1FD98DB7F2BD8': foreign64,
+     'EBD3FCE849D367C6A0336B9A451A5330': foreign65,
+     '302392054A313F839CE35097B9BB635F': foreign66,
+     'FFB257A546DFC37AAC922E8047B291CA': foreign67,
+     'B0AE81964A685F8B31B8DFA7B392849D': foreign68,
+     '1669FAF94795EF1ACBA7FE9C800B117B': foreign69,
+     '165F15B348A03E72BD290BB61AC4BF8B': foreign70,
+     '357E9DA2462F9CE7CF4B43B0AA9DC354': foreign71,
+     'CB72CBA34C116C9F7B0FF5B5541B59EE': foreign72,
+     '2909A3E141653B96AD1695BB3D9FD3E7': foreign73,
+     '459EAC1C45A11267216B289C90BC7AC5': foreign74,
+     '8B404A71482B2B7A44BB8A85E26C05E7': foreign75,
+     '0E7769194FC879692CDC4E91F3CA47D3': foreign76,
+     'EE9111164BB56CAF9589D28E0A80DCB7': foreign77,
+     'B9E68E6F47D05B8922EB89976547D0ED': foreign78,
+     '6FF376094BAB027928ADA8A4F0FFBD5B': foreign79,
+     'B0214F354FA856A04434CB862696C501': foreign80,
+     '37558D484E7E3EEB7CF50F83FF516D01': foreign81,
+     'D19D3A504FC18CE740F53FB3707D4919': foreign82,
+     '5F4167AC4B1A67501A0DD4A98DCCE793': foreign83,
+     'C2A63B424C2C17C9DE3395B59BA9444C': foreign84,
+     '4CA21C094DAD2346E120EFBEA3D7736C': foreign85,
+     'E8535D714F5BFEC20EF595B175FA24BD': foreign86,
+     '1884D48A4EBB982234611D9DD0E1A853': foreign87,
+     '0568B98E45100A88DECA3E894117DA12': foreign88,
+     'BCDAFE1B477DCC490B7E479AC5D8C614': foreign89,
+     '2FF8A8EA49762A86C34B39BBF1EF1109': foreign90,
+     '4A4C950D496FFCD7471A22924E8F3AE4': foreign91,
+     '586A140B4F5148B73C6201AF3EDA5701': foreign92,
+     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign93,
+     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign94,
+     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign95,
+     'E76AEC2E4B56116E911A1B86036607DC': foreign96,
+     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign97,
+     'B557F99E4E5DD1260BBC268B1579FDF6': foreign98,
+     'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign99,
+     '72BDC1A847C3175B60A8E7B540400F62': foreign100,
+     'B6D27EAC444C85D1D925F986D613D5B3': foreign101,
+     'EFFEC0C44629992590058E96821DF5A4': foreign102,
+     'C21422064060FC0412F08EAAD527453E': foreign103,
+     'E08DC42B45A65EE74232E6B7819467BF': foreign104,
+     '9A29CFAC457713D31702BF919B762966': foreign105,
+     '4244ACB14A814AA70C452CB4CFEBB75D': foreign106,
+     'FAAB758A46290493F8E43BA2B90FE5D8': foreign107,
+     'AF17F51D4E0C39A0DFF650A5C6ED988B': foreign108,
+     '2C5FEBB74325C7CDDE604EB4590142F0': foreign109,
+     '2DC073C94D179CA85319478F3C46B3F5': foreign110,
+     'D4EDE83847B2782F3A5116BF65D6C435': foreign111,
+     'D359A7694332F95931151EB588C1AF5E': foreign112,
+     'FF86E530405894648CE968B30C525E68': foreign113,
+     '4EEC08894BAC06915772E5B74249D323': foreign114,
+     'B22F1A0D4F964B7A07C054991CAEEB19': foreign115,
+     'F2A5C8E04849C54D927A978574E27E4F': foreign116,
+     'AC60C05B4C542CC8914005A59DEB58FA': foreign117,
+     '9F6B6A8C43A7F31DDB111384318E84E0': foreign118,
+     'E4A7B6B447E4FEB9A79E10A542D8CCBA': foreign119,
+     'EAB0F5684D052B2B639F49AF734B6428': foreign120,
+     'E295F53E4A850B613CDDF19BE7BA2152': foreign121,
+     'ED85D676440DC49934CD7F8884E0F392': foreign122,
+     '6412FEEF45FA09E120DFAD83DA639F61': foreign123,
+     '385ADFB84F77A44ABDB7BE9EEF4A8D0D': foreign124,
+     '4017F2464551598B868EECA194CC198A': foreign125,
+     '38D734224F75800856A0C69917B88EF8': foreign126,
+     '2987FCF94860A2648A6FA88D34EFA05A': foreign127,
+     '524BCC62487C082CECA561B07841E717': foreign128,
+     '7A1BDAA348138C0EA4A3A79A331D023B': foreign129,
+     '7DC553CD47B386E860AD1FAB1D5CF9C9': foreign130,
+     'CEE46C5B4475EE568570CBA41D68EE0C': foreign131,
+     '51FD3899419F676C5D82C682439BFAFE': foreign132,
+     '92FA042A4FD4838557550FAACC252FDF': foreign133,
+     '47920CEA401A5E74E0C487982708B3DC': foreign134,
+     '97EB0171476F91CD15A883839DACE05F': foreign135,
+     '4CB823DD4201B2F6C9133CA164CC27C1': foreign136,
+     '8645187F4117038772D699B1E160B075': foreign137,
+     '19ADE23D4CBFC9E493C4E796F692FC19': foreign138,
+     '603E72F745C5AB118A914A9B7158BE42': foreign139,
+     '785A4C0942F9EE0121164A936B32CD1A': foreign140,
+     '276281AF45140E4A764B7193EB07F964': foreign141,
+     '7B477BE24A5D7B26F1D36B9DE347D86C': foreign142,
+     '734BD21D40C070408E4722AA727C7AAC': foreign143,
+     'FFAA0B1841347CE8BB80ED8EA9335519': foreign144,
+     '0EE04F42462FE0DADBF4668AD079F570': foreign145,
+     'D84A334C40B33A813552FF903364539E': foreign146,
+     '21E8822D4EA4F6D34DE80C9C85DDC047': foreign147,
+     '51DC73A84B35897D52C83693B7DD046D': foreign148,
+     'D184468C4590DA86174C9FB293C6F14A': foreign149,
+     '075AF2584F411C88705182871B9DFB78': foreign150,
+     '137112BE4F0726F6AD61EFBED47C639E': foreign151,
+     '120E374843DCC9C2C31F1A8D7B5A38C9': foreign152,
+     '0D1CAB354779E284B6E58B91C82ABE07': foreign153,
+     '533234054C42D87B47A4BE88C2587EC9': foreign154,
+     '3F8CEA724D3F78E7DD8510A74FADCA19': foreign155,
+     'C21F29B14F177E9F401F15994B1D7844': foreign156,
+     'E7EA80BF43AF2B3739FCDCA2732779F2': foreign157,
+     'D7FF2665439A6737640918A40438EB1F': foreign158,
+     '1B46FD584FBEE6D4F5A4C1A45840B20F': foreign159,
+     '0C684B0C46414ED7D11529BA94FD6935': foreign160,
+     '10B4E9EA45C85246C9717EA276C7774B': foreign161,
+     '26DC6E0D40A865057A807DADF4A80DCB': foreign162,
+     'A5EB5DB24E4A2B0B0F5291A92A98AC57': foreign163,
+     'CAE7FA2E4238E4E80DDF0A97EAF2A12E': foreign164,
+     '368482014D69E4E894C63192B0F17B63': foreign165,
+     '265FA5C440300C2875B6699C5F8B36C7': foreign166,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign2 || {}, "JavaScripts/common/Boss"],
@@ -31400,115 +31895,118 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign52 || {}, "JavaScripts/module/HUDModule/HUDModuleC"],
 [foreign53 || {}, "JavaScripts/module/HUDModule/HUDModuleS"],
 [foreign54 || {}, "JavaScripts/module/HUDModule/ui/HUDPanel"],
-[foreign55 || {}, "JavaScripts/module/LevelModule/LevelModule"],
-[foreign56 || {}, "JavaScripts/module/LotteryModule/LotteryModule"],
-[foreign57 || {}, "JavaScripts/module/NewPeopleModule/NewPeopleModule"],
-[foreign58 || {}, "JavaScripts/module/ObjImpulseModule/ObjImpulseModule"],
-[foreign59 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardData"],
-[foreign60 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleC"],
-[foreign61 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleS"],
-[foreign62 || {}, "JavaScripts/module/OnlineRewardModule/ui/OnlineRewardPanel"],
-[foreign63 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
-[foreign64 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
-[foreign65 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
-[foreign66 || {}, "JavaScripts/module/PlayerModule/ui/PlayerLifebar"],
-[foreign67 || {}, "JavaScripts/module/PropModule/PropData"],
-[foreign68 || {}, "JavaScripts/module/PropModule/PropModuleC"],
-[foreign69 || {}, "JavaScripts/module/PropModule/PropModuleS"],
-[foreign70 || {}, "JavaScripts/module/RankModule/PlayerPropData"],
-[foreign71 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
-[foreign72 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
-[foreign73 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
-[foreign74 || {}, "JavaScripts/module/RingSoulModule/RingSoulModule"],
-[foreign75 || {}, "JavaScripts/module/ShopModule/ShopData"],
-[foreign76 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
-[foreign77 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
-[foreign78 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
-[foreign79 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
-[foreign80 || {}, "JavaScripts/module/SignInModule/SignInModule"],
-[foreign81 || {}, "JavaScripts/module/SoulBoneModule/SoulBoneModule"],
-[foreign82 || {}, "JavaScripts/module/TaskModule/TaskData"],
-[foreign83 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
-[foreign84 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
-[foreign85 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
-[foreign86 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
-[foreign87 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
-[foreign88 || {}, "JavaScripts/module/WorldUIModule/WorldUIModule"],
-[foreign89 || {}, "JavaScripts/NewScript"],
-[foreign90 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
-[foreign91 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
-[foreign92 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
-[foreign93 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
-[foreign94 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
-[foreign95 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
-[foreign96 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
-[foreign97 || {}, "JavaScripts/Prefabs/PrefabEvent"],
-[foreign98 || {}, "JavaScripts/Tools/Console"],
-[foreign99 || {}, "JavaScripts/Tools/FreeCamera"],
-[foreign100 || {}, "JavaScripts/Tools/InputManager"],
-[foreign101 || {}, "JavaScripts/Tools/MapEx"],
-[foreign102 || {}, "JavaScripts/Tools/ObjectPool"],
-[foreign103 || {}, "JavaScripts/Tools/utils"],
-[foreign104 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
-[foreign105 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
-[foreign106 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
-[foreign107 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
-[foreign108 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
-[foreign109 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_1_generate"],
-[foreign110 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_2_generate"],
-[foreign111 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_3_generate"],
-[foreign112 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_4_generate"],
-[foreign113 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_5_generate"],
-[foreign114 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_6_generate"],
-[foreign115 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_7_generate"],
-[foreign116 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_generate"],
-[foreign117 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
-[foreign118 || {}, "JavaScripts/ui-generate/module/AdsModule/UpPanel_generate"],
-[foreign119 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkItem_generate"],
-[foreign120 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkPanel_generate"],
-[foreign121 || {}, "JavaScripts/ui-generate/module/ArkModule/GiftBagPanel_generate"],
-[foreign122 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
-[foreign123 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
-[foreign124 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
-[foreign125 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
-[foreign126 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordItem_generate"],
-[foreign127 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordPanel_generate"],
-[foreign128 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordTipsPanel_generate"],
-[foreign129 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
-[foreign130 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
-[foreign131 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
-[foreign132 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelItem_generate"],
-[foreign133 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelPanel_generate"],
-[foreign134 || {}, "JavaScripts/ui-generate/module/LevelModule/UpExpPanel_generate"],
-[foreign135 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryItem_generate"],
-[foreign136 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryPanel_generate"],
-[foreign137 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryResultItem_generate"],
-[foreign138 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryResultPanel_generate"],
-[foreign139 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeopleItem_generate"],
-[foreign140 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeoplePanel_generate"],
-[foreign141 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
-[foreign142 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
-[foreign143 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
-[foreign144 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
-[foreign145 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
-[foreign146 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
-[foreign147 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
-[foreign148 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
-[foreign149 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
-[foreign150 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
-[foreign151 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
-[foreign152 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
-[foreign153 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/PartItem_generate"],
-[foreign154 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/SoulBonePanel_generate"],
-[foreign155 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/StarItem_generate"],
-[foreign156 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/UpProbabilityPanel_generate"],
-[foreign157 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
-[foreign158 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
-[foreign159 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
-[foreign160 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
-[foreign161 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
-[foreign162 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
-[foreign163 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
+[foreign55 || {}, "JavaScripts/module/HUDModule/ui/TitleNamePanel"],
+[foreign56 || {}, "JavaScripts/module/LevelModule/LevelModule"],
+[foreign57 || {}, "JavaScripts/module/LotteryModule/LotteryModule"],
+[foreign58 || {}, "JavaScripts/module/NewPeopleModule/NewPeopleModule"],
+[foreign59 || {}, "JavaScripts/module/ObjImpulseModule/ObjImpulseModule"],
+[foreign60 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardData"],
+[foreign61 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleC"],
+[foreign62 || {}, "JavaScripts/module/OnlineRewardModule/OnlineRewardModuleS"],
+[foreign63 || {}, "JavaScripts/module/OnlineRewardModule/ui/OnlineRewardPanel"],
+[foreign64 || {}, "JavaScripts/module/PlayerModule/PlayerData"],
+[foreign65 || {}, "JavaScripts/module/PlayerModule/PlayerModuleC"],
+[foreign66 || {}, "JavaScripts/module/PlayerModule/PlayerModuleS"],
+[foreign67 || {}, "JavaScripts/module/PlayerModule/ui/PlayerLifebar"],
+[foreign68 || {}, "JavaScripts/module/PropModule/PropData"],
+[foreign69 || {}, "JavaScripts/module/PropModule/PropModuleC"],
+[foreign70 || {}, "JavaScripts/module/PropModule/PropModuleS"],
+[foreign71 || {}, "JavaScripts/module/RankModule/PlayerPropData"],
+[foreign72 || {}, "JavaScripts/module/RankModule/ui/WorldRankPanel"],
+[foreign73 || {}, "JavaScripts/module/RankModule/WorldRankModuleC"],
+[foreign74 || {}, "JavaScripts/module/RankModule/WorldRankModuleS"],
+[foreign75 || {}, "JavaScripts/module/RingSoulModule/RingSoulModule"],
+[foreign76 || {}, "JavaScripts/module/ShopModule/ShopData"],
+[foreign77 || {}, "JavaScripts/module/ShopModule/ShopModuleC"],
+[foreign78 || {}, "JavaScripts/module/ShopModule/ShopModuleS"],
+[foreign79 || {}, "JavaScripts/module/ShopModule/ui/CostPanel"],
+[foreign80 || {}, "JavaScripts/module/ShopModule/ui/ShopPanel"],
+[foreign81 || {}, "JavaScripts/module/SignInModule/SignInModule"],
+[foreign82 || {}, "JavaScripts/module/SoulBoneModule/SoulBoneModule"],
+[foreign83 || {}, "JavaScripts/module/TaskModule/TaskData"],
+[foreign84 || {}, "JavaScripts/module/TaskModule/TaskModuleC"],
+[foreign85 || {}, "JavaScripts/module/TaskModule/TaskModuleS"],
+[foreign86 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
+[foreign87 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
+[foreign88 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
+[foreign89 || {}, "JavaScripts/module/WorldUIModule/WorldUIModule"],
+[foreign90 || {}, "JavaScripts/NewScript"],
+[foreign91 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
+[foreign92 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
+[foreign93 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
+[foreign94 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
+[foreign95 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
+[foreign96 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
+[foreign97 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
+[foreign98 || {}, "JavaScripts/Prefabs/PrefabEvent"],
+[foreign99 || {}, "JavaScripts/Tools/Console"],
+[foreign100 || {}, "JavaScripts/Tools/FreeCamera"],
+[foreign101 || {}, "JavaScripts/Tools/InputManager"],
+[foreign102 || {}, "JavaScripts/Tools/MapEx"],
+[foreign103 || {}, "JavaScripts/Tools/ObjectPool"],
+[foreign104 || {}, "JavaScripts/Tools/utils"],
+[foreign105 || {}, "JavaScripts/ui-generate/common/EnemyLifebar_generate"],
+[foreign106 || {}, "JavaScripts/ui-generate/common/Loading_generate"],
+[foreign107 || {}, "JavaScripts/ui-generate/common/notice/NoticeView_generate"],
+[foreign108 || {}, "JavaScripts/ui-generate/common/notice/TopNoticeItem_generate"],
+[foreign109 || {}, "JavaScripts/ui-generate/common/TestPanel_generate"],
+[foreign110 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_1_generate"],
+[foreign111 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_2_generate"],
+[foreign112 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_3_generate"],
+[foreign113 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_4_generate"],
+[foreign114 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_5_generate"],
+[foreign115 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_6_generate"],
+[foreign116 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_7_generate"],
+[foreign117 || {}, "JavaScripts/ui-generate/common/WorldTips/WorldTips_generate"],
+[foreign118 || {}, "JavaScripts/ui-generate/module/AdsModule/AdsTipsPanel_generate"],
+[foreign119 || {}, "JavaScripts/ui-generate/module/AdsModule/UpPanel_generate"],
+[foreign120 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkItem_generate"],
+[foreign121 || {}, "JavaScripts/ui-generate/module/ArkModule/ArkPanel_generate"],
+[foreign122 || {}, "JavaScripts/ui-generate/module/ArkModule/GiftBagPanel_generate"],
+[foreign123 || {}, "JavaScripts/ui-generate/module/ArkModule/LimitTimePanel_generate"],
+[foreign124 || {}, "JavaScripts/ui-generate/module/BagModule/BagInfoPanel_generate"],
+[foreign125 || {}, "JavaScripts/ui-generate/module/BagModule/BagItem_generate"],
+[foreign126 || {}, "JavaScripts/ui-generate/module/BagModule/BagPanel_generate"],
+[foreign127 || {}, "JavaScripts/ui-generate/module/BagModule/BagTab_generate"],
+[foreign128 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordItem_generate"],
+[foreign129 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordPanel_generate"],
+[foreign130 || {}, "JavaScripts/ui-generate/module/FlyModule/SwordTipsPanel_generate"],
+[foreign131 || {}, "JavaScripts/ui-generate/module/GuideModule/GuideUI_generate"],
+[foreign132 || {}, "JavaScripts/ui-generate/module/HUDModule/HUDPanel_generate"],
+[foreign133 || {}, "JavaScripts/ui-generate/module/HUDModule/KillTipItem_generate"],
+[foreign134 || {}, "JavaScripts/ui-generate/module/HUDModule/TitleNamePanel_generate"],
+[foreign135 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelItem_generate"],
+[foreign136 || {}, "JavaScripts/ui-generate/module/LevelModule/LevelPanel_generate"],
+[foreign137 || {}, "JavaScripts/ui-generate/module/LevelModule/UpExpPanel_generate"],
+[foreign138 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryItem_generate"],
+[foreign139 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryPanel_generate"],
+[foreign140 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryResultItem_generate"],
+[foreign141 || {}, "JavaScripts/ui-generate/module/LotteryModule/LotteryResultPanel_generate"],
+[foreign142 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeopleItem_generate"],
+[foreign143 || {}, "JavaScripts/ui-generate/module/NewPeopleModule/NewPeoplePanel_generate"],
+[foreign144 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardItem_generate"],
+[foreign145 || {}, "JavaScripts/ui-generate/module/OnlineReward/OnlineRewardPanel_generate"],
+[foreign146 || {}, "JavaScripts/ui-generate/module/PlayerModule/PlayerLifebar_generate"],
+[foreign147 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItem_generate"],
+[foreign148 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulItemChild_generate"],
+[foreign149 || {}, "JavaScripts/ui-generate/module/RingSoulModule/RingSoulPanel_generate"],
+[foreign150 || {}, "JavaScripts/ui-generate/module/ShopModule/CostPanel_generate"],
+[foreign151 || {}, "JavaScripts/ui-generate/module/ShopModule/NPCHead_generate"],
+[foreign152 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopItem_generate"],
+[foreign153 || {}, "JavaScripts/ui-generate/module/ShopModule/ShopPanel_generate"],
+[foreign154 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInItem_generate"],
+[foreign155 || {}, "JavaScripts/ui-generate/module/SignInModule/SignInPanel_generate"],
+[foreign156 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/PartItem_generate"],
+[foreign157 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/SoulBonePanel_generate"],
+[foreign158 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/StarItem_generate"],
+[foreign159 || {}, "JavaScripts/ui-generate/module/SoulBoneModule/UpProbabilityPanel_generate"],
+[foreign160 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskItem_generate"],
+[foreign161 || {}, "JavaScripts/ui-generate/module/TaskModule/TaskPanel_generate"],
+[foreign162 || {}, "JavaScripts/ui-generate/module/TrampolineModule/ImpactRadiusWindow_generate"],
+[foreign163 || {}, "JavaScripts/ui-generate/module/TrampolineModule/JumpRecordUI_generate"],
+[foreign164 || {}, "JavaScripts/ui-generate/module/WorldRank/RankItem_generate"],
+[foreign165 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankItem_generate"],
+[foreign166 || {}, "JavaScripts/ui-generate/module/WorldRank/WorldRankPanel_generate"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

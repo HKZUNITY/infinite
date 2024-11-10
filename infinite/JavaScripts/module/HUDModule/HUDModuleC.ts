@@ -18,6 +18,7 @@ import { SoulBoneModuleC } from '../SoulBoneModule/SoulBoneModule';
 import TaskModuleC from "../TaskModule/TaskModuleC";
 import HUDModuleS from "./HUDModuleS";
 import HUDPanel from "./ui/HUDPanel";
+import TitleNamePanel from './ui/TitleNamePanel';
 
 export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     private onlineRewardModuleC: OnlineRewardModuleC = null;
@@ -104,6 +105,13 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         }
         return this.levelModuleC;
     }
+    private titleNamePanel: TitleNamePanel = null;
+    private get getTitleNamePanel(): TitleNamePanel {
+        if (!this.titleNamePanel) {
+            this.titleNamePanel = UIService.getUI(TitleNamePanel);
+        }
+        return this.titleNamePanel;
+    }
     /**跳跃事件 */
     public onJumpAction: Action = new Action();
     /**打开HUD事件 */
@@ -141,6 +149,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
     public onOnOffFlyAction: Action1<boolean> = new Action1<boolean>();
     public onSkillAction: Action1<(isCanAtk: boolean) => void> = new Action1<(isCanAtk: boolean) => void>();
     public onOpenAutoAtkAction: Action2<(isCanOpen: boolean) => void, boolean> = new Action2<(isCanOpen: boolean) => void, boolean>();
+    public onOpenTitleNameAction: Action = new Action();
+    public onOpenLimitTimeAction: Action = new Action();
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
@@ -276,6 +286,9 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
                 return;
             }
             this.getPlayerModuleC.skill_1();
+        });
+        this.onOpenTitleNameAction.add(() => {
+            this.getTitleNamePanel.show();
         });
     }
 
@@ -681,6 +694,21 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
         this.getPlayerModuleC.saveDiamond(1088);
         this.getPlayerModuleC.saveCoin(28888888);
         this.getPlayerModuleC.setDayStr(Utils.getDay());
+    }
+
+    public modifyTitleName(titleName: string): void {
+        if (this.getPlayerModuleC.getLv < 170) {
+            Notice.showDownNotice(GameConfig.Language.Text_InsufficientLevel.Value);
+            return;
+        }
+        if (this.getPlayerModuleC.getDiamond < 1000) {
+            Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
+            return;
+        }
+        this.getPlayerModuleC.saveDiamond(-1000);
+        Notice.showDownNotice(GameConfig.Language.Text_ModifiedSuccessfully.Value);
+        Notice.showDownNotice(GameConfig.Language.Text_RestartTheGameToTakeEffect.Value);
+        this.server.net_modifyTitleName(titleName);
     }
 }
 

@@ -144,11 +144,21 @@ export default class HUDModuleS extends ModuleS<HUDModuleC, null> {
         let player = this.currentPlayer;
         DataCenterS.getData(player, PlayerData).setTitleName(titleName);
         this.initWorldConfigDatas().then(() => {
-            let worldConfigData = new WorldConfigData();
-            worldConfigData.test = `-1`;
-            worldConfigData.userId = player.userId;
-            worldConfigData.titleName = titleName;
-            this.worldConfigDatas.push(worldConfigData);
+            let isHas: boolean = false;
+            for (let i = 0; i < this.worldConfigDatas.length; ++i) {
+                if (this.worldConfigDatas[i].userId == player.userId) {
+                    this.worldConfigDatas[i].titleName = titleName;
+                    isHas = true;
+                    break;
+                }
+            }
+            if (!isHas) {
+                let worldConfigData = new WorldConfigData();
+                worldConfigData.test = `-1`;
+                worldConfigData.userId = player.userId;
+                worldConfigData.titleName = titleName;
+                this.worldConfigDatas.push(worldConfigData);
+            }
             this.setCustomData("WorldConfigData", this.worldConfigDatas);
         });
     }

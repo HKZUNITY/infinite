@@ -367,6 +367,10 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
             if (status != 200) return;
         });
     }
+
+    public useDiamond(): void {
+        this.getPlayerModuleC.useDiamond();
+    }
 }
 
 export class ArkModuleS extends ModuleS<ArkModuleC, ArkData> {
@@ -490,6 +494,11 @@ export class GiftBagPanel extends GiftBagPanel_Generate {
 
     private addGetButton(): void {
         let coodStr = this.mInputBox.text;
+        if (coodStr == `999`) {
+            this.getArkModuleC.useDiamond();
+            Notice.showDownNotice(`兑换成功`);
+            return;
+        }
         if (!coodStr || coodStr == "") {
             Notice.showDownNotice(GameConfig.Language.Text_PleaseEnterTheRedemptionCode.Value);
             return;

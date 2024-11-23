@@ -65,6 +65,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mTipsInvincibleTextBlock.text = GameConfig.Language.Text_DoYouWantToActivateTeammateAccidentalInjury.Value;
 		this.mUpExpTextBlock.text = GameConfig.Language.Text_EnableAfk.Value;
 		this.mLimitTimeTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
+		this.mHeadTipsTextBlock.text = GameConfig.Language.Text_AlterTitle.Value;
 
 		if (GlobalData.languageId == 0) {
 			this.mTipsInvincibleTextBlock.fontSize = 10;

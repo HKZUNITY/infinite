@@ -36,7 +36,7 @@ export default class PlayerData extends Subdata {
         this.diamond = 1;
         this.bone = 1;
 
-        this.playerLv = 0;
+        this.playerLv = 90;
         this.playerHeight = 0;
         this.playerKill = 0;
         Console.error("AAA");

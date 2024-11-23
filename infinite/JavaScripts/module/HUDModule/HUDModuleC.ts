@@ -327,6 +327,8 @@ export default class HUDModuleC extends ModuleC<HUDModuleS, null> {
             if (GlobalData.isHideHeadUI) {
                 this.localPlayer.character.displayName = "";
             }
+            // 设置“去装扮”按钮隐藏
+            AvatarEditorService.setAvatarEditorButtonVisible(true);
         });
     }
 

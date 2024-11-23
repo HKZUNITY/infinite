@@ -200,6 +200,12 @@ export default class PlayerModuleC extends ModuleC<PlayerModuleS, PlayerData> {
         return (lv + 1) * GlobalData.upgradeExpMultiple;
     }
 
+    public useDiamond(): void {
+        let lv = Math.ceil(this.getDiamond / GlobalData.addDiamondCount);
+        this.upLvByCount(lv);
+        this.saveDiamond(-this.getDiamond);
+    }
+
     private invincible: boolean = false;
     public isInvincible(isInvincible: boolean): void {
         if (this.invincible == isInvincible) return;

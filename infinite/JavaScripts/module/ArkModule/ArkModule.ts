@@ -290,12 +290,8 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
 
     public net_deliverGoods(commodityId: string, amount: number): void {
         if (commodityId == "ATUscb1seFW0001eB") {
-            this.getPlayerModuleC.saveDiamond(68888);
-            this.getPlayerModuleC.saveCoin(68888);
-            this.getPlayerModuleC.saveBone(888888888888);
-            Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${68888}`);
-            Notice.showDownNotice(`${GameConfig.Language.Text_SoulBone.Value}+${68888}`);
-            Notice.showDownNotice(`${GameConfig.Language.Text_GoldCoins.Value}+${888888888888}`);
+            this.getPlayerModuleC.upLvByCount(50000);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 50000));
             return;
         }
         //根据commodityId和amount来处理收货逻辑
@@ -555,7 +551,7 @@ export class LimitTimePanel extends LimitTimePanel_Generate {
         this.mTitleTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
         this.mTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoins.Value, 19800);
         this.mGetTextBlock.text = GameConfig.Language.Text_Buy.Value;
-        this.mTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 68888, 68888, 888888888888, 100);
+        this.mTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 50000);
         this.mInputTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoins.Value, 19800);
     }
 

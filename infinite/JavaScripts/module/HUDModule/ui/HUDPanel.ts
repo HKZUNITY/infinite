@@ -224,6 +224,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.initRedPointTween_Ark();
 		this.initRedPointTween_NewPeople();
 		this.initRedPointTween_Lottery();
+		this.initRedPointTween_LimitTime();
 		this.initKillTipItems();
 		this.initDeadCountDown();
 		this.mPointImage.visibility = mw.SlateVisibility.Collapsed;
@@ -992,6 +993,41 @@ export default class HUDPanel extends HUDPanel_Generate {
 			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
 
 		this.redPointTween1_Lottery.start();
+	}
+	//#endregion
+
+	//#region LimitTime
+	private redPointTween1_LimitTime: mw.Tween<any> = null;
+	private redPointTween2_LimitTimev: mw.Tween<any> = null;
+
+	private initRedPointTween_LimitTime(): void {
+		this.redPointTween1_LimitTime = new mw.Tween({ value: 0.8 })
+			.to({ value: 1.2 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(0.8);
+			})
+			.onUpdate((v) => {
+				this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween2_LimitTimev.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween2_LimitTimev = new mw.Tween({ value: 1.2 })
+			.to({ value: 0.8 }, 0.2 * 1000)
+			.onStart(() => {
+				this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(1.2);
+			})
+			.onUpdate((v) => {
+				this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(v.value);
+			})
+			.onComplete(() => {
+				this.redPointTween1_LimitTime.start();
+			})
+			.easing(cubicBezier(0.25, 0.1, 0.25, 1));
+
+		this.redPointTween1_LimitTime.start();
 	}
 	//#endregion
 	//#endregion

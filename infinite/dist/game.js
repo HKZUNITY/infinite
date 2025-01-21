@@ -19475,9 +19475,9 @@ class BagModuleC extends ModuleC {
         this.initTrigger().then(() => {
         });
         this.updateLotteryData();
-        TimeUtil.delaySecond(3).then(() => {
-            Utils.setGraphicsLevel();
-        });
+        // TimeUtil.delaySecond(3).then(() => {
+        //     Utils.setGraphicsLevel();
+        // });
     }
     onUpdateAutoAtk(dt) {
         if (!this.isOpenAutoAtk)

@@ -1,7 +1,7 @@
 import { GeneralManager, } from '../Modified027Editor/ModifiedStaticAPI';
-declare global {
-    var UE: any;
-}
+// declare global {
+//     var UE: any;
+// }
 
 class ObjMeshCalss {
     public objMesh: mw.Model = null;
@@ -10,7 +10,7 @@ class ObjMeshCalss {
     public isCanAtk: boolean = true;
 }
 
-export class ObjImpulseC extends ModuleC<ObjImpulseS, null>{
+export class ObjImpulseC extends ModuleC<ObjImpulseS, null> {
     protected onStart(): void {
         InputUtil.onKeyDown(mw.Keys.One, () => {
             this.server.net_addImpulseToObj("153AD16B", 1000);
@@ -31,7 +31,7 @@ export class ObjImpulseC extends ModuleC<ObjImpulseS, null>{
     }
 }
 
-export class ObjImpulseS extends ModuleS<ObjImpulseC, null>{
+export class ObjImpulseS extends ModuleS<ObjImpulseC, null> {
     private objGuids: string[] = ["1869E986", "1519A30F", "2B23B7E6", "3191EB52"];
     private objMeshClassMap: Map<string, ObjMeshCalss> = new Map<string, ObjMeshCalss>();
     protected onStart(): void {
@@ -69,13 +69,13 @@ export class ObjImpulseS extends ModuleS<ObjImpulseC, null>{
         let playerLoc = player.character.worldTransform.position;
         let forceVector = new mw.Vector(objLocation.x - playerLoc.x, objLocation.y - playerLoc.y, 0).normalize();
 
-        const uForce = new UE.Vector();
-        uForce.X = forceVector.x * force;
-        uForce.Y = forceVector.y * force;
-        uForce.Z = forceVector.z * force;
+        // const uForce = new UE.Vector();
+        // uForce.X = forceVector.x * force;
+        // uForce.Y = forceVector.y * force;
+        // uForce.Z = forceVector.z * force;
 
         TimeUtil.delayExecute(() => {
-            objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
+            // objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
             SoundService.play3DSound(
                 "47430",
                 objLocation,

@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
  
 @UIBind('UI/module/HUDModule/HUDPanel.ui')
@@ -140,6 +140,13 @@ export default class HUDPanel_Generate extends UIScript {
 			this.mHomeButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/HomeCanvas/mHomeButton') as mw.Button
 		}
 		return this.mHomeButton_Internal
+	}
+	private mClothButton_Internal: mw.Button
+	public get mClothButton(): mw.Button {
+		if(!this.mClothButton_Internal&&this.uiWidgetBase) {
+			this.mClothButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ClothCanvas/mClothButton') as mw.Button
+		}
+		return this.mClothButton_Internal
 	}
 	private mMusicCanvas_Internal: mw.Canvas
 	public get mMusicCanvas(): mw.Canvas {
@@ -444,6 +451,12 @@ export default class HUDPanel_Generate extends UIScript {
 		this.mHomeButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
 		
 	
+		this.mClothButton.onClicked.add(()=>{
+			Event.dispatchToLocal("PlayButtonClick", "mClothButton");
+		});
+		this.mClothButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+		
+	
 		this.mCloseMusicBtn.onClicked.add(()=>{
 			Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
 		});
@@ -544,6 +557,9 @@ export default class HUDPanel_Generate extends UIScript {
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock") as any);
+		
+	
+		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ClothCanvas/ClothTextBlock") as any);
 		
 	
 		this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/InvincibleCanvas/InvincibleTextBlock") as any);

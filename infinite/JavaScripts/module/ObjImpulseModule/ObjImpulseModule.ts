@@ -1,9 +1,9 @@
 import { GeneralManager, } from '../../Modified027Editor/ModifiedStaticAPI';
 import Console from "../../Tools/Console";
 
-declare global {
-    var UE: any;
-}
+// declare global {
+//     var UE: any;
+// }
 
 class ObjMeshCalss {
     public objMesh: mw.Model = null;
@@ -64,13 +64,13 @@ export class ObjImpulseModuleS extends ModuleS<ObjImpulseModuleC, null> {
         let playerLoc = player.character.worldTransform.position;
         let forceVector = new mw.Vector(objLocation.x - playerLoc.x, objLocation.y - playerLoc.y, 0).normalize();
 
-        const uForce = new UE.Vector();
-        uForce.X = forceVector.x * force;
-        uForce.Y = forceVector.y * force;
-        uForce.Z = forceVector.z * force;
+        // const uForce = new UE.Vector();
+        // uForce.X = forceVector.x * force;
+        // uForce.Y = forceVector.y * force;
+        // uForce.Z = forceVector.z * force;
 
         TimeUtil.delayExecute(() => {
-            objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
+            // objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
             SoundService.play3DSound(
                 "47430",
                 objLocation,

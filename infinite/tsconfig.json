@@ -1,4 +1,4 @@
-{
+﻿{
 	"compilerOptions":
 	{
 		"target": "ES2021",
@@ -8,13 +8,14 @@
 		"module": "ES2022",
 		"sourceMap": true,
 		"typeRoots": [
-			"../../../../../../../WindowsNoEditor/MW/Content/Typing"
+			"../Typing"
 		],
 		"lib": [
 			"ES2021"
 		]
 	},
 	"include": [
-		"./**/*"
+		"./**/*",
+		"../common/**/*"
 	]
 }

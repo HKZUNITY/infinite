@@ -79,6 +79,24 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mOnlineRewardButton.pressedImageGuid = "193281";
 		this.mOnlineRewardButton.disableImageGuid = "193281";
 		this.bindMusicButton();
+
+		this.mClothButton.onClicked.add(async () => {
+			await AvatarEditorService.asyncOpenAvatarEditorModule();
+		});
+
+		mw.AvatarEditorService.avatarServiceDelegate.add(this.addAvatarServiceDelegate.bind(this));
+	}
+
+	private addAvatarServiceDelegate(eventName: string, ...params: unknown[]): void {
+		console.error(`eventName: ${eventName}`);
+		switch (eventName) {
+			case "AE_OnQuit":
+				this.show();
+				break;
+			case "AE_OnOpen":
+				this.hide();
+				break;
+		}
 	}
 
 	/**

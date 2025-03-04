@@ -2143,7 +2143,7 @@ var PrefabEvent;
     initEvent();
 })(PrefabEvent || (PrefabEvent = {}));
 
-var foreign76 = /*#__PURE__*/Object.freeze({
+var foreign83 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     get PrefabEvent () { return PrefabEvent; }
 });
@@ -2796,7 +2796,7 @@ var foreign88 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/Loading.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let Loading_Generate = class Loading_Generate extends UIScript {
     get mImage() {
@@ -2908,7 +2908,7 @@ var foreign6 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/NoticeView.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let NoticeView_Generate = class NoticeView_Generate extends UIScript {
     get con_top_notice() {
@@ -2975,7 +2975,7 @@ var foreign91 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/notice/TopNoticeItem.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let TopNoticeItem_Generate = class TopNoticeItem_Generate extends UIScript {
     get txt_context() {
@@ -4460,7 +4460,7 @@ __decorate([
     mw.Property({ replicated: true, onChanged: "client_OnChangeCharGuid" })
 ], WeaponData.prototype, "charGuid", void 0);
 
-var foreign81 = /*#__PURE__*/Object.freeze({
+var foreign80 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     AnimationInfo: AnimationInfo$1,
     NodeInfo: NodeInfo,
@@ -4536,7 +4536,7 @@ class SkillRectCheck {
 }
 SkillRectCheck.showRect = true;
 
-var foreign78 = /*#__PURE__*/Object.freeze({
+var foreign77 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     SkillRectCheck: SkillRectCheck
 });
@@ -4736,7 +4736,7 @@ class WeaponManager extends WeaponManagerSvr {
 WeaponManager._Instance = null;
 WeaponManager.GetInstance();
 
-var foreign82 = /*#__PURE__*/Object.freeze({
+var foreign81 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponManager: WeaponManager
 });
@@ -4882,7 +4882,7 @@ class ColdWeapon {
     }
 }
 
-var foreign77 = /*#__PURE__*/Object.freeze({
+var foreign76 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     ColdWeapon: ColdWeapon
 });
@@ -5037,7 +5037,7 @@ var foreign86 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagInfoPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
     get mIconImage() {
@@ -5163,7 +5163,7 @@ var foreign95 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let BagItem_Generate = class BagItem_Generate extends UIScript {
     get mBgImage() {
@@ -5255,7 +5255,7 @@ var foreign96 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let BagPanel_Generate = class BagPanel_Generate extends UIScript {
     get mProgressBar() {
@@ -5351,7 +5351,7 @@ var foreign97 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/BagModule/BagTab.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let BagTab_Generate = class BagTab_Generate extends UIScript {
     get mButton() {
@@ -5417,7 +5417,7 @@ var foreign98 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/AdsModule/AdsTipsPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
     get mTitleTxt() {
@@ -6002,7 +6002,7 @@ var foreign87 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScript {
     get mCanvas() {
@@ -6068,7 +6068,7 @@ var foreign103 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/HUDPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
     get mVirtualJoystickPanel() {
@@ -6184,6 +6184,12 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             this.mHomeButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/HomeCanvas/mHomeButton');
         }
         return this.mHomeButton_Internal;
+    }
+    get mClothButton() {
+        if (!this.mClothButton_Internal && this.uiWidgetBase) {
+            this.mClothButton_Internal = this.uiWidgetBase.findChildByPath('RootCanvas/RightTopCanvas/ClothCanvas/mClothButton');
+        }
+        return this.mClothButton_Internal;
     }
     get mMusicCanvas() {
         if (!this.mMusicCanvas_Internal && this.uiWidgetBase) {
@@ -6430,6 +6436,10 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
             Event.dispatchToLocal("PlayButtonClick", "mHomeButton");
         });
         this.mHomeButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
+        this.mClothButton.onClicked.add(() => {
+            Event.dispatchToLocal("PlayButtonClick", "mClothButton");
+        });
+        this.mClothButton.touchMethod = (mw.ButtonTouchMethod.PreciseTap);
         this.mCloseMusicBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
         });
@@ -6477,6 +6487,7 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/RankCanvas/RankTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/AdsCanvas/AdsTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/HomeCanvas/HomeTextBlock"));
+        this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/RightTopCanvas/ClothCanvas/ClothTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mRoleCanvas_G/InvincibleCanvas/InvincibleTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTextBlock"));
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/mDeadCanvas/DeadTipsTextBlock"));
@@ -6514,7 +6525,7 @@ var foreign100 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/HUDModule/KillTipItem.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let KillTipItem_Generate = class KillTipItem_Generate extends UIScript {
     get mBgImage() {
@@ -6691,6 +6702,21 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.mOnlineRewardButton.pressedImageGuid = "193281";
         this.mOnlineRewardButton.disableImageGuid = "193281";
         this.bindMusicButton();
+        this.mClothButton.onClicked.add(async () => {
+            await AvatarEditorService.asyncOpenAvatarEditorModule();
+        });
+        mw.AvatarEditorService.avatarServiceDelegate.add(this.addAvatarServiceDelegate.bind(this));
+    }
+    addAvatarServiceDelegate(eventName, ...params) {
+        console.error(`eventName: ${eventName}`);
+        switch (eventName) {
+            case "AE_OnQuit":
+                this.show();
+                break;
+            case "AE_OnOpen":
+                this.hide();
+                break;
+        }
     }
     /**
      * 初始化UI
@@ -8353,7 +8379,7 @@ var foreign70 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
     get mDailyTimeTextBlock() {
@@ -9328,7 +9354,7 @@ var foreign42 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/GuideModule/GuideUI.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let GuideUI_Generate = class GuideUI_Generate extends UIScript {
     get image1() {
@@ -11694,7 +11720,7 @@ var foreign54 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/PlayerModule/PlayerLifebar.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let PlayerLifebar_Generate = class PlayerLifebar_Generate extends UIScript {
     get mLevelText() {
@@ -12331,7 +12357,7 @@ var foreign3 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/EnemyLifebar.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let EnemyLifebar_Generate = class EnemyLifebar_Generate extends UIScript {
     get mLifebarProgressBar() {
@@ -13200,6 +13226,9 @@ var foreign8 = /*#__PURE__*/Object.freeze({
     default: MyClearDayNight$1
 });
 
+// declare global {
+//     var UE: any;
+// }
 let ObjMeshCalss$1 = class ObjMeshCalss {
     constructor() {
         this.objMesh = null;
@@ -13263,13 +13292,13 @@ class ObjImpulseS extends ModuleS {
         let objRotation = objMesh.worldTransform.rotation;
         objMesh.physicsEnabled = true;
         let playerLoc = player.character.worldTransform.position;
-        let forceVector = new mw.Vector(objLocation.x - playerLoc.x, objLocation.y - playerLoc.y, 0).normalize();
-        const uForce = new UE.Vector();
-        uForce.X = forceVector.x * force;
-        uForce.Y = forceVector.y * force;
-        uForce.Z = forceVector.z * force;
+        new mw.Vector(objLocation.x - playerLoc.x, objLocation.y - playerLoc.y, 0).normalize();
+        // const uForce = new UE.Vector();
+        // uForce.X = forceVector.x * force;
+        // uForce.Y = forceVector.y * force;
+        // uForce.Z = forceVector.z * force;
         TimeUtil.delayExecute(() => {
-            objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
+            // objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
             SoundService.play3DSound("47430", objLocation, 1, 1);
             GeneralManager.rpcPlayEffectAtLocation("174248", objLocation, 1, mw.Rotation.zero, mw.Vector.one.multiply(5));
         }, 1);
@@ -13293,7 +13322,7 @@ var foreign13 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/common/TestPanel.ui
- * TIME: 2024.08.03-14.28.53
+ * TIME: 2025.03.04-21.31.07
  */
 let TestPanel_Generate = class TestPanel_Generate extends UIScript {
     get mImage() {
@@ -13472,7 +13501,7 @@ var foreign47 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
     get mTitleTextBlock() {
@@ -14415,6 +14444,9 @@ var foreign41 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
+// declare global {
+//     var UE: any;
+// }
 class ObjMeshCalss {
     constructor() {
         this.objMesh = null;
@@ -14469,13 +14501,13 @@ class ObjImpulseModuleS extends ModuleS {
         let objRotation = objMesh.worldTransform.rotation;
         objMesh.physicsEnabled = true;
         let playerLoc = player.character.worldTransform.position;
-        let forceVector = new mw.Vector(objLocation.x - playerLoc.x, objLocation.y - playerLoc.y, 0).normalize();
-        const uForce = new UE.Vector();
-        uForce.X = forceVector.x * force;
-        uForce.Y = forceVector.y * force;
-        uForce.Z = forceVector.z * force;
+        new mw.Vector(objLocation.x - playerLoc.x, objLocation.y - playerLoc.y, 0).normalize();
+        // const uForce = new UE.Vector();
+        // uForce.X = forceVector.x * force;
+        // uForce.Y = forceVector.y * force;
+        // uForce.Z = forceVector.z * force;
         TimeUtil.delayExecute(() => {
-            objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
+            // objMesh["privateActor"].GetStaticMeshComponent().AddImpulse(uForce, "None", true);
             SoundService.play3DSound("47430", objLocation, 1, 1);
             GeneralManager.rpcPlayEffectAtLocation("174248", objLocation, 1, mw.Rotation.zero, mw.Vector.one.multiply(5));
         }, 1);
@@ -14836,7 +14868,7 @@ var foreign85 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/NPCHead.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let NPCHead_Generate = class NPCHead_Generate extends UIScript {
     get mFreeCanvas() {
@@ -14936,7 +14968,7 @@ var foreign106 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/CostPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let CostPanel_Generate = class CostPanel_Generate extends UIScript {
     get mCostTextBlock() {
@@ -15056,7 +15088,7 @@ var foreign68 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopPanel.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
     get mScrollBox() {
@@ -17160,7 +17192,7 @@ __decorate([
     RemoteFunction(mw.Client, mw.Multicast)
 ], WeaponClient.prototype, "client_PlayEffect", null);
 
-var foreign80 = /*#__PURE__*/Object.freeze({
+var foreign79 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponClient: WeaponClient
 });
@@ -17288,7 +17320,7 @@ __decorate([
     RemoteFunction(mw.Server)
 ], WeaponServer.prototype, "server_setChar", null);
 
-var foreign83 = /*#__PURE__*/Object.freeze({
+var foreign82 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     WeaponServer: WeaponServer
 });
@@ -17316,7 +17348,7 @@ Weapon = __decorate([
 ], Weapon);
 var Weapon$1 = Weapon;
 
-var foreign79 = /*#__PURE__*/Object.freeze({
+var foreign78 = /*#__PURE__*/Object.freeze({
     __proto__: null,
     default: Weapon$1
 });
@@ -17326,7 +17358,7 @@ var foreign79 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/OnlineReward/OnlineRewardItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript {
     get mButton() {
@@ -17445,7 +17477,7 @@ var foreign102 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/ShopModule/ShopItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let ShopItem_Generate = class ShopItem_Generate extends UIScript {
     get mCanvas() {
@@ -17536,7 +17568,7 @@ var foreign107 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TaskModule/TaskItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let TaskItem_Generate = class TaskItem_Generate extends UIScript {
     get mNameTextBlock() {
@@ -17636,7 +17668,7 @@ var foreign109 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/ImpactRadiusWindow.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let ImpactRadiusWindow_Generate = class ImpactRadiusWindow_Generate extends UIScript {
     get img() {
@@ -17691,7 +17723,7 @@ var foreign111 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/TrampolineModule/JumpRecordUI.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let JumpRecordUI_Generate = class JumpRecordUI_Generate extends UIScript {
     get mRecordMaxHeightCanvas() {
@@ -17766,7 +17798,7 @@ var foreign112 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/RankItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let RankItem_Generate = class RankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -17850,7 +17882,7 @@ var foreign113 = /*#__PURE__*/Object.freeze({
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/WorldRank/WorldRankItem.ui
- * TIME: 2024.08.03-14.28.54
+ * TIME: 2025.03.04-21.31.07
  */
 let WorldRankItem_Generate = class WorldRankItem_Generate extends UIScript {
     get mRankTextBlock() {
@@ -17991,14 +18023,14 @@ const MWModuleMap = {
      'E8535D714F5BFEC20EF595B175FA24BD': foreign73,
      '1884D48A4EBB982234611D9DD0E1A853': foreign74,
      '0568B98E45100A88DECA3E894117DA12': foreign75,
-     'B557F99E4E5DD1260BBC268B1579FDF6': foreign76,
-     '4A4C950D496FFCD7471A22924E8F3AE4': foreign77,
-     '586A140B4F5148B73C6201AF3EDA5701': foreign78,
-     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign79,
-     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign80,
-     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign81,
-     'E76AEC2E4B56116E911A1B86036607DC': foreign82,
-     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign83,
+     '4A4C950D496FFCD7471A22924E8F3AE4': foreign76,
+     '586A140B4F5148B73C6201AF3EDA5701': foreign77,
+     '34E4EBC14D9FE3396EC1F2B4C3CC2EB9': foreign78,
+     '3B68D24B4484B5C4E8BAF5BA8E4C8BF1': foreign79,
+     'E5186CAB4EA67BC6C83D8DABCCECD527': foreign80,
+     'E76AEC2E4B56116E911A1B86036607DC': foreign81,
+     '767E3E464F5CFA8DE7DBE19AE45B874D': foreign82,
+     'B557F99E4E5DD1260BBC268B1579FDF6': foreign83,
      'E6EE5F054BE51F828EFA2E8E2B75BC22': foreign84,
      'B6D27EAC444C85D1D925F986D613D5B3': foreign85,
      'EFFEC0C44629992590058E96821DF5A4': foreign86,
@@ -18107,14 +18139,14 @@ const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/common/Ads"],
 [foreign73 || {}, "JavaScripts/module/TaskModule/ui/TaskPanel"],
 [foreign74 || {}, "JavaScripts/module/TrampolineModule/Trampoline"],
 [foreign75 || {}, "JavaScripts/module/TrampolineModule/ui/P_Game_Trampoline"],
-[foreign76 || {}, "JavaScripts/Prefabs/PrefabEvent"],
-[foreign77 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
-[foreign78 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
-[foreign79 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
-[foreign80 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
-[foreign81 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
-[foreign82 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
-[foreign83 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
+[foreign76 || {}, "JavaScripts/Prefabs/冷兵器/Script/ColdWeapon"],
+[foreign77 || {}, "JavaScripts/Prefabs/冷兵器/Script/SkillRectCheck"],
+[foreign78 || {}, "JavaScripts/Prefabs/冷兵器/Script/Weapon"],
+[foreign79 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponClient"],
+[foreign80 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponDef"],
+[foreign81 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponManager"],
+[foreign82 || {}, "JavaScripts/Prefabs/冷兵器/Script/WeaponServer"],
+[foreign83 || {}, "JavaScripts/Prefabs/PrefabEvent"],
 [foreign84 || {}, "JavaScripts/Tools/Console"],
 [foreign85 || {}, "JavaScripts/Tools/InputManager"],
 [foreign86 || {}, "JavaScripts/Tools/MapEx"],

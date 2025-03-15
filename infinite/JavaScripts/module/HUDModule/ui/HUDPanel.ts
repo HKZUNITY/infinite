@@ -66,6 +66,7 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mUpExpTextBlock.text = GameConfig.Language.Text_EnableAfk.Value;
 		this.mLimitTimeTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
 		this.mHeadTipsTextBlock.text = GameConfig.Language.Text_AlterTitle.Value;
+		this.mClothTextBlock.text = GameConfig.Language.Text_Cloth.Value;
 
 		if (GlobalData.languageId == 0) {
 			this.mTipsInvincibleTextBlock.fontSize = 10;
@@ -201,8 +202,24 @@ export default class HUDPanel extends HUDPanel_Generate {
 		this.mLimitTimeButton.onClicked.add(() => {
 			this.getHudModuleC.onOpenLimitTimeAction.call();
 		});
+		this.mClothButton.onClicked.add(() => {
+			mw.AvatarEditorService.asyncOpenAvatarEditorModule();
+		});
 		this.initSkill_1();
 		this.initAutoAtk();
+		mw.AvatarEditorService.avatarServiceDelegate.add(this.addAvatarServiceDelegate.bind(this));
+	}
+
+	private addAvatarServiceDelegate(eventName: string, ...params: unknown[]): void {
+		console.error(`eventName: ${eventName}`);
+		switch (eventName) {
+			case "AE_OnQuit":
+				this.show();
+				break;
+			case "AE_OnOpen":
+				this.hide();
+				break;
+		}
 	}
 
 	public updateInvincibleCanvasState(visibility: boolean): void {

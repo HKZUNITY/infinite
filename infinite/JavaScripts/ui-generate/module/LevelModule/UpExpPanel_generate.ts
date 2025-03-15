@@ -3,7 +3,7 @@
  * WARNING: DO NOT MODIFY THIS FILE,MAY CAUSE CODE LOST.
  * AUTHOR: 爱玩游戏的小胖子
  * UI: UI/module/LevelModule/UpExpPanel.ui
- * TIME: 2024.11.10-13.05.23
+ * TIME: 2025.03.15-11.43.47
  */
  
 @UIBind('UI/module/LevelModule/UpExpPanel.ui')

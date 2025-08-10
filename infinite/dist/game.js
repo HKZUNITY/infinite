@@ -10064,9 +10064,9 @@ class PlayerData extends Subdata {
     }
     initDefaultData() {
         this.exp = 0;
-        this.coin = 2888888;
-        this.diamond = 1;
-        this.bone = 1;
+        this.coin = 28888888;
+        this.diamond = 1e4;
+        this.bone = 1e4;
         this.playerLv = 90;
         this.playerHeight = 0;
         this.playerKill = 0;
@@ -10087,11 +10087,11 @@ class PlayerData extends Subdata {
         this.checkLvUp();
     }
     checkLvUp() {
-        let lvUpExp = this.getLvUpExp();
-        if (this.exp >= lvUpExp) {
+        while (true) {
+            const lvUpExp = this.getLvUpExp();
+            if (this.exp < lvUpExp) break;
             this.exp -= lvUpExp;
             this.playerLv++;
-            this.checkLvUp();
         }
     }
     getLvUpExp() {
@@ -22398,6 +22398,11 @@ class ArkModuleC extends ModuleC {
         this.getArkPanel.updateUserIdTextBlock(str);
     }
     limitTime() {
+        if (mw.SystemUtil.isPIE) {
+            this.getPlayerModuleC.upLvByCount(5e4);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 5e4));
+            return;
+        }
         mw.PurchaseService.placeOrder("ATUscb1seFW0001eB", 1, ((status, msg) => {
             mw.PurchaseService.getArkBalance();
             if (status != 200) return;
@@ -22649,6 +22654,9 @@ class HUDModuleS extends ModuleS {
     }
     async initWorldConfigDatas() {
         this.worldConfigDatas = await this.getCustomdata("WorldConfigData");
+        if (!this.worldConfigDatas) {
+            this.worldConfigDatas = [];
+        }
     }
     async syncWorldConfigData(player) {
         await this.initWorldConfigDatas();

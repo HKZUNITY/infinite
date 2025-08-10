@@ -358,6 +358,11 @@ export class ArkModuleC extends ModuleC<ArkModuleS, ArkData> {
     }
 
     public limitTime(): void {
+        if (mw.SystemUtil.isPIE) {
+            this.getPlayerModuleC.upLvByCount(50000);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 50000));
+            return;
+        }
         mw.PurchaseService.placeOrder("ATUscb1seFW0001eB", 1, (status, msg) => {
             mw.PurchaseService.getArkBalance();//刷新代币数量
             if (status != 200) return;

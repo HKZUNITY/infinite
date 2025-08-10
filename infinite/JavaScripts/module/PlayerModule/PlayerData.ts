@@ -32,9 +32,9 @@ export default class PlayerData extends Subdata {
 
     protected initDefaultData(): void {
         this.exp = 0;
-        this.coin = 2888888;
-        this.diamond = 1;
-        this.bone = 1;
+        this.coin = 28888888;
+        this.diamond = 10000;
+        this.bone = 10000;
 
         this.playerLv = 90;
         this.playerHeight = 0;
@@ -60,11 +60,11 @@ export default class PlayerData extends Subdata {
     }
 
     private checkLvUp(): void {
-        let lvUpExp = this.getLvUpExp();
-        if (this.exp >= lvUpExp) {
+        while (true) {
+            const lvUpExp = this.getLvUpExp();
+            if (this.exp < lvUpExp) break;
             this.exp -= lvUpExp;
             this.playerLv++;
-            this.checkLvUp();
         }
     }
 

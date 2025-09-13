@@ -9035,7 +9035,7 @@ class BagInfoPanel extends BagInfoPanel_Generate$1 {
     }
     initUI() {
         this.mUseTextBlock.text = "使用";
-        this.mAdsButton.text = `免费获得`;
+        this.mAdsButton.text = `免费指引获取`;
     }
     bindButton() {
         this.mUseButton.onClicked.add(this.addUseButton.bind(this));

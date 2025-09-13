@@ -959,7 +959,7 @@ export class BagInfoPanel extends BagInfoPanel_Generate {
 
     private initUI(): void {
         this.mUseTextBlock.text = "使用";
-        this.mAdsButton.text = `免费获得`;
+        this.mAdsButton.text = `免费指引获取`;
     }
 
     private bindButton(): void {

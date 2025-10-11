@@ -60,11 +60,11 @@ export default class PlayerData extends Subdata {
     }
 
     private checkLvUp(): void {
-        let lvUpExp = this.getLvUpExp();
-        if (this.exp >= lvUpExp) {
+        while (true) {
+            const lvUpExp = this.getLvUpExp();
+            if (this.exp < lvUpExp) break;
             this.exp -= lvUpExp;
             this.playerLv++;
-            this.checkLvUp();
         }
     }
 

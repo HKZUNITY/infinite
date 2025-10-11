@@ -110,6 +110,9 @@ export default class HUDModuleS extends ModuleS<HUDModuleC, null> {
     private worldConfigDatas: WorldConfigData[] = [];
     private async initWorldConfigDatas(): Promise<void> {
         this.worldConfigDatas = (await this.getCustomdata("WorldConfigData")) as WorldConfigData[];
+        if (!this.worldConfigDatas) {
+            this.worldConfigDatas = [];
+        }
     }
 
     private async syncWorldConfigData(player: mw.Player): Promise<void> {

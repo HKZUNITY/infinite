@@ -10087,11 +10087,11 @@ class PlayerData extends Subdata {
         this.checkLvUp();
     }
     checkLvUp() {
-        let lvUpExp = this.getLvUpExp();
-        if (this.exp >= lvUpExp) {
+        while (true) {
+            const lvUpExp = this.getLvUpExp();
+            if (this.exp < lvUpExp) break;
             this.exp -= lvUpExp;
             this.playerLv++;
-            this.checkLvUp();
         }
     }
     getLvUpExp() {
@@ -22398,6 +22398,11 @@ class ArkModuleC extends ModuleC {
         this.getArkPanel.updateUserIdTextBlock(str);
     }
     limitTime() {
+        if (mw.SystemUtil.isPIE) {
+            this.getPlayerModuleC.upLvByCount(5e4);
+            Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 5e4));
+            return;
+        }
         mw.PurchaseService.placeOrder("ATUscb1seFW0001eB", 1, ((status, msg) => {
             mw.PurchaseService.getArkBalance();
             if (status != 200) return;

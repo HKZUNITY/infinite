@@ -3,6 +3,7 @@
 
 declare namespace mw {
     /**
+     * @author qiming.jiang
      * @groups 玩法/材质
      * @description Model插槽，执行材质相关操作
      * @description -------------------------
@@ -120,6 +121,7 @@ declare namespace mw {
         getCustomMaterial(): mw.MaterialInstance;
     }
     /**
+     * @author baoqiang.han
      * @groups 玩法/物理
      * @description 物理模拟与材质设置
      * @description -------------------------
@@ -195,6 +197,7 @@ declare namespace mw {
         getMaterialInstance(): Array<mw.MaterialInstance>;
         /**
          * @description 给开启物理模拟的模型添加一个冲量力
+         * @author hao.huang
          * @groups 玩法/物理
          * @effect 调用端生效
          * @param impulse usage:设置冲量力大小和方向
@@ -211,6 +214,7 @@ declare namespace mw {
         addImpulse(impulse: mw.Vector, velChange?: boolean): void;
         /**
          * @description 给开启物理模拟的模型添加一个力
+         * @author hao.huang
          * @groups 玩法/物理
          * @effect 调用端生效
          * @param force usage:设置力大小和方向   <br> default: null
@@ -227,6 +231,7 @@ declare namespace mw {
         addForce(force: mw.Vector, velChange?: boolean): void;
         /**
          * @description 给开启物理模拟的模型添加一个扭力
+         * @author hao.huang
          * @groups 玩法/物理
          * @effect 调用端生效
          * @param torque usage:设置扭力大小和方向  <br> default: null
@@ -241,6 +246,7 @@ declare namespace mw {
         addTorque(torque: mw.Vector, velChange?: boolean): void;
         /**
          * @description 给开启物理模拟的模型添加一个角冲量
+         * @author hao.huang
          * @groups 玩法/物理
          * @effect 调用端生效
          * @param impulse usage:设置角冲量大小和方向
@@ -332,6 +338,7 @@ declare namespace mw {
         get collisionGroup(): string;
         /**
          * @description 设置碰撞组
+         * @author hao.huang
          * @groups 玩法/物理
          * @effect 调用端生效
          * @param value usage:碰撞组
@@ -798,12 +805,14 @@ declare namespace mw {
          */
         getCollision(): mw.PropertyStatus | mw.CollisionStatus;
         /**
+         * @author qiming.jiang
          * @description 获取所有材质插槽
          * @effect 调用端生效
          * @returns 返回材质插槽数组
          */
         getAllMaterialSlots(): Array<MaterialSlot>;
         /**
+         * @author qiming.jiang
          * @description 获取指定索引的材质插槽
          * @effect 调用端生效
          * @param index 材质插槽索引 type: Integer usage: 索引 range: 无
@@ -811,12 +820,14 @@ declare namespace mw {
          */
         getMaterialSlot(index: number): MaterialSlot;
         /**
+         * @author xinlei.nie
          * @description 设置模型碰撞是否影响动态寻路的导航数据
          * @effect 调用端生效，服务端自动同步
          * @param bInStatus usage:是否影响导航数据
          */
         set canAffectNavigation(bInStatus: boolean);
         /**
+         * @author xinlei.nie
          * @description 获取模型碰撞是否影响动态寻路的导航数据
          * @returns 是否影响导航数据
          */
@@ -840,6 +851,7 @@ declare namespace mw {
     // @ts-ignore
     import * as UE from "ue";
     /**
+     * @author guang.dong
      * @groups 角色系统
      * @networkStatus usage:双端
      * @description PlayerState基类
@@ -901,150 +913,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
-     * @description 碰撞检测通道
-     * @groups 玩法/物理
-     */
-    enum ObjectTypeQuery {
-        /** 检测通道1 */
-        ObjectTypeQuery1 = 0,
-        /** 检测通道2 */
-        ObjectTypeQuery2 = 1,
-        /** 检测通道3 */
-        ObjectTypeQuery3 = 2,
-        /** 检测通道4 */
-        ObjectTypeQuery4 = 3,
-        /** 检测通道5 */
-        ObjectTypeQuery5 = 4,
-        /** 检测通道6 */
-        ObjectTypeQuery6 = 5,
-        /** 检测通道7 */
-        ObjectTypeQuery7 = 6,
-        /** 检测通道8 */
-        ObjectTypeQuery8 = 7,
-        /** 检测通道9 */
-        ObjectTypeQuery9 = 8,
-        /** 检测通道10 */
-        ObjectTypeQuery10 = 9,
-        /** 检测通道11 */
-        ObjectTypeQuery11 = 10,
-        /** 检测通道12 */
-        ObjectTypeQuery12 = 11,
-        /** 检测通道13 */
-        ObjectTypeQuery13 = 12,
-        /** 检测通道14 */
-        ObjectTypeQuery14 = 13,
-        /** 检测通道15 */
-        ObjectTypeQuery15 = 14,
-        /** 检测通道16 */
-        ObjectTypeQuery16 = 15,
-        /** 检测通道17 */
-        ObjectTypeQuery17 = 16,
-        /** 检测通道18 */
-        ObjectTypeQuery18 = 17,
-        /** 检测通道19 */
-        ObjectTypeQuery19 = 18,
-        /** 检测通道20 */
-        ObjectTypeQuery20 = 19,
-        /** 检测通道21 */
-        ObjectTypeQuery21 = 20,
-        /** 检测通道22 */
-        ObjectTypeQuery22 = 21,
-        /** 检测通道23 */
-        ObjectTypeQuery23 = 22,
-        /** 检测通道24 */
-        ObjectTypeQuery24 = 23,
-        /** 检测通道25 */
-        ObjectTypeQuery25 = 24,
-        /** 检测通道26 */
-        ObjectTypeQuery26 = 25,
-        /** 检测通道27 */
-        ObjectTypeQuery27 = 26,
-        /** 检测通道28 */
-        ObjectTypeQuery28 = 27,
-        /** 检测通道29 */
-        ObjectTypeQuery29 = 28,
-        /** 检测通道30 */
-        ObjectTypeQuery30 = 29,
-        /** 检测通道31 */
-        ObjectTypeQuery31 = 30,
-        /** 检测通道32 */
-        ObjectTypeQuery32 = 31
-    }
-    /**
-     * @groups 工具/射线检测
-     * @description 命中结果，包含关于轨迹的一次命中的信息，例如撞击点和该点的表面法线。
-     * @networkStatus usage:双端
-     * @example
-     * 使用示例:创建一个名为"HitResultExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，并在场景中创建一个模型放置在200, 10, 0的位置，运行游戏，你将在日志中看到射线检测到的HitResult信息数组。代码如下：
-     * ```
-     * const result = QueryUtil.lineTrace(new Vector(100), new Vector(1000), true, true);
-     * @Component
-     * export default class HitResultExample extends Script {
-     *
-     *     protected onStart(): void {
-     *         if (this.isRunningClient()) {
-     *             // 开始位置
-     *             let startLocation = new Vector(100, 10, 100);
-     *             // 结束位置
-     *             let endLocation = new Vector(1000, 10, 100);
-     *             // 返回的HitResult数组
-     *             const result = QueryUtil.lineTrace(startLocation, endLocation, true, true);
-     *             result.forEach(element => {
-     *                 // 通过HitResult访问返回值gameObject的名字
-     *                 console.log(`命中GameObject的名字: ${element.gameObject.name}`);
-     *             });
-     *         }
-     *     }
-     * }
-     * ```
-     */
-    class HitResult {
-        /**
-         * @description 是否击中了物体，如果发生了碰撞则为 true, 否则为 false
-         */
-        blockingHit: boolean;
-        /**
-         * @description 这是沿追踪方向的命中时间，范围介于[0.0到1.0]之间。如未命中，将返回1.0。
-         */
-        time: number;
-        /**
-         * @description 距离，traceStart到location的距离
-         */
-        distance: number;
-        /**
-         * @description 世界空间中的位置，如果发生碰撞，移动的形状将最终抵靠受影响的对象。等于线路测试的冲击点。示例：对于球体跟踪测试，这是当球体接触其他对象时，球体中心所在的点。对于扫掠移动（但不是查询），这可能不等于形状的最终位置，因为命中会稍微向后拉，以防止精度问题与另一个曲面重叠。
-         */
-        position: mw.Vector;
-        /**
-         * @description 轨迹形状（长方体、球体、光线等）与受影响对象的实际接触在世界空间中的位置。示例：对于球体跟踪测试，这是球体表面接触其他对象的点。
-         */
-        impactPoint: mw.Vector;
-        /**
-         * @description 世界空间中被扫过的物体的法线。等于线路测试的ImpactNormal。这是为胶囊和球体计算的，否则将与ImpactNormal相同。示例：对于球体轨迹测试，这是指向撞击点处球体中心的归一化矢量。
-         */
-        normal: mw.Vector;
-        /**
-         * @description 世界空间中被扫掠击中的对象（如果有）的法线。例如，如果球体撞击平面，这是一个从平面指向的规范化向量。在与曲面的角或边碰撞的情况下，通常选择“最相反”的法线（与查询方向相反）。
-         */
-        impactNormal: mw.Vector;
-        /**
-         * @description 碰撞检测的起点位置
-         */
-        traceStart: mw.Vector;
-        /**
-         * @description 碰撞检测的终点位置
-         */
-        traceEnd: mw.Vector;
-        /**
-         * @description 碰撞的骨骼名称
-         */
-        boneName: string;
-        /**
-         * @description 命中的GameObject
-         */
-        gameObject: mw.GameObject;
-    }
-    /**
+     * @author baoqiang.han
      * @groups 玩法
      * @description 振动开关
      * @param enable usage:-true:开启震动，-false:关闭震动
@@ -1052,6 +921,7 @@ declare namespace mw {
      */
     function vibrate(enable: boolean): void;
     /**
+     * @author hongbing.deng
      * @description 录屏
      * @groups 工具
      * @effect 只在客户端调用生效
@@ -1063,23 +933,26 @@ declare namespace mw {
      */
     function startRecord(screenX: number, screenY: number, screenW: number, screenH: number): string;
     /**
+     * @author hongbing.deng
      * @description 停止录屏
      * @groups 工具
      * @effect 只在客户端调用生效
      */
     function stopRecord(): void;
     /**
+     * @author xinlei.nie
      * @groups 角色系统/角色
      * @description 获取强制更新移动时检测到的碰撞结果
      * @effect 调用端生效
      * @param character usage: 需要获取碰撞结果的角色 <br> default: null 必填参数   <br> type: Character
      * @returns 强制移动检测到的碰撞数据
      */
-    function getForcedMovementHits(character: mw.Character): Array<HitResult>;
+    function getForcedMovementHits(character: mw.Character): Array<mw.HitResult>;
 }
 
 declare namespace mw {
     /**
+     * @author jiamin.guo
      * @groups 动画
      * @description 动画
      * @description -------------------------
@@ -1794,6 +1667,7 @@ declare namespace mw {
 declare namespace mw {
     /**
      * @hidden
+     * @author yuchen.ren
      * @groups 动画
      * @description 姿态
      * @networkStatus usage:双端
@@ -1801,6 +1675,7 @@ declare namespace mw {
     abstract class StanceBase {
     }
     /**
+     * @author huipeng.jia
      * @groups 动画
      * @description 支持修改的姿态参数
      */
@@ -1933,6 +1808,7 @@ declare namespace mw {
         Climb_Climb_Idle_MultiplierY = "ClimbAnimData.BS_Climb.MultiplierY"
     }
     /**
+     * @author yuchen.ren
      * @groups 动画
      * @description 基础姿态
      * @description -------------------------
@@ -2185,6 +2061,7 @@ declare namespace mw {
         stop(): boolean;
     }
     /**
+    * @author yuchen.ren
     * @groups 动画
     * @description 二级姿态
     * @description -------------------------
@@ -2398,53 +2275,63 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 外观加载完成委托
      * @precautions 当角色外观加载完成时执行绑定函数
      */
     type OnDescriptionComplete = (character: Character) => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 外观主体（前发，后发，头，上衣，下衣，手套，鞋）加载失败委托
      * @precautions 当角色外观加载失败时执行绑定函数
      */
     type OnLoadDescriptionFailed = (Character: Character) => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 外观加载细节变化委托
      */
     type OnDescriptionChange = (operationCode: number, index: number, value: unknown) => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 设置编辑数据完成的回调
      */
     type SetAppearanceDataCallback = (APIName: string) => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 返回String的回调
      */
     type StringCallback = (str: string) => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 返回Bool的回调
      */
     type BoolCallback = (value: boolean) => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 角色编辑器数据加载完成后的回调
      */
     type LoadAppearanceDataAllCompletedCallback = () => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 空的回调函数类型
      */
     type EmptyCallback = () => void;
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 角色身上GUID切换成功回调
      */
     type onAppearanceDataChanged = (GUID: string) => void;
     /**
+     * @author chenghao.song, guang.deng
      * @groups 角色系统/角色
      * @description 角色
      * @description --------------------------------------
@@ -2478,20 +2365,20 @@ declare namespace mw {
      */
     class Character extends mw.Pawn {
         /**
-         * @description 角色开启强制位移后，移动中碰撞检测结果的代理
+         * @description 移动中碰撞检测结果的代理
          * @groups 角色系统/角色
          */
-        onSweepCollision: mw.MulticastDelegate<(velocities: Array<mw.Vector>, hitActors: Array<mw.GameObject>, impactPoints: Array<mw.Vector>, impactNormals: Array<mw.Vector>) => void>;
+        onSweepCollision: mw.MulticastDelegate<(velocity: mw.Vector, hitResult: mw.HitResult) => void>;
         /**
-         * @description 角色开启强制位移后，输出移动中碰撞检测结果中新增的接触物体。
+         * @description 输出移动中碰撞检测结果中新增的接触物体。
          * @groups 角色系统/角色
          */
-        onTouch: mw.MulticastDelegate<(velocities: Array<mw.Vector>, hitActors: Array<mw.GameObject>, impactPoints: Array<mw.Vector>, impactNormals: Array<mw.Vector>) => void>;
+        onTouch: mw.MulticastDelegate<(velocity: mw.Vector, hitResult: mw.HitResult) => void>;
         /**
-         * @description 角色开启强制位移后，输出移动中碰撞检测结果中已停止的接触物体。
+         * @description 输出移动中碰撞检测结果中已停止的接触物体。
          * @groups 角色系统/角色
          */
-        onTouchEnd: mw.MulticastDelegate<(velocities: Array<mw.Vector>, hitActors: Array<mw.GameObject>, impactPoints: Array<mw.Vector>, impactNormals: Array<mw.Vector>) => void>;
+        onTouchEnd: mw.MulticastDelegate<(velocity: mw.Vector, hitResult: mw.HitResult) => void>;
         /**
          * @groups 角色系统/角色
          * @description 角色外观配置。返回值为 CharacterDescription 类。调用 description 变量可以修改角色的外观，可更改角色的外观参数详见 CharacterDescription 类。
@@ -6498,6 +6385,7 @@ declare namespace mw {
          */
         static set nameDisplayDistance(range: number);
         /**
+         * @author guang.deng
          * @groups 角色系统/角色
          * @description 外观加载细节变化委托
          * @effect 调用端生效
@@ -7871,6 +7759,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author chenghao.song
      * @groups 角色系统
      * @description 角色状态
      */
@@ -7883,6 +7772,7 @@ declare namespace mw {
         Fly = 2
     }
     /**
+     * @author chenghao.song
      * @groups 角色系统
      * @description 移动控制模式
      */
@@ -7899,6 +7789,7 @@ declare namespace mw {
         FreeMode = 4
     }
     /**
+     * @author chenghao.song
      * @groups 角色系统
      * @description 运动时面朝方向
      */
@@ -7911,6 +7802,7 @@ declare namespace mw {
         ControllerDirection = 2
     }
     /**
+     * @author chenghao.song
      * @groups 角色系统
      * @description 运动时依据的正方向
      * @description 不同的模式会决定运动时依据的实际轴向修改方式
@@ -7934,6 +7826,7 @@ declare namespace mw {
         ControllerDirection = 2
     }
     /**
+     * @author yuchen.ren
      * @groups 角色系统
      * @description V1角色部位
      */
@@ -7946,6 +7839,7 @@ declare namespace mw {
         Trunk = 2
     }
     /**
+     * @author guang.deng
      * @groups 角色系统
      * @description 人形角色插槽类型
      */
@@ -8014,6 +7908,7 @@ declare namespace mw {
         FirstpersonCamera = 30
     }
     /**
+     * @author yunhao.liao
      * @groups 角色系统
      * @description 非人形角色插槽类型
      */
@@ -8124,6 +8019,7 @@ declare namespace mw {
         RightTentacle3 = 51
     }
     /**
+     * @author yuchen.ren
      * @groups 角色系统
      * @description 基础姿态风格
      */
@@ -8134,6 +8030,7 @@ declare namespace mw {
         Cartoon = "30274"
     }
     /**
+     * @author jun.zhang
      * @groups 角色系统
      * @description 角色基础脸型
      */
@@ -8150,6 +8047,7 @@ declare namespace mw {
         Chad = 4
     }
     /**
+     * @author guang.deng
      * @groups 角色系统
      * @description 表情类型
      */
@@ -8176,6 +8074,7 @@ declare namespace mw {
         Doubt = 9
     }
     /**
+    * @author yuchen.ren
     * @groups 角色系统
     * @description 角色体型
     */
@@ -8212,6 +8111,7 @@ declare namespace mw {
         CartoonyFemale = 8
     }
     /**
+     * @author yuchen.ren
      * @groups 角色系统
      * @description 角色体型
      */
@@ -8248,6 +8148,7 @@ declare namespace mw {
         CartoonyFemale = 8
     }
     /**
+     * @author guang.deng
      * @groups 角色系统
      * @description V1角色体型
      */
@@ -8260,6 +8161,7 @@ declare namespace mw {
         HumanoidV1Eggy = 2
     }
     /**
+     * @author zhiqiang.tan
      * @groups 角色系统
      * @description 碰撞体形状类型
      */
@@ -8274,6 +8176,7 @@ declare namespace mw {
         Sphere = 3
     }
     /**
+     * @author guang.deng
      * @groups 角色系统
      * @description 形象类型
      * @example
@@ -8290,6 +8193,7 @@ declare namespace mw {
         FourFootStandard = 2
     }
     /**
+     * @author guang.deng
      * @groups 角色系统
      * @description 形象类型
      * @example
@@ -8306,6 +8210,7 @@ declare namespace mw {
         FourFootStandard = 2
     }
     /**
+     * @author jiamin.guo
      * @groups 动画
      * @description 姿态混合模式
      */
@@ -8318,6 +8223,7 @@ declare namespace mw {
         WholeBody = 2
     }
     /**
+     * @author jiamin.guo
      * @groups 动画
      * @description 动画插槽
      */
@@ -8334,6 +8240,7 @@ declare namespace mw {
         FirstPerson = 4
     }
     /**
+     * @author jiamin.guio
      * @groups 动画
      * @description 动画模式
      */
@@ -8344,6 +8251,7 @@ declare namespace mw {
         Custom = 1
     }
     /**
+     * @author liaoyun.hao
      * @groups 角色系统
      * @description 角色状态
      */
@@ -8376,6 +8284,7 @@ declare namespace mw {
         Climbing = 12
     }
     /**
+     * @author guang.deng
      * @groups 角色系统
      * @description 动画曲线
      */
@@ -8410,6 +8319,7 @@ declare namespace mw {
         ExpInOut = 13
     }
     /**
+     * @author liaoyun.hao
      * @groups 角色系统
      * @description 动态挂件枚举
      */
@@ -8435,6 +8345,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author guang.deng
      * @groups 角色系统/角色
      * @description 服装逻辑对象
      * @networkStatus usage:双端
@@ -8448,6 +8359,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author guang.deng
      * @groups 基础类型
      * @description 移动状态切换委托
      */
@@ -8459,6 +8371,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author guang.deng
      * @groups 角色系统/角色
      * @description Pawn作为玩家角色和非对象玩家角色的基类，是一个可以通过玩家控制器或者逻辑脚本控制的游戏对象。
      * @networkStatus usage:双端
@@ -8686,6 +8599,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author yunhao.liao
      * @groups 角色系统/角色
      * @description 角色挂件插槽
      * @description 除了可以随意的更换人物衣服，脸，身体，还可以在给人物增加更多装饰物。
@@ -8847,6 +8761,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author jun.zhang
      * @groups 角色系统
      * @description 外观属性的 Morph 和 Bone 换装项的枚举
      */
@@ -9044,6 +8959,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author guang.deng
      * @groups 角色系统/角色
      * @description 人形外观配置
      * @description -------------------------------------------------------------------------
@@ -9949,6 +9865,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author yunhao.liao
      * @groups 玩法/摄像机
      * @description 摄像机
      * @description -------------------------
@@ -10013,6 +9930,38 @@ declare namespace mw {
          * @networkStatus usage:客户端
          */
         static get currentCamera(): Camera;
+        /**
+         * @groups 玩法/摄像机
+         * @description 玩家摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 专用于玩家视角的摄像机
+         * @networkStatus usage:客户端
+         */
+        static get playerCamera(): Camera;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置玩家摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 设置专用于玩家视角的摄像机
+         * @networkStatus usage:客户端
+         */
+        static set playerCamera(camera: Camera);
+        /**
+         * @groups 玩法/摄像机
+         * @description 场景摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 专用于场景观察的摄像机
+         * @networkStatus usage:客户端
+         */
+        static get sceneCamera(): Camera;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置场景摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 设置专用于场景观察的摄像机
+         * @networkStatus usage:客户端
+         */
+        static set sceneCamera(camera: Camera);
         /**
          * @groups 玩法/摄像机
          * @description 弹簧臂
@@ -10758,6 +10707,140 @@ declare namespace mw {
         set downAngleLimit(value: number);
         /**
          * @groups 玩法/摄像机
+         * @description 获取摄像机向左角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向左旋转时的最大角度使用范围在0-180之间。
+         * @example
+         * 使用示例: 创建一个名为"Example_Camera_LeftAngleLimit"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，设置摄像机角度限制，左转最大角度为45，右转最大角度为45。你将在场景中看到摄像机旋转受限的效果。代码如下：
+         * ```
+         * @Component
+         * export default class Example_Camera_LeftAngleLimit extends Script {
+         *     // 当脚本被实例后，会在第一帧更新前调用此函数
+         *     protected onStart(): void {
+         *         // 下列代码仅在客户端执行
+         *         if(SystemUtil.isClient()) {
+         *             // 获取当前客户端的玩家(自己)
+         *             let myPlayer = Player.localPlayer;
+         *             // 获取玩家角色
+         *             let myCharacter = myPlayer.character;
+         *             // 获取当前摄像机
+         *             let myCamera = Camera.currentCamera;
+         *             // 开启摄像机位置延迟
+         *             myCamera.positionLagEnabled = true;
+         *             // 位置延迟恢复速度1
+         *             myCamera.positionLagSpeed = 1;
+         *             // 最大位置延迟距离200
+         *             myCamera.maxLagDistance = 200;
+         *             // 开启摄像机旋转延迟
+         *             myCamera.rotationLagEnabled = true;
+         *             // 旋转延迟恢复速度2
+         *             myCamera.rotationLagSpeed = 2;
+         *             // 设置摄像机角度限制
+         *             myCamera.upAngleLimit = 30;
+         *             myCamera.downAngleLimit = 10;
+         *             myCamera.leftAngleLimit = 45;
+         *             myCamera.rightAngleLimit = 45;
+         *             // 添加一个按键方法：按下键盘"1"，固定摄像机高度后跳跃
+         *             InputUtil.onKeyDown(Keys.One, () => {
+         *                 myCamera.fixedElevation = true;
+         *                 myCharacter.jump();
+         *                 setTimeout(() => {
+         *                     myCamera.fixedElevation = false;
+         *                 }, 1000);
+         *             });
+         *             // 添加一个按键方法：按住键盘"2"，增大摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Two, () => {
+         *                 myCamera.fov += 1;
+         *             });
+         *             // 添加一个按键方法：按住键盘"3"，减少摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Three, () => {
+         *                 myCamera.fov -= 1;
+         *             });
+         *         }
+         *     }
+         * }
+         * ```
+         * @networkStatus usage:客户端
+         */
+        get leftAngleLimit(): number;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置摄像机向左角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向左旋转时的最大角度使用范围在0-180之间。
+         * @param value 角度限制
+         * @networkStatus usage:客户端
+         */
+        set leftAngleLimit(value: number);
+        /**
+         * @groups 玩法/摄像机
+         * @description 获取摄像机向右角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向右旋转时的最大角度使用范围在0-180之间。
+         * @example
+         * 使用示例: 创建一个名为"Example_Camera_RightAngleLimit"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，设置摄像机角度限制，左转最大角度为45，右转最大角度为45。你将在场景中看到摄像机旋转受限的效果。代码如下：
+         * ```
+         * @Component
+         * export default class Example_Camera_RightAngleLimit extends Script {
+         *     // 当脚本被实例后，会在第一帧更新前调用此函数
+         *     protected onStart(): void {
+         *         // 下列代码仅在客户端执行
+         *         if(SystemUtil.isClient()) {
+         *             // 获取当前客户端的玩家(自己)
+         *             let myPlayer = Player.localPlayer;
+         *             // 获取玩家角色
+         *             let myCharacter = myPlayer.character;
+         *             // 获取当前摄像机
+         *             let myCamera = Camera.currentCamera;
+         *             // 开启摄像机位置延迟
+         *             myCamera.positionLagEnabled = true;
+         *             // 位置延迟恢复速度1
+         *             myCamera.positionLagSpeed = 1;
+         *             // 最大位置延迟距离200
+         *             myCamera.maxLagDistance = 200;
+         *             // 开启摄像机旋转延迟
+         *             myCamera.rotationLagEnabled = true;
+         *             // 旋转延迟恢复速度2
+         *             myCamera.rotationLagSpeed = 2;
+         *             // 设置摄像机角度限制
+         *             myCamera.upAngleLimit = 30;
+         *             myCamera.downAngleLimit = 10;
+         *             myCamera.leftAngleLimit = 45;
+         *             myCamera.rightAngleLimit = 45;
+         *             // 添加一个按键方法：按下键盘"1"，固定摄像机高度后跳跃
+         *             InputUtil.onKeyDown(Keys.One, () => {
+         *                 myCamera.fixedElevation = true;
+         *                 myCharacter.jump();
+         *                 setTimeout(() => {
+         *                     myCamera.fixedElevation = false;
+         *                 }, 1000);
+         *             });
+         *             // 添加一个按键方法：按住键盘"2"，增大摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Two, () => {
+         *                 myCamera.fov += 1;
+         *             });
+         *             // 添加一个按键方法：按住键盘"3"，减少摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Three, () => {
+         *                 myCamera.fov -= 1;
+         *             });
+         *         }
+         *     }
+         * }
+         * ```
+         * @networkStatus usage:客户端
+         */
+        get rightAngleLimit(): number;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置摄像机向右角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向右旋转时的最大角度使用范围在0-180之间。
+         * @param value 角度限制
+         * @networkStatus usage:客户端
+         */
+        set rightAngleLimit(value: number);
+        /**
+         * @groups 玩法/摄像机
          * @description 固定摄像机高度
          * @effect 只在客户端调用生效
          * @precautions 无论挂点如何移动摄像机位置的z轴值不会被改变。
@@ -11278,6 +11361,7 @@ declare namespace mw {
         lookAt(target: mw.GameObject | mw.Vector): void;
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法/摄像机
      * @description 弹簧臂
      * @networkStatus usage:客户端
@@ -11755,6 +11839,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+    * @author yunhao.liao
     * @groups 玩法
     * @description 摄像机位置模式
     */
@@ -11765,6 +11850,7 @@ declare namespace mw {
         PositionFollow = 1
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法
      * @description 摄像机旋转模式
      */
@@ -11777,6 +11863,7 @@ declare namespace mw {
         RotationControl = 2
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法
      * @description 摄像机镜头模式
      */
@@ -11787,6 +11874,7 @@ declare namespace mw {
         Orthographic = 1
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法
      * @description 摄像机模式
      */
@@ -11805,6 +11893,7 @@ declare namespace mw {
         FPSShootingAngle = 5
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法
      * @description 切换摄像机时运用的混合函数
      */
@@ -11821,6 +11910,7 @@ declare namespace mw {
         EaseInOut = 4
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法
      * @description 定义如何开始(从零开始，或者从随机值开始)
      */
@@ -11831,6 +11921,7 @@ declare namespace mw {
         Zero = 1
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法
      * @description 振荡器波形
      */
@@ -11841,6 +11932,7 @@ declare namespace mw {
         PerlinNoise = 1
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法/摄像机
      * @description 横纵比约束
      */
@@ -11853,6 +11945,7 @@ declare namespace mw {
         MajorAxisFOV = 2
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法/摄像机
      * @description 抖动数据
      */
@@ -11924,6 +12017,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author xiangkun.sun
      * @groups 玩法/其他
      * @description 材质实例类
      * @networkStatus usage:双端
@@ -12035,12 +12129,14 @@ declare namespace mw {
          */
         getAllTextureParameterName(): string[];
         /**
+         * @author qiming.jiang
          * @description 获取材质所有属性名称
          * @effect 调用端生效
          * @returns 返回属性名称列表
          */
         getPropertyNames(): Array<string>;
         /**
+         * @author qiming.jiang
          * @description 获取材质指定名称属性
          * @effect 调用端生效
          * @param propertyName usage:属性名称 range: 无
@@ -12048,6 +12144,7 @@ declare namespace mw {
          */
         getProperty(propertyName: string): any;
         /**
+         * @author qiming.jiang
          * @description 设置材质属性
          * @effect 调用端生效
          * @param propertyName usage:属性名称 range: 无
@@ -12059,6 +12156,156 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
+     * @description 碰撞检测通道
+     * @groups 玩法/物理
+     */
+    enum ObjectTypeQuery {
+        /** 检测通道1 */
+        ObjectTypeQuery1 = 0,
+        /** 检测通道2 */
+        ObjectTypeQuery2 = 1,
+        /** 检测通道3 */
+        ObjectTypeQuery3 = 2,
+        /** 检测通道4 */
+        ObjectTypeQuery4 = 3,
+        /** 检测通道5 */
+        ObjectTypeQuery5 = 4,
+        /** 检测通道6 */
+        ObjectTypeQuery6 = 5,
+        /** 检测通道7 */
+        ObjectTypeQuery7 = 6,
+        /** 检测通道8 */
+        ObjectTypeQuery8 = 7,
+        /** 检测通道9 */
+        ObjectTypeQuery9 = 8,
+        /** 检测通道10 */
+        ObjectTypeQuery10 = 9,
+        /** 检测通道11 */
+        ObjectTypeQuery11 = 10,
+        /** 检测通道12 */
+        ObjectTypeQuery12 = 11,
+        /** 检测通道13 */
+        ObjectTypeQuery13 = 12,
+        /** 检测通道14 */
+        ObjectTypeQuery14 = 13,
+        /** 检测通道15 */
+        ObjectTypeQuery15 = 14,
+        /** 检测通道16 */
+        ObjectTypeQuery16 = 15,
+        /** 检测通道17 */
+        ObjectTypeQuery17 = 16,
+        /** 检测通道18 */
+        ObjectTypeQuery18 = 17,
+        /** 检测通道19 */
+        ObjectTypeQuery19 = 18,
+        /** 检测通道20 */
+        ObjectTypeQuery20 = 19,
+        /** 检测通道21 */
+        ObjectTypeQuery21 = 20,
+        /** 检测通道22 */
+        ObjectTypeQuery22 = 21,
+        /** 检测通道23 */
+        ObjectTypeQuery23 = 22,
+        /** 检测通道24 */
+        ObjectTypeQuery24 = 23,
+        /** 检测通道25 */
+        ObjectTypeQuery25 = 24,
+        /** 检测通道26 */
+        ObjectTypeQuery26 = 25,
+        /** 检测通道27 */
+        ObjectTypeQuery27 = 26,
+        /** 检测通道28 */
+        ObjectTypeQuery28 = 27,
+        /** 检测通道29 */
+        ObjectTypeQuery29 = 28,
+        /** 检测通道30 */
+        ObjectTypeQuery30 = 29,
+        /** 检测通道31 */
+        ObjectTypeQuery31 = 30,
+        /** 检测通道32 */
+        ObjectTypeQuery32 = 31
+    }
+    /**
+     * @author xiangkun.sun
+     * @groups 工具/射线检测
+     * @description 命中结果，包含关于轨迹的一次命中的信息，例如撞击点和该点的表面法线。
+     * @networkStatus usage:双端
+     * @example
+     * 使用示例:创建一个名为"HitResultExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，并在场景中创建一个模型放置在200, 10, 0的位置，运行游戏，你将在日志中看到射线检测到的HitResult信息数组。代码如下：
+     * ```
+     * const result = QueryUtil.lineTrace(new Vector(100), new Vector(1000), true, true);
+     * @Component
+     * export default class HitResultExample extends Script {
+     *
+     *     protected onStart(): void {
+     *         if (this.isRunningClient()) {
+     *             // 开始位置
+     *             let startLocation = new Vector(100, 10, 100);
+     *             // 结束位置
+     *             let endLocation = new Vector(1000, 10, 100);
+     *             // 返回的HitResult数组
+     *             const result = QueryUtil.lineTrace(startLocation, endLocation, true, true);
+     *             result.forEach(element => {
+     *                 // 通过HitResult访问返回值gameObject的名字
+     *                 console.log(`命中GameObject的名字: ${element.gameObject.name}`);
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class HitResult {
+        /**
+         * @description 是否击中了物体，如果发生了碰撞则为 true, 否则为 false
+         */
+        blockingHit: boolean;
+        /**
+         * @description 这是沿追踪方向的命中时间，范围介于[0.0到1.0]之间。如未命中，将返回1.0。
+         */
+        time: number;
+        /**
+         * @description 距离，traceStart到location的距离
+         */
+        distance: number;
+        /**
+         * @description 世界空间中的位置，如果发生碰撞，移动的形状将最终抵靠受影响的对象。等于线路测试的冲击点。示例：对于球体跟踪测试，这是当球体接触其他对象时，球体中心所在的点。对于扫掠移动（但不是查询），这可能不等于形状的最终位置，因为命中会稍微向后拉，以防止精度问题与另一个曲面重叠。
+         */
+        position: mw.Vector;
+        /**
+         * @description 轨迹形状（长方体、球体、光线等）与受影响对象的实际接触在世界空间中的位置。示例：对于球体跟踪测试，这是球体表面接触其他对象的点。
+         */
+        impactPoint: mw.Vector;
+        /**
+         * @description 世界空间中被扫过的物体的法线。等于线路测试的ImpactNormal。这是为胶囊和球体计算的，否则将与ImpactNormal相同。示例：对于球体轨迹测试，这是指向撞击点处球体中心的归一化矢量。
+         */
+        normal: mw.Vector;
+        /**
+         * @description 世界空间中被扫掠击中的对象（如果有）的法线。例如，如果球体撞击平面，这是一个从平面指向的规范化向量。在与曲面的角或边碰撞的情况下，通常选择"最相反"的法线（与查询方向相反）。
+         */
+        impactNormal: mw.Vector;
+        /**
+         * @description 碰撞检测的起点位置
+         */
+        traceStart: mw.Vector;
+        /**
+         * @description 碰撞检测的终点位置
+         */
+        traceEnd: mw.Vector;
+        /**
+         * @description 碰撞的骨骼名称
+         */
+        boneName: string;
+        /**
+         * @description 命中的GameObject
+         */
+        gameObject: mw.GameObject;
+    }
+}
+
+declare namespace mw {
+    /**
+     * @author huipeng.jia
      * @description 四轮载具车轮位置
      * @groups 玩法
      */
@@ -12069,6 +12316,7 @@ declare namespace mw {
         Rear = 1
     }
     /**
+     * @author huipeng.jia
      * @description 四轮载具驱动模式
      * @groups 玩法
      */
@@ -12081,6 +12329,7 @@ declare namespace mw {
         RearDrive = 2
     }
     /**
+     * @author huipeng.jia
      * @description 四轮载具车轮属性
      * @groups 玩法
      */
@@ -12093,6 +12342,7 @@ declare namespace mw {
         wheelModel: string;
     };
     /**
+     * @author huipeng.jia
      * @description 四轮载具挡位属性
      * @groups 玩法
      */
@@ -12107,6 +12357,7 @@ declare namespace mw {
         gearUpRatio: number;
     };
     /**
+     * @author huipeng.jia
      * @groups 玩法/载具
      * @description 四轮载具
      * @description 四轮载具是指模拟四个车轮的交通工具，例如汽车、卡车等。它们被设计成能够在游戏中自由移动、加速和转向，给玩家带来真实的驾驶体验。
@@ -12690,6 +12941,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @groups 玩法/其他
      * @description 禁行区
      * @description 用于控制角色是否可以进出此区域。
@@ -12726,6 +12978,7 @@ declare namespace mw {
      */
     class BlockingVolume extends mw.GameObject {
         /**
+         * @author baoqiang.han
          * @description 为目标添加通过该区域的权限
          * @groups 玩法/其他
          * @effect 调用端自动广播
@@ -12755,6 +13008,7 @@ declare namespace mw {
          */
         addPassableTarget(target: mw.GameObject): void;
         /**
+         * @author baoqiang.han
          * @description 移除目标通过该区域的权限
          * @groups 玩法/其他
          * @effect 调用端自动广播
@@ -12784,6 +13038,7 @@ declare namespace mw {
          */
         removePassableTarget(target: mw.GameObject): void;
         /**
+         * @author baoqiang.han
          * @description 获得目标通过该区域的权限
          * @groups 玩法/其他
          * @effect 调用端生效
@@ -12804,6 +13059,7 @@ declare namespace mw {
          */
         getTargetPassable(target: mw.GameObject): boolean;
         /**
+         * @author baoqiang.han
          * @description 重置禁行区
          * @groups 玩法/其他
          * @effect 调用端自动广播
@@ -12830,6 +13086,7 @@ declare namespace mw {
          */
         clear(): void;
         /**
+         * @author baoqiang.han
          * @description 开放禁行区
          * @groups 玩法/其他
          * @effect 调用端自动广播
@@ -12860,6 +13117,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @groups 场景/特效
      * @description 特效
      * @description 通常用于游戏场景中的效果表现，如火焰，水流，武器拖尾等，当编辑器细节面板勾选自动启用时，运行游戏会自动播放特效。
@@ -13063,6 +13321,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author yunhao.liao
      * @description 环境雾预设枚举
      * @groups 场景/灯光
      */
@@ -13079,6 +13338,7 @@ declare namespace mw {
         DesertFog = 4
     }
     /**
+     * @author yunhao.liao
      * @groups 场景/灯光
      * @description 环境雾
      * @description ----------------------------------
@@ -13466,6 +13726,7 @@ declare namespace mw {
     /**
      * @hidden
      * @description Gizmo
+     * @author  hongbing.deng
      * @groups 基础类型/其他
      * @instance
      * @networkStatus usage:双端
@@ -14151,6 +14412,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author hao.huang
      * @description IK锚点类型
      * @groups 玩法/其他
      */
@@ -14175,6 +14437,7 @@ declare namespace mw {
         Pelvis = 8
     }
     /**
+     * @author hao.huang
      * @groups 玩法/其他
      * @description IK锚点
      * @networkStatus usage:双端
@@ -14282,10 +14545,54 @@ declare namespace mw {
 }
 
 declare namespace mw {
+    /**
+     * @author zhiqiang.tan
+     * @description 卡丁车载具
+     * @groups 玩法/载具
+     * @networkStatus usage: 双端
+     * @precautions 注意事项
+     * 1. 卡丁车需要设置有效的owner才能进行物理模拟和控制
+     * 2. 卡丁车的物理属性可以通过get/set方法动态调整
+     * @example
+     * 使用示例: 创建并控制卡丁车
+     * ```
+     * // 创建卡丁车实例
+     * const kart = await GameObject.asyncSpawn<Kart>("Kart", {
+     *     replicates: true,
+     *     transform: new Transform(new Vector(0, 0, 100), new Rotation(0, 0, 0), new Vector(1))
+     * });
+     * ```
+     */
+    class Kart extends mw.GameObject {
+        /**
+         * @description 销毁
+         * @groups 玩法/载具
+         * @effect 调用端生效
+         */
+        protected onDestroy(): void;
+        /**
+         * @description 设置卡丁车驾驶员
+         * @groups 玩法/载具
+         * @effect 单端生效
+         * @param inOwner usage: 要设置的驾驶员 default: undefined
+         */
+        set owner(inOwner: mw.Player);
+        /**
+         * @description 获取卡丁车驾驶员
+         * @groups 玩法/载具
+         * @effect 双端生效
+         * @returns 当前驾驶员
+         */
+        get owner(): mw.Player;
+    }
+}
+
+declare namespace mw {
 }
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @description 特效发射取向
      * @groups 场景/特效
      */
@@ -14296,6 +14603,7 @@ declare namespace mw {
         FacingCamera = 4
     }
     /**
+     * @author baoqiang.han
      * @description 特效发射类型
      * @groups 场景/特效
      */
@@ -14306,6 +14614,7 @@ declare namespace mw {
         SurfaceOnly = 1
     }
     /**
+     * @author baoqiang.han
      * @description 特效形状枚举
      * @groups 场景/特效
      */
@@ -14322,6 +14631,7 @@ declare namespace mw {
         Disc = 5
     }
     /**
+     * @author baoqiang.han
      * @description 序列帧布局
      * @groups 场景/特效
      */
@@ -14338,6 +14648,7 @@ declare namespace mw {
         X8 = 4
     }
     /**
+     * @author baoqiang.han
      * @description 序列帧播放模式
      * @groups 场景/特效
      */
@@ -14348,6 +14659,7 @@ declare namespace mw {
         Pingpong = 1
     }
     /**
+     * @author baoqiang.han
      * @description 发射内外朝向
      * @groups 场景/特效
      */
@@ -14362,6 +14674,7 @@ declare namespace mw {
         InAndOut = 3
     }
     /**
+     * @author baoqiang.han
      * @description 特效标量值曲线节点
      * @networkStatus usage:客户端
      * @groups 场景/特效
@@ -14384,6 +14697,7 @@ declare namespace mw {
         constructor(inTimeKey: number, inValue: number, inTolerance?: number);
     }
     /**
+     * @author baoqiang.han
      * @description 特效三维向量值曲线节点
      * @networkStatus usage:客户端
      * @groups 场景/特效
@@ -14406,6 +14720,7 @@ declare namespace mw {
         constructor(inTimeKey: number, inValue: mw.Vector, inTolerance?: mw.Vector);
     }
     /**
+     * @author baoqiang.han
      * @description 特效二维向量值曲线节点
      * @networkStatus usage:客户端
      * @groups 场景/特效
@@ -14428,6 +14743,7 @@ declare namespace mw {
         constructor(inTimeKey: number, inValue: mw.Vector2, inTolerance?: mw.Vector2);
     }
     /**
+     * @author baoqiang.han
      * @description 特效颜色值曲线节点
      * @networkStatus usage:客户端
      * @groups 场景/特效
@@ -14449,6 +14765,7 @@ declare namespace mw {
         constructor(inTimeKey: number, inValue: mw.LinearColor);
     }
     /**
+     * @author baoqiang.han
      * @groups 场景/特效
      * @description 粒子特效
      * @description 通常用于游戏场景中的效果表现，目前开放部分粒子效果，当编辑器细节面板勾选自动启用时，运行游戏会自动播放特效。
@@ -14835,6 +15152,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @description 后处理预设枚举
      * @groups 场景/灯光
      */
@@ -14903,6 +15221,7 @@ declare namespace mw {
         Yellowing = 30
     }
     /**
+     * @author baoqiang.han
      * @groups 场景/灯光
      * @description 后处理对象属性配置
      * @networkStatus usage:双端
@@ -14935,6 +15254,7 @@ declare namespace mw {
         lutTextureID: number;
     }
     /**
+     * @author baoqiang.han
      * @groups 场景/灯光
      * @description 后处理
      * @description ----------------------------------
@@ -15215,6 +15535,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @description 天空盒预设枚举
      * @groups 场景/灯光
      */
@@ -15237,6 +15558,7 @@ declare namespace mw {
         NightLowPoly = 7
     }
     /**
+     * @author baoqiang.han
      * @description 天空盒背景的切换方式枚举
      * @groups 场景/灯光
      */
@@ -15246,6 +15568,7 @@ declare namespace mw {
         Gradient = 0
     }
     /**
+     * @author cong.xu
      * @groups 场景/灯光
      * @description 天空盒云片层
      * @description ----------------------------------
@@ -15294,6 +15617,7 @@ declare namespace mw {
         FlipNoise: number;
     }
     /**
+     * @author cong.xu
      * @groups 场景/灯光
      * @description 天空盒星星片层
      * @description ----------------------------------
@@ -15346,6 +15670,7 @@ declare namespace mw {
         FlickerRatio: number;
     }
     /**
+     * @author baoqiang.han
      * @groups 场景/灯光
      * @description 天空盒
      * @description ----------------------------------
@@ -16003,6 +16328,7 @@ declare namespace mw {
 declare namespace mw {
     /**
      * @groups 场景/音效
+     * @author baoqiang.han
      * @description 音效衰减形状
      * @groups 玩法
      */
@@ -16018,6 +16344,7 @@ declare namespace mw {
     }
     /**
      * @groups 场景/音效
+     * @author baoqiang.han
      * @description 音效播放状态
      * @groups 玩法
      */
@@ -16031,6 +16358,7 @@ declare namespace mw {
     }
     /**
      * @groups 场景/音效
+     * @author baoqiang.han
      * @description 音效衰减函数模型
      * @groups 玩法
      */
@@ -16045,6 +16373,7 @@ declare namespace mw {
         LogReverse = 3
     }
     /**
+     * @author baoqiang.han
      * @groups 场景/音效
      * @description 音效
      * @networkStatus usage:客户端
@@ -16295,6 +16624,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author yunhao.liao
      * @description 样条线
      * @groups 玩法/其他
      */
@@ -16311,6 +16641,7 @@ declare namespace mw {
         CurveCustomTangent = 4
     }
     /**
+     * @author yunhao.liao
      * @groups 玩法/其他
      * @description 样条线
      * @networkStatus usage:双端
@@ -16454,6 +16785,7 @@ declare namespace mw {
          */
         clearLinePoints(): void;
         /**
+         * @author yunhao.liao
          * @description 绘制点
          * @groups 玩法
          * @effect 只在客户端调用生效
@@ -16480,6 +16812,7 @@ declare namespace mw {
          */
         static drawPoint(position: mw.Vector, size: number, color: mw.LinearColor, duration: number): void;
         /**
+         * @author yunhao.liao
          * @description 绘制线段
          * @groups 玩法
          * @effect 只在客户端调用生效
@@ -16507,6 +16840,7 @@ declare namespace mw {
          */
         static drawLine(start: mw.Vector, end: mw.Vector, color: mw.LinearColor, duration: number, thickness: number): void;
         /**
+         * @author yunhao.liao
          * @description 绘制圆圈
          * @groups 玩法
          * @effect 只在客户端调用生效
@@ -16538,6 +16872,7 @@ declare namespace mw {
          */
         static drawCircle(center: mw.Vector, radius: number, segments: number, color: mw.LinearColor, duration: number, thickness: number, yAxis?: mw.Vector, zAxis?: mw.Vector, drawAxis?: boolean): void;
         /**
+         * @author yunhao.liao
          * @description 绘制球体
          * @groups 玩法
          * @effect 只在客户端调用生效
@@ -16566,6 +16901,7 @@ declare namespace mw {
          */
         static drawSphere(center: mw.Vector, radius: number, segments: number, color: mw.LinearColor, duration: number, thickness: number): void;
         /**
+         * @author yunhao.liao
          * @description 绘制胶囊体
          * @groups 玩法
          * @effect 只在客户端调用生效
@@ -16595,6 +16931,7 @@ declare namespace mw {
          */
         static drawCapsule(center: mw.Vector, halfHeight: number, radius: number, rotation: mw.Rotation, color: mw.LinearColor, duration: number, thickness: number): void;
         /**
+         * @author yunhao.liao
          * @description 绘制盒体
          * @groups 玩法
          * @effect 只在客户端调用生效
@@ -16627,6 +16964,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @groups 玩法/游泳
      * @deprecated info:该接口已废弃，在该接口被删除前会仍保持可用，请尽快使用替换方案以免出现问题 since:031 reason: API 优化 replacement: WaterVolume
      * @description 游泳区域
@@ -16683,6 +17021,7 @@ declare namespace mw {
 declare namespace mw {
     /**
      * @hidden
+     * @author baoqiang.han
      * @groups 输入
      * @deprecated info:该接口已废弃，在该接口被删除前会仍保持可用，请尽快使用替换方案以免出现问题 since:027 reason:流程自动化，不再需要 replacement: mw.TouchInputUtil
      * @description 玩家从可触摸设备获取的数据信息，包含触摸手指数量，触摸位置(屏幕像素)和当前触摸状态(点击/滑动/离开)
@@ -16710,6 +17049,7 @@ declare namespace mw {
          */
         onTouchEnd: mw.MulticastDelegate<(index: number, location: mw.Vector2, touchType: mw.TouchInputType) => void>;
         /**
+         * @author baoqiang.han
          * @groups 输入
          * @description 获取屏幕手指数的数组
          * @effect 只在客户端调用生效
@@ -16720,7 +17060,55 @@ declare namespace mw {
 }
 
 declare namespace mw {
+    class TrackBase extends mw.GameObject {
+        /**
+         * @description 销毁
+         * @groups 玩法/载具
+         * @effect 调用端生效
+         */
+        protected onDestroy(): void;
+    }
     /**
+     * @author zhentao.liu
+     * @description 赛道节点
+     * @groups 玩法/载具
+     * @networkStatus usage: 双端
+     * @precautions 注意事项
+     * @example
+     * 使用示例: 创建
+     * ```
+     * // 创建TrackNode实例
+     * const trackNode = await GameObject.asyncSpawn<TrackNode>("TrackNode", {
+     *     replicates: true,
+     *     transform: new Transform(new Vector(0, 0, 100), new Rotation(0, 0, 0), new Vector(1))
+     * });
+     * ```
+     */
+    class TrackNode extends TrackBase {
+    }
+    /**
+     * @author zhentao.liu
+     * @description 赛道
+     * @groups 玩法/载具
+     * @networkStatus usage: 双端
+     * @precautions 注意事项
+     * @example
+     * 使用示例: 创建
+     * ```
+     * // 创建Track实例
+     * const track = await GameObject.asyncSpawn<Track>("Track", {
+     *     replicates: true,
+     *     transform: new Transform(new Vector(0, 0, 100), new Rotation(0, 0, 0), new Vector(1))
+     * });
+     * ```
+     */
+    class Track extends TrackBase {
+    }
+}
+
+declare namespace mw {
+    /**
+     * @author baoqiang.han
      * @description 碰撞类型
      * @groups 玩法/物理
      */
@@ -16735,6 +17123,7 @@ declare namespace mw {
         QueryAndPhysics = 3
     }
     /**
+     * @author baoqiang.han
      * @description 碰撞形状
      * @groups 玩法/物理
      */
@@ -16745,6 +17134,7 @@ declare namespace mw {
         Sphere = 1
     }
     /**
+     * @author baoqiang.han
      * @groups 玩法/触发器
      * @description 触发器
      * @description 当与触发器交互时，可以触发事件。所有触发器都差不多，区别在于形状不同——有盒体和球体——触发器通过这些形状来判断其他对象是否碰撞并激活了它。
@@ -16846,6 +17236,7 @@ declare namespace mw {
     /**
      * @description UI空间位置枚举
      * @groups 界面
+     * @author baoqiang.han
      */
     enum WidgetSpaceMode {
         /** 世界空间 */
@@ -16858,6 +17249,7 @@ declare namespace mw {
     /**
      * @description UI形状枚举
      * @groups 界面
+     * @author baoqiang.han
      */
     enum WidgetGeometryMode {
         /** 平面 */
@@ -16866,6 +17258,7 @@ declare namespace mw {
         Cylinder = 1
     }
     /**
+     * @author baoqiang.han
      * @groups 界面/基础
      * @deprecated info:该接口已废弃，在该接口被删除前会仍保持可用，请尽快使用替换方案以免出现问题 since:038 reason:接口废弃 replacement: 请使用WorldUI
      * @description 世界 UI
@@ -17129,6 +17522,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @description 水体预设枚举
      * @groups 玩法/游泳
      */
@@ -17147,6 +17541,7 @@ declare namespace mw {
         Salt_Lake = 5
     }
     /**
+     * @author baoqiang.han
      * @groups 玩法/游泳
      * @description 水体区域
      * @description ----------------------------------
@@ -17380,6 +17775,7 @@ declare namespace mw {
     /**
      * @description UI空间位置枚举
      * @groups 界面
+     * @author baoqiang.han
      */
     enum SpaceMode {
         /** 世界空间 */
@@ -17390,6 +17786,7 @@ declare namespace mw {
     /**
      * @description UI形状枚举
      * @groups 界面
+     * @author baoqiang.han
      */
     enum GeometryMode {
         /** 平面 */
@@ -17398,6 +17795,7 @@ declare namespace mw {
         Cylinder = 1
     }
     /**
+     * @author baoqiang.han
      * @groups 界面/基础
      * @description 世界 UI
      * @description ----------------------
@@ -17682,6 +18080,7 @@ declare namespace mw {
     // @ts-ignore
     import { $Nullable } from "puerts";
     /**
+     * @author jun.zhang
      * @groups 玩法
      * @description 热武器状态
      */
@@ -17704,6 +18103,7 @@ declare namespace mw {
      * @description 4. 后坐力 - 射击时会产生后坐力，让准星会稍稍偏移。
      * @groups 玩法/热武器
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @precautions 当装备上玩家时，此对象的功能才能生效。
      * @example
      * 使用示例: 创建一个名为"HotWeaponSample1"的脚本，放置在对象管理器中热武器对象子级，打开脚本，输入以下代码保存，在本地资源库中搜索80484、4172、4171动画资源，拖入对象管理器中的优先加载目录。运行游戏，按键1、2、3、4你将在场景中看到一个热武器设置参数，添加委托，绑定按键，以及人物换弹的效果，代码如下：
@@ -18453,6 +18853,7 @@ declare namespace mw {
      * @description 当你投篮时，你希望篮球准确地进入篮筐，而不是偏离目标。这就是投篮的精度。在武器射击中，精度指的是武器发射的子弹能够准确地命中目标，而不是随意地朝着其他方向飞行。
      * @groups 玩法/热武器/辅助类
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例: 创建一个名为"HotWeaponAofSample1"的脚本，放置在对象管理器中，打开脚本，输入以下代码保存，运行游戏，代码如下：
      * ```ts
@@ -18608,6 +19009,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author jun.zhang
      * @groups 玩法
      * @description 热武器瞄准模式
      */
@@ -18621,6 +19023,7 @@ declare namespace mw {
      * @description 热武器瞄准组件，瞄准状态下持枪角色的视角会拉近
      * @groups 玩法/热武器/辅助类
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例: 创建一个名为"HotWeaponAimSample1"的脚本，放置在对象管理器中，打开脚本，输入以下代码保存，运行游戏，代码如下：
      * ```ts
@@ -18732,6 +19135,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author jun.zhang
      * @groups 玩法
      * @description 热武器开火模式
      */
@@ -18747,6 +19151,7 @@ declare namespace mw {
      * @description 热武器开火组件，负责维护热武器射击的主要参数，及核心逻辑
      * @groups 玩法/热武器/辅助类
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例: 创建一个名为"HotWeaponFireSample1"的脚本，放置在对象管理器热武器的子节点中，打开脚本，输入以下代码保存，运行游戏，代码如下：
      * ```ts
@@ -18922,6 +19327,7 @@ declare namespace mw {
      * @description 热武器上膛组件，负责维护热武器播放上膛动作的相关参数，和逻辑
      * @groups 玩法/热武器/辅助类
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例: 创建一个名为"HotWeaponLoadSample1"的脚本，放置在对象管理器中，打开脚本，输入以下代码保存，运行游戏，代码如下：
      * ```ts
@@ -19010,6 +19416,7 @@ declare namespace mw {
      * @description 热武器后坐力组件，用于在发射时控制角色的视角的抖动（会自动恢复）和偏移（不会自动恢复）
      * @groups 玩法/热武器/辅助类
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例: 创建一个名为"HotWeaponRecoilForceSample1"的脚本，放置在对象管理器中，打开脚本，输入以下代码保存，运行游戏，代码如下：
      * ```ts
@@ -19221,6 +19628,7 @@ declare namespace mw {
      * @description 热武器换弹组件，负责维护热武器换弹动作的相关参数和逻辑
      * @groups 玩法/热武器/辅助类
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例: 创建一个名为"HotWeaponReloadSample1"的脚本，放置在对象管理器中，打开脚本，输入以下代码保存，运行游戏，代码如下：
      * ```ts
@@ -19294,6 +19702,7 @@ declare namespace mw {
      * @groups 玩法/其他
      * @description 交互物，请保证交互前动画资源已加载，否则可能导致位置错误或者其他不可预料的表现
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例:创建一个名为"InteractorSample"的脚本，放置在对象管理器某一交互物的子级中，打开脚本，输入以下代码保存，在本地资源库中搜索4175动画资源，拖入对象管理器中的优先加载目录。运行游戏，你将在场景中看到一个交互物的效果，玩家可以和此交互物进行交互，代码如下：
      * ```
@@ -19456,6 +19865,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+   * @author baoqiang.han
    * @groups 场景/灯光
    * @description 光照
    * @description -------------------------
@@ -19696,6 +20106,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @groups 场景/灯光
      * @description 点光源
      * @networkStatus usage:客户端
@@ -19766,6 +20177,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author xinlei.nie
      * @description 设置链接线的通行方向
      * @groups 玩法/寻路系统
      */
@@ -19778,6 +20190,7 @@ declare namespace mw {
         RightToLeft = 2
     }
     /**
+     * @author xinlei.nie
      * @description 设置链接区域的寻路类型
      * @groups 玩法/寻路系统
      */
@@ -19792,6 +20205,7 @@ declare namespace mw {
         Obstacle = 3
     }
     /**
+     * @author xinlei.nie
      * @groups 玩法/寻路系统
      * @networkStatus usage:双端
      * @description 寻路链接
@@ -19801,6 +20215,7 @@ declare namespace mw {
      * @description     - 创建一个寻路链接对象。可手动将左侧栏中逻辑对象中的寻路链接拖入场景中，在编辑器属性面板中调整参数；也可以在脚本中动态创建寻路链接。
      * @description     - 设置寻路链接对象属性 左点右点位置分别表示链接在寻路区域中的两个点，链接建立后AI会从一个点沿直线前往另一个点
      * @description     - 需要注意的是，链接并不保证指定线路的“可到达性”，即如果链接线上存在AI无法跨越或者无法行走的区域，寻路有可能失效
+     * @author xinlei.nie
      * @example
      * 使用示例:创建一个名为"NavLinkSample"的脚本，复制以下代码后将脚本挂载于地板上，接着在场景中拖入一个寻路区域，相对位置设置为(1200, 0, 0)，相对缩放设置为(20, 20, 10)，再开启世界设置中的 动态构建寻路导航数据
      * 进入游戏后，按 N 控制NPC开始寻路；按 R 重置NPC位置；按 1 切换寻路链接的区域类型；按 2 切换寻路链接的连通方式。可以测试NPC在不同情景下的寻路表现。
@@ -19977,6 +20392,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author hao.huang
      * @description 寻路动态修饰区类型，不同类型在寻路计算中成本不同，影响寻路结果
      * @groups 玩法
      */
@@ -19991,6 +20407,7 @@ declare namespace mw {
         Obstacle = 3
     }
     /**
+     * @author hao.huang
      * @groups 玩法/寻路系统
      * @description 寻路动态修饰区
      * @networkStatus usage:双端
@@ -20018,6 +20435,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author hao.huang
      * @groups 玩法/物理
      * @description 物理链接组件
      * @networkStatus usage:双端
@@ -20204,6 +20622,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author xinlei.nie
      * @description 力区域的施力类型
      * @groups 玩法/物理
      */
@@ -20228,6 +20647,7 @@ declare namespace mw {
      * @description     - 选择一种力区域的类型，指向力会向指定方向施加指定大小的力，而径向力会沿球心方向施加指定大小的力
      * @description     - 对于指向力，需要设置 指向力值/directionalForce 指定大小和方向；对于径向力，需要设置 径向力值/radialForce 指定大小
      * @networkStatus usage: 双端
+     * @author xinlei.nie
      * @example
      * 使用示例:创建一个名为"ForceVolumeSample"的脚本，按 Q 使方块进入力区域，接下来使用数字键 1 控制开关，使用数字键 2 切换力的类型，使用数字键 3 切换力的大小，就可以看到方块在力区域中的表现了
      * 注意：默认给的径向力大小不足以使方块运动起来，所以不调整大小的情况下切换为径向力之后方块坠地为正常表现；如果方块在运动过程中离开了区域，再按一次 Q 可以将方块重新置于力区域中；由于力区域仅存在于服务端，对于以主控端表现为主的角色无影响也是正常表现
@@ -20488,6 +20908,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author jun.zhang
      * @description 冲量的应用方式
      * @groups 玩法/物理
      */
@@ -20502,6 +20923,7 @@ declare namespace mw {
         Relative = 1
     }
     /**
+     * @author jun.zhang
      * @description 冲量力类型
      * @groups 玩法/物理
      */
@@ -20526,6 +20948,7 @@ declare namespace mw {
      * @description - impulseVector 属性表示力的方向。
      * @description - impulseRadialForce 属性表示力的大小。
      * @networkStatus usage: 双端
+     * @author jun.zhang
      * @example
      * 使用示例:创建一个名为"ImpulseSample"的脚本，放置在对象管理器中冲量对象的子级，将冲量对象相对缩放改为（5.00,5.00,0.50），放置在合适的位置，可以在与冲量对象重叠区域放置一个Cube，Cube大小缩放与冲量对象相同。打开脚本，输入以下代码保存，运行游戏，你将在场景中看到人物在Cube上蹦床的效果，代码如下：
      * （示例代码中impulseId = "1602E908"中的1602E908替换方式为右键冲量对象，复制对象ID。更换为你的冲量对象ID即可）
@@ -20710,6 +21133,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author xinlei.nie
      * @description 运动坐标系
      * @groups 玩法/物理
      */
@@ -20720,6 +21144,7 @@ declare namespace mw {
         LocalAxis = 1
     }
     /**
+     * @author xinlei.nie
      * @description 运动模式
      * @groups 玩法/物理
      */
@@ -20730,6 +21155,7 @@ declare namespace mw {
         CentroidBased = 1
     }
     /**
+     * @author hao.huang
      * @groups 玩法/物理
      * @description 运动器组件
      * @networkStatus usage:双端
@@ -21562,6 +21988,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author baoqiang.han
      * @groups 玩法/物理
      * @description 推进器
      * @networkStatus usage:双端
@@ -21625,6 +22052,7 @@ declare namespace mw {
 declare namespace mw {
     /**
      * @description 投掷物发射器专用实例对象
+     * @author jun.zhang
      * @groups 玩法/发射器
      * @networkStatus usage: 双端
      */
@@ -21719,6 +22147,7 @@ declare namespace mw {
      * @description -  在本地添加回调后，回调只会在本地执行，同时执行前提是发射器要存在于本地。
      * @description -  在本地调用广播发射：按本地当前发射器属性生成单端投掷物，同时通知服务器广播其他客户端按本地当前发射器属性生成单端投掷物。发射对象如果在服务端找不到，直接返回，能找到（发射对象是双端对象），挂上投掷物。
      * @description 另外有控制发射器发射初始速度、重力、投掷物半径等参数。
+     * @author jun.zhang
      * @groups 玩法/发射器
      * @networkStatus usage: 双端
      */
@@ -22066,6 +22495,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author jun.zhang
      * @description 投掷物移动状态
      * @groups 玩法
      */
@@ -22078,6 +22508,7 @@ declare namespace mw {
         Launched = 2
     }
     /**
+     * @author jun.zhang
      * @description 投掷物配置类型
      * @groups 玩法/投掷物
      */
@@ -22126,6 +22557,7 @@ declare namespace mw {
         homingAcceleration?: number;
     }
     /**
+     * @author jun.zhang
      * @description 投掷物移动功能类
      * @description ProjectileMovement 是一种功能组件，用于处理游戏中的飞行物体，比如子弹、火箭、投掷物等。
      * @description 想象一下，你在游戏中控制着一个角色，你想让他发射一颗子弹。这时，你可以使用 ProjectileMovement 组件来处理子弹的移动。
@@ -22970,6 +23402,7 @@ declare namespace mw {
 
 declare namespace mw {
     /**
+     * @author xiangkun.sun
      * @groups 角色系统/角色管理
      * @description 角色管理器
      * @description Player 包含当前连接到MW服务器的Player对象。它负责管理角色的各种唯一标识符（ID）并提供创建、获取并管理玩家的功能。
@@ -23503,6 +23936,16 @@ declare namespace mw {
          * @networkStatus usage:服务端
          */
         control(pawn: mw.Pawn): boolean;
+        /**
+         * @groups 角色系统/角色管理
+         * @description 被操控对象变更时触发的回调,用于处理操控对象变更后的角色逻辑
+         * @effect 只在客户端调用生效
+         * @param pawn usage:目标控制对象
+         * @Component
+         * ```
+         * @networkStatus usage:服务端
+         */
+        static onControlledCharacterChanged: mw.MulticastDelegate<(oldCharacter: mw.Character, newCharacter: mw.Character) => void>;
         /**
          * @groups 角色系统/角色管理
          * @description 控制角色

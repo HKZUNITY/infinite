@@ -539,7 +539,7 @@ declare namespace mw {
      * }
      * ```
      */
-    function fastUploadTexture(texturePath: string, name: string, comment: string, uploadTextureType: mw.UploadTextureType): Promise<FastUploadTextureResult>;
+    function fastUploadTexture(texturePath: string, name: string, comment: string, uploadTextureType: mw.UploadTextureType, price?: number, tabId?: number[], extraData?: string, bizLine?: string, commonReqVO?: string, tags?: string): Promise<FastUploadTextureResult>;
     /**
     * @author boxin.liu
     * @description 上传贴图返回结果

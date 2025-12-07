@@ -914,152 +914,6 @@ declare namespace mw {
 declare namespace mw {
     /**
      * @author baoqiang.han
-     * @description 碰撞检测通道
-     * @groups 玩法/物理
-     */
-    enum ObjectTypeQuery {
-        /** 检测通道1 */
-        ObjectTypeQuery1 = 0,
-        /** 检测通道2 */
-        ObjectTypeQuery2 = 1,
-        /** 检测通道3 */
-        ObjectTypeQuery3 = 2,
-        /** 检测通道4 */
-        ObjectTypeQuery4 = 3,
-        /** 检测通道5 */
-        ObjectTypeQuery5 = 4,
-        /** 检测通道6 */
-        ObjectTypeQuery6 = 5,
-        /** 检测通道7 */
-        ObjectTypeQuery7 = 6,
-        /** 检测通道8 */
-        ObjectTypeQuery8 = 7,
-        /** 检测通道9 */
-        ObjectTypeQuery9 = 8,
-        /** 检测通道10 */
-        ObjectTypeQuery10 = 9,
-        /** 检测通道11 */
-        ObjectTypeQuery11 = 10,
-        /** 检测通道12 */
-        ObjectTypeQuery12 = 11,
-        /** 检测通道13 */
-        ObjectTypeQuery13 = 12,
-        /** 检测通道14 */
-        ObjectTypeQuery14 = 13,
-        /** 检测通道15 */
-        ObjectTypeQuery15 = 14,
-        /** 检测通道16 */
-        ObjectTypeQuery16 = 15,
-        /** 检测通道17 */
-        ObjectTypeQuery17 = 16,
-        /** 检测通道18 */
-        ObjectTypeQuery18 = 17,
-        /** 检测通道19 */
-        ObjectTypeQuery19 = 18,
-        /** 检测通道20 */
-        ObjectTypeQuery20 = 19,
-        /** 检测通道21 */
-        ObjectTypeQuery21 = 20,
-        /** 检测通道22 */
-        ObjectTypeQuery22 = 21,
-        /** 检测通道23 */
-        ObjectTypeQuery23 = 22,
-        /** 检测通道24 */
-        ObjectTypeQuery24 = 23,
-        /** 检测通道25 */
-        ObjectTypeQuery25 = 24,
-        /** 检测通道26 */
-        ObjectTypeQuery26 = 25,
-        /** 检测通道27 */
-        ObjectTypeQuery27 = 26,
-        /** 检测通道28 */
-        ObjectTypeQuery28 = 27,
-        /** 检测通道29 */
-        ObjectTypeQuery29 = 28,
-        /** 检测通道30 */
-        ObjectTypeQuery30 = 29,
-        /** 检测通道31 */
-        ObjectTypeQuery31 = 30,
-        /** 检测通道32 */
-        ObjectTypeQuery32 = 31
-    }
-    /**
-     * @author xiangkun.sun
-     * @groups 工具/射线检测
-     * @description 命中结果，包含关于轨迹的一次命中的信息，例如撞击点和该点的表面法线。
-     * @networkStatus usage:双端
-     * @example
-     * 使用示例:创建一个名为"HitResultExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，并在场景中创建一个模型放置在200, 10, 0的位置，运行游戏，你将在日志中看到射线检测到的HitResult信息数组。代码如下：
-     * ```
-     * const result = QueryUtil.lineTrace(new Vector(100), new Vector(1000), true, true);
-     * @Component
-     * export default class HitResultExample extends Script {
-     *
-     *     protected onStart(): void {
-     *         if (this.isRunningClient()) {
-     *             // 开始位置
-     *             let startLocation = new Vector(100, 10, 100);
-     *             // 结束位置
-     *             let endLocation = new Vector(1000, 10, 100);
-     *             // 返回的HitResult数组
-     *             const result = QueryUtil.lineTrace(startLocation, endLocation, true, true);
-     *             result.forEach(element => {
-     *                 // 通过HitResult访问返回值gameObject的名字
-     *                 console.log(`命中GameObject的名字: ${element.gameObject.name}`);
-     *             });
-     *         }
-     *     }
-     * }
-     * ```
-     */
-    class HitResult {
-        /**
-         * @description 是否击中了物体，如果发生了碰撞则为 true, 否则为 false
-         */
-        blockingHit: boolean;
-        /**
-         * @description 这是沿追踪方向的命中时间，范围介于[0.0到1.0]之间。如未命中，将返回1.0。
-         */
-        time: number;
-        /**
-         * @description 距离，traceStart到location的距离
-         */
-        distance: number;
-        /**
-         * @description 世界空间中的位置，如果发生碰撞，移动的形状将最终抵靠受影响的对象。等于线路测试的冲击点。示例：对于球体跟踪测试，这是当球体接触其他对象时，球体中心所在的点。对于扫掠移动（但不是查询），这可能不等于形状的最终位置，因为命中会稍微向后拉，以防止精度问题与另一个曲面重叠。
-         */
-        position: mw.Vector;
-        /**
-         * @description 轨迹形状（长方体、球体、光线等）与受影响对象的实际接触在世界空间中的位置。示例：对于球体跟踪测试，这是球体表面接触其他对象的点。
-         */
-        impactPoint: mw.Vector;
-        /**
-         * @description 世界空间中被扫过的物体的法线。等于线路测试的ImpactNormal。这是为胶囊和球体计算的，否则将与ImpactNormal相同。示例：对于球体轨迹测试，这是指向撞击点处球体中心的归一化矢量。
-         */
-        normal: mw.Vector;
-        /**
-         * @description 世界空间中被扫掠击中的对象（如果有）的法线。例如，如果球体撞击平面，这是一个从平面指向的规范化向量。在与曲面的角或边碰撞的情况下，通常选择“最相反”的法线（与查询方向相反）。
-         */
-        impactNormal: mw.Vector;
-        /**
-         * @description 碰撞检测的起点位置
-         */
-        traceStart: mw.Vector;
-        /**
-         * @description 碰撞检测的终点位置
-         */
-        traceEnd: mw.Vector;
-        /**
-         * @description 碰撞的骨骼名称
-         */
-        boneName: string;
-        /**
-         * @description 命中的GameObject
-         */
-        gameObject: mw.GameObject;
-    }
-    /**
-     * @author baoqiang.han
      * @groups 玩法
      * @description 振动开关
      * @param enable usage:-true:开启震动，-false:关闭震动
@@ -1093,7 +947,7 @@ declare namespace mw {
      * @param character usage: 需要获取碰撞结果的角色 <br> default: null 必填参数   <br> type: Character
      * @returns 强制移动检测到的碰撞数据
      */
-    function getForcedMovementHits(character: mw.Character): Array<HitResult>;
+    function getForcedMovementHits(character: mw.Character): Array<mw.HitResult>;
 }
 
 declare namespace mw {
@@ -2511,20 +2365,20 @@ declare namespace mw {
      */
     class Character extends mw.Pawn {
         /**
-         * @description 角色开启强制位移后，移动中碰撞检测结果的代理
+         * @description 移动中碰撞检测结果的代理
          * @groups 角色系统/角色
          */
-        onSweepCollision: mw.MulticastDelegate<(velocities: Array<mw.Vector>, hitActors: Array<mw.GameObject>, impactPoints: Array<mw.Vector>, impactNormals: Array<mw.Vector>) => void>;
+        onSweepCollision: mw.MulticastDelegate<(velocity: mw.Vector, hitResult: mw.HitResult) => void>;
         /**
-         * @description 角色开启强制位移后，输出移动中碰撞检测结果中新增的接触物体。
+         * @description 输出移动中碰撞检测结果中新增的接触物体。
          * @groups 角色系统/角色
          */
-        onTouch: mw.MulticastDelegate<(velocities: Array<mw.Vector>, hitActors: Array<mw.GameObject>, impactPoints: Array<mw.Vector>, impactNormals: Array<mw.Vector>) => void>;
+        onTouch: mw.MulticastDelegate<(velocity: mw.Vector, hitResult: mw.HitResult) => void>;
         /**
-         * @description 角色开启强制位移后，输出移动中碰撞检测结果中已停止的接触物体。
+         * @description 输出移动中碰撞检测结果中已停止的接触物体。
          * @groups 角色系统/角色
          */
-        onTouchEnd: mw.MulticastDelegate<(velocities: Array<mw.Vector>, hitActors: Array<mw.GameObject>, impactPoints: Array<mw.Vector>, impactNormals: Array<mw.Vector>) => void>;
+        onTouchEnd: mw.MulticastDelegate<(velocity: mw.Vector, hitResult: mw.HitResult) => void>;
         /**
          * @groups 角色系统/角色
          * @description 角色外观配置。返回值为 CharacterDescription 类。调用 description 变量可以修改角色的外观，可更改角色的外观参数详见 CharacterDescription 类。
@@ -10078,6 +9932,38 @@ declare namespace mw {
         static get currentCamera(): Camera;
         /**
          * @groups 玩法/摄像机
+         * @description 玩家摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 专用于玩家视角的摄像机
+         * @networkStatus usage:客户端
+         */
+        static get playerCamera(): Camera;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置玩家摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 设置专用于玩家视角的摄像机
+         * @networkStatus usage:客户端
+         */
+        static set playerCamera(camera: Camera);
+        /**
+         * @groups 玩法/摄像机
+         * @description 场景摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 专用于场景观察的摄像机
+         * @networkStatus usage:客户端
+         */
+        static get sceneCamera(): Camera;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置场景摄像机
+         * @effect 只在客户端调用生效
+         * @precautions 设置专用于场景观察的摄像机
+         * @networkStatus usage:客户端
+         */
+        static set sceneCamera(camera: Camera);
+        /**
+         * @groups 玩法/摄像机
          * @description 弹簧臂
          * @effect 只在客户端调用生效
          * @precautions 摄像机系统由弹簧臂和摄像机组成，实际挂点是弹簧臂负责，而摄像机是挂载弹簧臂尾端。
@@ -10819,6 +10705,140 @@ declare namespace mw {
          * @networkStatus usage:客户端
          */
         set downAngleLimit(value: number);
+        /**
+         * @groups 玩法/摄像机
+         * @description 获取摄像机向左角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向左旋转时的最大角度使用范围在0-180之间。
+         * @example
+         * 使用示例: 创建一个名为"Example_Camera_LeftAngleLimit"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，设置摄像机角度限制，左转最大角度为45，右转最大角度为45。你将在场景中看到摄像机旋转受限的效果。代码如下：
+         * ```
+         * @Component
+         * export default class Example_Camera_LeftAngleLimit extends Script {
+         *     // 当脚本被实例后，会在第一帧更新前调用此函数
+         *     protected onStart(): void {
+         *         // 下列代码仅在客户端执行
+         *         if(SystemUtil.isClient()) {
+         *             // 获取当前客户端的玩家(自己)
+         *             let myPlayer = Player.localPlayer;
+         *             // 获取玩家角色
+         *             let myCharacter = myPlayer.character;
+         *             // 获取当前摄像机
+         *             let myCamera = Camera.currentCamera;
+         *             // 开启摄像机位置延迟
+         *             myCamera.positionLagEnabled = true;
+         *             // 位置延迟恢复速度1
+         *             myCamera.positionLagSpeed = 1;
+         *             // 最大位置延迟距离200
+         *             myCamera.maxLagDistance = 200;
+         *             // 开启摄像机旋转延迟
+         *             myCamera.rotationLagEnabled = true;
+         *             // 旋转延迟恢复速度2
+         *             myCamera.rotationLagSpeed = 2;
+         *             // 设置摄像机角度限制
+         *             myCamera.upAngleLimit = 30;
+         *             myCamera.downAngleLimit = 10;
+         *             myCamera.leftAngleLimit = 45;
+         *             myCamera.rightAngleLimit = 45;
+         *             // 添加一个按键方法：按下键盘"1"，固定摄像机高度后跳跃
+         *             InputUtil.onKeyDown(Keys.One, () => {
+         *                 myCamera.fixedElevation = true;
+         *                 myCharacter.jump();
+         *                 setTimeout(() => {
+         *                     myCamera.fixedElevation = false;
+         *                 }, 1000);
+         *             });
+         *             // 添加一个按键方法：按住键盘"2"，增大摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Two, () => {
+         *                 myCamera.fov += 1;
+         *             });
+         *             // 添加一个按键方法：按住键盘"3"，减少摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Three, () => {
+         *                 myCamera.fov -= 1;
+         *             });
+         *         }
+         *     }
+         * }
+         * ```
+         * @networkStatus usage:客户端
+         */
+        get leftAngleLimit(): number;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置摄像机向左角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向左旋转时的最大角度使用范围在0-180之间。
+         * @param value 角度限制
+         * @networkStatus usage:客户端
+         */
+        set leftAngleLimit(value: number);
+        /**
+         * @groups 玩法/摄像机
+         * @description 获取摄像机向右角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向右旋转时的最大角度使用范围在0-180之间。
+         * @example
+         * 使用示例: 创建一个名为"Example_Camera_RightAngleLimit"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，设置摄像机角度限制，左转最大角度为45，右转最大角度为45。你将在场景中看到摄像机旋转受限的效果。代码如下：
+         * ```
+         * @Component
+         * export default class Example_Camera_RightAngleLimit extends Script {
+         *     // 当脚本被实例后，会在第一帧更新前调用此函数
+         *     protected onStart(): void {
+         *         // 下列代码仅在客户端执行
+         *         if(SystemUtil.isClient()) {
+         *             // 获取当前客户端的玩家(自己)
+         *             let myPlayer = Player.localPlayer;
+         *             // 获取玩家角色
+         *             let myCharacter = myPlayer.character;
+         *             // 获取当前摄像机
+         *             let myCamera = Camera.currentCamera;
+         *             // 开启摄像机位置延迟
+         *             myCamera.positionLagEnabled = true;
+         *             // 位置延迟恢复速度1
+         *             myCamera.positionLagSpeed = 1;
+         *             // 最大位置延迟距离200
+         *             myCamera.maxLagDistance = 200;
+         *             // 开启摄像机旋转延迟
+         *             myCamera.rotationLagEnabled = true;
+         *             // 旋转延迟恢复速度2
+         *             myCamera.rotationLagSpeed = 2;
+         *             // 设置摄像机角度限制
+         *             myCamera.upAngleLimit = 30;
+         *             myCamera.downAngleLimit = 10;
+         *             myCamera.leftAngleLimit = 45;
+         *             myCamera.rightAngleLimit = 45;
+         *             // 添加一个按键方法：按下键盘"1"，固定摄像机高度后跳跃
+         *             InputUtil.onKeyDown(Keys.One, () => {
+         *                 myCamera.fixedElevation = true;
+         *                 myCharacter.jump();
+         *                 setTimeout(() => {
+         *                     myCamera.fixedElevation = false;
+         *                 }, 1000);
+         *             });
+         *             // 添加一个按键方法：按住键盘"2"，增大摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Two, () => {
+         *                 myCamera.fov += 1;
+         *             });
+         *             // 添加一个按键方法：按住键盘"3"，减少摄像机FOV
+         *             InputUtil.onKeyPress(Keys.Three, () => {
+         *                 myCamera.fov -= 1;
+         *             });
+         *         }
+         *     }
+         * }
+         * ```
+         * @networkStatus usage:客户端
+         */
+        get rightAngleLimit(): number;
+        /**
+         * @groups 玩法/摄像机
+         * @description 设置摄像机向右角度限制
+         * @effect 只在客户端调用生效
+         * @precautions 摄像机向右旋转时的最大角度使用范围在0-180之间。
+         * @param value 角度限制
+         * @networkStatus usage:客户端
+         */
+        set rightAngleLimit(value: number);
         /**
          * @groups 玩法/摄像机
          * @description 固定摄像机高度
@@ -12131,6 +12151,155 @@ declare namespace mw {
          * @param value usage:属性值 range: 无
          */
         setProperty(propertyName: string, value: any): void;
+    }
+}
+
+declare namespace mw {
+    /**
+     * @author baoqiang.han
+     * @description 碰撞检测通道
+     * @groups 玩法/物理
+     */
+    enum ObjectTypeQuery {
+        /** 检测通道1 */
+        ObjectTypeQuery1 = 0,
+        /** 检测通道2 */
+        ObjectTypeQuery2 = 1,
+        /** 检测通道3 */
+        ObjectTypeQuery3 = 2,
+        /** 检测通道4 */
+        ObjectTypeQuery4 = 3,
+        /** 检测通道5 */
+        ObjectTypeQuery5 = 4,
+        /** 检测通道6 */
+        ObjectTypeQuery6 = 5,
+        /** 检测通道7 */
+        ObjectTypeQuery7 = 6,
+        /** 检测通道8 */
+        ObjectTypeQuery8 = 7,
+        /** 检测通道9 */
+        ObjectTypeQuery9 = 8,
+        /** 检测通道10 */
+        ObjectTypeQuery10 = 9,
+        /** 检测通道11 */
+        ObjectTypeQuery11 = 10,
+        /** 检测通道12 */
+        ObjectTypeQuery12 = 11,
+        /** 检测通道13 */
+        ObjectTypeQuery13 = 12,
+        /** 检测通道14 */
+        ObjectTypeQuery14 = 13,
+        /** 检测通道15 */
+        ObjectTypeQuery15 = 14,
+        /** 检测通道16 */
+        ObjectTypeQuery16 = 15,
+        /** 检测通道17 */
+        ObjectTypeQuery17 = 16,
+        /** 检测通道18 */
+        ObjectTypeQuery18 = 17,
+        /** 检测通道19 */
+        ObjectTypeQuery19 = 18,
+        /** 检测通道20 */
+        ObjectTypeQuery20 = 19,
+        /** 检测通道21 */
+        ObjectTypeQuery21 = 20,
+        /** 检测通道22 */
+        ObjectTypeQuery22 = 21,
+        /** 检测通道23 */
+        ObjectTypeQuery23 = 22,
+        /** 检测通道24 */
+        ObjectTypeQuery24 = 23,
+        /** 检测通道25 */
+        ObjectTypeQuery25 = 24,
+        /** 检测通道26 */
+        ObjectTypeQuery26 = 25,
+        /** 检测通道27 */
+        ObjectTypeQuery27 = 26,
+        /** 检测通道28 */
+        ObjectTypeQuery28 = 27,
+        /** 检测通道29 */
+        ObjectTypeQuery29 = 28,
+        /** 检测通道30 */
+        ObjectTypeQuery30 = 29,
+        /** 检测通道31 */
+        ObjectTypeQuery31 = 30,
+        /** 检测通道32 */
+        ObjectTypeQuery32 = 31
+    }
+    /**
+     * @author xiangkun.sun
+     * @groups 工具/射线检测
+     * @description 命中结果，包含关于轨迹的一次命中的信息，例如撞击点和该点的表面法线。
+     * @networkStatus usage:双端
+     * @example
+     * 使用示例:创建一个名为"HitResultExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，并在场景中创建一个模型放置在200, 10, 0的位置，运行游戏，你将在日志中看到射线检测到的HitResult信息数组。代码如下：
+     * ```
+     * const result = QueryUtil.lineTrace(new Vector(100), new Vector(1000), true, true);
+     * @Component
+     * export default class HitResultExample extends Script {
+     *
+     *     protected onStart(): void {
+     *         if (this.isRunningClient()) {
+     *             // 开始位置
+     *             let startLocation = new Vector(100, 10, 100);
+     *             // 结束位置
+     *             let endLocation = new Vector(1000, 10, 100);
+     *             // 返回的HitResult数组
+     *             const result = QueryUtil.lineTrace(startLocation, endLocation, true, true);
+     *             result.forEach(element => {
+     *                 // 通过HitResult访问返回值gameObject的名字
+     *                 console.log(`命中GameObject的名字: ${element.gameObject.name}`);
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class HitResult {
+        /**
+         * @description 是否击中了物体，如果发生了碰撞则为 true, 否则为 false
+         */
+        blockingHit: boolean;
+        /**
+         * @description 这是沿追踪方向的命中时间，范围介于[0.0到1.0]之间。如未命中，将返回1.0。
+         */
+        time: number;
+        /**
+         * @description 距离，traceStart到location的距离
+         */
+        distance: number;
+        /**
+         * @description 世界空间中的位置，如果发生碰撞，移动的形状将最终抵靠受影响的对象。等于线路测试的冲击点。示例：对于球体跟踪测试，这是当球体接触其他对象时，球体中心所在的点。对于扫掠移动（但不是查询），这可能不等于形状的最终位置，因为命中会稍微向后拉，以防止精度问题与另一个曲面重叠。
+         */
+        position: mw.Vector;
+        /**
+         * @description 轨迹形状（长方体、球体、光线等）与受影响对象的实际接触在世界空间中的位置。示例：对于球体跟踪测试，这是球体表面接触其他对象的点。
+         */
+        impactPoint: mw.Vector;
+        /**
+         * @description 世界空间中被扫过的物体的法线。等于线路测试的ImpactNormal。这是为胶囊和球体计算的，否则将与ImpactNormal相同。示例：对于球体轨迹测试，这是指向撞击点处球体中心的归一化矢量。
+         */
+        normal: mw.Vector;
+        /**
+         * @description 世界空间中被扫掠击中的对象（如果有）的法线。例如，如果球体撞击平面，这是一个从平面指向的规范化向量。在与曲面的角或边碰撞的情况下，通常选择"最相反"的法线（与查询方向相反）。
+         */
+        impactNormal: mw.Vector;
+        /**
+         * @description 碰撞检测的起点位置
+         */
+        traceStart: mw.Vector;
+        /**
+         * @description 碰撞检测的终点位置
+         */
+        traceEnd: mw.Vector;
+        /**
+         * @description 碰撞的骨骼名称
+         */
+        boneName: string;
+        /**
+         * @description 命中的GameObject
+         */
+        gameObject: mw.GameObject;
     }
 }
 
@@ -14372,6 +14541,49 @@ declare namespace mw {
          * @param value usage:自动IK激活状态
          */
         static autoEnableIK(target: mw.Character, value: boolean): void;
+    }
+}
+
+declare namespace mw {
+    /**
+     * @author zhiqiang.tan
+     * @description 卡丁车载具
+     * @groups 玩法/载具
+     * @networkStatus usage: 双端
+     * @precautions 注意事项
+     * 1. 卡丁车需要设置有效的owner才能进行物理模拟和控制
+     * 2. 卡丁车的物理属性可以通过get/set方法动态调整
+     * @example
+     * 使用示例: 创建并控制卡丁车
+     * ```
+     * // 创建卡丁车实例
+     * const kart = await GameObject.asyncSpawn<Kart>("Kart", {
+     *     replicates: true,
+     *     transform: new Transform(new Vector(0, 0, 100), new Rotation(0, 0, 0), new Vector(1))
+     * });
+     * ```
+     */
+    class Kart extends mw.GameObject {
+        /**
+         * @description 销毁
+         * @groups 玩法/载具
+         * @effect 调用端生效
+         */
+        protected onDestroy(): void;
+        /**
+         * @description 设置卡丁车驾驶员
+         * @groups 玩法/载具
+         * @effect 单端生效
+         * @param inOwner usage: 要设置的驾驶员 default: undefined
+         */
+        set owner(inOwner: mw.Player);
+        /**
+         * @description 获取卡丁车驾驶员
+         * @groups 玩法/载具
+         * @effect 双端生效
+         * @returns 当前驾驶员
+         */
+        get owner(): mw.Player;
     }
 }
 
@@ -16844,6 +17056,53 @@ declare namespace mw {
          * @returns 当前Touch数组
          */
         getTouchVectorArray(): Array<mw.Vector>;
+    }
+}
+
+declare namespace mw {
+    class TrackBase extends mw.GameObject {
+        /**
+         * @description 销毁
+         * @groups 玩法/载具
+         * @effect 调用端生效
+         */
+        protected onDestroy(): void;
+    }
+    /**
+     * @author zhentao.liu
+     * @description 赛道节点
+     * @groups 玩法/载具
+     * @networkStatus usage: 双端
+     * @precautions 注意事项
+     * @example
+     * 使用示例: 创建
+     * ```
+     * // 创建TrackNode实例
+     * const trackNode = await GameObject.asyncSpawn<TrackNode>("TrackNode", {
+     *     replicates: true,
+     *     transform: new Transform(new Vector(0, 0, 100), new Rotation(0, 0, 0), new Vector(1))
+     * });
+     * ```
+     */
+    class TrackNode extends TrackBase {
+    }
+    /**
+     * @author zhentao.liu
+     * @description 赛道
+     * @groups 玩法/载具
+     * @networkStatus usage: 双端
+     * @precautions 注意事项
+     * @example
+     * 使用示例: 创建
+     * ```
+     * // 创建Track实例
+     * const track = await GameObject.asyncSpawn<Track>("Track", {
+     *     replicates: true,
+     *     transform: new Transform(new Vector(0, 0, 100), new Rotation(0, 0, 0), new Vector(1))
+     * });
+     * ```
+     */
+    class Track extends TrackBase {
     }
 }
 
@@ -23677,6 +23936,16 @@ declare namespace mw {
          * @networkStatus usage:服务端
          */
         control(pawn: mw.Pawn): boolean;
+        /**
+         * @groups 角色系统/角色管理
+         * @description 被操控对象变更时触发的回调,用于处理操控对象变更后的角色逻辑
+         * @effect 只在客户端调用生效
+         * @param pawn usage:目标控制对象
+         * @Component
+         * ```
+         * @networkStatus usage:服务端
+         */
+        static onControlledCharacterChanged: mw.MulticastDelegate<(oldCharacter: mw.Character, newCharacter: mw.Character) => void>;
         /**
          * @groups 角色系统/角色管理
          * @description 控制角色

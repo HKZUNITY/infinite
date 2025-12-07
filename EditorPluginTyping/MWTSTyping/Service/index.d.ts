@@ -2110,6 +2110,27 @@ declare namespace mw {
         static asyncOpenAvatarEditorModule(extraInfo?: any): Promise<boolean>;
         /**
          * @groups 服务/货币
+         * @description 打开角编商城,同时打开赠礼卡片
+         * @effect 只在客户端调用生效
+         * @param ItemId usage: 赠品Id，目前认为MGS点击心愿单只会传入一个物品 [range: 注意ItemId由道具列表获得，商品为CommodityInfo]
+         * @param IsSelf usage: 检查主客态 default: false
+         * @param OtherUuid usage: 其他玩家的Uuid default: undefined [range: uuid]
+         * @param extraInfo usage: 额外的传参 default: undefined
+         * @returns 打开结果
+         */
+        static asyncOpenAvatarEditorModuleWitdGiftCard(ItemId: string, OtherUuid: string, IsSelf: boolean, extraInfo?: any): Promise<boolean>;
+        /**
+         *
+         * @groups 服务/货币
+         * @description 打开角编商城,同时打开赠礼卡片
+         * @effect 只在客户端调用生效
+         * @param OtherUuid usage: 其他玩家的Uuid default: undefined [range: uuid]
+         * @param extraInfo usage: 额外的传参 default: undefined
+         * @returns 打开结果
+         */
+        static asyncOpenAvatarEditorTryOn(OtherUuid: string, extraInfo?: any): Promise<boolean>;
+        /**
+         * @groups 服务/货币
          * @description 打开角编商城
          * @effect 只在客户端调用生效
          * @returns 异步void

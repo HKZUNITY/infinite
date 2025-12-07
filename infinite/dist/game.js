@@ -22654,6 +22654,9 @@ class HUDModuleS extends ModuleS {
     }
     async initWorldConfigDatas() {
         this.worldConfigDatas = await this.getCustomdata("WorldConfigData");
+        if (!this.worldConfigDatas) {
+            this.worldConfigDatas = [];
+        }
     }
     async syncWorldConfigData(player) {
         await this.initWorldConfigDatas();

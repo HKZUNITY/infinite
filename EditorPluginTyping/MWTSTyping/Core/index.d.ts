@@ -396,6 +396,12 @@ declare namespace mw {
          */
         stopMove(): void;
         /**
+         * @description 设置物体是否同步变换
+         * @effect 只在服务端调用生效
+         * @param bRep usage:是否同步变换
+         */
+        setRepTransform(bRep: boolean): void;
+        /**
          * @description 在指定时间内从当前缩放平滑变化至目标缩放
          * @effect 双端物体服务端调用生效，单端物体调用端生效
          * @param targetScale usage:目标缩放

@@ -577,7 +577,7 @@ declare namespace UGC {
      * }
      * ```
      */
-    function fastUploadTexture(texturePath: string, name: string, comment: string, uploadTextureType: UGC.UploadTextureType): Promise<FastUploadTextureResult>;
+    function fastUploadTexture(texturePath: string, name: string, comment: string, uploadTextureType: UGC.UploadTextureType, price?: number, tabId?: number[], extraData?: string, bizLine?: string, commonReqVO?: string, tags?: string): Promise<FastUploadTextureResult>;
     /**
     * @author boxin.liu
     * @groups DATATYPE
@@ -734,6 +734,29 @@ declare namespace UGC {
      * ```
      */
     function fastUploadPrefab(assetId: string, imagePath: string, name: string, comment: string, isReplaceGameThumb?: boolean, price?: number, tabId?: number[], extraData?: string, bizLine?: string, commonReqVO?: string, tags?: string): Promise<UploadPrefabResult>;
+    /**
+     * @author ruichen.wang
+     * @groups 基础类型
+     * @description 更新预制体Icon
+     * @effect 调用端生效
+     * @precautions 异步请求
+     * @param imagePath usage:本地Icon路径
+     * @returns {Promise<UploadPrefabResult>} 更新结果
+     * @example
+     * 使用示例:调用方法 新建一个脚本 NewScript
+     * ```
+     * @Component
+     * export default class NewScript extends Script {
+     *   //当脚本被实例后，会在第一帧更新前调用此函数
+     *   protected onStart(): void {
+     *     UGC.updatePrefabIcon('C:/icon.png').then(item =>{
+     *        console.log(item)
+     *     });
+     *   }
+     * }
+     * ```
+     */
+    function updatePrefabIcon(imagePath: string): Promise<UploadPrefabResult>;
     /**
      * @author tangbin.zhang
      * @groups 基础类型
@@ -1277,9 +1300,58 @@ declare namespace UGC {
      * @precautions 只在编辑模式下调用生效，标记的的源物体不要删除，否则会导致生成的 Asset 异常。
      * @param gameObjectId 根节点的 gameObjectId
      * @param bGenerateAsset 是否生成 Asset。标记过 true 的，在标记 false 或者源物体被删除后会删除资源。
+     * @param bManualDelete 是否手动删除。如果为 true，在源物体删除时，不会自动删除资源。default:false
      * @returns
      */
-    function setAutoCreateRuntimeAsset(gameObjectId: string, bGenerateAsset: boolean): string;
+    function setAutoCreateRuntimeAsset(gameObjectId: string, bGenerateAsset: boolean, bManualDelete?: boolean): string;
+    /**
+     * @author hexuan.zhang
+     * @description 绘制高密度区域
+     * @groups SCRIPTING
+     * @effect 只在客户端调用生效
+     * @param bDraw usage: 是否绘制高密度区域
+     */
+    function drawHighDensityArea(bDraw?: boolean): void;
+    /**
+     * @author hexuan.zhang
+     * @description 设置Actor权重
+     * @groups SCRIPTING
+     * @effect 只在客户端调用生效
+     * @param guid usage: Actor的GUID
+     * @param weight usage: 权重值
+     */
+    function setActorWeight(guid: string, weight: number): void;
+    /**
+     * @author hexuan.zhang
+     * @description 密度区域信息
+     * @groups DATATYPE
+     */
+    class DensityAreaInfo {
+        /** 区域中心点 */
+        center: mw.Vector;
+        /** 区域边界大小 */
+        size: mw.Vector;
+        /** 区域权重 */
+        weight: number;
+        guids: string[];
+        constructor(center?: mw.Vector, size?: mw.Vector, weight?: number, areaId?: string, isActive?: boolean);
+    }
+    /**
+     * @author hexuan.zhang
+     * @description 获取密度区域信息
+     * @groups SCRIPTING
+     * @effect 只在客户端调用生效
+     * @returns 密度区域信息数组
+     */
+    function getDensityArea(bonlyHighDensity?: boolean): DensityAreaInfo[];
+    /**
+     * @author hexuan.zhang
+     * @description 获取密度区域更新
+     * @groups SCRIPTING
+     * @effect 只在客户端调用生效
+     * @returns 是否更新
+     */
+    function getDensityAreaUpdate(): boolean;
     /**
      * @author dashan.wang
      * @description 序列化对象数据，撤销恢复用

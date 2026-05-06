@@ -3,6 +3,1524 @@
 
 declare namespace mw {
     /**
+     * @author jie.zheng
+     * @groups 玩法/BTA动画
+     * @description BTA材质插槽，用于管理BTAModel的材质属性
+     * @networkStatus usage:双端
+     */
+    class BTAMaterialSlot {
+        /**
+         * @description 构造函数
+         * @param index usage: 材质插槽索引 range: 大于等于0 type: 整数
+         * @param model usage: 所属的BTAModel
+         */
+        constructor(index: number, model: BTAModel);
+        /**
+         * @description 获取材质颜色
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @returns 材质颜色
+         */
+        get color(): mw.LinearColor;
+        /**
+         * @description 设置材质颜色
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param value usage: 材质颜色
+         */
+        set color(value: mw.LinearColor);
+        /**
+         * @description 重置材质到默认状态
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         */
+        reset(): void;
+        /**
+         * @description 获取材质实例
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @returns 材质实例
+         */
+        getMaterialInstance(): mw.MaterialInstance;
+    }
+    /**
+     * @author jie.zheng
+     * @groups 玩法/BTA动画
+     * @description BTA模型，支持材质动画的静态网格体
+     * @networkStatus usage:双端
+     * @precautions BTA模型专门用于材质动画，继承了基础物理和材质功能
+     */
+    class BTAModel extends mw.GameObject {
+        /**
+         * @description 触摸开始事件
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         */
+        onTouchDelegate: mw.MulticastDelegate<(other: mw.GameObject, hitResult: mw.HitResult) => void>;
+        /**
+         * @description 触摸结束事件
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         */
+        onTouchEndDelegate: mw.MulticastGameObjectDelegate;
+        /**
+         * @description 进入BTAModel事件，HitResult为临时对象，请勿持有其引用
+         * @effect 调用端生效
+         */
+        get onTouch(): mw.MulticastDelegate<(go: mw.GameObject, hitResult: mw.HitResult) => unknown>;
+        /**
+         * @description 离开Model事件
+         */
+        get onTouchEnd(): mw.MulticastGameObjectDelegate;
+        /**
+         * @description 初始化方法
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         */
+        protected onStart(): void;
+        /**
+         * @description 加载动画资源
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param assetId usage: 动画资源ID range: 资源ID字符串
+         * @returns 动画对象
+         */
+        loadAnimation(assetId: string): mw.Animation;
+        /**
+         * @description 播放动画
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param animation usage: 动画对象
+         * @returns 是否播放成功
+         */
+        playAnimation(animation: mw.Animation): boolean;
+        /**
+         * @description 停止动画
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param animation usage: 动画对象
+         * @returns 是否停止成功
+         */
+        stopAnimation(animation: mw.Animation): boolean;
+        /**
+         * @description 暂停动画
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param animation usage: 动画对象
+         * @returns 是否暂停成功
+         */
+        pauseAnimation(animation: mw.Animation): boolean;
+        /**
+         * @description 恢复动画
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param animation usage: 动画对象
+         * @returns 是否恢复成功
+         */
+        resumeAnimation(animation: mw.Animation): boolean;
+        /**
+         * @description 检查动画是否正在播放
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param animation usage: 动画对象
+         * @returns 是否正在播放
+         */
+        isAnimationPlaying(animation: mw.Animation): boolean;
+        /**
+         * @description 获取当前播放的动画
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @returns 当前播放的动画对象
+         */
+        getCurrentAnimation(): mw.Animation;
+        /**
+         * @description 设置BTA静态网格资源
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param assetGuid usage: BTA资源GUID range: 资源GUID字符串
+         */
+        setBTAStaticMesh(assetGuid: string): void;
+        /**
+         * @description 获取是否开启物理模拟
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 物理模拟开启状态
+         */
+        get physicsEnabled(): boolean;
+        /**
+         * @description 设置是否开启物理模拟
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage: 物理模拟开启状态
+         */
+        set physicsEnabled(value: boolean);
+        /**
+         * @description 获取是否使用质量
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 是否使用质量
+         */
+        get massEnabled(): boolean;
+        /**
+         * @description 设置是否启用质量
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage:是否启用质量
+         */
+        set massEnabled(value: boolean);
+        /**
+         * @description 获取质量大小
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 质量大小
+         */
+        get mass(): number;
+        /**
+         * @description 设置质量大小
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage:质量大小
+         */
+        set mass(value: number);
+        /**
+         * @description 获取密度大小
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 密度大小
+         */
+        get density(): number;
+        /**
+         * @description 设置密度大小
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage:密度大小
+         */
+        set density(value: number);
+        /**
+         * @description 获取质心偏移
+         * @description 质心是物体质量的中心，对质心进行偏移时，会影响物体在运动时的形态，但不会影响物体自身的变换
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 质心偏移
+         */
+        get centerOfMass(): mw.Vector;
+        /**
+         * @description 设置质心偏移
+         * @description 质心是物体质量的中心，对质心进行偏移时，会影响物体在运动时的形态，但不会影响物体自身的变换
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage:质心偏移
+         */
+        set centerOfMass(value: mw.Vector);
+        /**
+         * @description 获取线性速度(仅开启模拟时生效)
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 物理线速度
+         */
+        get physicsLinearVelocity(): mw.Vector;
+        /**
+         * @description 设置需要叠加的线性速度(仅开启模拟时生效)
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage:物理线速度大小
+         */
+        set physicsLinearVelocity(value: mw.Vector);
+        /**
+         * @description 获取角速度(仅开启模拟时生效)
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 物理角速度
+         */
+        get physicsAngularVelocity(): mw.Vector;
+        /**
+         * @description 设置需要叠加的角速度(仅开启模拟时生效)
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage:物理角速度大小
+         */
+        set physicsAngularVelocity(value: mw.Vector);
+        /**
+         * @description 给开启物理模拟的模型添加一个冲量力
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param impulse usage:设置冲量力大小和方向
+         * @param velChange usage:是否忽视模型自身质量的影响 default:false
+         */
+        addImpulse(impulse: mw.Vector, velChange?: boolean): void;
+        /**
+         * @description 给开启物理模拟的模型添加一个力
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param force usage:设置力大小和方向
+         * @param velChange usage:是否忽视模型自身质量的影响 default:false
+         */
+        addForce(force: mw.Vector, velChange?: boolean): void;
+        /**
+         * @description 给开启物理模拟的模型添加一个扭力
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param torque usage:设置扭力大小和方向
+         * @param velChange usage:是否忽视模型自身质量的影响 default:false
+         */
+        addTorque(torque: mw.Vector, velChange?: boolean): void;
+        /**
+         * @description 给开启物理模拟的模型添加一个角冲量
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param impulse usage:设置角冲量大小和方向
+         * @param velChange usage:是否忽视模型自身质量的影响 default:false
+         */
+        addAngularImpulse(impulse: mw.Vector, velChange?: boolean): void;
+        /**
+         * @description 获取对应的碰撞组
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 对应碰撞组
+         */
+        get collisionGroup(): string;
+        /**
+         * @description 设置碰撞组
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param value usage: 碰撞组
+         */
+        set collisionGroup(value: string);
+        /**
+         * @description 是否开启碰撞
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @returns 是否开启碰撞
+         */
+        get collisionEnabled(): boolean;
+        /**
+         * @description 模型是否与其它对象进行碰撞交互
+         * @groups 玩法/物理
+         * @effect 调用端生效
+         * @param status usage: 是否与其它对象进行碰撞交互
+         */
+        set collisionEnabled(status: boolean);
+        /**
+         * @description 是否开启空间查询
+         * @effect 调用端生效
+         * @returns 是否开启空间查询
+         */
+        get queryEnabled(): boolean;
+        /**
+         * @description 在空间查询模型是否纳入检测范围
+         * @effect 调用端生效
+         * @param status usage: 在空间查询模型是否纳入检测范围
+         */
+        set queryEnabled(status: boolean);
+        /**
+         * @description Touched和TouchEnded事件是否在模型上触发
+         * @effect 调用端生效
+         * @returns Touched和TouchEnded事件是否在模型上触发
+         */
+        get touchEnabled(): boolean;
+        /**
+         * @description Touched和TouchEnded事件是否在模型上触发
+         * @effect 调用端生效
+         * @param status usage: Touched和TouchEnded事件是否在模型上触发
+         */
+        set touchEnabled(status: boolean);
+        /**
+         * @description 设置碰撞状态
+         * @effect 调用端生效
+         * @param status usage: 碰撞状态（Type.CollisionStatus 或者 mw.PropertyStatus）
+         * @param propagateToChildren usage: 是否传递给子节点 default: false
+         */
+        setCollision(status: mw.PropertyStatus | mw.CollisionStatus, propagateToChildren?: boolean): void;
+        /**
+         * @description 返回碰撞状态
+         * @effect 调用端生效
+         * @returns 碰撞状态
+         */
+        getCollision(): mw.PropertyStatus | mw.CollisionStatus;
+        /**
+         * @description 返回碰撞响应状态
+         * @effect 调用端生效
+         * @param channel usage: 碰撞通道
+         * @returns 碰撞响应状态
+         */
+        getCollisionResponse(channel: mw.CollisionChannel): mw.PropertyStatus | mw.CollisionResponse;
+        /**
+         * @description 设置碰撞响应状态
+         * @effect 调用端生效
+         * @param channel usage: 碰撞通道
+         * @param response usage: 碰撞响应状态
+         */
+        setCollisionResponse(channel: mw.CollisionChannel, response: mw.CollisionResponse): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 获取角色碰撞形状（胶囊体型、球型、盒型）。角色碰撞盒形状的大小，决定角色与场景对象交互时检测碰撞范围的大小。
+         * 垂直胶囊体：XY取最小为胶囊体直径，Z为胶囊体高度
+         * 水平胶囊体：XY取最大为胶囊体长度，Z为胶囊体直径
+         * 盒体：XYZ为盒体长宽高
+         * 球体：XYZ取最大为球体直径
+         * @effect 调用端生效
+         * @returns 碰撞形状。
+         * @example 使用示例: 获取并打印碰撞形状
+         * ```ts
+         * console.log(model.collisionShape);
+         * ```
+         */
+        get collisionShape(): mw.CustomShapeType;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置角色碰撞形状（胶囊体型、球型、盒型）
+         * @effect 调用端生效
+         * @param CustomShapeType usage: 碰撞形状。
+         * @networkStatus usage:双端
+         */
+        set collisionShape(CustomShapeType: mw.CustomShapeType);
+        /**
+         * @groups 角色系统/角色
+         * @description 获取包裹角色碰撞体的形状大小。角色碰撞盒形状的大小，决定角色与场景对象交互时检测碰撞范围的大小。
+         * @effect 调用端生效
+         * @returns 形状大小。
+         * @example 使用示例: 获取并打印碰撞形状大小
+         * ```ts
+         * console.log(model.collisionExtent);
+         * ```
+         */
+        get collisionExtent(): mw.Vector;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置包裹角色碰撞体的形状大小
+         * @effect 调用端生效
+         * @param extent usage: 形状大小。
+         * @networkStatus usage:双端
+         */
+        set collisionExtent(extent: mw.Vector);
+        /**
+         * @description 设置碰撞形状及其大小
+         * @effect 调用端生效
+         * @param shapeType usage: 碰撞形状
+         * @param collisionExtent usage: 形状大小
+         */
+        setCollisionShapeAndExtent(shapeType: mw.CustomShapeType, collisionExtent: mw.Vector): void;
+        /**
+         * @description 与摄像机之间超出此距离的对象将被剪裁
+         * @effect 只在客户端调用生效
+         * @param inCullDistance usage:裁剪距离 range: 建议 (2000, 4000)  type: 浮点数
+         */
+        setCullDistance(inCullDistance: number): void;
+        /**
+         * @description 获取材质实例
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param index usage: 材质索引 range: 大于等于0 type: 整数
+         * @returns 材质实例
+         */
+        getMaterialInstance(index: number): mw.MaterialInstance;
+        /**
+         * @description 获取所有材质插槽
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @returns 返回材质插槽数组
+         */
+        getAllMaterialSlots(): Array<BTAMaterialSlot>;
+        /**
+         * @description 获取指定索引的材质插槽
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param index usage: 材质插槽索引 range: 大于等于0 type: 整数
+         * @returns 返回指定索引的材质插槽
+         */
+        getMaterialSlot(index: number): BTAMaterialSlot;
+        /**
+         * @description BTAModel颜色
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @returns BTAModel颜色
+         */
+        get color(): mw.LinearColor;
+        /**
+         * @description 设置BTAModel的颜色
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         * @param value usage: BTAModel颜色
+         */
+        set color(value: mw.LinearColor);
+        /**
+         * @description 获取是否开启阴影
+         * @groups 玩法/渲染
+         * @effect 调用端生效
+         * @returns 阴影开启状态
+         */
+        get castShadow(): boolean;
+        /**
+         * @description 设置阴影开启状态
+         * @groups 玩法/渲染
+         * @effect 调用端生效
+         * @param value usage:阴影开启状态
+         */
+        set castShadow(value: boolean);
+        /**
+         * @description 获取模型单层透明度
+         * @groups 玩法/渲染
+         * @effect 调用端生效
+         * @returns 获取透明度
+         */
+        get opacity(): number;
+        /**
+         * @description 设置模型单层透明度
+         * @groups 玩法/渲染
+         * @effect 调用端生效
+         * @param value usage:透明度[0,1]
+         */
+        set opacity(value: number);
+        /**
+         * @description 设置对象描边及描边颜色
+         * @groups 玩法/渲染
+         * @effect 调用端生效
+         * @param enabled usage: 是否开启描边
+         * @param color usage: 设置描边颜色 default: mw.LinearColor.black
+         * @param width usage: 设置描边宽度 default: 2 range: 大于等于0 type: 浮点数
+         */
+        setPostProcessOutline(enabled: boolean, color?: mw.LinearColor, width?: number): void;
+        /**
+         * @description 根据网络状态初始化物体碰撞
+         * @groups 玩法/BTA动画
+         * @effect 调用端生效
+         */
+        initialize(): void;
+    }
+}
+
+declare namespace mw {
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型的父类
+     * @description 自定义模型提供了基础的模型管理功能，包括可见性控制、类名获取等。
+     * @description 主要功能包括：
+     * @description - 设置静态网格组件可见性
+     * @description - 获取Actor类名和模型类型名称
+     * @description - 设置自定义静态网格资源
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"CustomModelExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建自定义模型。代码如下：
+     * ```
+     * @Component
+     * export default class CustomModelExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateCustomModel");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateCustomModel", () => {
+     *                 // 创建自定义模型
+     *                 let customModel = GameObject.spawn("CustomModel", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as CustomModel;
+     *
+     *                 // 设置可见性
+     *                 customModel.bShowStaticMeshComponent = true;
+     *
+     *                 // 获取类名
+     *                 console.log("Actor类名: " + customModel.actorClassName);
+     *                 console.log("模型类型: " + customModel.modelTypeName);
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class CustomModel extends mw.Model {
+        /**
+         * @description 设置静态网格组件可见性
+         * @param bVisible usage: 是否可见 default: false range: 无
+         * @effect 调用端生效
+         */
+        set bShowStaticMeshComponent(bVisible: boolean);
+        /**
+         * @description 获取Actor类名
+         * @returns Actor类名字符串
+         * @effect 调用端生效
+         */
+        get actorClassName(): string;
+        /**
+         * @description 获取模型类型名称
+         * @returns 模型类型名称字符串
+         * @effect 调用端生效
+         */
+        get modelTypeName(): string;
+        /**
+         * @description 设置自定义静态网格资源
+         * @description 将ProceduralModel的程序化网格Actor设置到当前自定义模型中
+         * @description 注意：需要确保传入的ProceduralModel与当前模型的Guid相对应
+         * @param proceduralModel usage:程序化模型实例或其子类实例，直接传递其内部的ProceduralMeshActor default: 无 range: 无
+         * @effect 调用端生效
+         */
+        setCustomStaticMesh(proceduralModel: ProceduralModel): void;
+        /**
+         * @description 设置自定义参数映射
+         * @param params usage: 参数Map或对象字典（key与value均为字符串） default: 无 range: 无
+         * @effect 调用端生效
+         */
+        set parameters(params: Map<string, string> | Record<string, string>);
+        /**
+         * @description 获取自定义参数映射
+         * @returns 参数Map（key与value均为字符串）
+         * @effect 调用端生效
+         */
+        get parameters(): Map<string, string>;
+        /**
+         * @description 以方法形式设置参数映射（与属性 setter 等价）
+         * @param params usage: 参数Map或对象字典（key与value均为字符串） default: 无 range: 无
+         * @effect 调用端生效
+         */
+        setParameters(params: Map<string, string> | Record<string, string>): void;
+        /**
+         * @description 以方法形式获取参数映射（与属性 getter 等价）
+         * @returns 参数Map（key与value均为字符串）
+         * @effect 调用端生效
+         */
+        getParameters(): Map<string, string>;
+        /**
+         * @description 检查参数是否相同
+         * @param newModelType usage: 新的模型类型名称 default: 无 range: 无
+         * @param newParameters usage: 新的参数映射（Map或对象字典） default: 无 range: 无
+         * @returns 如果模型类型和参数都相同则返回true，否则返回false
+         * @effect 调用端生效
+         */
+        areParametersSame(newModelType: string, newParameters: Map<string, string> | Record<string, string>): boolean;
+        /**
+         * @description 生成新本地资源GUID
+         * @effect 调用端生效
+         */
+        generateNewLocalAssetGuid(): void;
+        /**
+         * @description 从资源GUID深拷贝
+         * @effect 调用端生效
+         * @param sourceGuid usage: 源资源GUID字符串 default: 无 range: 无
+         */
+        deepCopyFromAssetGuid(sourceGuid: string): void;
+        /**
+         * @description 创建独立实例（写时复制核心接口）
+         * @description 调用后会生成新 GUID，切断与预设的联系
+         * @effect 调用端生效
+         */
+        createCustomModelInstance(): void;
+        /**
+         * @description 重置独立状态
+         * @effect 调用端生效
+         */
+        resetUniqueState(): void;
+        /**
+         * @description 查询是否已经是独立实例
+         * @effect 调用端生效
+         * @returns 如果已经是独立实例则返回true，否则返回false
+         */
+        isUniqueInstance(): boolean;
+        /**
+         * @description 切换模型类型
+         * @effect 调用端生效
+         * @param newModelTypeName usage: 新的模型类型名称 default: 无 range: 无
+         */
+        setModelType(newModelTypeName: string): void;
+        /**
+         * @description 设置单个参数
+         * @effect 调用端生效
+         * @param key usage: 参数键 default: 无 range: 无
+         * @param value usage: 参数值 default: 无 range: 无
+         */
+        setParameter(key: string, value: string): void;
+        /**
+         * @description 获取单个参数值
+         * @effect 调用端生效
+         * @param key usage: 参数键 default: 无 range: 无
+         * @returns 参数值字符串，未找到时返回空串
+         */
+        getParameter(key: string): string;
+        /**
+         * @description 清空全部参数
+         * @effect 调用端生效
+         */
+        clearParameters(): void;
+        /**
+         * @description 获取是否启用精简物理（简单碰撞）
+         * @description 注意：此方法保留用于 TypeScript 接口兼容性，实际使用父类的 bSimulatePhysics 和 bWeld
+         * @effect 调用端生效
+         * @returns 是否启用精简物理
+         */
+        getUseSimplePhysics(): boolean;
+        /**
+         * @description 设置是否启用精简物理（简单碰撞）
+         * @description 注意：此方法保留用于 TypeScript 接口兼容性，实际使用父类的 bSimulatePhysics 和 bWeld
+         * @effect 调用端生效
+         * @param bEnabled usage: 是否启用精简物理 default: false range: 无
+         */
+        setUseSimplePhysics(bEnabled: boolean): void;
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的自定义圆角立方体
+     * @description 自定义圆角立方体是CustomModel的子类，提供了更高级的圆角立方体功能。
+     * @description 主要功能包括：
+     * @description - 继承CustomModel的所有基础功能
+     * @description - 提供自定义的圆角立方体实现
+     * @description - 支持更复杂的几何体操作
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"CustomBevelCubeExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建自定义圆角立方体。代码如下：
+     * ```
+     * @Component
+     * export default class CustomBevelCubeExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateCustomBevelCube");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateCustomBevelCube", () => {
+     *                 // 创建自定义圆角立方体
+     *                 let customBevelCube = GameObject.spawn("CustomBevelCube", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as CustomBevelCube;
+     *
+     *                 // 设置可见性
+     *                 customBevelCube.bShowStaticMeshComponent = true;
+     *
+     *                 console.log("自定义圆角立方体创建完成");
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class CustomBevelCube extends CustomModel {
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的自定义圆锥
+     * @description 自定义圆锥是CustomModel的子类，提供了更高级的圆锥功能。
+     * @description 主要功能包括：
+     * @description - 继承CustomModel的所有基础功能
+     * @description - 提供自定义的圆锥实现
+     * @description - 支持更复杂的几何体操作
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"CustomPyramidExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建自定义圆锥。代码如下：
+     * ```
+     * @Component
+     * export default class CustomPyramidExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateCustomPyramid");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateCustomPyramid", () => {
+     *                 // 创建自定义圆锥
+     *                 let customPyramid = GameObject.spawn("CustomPyramid", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as CustomPyramid;
+     *
+     *                 // 设置可见性
+     *                 customPyramid.bShowStaticMeshComponent = true;
+     *
+     *                 console.log("自定义圆锥创建完成");
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class CustomPyramid extends CustomModel {
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的自定义圆台
+     * @description 自定义圆台是CustomModel的子类，提供了更高级的圆台功能。
+     * @description 主要功能包括：
+     * @description - 继承CustomModel的所有基础功能
+     * @description - 提供自定义的圆台实现
+     * @description - 支持更复杂的几何体操作
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"CustomFrustumExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建自定义圆台。代码如下：
+     * ```
+     * @Component
+     * export default class CustomFrustumExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateCustomFrustum");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateCustomFrustum", () => {
+     *                 // 创建自定义圆台
+     *                 let customFrustum = GameObject.spawn("CustomFrustum", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as CustomFrustum;
+     *
+     *                 // 设置可见性
+     *                 customFrustum.bShowStaticMeshComponent = true;
+     *
+     *                 console.log("自定义圆台创建完成");
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class CustomFrustum extends CustomModel {
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的自定义空心棱柱
+     * @description 自定义空心棱柱是CustomModel的子类，提供了更高级的空心棱柱功能。
+     * @description 主要功能包括：
+     * @description - 继承CustomModel的所有基础功能
+     * @description - 提供自定义的空心棱柱实现
+     * @description - 支持更复杂的几何体操作
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"CustomHollowPrismExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建自定义空心棱柱。代码如下：
+     * ```
+     * @Component
+     * export default class CustomHollowPrismExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateCustomHollowPrism");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateCustomHollowPrism", () => {
+     *                 // 创建自定义空心棱柱
+     *                 let customHollowPrism = GameObject.spawn("CustomHollowPrism", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as CustomHollowPrism;
+     *
+     *                 // 设置可见性
+     *                 customHollowPrism.bShowStaticMeshComponent = true;
+     *
+     *                 console.log("自定义空心棱柱创建完成");
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class CustomHollowPrism extends CustomModel {
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的自定义多边形圆环
+     * @description 自定义多边形圆环是CustomModel的子类，提供了更高级的多边形圆环功能。
+     * @description 主要功能包括：
+     * @description - 继承CustomModel的所有基础功能
+     * @description - 提供自定义的多边形圆环实现
+     * @description - 支持更复杂的几何体操作
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"CustomPolygonTorusExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建自定义多边形圆环。代码如下：
+     * ```
+     * @Component
+     * export default class CustomPolygonTorusExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateCustomPolygonTorus");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateCustomPolygonTorus", () => {
+     *                 // 创建自定义多边形圆环
+     *                 let customPolygonTorus = GameObject.spawn("CustomPolygonTorus", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as CustomPolygonTorus;
+     *
+     *                 // 设置可见性
+     *                 customPolygonTorus.bShowStaticMeshComponent = true;
+     *
+     *                 console.log("自定义多边形圆环创建完成");
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class CustomPolygonTorus extends CustomModel {
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 程序化模型的父类
+     * @description 程序化模型提供了动态生成几何体的功能，包括顶点、面、UV等数据的设置。
+     * @description 主要功能包括：
+     * @description - 设置程序化网格数据
+     * @description - 更新网格顶点、法线、UV坐标
+     * @description - 控制网格的可见性和碰撞
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"ProceduralModelExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建程序化模型。代码如下：
+     * ```
+     * @Component
+     * export default class ProceduralModelExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateProceduralModel");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateProceduralModel", () => {
+     *                 // 创建程序化模型
+     *                 let proceduralModel = GameObject.spawn("ProceduralModel", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as ProceduralModel;
+     *
+     *                 // 设置程序化网格数据
+     *                 let vertices = [
+     *                     new Vector(0, 0, 0),
+     *                     new Vector(100, 0, 0),
+     *                     new Vector(100, 100, 0),
+     *                     new Vector(0, 100, 0)
+     *                 ];
+     *                 let triangles = [0, 1, 2, 0, 2, 3];
+     *
+     *                 proceduralModel.setProceduralMeshData(vertices, triangles);
+     *                 console.log("程序化模型创建完成");
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class ProceduralModel extends mw.GameObject {
+        /**
+         * @description 设置程序化网格组件可见性
+         * @param bVisible usage: 是否可见 default: true range: 无
+         * @effect 调用端生效
+         */
+        set bShowProceduralMeshComponent(bVisible: boolean);
+        /**
+         * @description 设置程序化模型参数映射
+         * @param params usage: 参数Map或对象字典（key与value均为字符串） default: 无 range: 无
+         * @effect 调用端生效
+         */
+        set parameters(params: Map<string, string> | Record<string, string>);
+        /**
+         * @description 获取程序化模型参数映射
+         * @returns 参数Map（key与value均为字符串）
+         * @effect 调用端生效
+         */
+        get parameters(): Map<string, string>;
+        /**
+         * @description 以方法形式设置参数映射（与属性 setter 等价）
+         * @param params usage: 参数Map或对象字典（key与value均为字符串） default: 无 range: 无
+         * @effect 调用端生效
+         */
+        setParameters(params: Map<string, string> | Record<string, string>): void;
+        /**
+         * @description 以方法形式获取参数映射（与属性 getter 等价）
+         * @returns 参数Map（key与value均为字符串）
+         * @effect 调用端生效
+         */
+        getParameters(): Map<string, string>;
+        /**
+         * @description 设置单个参数键值
+         * @effect 调用端生效
+         * @param key usage: 参数键 default: 无 range: 无
+         * @param value usage: 参数值 default: 无 range: 无
+         */
+        setParameter(key: string, value: string): void;
+        /**
+         * @description 获取单个参数值
+         * @effect 调用端生效
+         * @param key usage: 参数键 default: 无 range: 无
+         * @returns 参数值字符串，未找到时返回空串
+         */
+        getParameter(key: string): string;
+        /**
+         * @description 清空全部参数
+         * @effect 调用端生效
+         */
+        clearParameters(): void;
+        /**
+         * @description 保存当前参数（同步到默认/持久化容器，取决于底层实现）
+         * @effect 调用端生效
+         */
+        saveCurrentParameters(): void;
+        /**
+         * @description 设置程序化模型材质（使用资源ID）。命名避免与父类 setMaterial 冲突。
+         * @effect 调用端生效
+         * @param materialID usage: 材质资源ID default: 无 range: 资源ID字符串
+         */
+        setProceduralMaterial(materialID: string): void;
+        /**
+         * @description 获取是否使用复杂碰撞
+         * @description 碰撞类型：true=复杂碰撞（精确但性能较低）, false=简单碰撞（快速但不够精确）
+         * @returns 是否使用复杂碰撞，默认值为true
+         * @effect 调用端生效
+         */
+        get bUseComplexCollision(): boolean;
+        /**
+         * @description 设置是否使用复杂碰撞
+         * @description 碰撞类型：true=复杂碰撞（精确但性能较低）, false=简单碰撞（快速但不够精确）
+         * @param bUseComplexCollision usage: 是否使用复杂碰撞 default: true range: 无
+         * @effect 调用端生效
+         */
+        set bUseComplexCollision(bUseComplexCollision: boolean);
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的倒角立方体
+     * @description 倒角立方体是一个具有圆角边缘的立方体模型，可以通过参数调整尺寸和倒角效果。
+     * @description 主要功能包括：
+     * @description - 设置立方体的长宽高尺寸
+     * @description - 调整倒角段数和倒角半径
+     * @description - 控制模型的可见性和材质
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"BevelCubeExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建倒角立方体。代码如下：
+     * ```
+     * @Component
+     * export default class BevelCubeExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateBevelCube");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateBevelCube", () => {
+     *                 // 创建倒角立方体
+     *                 let bevelCube = GameObject.spawn("BevelCube", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as BevelCube;
+     *
+     *                 // 设置立方体尺寸
+     *                 bevelCube.setSize(new Vector(200, 200, 200));
+     *
+     *                 // 设置倒角参数
+     *                 bevelCube.bevelRadius = 20;
+     *                 bevelCube.bevelSegments = 8;
+     *
+     *                 console.log("倒角立方体创建完成，尺寸: " + bevelCube.size.toString());
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class BevelCube extends ProceduralModel {
+        /**
+         * @description 获取立方体长度
+         */
+        get cubeSize(): number;
+        /**
+         * @description 设置立方体长度
+         * @param NewCubeSize usage: 新的立方体长度 default: 无 range: 无 type: 浮点数
+         */
+        set cubeSize(NewCubeSize: number);
+        /**
+         * @description 获取倒角半径
+         */
+        get bevelRadius(): number;
+        /**
+         * @description 设置倒角半径
+         * @param NewBevelRadius usage: 新的倒角半径 default: 10.0f range: [0, 1/2 * cubeSize) type: 浮点数
+         */
+        set bevelRadius(NewBevelRadius: number);
+        /**
+         * @description 获取倒角段数
+         */
+        get bevelSegments(): number;
+        /**
+         * @description 设置倒角段数
+         * @param NewBevelSegments usage: 新的倒角段数 default: 100.0f range: 无 type: 整数
+         */
+        set bevelSegments(NewBevelSegments: number);
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的金字塔
+     * @description 金字塔是一个四棱锥模型，可以通过参数调整底面尺寸和高度。
+     * @description 主要功能包括：
+     * @description - 设置金字塔的底面尺寸和高度
+     * @description - 调整金字塔的几何参数
+     * @description - 控制模型的可见性和材质
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"PyramidExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建金字塔。代码如下：
+     * ```
+     * @Component
+     * export default class PyramidExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreatePyramid");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreatePyramid", () => {
+     *                 // 创建金字塔
+     *                 let pyramid = GameObject.spawn("Pyramid", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as Pyramid;
+     *
+     *                 // 设置金字塔尺寸
+     *                 pyramid.setSize(new Vector(200, 200, 300));
+     *
+     *                 console.log("金字塔创建完成，尺寸: " + pyramid.size.toString());
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class Pyramid extends ProceduralModel {
+        /**
+         * @description 获取金字塔底部半径
+         */
+        get baseRadius(): number;
+        /**
+         * @description 设置金字塔底部半径
+         * @param newBaseRadius usage: 新底部半径 default: 无 range: 无 type: 浮点数
+         */
+        set baseRadius(newBaseRadius: number);
+        /**
+         * @description 获取金字塔高度
+         */
+        get height(): number;
+        /**
+         * @description 设置金字塔高度
+         * @param newHeight usage: 新的金字塔高度 default: 无 range: 无 type: 浮点数
+         */
+        set height(newHeight: number);
+        /**
+         * @description 获取金字塔边数
+         */
+        get sides(): number;
+        /**
+         * @description 设置金字塔边数
+         * @param newSides usage: 新多边形边数 default: 无 range: 无 type: 整数
+         */
+        set sides(newSides: number);
+        /**
+         * @description 获取倒角半径
+         */
+        get bevelRadius(): number;
+        /**
+         * @description 设置倒角半径
+         * @param newBevelRadius usage: 新的倒角半径 default: 无 range: 小于1/2的CubeSize type: 浮点数
+         */
+        set bevelRadius(newBevelRadius: number);
+        /**
+         * @description 获取侧面光滑
+         * @description 侧面光滑（软边）
+         * @returns 是否启用侧面光滑，默认值为false
+         * @effect 调用端生效
+         */
+        get smoothSides(): boolean;
+        /**
+         * @description 设置侧面光滑
+         * @description 侧面光滑（软边）
+         * @param bSmoothSides usage: 是否启用侧面光滑 default: false range: 无
+         * @effect 调用端生效
+         */
+        set smoothSides(bSmoothSides: boolean);
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的截锥体
+     * @description 截锥体是一个具有上下底面的锥台模型，可以通过参数调整上下底面尺寸和高度。
+     * @description 主要功能包括：
+     * @description - 设置截锥体的上下底面尺寸和高度
+     * @description - 调整截锥体的几何参数
+     * @description - 控制模型的可见性和材质
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"FrustumExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建截锥体。代码如下：
+     * ```
+     * @Component
+     * export default class FrustumExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateFrustum");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateFrustum", () => {
+     *                 // 创建截锥体
+     *                 let frustum = GameObject.spawn("Frustum", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as Frustum;
+     *
+     *                 // 设置截锥体尺寸
+     *                 frustum.setSize(new Vector(200, 200, 300));
+     *
+     *                 console.log("截锥体创建完成，尺寸: " + frustum.size.toString());
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class Frustum extends ProceduralModel {
+        /**
+         * @description 获取顶部半径
+         */
+        get topRadius(): number;
+        /**
+         * @description 设置顶部半径
+         * @param newTopRadius usage: 新的顶部半径 default: 无 range: 无
+         */
+        set topRadius(newTopRadius: number);
+        /**
+         * @description 获取底部半径
+         */
+        get bottomRadius(): number;
+        /**
+         * @description 设置底部半径
+         * @param newBottomRadius usage: 新的底部半径 default: 无 range: 无
+         */
+        set bottomRadius(newBottomRadius: number);
+        /**
+         * @description 获取截锥体高度
+         */
+        get height(): number;
+        /**
+         * @description 设置截锥体高度
+         * @param newHeight usage: 新的截锥体高度 default: 无 range: 无
+         */
+        set height(newHeight: number);
+        /**
+         * @description 获取顶部边数
+         */
+        get topSides(): number;
+        /**
+         * @description 设置顶部边数
+         * @param newTopSides usage: 新的顶部边数 default: 无 range: 无
+         */
+        set topSides(newTopSides: number);
+        /**
+         * @description 获取底部边数
+         */
+        get bottomSides(): number;
+        /**
+         * @description 设置底部边数
+         * @param newBottomSides usage: 新的底部边数 default: 无 range: 无
+         */
+        set bottomSides(newBottomSides: number);
+        /**
+         * @description 获取高度段数
+         */
+        get heightSegments(): number;
+        /**
+         * @description 设置高度段数
+         * @param newHeightSegments usage: 新的高度段数 default: 无 range: 无
+         */
+        set heightSegments(newHeightSegments: number);
+        /**
+         * @description 获取倒角半径
+         */
+        get bevelRadius(): number;
+        /**
+         * @description 设置倒角半径
+         * @param newBevelRadius usage: 新的倒角半径 default: 无 range: 无
+         */
+        set bevelRadius(newBevelRadius: number);
+        /**
+         * @description 获取倒角段数
+         */
+        get bevelSegments(): number;
+        /**
+         * @description 设置倒角段数
+         * @param newBevelSegments usage: 新的倒角段数 default: 无 range: 无
+         */
+        set bevelSegments(newBevelSegments: number);
+        /**
+         * @description 获取弯曲量
+         */
+        get bendAmount(): number;
+        /**
+         * @description 设置弯曲量
+         * @param newBendAmount usage: 新的弯曲量 default: 无 range: [-1, 1]
+         */
+        set bendAmount(newBendAmount: number);
+        /**
+         * @description 获取最小弯曲半径
+         */
+        get minBendRadius(): number;
+        /**
+         * @description 设置最小弯曲半径
+         * @param newMinBendRadius usage: 新的最小弯曲半径 default: 无 range: 无
+         */
+        set minBendRadius(newMinBendRadius: number);
+        /**
+         * @description 获取弧角
+         */
+        get arcAngle(): number;
+        /**
+         * @description 设置弧角
+         * @param newArcAngle usage: 新的弧角 default: 无 range: 无 type: 浮点数
+         */
+        set arcAngle(newArcAngle: number);
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的空心棱柱
+     * @description 空心棱柱是一个具有空心结构的棱柱模型，可以通过参数调整外径、内径和高度。
+     * @description 主要功能包括：
+     * @description - 设置空心棱柱的外径、内径和高度
+     * @description - 调整空心棱柱的几何参数
+     * @description - 控制模型的可见性和材质
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"HollowPrismExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建空心棱柱。代码如下：
+     * ```
+     * @Component
+     * export default class HollowPrismExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreateHollowPrism");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreateHollowPrism", () => {
+     *                 // 创建空心棱柱
+     *                 let hollowPrism = GameObject.spawn("HollowPrism", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as HollowPrism;
+     *
+     *                 // 设置空心棱柱尺寸
+     *                 hollowPrism.setSize(new Vector(200, 200, 300));
+     *
+     *                 console.log("空心棱柱创建完成，尺寸: " + hollowPrism.size.toString());
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class HollowPrism extends ProceduralModel {
+        /**
+         * @description 获取内半径
+         */
+        get innerRadius(): number;
+        /**
+         * @description 设置内半径
+         * @param newInnerRadius usage: 新的内半径 default: 无 range: 无 type: 浮点数
+         */
+        set innerRadius(newInnerRadius: number);
+        /**
+         * @description 获取外半径
+         */
+        get outerRadius(): number;
+        /**
+         * @description 设置外半径
+         * @param newOuterRadius usage: 新的外半径 default: 无 range: 无 type: 浮点数
+         */
+        set outerRadius(newOuterRadius: number);
+        /**
+         * @description 获取棱柱高度
+         */
+        get height(): number;
+        /**
+         * @description 设置棱柱高度
+         * @param newHeight usage: 新的棱柱高度 default: 无 range: 无 type: 浮点数
+         */
+        set height(newHeight: number);
+        /**
+         * @description 获取外边数
+         */
+        get outerSides(): number;
+        /**
+         * @description 设置外边数
+         * @param newOuterSides usage: 新的外边数 default: 无 range: 无 type: 整数
+         */
+        set outerSides(newOuterSides: number);
+        /**
+         * @description 获取内边数
+         */
+        get innerSides(): number;
+        /**
+         * @description 设置内边数
+         * @param newInnerSides usage: 新的内边数 default: 无 range: 无 type: 整数
+         */
+        set innerSides(newInnerSides: number);
+        /**
+         * @description 获取弧角
+         */
+        get arcAngle(): number;
+        /**
+         * @description 设置弧角
+         * @param newArcAngle usage: 新的弧角 default: 无 range: 无 type: 浮点数
+         */
+        set arcAngle(newArcAngle: number);
+        /**
+         * @description 获取倒角半径
+         */
+        get bevelRadius(): number;
+        /**
+         * @description 设置倒角半径
+         * @param newBevelRadius usage: 新的倒角半径 default: 无 range: 无 type: 浮点数
+         */
+        set bevelRadius(newBevelRadius: number);
+        /**
+         * @description 获取倒角段数
+         */
+        get bevelSegments(): number;
+        /**
+         * @description 设置倒角段数
+         * @param newBevelSegments usage: 新的倒角段数 default: 无 range: 无
+         */
+        set bevelSegments(newBevelSegments: number);
+    }
+    /**
+     * @author chen.xiang
+     * @groups 玩法
+     * @description 自定义模型里的多边形环面
+     * @description 多边形环面是一个具有多边形截面的环面模型，可以通过参数调整外径、内径和边数。
+     * @description 主要功能包括：
+     * @description - 设置多边形环面的外径、内径和边数
+     * @description - 调整多边形环面的几何参数
+     * @description - 控制模型的可见性和材质
+     * @networkStatus usage:双端
+     * @precautions 物理相关接口目前版本不支持证多端同步
+     * @example
+     * 使用示例: 创建一个名为"PolygonTorusExample"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，你可以通过F1键动态创建多边形环面。代码如下：
+     * ```
+     * @Component
+     * export default class PolygonTorusExample extends Script {
+     *     protected async onStart(): Promise<void> {
+     *         if(SystemUtil.isClient()) {
+     *             InputUtil.onKeyDown(Keys.F1, () => {
+     *                 mw.Event.dispatchToServer("CreatePolygonTorus");
+     *             });
+     *         }
+     *         if(SystemUtil.isServer()) {
+     *             mw.Event.addClientListener("CreatePolygonTorus", () => {
+     *                 // 创建多边形环面
+     *                 let polygonTorus = GameObject.spawn("PolygonTorus", {
+     *                     transform: new Transform(new Vector(500, 0, 100), new Rotation(0, 0, 0), new Vector(1, 1, 1)),
+     *                     replicates: true
+     *                 }) as PolygonTorus;
+     *
+     *                 // 设置多边形环面尺寸
+     *                 polygonTorus.setSize(new Vector(200, 200, 300));
+     *
+     *                 console.log("多边形环面创建完成，尺寸: " + polygonTorus.size.toString());
+     *             });
+     *         }
+     *     }
+     * }
+     * ```
+     */
+    class PolygonTorus extends ProceduralModel {
+        /**
+         * @description 获取大半径（环面中心到管道中心的距离）
+         */
+        get majorRadius(): number;
+        /**
+         * @description 设置大半径（环面中心到管道中心的距离）
+         * @param newMajorRadius usage: 新的大半径 default: 无 range: 无 type: 浮点数
+         */
+        set majorRadius(newMajorRadius: number);
+        /**
+         * @description 获取小半径（管道的半径）
+         */
+        get minorRadius(): number;
+        /**
+         * @description 设置小半径（管道的半径）
+         * @param newMinorRadius usage: 新的小半径 default: 无 range: 无 type: 浮点数
+         */
+        set minorRadius(newMinorRadius: number);
+        /**
+         * @description 获取大半径方向的段数
+         */
+        get majorSegments(): number;
+        /**
+         * @description 设置大半径方向的段数
+         * @param newMajorSegments usage: 新的大半径段数 default: 无 range: 无
+         */
+        set majorSegments(newMajorSegments: number);
+        /**
+         * @description 获取小半径方向的段数
+         */
+        get minorSegments(): number;
+        /**
+         * @description 设置小半径方向的段数
+         * @param newMinorSegments usage: 新的小半径段数 default: 无 range: 无
+         */
+        set minorSegments(newMinorSegments: number);
+        /**
+         * @description 获取圆环角度
+         */
+        get torusAngle(): number;
+        /**
+         * @description 设置圆环角度
+         * @param newTorusAngle usage: 新的圆环角度 default: 无 range: 无 type: 浮点数
+         */
+        set torusAngle(newTorusAngle: number);
+        /**
+         * @description 获取横切面光滑
+         */
+        get smoothCrossSection(): boolean;
+        /**
+         * @description 设置横切面光滑
+         * @param newSmoothCrossSection usage: 新的横切面光滑状态 default: 无 range: 无
+         */
+        set smoothCrossSection(newSmoothCrossSection: boolean);
+        /**
+         * @description 获取竖面光滑
+         */
+        get smoothVerticalSection(): boolean;
+        /**
+         * @description 设置竖面光滑
+         * @param newSmoothVerticalSection usage: 新的竖面光滑状态 default: 无 range: 无
+         */
+        set smoothVerticalSection(newSmoothVerticalSection: boolean);
+    }
+}
+
+declare namespace mw {
+    /**
      * @author qiming.jiang
      * @groups 玩法/材质
      * @description Model插槽，执行材质相关操作
@@ -567,6 +2085,18 @@ declare namespace mw {
          */
         set opacity(value: number);
         /**
+         * @description 获取模型单层透明度是否受摄像机控制
+         * @effect 调用端生效
+         * @returns 获取透明度是否受摄像机控制
+         */
+        get bOpacityControlledByCamera(): boolean;
+        /**
+         * @description 设置模型单层透明度是否受摄像机控制
+         * @effect 调用端生效
+         * @param value usage:透明度是否受摄像机控制
+         */
+        set bOpacityControlledByCamera(value: boolean);
+        /**
          * @description Model颜色
          * @effect 调用端生效
          * @returns Model颜色
@@ -805,6 +2335,21 @@ declare namespace mw {
          */
         getCollision(): mw.PropertyStatus | mw.CollisionStatus;
         /**
+         * @description 返回碰撞响应状态
+         * @effect 调用端生效
+         * @param channel usage: 碰撞通道
+         * @returns 碰撞响应状态
+         */
+        getCollisionResponse(channel: mw.CollisionChannel): mw.PropertyStatus | mw.CollisionResponse;
+        /**
+         * @description 设置碰撞响应状态
+         * @effect 调用端生效
+         * @precautions 建议双端物体设置碰撞响应，单端物体设置碰撞响应可能会导致拉扯的情况
+         * @param channel usage: 碰撞通道
+         * @param response usage: 碰撞响应状态
+         */
+        setCollisionResponse(channel: mw.CollisionChannel, response: mw.CollisionResponse): void;
+        /**
          * @author qiming.jiang
          * @description 获取所有材质插槽
          * @effect 调用端生效
@@ -832,6 +2377,33 @@ declare namespace mw {
          * @returns 是否影响导航数据
          */
         get canAffectNavigation(): boolean;
+        /**
+         * @author shuhan.liu
+         * @description 获取模型资源包围球信息
+         * @effect 调用端生效
+         * @returns 球形边框信息
+         */
+        getBoxSphereBounds(): BoxSphereBounds;
+    }
+    /**
+     * @author shuhan.liu
+     * @groups 玩法/其他
+     * @description 球形边框信息
+     * @networkStatus usage:双端
+     */
+    class BoxSphereBounds {
+        /**
+         * @description 边界框和球体的原点
+         */
+        origin: mw.Vector;
+        /**
+         * @description 边界框范围
+         */
+        boxExtent: mw.Vector;
+        /**
+         * @description 包围球半径
+         */
+        sphereRadius: number;
     }
 }
 
@@ -1827,16 +3399,18 @@ declare namespace mw {
          * @effect 调用端生效
          * @param key usage: 要设置的参数
          * @param value usage: 要设置的值 type: 浮点型 range: 无
+         * @param bFromJsonBasicStance usage: 是否从Json基础姿态中设置 type: 布尔 range: true/false default: false
          */
-        setNumberParameter(key: StanceParam, value: number): void;
+        setNumberParameter(key: StanceParam, value: number, bFromJsonBasicStance?: boolean): void;
         /**
          * @groups 动画
          * @description 设置姿态的字符串参数，比如修改某个姿态的动画资源。
          * @effect 调用端生效
          * @param key usage: 要设置的参数
          * @param value usage: 要设置的AssetId range: 无
+         * @param bFromJsonBasicStance usage: 是否从Json基础姿态中设置 type: 布尔 range: true/false default: false
          */
-        setStringParameter(key: StanceParam, value: string): void;
+        setStringParameter(key: StanceParam, value: string, bFromJsonBasicStance?: boolean): void;
         /**
          * @groups 动画
          * @description 获取姿态的数值类参数
@@ -1853,6 +3427,17 @@ declare namespace mw {
          * @returns 对应参数的值，查询不到则返回undefined
          */
         getStringParameter(key: StanceParam): string;
+        /**
+         * @groups 动画
+         * @description 播放姿态动画序列
+         * @effect 调用端生效
+         * @param stanceParamKey usage: 姿态参数Key range: 无 type: StanceParam
+         * @param blendInTime usage: 混入时间 default: 0.25 range: 无 type: number
+         * @param blendOutTime usage: 混出时间 default: 0.25 range: 无 type: number
+         * @param inPlayRate usage: 播放速率 default: 1.0 range: 无 type: number
+         * @param loopCount usage: 循环次数 default: 1 range: 无 type: number
+         */
+        playStanceAnimSequence(stanceParamKey: StanceParam, blendInTime?: number, blendOutTime?: number, inPlayRate?: number, loopCount?: number): void;
         /**
          * @groups 动画
          * @description 姿态资源GUID
@@ -1900,6 +3485,31 @@ declare namespace mw {
          * ```
          */
         get assetId(): string;
+        /**
+         * @groups 动画
+         * @description 真实姿态资源GUID
+         * @example
+         * 使用示例:将使用到的资源:"234423,216081"拖入优先加载栏。创建一个名为"Example_Stance_RealAssetId"的脚本，放置在对象栏中，打开脚本，输入以下代码保存，运行游戏，在玩家角色上加载一个二次元男性基础姿态，你将在日志中看到真实姿态资源GUID。代码如下：
+         * ```
+         * @Component
+         * export default class Example_Stance_RealAssetId extends Script {
+         *     // 当脚本被实例后，会在第一帧更新前调用此函数
+         *     protected onStart(): void {
+         *         // 下列代码仅在客户端执行
+         *         if(SystemUtil.isClient()) {
+         *             // 获取当前客户端玩家
+         *             let myPlayer = Player.localPlayer;
+         *             // 获取玩家控制角色
+         *             let myCharacter = myPlayer.character;
+         *             // 给角色加载一个二次元男性基础姿态
+         *             let animeManStance = myCharacter.loadStance("234423");
+         *             console.log("animeManStance realAssetId " + animeManStance.realAssetId);
+         *         }
+         *     }
+         * }
+         * ```
+         */
+        get realAssetId(): string;
         /**
          * @groups 动画
          * @description 启用瞄准偏移
@@ -4778,6 +6388,28 @@ declare namespace mw {
         loadAnimation(assetId: string): mw.Animation;
         /**
          * @groups 角色系统/角色
+         * @description 根据当前关键帧数据生成动画资源并上传。
+         * @effect 调用端生效
+         * @param uploadParams usage: 上传参数range:字符串长度根据具体的参数而定
+         * @returns {Promise<{result: number, assetId: string}>} 上传结果与资源ID
+         */
+        uploadAnimation(uploadParams: string): Promise<{
+            result: number;
+            assetId: string;
+        }>;
+        /**
+         * @groups 角色系统/角色
+         * @description 根据当前基础姿态和覆盖数据构建基础姿态Json并上传
+         * @effect 调用端生效
+         * @param uploadParams usage: 上传参数 range: 无 type: string
+         * @returns {Promise<{result: number, assetId: string}>} 上传结果与资源ID
+         */
+        uploadJsonBasicStance(uploadParams: string): Promise<{
+            result: number;
+            assetId: string;
+        }>;
+        /**
+         * @groups 角色系统/角色
          * @description 头部追踪
          * @effect 只在客户端调用生效
          * @param target usage: 追踪点或者追踪对象
@@ -5061,6 +6693,216 @@ declare namespace mw {
          * @networkStatus usage:双端
          */
         setDescription(data: mw.CharacterDescription | Array<string> | string): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置V1角色外观数据。
+         * @effect 调用端生效
+         * @param assetId usage:资源id range:"资源id" type:字符串
+         * @param bRetainDynamicAttachment usage:是否保留动态挂件 range: 不做限制 type: 布尔值
+         * @networkStatus usage:双端
+         */
+        setDescriptionV1(assetId: string, bRetainDynamicAttachment: boolean): void;
+        /**
+        * @groups 角色系统/角色
+        * @description 设置角色是否开启了骨骼编辑能力。true表示角色可以编辑骨骼，false表示角色不可编辑骨骼。
+        * @effect 调用端生效
+        * @param value usage: 骨骼编辑能力。
+        * @networkStatus usage:双端
+        */
+        get bonesEditUseType(): mw.BonesEditUseType;
+        /**
+        * @groups 角色系统/角色
+        * @description 设置角色是否开启了骨骼编辑能力。true表示角色可以编辑骨骼，false表示角色不可编辑骨骼。
+        * @effect 调用端生效
+        * @param value usage: 骨骼编辑能力。
+        * @networkStatus usage:双端
+        */
+        set bonesEditUseType(value: mw.BonesEditUseType);
+        /**
+         * @groups 角色系统/角色
+         * @description 添加或更新指定骨骼的编辑变换
+         * @effect 调用端生效
+         * @param boneName usage: 骨骼名称 range: 不做限制 type: 字符串
+         * @param transform usage: 目标变换 range: 不做限制 type: 变换
+         * @networkStatus usage:双端
+         */
+        addBoneEdit(boneName: string, transform: mw.Transform): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 获取指定骨骼的编辑变换
+         * @effect 调用端生效
+         * @param boneName usage: 骨骼名称 range: 不做限制 type: 字符串
+         * @returns 骨骼编辑变换
+         * @networkStatus usage:双端
+         */
+        getBoneEdit(boneName: string): mw.Transform;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置骨骼编辑 IK 权重
+         * @effect 调用端生效
+         * @param IKType usage: IK 类型 range: 不做限制 type: mw.BoneEditIKType
+         * @param IKWeight usage: IK 权重 range: 不做限制 type: 数值
+         * @networkStatus usage:双端
+         */
+        setBoneEditIKWeight(IKType: mw.BoneEditIKType, IKWeight: number): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置骨骼编辑 IK 目标位置
+         * @effect 调用端生效
+         * @param IKType usage: IK 类型 range: 不做限制 type: mw.BoneEditIKType
+         * @param IKTargetLocation usage: IK 目标位置 range: 不做限制 type: 向量
+         * @param bWorldSpace usage: 是否在世界空间中 range: true/false type:
+         * @networkStatus usage:双端
+         */
+        setBoneEditIKTargetLocation(IKType: mw.BoneEditIKType, IKTargetLocation: mw.Vector, bWorldSpace: boolean): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置骨骼编辑 IK 关节旋转角度
+         * @effect 调用端生效
+         * @param IKType usage: IK 类型 range: 不做限制 type: mw.BoneEditIKType
+         * @param IKJointRotationAngle usage: IK 关节旋转角度 range: 不做限制 type: 数值
+         * @networkStatus usage:双端
+         */
+        setBoneEditIKAngle(IKType: mw.BoneEditIKType, IKJointRotationAngle: number): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 获取角色主网格体的世界位置
+         * @effect 调用端生效
+         * @param bWorld usage: 是否返回世界位置 range: true/false type:
+         * @returns 角色主网格体的世界位置
+         * @networkStatus usage:双端
+         */
+        getMeshLocation(bWorld: boolean): mw.Vector;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置角色主网格体的世界位置
+         * @effect 调用端生效
+         * @param location usage: 目标位置 range: 不做限制 type: 向量
+         * @param bWorld usage: 是否返回世界位置 range: true/false type:
+         * @networkStatus usage:双端
+         */
+        setMeshLocation(location: mw.Vector, bWorld: boolean): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 获取角色主网格体的世界旋转
+         * @effect 调用端生效
+         * @param bWorld usage: 是否返回世界位置 range: true/false type:
+         * @returns 角色主网格体的世界旋转
+         * @networkStatus usage:双端
+         */
+        getMeshRotation(bWorld: boolean): mw.Rotation;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置角色主网格体的世界旋转
+         * @effect 调用端生效
+         * @param rotation usage: 目标旋转 range: 不做限制 type: 旋转
+         * @param bWorld usage: 是否返回世界位置 range: true/false type:
+         * @networkStatus usage:双端
+         */
+        setMeshRotation(rotation: mw.Rotation, bWorld: boolean): void;
+        /**
+         * @groups 角色系统/角色
+         * @description 应用骨骼编辑数据
+         * @effect 调用端生效
+         * @param assetId usage: 骨骼编辑数据资源id range: 不做限制 type: 字符串
+         * @param bOnlyGetJsonString usage: 是否仅返回json字符串 default:false range: true/false type:
+         * @returns 完成的回调
+         * @networkStatus usage:双端
+         */
+        applyBonesEditData(assetId: string, bOnlyGetJsonString?: boolean): Promise<string>;
+        /**
+         * @groups 角色系统/角色
+         * @description 添加关键帧
+         * @effect 调用端生效
+         * @param index usage: 关键帧索引 default:-1,添加到最后关键帧的下一帧 range: 不做限制 type: 整数
+         * @returns 关键帧数组（帧索引升序）
+         * @networkStatus usage:双端
+         */
+        addKeyframe(index?: number): number[];
+        /**
+         * @groups 角色系统/角色
+         * @description 删除指定索引的关键帧
+         * @effect 调用端生效
+         * @param index usage: 关键帧索引 default: -1,删除最后关键帧 range: 不做限制 type: 整数
+         * @returns 关键帧数组（帧索引升序）
+         * @networkStatus usage:双端
+         */
+        removeKeyframe(index?: number): number[];
+        /**
+         * @groups 角色系统/角色
+         * @description 修改指定索引的关键帧为当前角色骨骼姿势
+         * @effect 调用端生效
+         * @param index usage: 要修改的关键帧帧索引 range: 大于等于0 type: 整数
+         * @returns 关键帧数组（帧索引升序）
+         * @networkStatus usage:双端
+         */
+        modifyKeyframe(index: number): number[];
+        /**
+         * @groups 角色系统/角色
+         * @description 将关键帧从一个索引移动到另一个索引
+         * @effect 调用端生效
+         * @param fromIndex usage: 源关键帧索引 range: 大于等于0 type: 整数
+         * @param toIndex usage: 目标关键帧索引 range: 大于等于0 type: 整数
+         * @param shiftFrames usage: 帧偏移量 default:1 range: 大于等于1 type: 整数
+         * @returns 新旧索引映射（NewIndex→OldIndex）
+         * @networkStatus usage:双端
+         */
+        moveKeyframe(fromIndex: number, toIndex: number, shiftFrames?: number): Map<number, number>;
+        /**
+         * @groups 角色系统/角色
+         * @description 设置指定关键帧与其后一关键帧的帧间隔；若为最后一帧则不处理
+         * @effect 调用端生效
+         * @param index usage: 关键帧索引 range: 大于等于0 type: 整数
+         * @param intervalFrames usage: 帧间隔 range: 大于等于0 type: 整数
+         * @note 帧率参数内部维护
+         * @returns 关键帧数组（帧索引升序）
+         * @networkStatus usage:双端
+         */
+        setKeyframesInterval(index: number, intervalFrames: number): number[];
+        /**
+         * @groups 角色系统/角色
+         * @description 按帧索引播放（关键帧或插值帧）
+         * @effect 调用端生效
+         * @param index usage: 目标帧索引 range: 大于等于0 type: 整数
+         * @param playRate usage: 播放速率 default:1 range: 大于等于0 type: 数值
+         * @returns 是否成功
+         * @networkStatus usage:双端
+         */
+        playByIndex(index: number, playRate?: number): boolean;
+        /**
+         * @groups 角色系统/角色
+         * @description 获取所有关键帧帧索引（升序）
+         * @effect 调用端生效
+         * @returns 关键帧数组（帧索引升序）
+         * @networkStatus usage:双端
+         */
+        getAllKeyframe(): number[];
+        /**
+         * @groups 角色系统/角色
+         * @description 复制关键帧到最后关键帧的下一帧
+         * @effect 调用端生效
+         * @param index usage: 要复制的关键帧索引 range: 大于等于0 type: 整数
+         * @returns 关键帧数组（帧索引升序）
+         * @networkStatus usage:双端
+         */
+        copyKeyframe(index: number): number[];
+        /**
+         * @groups 角色系统/角色
+         * @description 获取指定关键帧的快照数据
+         * @effect 调用端生效
+         * @param index usage: 关键帧索引 range: 大于等于0 type: 整数
+         * @returns 关键帧快照数据（骨骼变换列表）
+         */
+        getKeyframeSnapshot(index: number): mw.Transform[];
+        /**
+         * @groups 角色系统/角色
+         * @description 通过所有关键帧骨骼数据复原关键帧数据
+         * @effect 调用端生效
+         * @param indices usage: 关键帧索引列表 range: type: 整数数组
+         * @param snapshots usage: 关键帧快照数据列表（二维数组：帧索引 -> 骨骼Transform列表） range: type: 二维数组
+         * @returns 是否复原成功
+         */
+        recoveryKeyframeFromSnapshot(indices: number[], snapshots: mw.Transform[][]): boolean;
         /**
          * @groups 角色系统/角色
          * @description 获取角色外观数据。该接口获取角色当前外观数据的拷贝
@@ -5610,7 +7452,7 @@ declare namespace mw {
          * ```
          * @networkStatus usage:双端
          */
-        getSlotWorldPosition(slotName: mw.HumanoidSlotType): mw.Vector;
+        getSlotWorldPosition(slotName: mw.HumanoidSlotType | mw.NonHumanoidSlotType | string): mw.Vector;
         /**
          * @groups 角色系统/角色
          * @description 通过头部模型顶点 index 实时获取顶点位置。目前顶点 index 只能从内部工程中查看
@@ -8161,6 +10003,23 @@ declare namespace mw {
         HumanoidV1Eggy = 2
     }
     /**
+     * @author yunhao.liao
+     * @groups 角色系统
+     * @description 骨骼编辑 IK 类型
+     */
+    enum BoneEditIKType {
+        /** 左手 */
+        LeftHand = 0,
+        /** 右手 */
+        RightHand = 1,
+        /** 左脚 */
+        LeftFoot = 2,
+        /** 右脚 */
+        RightFoot = 3,
+        /** 头颈 */
+        Head = 4
+    }
+    /**
      * @author zhiqiang.tan
      * @groups 角色系统
      * @description 碰撞体形状类型
@@ -8176,7 +10035,7 @@ declare namespace mw {
         Sphere = 3
     }
     /**
-     * @author guang.deng
+     * @author yunhao.liao
      * @groups 角色系统
      * @description 形象类型
      * @example
@@ -8193,7 +10052,7 @@ declare namespace mw {
         FourFootStandard = 2
     }
     /**
-     * @author guang.deng
+     * @author yunhao.liao
      * @groups 角色系统
      * @description 形象类型
      * @example
@@ -8340,6 +10199,19 @@ declare namespace mw {
         Seven = 6,
         /** 第八个插槽 */
         Eight = 7
+    }
+    /**
+     * @author liaoyun.hao
+     * @groups 角色系统
+     * @description 骨骼编辑使用类型
+     */
+    enum BonesEditUseType {
+        /** 全关闭 */
+        Close = 0,
+        /** FK叠加和关节角度 */
+        AdditionFKAndJoint = 1,
+        /** FK覆盖 */
+        OverrideFK = 2
     }
 }
 
@@ -14157,6 +16029,11 @@ declare namespace mw {
          */
         set axisHighlightColor(color: mw.LinearColor);
         /**
+        * @description 获取坐标轴当前显隐状态
+        * @effect 只在客户端调用生效
+        */
+        isHidden(): boolean;
+        /**
         * @description 设置坐标轴隐藏或者显示
         * @effect 只在客户端调用生效
         * @param showGizmoActor usage:显隐坐标轴
@@ -17106,7 +18983,10 @@ declare namespace mw {
     }
 }
 
+/// <reference types="engine" />
 declare namespace mw {
+    // @ts-ignore
+    import * as UE from "ue";
     /**
      * @author baoqiang.han
      * @description 碰撞类型
@@ -17229,6 +19109,30 @@ declare namespace mw {
          * @param updateOverlaps usage:是否刷新 default:true
          */
         setSphereRadius(InSphereRadius: number, updateOverlaps?: boolean): void;
+        /**
+         * @description 创建自定义触发器组件
+         * @groups 玩法/触发器
+         * @effect 调用端生效
+         * @param owner usage:owner
+         * @returns 创建的自定义触发器组件
+         */
+        static createCustomTriggerComponent(owner: UE.Actor): UE.MWSysCustomTriggerComponent;
+        /**
+         * @description 销毁自定义触发器组件
+         * @groups 玩法/触发器
+         * @effect 调用端生效
+         * @param triggerComponent usage:要销毁的自定义触发器组件
+         * @returns 是否成功销毁
+         */
+        static destroyCustomTriggerComponent(triggerComponent: UE.MWSysCustomTriggerComponent): boolean;
+        /**
+         * @description 检查Actor是否有自定义触发器组件
+         * @groups 玩法/触发器
+         * @effect 调用端生效
+         * @param actor usage:目标Actor对象
+         * @returns 是否存在自定义触发器组件
+         */
+        static hasCustomTriggerComponent(actor: UE.Actor): boolean;
     }
 }
 

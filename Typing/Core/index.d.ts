@@ -128,7 +128,10 @@ declare namespace mw {
     function Property(option?: mw.IPropertyOptions): (target: object, key: string) => void;
 }
 
+/// <reference types="engine" />
 declare namespace mw {
+    // @ts-ignore
+    import * as UE from "ue";
     /**
      * @author xiangkun.sun
      * @groups 基类/场景所有物体基类
@@ -861,6 +864,14 @@ declare namespace mw {
          * ```
          */
         onCustomPropertyChange: Readonly<mw.MulticastDelegate<(path: string, value: unknown, oldValue: unknown) => void>>;
+        /**
+          * @description 销毁UE组件
+          * @groups 系统
+          * @effect 调用端生效
+          * @param ueComponent usage:要销毁的UE组件
+          * @returns 是否成功销毁
+          */
+        static destroyUEComponent<T extends UE.SceneComponent>(ueComponent: T): boolean;
     }
 }
 

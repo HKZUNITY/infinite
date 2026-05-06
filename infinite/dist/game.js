@@ -507,7 +507,7 @@ class GeneralManager {
         });
     }
     static modifyShowAd(adsType, callback) {
-        AdsService.showAd(adsType, (isSuccess => {
+        AdsService.showAd(adsType, isSuccess => {
             if (isSuccess) {
                 callback(AdsState.Success);
                 if (adsType == AdsType.Reward) callback(AdsState.Reward);
@@ -515,7 +515,7 @@ class GeneralManager {
             } else {
                 callback(AdsState.Fail);
             }
-        }));
+        });
     }
     static modiftEnterInteractiveState(inter, characterObj) {
         if (!(characterObj instanceof mw.Character)) {
@@ -523,13 +523,13 @@ class GeneralManager {
         }
         let reult = inter.enter(characterObj);
         if (!reult) return Promise.resolve(false);
-        return new Promise(((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             let resultFun = () => {
                 inter.onEnter.remove(resultFun);
                 resolve(true);
             };
             inter.onEnter.add(resultFun);
-        }));
+        });
     }
     static modifyExitInteractiveState(inter, Location, stance) {
         let result = inter.leave(Location, null, stance);
@@ -595,9 +595,9 @@ class GeneralManager {
     }
     static setMaterialColor(model, Index, InColor) {
         let materialList = model.getMaterialInstance();
-        materialList[Index].getAllVectorParameterName().forEach(((v, i) => {
+        materialList[Index].getAllVectorParameterName().forEach((v, i) => {
             materialList[Index].setVectorParameterValue(v, InColor);
-        }));
+        });
     }
     static getMaterialColor(model, Index) {
         let materialList = model.getMaterialInstance();
@@ -2782,7 +2782,7 @@ let Ads = class Ads extends mw.Script {
     }
     async onStartC() {
         await ModuleService.ready();
-        GameConfig.Ads.getAllElement().forEach((async (value, index, array) => {
+        GameConfig.Ads.getAllElement().forEach(async (value, index, array) => {
             let npc = await GameObject.asyncFindGameObjectById(value.Role);
             npc.displayName = value.Del;
             GeneralManager.rpcPlayEffectOnPlayer(value.EffectId, npc, mw.HumanoidSlotType.BackOrnamental, 0, value.EffectOffset, new mw.Rotation(value.EffectRot), value.EffectScale.multiply(1));
@@ -2806,10 +2806,10 @@ let Ads = class Ads extends mw.Script {
                 npc.attachToSlot(leftWeapon, mw.HumanoidSlotType.LeftHand);
             }
             let trigger = await GameObject.asyncFindGameObjectById(value.Trigger);
-            trigger.onEnter.add((char => {
+            trigger.onEnter.add(char => {
                 if (char != Player.localPlayer.character) return;
-            }));
-        }));
+            });
+        });
     }
     onUpdateC(dt) {}
     onStartS() {}
@@ -2990,37 +2990,37 @@ var PrefabEvent;
         mwext["PrefabEvent"] = true;
         if (SystemUtil.isServer()) {
             DataStorage.setTemporaryStorage(mw.SystemUtil.isPIE);
-            Event.addLocalListener("__setCustomDataCache", ((k, v) => {
+            Event.addLocalListener("__setCustomDataCache", (k, v) => {
                 _retrySetCustomDataList.push({
                     key: k,
                     val: v
                 });
-            }));
-            setInterval((() => {
+            });
+            setInterval(() => {
                 let keyMap = new Map;
-                _retrySetCustomDataList.forEach((e => {
+                _retrySetCustomDataList.forEach(e => {
                     keyMap.set(e.key, e.val);
-                }));
+                });
                 _retrySetCustomDataList = [];
-                keyMap.forEach(((v, k, maps) => {
+                keyMap.forEach((v, k, maps) => {
                     _retrySetCustomDataList.push({
                         key: k,
                         val: v
                     });
-                }));
+                });
                 while (_retrySetCustomDataList.length > 0) {
                     let data = _retrySetCustomDataList.shift();
                     if (data) {
-                        DataStorage.asyncSetData(data.key, data.val).then((res => {
+                        DataStorage.asyncSetData(data.key, data.val).then(res => {
                             if (res != mw.DataStorageResultCode.Success) {
                                 _retrySetCustomDataList.push(data);
                             }
-                        })).catch((err => {
+                        }).catch(err => {
                             _retrySetCustomDataList.push(data);
-                        }));
+                        });
                     }
                 }
-            }), 6500);
+            }, 6500);
         }
         var call = (clazzName, funcName, ...params) => {
             if (!PrefabEvent[clazzName]) {
@@ -3035,14 +3035,14 @@ var PrefabEvent;
             Event.dispatchToLocal(_onEventKey + ":" + clazzName + ":" + funcName, ...params);
         };
         if (mw.SystemUtil.isServer()) {
-            Event.addClientListener(_onEventNetKey, ((player, clazzName, funcName, ...params) => {
+            Event.addClientListener(_onEventNetKey, (player, clazzName, funcName, ...params) => {
                 call(clazzName, funcName, ...params);
-            }));
+            });
         }
         if (mw.SystemUtil.isClient()) {
-            Event.addServerListener(_onEventNetKey, ((clazzName, funcName, ...params) => {
+            Event.addServerListener(_onEventNetKey, (clazzName, funcName, ...params) => {
                 call(clazzName, funcName, ...params);
-            }));
+            });
         }
     }
     function callClientFunc(clazzName, funcName, ...params) {
@@ -3077,16 +3077,16 @@ var PrefabEvent;
             return dataCache[playerId];
         }
         static async asyncGetValue(playerId, key) {
-            return new Promise(((resolve, reject) => {
+            return new Promise((resolve, reject) => {
                 let playerDataCache = this.getPlayerDataCache(playerId);
                 let dataKey = key + "_" + playerId + "_key";
                 let dataVal = null;
                 let keys = Object.keys(playerDataCache);
-                keys.forEach(((v, i, arr) => {
+                keys.forEach((v, i, arr) => {
                     if (v == dataKey) {
                         dataVal = playerDataCache[dataKey];
                     }
-                }));
+                });
                 if (dataVal) {
                     let res = null;
                     let db = dataVal;
@@ -3098,7 +3098,7 @@ var PrefabEvent;
                     resolve(res.value);
                     return;
                 }
-                GeneralManager.asyncRpcGetData(dataKey).then((v => {
+                GeneralManager.asyncRpcGetData(dataKey).then(v => {
                     let res = null;
                     let db = v;
                     if (!db) {
@@ -3107,14 +3107,14 @@ var PrefabEvent;
                     res = JSON.parse(db);
                     playerDataCache[dataKey] = db;
                     resolve(res.value);
-                })).catch((err => {
+                }).catch(err => {
                     Console.log(err);
                     reject("不存在这份存档，可能是新玩家");
-                }));
-            }));
+                });
+            });
         }
         static async asyncSetValue(playerId, key, val) {
-            return new Promise(((resolve, reject) => {
+            return new Promise((resolve, reject) => {
                 let data = new DBSaveBase;
                 data.value = val;
                 let dataStr = JSON.stringify(data);
@@ -3127,7 +3127,7 @@ var PrefabEvent;
                 playerDataCache[dataKey] = dataStr;
                 Event.dispatchToLocal("__setCustomDataCache", key + "_" + playerId + "_key", dataStr);
                 resolve();
-            }));
+            });
         }
     }
     PrefabEvent.DBServerTool = DBServerTool;
@@ -3496,15 +3496,15 @@ class Utils {
         }).to({
             x: 0,
             y: 0
-        }, .5 * 1e3).onStart((() => {
+        }, .5 * 1e3).onStart(() => {
             mCanvas.position = new mw.Vector2(tmpX, tmpY);
             if (onStart) onStart();
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             mCanvas.position = new mw.Vector2(v.x, v.y);
-        })).easing(cubicBezier(.75, 2.9, .46, -.18)).onComplete((() => {
+        }).easing(cubicBezier(.75, 2.9, .46, -.18)).onComplete(() => {
             mCanvas.position = mw.Vector2.zero;
             if (onComplete) onComplete();
-        })).start();
+        }).start();
         let scaleType = this.getRandomInteger(0, 2);
         new mw.Tween({
             x: 0,
@@ -3512,7 +3512,7 @@ class Utils {
         }).to({
             x: 1,
             y: 1
-        }, .5 * 1e3).onStart((() => {
+        }, .5 * 1e3).onStart(() => {
             switch (scaleType) {
               case 0:
                 mCanvas.renderScale = new mw.Vector2(1, 0);
@@ -3526,7 +3526,7 @@ class Utils {
                 mCanvas.renderScale = new mw.Vector2(1, 1);
                 break;
             }
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             switch (scaleType) {
               case 0:
                 mCanvas.renderScale = new mw.Vector2(1, v.y);
@@ -3540,9 +3540,9 @@ class Utils {
                 mCanvas.renderScale = new mw.Vector2(v.x, v.y);
                 break;
             }
-        })).onComplete((() => {
+        }).onComplete(() => {
             mCanvas.renderScale = mw.Vector2.one;
-        })).start();
+        }).start();
     }
     static openUITween1(mCanvas, onStart, onComplete) {
         let scaleType = this.getRandomInteger(0, 2);
@@ -3552,7 +3552,7 @@ class Utils {
         }).to({
             x: 1,
             y: 1
-        }, .5 * 1e3).onStart((() => {
+        }, .5 * 1e3).onStart(() => {
             if (onStart) {
                 onStart();
             }
@@ -3569,7 +3569,7 @@ class Utils {
                 mCanvas.renderScale = new mw.Vector2(1, 1);
                 break;
             }
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             switch (scaleType) {
               case 0:
                 mCanvas.renderScale = new mw.Vector2(1, v.y);
@@ -3583,12 +3583,12 @@ class Utils {
                 mCanvas.renderScale = new mw.Vector2(v.x, v.y);
                 break;
             }
-        })).onComplete((() => {
+        }).onComplete(() => {
             if (onComplete) {
                 onComplete();
             }
             mCanvas.renderScale = mw.Vector2.one;
-        })).start();
+        }).start();
     }
     static closeUITween(mCanvas, onStart, onComplete) {
         let scaleType = this.getRandomInteger(0, 2);
@@ -3598,10 +3598,10 @@ class Utils {
         }).to({
             x: 0,
             y: 0
-        }, .5 * 1e3).onStart((() => {
+        }, .5 * 1e3).onStart(() => {
             if (onStart) onStart();
             mCanvas.renderScale = new mw.Vector2(1, 1);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             switch (scaleType) {
               case 0:
                 mCanvas.renderScale = new mw.Vector2(1, v.y);
@@ -3615,7 +3615,7 @@ class Utils {
                 mCanvas.renderScale = new mw.Vector2(v.x, v.y);
                 break;
             }
-        })).onComplete((() => {
+        }).onComplete(() => {
             if (onComplete) onComplete();
             switch (scaleType) {
               case 0:
@@ -3630,7 +3630,7 @@ class Utils {
                 mCanvas.renderScale = new mw.Vector2(0, 0);
                 break;
             }
-        })).start();
+        }).start();
     }
     static async getLvText(lv, userId) {
         let level = Math.floor(lv / 10);
@@ -3742,13 +3742,13 @@ class Utils {
         if (this.assetIconDataMap.has(icon)) {
             image.setImageByAssetIconData(this.assetIconDataMap.get(icon));
         } else {
-            mw.assetIDChangeIconUrlRequest([ icon ]).then((() => {
+            mw.assetIDChangeIconUrlRequest([ icon ]).then(() => {
                 try {
                     let assetIconData = mw.getAssetIconDataByAssetID(icon);
                     image.setImageByAssetIconData(assetIconData);
                     this.assetIconDataMap.set(icon, assetIconData);
                 } catch (error) {}
-            }));
+            });
         }
     }
     static getPathIndex(length) {
@@ -3961,10 +3961,10 @@ class Loading extends Loading_Generate$1 {
     onShow(...params) {
         this.index = 0;
         this.mImage.imageGuid = this.ids[this.index++];
-        this.id = TimeUtil.setInterval((() => {
+        this.id = TimeUtil.setInterval(() => {
             if (this.index >= this.ids.length) this.index = 0;
             this.mImage.imageGuid = this.ids[this.index++];
-        }), 1.5);
+        }, 1.5);
     }
     onHide() {
         TimeUtil.clearInterval(this.id);
@@ -4357,7 +4357,7 @@ class Group {
         this._tweensAddedDuringUpdate = {};
     }
     getAll() {
-        return Object.keys(this._tweens).map((tweenId => this._tweens[tweenId]));
+        return Object.keys(this._tweens).map(tweenId => this._tweens[tweenId]);
     }
     removeAll() {
         this._tweens = {};
@@ -4928,9 +4928,9 @@ var foreign14 = Object.freeze({
 class Notice {
     static showDownNotice(context) {
         this.checkView();
-        this.view.topNoticeComponent2.insert((notice => {
+        this.view.topNoticeComponent2.insert(notice => {
             notice.setInfo(context);
-        }));
+        });
     }
     static checkView() {
         if (this.view) return;
@@ -4945,12 +4945,12 @@ class TopNoticeComponent {
         this.targetCanvas = targetCanvas;
         this.noticeCanvasHeight = this.targetCanvas.size.y;
         this.insertItemTempLocation = new mw.Vector2;
-        this.noticeItemPool = new UIPool((() => {
+        this.noticeItemPool = new UIPool(() => {
             let item = mw.UIService.create(TopNoticeItem);
             this.targetCanvas.addChild(item.uiObject);
             item.uiObject.size = new mw.Vector2(700, 60);
             return item;
-        }));
+        });
     }
     insert(initAction) {
         this.pendingQueue.push(initAction);
@@ -4964,10 +4964,10 @@ class TopNoticeComponent {
         if (first.lifeTime >= TopNoticeComponent.NoticeItemLifeTime) {
             this.fadeoutNoticeElement();
         }
-        this.noticeItemPool.eachVisibleItem((item => {
+        this.noticeItemPool.eachVisibleItem(item => {
             if (item.targetHeight >= item.position.y) return;
             item.setLocation(item.position.x, item.position.y - TopNoticeComponent.NoticeMoveStepCount);
-        }));
+        });
     }
     insertPendingNotice(initAction) {
         if (this.visibleNotice.length >= TopNoticeComponent.NoticeItemMaxCount) {
@@ -4990,9 +4990,9 @@ class TopNoticeComponent {
             alpha: 0
         }).to({
             alpha: 1
-        }, 250).onUpdate((arg => {
+        }, 250).onUpdate(arg => {
             recent.uiObject.renderOpacity = arg.alpha;
-        })).start();
+        }).start();
     }
     fadeoutNoticeElement() {
         let item = this.visibleNotice.shift();
@@ -5000,11 +5000,11 @@ class TopNoticeComponent {
             alpha: 1
         }).to({
             alpha: 0
-        }, 250).onUpdate((arg => {
+        }, 250).onUpdate(arg => {
             item.uiObject.renderOpacity = arg.alpha;
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.noticeItemPool.giveBack(item);
-        })).start();
+        }).start();
     }
     checkPendingNotice() {
         if (this.pendingQueue.length < 1) return;
@@ -5034,12 +5034,12 @@ class TopNoticeComponent2 {
         this.targetCanvas = targetCanvas;
         this.noticeCanvasHeight = this.targetCanvas.size.y;
         this.insertItemTempLocation = new mw.Vector2;
-        this.noticeItemPool = new UIPool((() => {
+        this.noticeItemPool = new UIPool(() => {
             let item = mw.UIService.create(TopNoticeItem);
             this.targetCanvas.addChild(item.uiObject);
             item.uiObject.size = new mw.Vector2(item.uiObject.size.x, item.uiObject.size.y);
             return item;
-        }));
+        });
     }
     insert(initAction) {
         this.insertPendingNotice(initAction);
@@ -5055,10 +5055,10 @@ class TopNoticeComponent2 {
             }
         }
         this.eachLeftRightItem();
-        this.noticeItemPool.eachVisibleItem((item => {
+        this.noticeItemPool.eachVisibleItem(item => {
             if (item.targetHeight >= item.position.y) return;
             item.setLocation(item.position.x, item.position.y - TopNoticeComponent2.NoticeMoveStepCount);
-        }));
+        });
     }
     insertPendingNotice(initAction) {
         this.isinsert = true;
@@ -5098,9 +5098,9 @@ class TopNoticeComponent2 {
             posy: -500
         }).to({
             posy: this.insertItemTempLocation.y
-        }, 500).onUpdate((arg => {
+        }, 500).onUpdate(arg => {
             recent.setLocation(this.insertItemTempLocation.x, arg.posy);
-        })).start().easing(Easing.Linear.None);
+        }).start().easing(Easing.Linear.None);
         this.isinsert = false;
     }
     eachLeftRightItem() {
@@ -5115,10 +5115,10 @@ class TopNoticeComponent2 {
             posX: 0
         }).to({
             posX: 1
-        }, 500).onComplete((() => {
+        }, 500).onComplete(() => {
             this.isRemoveing = false;
-        })).start();
-        let arr = this.visibleNotice.filter((e => !this.needmovingNotice.includes(e)));
+        }).start();
+        let arr = this.visibleNotice.filter(e => !this.needmovingNotice.includes(e));
         for (let i = 0; i < arr.length; i++) {
             const element = arr[i];
             element.targetHeight = TopNoticeComponent2.NoticeItemIntervalSpace + i * TopNoticeComponent2.NoticeItemIntervalSpace;
@@ -5126,9 +5126,9 @@ class TopNoticeComponent2 {
                 posy: element.uiObject.position.y
             }).to({
                 posy: element.targetHeight
-            }, 500).onUpdate((arg => {
+            }, 500).onUpdate(arg => {
                 element.setLocation(this.insertItemTempLocation.x, arg.posy);
-            })).onComplete((() => {})).easing(Easing.Linear.None).start();
+            }).onComplete(() => {}).easing(Easing.Linear.None).start();
         }
         while (this.needmovingNotice.length > 0) {
             let item = this.needmovingNotice.shift();
@@ -5139,13 +5139,13 @@ class TopNoticeComponent2 {
                 posX: 0
             }).to({
                 posX: this.isLeft ? 3e3 : -3e3
-            }, 250).onUpdate((arg => {
+            }, 250).onUpdate(arg => {
                 target.x = arg.posX;
                 item.uiObject.position = target;
-            })).onComplete((() => {
+            }).onComplete(() => {
                 this.noticeItemPool.giveBack(item);
-            })).easing(Easing.Linear.None).start();
-            let index = this.visibleNotice.findIndex((ele => item));
+            }).easing(Easing.Linear.None).start();
+            let index = this.visibleNotice.findIndex(ele => item);
             if (index != -1) {
                 this.visibleNotice.splice(index, 1);
             }
@@ -5265,10 +5265,10 @@ class WeaponData extends WeaponPreDefine {
         this.allUpdateCallback.push(callback);
     }
     stopAllTimer() {
-        this.allTimer.forEach((e => {
+        this.allTimer.forEach(e => {
             clearTimeout(e);
             clearInterval(e);
-        }));
+        });
         this.server_StopAllTimer();
         this.allTimer = [];
         this.allUpdateCallback = [];
@@ -5285,29 +5285,29 @@ class WeaponData extends WeaponPreDefine {
     onStart() {
         super.onStart();
         this.animationInfo = [];
-        this.animationJsons.forEach((e => {
+        this.animationJsons.forEach(e => {
             let info = JSON.parse(e);
             let newInfo = new AnimationInfo$2;
             if (info) {
-                Object.keys(info).forEach((e => {
+                Object.keys(info).forEach(e => {
                     if (info[e] instanceof Object) {
                         return;
                     }
                     newInfo[e] = info[e];
-                }));
-                info.infos.forEach((e => {
+                });
+                info.infos.forEach(e => {
                     let nodeInfo = new NodeInfo;
-                    Object.keys(e).forEach((k => {
+                    Object.keys(e).forEach(k => {
                         nodeInfo[k] = e[k];
-                    }));
+                    });
                     Console.error(nodeInfo);
                     newInfo.infos.push(nodeInfo);
-                }));
+                });
                 this.animationInfo.push(newInfo);
             } else {
                 Console.error("解析json错误 : " + e);
             }
-        }));
+        });
         if (this.animationInfo.length != this.animationJsons.length) {
             Console.error("解析json错误 : 动画数量和解析数量不一致");
         }
@@ -5321,14 +5321,14 @@ class WeaponData extends WeaponPreDefine {
         super.onUpdate(dt);
         let newList = [];
         let updateList = false;
-        this.allUpdateCallback.forEach((e => {
+        this.allUpdateCallback.forEach(e => {
             let res = e(dt);
             if (res) {
                 newList.push(e);
             } else {
                 updateList = true;
             }
-        }));
+        });
         if (updateList) this.allUpdateCallback = newList;
     }
 }
@@ -5357,7 +5357,7 @@ var foreign95 = Object.freeze({
 class SkillRectCheck {
     static checkNodes(char, nodeInfo) {
         let res = [];
-        nodeInfo.forEach((e => {
+        nodeInfo.forEach(e => {
             if (e.type != NodeType.SkillRect.toString()) {
                 return;
             }
@@ -5381,17 +5381,17 @@ class SkillRectCheck {
             if (angle > 0) {
                 res = this.checkAngle(charLocation, dir, angle, res);
             }
-            res = res.filter((e => e.guid != char.gameObjectId));
-        }));
+            res = res.filter(e => e.guid != char.gameObjectId);
+        });
         return res;
     }
     static checkAngle(charLocation, dir, angle, targets) {
         let res = [];
-        targets.forEach((e => {
+        targets.forEach(e => {
             if (MathUtil.angleCheck(charLocation, dir, e.worldTransform.position, angle)) {
                 res.push(e);
             }
-        }));
+        });
         return res;
     }
     static checkRadius(char, charLocation, radius, height) {
@@ -5441,20 +5441,20 @@ class WeaponManagerCli extends WeaponManagerPreDefine {
             }
             if (script != null) {
                 let weapon = script;
-                weapon.initCharacter(char, (() => {
+                weapon.initCharacter(char, () => {
                     this.netEventRet.get(netActionId)(weapon);
                     this.netEventRet.delete(netActionId);
-                }));
+                });
             }
         }
     }
     client_AsyncGetWeapon(prefabGuid, char, reqPlayer, netActionId = 0) {
         if (mw.SystemUtil.isClient()) {
-            return new Promise(((resolve, reject) => {
+            return new Promise((resolve, reject) => {
                 let actionId = this.netActionId++;
                 this.netEventRet.set(actionId, resolve);
                 Event.dispatchToServer(this.onClientGetWeapon.name, actionId, char.gameObjectId, this.prefabGuid);
-            }));
+            });
         }
     }
 }
@@ -5564,7 +5564,7 @@ class ColdWeapon {
     static getInstance() {
         if (this.instance == null) {
             this.instance = new ColdWeapon;
-            PrefabEvent.PrefabEvtEquip.onEquip(((targetGuid, slot, equipGuid) => {
+            PrefabEvent.PrefabEvtEquip.onEquip((targetGuid, slot, equipGuid) => {
                 const player = Player.localPlayer;
                 if (targetGuid == player.character.gameObjectId) {
                     if (slot == PrefabEvent.EquipSlot.Weapon && this.instance._weapon && equipGuid != this.instance._weapon.guid) {
@@ -5573,7 +5573,7 @@ class ColdWeapon {
                         }
                     }
                 }
-            }));
+            });
         }
         return this.instance;
     }
@@ -5610,18 +5610,18 @@ class ColdWeapon {
             return;
         }
         this.isPlaying = true;
-        this._weapon.playAnimation(index, ((curActionIndex, maxIndex) => {
+        this._weapon.playAnimation(index, (curActionIndex, maxIndex) => {
             this._curComboTime = 0;
             Event.dispatchToLocal("AttackMp");
-        }), this.hitTargets.bind(this), (milSec => {
+        }, this.hitTargets.bind(this), milSec => {
             this.isPlaying = false;
             this._curComboTime = milSec;
-        }), ((curIndex, maxIndex, endChargeResolve) => {
+        }, (curIndex, maxIndex, endChargeResolve) => {
             this._endChargeResolve = endChargeResolve;
-        }));
+        });
     }
     hitTargets(curActionIndex, maxIndex, hitObjs) {
-        hitObjs.forEach((async e => {
+        hitObjs.forEach(async e => {
             if (!PlayerManagerExtesion.isCharacter(e) && !PlayerManagerExtesion.isNpc(e)) {
                 return;
             }
@@ -5631,9 +5631,9 @@ class ColdWeapon {
                     let eff = await SpawnManager.wornAsyncSpawn(this._onHitEffGuid, false);
                     eff.worldTransform.position = e.worldTransform.position.clone();
                     eff.loop = false;
-                    eff.play((() => {
+                    eff.play(() => {
                         eff.destroy();
-                    }));
+                    });
                 }
             }
             if (this._onHitAnimation != "" && (PlayerManagerExtesion.isCharacter(e) || PlayerManagerExtesion.isNpc(e))) {
@@ -5642,7 +5642,7 @@ class ColdWeapon {
             }
             Console.log("使用冷兵器攻击了" + e.gameObjectId);
             PrefabEvent.PrefabEvtFight.hit(Player.localPlayer.character.gameObjectId, e.gameObjectId, this._hitDamage * GlobalData.baseSkillDamage, e.worldTransform.position);
-        }));
+        });
     }
     updateHitDamage(value) {
         this._hitDamage = value;
@@ -5732,9 +5732,9 @@ var MapEx;
     MapEx.has = has;
     function count(map) {
         let res = 0;
-        forEach(map, (e => {
+        forEach(map, e => {
             ++res;
-        }));
+        });
         return res;
     }
     MapEx.count = count;
@@ -5830,17 +5830,17 @@ let BagInfoPanel_Generate = class BagInfoPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mUseButton.onClicked.add((() => {
+        this.mUseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUseButton");
-        }));
+        });
         this.mUseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mPriceButton.onClicked.add((() => {
+        this.mPriceButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mPriceButton");
-        }));
+        });
         this.mPriceButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mNameTextBlock);
@@ -5915,9 +5915,9 @@ let BagItem_Generate = class BagItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mNameTextBlock);
         this.initLanguage(this.mHasTextBlock);
@@ -5996,9 +5996,9 @@ let BagPanel_Generate = class BagPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButtons.onClicked.add((() => {
+        this.mCloseButtons.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButtons");
-        }));
+        });
         this.mCloseButtons.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mBarTextBlock);
     }
@@ -6045,9 +6045,9 @@ let BagTab_Generate = class BagTab_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mButton.onClicked.add((() => {
+        this.mButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mButton");
-        }));
+        });
         this.mButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTextBlock);
     }
@@ -6106,9 +6106,9 @@ let AdsTipsPanel_Generate = class AdsTipsPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mNoBtn.onClicked.add((() => {
+        this.mNoBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mNoBtn");
-        }));
+        });
         this.initLanguage(this.mNoBtn);
         this.mNoBtn.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTxt);
@@ -6181,14 +6181,14 @@ let UpPanel_Generate = class UpPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mNoBtn.onClicked.add((() => {
+        this.mNoBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mNoBtn");
-        }));
+        });
         this.initLanguage(this.mNoBtn);
         this.mNoBtn.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mUpBtn.onClicked.add((() => {
+        this.mUpBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpBtn");
-        }));
+        });
         this.initLanguage(this.mUpBtn);
         this.mUpBtn.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTxt);
@@ -6272,9 +6272,9 @@ class UpPanel extends UpPanel_Generate$1 {
             return;
         }
         this.isCanUp = false;
-        TimeUtil.delaySecond(1).then((() => {
+        TimeUtil.delaySecond(1).then(() => {
             this.isCanUp = true;
-        }));
+        });
         if (this.upCallback) {
             this.upCallback();
         }
@@ -6299,9 +6299,9 @@ class UpPanel extends UpPanel_Generate$1 {
     }
     hideAdPanel() {
         if (!this.visible) return;
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
-        }));
+        });
     }
     onShow(...params) {
         Utils.openUITween(this.rootCanvas, null, null);
@@ -6404,9 +6404,9 @@ let SwordItem_Generate = class SwordItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mNameTextBlock);
         this.initLanguage(this.mDiamondTextBlock);
@@ -6505,9 +6505,9 @@ let SwordPanel_Generate = class SwordPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mDiamondCountTextBlock);
@@ -6593,17 +6593,17 @@ let SwordTipsPanel_Generate = class SwordTipsPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mDiamondButton.onClicked.add((() => {
+        this.mDiamondButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mDiamondButton");
-        }));
+        });
         this.mDiamondButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mArkButton.onClicked.add((() => {
+        this.mArkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mArkButton");
-        }));
+        });
         this.mArkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mContentTextBlock_0);
         this.initLanguage(this.mContentTextBlock_1);
@@ -7368,149 +7368,149 @@ let HUDPanel_Generate = class HUDPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mAtkButton.onClicked.add((() => {
+        this.mAtkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAtkButton");
-        }));
+        });
         this.mAtkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mJumpButton.onClicked.add((() => {
+        this.mJumpButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mJumpButton");
-        }));
+        });
         this.mJumpButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mSprintButton.onClicked.add((() => {
+        this.mSprintButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mSprintButton");
-        }));
+        });
         this.mSprintButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mOnOffRingSoulButton.onClicked.add((() => {
+        this.mOnOffRingSoulButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mOnOffRingSoulButton");
-        }));
+        });
         this.mOnOffRingSoulButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mFlyButton.onClicked.add((() => {
+        this.mFlyButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mFlyButton");
-        }));
+        });
         this.mFlyButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mAutoAtkButton.onClicked.add((() => {
+        this.mAutoAtkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAutoAtkButton");
-        }));
+        });
         this.mAutoAtkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mPlayerButton.onClicked.add((() => {
+        this.mPlayerButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mPlayerButton");
-        }));
+        });
         this.mPlayerButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mMusicButton.onClicked.add((() => {
+        this.mMusicButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mMusicButton");
-        }));
+        });
         this.mMusicButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mHomeButton.onClicked.add((() => {
+        this.mHomeButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mHomeButton");
-        }));
+        });
         this.mHomeButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mRankButton.onClicked.add((() => {
+        this.mRankButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mRankButton");
-        }));
+        });
         this.mRankButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mShopButton.onClicked.add((() => {
+        this.mShopButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mShopButton");
-        }));
+        });
         this.mShopButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mGetButton.onClicked.add((() => {
+        this.mGetButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mGetButton");
-        }));
+        });
         this.mGetButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mArkButton.onClicked.add((() => {
+        this.mArkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mArkButton");
-        }));
+        });
         this.mArkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mLotteryButton.onClicked.add((() => {
+        this.mLotteryButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mLotteryButton");
-        }));
+        });
         this.mLotteryButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mNewPeopleButton.onClicked.add((() => {
+        this.mNewPeopleButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mNewPeopleButton");
-        }));
+        });
         this.mNewPeopleButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mTaskButton.onClicked.add((() => {
+        this.mTaskButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mTaskButton");
-        }));
+        });
         this.mTaskButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mSignInButton.onClicked.add((() => {
+        this.mSignInButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mSignInButton");
-        }));
+        });
         this.mSignInButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mOnlineRewardButton.onClicked.add((() => {
+        this.mOnlineRewardButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mOnlineRewardButton");
-        }));
+        });
         this.mOnlineRewardButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mClothButton.onClicked.add((() => {
+        this.mClothButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClothButton");
-        }));
+        });
         this.mClothButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mAdsButton.onClicked.add((() => {
+        this.mAdsButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAdsButton");
-        }));
+        });
         this.mAdsButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mLimitTimeButton.onClicked.add((() => {
+        this.mLimitTimeButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mLimitTimeButton");
-        }));
+        });
         this.mLimitTimeButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mSwordButton.onClicked.add((() => {
+        this.mSwordButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mSwordButton");
-        }));
+        });
         this.mSwordButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mSoulBoneButton.onClicked.add((() => {
+        this.mSoulBoneButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mSoulBoneButton");
-        }));
+        });
         this.mSoulBoneButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mRingSoulButton.onClicked.add((() => {
+        this.mRingSoulButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mRingSoulButton");
-        }));
+        });
         this.mRingSoulButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseMusicBtn.onClicked.add((() => {
+        this.mCloseMusicBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseMusicBtn");
-        }));
+        });
         this.mCloseMusicBtn.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mLeftMusicBtn.onClicked.add((() => {
+        this.mLeftMusicBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mLeftMusicBtn");
-        }));
+        });
         this.mLeftMusicBtn.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mOnOffMusicBtn.onClicked.add((() => {
+        this.mOnOffMusicBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mOnOffMusicBtn");
-        }));
+        });
         this.mOnOffMusicBtn.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mRightMusicBtn.onClicked.add((() => {
+        this.mRightMusicBtn.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mRightMusicBtn");
-        }));
+        });
         this.mRightMusicBtn.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mUpLvButton.onClicked.add((() => {
+        this.mUpLvButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpLvButton");
-        }));
+        });
         this.mUpLvButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mClickHeadButton.onClicked.add((() => {
+        this.mClickHeadButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickHeadButton");
-        }));
+        });
         this.mClickHeadButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mInvincibleButton.onClicked.add((() => {
+        this.mInvincibleButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mInvincibleButton");
-        }));
+        });
         this.mInvincibleButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mUpExpButton.onClicked.add((() => {
+        this.mUpExpButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpExpButton");
-        }));
+        });
         this.mUpExpButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mAddBoneButton.onClicked.add((() => {
+        this.mAddBoneButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAddBoneButton");
-        }));
+        });
         this.mAddBoneButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mAddCoinButton.onClicked.add((() => {
+        this.mAddCoinButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAddCoinButton");
-        }));
+        });
         this.mAddCoinButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mAddDiamondButton.onClicked.add((() => {
+        this.mAddDiamondButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAddDiamondButton");
-        }));
+        });
         this.mAddDiamondButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mDayStrButton.onClicked.add((() => {
+        this.mDayStrButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mDayStrButton");
-        }));
+        });
         this.mDayStrButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mOnOffRingSoulTextBlock);
         this.initLanguage(this.mFlyTextBlock);
@@ -7684,9 +7684,9 @@ let RingSoulItem_Generate = class RingSoulItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mUpButton.onClicked.add((() => {
+        this.mUpButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpButton");
-        }));
+        });
         this.mUpButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mUpTextBlock);
     }
@@ -7871,17 +7871,17 @@ let RingSoulPanel_Generate = class RingSoulPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mUpButton.onClicked.add((() => {
+        this.mUpButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpButton");
-        }));
+        });
         this.mUpButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mAddDiamondButton.onClicked.add((() => {
+        this.mAddDiamondButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mAddDiamondButton");
-        }));
+        });
         this.mAddDiamondButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTotalRarityTextBlock);
         this.initLanguage(this.mUpTextBlock);
@@ -7943,18 +7943,18 @@ class FlyText {
             a: 0
         }).to({
             a: Math.PI
-        }, 1e3).onUpdate((object => {
+        }, 1e3).onUpdate(object => {
             textBlock.position = vec2.clone().add(new mw.Vector2(toX * object.a / Math.PI, toY * Math.sin(object.a)));
             textBlock.renderScale = new mw.Vector2(Math.sin(object.a));
-        })).onStart((() => {
+        }).onStart(() => {
             textBlock.fontColor = fontColor ? fontColor : this._defaultFontColor;
             textBlock.outlineColor = outlineColor ? outlineColor : this._defaultOutlineColor;
             textBlock.text = content;
             textBlock.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        })).onComplete((() => {
+        }).onComplete(() => {
             textBlock.visibility = mw.SlateVisibility.Hidden;
             this._textPools.push(textBlock);
-        }));
+        });
         animator.start();
     }
     createText() {
@@ -8011,9 +8011,9 @@ class ExplosiveCoins {
         for (let i = 0; i < coinNum; ++i) {
             this.startExplosiveCoins(fromVec, mapId);
         }
-        TimeUtil.delaySecond(2).then((() => {
+        TimeUtil.delaySecond(2).then(() => {
             if (this.particles[mapId] == null || this.particles[mapId] == undefined) return;
-            this.particles[mapId].forEach(((particle, effectId) => {
+            this.particles[mapId].forEach((particle, effectId) => {
                 let fromVec = particle.worldTransform.position;
                 let toVec = mw.Vector.zero;
                 if (this.player == null) this.player = Player.localPlayer;
@@ -8026,20 +8026,20 @@ class ExplosiveCoins {
                     x: toVec.x,
                     y: toVec.y,
                     z: toVec.z
-                }, .1 * 1e3).onUpdate((pos => {
+                }, .1 * 1e3).onUpdate(pos => {
                     particle.worldTransform.position = new mw.Vector(pos.x, pos.y, pos.z);
-                })).start().onComplete((() => {
+                }).start().onComplete(() => {
                     particle.stop();
                     this.recycleParticles.set(effectId, particle);
                     this.particles[mapId].delete(effectId);
-                }));
-            }));
-            TimeUtil.delaySecond(.1).then((() => {
+                });
+            });
+            TimeUtil.delaySecond(.1).then(() => {
                 let vec = this.player.character.worldTransform.position;
                 FlyText.instance.showFlyText("+$ " + coinCount, new mw.Vector(vec.x, vec.y, vec.z + 30), mw.LinearColor.green, mw.LinearColor.yellow);
-            }));
+            });
             this.play3DSound(this.player.character.worldTransform.position);
-        }));
+        });
     }
     async startExplosiveCoins(fromVec, mapId) {
         let effectId = 0;
@@ -8061,7 +8061,7 @@ class ExplosiveCoins {
         let moddleVec = new mw.Vector((fromVec.x + toVec.x) / 2, (fromVec.y + toVec.y) / 2, fromVec.z + Utils.getRandomInteger(150, 250));
         let points = Utils.getCurvePointsInNum([ fromVec, moddleVec, toVec ], 10);
         for (let j = 0; j < points.length - 1; ++j) {
-            await new Promise((resolve => {
+            await new Promise(resolve => {
                 new mw.Tween({
                     x: points[j].x,
                     y: points[j].y,
@@ -8070,20 +8070,20 @@ class ExplosiveCoins {
                     x: points[j + 1].x,
                     y: points[j + 1].y,
                     z: points[j + 1].z
-                }, .5 * 1e3 / 10).onUpdate((pos => {
+                }, .5 * 1e3 / 10).onUpdate(pos => {
                     particle.worldTransform.position = new mw.Vector(pos.x, pos.y, pos.z);
-                })).start();
-                setTimeout((() => resolve()), .5 * 1e3 / 10);
-            }));
+                }).start();
+                setTimeout(() => resolve(), .5 * 1e3 / 10);
+            });
         }
         if (this.particles[mapId] == null) this.particles[mapId] = new Map;
         this.particles[mapId].set(effectId, particle);
     }
     play3DSound(fromVec) {
         let soundId = SoundService.play3DSound("148629", fromVec);
-        TimeUtil.delaySecond(.5).then((() => {
+        TimeUtil.delaySecond(.5).then(() => {
             SoundService.stop3DSound(soundId);
-        }));
+        });
     }
 }
 
@@ -8119,22 +8119,22 @@ class PlayerModuleC extends ModuleC {
         return this.taskModuleC;
     }
     onStart() {
-        InputUtil.onKeyDown(mw.Keys.NumPadSeven, (() => {
+        InputUtil.onKeyDown(mw.Keys.NumPadSeven, () => {
             this.adsUpLv();
-        }));
+        });
         this.initAction();
     }
     initAction() {
         this.getHudModuleC.onOnOffUpExpAction.add(this.addOnOffUpExp.bind(this));
-        Event.addLocalListener(`SyncDiamondCount`, (() => {
+        Event.addLocalListener(`SyncDiamondCount`, () => {
             Event.dispatchToLocal(`UpdateDiamondTextBlock`, this.getDiamond);
-        }));
-        Event.addLocalListener(`SyncCoinCount`, (() => {
+        });
+        Event.addLocalListener(`SyncCoinCount`, () => {
             Event.dispatchToLocal(`UpdateCoinTextBlock`, this.getCoin());
-        }));
-        Event.addLocalListener(`SyncBoneCount`, (() => {
+        });
+        Event.addLocalListener(`SyncBoneCount`, () => {
             Event.dispatchToLocal(`UpdateBoneTextBlock`, this.getBone);
-        }));
+        });
     }
     onEnterScene(sceneType) {
         this.coin = this.data.coin;
@@ -8282,20 +8282,20 @@ class PlayerModuleC extends ModuleC {
     }
     skill_1() {
         GlobalData.baseSkillDamage = 2;
-        TimeUtil.delaySecond(GlobalData.skillContinue_1 + 1).then((() => {
+        TimeUtil.delaySecond(GlobalData.skillContinue_1 + 1).then(() => {
             GlobalData.baseSkillDamage = 1;
-        }));
+        });
         this.server.net_skill_1();
         SoundService.playSound(GlobalData.skillSoundId_1);
     }
     initDayStr() {
         if (GlobalData.languageId == 0) return;
         this.dayStr = this.data.dayStr;
-        TimeUtil.delaySecond(20).then((() => {
+        TimeUtil.delaySecond(20).then(() => {
             if (this.dayStr != Utils.getDay()) {
                 this.getHudModuleC.showDayStr();
             }
-        }));
+        });
     }
     setDayStr(datStr) {
         this.server.net_setDayStr(datStr);
@@ -8357,23 +8357,23 @@ class RingSoulGo {
             scale: 0
         }).to({
             scale: scaleValue
-        }, showRingSoulTweenTime * 1e3).onStart((() => {
+        }, showRingSoulTweenTime * 1e3).onStart(() => {
             this.go.localTransform.scale = mw.Vector.zero;
             this.go.setVisibility(true);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
-        }));
+        });
         this.hideRingSoulTween = new mw.Tween({
             scale: scaleValue
         }).to({
             scale: 0
-        }, hideRingSoulTweenTime * 1e3).onStart((() => {
+        }, hideRingSoulTweenTime * 1e3).onStart(() => {
             this.go.localTransform.scale = new mw.Vector(scaleValue, scaleValue, scaleValue);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.go.localTransform.scale = new mw.Vector(v.scale, v.scale, v.scale);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.go.setVisibility(false);
-        }));
+        });
         this.startShowRingSoul();
     }
     startShowRingSoul() {
@@ -8458,12 +8458,12 @@ let RingSoul = class RingSoul extends Script {
         for (let i = 2; i <= 10; ++i) {
             if (!this.ringSoulMap.has(i)) continue;
             let ringSoulGo = this.ringSoulMap.get(i);
-            await new Promise((resolve => {
-                setTimeout((() => {
+            await new Promise(resolve => {
+                setTimeout(() => {
                     ringSoulGo.startHideRingSoul();
                     return resolve();
-                }), hideRingSoulTweenIntervalTime * 1e3);
-            }));
+                }, hideRingSoulTweenIntervalTime * 1e3);
+            });
         }
     }
     async OnRingSoul() {
@@ -8472,12 +8472,12 @@ let RingSoul = class RingSoul extends Script {
         for (let i = 2; i <= 10; ++i) {
             if (!this.ringSoulMap.has(i)) continue;
             let ringSoulGo = this.ringSoulMap.get(i);
-            await new Promise((resolve => {
-                setTimeout((() => {
+            await new Promise(resolve => {
+                setTimeout(() => {
                     ringSoulGo.startShowRingSoul();
                     return resolve();
-                }), showRingSoulTweenIntervalTime * 1e3);
-            }));
+                }, showRingSoulTweenIntervalTime * 1e3);
+            });
         }
     }
     startShowRingSoulByIndex(index) {
@@ -8539,13 +8539,13 @@ class RingSoulModuleC extends ModuleC {
     }
     onStart() {
         this.initRingSoulData();
-        InputUtil.onKeyDown(mw.Keys.P, (() => {
+        InputUtil.onKeyDown(mw.Keys.P, () => {
             this.getRingSoulPanel.show();
-        }));
-        this.getHudModuleC.onOpenRingSoulAction.add((() => {
+        });
+        this.getHudModuleC.onOpenRingSoulAction.add(() => {
             this.getRingSoulPanel.show();
             this.getRingSoulPanel.updateRarityTextBlock(this.getRarity);
-        }));
+        });
         this.getHudModuleC.onOnOffRingSoulAction.add(this.onOffRingSoul.bind(this));
         this.ringSoulPanel = mw.UIService.getUI(RingSoulPanel);
     }
@@ -8578,9 +8578,9 @@ class RingSoulModuleC extends ModuleC {
     get getRarity() {
         if (!this.ringSoul || MapEx.count(this.ringSoul) == 0) return 0;
         let rarity = 0;
-        MapEx.forEach(this.ringSoul, ((key, value) => {
+        MapEx.forEach(this.ringSoul, (key, value) => {
             rarity += value;
-        }));
+        });
         return Number((rarity * .05).toFixed(2));
     }
     onOffRingSoul(isOpenRingSoul) {
@@ -8613,9 +8613,9 @@ class RingSoulModuleS extends ModuleS {
         console.error(`ringSoulData = ${JSON.stringify(ringSoulData)}`);
         if (MapEx.count(ringSoulData) > 0) {
             let ringSoulStrs = "";
-            MapEx.forEach(ringSoulData, ((key, value) => {
+            MapEx.forEach(ringSoulData, (key, value) => {
                 ringSoulStrs += `${key}-${value}|`;
-            }));
+            });
             ringSoul.ringSoulStrs = ringSoulStrs;
         }
     }
@@ -8650,9 +8650,9 @@ class RingSoulData extends Subdata {
     get getRarity() {
         if (!this.ringSoul || MapEx.count(this.ringSoul) == 0) return 0;
         let rarity = 0;
-        MapEx.forEach(this.ringSoul, ((key, value) => {
+        MapEx.forEach(this.ringSoul, (key, value) => {
             rarity += value;
-        }));
+        });
         return Number((rarity * .05).toFixed(2));
     }
 }
@@ -8739,9 +8739,9 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
     bindButton() {
         this.mCloseButton.onClicked.add(this.addCloseButton.bind(this));
         this.mUpButton.onClicked.add(this.addUpButton.bind(this));
-        this.mAddDiamondButton.onClicked.add((() => {
+        this.mAddDiamondButton.onClicked.add(() => {
             this.getHudModuleC.onAddDiamondAction.call();
-        }));
+        });
     }
     addCloseButton() {
         this.hideTween();
@@ -8771,10 +8771,10 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
             Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyForged.Value);
         } else {
             if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd((() => {
+                this.getAdTipsPanel.showRewardAd(() => {
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                     Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
-                }), StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
@@ -8787,15 +8787,15 @@ class RingSoulPanel extends RingSoulPanel_Generate$1 {
         this.mTotalRarityTextBlock.text = StringUtil.format(GameConfig.Language.Text_TotalBonus.Value, 1 + rarity, 1 + rarity);
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -8841,7 +8841,7 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
     }
     bindButton() {
         this.mUpButton.onClicked.add(this.addUpButton.bind(this));
-        Event.addLocalListener("First", (() => {
+        Event.addLocalListener("First", () => {
             if (this.ringSoulPage == 1 && this.ringSoulIndex == 0) {
                 this.ringSoulIndex++;
                 this.getRingSoulModuleC.setRingSoulIndex(this.ringSoulPage, this.ringSoulIndex);
@@ -8850,7 +8850,7 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
                 Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnCompletingTheBeginnerSGuide.Value);
                 Notice.showDownNotice(GameConfig.Language.Text_RewardTheFirstSoulRingWithATenYearSoulRing.Value);
             }
-        }));
+        });
     }
     addUpButton() {
         if (this.ringSoulPage <= 0) {
@@ -8877,10 +8877,10 @@ class RingSoulItem extends RingSoulItem_Generate$1 {
             Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyForged.Value);
         } else {
             if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd((() => {
+                this.getAdTipsPanel.showRewardAd(() => {
                     Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                }), StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
@@ -9075,123 +9075,123 @@ class HUDPanel extends HUDPanel_Generate$1 {
     }
     bindButtons() {
         this.mAtkButton.onClicked.clear();
-        this.mShopButton.onClicked.add((() => {
+        this.mShopButton.onClicked.add(() => {
             this.getHudModuleC.onOpenShopAction.call();
-        }));
-        this.mPlayerButton.onClicked.add((() => {
+        });
+        this.mPlayerButton.onClicked.add(() => {
             this.getHudModuleC.onOpenPlayerAction.call();
             this.hide();
-        }));
-        this.mJumpButton.onClicked.add((() => {
+        });
+        this.mJumpButton.onClicked.add(() => {
             this.getHudModuleC.onJumpAction.call();
             this.getHudModuleC.onOnOffFlyAction.call(false);
             this.isOpenAuto = false;
             this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
-        }));
-        this.mSprintButton.onClicked.add((() => {
+        });
+        this.mSprintButton.onClicked.add(() => {
             this.getHudModuleC.onSprintAction.call();
             this.getHudModuleC.onOnOffFlyAction.call(false);
             this.isOpenAuto = false;
             this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
-        }));
-        this.mOnlineRewardButton.onClicked.add((() => {
+        });
+        this.mOnlineRewardButton.onClicked.add(() => {
             this.getHudModuleC.onOpenOnlineRewardAction.call();
-        }));
-        this.mTaskButton.onClicked.add((() => {
+        });
+        this.mTaskButton.onClicked.add(() => {
             this.getHudModuleC.onOpenTaskAction.call();
-        }));
-        this.mRankButton.onClicked.add((() => {
+        });
+        this.mRankButton.onClicked.add(() => {
             this.getHudModuleC.onOpenRankAction.call();
-        }));
-        this.mHomeButton.onClicked.add((() => {
+        });
+        this.mHomeButton.onClicked.add(() => {
             this.getHudModuleC.onHomeAction.call();
-        }));
-        this.mAddCoinButton.onClicked.add((() => {
+        });
+        this.mAddCoinButton.onClicked.add(() => {
             this.getHudModuleC.onAddCoinAction.call();
-        }));
-        this.mAddDiamondButton.onClicked.add((() => {
+        });
+        this.mAddDiamondButton.onClicked.add(() => {
             this.getHudModuleC.onAddDiamondAction.call();
-        }));
-        this.mAddBoneButton.onClicked.add((() => {
+        });
+        this.mAddBoneButton.onClicked.add(() => {
             this.getHudModuleC.onAddBoneAction.call();
-        }));
-        this.mAdsButton.onClicked.add((() => {
+        });
+        this.mAdsButton.onClicked.add(() => {
             this.getHudModuleC.onAdsAction.call();
-        }));
-        this.mUpLvButton.onClicked.add((() => {
+        });
+        this.mUpLvButton.onClicked.add(() => {
             this.getHudModuleC.onAdsAction.call();
-        }));
-        this.mRingSoulButton.onClicked.add((() => {
+        });
+        this.mRingSoulButton.onClicked.add(() => {
             this.getHudModuleC.onOpenRingSoulAction.call();
-        }));
+        });
         let isInvincible = false;
         this.mInvincibleTextBlock.text = GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
-        this.mInvincibleButton.onClicked.add((() => {
+        this.mInvincibleButton.onClicked.add(() => {
             isInvincible = !isInvincible;
             this.mInvincibleTextBlock.text = isInvincible ? GameConfig.Language.Text_DefenseActivated.Value : GameConfig.Language.Text_DefenseHasBeenTurnedOff.Value;
             this.getHudModuleC.onInvincibleAction.call(isInvincible);
-        }));
+        });
         this.mOnlineRewardButton.normalImageGuid = "193281";
         this.mOnlineRewardButton.pressedImageGuid = "193281";
         this.mOnlineRewardButton.disableImageGuid = "193281";
         this.bindMusicButton();
         let isOpenRingSoul = true;
         this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? GameConfig.Language.Text_PutItAway.Value : GameConfig.Language.Text_Open.Value;
-        this.mOnOffRingSoulButton.onClicked.add((() => {
+        this.mOnOffRingSoulButton.onClicked.add(() => {
             if (!this.getRingSoulModuleC.isCanOpenRingSoul) return;
             if (!this.isCanOnRingSoul) {
                 Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_CoolForSeconds.Value, 5));
                 return;
             }
             this.isCanOnRingSoul = false;
-            TimeUtil.delaySecond(5).then((() => {
+            TimeUtil.delaySecond(5).then(() => {
                 this.isCanOnRingSoul = true;
-            }));
+            });
             isOpenRingSoul = !isOpenRingSoul;
             this.mOnOffRingSoulTextBlock.text = isOpenRingSoul ? GameConfig.Language.Text_PutItAway.Value : GameConfig.Language.Text_Open.Value;
             this.getHudModuleC.onOnOffRingSoulAction.call(isOpenRingSoul);
-        }));
-        this.mArkButton.onClicked.add((() => {
+        });
+        this.mArkButton.onClicked.add(() => {
             this.getHudModuleC.onOpenArkAction.call();
-        }));
-        this.mSignInButton.onClicked.add((() => {
+        });
+        this.mSignInButton.onClicked.add(() => {
             this.getHudModuleC.onOpenSignInAction.call();
-        }));
-        this.mGetButton.onClicked.add((() => {
+        });
+        this.mGetButton.onClicked.add(() => {
             this.getHudModuleC.onOpenGetAction.call();
-        }));
-        this.mUpExpButton.onClicked.add((() => {
+        });
+        this.mUpExpButton.onClicked.add(() => {
             this.getHudModuleC.onOnOffUpExpAction.call(true);
             this.getHudModuleC.onOnOffFlyAction.call(false);
             this.isOpenAuto = false;
             this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
-        }));
-        this.mNewPeopleButton.onClicked.add((() => {
+        });
+        this.mNewPeopleButton.onClicked.add(() => {
             this.getHudModuleC.onOpenNewPeopleAction.call();
-        }));
-        this.mLotteryButton.onClicked.add((() => {
+        });
+        this.mLotteryButton.onClicked.add(() => {
             this.getHudModuleC.onOpenLotteryAction.call();
-        }));
-        this.mFlyButton.onClicked.add((() => {
+        });
+        this.mFlyButton.onClicked.add(() => {
             this.isOpenAuto = false;
             this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
             this.getHudModuleC.onOnOffFlyAction.call(true);
-        }));
-        this.mSwordButton.onClicked.add((() => {
+        });
+        this.mSwordButton.onClicked.add(() => {
             this.getHudModuleC.onOpenSwordAction.call();
-        }));
-        this.mSoulBoneButton.onClicked.add((() => {
+        });
+        this.mSoulBoneButton.onClicked.add(() => {
             this.getHudModuleC.onOpenSoulBoneAction.call();
-        }));
-        this.mClickHeadButton.onClicked.add((() => {
+        });
+        this.mClickHeadButton.onClicked.add(() => {
             this.getHudModuleC.onOpenTitleNameAction.call();
-        }));
-        this.mLimitTimeButton.onClicked.add((() => {
+        });
+        this.mLimitTimeButton.onClicked.add(() => {
             this.getHudModuleC.onOpenLimitTimeAction.call();
-        }));
-        this.mClothButton.onClicked.add((() => {
+        });
+        this.mClothButton.onClicked.add(() => {
             mw.AvatarEditorService.asyncOpenAvatarEditorModule();
-        }));
+        });
         this.initSkill_1();
         this.initAutoAtk();
         mw.AvatarEditorService.avatarServiceDelegate.add(this.addAvatarServiceDelegate.bind(this));
@@ -9249,13 +9249,13 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.deadCountDown = 3;
         this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
         this.clearCountDownInterval();
-        this.deadCountDownInterval = TimeUtil.setInterval((() => {
+        this.deadCountDownInterval = TimeUtil.setInterval(() => {
             this.mDeadCountDownTextBlock.text = this.deadCountDown-- + "";
             if (this.deadCountDown < 0) {
                 this.clearCountDownInterval();
                 this.endDeadCountDown();
             }
-        }), 1);
+        }, 1);
     }
     clearCountDownInterval() {
         if (this.deadCountDownInterval) {
@@ -9287,14 +9287,14 @@ class HUDPanel extends HUDPanel_Generate$1 {
         this.killTipDatas.push(killTipData);
         this.updateKillTipItems();
         this.clearHideKillTipIntervalId();
-        this.hideKillTipIntervalId = TimeUtil.setInterval((() => {
+        this.hideKillTipIntervalId = TimeUtil.setInterval(() => {
             if (this.killTipDatas && this.killTipDatas.length > 0) {
                 this.killTipDatas.shift();
                 this.updateKillTipItems();
             } else {
                 this.clearHideKillTipIntervalId();
             }
-        }), 5);
+        }, 5);
     }
     clearHideKillTipIntervalId() {
         if (this.hideKillTipIntervalId) {
@@ -9328,10 +9328,10 @@ class HUDPanel extends HUDPanel_Generate$1 {
             this.mKillTipTextBlock3.text = StringUtil.format(GameConfig.Language.Text_DefeatToCompleteRevenge.Value, killedName);
         }
         Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.SelfHitTestInvisible);
-        this.killTipsTimeOutId2 = setTimeout((() => {
+        this.killTipsTimeOutId2 = setTimeout(() => {
             Utils.setWidgetVisibility(this.mKillTipTextBlock3, mw.SlateVisibility.Collapsed);
             this.clearKillTipsTimeOutId2();
-        }), 3 * 1e3);
+        }, 3 * 1e3);
     }
     clearKillTipsTimeOutId2() {
         if (this.killTipsTimeOutId2) {
@@ -9402,7 +9402,7 @@ class HUDPanel extends HUDPanel_Generate$1 {
         }
     }
     atk(index) {
-        this.mAtkButton.onPressed.add((() => {
+        this.mAtkButton.onPressed.add(() => {
             if (this.getHudModuleC.getMp < 5) {
                 Notice.showDownNotice(`${GlobalData.mpStr}${GameConfig.Language.Text_Insufficient.Value}`);
                 Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeToIncreaseReserves.Value, GlobalData.mpStr));
@@ -9414,17 +9414,17 @@ class HUDPanel extends HUDPanel_Generate$1 {
             this.getHudModuleC.onOpenAutoAtkAction.call(null, this.isOpenAuto);
             ColdWeapon.getInstance().attack(index);
             this.curInputIndex = index;
-        }));
-        this.mAtkButton.onReleased.add((() => {
+        });
+        this.mAtkButton.onReleased.add(() => {
             if (this.curInputIndex != index) return;
             ColdWeapon.getInstance().endCharge(true);
             this.curInputIndex = -1;
-        }));
+        });
     }
     initSkill_1() {
         this.mSkillTextBlock_1.text = `<size=20>${GlobalData.skillName_1}</size>\n<size=10>${GlobalData.skillContinue_1}${GameConfig.Language.Text_DoubleTheAttackPowerWithinSeconds.Value}</size>`;
         this.mSkillMaskButton_1.fanShapedValue = 1;
-        this.mSkillMaskButton_1.clickedDelegate.add((() => {
+        this.mSkillMaskButton_1.clickedDelegate.add(() => {
             Event.dispatchToLocal("PlayButtonClick", this.mSkillMaskButton_1.name);
             if (!this.isUnlockSkill_1) {
                 Notice.showDownNotice(`${GlobalData.skillLvLimit_1}${GameConfig.Language.Text_LevelOpen.Value}${GlobalData.skillName_1}`);
@@ -9434,45 +9434,45 @@ class HUDPanel extends HUDPanel_Generate$1 {
                 Notice.showDownNotice(GameConfig.Language.Text_TheSkillsAreNotReadyYet.Value);
                 return;
             }
-            this.getHudModuleC.onSkillAction.call((isCakAtk => {
+            this.getHudModuleC.onSkillAction.call(isCakAtk => {
                 if (!isCakAtk) return;
                 this.getHudModuleC.onOnOffFlyAction.call(false);
                 new Tween$2({
                     fanShapedValue: 0
                 }).to({
                     fanShapedValue: 1
-                }, GlobalData.skillCD_1 * 1e3).onStart((() => {
+                }, GlobalData.skillCD_1 * 1e3).onStart(() => {
                     this.mSkillMaskButton_1.fanShapedValue = 0;
                     this.skillIsCanAtk_1 = false;
                     this.mSkillCDTextBlock_1.text = `${GlobalData.skillCD_1}`;
-                })).onUpdate((v => {
+                }).onUpdate(v => {
                     this.mSkillMaskButton_1.fanShapedValue = v.fanShapedValue;
                     this.mSkillCDTextBlock_1.text = `${(GlobalData.skillCD_1 * (1 - v.fanShapedValue)).toFixed(0)}`;
-                })).onComplete((() => {
+                }).onComplete(() => {
                     this.mSkillMaskButton_1.fanShapedValue = 1;
                     this.skillIsCanAtk_1 = true;
                     this.mSkillCDTextBlock_1.text = ``;
-                })).start();
-            }));
-        }));
+                }).start();
+            });
+        });
     }
     initAutoAtk() {
-        this.mAutoAtkButton.onClicked.add((() => {
-            this.getHudModuleC.onOpenAutoAtkAction.call((isCanOpen => {
+        this.mAutoAtkButton.onClicked.add(() => {
+            this.getHudModuleC.onOpenAutoAtkAction.call(isCanOpen => {
                 this.isOpenAuto = isCanOpen;
-            }), !this.isOpenAuto);
-        }));
+            }, !this.isOpenAuto);
+        });
     }
     bindMusicButton() {
         this.mMusicCanvas.visibility = mw.SlateVisibility.Collapsed;
-        this.mMusicButton.onClicked.add((() => {
+        this.mMusicButton.onClicked.add(() => {
             if (this.mMusicCanvas.visibility == mw.SlateVisibility.SelfHitTestInvisible) return;
-            Utils.openUITween(this.mMusicCanvas, (() => {
+            Utils.openUITween(this.mMusicCanvas, () => {
                 this.mMusicCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-            }), null);
+            }, null);
             if (this.isOpenBGM) this.startMusicTween();
-        }));
-        this.mOnOffMusicBtn.onClicked.add((() => {
+        });
+        this.mOnOffMusicBtn.onClicked.add(() => {
             this.isOpenBGM = !this.isOpenBGM;
             this.onBgmAction.call(this.isOpenBGM);
             let offOnIcon = "";
@@ -9486,20 +9486,20 @@ class HUDPanel extends HUDPanel_Generate$1 {
             this.mOnOffMusicBtn.normalImageGuid = offOnIcon;
             this.mOnOffMusicBtn.pressedImageGuid = offOnIcon;
             this.mOnOffMusicBtn.disableImageGuid = offOnIcon;
-        }));
-        this.mLeftMusicBtn.onClicked.add((() => {
+        });
+        this.mLeftMusicBtn.onClicked.add(() => {
             this.onSwitchBgmAction.call(-1);
-        }));
-        this.mRightMusicBtn.onClicked.add((() => {
+        });
+        this.mRightMusicBtn.onClicked.add(() => {
             this.onSwitchBgmAction.call(1);
-        }));
-        this.mCloseMusicBtn.onClicked.add((() => {
+        });
+        this.mCloseMusicBtn.onClicked.add(() => {
             if (this.mMusicCanvas.visibility == mw.SlateVisibility.Collapsed) return;
-            Utils.closeUITween(this.mMusicCanvas, null, (() => {
+            Utils.closeUITween(this.mMusicCanvas, null, () => {
                 this.mMusicCanvas.visibility = mw.SlateVisibility.Collapsed;
-            }));
+            });
             this.stopMusicTween();
-        }));
+        });
         this.initJumpyImage_1();
         this.initJumpyImage_2();
     }
@@ -9517,37 +9517,37 @@ class HUDPanel extends HUDPanel_Generate$1 {
             y: .2
         }).to({
             y: 1.5
-        }, this.jumpyImageTime_1 * 1e3).onStart((() => {
+        }, this.jumpyImageTime_1 * 1e3).onStart(() => {
             this.mJumpyImage_1.renderScale = new mw.Vector2(1, .2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mJumpyImage_1.renderScale = new mw.Vector2(1, v.y);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.jumpyImage_1_2.start();
-        })).easing(cubicBezier(.65, 2.01, .27, -.87));
+        }).easing(cubicBezier(.65, 2.01, .27, -.87));
         this.jumpyImage_1_2 = new Tween$2({
             y: 1.5
         }).to({
             y: .2
-        }, this.jumpyImageTime_1 * 1e3).onStart((() => {
+        }, this.jumpyImageTime_1 * 1e3).onStart(() => {
             this.mJumpyImage_1.renderScale = new mw.Vector2(1, 1.5);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mJumpyImage_1.renderScale = new mw.Vector2(1, v.y);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.jumpyImage_1_1.start();
-        })).easing(cubicBezier(.65, 2.01, .27, -.87));
+        }).easing(cubicBezier(.65, 2.01, .27, -.87));
     }
     initJumpyImage_2() {
         this.jumpyImage_2 = new Tween$2({
             angle: 0
         }).to({
             angle: 360
-        }, this.jumpyImageTime_2 * 1e3).onStart((() => {
+        }, this.jumpyImageTime_2 * 1e3).onStart(() => {
             this.mJumpyImage_2.renderTransformAngle = 0;
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mJumpyImage_2.renderTransformAngle = v.angle;
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.mJumpyImage_2.renderTransformAngle = 0;
-        })).repeat(Infinity);
+        }).repeat(Infinity);
     }
     startRedPointTween() {
         if (this.redPointTween1) {
@@ -9570,24 +9570,24 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mPointImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2 = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mPointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
     }
     updateOnlineRewradIcon(icon) {
         if (icon == "") {
@@ -9624,24 +9624,24 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.taskRedPointTween2.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.taskRedPointTween2 = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mTaskPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.taskRedPointTween1.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
     }
     updateHUDText(text) {
         this.mOnlineRewardTextBlock.text = text;
@@ -9651,43 +9651,43 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2_RingSou.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2_RingSou = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mRingSoulPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1_RingSou.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween1_RingSou.start();
         let onOffRingSoulTween1 = new mw.Tween({
             angle: 0
         }).to({
             angle: 360
-        }, 2 * 1e3).onUpdate((v => {
+        }, 2 * 1e3).onUpdate(v => {
             this.mOnOffRingSoulButton.renderTransformAngle = v.angle;
-        })).onComplete((() => {
+        }).onComplete(() => {
             onOffRingSoulTween2.start();
-        }));
+        });
         let onOffRingSoulTween2 = new mw.Tween({
             angle: 0
         }).to({
             angle: 360
-        }, 2 * 1e3).onUpdate((v => {
+        }, 2 * 1e3).onUpdate(v => {
             this.mOnOffRingSoulButton.renderTransformAngle = v.angle;
-        })).onComplete((() => {
+        }).onComplete(() => {
             onOffRingSoulTween1.start();
-        }));
+        });
         onOffRingSoulTween1.start();
     }
     initRedPointTween_SoulBone() {
@@ -9695,24 +9695,24 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2_SoulBone.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2_SoulBone = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mSoulBonePointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1_SoulBone.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween1_SoulBone.start();
     }
     initRedPointTween_SignIn() {
@@ -9720,24 +9720,24 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mSignInImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mSignInImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2_SignIn.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2_SignIn = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mSignInImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mSignInImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1_SignIn.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween1_SignIn.start();
     }
     initRedPointTween_Ark() {
@@ -9745,24 +9745,24 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mArkImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mArkImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2_Ark.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2_Ark = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mArkImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mArkImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1_Ark.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween1_Ark.start();
     }
     initRedPointTween_NewPeople() {
@@ -9770,24 +9770,24 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2_NewPeople.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2_NewPeople = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mNewPeoplePointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1_NewPeople.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween1_NewPeople.start();
     }
     initRedPointTween_Lottery() {
@@ -9795,24 +9795,24 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2_Lottery.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2_Lottery = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mLotteryPointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1_Lottery.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween1_Lottery.start();
     }
     initRedPointTween_LimitTime() {
@@ -9820,41 +9820,41 @@ class HUDPanel extends HUDPanel_Generate$1 {
             value: .8
         }).to({
             value: 1.2
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(.8);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween2_LimitTimev.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween2_LimitTimev = new mw.Tween({
             value: 1.2
         }).to({
             value: .8
-        }, .2 * 1e3).onStart((() => {
+        }, .2 * 1e3).onStart(() => {
             this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(1.2);
-        })).onUpdate((v => {
+        }).onUpdate(v => {
             this.mLimitTimePointImage.renderScale = mw.Vector2.one.multiply(v.value);
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.redPointTween1_LimitTime.start();
-        })).easing(cubicBezier(.25, .1, .25, 1));
+        }).easing(cubicBezier(.25, .1, .25, 1));
         this.redPointTween1_LimitTime.start();
     }
     showDayStr() {
         Utils.setWidgetVisibility(this.mDayStrCanvas, mw.SlateVisibility.SelfHitTestInvisible);
-        Event.addLocalListener(`UpdateNewPeopleGiftBagOnlineTime`, (time => {
+        Event.addLocalListener(`UpdateNewPeopleGiftBagOnlineTime`, time => {
             this.dayStrTime = time;
             this.mDayStrTimeTextBlock.text = `在线${this.dayStrTime}/30分钟免费领取`;
-        }));
+        });
         Event.dispatchToLocal(`RequestNewPeopleGiftBagOnlineTime`);
-        this.mDayStrButton.onClicked.add((() => {
+        this.mDayStrButton.onClicked.add(() => {
             if (this.dayStrTime < 30) {
                 Notice.showDownNotice(`在线时间不足30分钟`);
                 return;
             }
             this.getHudModuleC.getDayStr();
             Utils.setWidgetVisibility(this.mDayStrCanvas, mw.SlateVisibility.Collapsed);
-        }));
+        });
     }
 }
 
@@ -9891,9 +9891,9 @@ class KillTipItem extends KillTipItem_Generate$1 {
             break;
         }
         Utils.setWidgetVisibility(this.uiObject, mw.SlateVisibility.SelfHitTestInvisible);
-        setTimeout((() => {
+        setTimeout(() => {
             this.mBgImage.size = new mw.Vector2(this.mMainCanvas.size.x + 20, this.mMainCanvas.size.y);
-        }), 1);
+        }, 1);
     }
 }
 
@@ -10018,9 +10018,9 @@ let UpExpPanel_Generate = class UpExpPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCancleUpExpButton.onClicked.add((() => {
+        this.mCancleUpExpButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCancleUpExpButton");
-        }));
+        });
         this.mCancleUpExpButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mOnHookTextBlock);
         this.initLanguage(this.mCancelOnHookTextBlock);
@@ -10367,33 +10367,33 @@ class LevelModuleC extends ModuleC {
     }
     hideLevelPanel() {}
     initTransfer() {
-        transferMap.forEach(((value, key) => {
-            value.triggerIds.forEach((triggerId => {
-                mw.GameObject.asyncFindGameObjectById(triggerId).then((go => {
+        transferMap.forEach((value, key) => {
+            value.triggerIds.forEach(triggerId => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then(go => {
                     let trigger = go;
-                    trigger.onEnter.add((character => {
+                    trigger.onEnter.add(character => {
                         if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
                             Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
-                    }));
-                }));
-            }));
-            value.worldUIIds.forEach((worldId => {
-                mw.GameObject.asyncFindGameObjectById(worldId).then((v => {
+                    });
+                });
+            });
+            value.worldUIIds.forEach(worldId => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then(v => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
                     levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelUnlock.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-                }));
-            }));
-        }));
-        levelMap.forEach(((value, key) => {
-            value.triggers.forEach((triggerId => {
-                mw.GameObject.asyncFindGameObjectById(triggerId).then((v => {
-                    v.onEnter.add((char => {
+                });
+            });
+        });
+        levelMap.forEach((value, key) => {
+            value.triggers.forEach(triggerId => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then(v => {
+                    v.onEnter.add(char => {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId) return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
                             Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
@@ -10401,40 +10401,40 @@ class LevelModuleC extends ModuleC {
                         }
                         this.server.net_startLevel(key);
                         SoundService.play3DSound("431480", this.localPlayer.character);
-                    }));
-                }));
-            }));
-            value.worldUIIds.forEach((worldId => {
-                mw.GameObject.asyncFindGameObjectById(worldId).then((v => {
+                    });
+                });
+            });
+            value.worldUIIds.forEach(worldId => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then(v => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
                     levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelOpen.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-                }));
-            }));
-        }));
-        arenaMap.forEach(((value, key) => {
-            value.triggers.forEach((triggerId => {
-                mw.GameObject.asyncFindGameObjectById(triggerId).then((v => {
-                    v.onEnter.add((char => {
+                });
+            });
+        });
+        arenaMap.forEach((value, key) => {
+            value.triggers.forEach(triggerId => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then(v => {
+                    v.onEnter.add(char => {
                         if (this.localPlayer.character.gameObjectId != char.gameObjectId) return;
                         if (this.getPlayerModuleC.getLv < value.limitLevel) {
                             Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_PleaseFirstRaiseTheLevelToLevel.Value, value.limitLevel));
                             return;
                         }
                         this.localPlayer.character.worldTransform.position = value.targetLoc;
-                    }));
-                }));
-            }));
-            value.worldUIIds.forEach((worldId => {
-                mw.GameObject.asyncFindGameObjectById(worldId).then((v => {
+                    });
+                });
+            });
+            value.worldUIIds.forEach(worldId => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then(v => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
                     levelItem.updateLevelTextBlock(`${value.limitLevel}${GameConfig.Language.Text_LevelOpen.Value}\n${GameConfig.Language[`${value.name}`].Value}`);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-                }));
-            }));
-        }));
+                });
+            });
+        });
     }
     get getHUDModuleC() {
         if (!this.hudModuleC) {
@@ -10493,11 +10493,11 @@ class LevelModuleS extends ModuleS {
         this.currentData.setLevel(key, value);
     }
     initTrigger() {
-        mw.GameObject.asyncFindGameObjectById(triggerParent).then((value => {
-            value.getChildren().forEach((v => {
+        mw.GameObject.asyncFindGameObjectById(triggerParent).then(value => {
+            value.getChildren().forEach(v => {
                 this.triggers.push(v);
-            }));
-        }));
+            });
+        });
     }
     getTrigger() {
         let players = Player.getAllPlayers();
@@ -10535,14 +10535,14 @@ class LevelModuleS extends ModuleS {
         let level = MapEx.has(levels, key) ? MapEx.get(levels, key) : 1;
         let lv = DataCenterS.getData(player, PlayerData).playerLv;
         if (!this.levelMap.has(player.userId)) return;
-        TimeUtil.delaySecond(2).then((() => {
+        TimeUtil.delaySecond(2).then(() => {
             Event.dispatchToLocal(`InitMonster`, this.levelMap.get(player.userId), level, lv);
             this.getClient(player).net_startLevel(key, level);
-        }));
+        });
     }
     initUpExp() {
-        mw.GameObject.asyncFindGameObjectById(upExpParent).then((value => {
-            value.getChildren().forEach((v => {
+        mw.GameObject.asyncFindGameObjectById(upExpParent).then(value => {
+            value.getChildren().forEach(v => {
                 let pos = v.worldTransform.position;
                 this.upExpDatas.push({
                     upExpLoc: new mw.Vector(pos.x, pos.y, pos.z + 500),
@@ -10551,8 +10551,8 @@ class LevelModuleS extends ModuleS {
                     originalLoc: null,
                     upExpEffectId: null
                 });
-            }));
-        }));
+            });
+        });
     }
     updateUpExpMap(player, isOn) {
         if (!this.upExpDatas || this.upExpDatas.length == 0) return;
@@ -10711,12 +10711,12 @@ class SwordItem extends SwordItem_Generate$1 {
             return;
         }
         this.isCanContinueClick = false;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.isCanContinueClick = true;
-        }));
-        this.getFlyModuleC.clickSwordItem(this.key, (() => {
+        });
+        this.getFlyModuleC.clickSwordItem(this.key, () => {
             this.buyComplete();
-        }));
+        });
     }
     initItem(key) {
         this.key = key;
@@ -10789,12 +10789,12 @@ class SwordPanel extends SwordPanel_Generate$1 {
         this.hideTween();
     }
     initItem() {
-        swordDataMap.forEach(((value, key) => {
+        swordDataMap.forEach((value, key) => {
             let swordItem = mw.UIService.create(SwordItem);
             swordItem.initItem(key);
             this.mCanvas.addChild(swordItem.uiObject);
             this.swordItems.push(swordItem);
-        }));
+        });
     }
     updateArkTextBlock(arkCount) {
         this.mArkCountTextBlock.text = `${arkCount}`;
@@ -10806,15 +10806,15 @@ class SwordPanel extends SwordPanel_Generate$1 {
         this.mTotalRarityTextBlock.text = `${GameConfig.Language.Text_RoyalSwordFlyingBonus.Value}\n${StringUtil.format(GameConfig.Language.Text_IncreaseBloodVolumeByTimes_Nowrap.Value, 1 + hpRarity)}\n${StringUtil.format(GameConfig.Language.Text_AttackPowerIncreasedByTimes_Nowrap.Value, 1 + atkRarity)}`;
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -10846,17 +10846,17 @@ class FlyData extends Subdata {
     get getHpRarity() {
         if (!this.swordIds || this.swordIds.length == 0) return 0;
         let hpRarity = 0;
-        this.swordIds.forEach((swordId => {
+        this.swordIds.forEach(swordId => {
             hpRarity += swordDataMap.get(swordId).hpRarity;
-        }));
+        });
         return Number(hpRarity.toFixed(1));
     }
     get getAtkRarity() {
         if (!this.swordIds || this.swordIds.length == 0) return 0;
         let atkRarity = 0;
-        this.swordIds.forEach((swordId => {
+        this.swordIds.forEach(swordId => {
             atkRarity += swordDataMap.get(swordId).atkRarity;
-        }));
+        });
         return atkRarity;
     }
 }
@@ -11182,28 +11182,28 @@ class FlyModuleC extends ModuleC {
                     Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                     if (buySuccessCallback) buySuccessCallback();
                 } else {
-                    mw.PurchaseService.placeOrder(swordData.commodityId, 1, ((status, msg) => {
+                    mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
                         mw.PurchaseService.getArkBalance();
                         if (status != 200) return;
                         if (buySuccessCallback) buySuccessCallback();
-                    }));
+                    });
                 }
             } else {
-                this.getSwordTipsPanel.showPanel(key, (() => {
+                this.getSwordTipsPanel.showPanel(key, () => {
                     if (mw.SystemUtil.isPIE) {
                         this.setSwordId(key);
                         Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
                         if (buySuccessCallback) buySuccessCallback();
                         this.getSwordTipsPanel.hide();
                     } else {
-                        mw.PurchaseService.placeOrder(swordData.commodityId, 1, ((status, msg) => {
+                        mw.PurchaseService.placeOrder(swordData.commodityId, 1, (status, msg) => {
                             mw.PurchaseService.getArkBalance();
                             if (status != 200) return;
                             if (buySuccessCallback) buySuccessCallback();
                             this.getSwordTipsPanel.hide();
-                        }));
+                        });
                     }
-                }), (() => {
+                }, () => {
                     let costDiamond = this.getPlayerModuleC.getDiamond;
                     if (costDiamond >= swordData.diamond) {
                         this.getPlayerModuleC.saveDiamond(-swordData.diamond);
@@ -11214,34 +11214,34 @@ class FlyModuleC extends ModuleC {
                     } else {
                         Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
                         if (GlobalData.isOpenIAA) {
-                            this.getAdTipsPanel.showRewardAd((() => {
+                            this.getAdTipsPanel.showRewardAd(() => {
                                 Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                            }), StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                            }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
                         } else {
                             Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                             this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                         }
                     }
-                }), null);
+                }, null);
             }
         }
     }
     net_deliverGoods(commodityId, amount) {
-        swordDataMap.forEach(((value, key) => {
+        swordDataMap.forEach((value, key) => {
             if (value.commodityId == commodityId) {
                 this.setSwordId(key);
                 Notice.showDownNotice(GameConfig.Language.Text_YujianFlyingHasBeenSuccessfullyPurchased.Value);
             }
-        }));
+        });
     }
     onEnterScene(sceneType) {
         this.initSwordData();
-        this.initTrigger().then((() => {
-            TimeUtil.delaySecond(10).then((() => {
+        this.initTrigger().then(() => {
+            TimeUtil.delaySecond(10).then(() => {
                 if (this.usingSwordId > 0) this.addOnOffSword(true);
-            }));
-        }));
+            });
+        });
     }
     initSwordData() {
         this.flyIds = this.data.flyIds;
@@ -11275,17 +11275,17 @@ class FlyModuleC extends ModuleC {
     get getHpRarity() {
         if (!this.swordIds || this.swordIds.length == 0) return 0;
         let hpRarity = 0;
-        this.swordIds.forEach((swordId => {
+        this.swordIds.forEach(swordId => {
             hpRarity += swordDataMap.get(swordId).hpRarity;
-        }));
+        });
         return Number(hpRarity.toFixed(1));
     }
     get getAtkRarity() {
         if (!this.swordIds || this.swordIds.length == 0) return 0;
         let atkRarity = 0;
-        this.swordIds.forEach((swordId => {
+        this.swordIds.forEach(swordId => {
             atkRarity += swordDataMap.get(swordId).atkRarity;
-        }));
+        });
         return Number(atkRarity.toFixed(1));
     }
     setUsingSwordId(swordId) {
@@ -11326,20 +11326,20 @@ class FlyModuleC extends ModuleC {
         this.addOpenSwordPanel();
     }
     async initTrigger() {
-        mw.GameObject.asyncFindGameObjectById(swordTriggerId).then((trigger => {
-            trigger.onEnter.add((character => {
+        mw.GameObject.asyncFindGameObjectById(swordTriggerId).then(trigger => {
+            trigger.onEnter.add(character => {
                 if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
                 this.addOpenSwordPanel();
-            }));
-        }));
-        mw.GameObject.asyncFindGameObjectById(swordWorldUIId).then((worldUI => {
+            });
+        });
+        mw.GameObject.asyncFindGameObjectById(swordWorldUIId).then(worldUI => {
             let levelItem = mw.UIService.create(LevelItem);
             levelItem.updateLevelTextBlock(GameConfig.Language.Text_YujianFlyingMall.Value);
             worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-        }));
-        swordDataMap.forEach((swordData => {
+        });
+        swordDataMap.forEach(swordData => {
             if (!swordData.npcId || swordData.npcId == "") return;
-            GameObject.asyncFindGameObjectById(swordData.npcId).then((character => {
+            GameObject.asyncFindGameObjectById(swordData.npcId).then(character => {
                 character.setDescription([ swordData.skinId ]);
                 let animation = character.loadAnimation(swordData.animationId);
                 animation.loop = 0;
@@ -11351,14 +11351,14 @@ class FlyModuleC extends ModuleC {
                     flyCharacter.localTransform.scale = mw.Vector.one.multiply(4);
                     flyCharacter.localTransform.position = new mw.Vector(12, 0, 30);
                     flyCharacter.localTransform.rotation = mw.Rotation.zero;
-                    Utils.asyncDownloadAsset(`160628`).then((() => {
+                    Utils.asyncDownloadAsset(`160628`).then(() => {
                         let flyCharacterAnimation = flyCharacter.loadAnimation(`160628`);
                         flyCharacterAnimation.loop = 0;
                         flyCharacterAnimation.play();
-                    }));
+                    });
                 }
-            }));
-        }));
+            });
+        });
     }
 }
 
@@ -11478,7 +11478,7 @@ var ObjectPoolServices;
     function getPool(cls, autoCreat = true) {
         let pool = poolMap.get(cls.name);
         if (pool === undefined && autoCreat) {
-            initPool(cls, (() => new cls));
+            initPool(cls, () => new cls);
         }
         return poolMap.get(cls.name);
     }
@@ -11627,9 +11627,9 @@ let OnlineRewardPanel_Generate = class OnlineRewardPanel_Generate extends UIScri
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
     }
@@ -11689,9 +11689,9 @@ class OnlineRewardPanel extends OnlineRewardPanel_Generate$1 {
         this.mTitleTextBlock.text = GameConfig.Language.Text_OnlineRewards.Value;
     }
     bindButton() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             this.getOnlineRewardsModuleC.onOnlineRewardsAction.call(false);
-        }));
+        });
     }
     onShow(...params) {
         this.openNeedTweenItems(true);
@@ -11699,9 +11699,9 @@ class OnlineRewardPanel extends OnlineRewardPanel_Generate$1 {
         Utils.openUITween(this.rootCanvas, null, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
-        }));
+        });
     }
     onHide() {
         this.openNeedTweenItems(false);
@@ -11759,10 +11759,10 @@ class OnlineRewardPanel extends OnlineRewardPanel_Generate$1 {
     updateNeedUpdateItems(onlineSecond) {
         if (MapEx.count(this.needUpdateItems) == 0) return;
         let isCanUpdateHUD = true;
-        MapEx.forEach(this.needUpdateItems, ((key, value) => {
+        MapEx.forEach(this.needUpdateItems, (key, value) => {
             value.updateTime(onlineSecond, isCanUpdateHUD);
             isCanUpdateHUD = false;
-        }));
+        });
     }
     deleteNeedUpdateItem(index) {
         if (MapEx.has(this.needUpdateItems, index)) {
@@ -11772,9 +11772,9 @@ class OnlineRewardPanel extends OnlineRewardPanel_Generate$1 {
     }
     openNeedTweenItems(isOpen) {
         Console.error("MapEx.count(this.needTweenItems) = " + MapEx.count(this.needTweenItems));
-        MapEx.forEach(this.needTweenItems, ((key, value) => {
+        MapEx.forEach(this.needTweenItems, (key, value) => {
             isOpen ? value.startTween() : value.stopTween();
-        }));
+        });
     }
     addNeedTweenItem(index, onlineRewardItem) {
         MapEx.set(this.needTweenItems, index, onlineRewardItem);
@@ -11876,7 +11876,7 @@ class OnlineRewardItem {
     }
     bindButton() {
         this.mButton.onClicked.clear();
-        this.mButton.onClicked.add((() => {
+        this.mButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick");
             switch (this.onlineRewardItemState) {
               case OnlineRewardItemState.notSatisfy:
@@ -11895,7 +11895,7 @@ class OnlineRewardItem {
                 Notice.showDownNotice(GameConfig.Language.Text_ReceivedReward.Value);
                 break;
             }
-        }));
+        });
         this.mButton.normalImageGuid = this.icon;
         this.mButton.pressedImageGuid = this.icon;
         this.mButton.disableImageGuid = this.icon;
@@ -11958,21 +11958,21 @@ class OnlineRewardItem {
             renderOpacity: 1
         }).to({
             renderOpacity: .3
-        }, .5 * 1e3).onUpdate((v => {
+        }, .5 * 1e3).onUpdate(v => {
             this.mCanRewardTextBlock.renderOpacity = v.renderOpacity;
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.tween2.start();
-        })).easing(cubicBezier(.18, .72, .28, .77));
+        }).easing(cubicBezier(.18, .72, .28, .77));
         if (this.tween2 != null) return;
         this.tween2 = new mw.Tween({
             renderOpacity: .3
         }).to({
             renderOpacity: 1
-        }, .5 * 1e3).onUpdate((v => {
+        }, .5 * 1e3).onUpdate(v => {
             this.mCanRewardTextBlock.renderOpacity = v.renderOpacity;
-        })).onComplete((() => {
+        }).onComplete(() => {
             this.tween1.start();
-        })).easing(cubicBezier(.18, .72, .28, .77));
+        }).easing(cubicBezier(.18, .72, .28, .77));
     }
     recycle() {
         ObjectPoolServices.getPool(OnlineRewardItem).return(this);
@@ -12016,10 +12016,10 @@ class OnlineRewardModuleC extends ModuleC {
         this.registerAction();
     }
     registerAction() {
-        this.onOnlineRewardsAction.add((isOpen => {
+        this.onOnlineRewardsAction.add(isOpen => {
             this.isNeedUpdateItem = isOpen;
             isOpen ? this.getOnlineRewardsPanel.show() : this.getOnlineRewardsPanel.hideTween();
-        }));
+        });
     }
     net_getServerOnlineRewardData() {
         this.onlineSecond = this.data.onlineMinute * 60;
@@ -12121,9 +12121,9 @@ let PartItem_Generate = class PartItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mNameTextBlock);
     }
@@ -12542,17 +12542,17 @@ let SoulBonePanel_Generate = class SoulBonePanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mUpProbabilityButton.onClicked.add((() => {
+        this.mUpProbabilityButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mUpProbabilityButton");
-        }));
+        });
         this.mUpProbabilityButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mStrengthenButton.onClicked.add((() => {
+        this.mStrengthenButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mStrengthenButton");
-        }));
+        });
         this.mStrengthenButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mNameTextBlock);
         this.initLanguage(this.mHpTextBlock);
@@ -12702,17 +12702,17 @@ let UpProbabilityPanel_Generate = class UpProbabilityPanel_Generate extends UISc
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mDiamondButton.onClicked.add((() => {
+        this.mDiamondButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mDiamondButton");
-        }));
+        });
         this.mDiamondButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mArkButton.onClicked.add((() => {
+        this.mArkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mArkButton");
-        }));
+        });
         this.mArkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mContentTextBlock_0);
         this.initLanguage(this.mContentTextBlock_1);
@@ -12841,12 +12841,12 @@ class SoulBonePanel extends SoulBonePanel_Generate$1 {
         this.mNeedBoneIconImage.imageGuid = GlobalData.boneIcon;
     }
     initUI() {
-        soulBoneMap.forEach(((value, key) => {
+        soulBoneMap.forEach((value, key) => {
             let partItem = mw.UIService.create(PartItem);
             partItem.setData(value);
             this.partItems.push(partItem);
             this.mPartListCanvas.addChild(partItem.uiObject);
-        }));
+        });
         this.selectPart(0);
         this.updateTotalUpStarOffsetValue();
     }
@@ -13006,9 +13006,9 @@ class SoulBonePanel extends SoulBonePanel_Generate$1 {
         this.mProbabilityTextBlock.text = StringUtil.format(GameConfig.Language.Text_EnhanceTheProbabilityOfSuccess.Value, this.getSoulBoneModuleC.getProbability);
     }
     addUpProbabilityButton() {
-        this.getSoulBoneModuleC.upProbability((() => {
+        this.getSoulBoneModuleC.upProbability(() => {
             this.setStrengthenButtonState();
-        }));
+        });
     }
     addStrengthenButton() {
         if (this.currentSoulBoneData.limitLv > this.getSoulBoneModuleC.getLevel) {
@@ -13030,24 +13030,24 @@ class SoulBonePanel extends SoulBonePanel_Generate$1 {
             Notice.showDownNotice(GameConfig.Language.Text_InsufficientSoulBoneFragments.Value);
             return;
         }
-        this.getSoulBoneModuleC.strengthen((() => {
+        this.getSoulBoneModuleC.strengthen(() => {
             this.refreshContentUI();
             this.updateTotalUpStarOffsetValue();
-        }), (() => {
+        }, () => {
             this.refreshContentUI();
-        }), this.currentSelectPartId, costCoin, costDiamond, costBone);
+        }, this.currentSelectPartId, costCoin, costDiamond, costBone);
     }
     onShow(...params) {
         this.refreshContentUI();
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -13091,9 +13091,9 @@ class UpProbabilityPanel extends UpProbabilityPanel_Generate$1 {
     addArkButton() {
         if (!this.isCanClickArkButton) return;
         this.isCanClickArkButton = false;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.isCanClickArkButton = true;
-        }));
+        });
         if (this.arkCallBack) this.arkCallBack();
     }
     addDiamondButton() {
@@ -13139,9 +13139,9 @@ class SoulBone extends Subdata {
     get getTotalUpStarOffsetValue() {
         if (!this.soulBoneLvs || MapEx.count(this.soulBoneLvs) == 0) return 0;
         let totalUpStarOffsetValue = 0;
-        MapEx.forEach(this.soulBoneLvs, ((key, value) => {
+        MapEx.forEach(this.soulBoneLvs, (key, value) => {
             totalUpStarOffsetValue += value * upStarOffsetValue;
-        }));
+        });
         return totalUpStarOffsetValue;
     }
 }
@@ -13353,9 +13353,9 @@ class SoulBoneModuleC extends ModuleC {
     get getTotalUpStarOffsetValue() {
         if (!this.soulBoneLvs || MapEx.count(this.soulBoneLvs) == 0) return 0;
         let totalUpStarOffsetValue = 0;
-        MapEx.forEach(this.soulBoneLvs, ((key, value) => {
+        MapEx.forEach(this.soulBoneLvs, (key, value) => {
             totalUpStarOffsetValue += value * upStarOffsetValue;
-        }));
+        });
         return totalUpStarOffsetValue;
     }
     get getLevel() {
@@ -13393,15 +13393,15 @@ class SoulBoneModuleC extends ModuleC {
             return;
         }
         this.upProbabilitySuccessCallBack = callBack;
-        this.getUpProbabilityPanel.showPanel((() => {
-            mw.PurchaseService.placeOrder(upProbabilityByArkCommodityId, 1, ((status, msg) => {
+        this.getUpProbabilityPanel.showPanel(() => {
+            mw.PurchaseService.placeOrder(upProbabilityByArkCommodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();
                 if (status != 200) return;
                 if (this.upProbabilitySuccessCallBack) this.upProbabilitySuccessCallBack();
                 SoundService.playSound(upSucceedSound);
                 Notice.showDownNotice(GameConfig.Language.Text_ProbabilityIncreaseSuccess.Value);
-            }));
-        }), (() => {
+            });
+        }, () => {
             if (this.getDiamond >= costDiamondUpProbability) {
                 this.setDiamond(-costDiamondUpProbability);
                 this.setProbability(this.probability + 10);
@@ -13411,16 +13411,16 @@ class SoulBoneModuleC extends ModuleC {
             } else {
                 Notice.showDownNotice(GameConfig.Language.Text_DiamondShortage.Value);
                 if (GlobalData.isOpenIAA) {
-                    this.getAdTipsPanel.showRewardAd((() => {
+                    this.getAdTipsPanel.showRewardAd(() => {
                         Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                         this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                    }), StringUtil.format(GameConfig.Language.Text_GetDiamondsForFree.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                    }, StringUtil.format(GameConfig.Language.Text_GetDiamondsForFree.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
                 } else {
                     Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
                 }
             }
-        }), (() => {}), this.probability + 10, 100);
+        }, () => {}, this.probability + 10, 100);
     }
     net_deliverGoods(commodityId, amount) {
         if (commodityId == upProbabilityByArkCommodityId) {
@@ -13550,13 +13550,13 @@ let TitleNamePanel_Generate = class TitleNamePanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mGetButton.onClicked.add((() => {
+        this.mGetButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mGetButton");
-        }));
+        });
         this.mGetButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mInputTipsTextBlock);
@@ -13615,29 +13615,29 @@ class TitleNamePanel extends TitleNamePanel_Generate$1 {
         }
     }
     bindButton() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             this.hideTween();
-        }));
-        this.mGetButton.onClicked.add((() => {
+        });
+        this.mGetButton.onClicked.add(() => {
             let titleName = this.mInputBox.text;
             if (!titleName || titleName.length == 0) {
                 console.warn(`不能为空`);
                 return;
             }
             ModuleService.getModule(HUDModuleC).modifyTitleName(titleName);
-        }));
+        });
     }
     onShow(...params) {
         this.mInputBox.text = "";
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -13808,93 +13808,93 @@ class HUDModuleC extends ModuleC {
         this.initMusicData();
     }
     registerActions() {
-        this.onOpenHUDAction.add((() => {
+        this.onOpenHUDAction.add(() => {
             this.getHudPanel.show();
-        }));
-        this.onJumpAction.add((() => {
+        });
+        this.onJumpAction.add(() => {
             this.playerJump();
-        }));
-        this.onSprintAction.add((() => {
+        });
+        this.onSprintAction.add(() => {
             this.sprint();
-        }));
-        this.onPlayerScaleAction.add((playerScale => {
+        });
+        this.onPlayerScaleAction.add(playerScale => {
             this.playerScale = playerScale;
-        }));
-        this.onOpenOnlineRewardAction.add((() => {
+        });
+        this.onOpenOnlineRewardAction.add(() => {
             this.getOnlineRewardModuleC.onOnlineRewardsAction.call(true);
-        }));
-        this.onHomeAction.add((() => {
+        });
+        this.onHomeAction.add(() => {
             this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
-        }));
-        this.onAddCoinAction.add((() => {
+        });
+        this.onAddCoinAction.add(() => {
             if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd((() => {
+                this.getAdTipsPanel.showRewardAd(() => {
                     Notice.showDownNotice(`${GameConfig.Language.Text_SuccessfullyObtainedCoins.Value}+${GlobalData.addCoinCount}`);
                     this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
-                }), StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                }, StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 Notice.showDownNotice(`${GameConfig.Language.Text_SuccessfullyObtainedCoins.Value}+${GlobalData.addCoinCount}`);
                 this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
             }
-        }));
-        this.onAddDiamondAction.add((() => {
+        });
+        this.onAddDiamondAction.add(() => {
             if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd((() => {
+                this.getAdTipsPanel.showRewardAd(() => {
                     Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                     this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
-                }), StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount));
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount);
             }
-        }));
-        this.onAddBoneAction.add((() => {
+        });
+        this.onAddBoneAction.add(() => {
             if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd((() => {
+                this.getAdTipsPanel.showRewardAd(() => {
                     Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedBones.Value, GlobalData.addBoneCount));
                     this.getPlayerModuleC.saveBone(GlobalData.addBoneCount);
-                }), StringUtil.format(GameConfig.Language.Text_GetFreeBones.Value, GlobalData.addBoneCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                }, StringUtil.format(GameConfig.Language.Text_GetFreeBones.Value, GlobalData.addBoneCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addBoneCount));
                 this.getPlayerModuleC.saveBone(GlobalData.addBoneCount);
             }
-        }));
-        this.onAdsAction.add((() => {
-            this.getUpPanel.showRewardAd((() => {
+        });
+        this.onAdsAction.add(() => {
+            this.getUpPanel.showRewardAd(() => {
                 Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                 this.getPlayerModuleC.adsUpLv();
-            }), (() => {
+            }, () => {
                 if (this.getPlayerModuleC.getDiamond >= GlobalData.addDiamondCount) {
                     this.getPlayerModuleC.saveDiamond(-GlobalData.addDiamondCount);
                     this.getPlayerModuleC.adsUpLv();
                     Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                 } else {
                     if (GlobalData.isOpenIAA) {
-                        this.getAdTipsPanel.showRewardAd((() => {
+                        this.getAdTipsPanel.showRewardAd(() => {
                             this.getPlayerModuleC.adsUpLv();
                             Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
-                        }), StringUtil.format(GameConfig.Language.Text_FreeLevelUpgradeByLevel.Value, 1), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeUpgrade.Value);
+                        }, StringUtil.format(GameConfig.Language.Text_FreeLevelUpgradeByLevel.Value, 1), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeUpgrade.Value);
                     } else {
                         Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_UpgradeSuccessLevel.Value, 1));
                         this.getPlayerModuleC.adsUpLv();
                     }
                 }
-            }), GameConfig.Language.Text_UpgradeLevel.Value, StringUtil.format(GameConfig.Language.Text_UseDiamondsUpgradeLevel.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_DirectlyUpgradeTheLevel.Value, ``, GameConfig.Language.Text_FreeUpgrade.Value, GameConfig.Language.Text_Determine.Value);
-        }));
-        this.onInvincibleAction.add((isInvincible => {
+            }, GameConfig.Language.Text_UpgradeLevel.Value, StringUtil.format(GameConfig.Language.Text_UseDiamondsUpgradeLevel.Value, GlobalData.addDiamondCount), GameConfig.Language.Text_DirectlyUpgradeTheLevel.Value, ``, GameConfig.Language.Text_FreeUpgrade.Value, GameConfig.Language.Text_Determine.Value);
+        });
+        this.onInvincibleAction.add(isInvincible => {
             this.getPlayerModuleC.isInvincible(isInvincible);
-        }));
+        });
         this.registerMusicAction();
         let isOpenHUD = false;
-        InputUtil.onKeyDown(mw.Keys.NumPadOne, (() => {
+        InputUtil.onKeyDown(mw.Keys.NumPadOne, () => {
             isOpenHUD = !isOpenHUD;
             isOpenHUD ? this.getHudPanel.show() : this.getHudPanel.hide();
             Console.error("isOpenHUD =" + isOpenHUD);
-        }));
-        Event.addLocalListener("AttackMp", (() => {
+        });
+        Event.addLocalListener("AttackMp", () => {
             this.isHaveMp(GlobalData.attackMp);
-        }));
-        this.onSkillAction.add((callBack => {
+        });
+        this.onSkillAction.add(callBack => {
             let isHaveMp = this.isHaveMp(GlobalData.skillMp_1);
             if (callBack) callBack(isHaveMp);
             if (!isHaveMp) {
@@ -13902,10 +13902,10 @@ class HUDModuleC extends ModuleC {
                 return;
             }
             this.getPlayerModuleC.skill_1();
-        }));
-        this.onOpenTitleNameAction.add((() => {
+        });
+        this.onOpenTitleNameAction.add(() => {
             this.getTitleNamePanel.show();
-        }));
+        });
     }
     onEnterScene(sceneType) {
         this.getHudPanel.show();
@@ -13917,7 +13917,7 @@ class HUDModuleC extends ModuleC {
         this.updateMp(dt);
     }
     registerGlobalClickSound() {
-        Event.addLocalListener("PlayButtonClick", (v => {
+        Event.addLocalListener("PlayButtonClick", v => {
             Console.error("[PlayButtonClick-Name] = " + v);
             if (v == "mSprintButton" || v == "mJumpButton") return;
             if (this.uiClickSoundId) {
@@ -13925,16 +13925,16 @@ class HUDModuleC extends ModuleC {
                 this.uiClickSoundId = null;
             }
             this.uiClickSoundId = SoundService.playSound(GlobalData.uiClickSoundGuid);
-        }));
+        });
     }
     delayedOperation() {
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.playBGM(0);
             if (GlobalData.isHideHeadUI) {
                 this.localPlayer.character.displayName = "";
             }
             AvatarEditorService.setAvatarEditorButtonVisible(true);
-        }));
+        });
     }
     updateOnlineRewradIcon(icon) {
         this.getHudPanel.updateOnlineRewradIcon(icon);
@@ -14080,9 +14080,9 @@ class HUDModuleC extends ModuleC {
             clearTimeout(this.isStartAddMpId);
         }
         this.isStartAddMpId = null;
-        this.isStartAddMpId = setTimeout((() => {
+        this.isStartAddMpId = setTimeout(() => {
             this.isStartAddMp = true;
-        }), 5 * 1e3);
+        }, 5 * 1e3);
         return true;
     }
     sprint() {
@@ -14097,17 +14097,17 @@ class HUDModuleC extends ModuleC {
         this.sprintAnimation = PlayerManagerExtesion.rpcPlayAnimation(this.localPlayer.character, this.sprintClips[this.sprintIndex], 1);
         this.sprintIndex = (this.sprintIndex + 1) % 2;
         this.localPlayer.character.movementEnabled = false;
-        TimeUtil.delaySecond(.1).then((() => {
+        TimeUtil.delaySecond(.1).then(() => {
             this.server.net_sprint(this.sprintIndex, this.playerScale);
-        }));
-        TimeUtil.delaySecond(.5).then((() => {
+        });
+        TimeUtil.delaySecond(.5).then(() => {
             this.localPlayer.character.movementEnabled = true;
             this.isCanSprint = true;
             if (this.sprintAnimation) {
                 this.sprintAnimation.stop();
                 this.sprintAnimation = null;
             }
-        }));
+        });
     }
     updateJumpTime(dt) {
         if (!this.isStartTime) return;
@@ -14161,13 +14161,13 @@ class HUDModuleC extends ModuleC {
         this.bgmMusics = GameConfig.Music.getAllElement();
     }
     registerMusicAction() {
-        this.getHudPanel.onBgmAction.add((isOpenBGM => {
+        this.getHudPanel.onBgmAction.add(isOpenBGM => {
             if (isOpenBGM) {
                 this.playBGM(0);
             } else {
                 SoundService.stopBGM();
             }
-        }));
+        });
         this.getHudPanel.onSwitchBgmAction.add(this.playBGM.bind(this));
     }
     playBGM(bgmIndex) {
@@ -14451,9 +14451,9 @@ let TaskPanel_Generate = class TaskPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mDailyTaskTitleTextBlock);
         this.initLanguage(this.mDailyTimeTextBlock);
@@ -14534,14 +14534,14 @@ class TaskPanel extends TaskPanel_Generate$1 {
         }
     }
     bindButton() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             this.hideTween();
-        }));
+        });
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
-        }));
+        });
     }
     onShow(...params) {
         this.canUpdate = true;
@@ -14571,7 +14571,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
         if (dailyTaskDataMap.size == 0) return;
         this.mDailyTaskDoneTextBlock.visibility = mw.SlateVisibility.Collapsed;
         this.tmpDailyTaskItems.length = 0;
-        dailyTaskDataMap.forEach(((value, key) => {
+        dailyTaskDataMap.forEach((value, key) => {
             let dailyTaskItem = ObjectPoolServices.getPool(TaskItem).spawn();
             dailyTaskItem.initTaskItemData(key, value);
             if (dailyTaskItem.isGet) {
@@ -14581,15 +14581,15 @@ class TaskPanel extends TaskPanel_Generate$1 {
                 this.tmpDailyTaskItems.push(dailyTaskItem);
             }
             this.dailyTaskItemsMap.set(key, dailyTaskItem);
-        }));
+        });
         this.addDailyTaskCanvas();
     }
     addDailyTaskCanvas() {
         if (this.tmpDailyTaskItems && this.tmpDailyTaskItems.length > 0) {
-            this.tmpDailyTaskItems.forEach((value => {
+            this.tmpDailyTaskItems.forEach(value => {
                 this.mDailyTaskCanvas.addChild(value.taskItem);
                 value.taskItem.size = new mw.Vector2(556, 94);
-            }));
+            });
         }
     }
     updateTaskPanel(vipTaskType, progress) {
@@ -14598,11 +14598,11 @@ class TaskPanel extends TaskPanel_Generate$1 {
             dailyTaskItem.updateTaskItemData(progress);
             if (dailyTaskItem.isGet) {
                 this.tmpDailyTaskItems.length = 0;
-                this.dailyTaskItemsMap.forEach(((value, key) => {
+                this.dailyTaskItemsMap.forEach((value, key) => {
                     if (value.isGet) return;
                     this.tmpDailyTaskItems.push(value);
                     this.mRecycleCanvas.addChild(value.taskItem);
-                }));
+                });
                 this.addDailyTaskCanvas();
             }
         }
@@ -14611,11 +14611,11 @@ class TaskPanel extends TaskPanel_Generate$1 {
             weeklyTaskItem.updateTaskItemData(progress);
             if (weeklyTaskItem.isGet) {
                 this.tmpweeklyTaskItems.length = 0;
-                this.weeklyTaskItemsMap.forEach(((value, key) => {
+                this.weeklyTaskItemsMap.forEach((value, key) => {
                     if (value.isGet) return;
                     this.tmpweeklyTaskItems.push(value);
                     this.mRecycleCanvas.addChild(value.taskItem);
-                }));
+                });
                 this.addWeekTaskCanvas();
             }
         }
@@ -14625,7 +14625,7 @@ class TaskPanel extends TaskPanel_Generate$1 {
         if (weeklyTaskDataMap.size == 0) return;
         this.mWeekTaskDoneTextBlock.visibility = mw.SlateVisibility.Collapsed;
         this.tmpweeklyTaskItems.length = 0;
-        weeklyTaskDataMap.forEach(((value, key) => {
+        weeklyTaskDataMap.forEach((value, key) => {
             let weeklyTaskItem = ObjectPoolServices.getPool(TaskItem).spawn();
             weeklyTaskItem.initTaskItemData(key, value);
             if (weeklyTaskItem.isGet) {
@@ -14635,15 +14635,15 @@ class TaskPanel extends TaskPanel_Generate$1 {
                 this.tmpweeklyTaskItems.push(weeklyTaskItem);
             }
             this.weeklyTaskItemsMap.set(key, weeklyTaskItem);
-        }));
+        });
         this.addWeekTaskCanvas();
     }
     addWeekTaskCanvas() {
         if (this.tmpweeklyTaskItems && this.tmpweeklyTaskItems.length > 0) {
-            this.tmpweeklyTaskItems.forEach((value => {
+            this.tmpweeklyTaskItems.forEach(value => {
                 this.mWeekTaskCanvas.addChild(value.taskItem);
                 value.taskItem.size = new mw.Vector2(556, 94);
-            }));
+            });
         }
     }
     updateTaskCompletePanel(vipTaskType) {
@@ -14680,21 +14680,21 @@ class TaskPanel extends TaskPanel_Generate$1 {
     }
     recycleAllDailyTaskItem() {
         if (this.dailyTaskItemsMap.size == 0) return;
-        this.dailyTaskItemsMap.forEach(((value, key) => {
+        this.dailyTaskItemsMap.forEach((value, key) => {
             value.recycle();
             this.mRecycleCanvas.addChild(value.taskItem);
             this.dailyTaskItemsMap.delete(key);
-        }));
+        });
         this.mDailyTaskBox.scrollOffset = 0;
         this.dailyTaskItemsMap.clear();
     }
     recycleAllWeeklyTaskItem() {
         if (this.weeklyTaskItemsMap.size == 0) return;
-        this.weeklyTaskItemsMap.forEach(((value, key) => {
+        this.weeklyTaskItemsMap.forEach((value, key) => {
             value.recycle();
             this.mRecycleCanvas.addChild(value.taskItem);
             this.weeklyTaskItemsMap.delete(key);
-        }));
+        });
         this.mWeekTaskBox.scrollOffset = 0;
         this.weeklyTaskItemsMap.clear();
     }
@@ -14798,9 +14798,9 @@ class TaskItem {
                 mw.UIService.getUI(TaskPanel).controllerPic(1);
             }
         }
-        setTimeout((() => {
+        setTimeout(() => {
             this.mNameTextBlock.text = StringUtil.format(this.vIPTaskElement.Name, this.task.progress, this.vIPTaskElement.TragetNum, this.vIPTaskElement.TragetNum);
-        }), 1e3);
+        }, 1e3);
         this.mCoinTextBlock.text = this.vIPTaskElement.Coin.toString();
         this.mExpTextBlock.text = this.vIPTaskElement.Exp.toString();
         this.mDiamondTextBlock.text = this.vIPTaskElement.Diamond.toString();
@@ -14810,11 +14810,11 @@ class TaskItem {
         if (this.vIPTaskElement.Diamond == 0 || this.vIPTaskElement.Diamond == null) {
             this.mDiamondCanvas.visibility = mw.SlateVisibility.Collapsed;
         }
-        this.mFinishButton.onClicked.add((() => {
+        this.mFinishButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick");
             ModuleService.getModule(TaskModuleC).onTaskRewardAction.call(this.vipTaskType, this.task.taskId);
             mw.UIService.getUI(TaskPanel).controllerPic(-1);
-        }));
+        });
     }
     isShowFinishBtn(isShow) {
         this.isGet = isShow;
@@ -14919,12 +14919,12 @@ class TaskModuleC extends ModuleC {
     bindActions() {
         this.onExecuteTaskAction.add(this.executeTask.bind(this));
         this.onTaskRewardAction.add(this.getTaskRewardAndUpdateData.bind(this));
-        this.getHudModuleC.onOpenTaskAction.add((() => {
+        this.getHudModuleC.onOpenTaskAction.add(() => {
             this.getTaskPanel.show();
-        }));
-        Event.addLocalListener(`RequestNewPeopleGiftBagOnlineTime`, (() => {
+        });
+        Event.addLocalListener(`RequestNewPeopleGiftBagOnlineTime`, () => {
             this.sendNewPeopleOnlineTime(TaskItemType.DailyOnlineTime);
-        }));
+        });
     }
     sendNewPeopleOnlineTime(vipTaskType) {
         if (vipTaskType != TaskItemType.DailyOnlineTime) return;
@@ -14948,24 +14948,24 @@ class TaskModuleC extends ModuleC {
         let dailyTaskTypes = [];
         let dailyProgresss = [];
         if (MapEx.count(this.tempDailTask) > 0) {
-            MapEx.forEach(this.tempDailTask, ((key, value) => {
+            MapEx.forEach(this.tempDailTask, (key, value) => {
                 dailyTaskIds.push(value.taskId);
                 dailyTaskTypes.push(key);
                 dailyProgresss.push(value.progress);
                 MapEx.del(this.tempDailTask, key);
                 Console.error("[key] = " + key);
-            }));
+            });
         }
         let weeklyTaskIds = [];
         let weeklyTaskTypes = [];
         let weeklyProgresss = [];
         if (MapEx.count(this.tempWeeklyTask) > 0) {
-            MapEx.forEach(this.tempWeeklyTask, ((key, value) => {
+            MapEx.forEach(this.tempWeeklyTask, (key, value) => {
                 weeklyTaskIds.push(value.taskId);
                 weeklyTaskTypes.push(key);
                 weeklyProgresss.push(value.progress);
                 MapEx.del(this.tempWeeklyTask, key);
-            }));
+            });
         }
         if (dailyTaskIds.length == 0 && weeklyTaskIds.length == 0) {
             Console.error("[dailyTaskIds.length == 0 && weeklyTaskIds.length == 0]");
@@ -15335,9 +15335,9 @@ class AdTipsPanel extends AdsTipsPanel_Generate$1 {
     }
     hideAdPanel() {
         if (!this.visible) return;
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
-        }));
+        });
     }
     onShow(...params) {
         Utils.openUITween(this.rootCanvas, null, null);
@@ -15422,9 +15422,9 @@ let GuideUI_Generate = class GuideUI_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.button.onClicked.add((() => {
+        this.button.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "button");
-        }));
+        });
         this.initLanguage(this.button);
         this.button.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mContentTextBlock);
@@ -15490,13 +15490,13 @@ class GuidePanel extends GuideUI_Generate$1 {
         this.centPos = new mw.Vector(this.getHudPanel.rootCanvas.size.x / 2 - this.container.size.x / 2, this.getHudPanel.rootCanvas.size.y / 2 - this.container.size.y / 2);
     }
     bindButton() {
-        this.button.onClicked.add((() => {
+        this.button.onClicked.add(() => {
             if (this.canClick) {
                 this.canClick = false;
                 this.hide();
                 this.getGuideModuleC.onNextStepAction.call();
             }
-        }));
+        });
     }
     guideByStep(step) {
         this.show();
@@ -15834,7 +15834,7 @@ class GuideModuleC extends ModuleC {
         if (this.isHasCall) return;
         this.isHasCall = true;
         if (this.data.isFirst) {
-            this.onNextStepAction.add((() => {
+            this.onNextStepAction.add(() => {
                 console.error(this.curStep);
                 this.curStep++;
                 if (this.curStep > this.totalStep) {
@@ -15843,7 +15843,7 @@ class GuideModuleC extends ModuleC {
                     return;
                 }
                 this.getGuidePanel.guideByStep(this.curStep);
-            }));
+            });
             this.onNextStepAction.call();
         } else {
             this.find();
@@ -15855,7 +15855,7 @@ class GuideModuleC extends ModuleC {
             TimeUtil.clearInterval(this.guideIntervalId);
             this.guideIntervalId = null;
         }
-        this.guideIntervalId = TimeUtil.setInterval((() => {
+        this.guideIntervalId = TimeUtil.setInterval(() => {
             let playerLoc = this.localPlayer.character.worldTransform.position;
             if (Math.abs(playerLoc.x - this.prePlayerLoc.x) < .1 && Math.abs(playerLoc.y - this.prePlayerLoc.y) < .1 && Math.abs(playerLoc.z - this.prePlayerLoc.z) < .1) return;
             this.prePlayerLoc = playerLoc;
@@ -15864,9 +15864,9 @@ class GuideModuleC extends ModuleC {
                 TimeUtil.clearInterval(this.guideIntervalId);
                 this.guideIntervalId = null;
                 if (this.guideEffectIds.length != 0) {
-                    this.guideEffectIds.forEach((effectId => {
+                    this.guideEffectIds.forEach(effectId => {
                         EffectService.stop(effectId);
-                    }));
+                    });
                     this.guideEffectIds.length = 0;
                 }
                 Notice.showDownNotice(GameConfig.Language.Text_ArrivedNearTheTargetPoint.Value);
@@ -15886,17 +15886,17 @@ class GuideModuleC extends ModuleC {
             } else {
                 if (this.guideEffectIds.length == pointNum) {
                     for (let i = 1; i < pointNum; ++i) {
-                        EffectService.getEffectById(this.guideEffectIds[i - 1]).then((effect => {
+                        EffectService.getEffectById(this.guideEffectIds[i - 1]).then(effect => {
                             effect.worldTransform.position = new mw.Vector(locs[i].x, locs[i].y, locs[i].z - 85);
-                        }));
+                        });
                     }
                     EffectService.stop(this.guideEffectIds[pointNum - 1]);
                     this.guideEffectIds.length = pointNum - 1;
                 } else if (this.guideEffectIds.length < pointNum) {
                     for (let i = 0; i < this.guideEffectIds.length; ++i) {
-                        EffectService.getEffectById(this.guideEffectIds[i]).then((effect => {
+                        EffectService.getEffectById(this.guideEffectIds[i]).then(effect => {
                             effect.worldTransform.position = new mw.Vector(locs[i + 1].x, locs[i + 1].y, locs[i + 1].z - 85);
-                        }));
+                        });
                     }
                     for (let i = this.guideEffectIds.length; i < pointNum - 1; ++i) {
                         let effectId = GeneralManager.rpcPlayEffectAtLocation(GlobalData.guideEffectGuid, new mw.Vector(locs[i + 1].x, locs[i + 1].y, locs[i + 1].z - 85), 0, mw.Rotation.zero, mw.Vector.one.multiply(2));
@@ -15904,10 +15904,10 @@ class GuideModuleC extends ModuleC {
                     }
                 } else if (this.guideEffectIds.length > pointNum) {
                     for (let i = 0; i < pointNum; ++i) {
-                        EffectService.getEffectById(this.guideEffectIds[i]).then((effect => {
+                        EffectService.getEffectById(this.guideEffectIds[i]).then(effect => {
                             if (!locs[i + 1]) return;
                             effect.worldTransform.position = new mw.Vector(locs[i + 1].x, locs[i + 1].y, locs[i + 1].z - 85);
-                        }));
+                        });
                     }
                     for (let i = pointNum; i < this.guideEffectIds.length; ++i) {
                         EffectService.stop(this.guideEffectIds[i]);
@@ -15915,7 +15915,7 @@ class GuideModuleC extends ModuleC {
                     this.guideEffectIds.length = pointNum;
                 }
             }
-        }), .1);
+        }, .1);
     }
     onCompleted() {
         this.server.net_onCompleted();
@@ -15924,69 +15924,69 @@ class GuideModuleC extends ModuleC {
     }
     find() {
         if (!this.getBagModuleC.isHasBagId(10001)) {
-            this.startGuide(this.getBagModuleC.getBagObVec(10001), (() => {
+            this.startGuide(this.getBagModuleC.getBagObVec(10001), () => {
                 if (!this.getBagModuleC.isHasBagId(10037)) {
-                    this.startGuide(this.getBagModuleC.getBagObVec(10037), (() => {
+                    this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                         if (!this.getBagModuleC.isHasBagId(20023)) {
-                            this.startGuide(this.getBagModuleC.getBagObVec(20023), (() => {
+                            this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
                                 if (!this.getBagModuleC.isHasBagId(30001)) {
-                                    this.startGuide(this.getBagModuleC.getBagObVec(30001), (() => {
+                                    this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
                                         if (!this.getBagModuleC.isHasBagId(20053)) {
-                                            this.startGuide(this.getBagModuleC.getBagObVec(20053), (() => {
+                                            this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
                                                 this.first();
-                                            }));
+                                            });
                                         }
-                                    }));
+                                    });
                                 }
-                            }));
+                            });
                         }
-                    }));
+                    });
                 }
-            }));
+            });
         } else {
             if (!this.getBagModuleC.isHasBagId(10037)) {
-                this.startGuide(this.getBagModuleC.getBagObVec(10037), (() => {
+                this.startGuide(this.getBagModuleC.getBagObVec(10037), () => {
                     if (!this.getBagModuleC.isHasBagId(20023)) {
-                        this.startGuide(this.getBagModuleC.getBagObVec(20023), (() => {
+                        this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
                             if (!this.getBagModuleC.isHasBagId(30001)) {
-                                this.startGuide(this.getBagModuleC.getBagObVec(30001), (() => {
+                                this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
                                     if (!this.getBagModuleC.isHasBagId(20053)) {
-                                        this.startGuide(this.getBagModuleC.getBagObVec(20053), (() => {
+                                        this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
                                             this.first();
-                                        }));
+                                        });
                                     }
-                                }));
+                                });
                             }
-                        }));
+                        });
                     }
-                }));
+                });
             } else {
                 if (!this.getBagModuleC.isHasBagId(20023)) {
-                    this.startGuide(this.getBagModuleC.getBagObVec(20023), (() => {
+                    this.startGuide(this.getBagModuleC.getBagObVec(20023), () => {
                         if (!this.getBagModuleC.isHasBagId(30001)) {
-                            this.startGuide(this.getBagModuleC.getBagObVec(30001), (() => {
+                            this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
                                 if (!this.getBagModuleC.isHasBagId(20053)) {
-                                    this.startGuide(this.getBagModuleC.getBagObVec(20053), (() => {
+                                    this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
                                         this.first();
-                                    }));
+                                    });
                                 }
-                            }));
+                            });
                         }
-                    }));
+                    });
                 } else {
                     if (!this.getBagModuleC.isHasBagId(30001)) {
-                        this.startGuide(this.getBagModuleC.getBagObVec(30001), (() => {
+                        this.startGuide(this.getBagModuleC.getBagObVec(30001), () => {
                             if (!this.getBagModuleC.isHasBagId(20053)) {
-                                this.startGuide(this.getBagModuleC.getBagObVec(20053), (() => {
+                                this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
                                     this.first();
-                                }));
+                                });
                             }
-                        }));
+                        });
                     } else {
                         if (!this.getBagModuleC.isHasBagId(20053)) {
-                            this.startGuide(this.getBagModuleC.getBagObVec(20053), (() => {
+                            this.startGuide(this.getBagModuleC.getBagObVec(20053), () => {
                                 this.first();
-                            }));
+                            });
                         }
                     }
                 }
@@ -15994,16 +15994,16 @@ class GuideModuleC extends ModuleC {
         }
     }
     first() {
-        TimeUtil.delaySecond(5).then((() => {
+        TimeUtil.delaySecond(5).then(() => {
             if (mw.UIService.getUI(BagInfoPanel, false).visible) mw.UIService.hide(BagInfoPanel);
             Event.dispatchToLocal("First");
-            TimeUtil.delaySecond(5).then((() => {
+            TimeUtil.delaySecond(5).then(() => {
                 this.getGuidePanel.guideByStep(21);
                 this.localPlayer.character.worldTransform.position = Utils.getWorldLocation();
                 Notice.showDownNotice(GameConfig.Language.Text_ReturnToNewbieVillage.Value);
                 Notice.showDownNotice(GameConfig.Language.Text_LetSOfficiallyOpenYourCopy.Value);
-            }));
-        }));
+            });
+        });
     }
 }
 
@@ -16335,33 +16335,33 @@ let LotteryPanel_Generate = class LotteryPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mOneArkButton.onClicked.add((() => {
+        this.mOneArkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mOneArkButton");
-        }));
+        });
         this.mOneArkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mOneCoinButton.onClicked.add((() => {
+        this.mOneCoinButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mOneCoinButton");
-        }));
+        });
         this.mOneCoinButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mTenArkButton.onClicked.add((() => {
+        this.mTenArkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mTenArkButton");
-        }));
+        });
         this.mTenArkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mTenCoinButton.onClicked.add((() => {
+        this.mTenCoinButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mTenCoinButton");
-        }));
+        });
         this.mTenCoinButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mHundredArkButton.onClicked.add((() => {
+        this.mHundredArkButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mHundredArkButton");
-        }));
+        });
         this.mHundredArkButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mHundredCoinButton.onClicked.add((() => {
+        this.mHundredCoinButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mHundredCoinButton");
-        }));
+        });
         this.mHundredCoinButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mOneArkTextBlock);
@@ -16479,9 +16479,9 @@ let LotteryResultPanel_Generate = class LotteryResultPanel_Generate extends UISc
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
     }
@@ -16790,9 +16790,9 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
             return;
         }
         this.isCanContinueClick = false;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.isCanContinueClick = true;
-        }));
+        });
         this.getLotteryModuleC.oneArkLottery();
     }
     addTenCoinButton() {
@@ -16804,9 +16804,9 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
             return;
         }
         this.isCanContinueClick = false;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.isCanContinueClick = true;
-        }));
+        });
         this.getLotteryModuleC.tenArkLottery(true);
     }
     addHundredCoinButton() {
@@ -16818,9 +16818,9 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
             return;
         }
         this.isCanContinueClick = false;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.isCanContinueClick = true;
-        }));
+        });
         this.getLotteryModuleC.tenArkLottery(false);
     }
     addOneAdsButton(isSuccess) {
@@ -16834,13 +16834,13 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
         this.hideTween();
     }
     initItem() {
-        lotteryDatas.forEach(((value, key) => {
+        lotteryDatas.forEach((value, key) => {
             let lotteryItem = mw.UIService.create(LotteryItem);
             lotteryItem.initItem(key);
             this.mCanvas.addChild(lotteryItem.uiObject);
             lotteryItem.uiObject.position = value.pos;
             this.lotteryItems.push(lotteryItem);
-        }));
+        });
     }
     updateCoinTextBlock(count) {
         this.mCoinCountTextBlock.text = Utils.integerUnitConversionStr(count);
@@ -16857,7 +16857,7 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
         this.mMaskImage.visibility = mw.SlateVisibility.Visible;
         this.oneIndex = 0;
         this.onePeriod = 0;
-        let first = TimeUtil.setInterval((() => {
+        let first = TimeUtil.setInterval(() => {
             if (this.oneIndex >= 10) {
                 this.oneIndex = 0;
                 this.onePeriod++;
@@ -16869,7 +16869,7 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
                         if (complete) complete();
                         this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
                     } else {
-                        let second = TimeUtil.setInterval((() => {
+                        let second = TimeUtil.setInterval(() => {
                             if (this.oneIndex >= key) {
                                 TimeUtil.clearInterval(second);
                                 if (complete) complete();
@@ -16878,14 +16878,14 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
                                 this.updateItemSelectState(this.oneIndex++);
                                 SoundService.playSound("120847");
                             }
-                        }), .3);
+                        }, .3);
                     }
                     return;
                 }
             }
             SoundService.playSound("120847");
             this.updateItemSelectState(this.oneIndex++);
-        }), .1);
+        }, .1);
     }
     startTenLottery(key, complete) {
         this.mMaskImage.visibility = mw.SlateVisibility.Visible;
@@ -16899,7 +16899,7 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
             }
         }
         SoundService.playSound("137566");
-        let first = TimeUtil.setInterval((() => {
+        let first = TimeUtil.setInterval(() => {
             let indexs = Utils.getRandomArr([ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ], 5);
             for (let i = 0; i < this.lotteryItems.length; ++i) {
                 if (indexs.includes(i)) {
@@ -16923,7 +16923,7 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
                 if (complete) complete();
                 this.mMaskImage.visibility = mw.SlateVisibility.Collapsed;
             }
-        }), .3);
+        }, .3);
     }
     updateItemSelectState(index) {
         if (this.preIndex >= 0) this.lotteryItems[this.preIndex].onOffUI(false);
@@ -16937,15 +16937,15 @@ class LotteryPanel extends LotteryPanel_Generate$1 {
         return this.hudPanel;
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -17095,9 +17095,9 @@ class LotteryModuleC extends ModuleC {
             if (mw.SystemUtil.isPIE) {
                 this.calculateOneLottery();
             } else {
-                mw.PurchaseService.placeOrder(oneCommodityId, 1, ((status, msg) => {
+                mw.PurchaseService.placeOrder(oneCommodityId, 1, (status, msg) => {
                     mw.PurchaseService.getArkBalance();
-                }));
+                });
             }
         }
     }
@@ -17105,9 +17105,9 @@ class LotteryModuleC extends ModuleC {
         if (mw.SystemUtil.isPIE) {
             this.calculateOneLottery();
         } else {
-            mw.PurchaseService.placeOrder(oneCommodityId, 1, ((status, msg) => {
+            mw.PurchaseService.placeOrder(oneCommodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();
-            }));
+            });
         }
     }
     tenCoinLottery(isTen) {
@@ -17121,9 +17121,9 @@ class LotteryModuleC extends ModuleC {
             if (mw.SystemUtil.isPIE) {
                 this.calculateTenLottery(isTen);
             } else {
-                mw.PurchaseService.placeOrder(isTen ? tenCommodityId : hundredCommodityId, 1, ((status, msg) => {
+                mw.PurchaseService.placeOrder(isTen ? tenCommodityId : hundredCommodityId, 1, (status, msg) => {
                     mw.PurchaseService.getArkBalance();
-                }));
+                });
             }
         }
     }
@@ -17131,9 +17131,9 @@ class LotteryModuleC extends ModuleC {
         if (mw.SystemUtil.isPIE) {
             this.calculateTenLottery(isTen);
         } else {
-            mw.PurchaseService.placeOrder(isTen ? tenCommodityId : hundredCommodityId, 1, ((status, msg) => {
+            mw.PurchaseService.placeOrder(isTen ? tenCommodityId : hundredCommodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();
-            }));
+            });
         }
     }
     net_deliverGoods(commodityId, amount) {
@@ -17170,12 +17170,12 @@ class LotteryModuleC extends ModuleC {
             bagIds.push(bagId);
             break;
         }
-        this.getLotteryPanel.startOneLottery(calculateKey, (() => {
+        this.getLotteryPanel.startOneLottery(calculateKey, () => {
             this.saveLottery(diamond, lv, bagIds);
             this.getLotteryResultPanel.showPanel([ calculateKey ], true);
             if (lotteryDatas.get(calculateKey).isLimit) this.getLotteryPanel.updateItemHasState(calculateKey);
             Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnWinningThePrize.Value);
-        }));
+        });
     }
     calculateTenLottery(isTen) {
         let diamond = 0;
@@ -17207,23 +17207,23 @@ class LotteryModuleC extends ModuleC {
                 break;
             }
         }
-        this.getLotteryPanel.startTenLottery(calculateKeys, (() => {
+        this.getLotteryPanel.startTenLottery(calculateKeys, () => {
             this.saveLottery(diamond, lv, bagIds);
             this.getLotteryResultPanel.showPanel(calculateKeys, false);
-            calculateKeys.forEach((key => {
+            calculateKeys.forEach(key => {
                 if (lotteryDatas.get(key).isLimit) this.getLotteryPanel.updateItemHasState(key);
-            }));
+            });
             Notice.showDownNotice(GameConfig.Language.Text_CongratulationsOnWinningThePrize.Value);
-        }));
+        });
     }
     calculateKey() {
         let calculateValue = Utils.getRandomInteger(1, 1e3);
         let calculateKey = 1;
-        lotteryDatas.forEach(((value, key) => {
+        lotteryDatas.forEach((value, key) => {
             if (calculateValue >= value.ratio[0] && calculateValue <= value.ratio[1]) {
                 calculateKey = key;
             }
-        }));
+        });
         return calculateKey;
     }
     saveLottery(diamond, lv, bagIds) {
@@ -17246,25 +17246,25 @@ class LotteryModuleC extends ModuleC {
         return this.getBagModuleC.isHasBagId(key);
     }
     initTrigger() {
-        lotteryTriggerMap.forEach(((value, key) => {
-            value.triggers.forEach((triggerId => {
-                mw.GameObject.asyncFindGameObjectById(triggerId).then((go => {
+        lotteryTriggerMap.forEach((value, key) => {
+            value.triggers.forEach(triggerId => {
+                mw.GameObject.asyncFindGameObjectById(triggerId).then(go => {
                     let trigger = go;
-                    trigger.onEnter.add((character => {
+                    trigger.onEnter.add(character => {
                         if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
                         this.getLotteryPanel.show();
-                    }));
-                }));
-            }));
-            value.worldUIIds.forEach((worldId => {
-                mw.GameObject.asyncFindGameObjectById(worldId).then((v => {
+                    });
+                });
+            });
+            value.worldUIIds.forEach(worldId => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then(v => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
                     levelItem.updateLevelTextBlock(GameConfig.Language[`${value.name}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-                }));
-            }));
-        }));
+                });
+            });
+        });
     }
 }
 
@@ -17448,11 +17448,11 @@ class BagModuleC extends ModuleC {
         return this.soulBoneModuleC;
     }
     onStart() {
-        this.getHUDModuleC.onOpenShopAction.add((() => {
+        this.getHUDModuleC.onOpenShopAction.add(() => {
             this.getBagPanel.show();
             this.getBagPanel.updateBar(this.bagIds.length);
-        }));
-        this.getHUDModuleC.onOpenAutoAtkAction.add(((resultCallBack, isOpen) => {
+        });
+        this.getHUDModuleC.onOpenAutoAtkAction.add((resultCallBack, isOpen) => {
             console.error(isOpen);
             if (isOpen) {
                 if (this.isHasBagId(10046)) {
@@ -17476,11 +17476,11 @@ class BagModuleC extends ModuleC {
                     this.isOpenAutoAtk = false;
                 }
             }
-        }));
+        });
     }
     onEnterScene(sceneType) {
         this.initBagData();
-        this.initTrigger().then((() => {}));
+        this.initTrigger().then(() => {});
         this.updateLotteryData();
     }
     onUpdateAutoAtk(dt) {
@@ -17570,10 +17570,10 @@ class BagModuleC extends ModuleC {
         this.usingSkinId = -1;
         this.server.net_setUsingSkinId(this.usingSkinId);
         this.updateHpByUsing();
-        AccountService.downloadData(this.localPlayer.character, (success => {
+        AccountService.downloadData(this.localPlayer.character, success => {
             if (!success) return;
             this.useSkin(null);
-        }));
+        });
     }
     setUsingEquipId(key, bagId) {
         if (MapEx.has(this.usingEquipIds, key) && MapEx.get(this.usingEquipIds, key) == bagId) {
@@ -17592,9 +17592,9 @@ class BagModuleC extends ModuleC {
         this.localPlayer.character.detachAllFromSlot({
             isDestroy: true
         });
-        this.localPlayer.character.asyncReady().then((() => {
+        this.localPlayer.character.asyncReady().then(() => {
             this.localPlayer.character.syncDescription(false, true);
-        }));
+        });
     }
     setUsingPetId(petId) {
         if (this.usingPetId == petId) {
@@ -17626,9 +17626,9 @@ class BagModuleC extends ModuleC {
             if (skinHp < 0 || isNaN(skinHp)) skinHp = 0;
         }
         if (this.usingEquipIds && MapEx.count(this.usingEquipIds) > 0) {
-            MapEx.forEach(this.usingEquipIds, ((key, bagId) => {
+            MapEx.forEach(this.usingEquipIds, (key, bagId) => {
                 equipHp += Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagId)?.Rarity);
-            }));
+            });
             if (equipHp < 0 || isNaN(equipHp)) equipHp = 0;
         }
         if (this.usingPetId != -1) {
@@ -17661,13 +17661,13 @@ class BagModuleC extends ModuleC {
             }
         }
         if (this.usingEquipIds && MapEx.count(this.usingEquipIds) > 0) {
-            MapEx.forEach(this.usingEquipIds, ((key, bagId) => {
+            MapEx.forEach(this.usingEquipIds, (key, bagId) => {
                 if (bagInfoElement.HumanoidSlotType == key) {
                     equipHp += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
                 } else {
                     equipHp += Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagId)?.Rarity);
                 }
-            }));
+            });
             if (equipHp < 0 || isNaN(equipHp)) equipHp = 0;
         } else {
             equipHp += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
@@ -17697,9 +17697,9 @@ class BagModuleC extends ModuleC {
             if (skinAtk < 0 || isNaN(skinAtk)) skinAtk = 0;
         }
         if (this.usingEquipIds && MapEx.count(this.usingEquipIds) > 0) {
-            MapEx.forEach(this.usingEquipIds, ((key, bagId) => {
+            MapEx.forEach(this.usingEquipIds, (key, bagId) => {
                 equipAtk += Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagId)?.Rarity);
-            }));
+            });
             if (equipAtk < 0 || isNaN(equipAtk)) equipAtk = 0;
         }
         if (this.usingPetId != -1) {
@@ -17732,13 +17732,13 @@ class BagModuleC extends ModuleC {
             }
         }
         if (this.usingEquipIds && MapEx.count(this.usingEquipIds) > 0) {
-            MapEx.forEach(this.usingEquipIds, ((key, bagId) => {
+            MapEx.forEach(this.usingEquipIds, (key, bagId) => {
                 if (bagInfoElement.HumanoidSlotType == key) {
                     equipAtk += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
                 } else {
                     equipAtk += Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagId)?.Rarity);
                 }
-            }));
+            });
             if (equipAtk < 0 || isNaN(equipAtk)) equipAtk = 0;
         } else {
             equipAtk += Utils.getMultipleByRarity(bagInfoElement?.Rarity);
@@ -17777,24 +17777,24 @@ class BagModuleC extends ModuleC {
             }
         }
         console.warn(`${bagId}`);
-        this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId), (() => {
+        this.getBagInfoPanel.showThis(bagId, this.isHasBagId(bagId), () => {
             if (this.isHasBagId(bagId)) {
                 this.use(bagId);
             } else {
                 Notice.showDownNotice(GameConfig.Language.Text_NotObtained.Value);
                 if (GlobalData.isOpenIAA) {
-                    this.getAdTipsPanel.showRewardAd((() => {
+                    this.getAdTipsPanel.showRewardAd(() => {
                         Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
                         this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                         this.getBagInfoPanel.hide();
                         this.getBagPanel.hideTween();
-                    }), GameConfig.Language.Text_TakeYouToGetItForFree.Value, GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_GetItForFree.Value);
+                    }, GameConfig.Language.Text_TakeYouToGetItForFree.Value, GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_GetItForFree.Value);
                 } else {
                     Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
                     this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
                 }
             }
-        }), (() => {
+        }, () => {
             let price = (GameConfig.BagInfo.getElement(bagId)?.Rarity + 1) * GlobalData.addCoinCount;
             if (price < 0 || isNaN(price)) price = GlobalData.addCoinCount;
             let hasCoin = this.getPlayerModuleC.getCoin();
@@ -17808,21 +17808,21 @@ class BagModuleC extends ModuleC {
             } else {
                 Notice.showDownNotice(GameConfig.Language.Text_InsufficientGoldCoins.Value);
                 if (GlobalData.isOpenIAA) {
-                    this.getAdTipsPanel.showRewardAd((() => {
+                    this.getAdTipsPanel.showRewardAd(() => {
                         Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedCoins.Value);
                         this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
-                    }), StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                    }, StringUtil.format(GameConfig.Language.Text_GetGoldCoinsForFree.Value, GlobalData.addCoinCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
                 } else {
                     Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedCoins.Value);
                     this.getPlayerModuleC.saveCoin(GlobalData.addCoinCount);
                 }
             }
-        }), (() => {
+        }, () => {
             Notice.showDownNotice(GameConfig.Language.Text_StartGuiding.Value);
             this.getGuideModuleC.startGuide(this.getBagObVec(bagId));
             this.getBagInfoPanel.hide();
             this.getBagPanel.hideTween();
-        }));
+        });
     }
     use(bagId) {
         let bagInfoElement = GameConfig.BagInfo.getElement(bagId);
@@ -17857,16 +17857,16 @@ class BagModuleC extends ModuleC {
     }
     useSkin(assetId) {
         if (assetId) this.localPlayer.character.setDescription([ assetId ]);
-        this.localPlayer.character.asyncReady().then((() => {
+        this.localPlayer.character.asyncReady().then(() => {
             if (this.usingEquipIds && MapEx.count(this.usingEquipIds) > 0) {
-                MapEx.forEach(this.usingEquipIds, ((key, value) => {
+                MapEx.forEach(this.usingEquipIds, (key, value) => {
                     this.useEquip(GameConfig.BagInfo.getElement(value));
-                }));
+                });
             }
-            this.localPlayer.character.asyncReady().then((() => {
+            this.localPlayer.character.asyncReady().then(() => {
                 this.localPlayer.character.syncDescription();
-            }));
-        }));
+            });
+        });
     }
     useEquip(bagInfoElement) {
         let relativeTransform = new mw.Transform(bagInfoElement.OffsetPos, new mw.Rotation(bagInfoElement.OffsetRot), bagInfoElement.OffsetSca);
@@ -17875,22 +17875,22 @@ class BagModuleC extends ModuleC {
             isDestroy: true
         });
         this.localPlayer.character.description.advance.slotAndDecoration.slot[bagInfoElement.HumanoidSlotType].decoration.add(bagInfoElement.AssetId, relativeTransform);
-        this.localPlayer.character.asyncReady().then((() => {
+        this.localPlayer.character.asyncReady().then(() => {
             this.localPlayer.character.syncDescription(false, true);
-        }));
+        });
     }
     usePet(bagId) {
         this.server.net_usePet(bagId);
     }
     async initTrigger() {
         this.getLoading.show();
-        let timeOutId = setTimeout((() => {
+        let timeOutId = setTimeout(() => {
             console.error(`提前加载完成`);
             clearTimeout(timeOutId);
             this.getLoading.hide();
             this.enterScenceUsing();
             this.getGuideModuleC.startFirst();
-        }), 10 * 1e3);
+        }, 10 * 1e3);
         let parentTrigger = await mw.GameObject.asyncFindGameObjectById("0F4AC706");
         await parentTrigger.asyncReady();
         let parent = parentTrigger.getChildren();
@@ -17901,9 +17901,9 @@ class BagModuleC extends ModuleC {
             if (isNaN(bagId) || bagId < 0) return;
             let isInitItemSuccessfully = await this.isInitItemSuccessfully(bagId, trigger.worldTransform.position);
             if (!isInitItemSuccessfully) return;
-            trigger.onEnter.add((gameObject => {
+            trigger.onEnter.add(gameObject => {
                 this.onEnterTrigger(gameObject, bagId);
-            }));
+            });
             this.getLoading.updateBar((i + 1) * 10);
             if (i == 9) {
                 clearTimeout(timeOutId);
@@ -17918,18 +17918,18 @@ class BagModuleC extends ModuleC {
     onCompleted(bagId) {
         this.setBagId(bagId);
         this.getTaskModuleC.pickUpTreasure();
-        this.getBagInfoPanel.showThis(bagId, true, (() => {
+        this.getBagInfoPanel.showThis(bagId, true, () => {
             this.use(bagId);
-        }), null, null);
+        }, null, null);
     }
     onEnterTrigger(go, bagId) {
         if (!(go instanceof mw.Character)) return;
         if (go.gameObjectId != this.localPlayer.character.gameObjectId) return;
         this.setBagId(bagId);
         this.getTaskModuleC.pickUpTreasure();
-        this.getBagInfoPanel.showThis(bagId, true, (() => {
+        this.getBagInfoPanel.showThis(bagId, true, () => {
             this.use(bagId);
-        }), null, null);
+        }, null, null);
     }
     getBagObVec(bagId) {
         if (this.bagItemMap.has(bagId)) return this.bagItemMap.get(bagId).loc;
@@ -17996,9 +17996,9 @@ class BagModuleC extends ModuleC {
     }
     setBagItemRot(dt) {
         if (!this.isInitComplete) return;
-        this.bagItemMap.forEach(((value, key) => {
+        this.bagItemMap.forEach((value, key) => {
             value.go.worldTransform.rotation = new mw.Rotation(0, 0, value.go.worldTransform.rotation.z + dt * 50);
-        }));
+        });
     }
 }
 
@@ -18072,9 +18072,9 @@ class BagModuleS extends ModuleS {
             if (skinHp < 0 || isNaN(skinHp)) skinHp = 0;
         }
         if (bagData.usingEquipIds && MapEx.count(bagData.usingEquipIds) > 0) {
-            MapEx.forEach(bagData.usingEquipIds, ((key, bagId) => {
+            MapEx.forEach(bagData.usingEquipIds, (key, bagId) => {
                 equipHp += Utils.getMultipleByRarity(GameConfig.BagInfo.getElement(bagId)?.Rarity);
-            }));
+            });
             if (equipHp < 0 || isNaN(equipHp)) equipHp = 0;
         }
         if (bagData.usingPetId != -1) {
@@ -18134,18 +18134,18 @@ class BagPanel extends BagPanel_Generate$1 {
         this.bindButton();
     }
     bindButton() {
-        this.mCloseButtons.onClicked.add((() => {
+        this.mCloseButtons.onClicked.add(() => {
             this.hideTween();
-        }));
+        });
     }
     initTab() {
         let tabNames = GameConfig.BagInfo.getElement(1).Name.split(`|`);
         for (let i = 0; i < tabNames.length; ++i) {
             let bagTab = mw.UIService.create(BagTab);
             bagTab.setData(tabNames[i]);
-            bagTab.mButton.onClicked.add((() => {
+            bagTab.mButton.onClicked.add(() => {
                 this.bindBagTabButton(i);
-            }));
+            });
             this.mTabContentCanvas.addChild(bagTab.uiObject);
             this.bagTabs.push(bagTab);
         }
@@ -18153,7 +18153,7 @@ class BagPanel extends BagPanel_Generate$1 {
     initResetButton() {
         this.resetButton = mw.UIService.create(BagTab);
         this.resetButton.unSelect();
-        this.resetButton.mButton.onClicked.add((() => {
+        this.resetButton.mButton.onClicked.add(() => {
             switch (this.currentBagTabIndex) {
               case 0:
                 Notice.showDownNotice(GameConfig.Language.Text_TheFunctionIsNotYetOpen_PleaseStayTuned.Value);
@@ -18174,7 +18174,7 @@ class BagPanel extends BagPanel_Generate$1 {
                 this.getBagModuleC.resetUsingPet();
                 break;
             }
-        }));
+        });
         this.mTabContentCanvas.addChild(this.resetButton.uiObject);
         Utils.setWidgetVisibility(this.resetButton.uiObject, mw.SlateVisibility.Collapsed);
     }
@@ -18212,7 +18212,7 @@ class BagPanel extends BagPanel_Generate$1 {
     }
     initBagData() {
         this.bagIdsMap.clear();
-        GameConfig.BagInfo.getAllElement().forEach((value => {
+        GameConfig.BagInfo.getAllElement().forEach(value => {
             let key = value.Type - 1;
             if (key < 0) return;
             if (this.bagIdsMap.has(key)) {
@@ -18220,10 +18220,10 @@ class BagPanel extends BagPanel_Generate$1 {
             } else {
                 this.bagIdsMap.set(key, [ value.ID ]);
             }
-        }));
-        this.bagIdsMap.forEach(((value, key) => {
-            value.sort(((a, b) => GameConfig.BagInfo.getElement(b).Rarity - GameConfig.BagInfo.getElement(a).Rarity));
-        }));
+        });
+        this.bagIdsMap.forEach((value, key) => {
+            value.sort((a, b) => GameConfig.BagInfo.getElement(b).Rarity - GameConfig.BagInfo.getElement(a).Rarity);
+        });
         this.bindBagTabButton(0);
     }
     initBagItem() {
@@ -18262,15 +18262,15 @@ class BagPanel extends BagPanel_Generate$1 {
         this.mProgressBar.currentValue = curValue / GlobalData.totalBagLen;
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -18685,13 +18685,13 @@ class WorldRankModuleS extends ModuleS {
         let playerLvs = [];
         let playerHeights = [];
         let playerKills = [];
-        this.playerDataMap_SR.forEach(((value, key) => {
+        this.playerDataMap_SR.forEach((value, key) => {
             playerUserIds.push(value.userId);
             playerNames.push(value.playerName);
             playerLvs.push(value.playerLv);
             playerHeights.push(value.playerHeight);
             playerKills.push(value.playerKill);
-        }));
+        });
         let worldUserIds = [];
         let worldNames = [];
         let worldLvs = [];
@@ -18876,9 +18876,9 @@ let SignInItem_Generate = class SignInItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mDayTextBlock);
         this.initLanguage(this.mRewardTextBlock);
@@ -18934,9 +18934,9 @@ let SignInPanel_Generate = class SignInPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
     }
@@ -19038,10 +19038,10 @@ class SignInItem extends SignInItem_Generate$1 {
         this.mClickButton.onClicked.add(this.addClickButton.bind(this));
     }
     addClickButton() {
-        this.getSignInModuleC.tryGetReward(this.day, (() => {
+        this.getSignInModuleC.tryGetReward(this.day, () => {
             this.signIn = 1;
             this.updateUI();
-        }));
+        });
     }
     initSignInItem(day, signIn) {
         this.day = day;
@@ -19131,15 +19131,15 @@ class SignInPanel extends SignInPanel_Generate$1 {
         }
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -19232,10 +19232,10 @@ class SignInModuleC extends ModuleC {
         }
         if (this.day > day) {
             if (GlobalData.isOpenIAA) {
-                this.getAdTipsPanel.showRewardAd((() => {
+                this.getAdTipsPanel.showRewardAd(() => {
                     Notice.showDownNotice(GameConfig.Language.Text_SuccessfullyObtainedTodaySReward.Value);
                     this.getReward(day, succeedCallback);
-                }), StringUtil.format(GameConfig.Language.Text_FreeDayReward.Value, day), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+                }, StringUtil.format(GameConfig.Language.Text_FreeDayReward.Value, day), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
             } else {
                 this.getReward(day, succeedCallback);
             }
@@ -19343,18 +19343,18 @@ class TaskModuleS extends ModuleS {
         }
     }
     resetAllPlayersDailyTask() {
-        this.playerTaskMap.forEach((player => {
+        this.playerTaskMap.forEach(player => {
             DataCenterS.getData(player, TaskData).resetDailyTask();
             DataCenterS.getData(player, OnlineRewardData).autoResetOnlineRewards();
-        }));
+        });
         this.getAllClient().net_resetDailyTask();
         this.getOnlineRewardsModuleS.resetOnlineReward();
     }
     resetAllPlayersWeeklyTask() {
-        this.playerTaskMap.forEach((player => {
+        this.playerTaskMap.forEach(player => {
             DataCenterS.getData(player, TaskData).resetWeeklyTask();
             this.getSignInModuleS.syncResetSignInData(player);
-        }));
+        });
         this.getAllClient().net_resetWeeklyTask();
     }
     net_saveTaskProgress(dailyTaskIds, dailyTaskTypes, dailyProgresss, weeklyTaskIds, weeklyTaskTypes, weeklyProgresss) {
@@ -19634,12 +19634,12 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
             }
             let loc = this.character.worldTransform.position;
             this.pet.worldTransform.position = new mw.Vector(loc.x, loc.y, loc.z + 500);
-            Utils.asyncDownloadAsset(bagInfoElement.AssetId).then((() => {
+            Utils.asyncDownloadAsset(bagInfoElement.AssetId).then(() => {
                 this.pet.setDescription([ bagInfoElement.AssetId ]);
                 this.petIdleId = bagInfoElement.Idle;
                 this.petMoveId = bagInfoElement.Move;
                 this.useUpdate = true;
-            }));
+            });
         }
     }
     onUpdateC(dt) {
@@ -19658,19 +19658,19 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
             this.pet.lookAt(this.curPetDir);
             this.pet.addMovement(mw.Vector.forward);
             if (this.petAnimation && this.petAnimation?.assetId == this.petMoveId) ; else {
-                Utils.asyncDownloadAsset(this.petMoveId).then((() => {
+                Utils.asyncDownloadAsset(this.petMoveId).then(() => {
                     this.petAnimation = this.pet.loadAnimation(this.petMoveId);
                     this.petAnimation.loop = 0;
                     this.petAnimation.play();
-                }));
+                });
             }
         } else {
             if (this.petAnimation && this.petAnimation?.assetId == this.petIdleId) ; else {
-                Utils.asyncDownloadAsset(this.petIdleId).then((() => {
+                Utils.asyncDownloadAsset(this.petIdleId).then(() => {
                     this.petAnimation = this.pet.loadAnimation(this.petIdleId);
                     this.petAnimation.loop = 0;
                     this.petAnimation.play();
-                }));
+                });
             }
         }
     }
@@ -19702,8 +19702,8 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
             }
             if (!swordDataMap.has(this.flyId)) return;
             let flyData = swordDataMap.get(this.flyId);
-            Utils.asyncDownloadAsset(flyData.swordPrefabId).then((() => {
-                GameObjPool.asyncSpawn(flyData.swordPrefabId).then((go => {
+            Utils.asyncDownloadAsset(flyData.swordPrefabId).then(() => {
+                GameObjPool.asyncSpawn(flyData.swordPrefabId).then(go => {
                     if (flyData.isCharacter) {
                         this.flyCharacter = go;
                         this.flyCharacter.setCollision(mw.PropertyStatus.Off, true);
@@ -19711,11 +19711,11 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
                         this.flyCharacter.localTransform.scale = mw.Vector.one.multiply(4);
                         this.flyCharacter.localTransform.position = new mw.Vector(12, 0, 30);
                         this.flyCharacter.localTransform.rotation = mw.Rotation.zero;
-                        Utils.asyncDownloadAsset(`160628`).then((() => {
+                        Utils.asyncDownloadAsset(`160628`).then(() => {
                             let flyCharacterAnimation = this.flyCharacter.loadAnimation(`160628`);
                             flyCharacterAnimation.loop = 0;
                             flyCharacterAnimation.play();
-                        }));
+                        });
                     } else {
                         this.flyJian = go;
                         this.character.attachToSlot(this.flyJian, mw.HumanoidSlotType.Root);
@@ -19726,8 +19726,8 @@ let PlayerLifebar = class PlayerLifebar extends mw.Script {
                     this.flyJianAni = this.character.loadAnimation(this.flyAnimationId);
                     this.flyJianAni.loop = 0;
                     this.flyJianAni.play();
-                }));
-            }));
+                });
+            });
             this.isFlying = true;
         }
     }
@@ -19937,12 +19937,12 @@ class PlayerModuleS extends ModuleS {
         this.deletePlayerData(player);
     }
     setPlayerLifeNickName(playerId, nickName, level) {
-        TimeUtil.delaySecond(5).then((() => {
+        TimeUtil.delaySecond(5).then(() => {
             if (!this.playerLifeMap.has(playerId)) return;
             let lifebar = this.playerLifeMap.get(playerId).playerLifebar;
             lifebar.playerName = nickName;
             lifebar.playerLevel = level;
-        }));
+        });
     }
     setPlayerLevel(playerId, level) {
         if (!this.playerLifeMap.has(playerId)) return;
@@ -19968,13 +19968,13 @@ class PlayerModuleS extends ModuleS {
             }
             targetPlayer.character.ragdollEnabled = true;
             this.spawnTombstoneS(targetPlayer);
-            TimeUtil.delaySecond(3).then((() => {
+            TimeUtil.delaySecond(3).then(() => {
                 targetPlayer.character.ragdollEnabled = false;
                 targetPlayerData.playerLifebar.hp = maxHp;
                 targetPlayerData.isDie = false;
                 this.getClient(targetPlayer).net_updateHp(maxHp);
                 targetPlayer.character.worldTransform.position = Utils.getWorldLocation();
-            }));
+            });
         } else {
             targetPlayerData.playerLifebar.hp = curHp;
         }
@@ -19992,9 +19992,9 @@ class PlayerModuleS extends ModuleS {
         tombstone = SpawnManager.wornSpawn(GlobalData.tombstoneGuid);
         let pos = player.character.worldTransform.position;
         tombstone.worldTransform.position = new mw.Vector(pos.x, pos.y, pos.z - 110);
-        setTimeout((() => {
+        setTimeout(() => {
             tombstone.destroy();
-        }), 3 * 1e3);
+        }, 3 * 1e3);
     }
     async initPlayerData(player) {
         let playerId = player.playerId;
@@ -20103,7 +20103,7 @@ class PlayerModuleS extends ModuleS {
     }
     net_skill_1() {
         let player = this.currentPlayer;
-        Utils.asyncDownloadAsset(GlobalData.skillAnimation_1).then((() => {
+        Utils.asyncDownloadAsset(GlobalData.skillAnimation_1).then(() => {
             player.character.loadAnimation(GlobalData.skillAnimation_1).play();
             let effectId = EffectService.playOnGameObject(GlobalData.skillEffectId_1, player.character, {
                 slotType: mw.HumanoidSlotType.Root,
@@ -20112,11 +20112,11 @@ class PlayerModuleS extends ModuleS {
             });
             let smallScale = player.character.worldTransform.scale.clone();
             player.character.worldTransform.scale = mw.Vector.one.multiply(GlobalData.skillScale_1);
-            TimeUtil.delaySecond(GlobalData.skillContinue_1).then((() => {
+            TimeUtil.delaySecond(GlobalData.skillContinue_1).then(() => {
                 player.character.worldTransform.scale = smallScale;
                 EffectService.stop(effectId);
-            }));
-        }));
+            });
+        });
     }
     net_setDayStr(dayStr) {
         this.currentData.setDayStr(dayStr);
@@ -20219,7 +20219,7 @@ let Coin = class Coin extends Script {
             EffectService.stop(this.coinEffectIds[index]);
             this.coinEffectIds[index] = null;
         }
-        TimeUtil.delaySecond(this.rebirthTime).then((() => {
+        TimeUtil.delaySecond(this.rebirthTime).then(() => {
             this.triggers[index].enabled = true;
             let effectId = EffectService.playOnGameObject(this.coinEffect, this.triggers[index], {
                 position: new mw.Vector(0, 0, -30),
@@ -20227,7 +20227,7 @@ let Coin = class Coin extends Script {
                 scale: mw.Vector.one.multiply(2)
             });
             this.coinEffectIds[index] = effectId;
-        }));
+        });
     }
     onUpdateS(dt) {}
     randomValueS(min, max) {
@@ -20273,11 +20273,11 @@ let Dance = class Dance extends Script {
         if (mw.SystemUtil.isClient()) {
             let xifang = this.gameObject;
             xifang.setDescription([ "327879" ]);
-            xifang.asyncReady().then((() => {
+            xifang.asyncReady().then(() => {
                 let a = xifang.loadAnimation("306307");
                 a.loop = 0;
                 a.play();
-            }));
+            });
         }
     }
     onUpdate(dt) {}
@@ -20457,9 +20457,9 @@ class Monster_Level extends Script {
         this.attackInfo.damages = monsterElement?.Damages;
         this.attackEffectInfo.effectIds = monsterElement?.EffectIds;
         this.attackEffectInfo.posOffsets = monsterElement?.EffectPosOffsets;
-        monsterElement?.EffectRotOffsets?.forEach((value => {
+        monsterElement?.EffectRotOffsets?.forEach(value => {
             this.attackEffectInfo.rotOffsets.push(new mw.Rotation(value));
-        }));
+        });
         this.attackEffectInfo.effectScales = monsterElement?.EffectScales;
         this.moveSpeed = monsterElement?.MoveSpeed;
     }
@@ -20537,7 +20537,7 @@ class Monster_Level extends Script {
     }
     initEvent_S() {
         PrefabEvent.PrefabEvtFight.onHit(this.playerAtkEnemy_S.bind(this));
-        Event.addLocalListener(`InitMonster`, ((index, level, lv) => {
+        Event.addLocalListener(`InitMonster`, (index, level, lv) => {
             if (this.levelIndex != index) return;
             this.level = level;
             this.lv = lv;
@@ -20549,10 +20549,10 @@ class Monster_Level extends Script {
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.getMonster.setDescription([ this.randomInt(1, 2) == 1 ? "5E4EA6214690891A8428C08D8CF69868" : "FEB031744ECC57E59F33B1AEFA7A6A07" ]);
             this.setMonsterState = MonsterState$1.Activate;
-            this.playIdleAni_S().then((() => {
-                TimeUtil.delaySecond(this.randomInt(1, 2)).then((() => this.startNavigateTo_S()));
-            }));
-        }));
+            this.playIdleAni_S().then(() => {
+                TimeUtil.delaySecond(this.randomInt(1, 2)).then(() => this.startNavigateTo_S());
+            });
+        });
     }
     playerAtkEnemy_S(senderGuid, targetGuid, damage, hitPoint) {
         if (this.getMonster.gameObjectId != targetGuid || this.getMonsterState == MonsterState$1.Inactivation) return;
@@ -20597,7 +20597,7 @@ class Monster_Level extends Script {
         let rebirthEffect = EffectService.playAtPosition("142948", rebirthEffectPos, {
             loopCount: 0
         });
-        TimeUtil.delaySecond(this.randomFloat(1, 3)).then((async () => {
+        TimeUtil.delaySecond(this.randomFloat(1, 3)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, {
                 slotType: mw.HumanoidSlotType.Root
@@ -20606,8 +20606,8 @@ class Monster_Level extends Script {
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState$1.Activate;
             await this.playIdleAni_S();
-            TimeUtil.delaySecond(this.randomFloat(1, 3)).then((() => this.startNavigateTo_S()));
-        }));
+            TimeUtil.delaySecond(this.randomFloat(1, 3)).then(() => this.startNavigateTo_S());
+        });
     }
     updateChasePlayer(targetGuid, damage) {
         let totalDamage = 0;
@@ -20626,18 +20626,18 @@ class Monster_Level extends Script {
         if (!this.chasePlayerMap || this.chasePlayerMap.size == 0) return null;
         let maxDamage = 0;
         let targetGuid = null;
-        this.chasePlayerMap.forEach(((value, key) => {
+        this.chasePlayerMap.forEach((value, key) => {
             if (value > maxDamage) {
                 maxDamage = value;
                 targetGuid = key;
             }
-        }));
+        });
         let targetPlayer = null;
-        Player.getAllPlayers().forEach((value => {
+        Player.getAllPlayers().forEach(value => {
             if (value.character.gameObjectId == targetGuid) {
                 targetPlayer = value;
             }
-        }));
+        });
         return targetPlayer;
     }
     async activate_S() {
@@ -20654,7 +20654,7 @@ class Monster_Level extends Script {
         Navigation.stopNavigateTo(this.getMonster);
         this.isNavigateToing = false;
         await this.playIdleAni_S();
-        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then((() => this.startNavigateTo_S()));
+        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then(() => this.startNavigateTo_S());
     }
     async startNavigateTo_S() {
         if (this.getMonsterState != MonsterState$1.Activate) return;
@@ -20669,9 +20669,9 @@ class Monster_Level extends Script {
     async randomNavigateToComplete_S() {
         this.isNavigateToing = false;
         await this.playIdleAni_S();
-        TimeUtil.delaySecond(this.randomInt(1, 3)).then((() => {
+        TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => {
             this.randomAttack_S();
-        }));
+        });
     }
     chasePlayerNavigateTo_S(targetPlayer) {
         let dis = mw.Vector.distance(this.getMonster.worldTransform.position, targetPlayer.character.worldTransform.position);
@@ -20683,12 +20683,12 @@ class Monster_Level extends Script {
         }
     }
     directChasePlayerNavigateTo_S(targetPlayer) {
-        let isFollowSuccess = Navigation.follow(this.getMonster, targetPlayer.character, 0, (() => {
+        let isFollowSuccess = Navigation.follow(this.getMonster, targetPlayer.character, 0, () => {
             this.chasePlayerNavigateToComplete_S(targetPlayer);
-        }), (() => {
+        }, () => {
             this.deleteChasePlayer(targetPlayer.character.gameObjectId);
             this.chasePlayerNavigateToComplete_S(targetPlayer);
-        }));
+        });
         if (isFollowSuccess) {
             this.isFollowing = true;
             return;
@@ -20699,31 +20699,31 @@ class Monster_Level extends Script {
     async directRandomAttack_S(targetPlayer) {
         await this.playIdleAni_S();
         this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
-        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then((() => {
+        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then(() => {
             this.randomAttack_S();
-        }));
+        });
     }
     async chasePlayerNavigateToComplete_S(targetPlayer) {
         Navigation.stopFollow(this.getMonster);
         this.isFollowing = false;
         await this.playIdleAni_S();
         this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
-        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then((() => {
+        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then(() => {
             this.randomAttack_S();
-        }));
+        });
     }
     async randomAttack_S() {
         if (this.getMonsterState != MonsterState$1.Activate) return;
         this.attackIndex = this.randomInt(0, this.animationInfo.attacks.length - 1);
         let attackAni = await this.playAtkAni_S();
         let attackTime = attackAni.length;
-        TimeUtil.delaySecond(this.attackInfo.attackTimePoints[this.attackIndex]).then((() => {
+        TimeUtil.delaySecond(this.attackInfo.attackTimePoints[this.attackIndex]).then(() => {
             this.randomAttackCheck_S();
-        }));
-        TimeUtil.delaySecond(attackTime).then((() => {
+        });
+        TimeUtil.delaySecond(attackTime).then(() => {
             this.playIdleAni_S();
-        }));
-        TimeUtil.delaySecond(attackTime + this.randomInt(1, 3)).then((() => this.startNavigateTo_S()));
+        });
+        TimeUtil.delaySecond(attackTime + this.randomInt(1, 3)).then(() => this.startNavigateTo_S());
     }
     randomAttackCheck_S() {
         if (this.getMonsterState != MonsterState$1.Activate) return;
@@ -20982,18 +20982,18 @@ class Monster extends Script {
         this.attackInfo.damages = monsterElement?.Damages;
         this.attackEffectInfo.effectIds = monsterElement?.EffectIds;
         this.attackEffectInfo.posOffsets = monsterElement?.EffectPosOffsets;
-        monsterElement?.EffectRotOffsets?.forEach((value => {
+        monsterElement?.EffectRotOffsets?.forEach(value => {
             this.attackEffectInfo.rotOffsets.push(new mw.Rotation(value));
-        }));
+        });
         this.attackEffectInfo.effectScales = monsterElement?.EffectScales;
         this.moveSpeed = monsterElement?.MoveSpeed;
     }
     async initPaths(pathStr = null) {
         let pathParent = await mw.GameObject.asyncFindGameObjectById(GlobalData.pathStrMap.get(this.monsterType));
         this.pathVectors.length = 0;
-        pathParent?.getChildren().forEach((child => {
+        pathParent?.getChildren().forEach(child => {
             this.pathVectors.push(child.worldTransform.position);
-        }));
+        });
     }
     onUpdate(dt) {
         if (mw.SystemUtil.isClient()) {
@@ -21097,9 +21097,9 @@ class Monster extends Script {
             this.getMonster?.currentAnimation?.stop();
             if (!this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = true;
         }
-        TimeUtil.delaySecond(dieTime).then((() => {
+        TimeUtil.delaySecond(dieTime).then(() => {
             this.rebirth_S();
-        }));
+        });
     }
     dieReset_S() {
         this.setMonsterState = MonsterState.Inactivation;
@@ -21114,7 +21114,7 @@ class Monster extends Script {
         let rebirthEffect = EffectService.playAtPosition("142948", rebirthEffectPos, {
             loopCount: 0
         });
-        TimeUtil.delaySecond(this.randomInt(5, 10)).then((async () => {
+        TimeUtil.delaySecond(this.randomInt(5, 10)).then(async () => {
             EffectService.stop(rebirthEffect);
             EffectService.playOnGameObject("142750", this.getMonster, {
                 slotType: mw.HumanoidSlotType.Root
@@ -21153,8 +21153,8 @@ class Monster extends Script {
             if (this.getMonster.ragdollEnabled) this.getMonster.ragdollEnabled = false;
             this.setMonsterState = MonsterState.Activate;
             await this.playIdleAni_S();
-            TimeUtil.delaySecond(this.randomInt(3, 5)).then((() => this.startNavigateTo_S()));
-        }));
+            TimeUtil.delaySecond(this.randomInt(3, 5)).then(() => this.startNavigateTo_S());
+        });
     }
     updateChasePlayer(targetGuid, damage) {
         let totalDamage = 0;
@@ -21173,18 +21173,18 @@ class Monster extends Script {
         if (!this.chasePlayerMap || this.chasePlayerMap.size == 0) return null;
         let maxDamage = 0;
         let targetGuid = null;
-        this.chasePlayerMap.forEach(((value, key) => {
+        this.chasePlayerMap.forEach((value, key) => {
             if (value > maxDamage) {
                 maxDamage = value;
                 targetGuid = key;
             }
-        }));
+        });
         let targetPlayer = null;
-        Player.getAllPlayers().forEach((value => {
+        Player.getAllPlayers().forEach(value => {
             if (value.character.gameObjectId == targetGuid) {
                 targetPlayer = value;
             }
-        }));
+        });
         return targetPlayer;
     }
     async activate_S() {
@@ -21194,17 +21194,17 @@ class Monster extends Script {
         this.setMonsterState = MonsterState.Activate;
         this.isFollowing = false;
         this.isNavigateToing = false;
-        TimeUtil.delaySecond(this.randomInt(1, 3)).then((() => {
+        TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => {
             this.playIdleAni_S();
-        }));
-        TimeUtil.delaySecond(this.randomInt(5, 15)).then((() => this.startNavigateTo_S()));
+        });
+        TimeUtil.delaySecond(this.randomInt(5, 15)).then(() => this.startNavigateTo_S());
     }
     async fromNavigateToToFollow() {
         if (this.isFollowing || !this.isNavigateToing) return;
         Navigation.stopNavigateTo(this.getMonster);
         this.isNavigateToing = false;
         await this.playIdleAni_S();
-        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then((() => this.startNavigateTo_S()));
+        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then(() => this.startNavigateTo_S());
     }
     async startNavigateTo_S() {
         if (this.getMonsterState != MonsterState.Activate) return;
@@ -21214,18 +21214,18 @@ class Monster extends Script {
     }
     randomNavigateTo_S() {
         this.isNavigateToing = true;
-        Navigation.navigateTo(this.getMonster, this.getRandomTargetPoint_S(), 0, (() => {
+        Navigation.navigateTo(this.getMonster, this.getRandomTargetPoint_S(), 0, () => {
             this.randomNavigateToComplete_S();
-        }), (() => {
+        }, () => {
             this.randomNavigateToComplete_S();
-        }));
+        });
     }
     async randomNavigateToComplete_S() {
         this.isNavigateToing = false;
         await this.playIdleAni_S();
-        TimeUtil.delaySecond(this.randomInt(1, 3)).then((() => {
+        TimeUtil.delaySecond(this.randomInt(1, 3)).then(() => {
             this.randomAttack_S();
-        }));
+        });
     }
     chasePlayerNavigateTo_S(targetPlayer) {
         let dis = mw.Vector.distance(this.getMonster.worldTransform.position, targetPlayer.character.worldTransform.position);
@@ -21237,12 +21237,12 @@ class Monster extends Script {
         }
     }
     directChasePlayerNavigateTo_S(targetPlayer) {
-        let isFollowSuccess = Navigation.follow(this.getMonster, targetPlayer.character, 0, (() => {
+        let isFollowSuccess = Navigation.follow(this.getMonster, targetPlayer.character, 0, () => {
             this.chasePlayerNavigateToComplete_S(targetPlayer);
-        }), (() => {
+        }, () => {
             this.deleteChasePlayer(targetPlayer.character.gameObjectId);
             this.chasePlayerNavigateToComplete_S(targetPlayer);
-        }));
+        });
         if (isFollowSuccess) {
             this.isFollowing = true;
             return;
@@ -21253,18 +21253,18 @@ class Monster extends Script {
     async directRandomAttack_S(targetPlayer) {
         await this.playIdleAni_S();
         this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
-        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then((() => {
+        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then(() => {
             this.randomAttack_S();
-        }));
+        });
     }
     async chasePlayerNavigateToComplete_S(targetPlayer) {
         Navigation.stopFollow(this.getMonster);
         this.isFollowing = false;
         await this.playIdleAni_S();
         this.getMonster.lookAt(targetPlayer.character.worldTransform.position);
-        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then((() => {
+        TimeUtil.delaySecond(this.randomFloat(.5, 1)).then(() => {
             this.randomAttack_S();
-        }));
+        });
     }
     getRandomTargetPoint_S() {
         let targetVector = this.pathVectors[Utils.getPathIndex(this.pathVectors.length)];
@@ -21276,13 +21276,13 @@ class Monster extends Script {
         this.attackIndex = this.randomInt(0, this.animationInfo.attacks.length - 1);
         let attackAni = await this.playAtkAni_S();
         let attackTime = attackAni.length;
-        TimeUtil.delaySecond(this.attackInfo.attackTimePoints[this.attackIndex]).then((() => {
+        TimeUtil.delaySecond(this.attackInfo.attackTimePoints[this.attackIndex]).then(() => {
             this.randomAttackCheck_S();
-        }));
-        TimeUtil.delaySecond(attackTime).then((() => {
+        });
+        TimeUtil.delaySecond(attackTime).then(() => {
             this.playIdleAni_S();
-        }));
-        TimeUtil.delaySecond(attackTime + this.randomInt(1, 3)).then((() => this.startNavigateTo_S()));
+        });
+        TimeUtil.delaySecond(attackTime + this.randomInt(1, 3)).then(() => this.startNavigateTo_S());
     }
     randomAttackCheck_S() {
         if (this.getMonsterState != MonsterState.Activate) return;
@@ -21435,7 +21435,7 @@ let MyClearDayNight = MyClearDayNight_1 = class MyClearDayNight extends mw.Scrip
         MyClearDayNight_1.instance = this;
         this.useUpdate = true;
         if (SystemUtil.isServer()) {
-            setInterval((() => {
+            setInterval(() => {
                 if (this.CountGo == Math.round(360 * this.DayNightTimeScale)) {
                     this.NextStage = "中午";
                 }
@@ -21448,27 +21448,27 @@ let MyClearDayNight = MyClearDayNight_1 = class MyClearDayNight extends mw.Scrip
                 if (this.CountGo >= Math.round(1440 * this.DayNightTimeScale)) {
                     this.CountGo = 0;
                     this.NextStage = "清晨";
-                    Player.getAllPlayers().forEach((player => {
+                    Player.getAllPlayers().forEach(player => {
                         this.SyncTimeToClient(player, this.CountGo, this.NextStage);
-                    }));
+                    });
                 }
                 Console.log("[CurTime] " + this.getCurTime());
                 this.CountGo++;
-            }), 1e3);
-            Player.onPlayerJoin.add((player => {
-                setTimeout((() => {
+            }, 1e3);
+            Player.onPlayerJoin.add(player => {
+                setTimeout(() => {
                     this.SyncTimeToClient(player, this.CountGo, this.NextStage);
-                }), 2e3);
-            }));
-            Event.addClientListener("I'm back, Sync time pls", (player => {
-                setTimeout((() => {
+                }, 2e3);
+            });
+            Event.addClientListener("I'm back, Sync time pls", player => {
+                setTimeout(() => {
                     this.SyncTimeToClient(player, this.CountGo, this.NextStage);
-                }), 2e3);
-            }));
+                }, 2e3);
+            });
         }
         if (SystemUtil.isClient()) {
             Skybox.moonTextureID = "95623";
-            setInterval((() => {
+            setInterval(() => {
                 if (this.CountGo == Math.round(360 * this.DayNightTimeScale)) {
                     this.ChangeSky(-80, -90, 8, true, 1.2, 1.57);
                     Skybox.skyDomeTextureID = "108338";
@@ -21490,10 +21490,10 @@ let MyClearDayNight = MyClearDayNight_1 = class MyClearDayNight extends mw.Scrip
                 }
                 Console.log("[CurTime] " + this.getCurTime());
                 this.CountGo++;
-            }), 1e3);
-            Player.onPlayerReconnect.add((() => {
+            }, 1e3);
+            Player.onPlayerReconnect.add(() => {
                 Event.dispatchToServer("I'm back, Sync time pls");
-            }));
+            });
         }
     }
     getCurTime() {
@@ -21520,27 +21520,27 @@ let MyClearDayNight = MyClearDayNight_1 = class MyClearDayNight extends mw.Scrip
             this.NextStageTime = Math.round(Math.round(360 * this.DayNightTimeScale) - this.CountGo % Math.round(360 * this.DayNightTimeScale));
             if (nextStage == "中午") {
                 this.ChangeSky(100, 0, 1, false, .2, .2, .02);
-                setTimeout((() => {
+                setTimeout(() => {
                     this.ChangeSky(-80, -90, 8, true, 1.2, 1.57, this.NextStageTime);
-                }), 60);
+                }, 60);
             }
             if (nextStage == "傍晚") {
                 this.ChangeSky(-80, -90, 8, true, 1.2, 1.57, .02);
-                setTimeout((() => {
+                setTimeout(() => {
                     this.ChangeSky(100, 0, 2, true, .3, .3, this.NextStageTime);
-                }), 60);
+                }, 60);
             }
             if (nextStage == "凌晨") {
                 this.ChangeSky(100, 0, 2, true, .3, .3, .02);
-                setTimeout((() => {
+                setTimeout(() => {
                     this.ChangeSky(-80, -90, .5, false, .05, .4, this.NextStageTime);
-                }), 60);
+                }, 60);
             }
             if (nextStage == "清晨") {
                 this.ChangeSky(-80, -90, .5, false, .05, .4, .02);
-                setTimeout((() => {
+                setTimeout(() => {
                     this.ChangeSky(100, 0, 1, false, .2, .2, this.NextStageTime);
-                }), 60);
+                }, 60);
             }
         }
     }
@@ -21565,12 +21565,12 @@ let MyClearDayNight = MyClearDayNight_1 = class MyClearDayNight extends mw.Scrip
             b: pitchAngle,
             c: skyDomeIntensity,
             d: Sky_intensity
-        }, time).onUpdate((obj => {
+        }, time).onUpdate(obj => {
             Lighting.brightness = obj.a;
             Lighting.pitchAngle = obj.b;
             Skybox.skyDomeIntensity = obj.c;
             Lighting.brightness = obj.d;
-        })).start();
+        }).start();
     }
     CountToTime(int, add0) {
         int = int / this.DayNightTimeScale;
@@ -21636,9 +21636,9 @@ let TestPanel_Generate = class TestPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mButton.onClicked.add((() => {
+        this.mButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mButton");
-        }));
+        });
         this.mButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
     }
     initLanguage(ui) {
@@ -21763,9 +21763,9 @@ let ArkItem_Generate = class ArkItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mDayTextBlock);
         this.initLanguage(this.mRewardTextBlock);
@@ -21851,9 +21851,9 @@ let ArkPanel_Generate = class ArkPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mUserIdTextBlock);
@@ -21926,13 +21926,13 @@ let GiftBagPanel_Generate = class GiftBagPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mGetButton.onClicked.add((() => {
+        this.mGetButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mGetButton");
-        }));
+        });
         this.mGetButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mInputTipsTextBlock);
@@ -22005,13 +22005,13 @@ let LimitTimePanel_Generate = class LimitTimePanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mGetButton.onClicked.add((() => {
+        this.mGetButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mGetButton");
-        }));
+        });
         this.mGetButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mTipsTextBlock);
@@ -22123,12 +22123,12 @@ class ArkItem extends ArkItem_Generate$1 {
         this.mClickButton.onClicked.add(this.addClickButton.bind(this));
     }
     addClickButton() {
-        this.getArkModuleC.placeOrder(this.commodityId, (() => {
+        this.getArkModuleC.placeOrder(this.commodityId, () => {
             if (rewardDiamond.get(this.commodityId).isLimit) {
                 this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
                 this.mHasTextBlock.text = GameConfig.Language.Text_Soldouttoday.Value;
             }
-        }));
+        });
     }
     initArkItem(commodityId) {
         this.commodityId = commodityId;
@@ -22183,27 +22183,27 @@ class ArkPanel extends ArkPanel_Generate$1 {
         this.hideTween();
     }
     initArkItem() {
-        rewardDiamond.forEach(((value, key) => {
+        rewardDiamond.forEach((value, key) => {
             let arkItem = mw.UIService.create(ArkItem);
             arkItem.initArkItem(key);
             this.mCanvas.addChild(arkItem.uiObject);
             arkItem.uiObject.position = value.itemPos;
             this.arkItems.push(arkItem);
-        }));
+        });
     }
     updateArkTextBlock(arkCount) {
         this.mArkCountTextBlock.text = `${arkCount}`;
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
     updateUserIdTextBlock(str) {
         this.mUserIdTextBlock.text = `${str ? str : `UserId`}:${Player.localPlayer.userId}`;
@@ -22284,20 +22284,20 @@ class ArkModuleC extends ModuleC {
     }
     onStart() {
         this.bindAction();
-        InputUtil.onKeyDown(mw.Keys.P, (() => {
+        InputUtil.onKeyDown(mw.Keys.P, () => {
             this.getArkPanel.show();
-        }));
-        InputUtil.onKeyDown(mw.Keys.O, (() => {
+        });
+        InputUtil.onKeyDown(mw.Keys.O, () => {
             this.getGiftBagPanel.show();
-        }));
+        });
     }
     bindAction() {
         mw.PurchaseService.onArkBalanceUpdated.add(this.addArkUpdate.bind(this));
         this.getHudModuleC.onOpenArkAction.add(this.addOpenArkPanel.bind(this));
         this.getHudModuleC.onOpenGetAction.add(this.addOpenGiftBagPanel.bind(this));
-        this.getHudModuleC.onOpenLimitTimeAction.add((() => {
+        this.getHudModuleC.onOpenLimitTimeAction.add(() => {
             this.getLimitTimePanel.show();
-        }));
+        });
     }
     onEnterScene(sceneType) {
         this.isLimitStrs = this.data.isLimitStrs;
@@ -22320,9 +22320,9 @@ class ArkModuleC extends ModuleC {
             return;
         }
         this.isCanContinueClick = false;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.isCanContinueClick = true;
-        }));
+        });
         if (mw.SystemUtil.isPIE) {
             if (rewardDiamond.get(commodityId).isLimit) this.setLimitStr(commodityId);
             if (buySuccessCallback) buySuccessCallback();
@@ -22330,12 +22330,12 @@ class ArkModuleC extends ModuleC {
             Notice.showDownNotice(`${GameConfig.Language.Text_Diamonds.Value}+${rewardCount}`);
             this.getPlayerModuleC.saveDiamond(rewardCount);
         } else {
-            mw.PurchaseService.placeOrder(commodityId, 1, ((status, msg) => {
+            mw.PurchaseService.placeOrder(commodityId, 1, (status, msg) => {
                 mw.PurchaseService.getArkBalance();
                 if (status != 200) return;
                 if (rewardDiamond.get(commodityId).isLimit) this.setLimitStr(commodityId);
                 if (buySuccessCallback) buySuccessCallback();
-            }));
+            });
         }
     }
     net_deliverGoods(commodityId, amount) {
@@ -22369,9 +22369,9 @@ class ArkModuleC extends ModuleC {
             return;
         }
         this.isCanGetGiftBag = false;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             this.isCanGetGiftBag = true;
-        }));
+        });
         this.server.net_getGiftBag(coodStr);
     }
     net_getGiftBag(giftBagCood, messageJson) {
@@ -22403,10 +22403,10 @@ class ArkModuleC extends ModuleC {
             Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_FlashTips.Value, 5e4));
             return;
         }
-        mw.PurchaseService.placeOrder("ATUscb1seFW0001eB", 1, ((status, msg) => {
+        mw.PurchaseService.placeOrder("ATUscb1seFW0001eB", 1, (status, msg) => {
             mw.PurchaseService.getArkBalance();
             if (status != 200) return;
-        }));
+        });
     }
     useDiamond() {
         this.getPlayerModuleC.useDiamond();
@@ -22437,7 +22437,7 @@ class ArkModuleS extends ModuleS {
             if (isGetGiftBag) {
                 this.getClient(player).net_getGiftBag(GiftBagCood.Exchanged, null);
             } else {
-                this.getCustomdata("WorldGiftBag").then((value => {
+                this.getCustomdata("WorldGiftBag").then(value => {
                     if (!value) {
                         this.getClient(player).net_getGiftBag(GiftBagCood.Fail, null);
                         return;
@@ -22456,12 +22456,12 @@ class ArkModuleS extends ModuleS {
                     } else {
                         this.getClient(player).net_getGiftBag(GiftBagCood.Fail, null);
                     }
-                }));
+                });
             }
         } else {
-            PurchaseService.redeemGiftCode(player, coodStr, (result => {
+            PurchaseService.redeemGiftCode(player, coodStr, result => {
                 this.getClient(player).net_getGiftBag(result.status == 200 || result.status == 1 ? GiftBagCood.Success : GiftBagCood.Fail, result.message);
-            }));
+            });
         }
     }
     async syncArkStr(player) {
@@ -22536,15 +22536,15 @@ class GiftBagPanel extends GiftBagPanel_Generate$1 {
     }
     onShow(...params) {
         this.mInputBox.text = "";
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -22561,18 +22561,18 @@ class LimitTimePanel extends LimitTimePanel_Generate$1 {
     }
     onStart() {
         this.initUI();
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             this.hideTween();
-        }));
+        });
         let isCanContinueClick = true;
-        this.mGetButton.onClicked.add((() => {
+        this.mGetButton.onClicked.add(() => {
             if (!isCanContinueClick) return;
             isCanContinueClick = false;
-            TimeUtil.delaySecond(3).then((() => {
+            TimeUtil.delaySecond(3).then(() => {
                 isCanContinueClick = true;
-            }));
+            });
             ModuleService.getModule(ArkModuleC).limitTime();
-        }));
+        });
     }
     initUI() {
         this.mTitleTextBlock.text = GameConfig.Language.Text_FlashSales.Value;
@@ -22582,15 +22582,15 @@ class LimitTimePanel extends LimitTimePanel_Generate$1 {
         this.mInputTipsTextBlock.text = StringUtil.format(GameConfig.Language.Text_ConsumeTeamCoins.Value, 19800);
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -22688,7 +22688,7 @@ class HUDModuleS extends ModuleS {
     net_modifyTitleName(titleName) {
         let player = this.currentPlayer;
         DataCenterS.getData(player, PlayerData).setTitleName(titleName);
-        this.initWorldConfigDatas().then((() => {
+        this.initWorldConfigDatas().then(() => {
             let isHas = false;
             for (let i = 0; i < this.worldConfigDatas.length; ++i) {
                 if (this.worldConfigDatas[i].userId == player.userId) {
@@ -22705,7 +22705,7 @@ class HUDModuleS extends ModuleS {
                 this.worldConfigDatas.push(worldConfigData);
             }
             this.setCustomData("WorldConfigData", this.worldConfigDatas);
-        }));
+        });
     }
     async getCustomdata(key) {
         let data = null;
@@ -22851,9 +22851,9 @@ let NewPeopleItem_Generate = class NewPeopleItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mDayTextBlock);
         this.initLanguage(this.mRewardTextBlock);
@@ -22915,9 +22915,9 @@ let NewPeoplePanel_Generate = class NewPeoplePanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mTipsTextBlock);
@@ -23044,9 +23044,9 @@ class NewPeopleModuleC extends ModuleC {
         if (this.isOldPeople) return;
         if (this.isGetNewPeoples && MapEx.count(this.isGetNewPeoples) == 2) {
             let isOld = true;
-            MapEx.forEach(this.isGetNewPeoples, ((key, value) => {
+            MapEx.forEach(this.isGetNewPeoples, (key, value) => {
                 if (!value) isOld = false;
-            }));
+            });
             if (!isOld) return;
             this.isOldPeople = true;
             this.isGetNewPeoples = {};
@@ -23086,9 +23086,9 @@ class NewPeopleModuleC extends ModuleC {
                     Notice.showDownNotice(GameConfig.Language.Text_OpenTheBackpackForUse.Value);
                     let bagIds = newPeopleGiftDatas.get(key).bagId;
                     for (let i = 0; i < bagIds.length; ++i) {
-                        TimeUtil.delaySecond(i).then((() => {
+                        TimeUtil.delaySecond(i).then(() => {
                             this.getBagModuleC.setBagId(bagIds[i]);
-                        }));
+                        });
                     }
                     this.setIsGetNewPeoples(key, Utils.getDay());
                     if (getComplete) getComplete();
@@ -23101,27 +23101,27 @@ class NewPeopleModuleC extends ModuleC {
         }
     }
     initTrigger() {
-        NewPeopleTriggerMap.forEach(((value, key) => {
+        NewPeopleTriggerMap.forEach((value, key) => {
             if (value.triggers && value.triggers.length > 0) {
-                value.triggers.forEach((triggerId => {
-                    mw.GameObject.asyncFindGameObjectById(triggerId).then((go => {
+                value.triggers.forEach(triggerId => {
+                    mw.GameObject.asyncFindGameObjectById(triggerId).then(go => {
                         let trigger = go;
-                        trigger.onEnter.add((character => {
+                        trigger.onEnter.add(character => {
                             if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
                             this.getNewPeoplePanel.show();
-                        }));
-                    }));
-                }));
+                        });
+                    });
+                });
             }
-            value.worldUIIds.forEach((worldId => {
-                mw.GameObject.asyncFindGameObjectById(worldId).then((v => {
+            value.worldUIIds.forEach(worldId => {
+                mw.GameObject.asyncFindGameObjectById(worldId).then(v => {
                     let worldUI = v;
                     let levelItem = mw.UIService.create(LevelItem);
                     levelItem.updateLevelTextBlock(GameConfig.Language[`${value.name}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-                }));
-            }));
-        }));
+                });
+            });
+        });
     }
 }
 
@@ -23167,24 +23167,24 @@ class NewPeoplePanel extends NewPeoplePanel_Generate$1 {
         this.hideTween();
     }
     initItem() {
-        newPeopleGiftDatas.forEach(((value, key) => {
+        newPeopleGiftDatas.forEach((value, key) => {
             let newPeopleItem = mw.UIService.create(NewPeopleItem);
             newPeopleItem.initItem(key);
             this.mCanvas.addChild(newPeopleItem.uiObject);
             newPeopleItem.uiObject.position = value.itemPos;
             this.newPeopleItems.push(newPeopleItem);
-        }));
+        });
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
 }
 
@@ -23219,17 +23219,17 @@ class NewPeopleItem extends NewPeopleItem_Generate$1 {
     }
     bindButton() {
         this.mClickButton.onClicked.add(this.addClickButton.bind(this));
-        Event.addLocalListener(`UpdateNewPeopleGiftBagOnlineTime`, (time => {
+        Event.addLocalListener(`UpdateNewPeopleGiftBagOnlineTime`, time => {
             console.error(`time:${time}`);
             if (this.getNewPeopleModuleC.isCanGet(this.key)) {
                 this.updateOnlineMinutesTextBlock(time);
             }
-        }));
+        });
     }
     addClickButton() {
-        this.getNewPeopleModuleC.clickGetPeople(this.key, this.minutes, (() => {
+        this.getNewPeopleModuleC.clickGetPeople(this.key, this.minutes, () => {
             this.mHasCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        }));
+        });
     }
     initItem(key) {
         this.key = key;
@@ -23449,29 +23449,29 @@ let WorldRankPanel_Generate = class WorldRankPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mRankLvButton.onClicked.add((() => {
+        this.mRankLvButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mRankLvButton");
-        }));
+        });
         this.mRankLvButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mRankHeightButton.onClicked.add((() => {
+        this.mRankHeightButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mRankHeightButton");
-        }));
+        });
         this.mRankHeightButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mRankKillButton.onClicked.add((() => {
+        this.mRankKillButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mRankKillButton");
-        }));
+        });
         this.mRankKillButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mRoomRankButton.onClicked.add((() => {
+        this.mRoomRankButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mRoomRankButton");
-        }));
+        });
         this.mRoomRankButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mWorldRankButton.onClicked.add((() => {
+        this.mWorldRankButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mWorldRankButton");
-        }));
+        });
         this.mWorldRankButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTitleTextBlock);
         this.initLanguage(this.mRoomRankTextBlock);
@@ -23655,24 +23655,24 @@ class WorldRankPanel extends WorldRankPanel_Generate$1 {
         this.showRoomCanvas();
     }
     bindButton() {
-        this.mRoomRankButton.onClicked.add((() => {
+        this.mRoomRankButton.onClicked.add(() => {
             this.showRoomCanvas();
-        }));
-        this.mWorldRankButton.onClicked.add((() => {
+        });
+        this.mWorldRankButton.onClicked.add(() => {
             this.showWorldCanvas();
-        }));
-        this.mCloseButton.onClicked.add((() => {
+        });
+        this.mCloseButton.onClicked.add(() => {
             this.hideTween();
-        }));
-        this.mRankLvButton.onClicked.add((() => {
+        });
+        this.mRankLvButton.onClicked.add(() => {
             this.onRankTypeAction.call(RankType.Lv);
-        }));
-        this.mRankHeightButton.onClicked.add((() => {
+        });
+        this.mRankHeightButton.onClicked.add(() => {
             this.onRankTypeAction.call(RankType.Height);
-        }));
-        this.mRankKillButton.onClicked.add((() => {
+        });
+        this.mRankKillButton.onClicked.add(() => {
             this.onRankTypeAction.call(RankType.Kill);
-        }));
+        });
     }
     showRoomCanvas() {
         if (this.currentShowCanvas == ShowCanvasType.Room) return;
@@ -23691,15 +23691,15 @@ class WorldRankPanel extends WorldRankPanel_Generate$1 {
         this.mTitleTextBlock.text = GameConfig.Language.Text_FullServerRankingList.Value;
     }
     onShow(...params) {
-        Utils.openUITween(this.rootCanvas, (() => {
+        Utils.openUITween(this.rootCanvas, () => {
             this.getHudPanel.hide();
-        }), null);
+        }, null);
     }
     hideTween() {
-        Utils.closeUITween(this.rootCanvas, null, (() => {
+        Utils.closeUITween(this.rootCanvas, null, () => {
             this.hide();
             this.getHudPanel.show();
-        }));
+        });
     }
     refreshRankPanel(playerDatas_CR, curPlayerIndex, isRefreshWorldRank, worldDatas_CW, curPlayerWorldIndex) {
         this.refreshRoomRankPanel(playerDatas_CR, curPlayerIndex);
@@ -23813,20 +23813,20 @@ class WorldRankModuleC extends ModuleC {
         this.bindAction();
     }
     bindAction() {
-        this.getHudModuleC.onOpenRankAction.add((() => {
+        this.getHudModuleC.onOpenRankAction.add(() => {
             this.getWorldRankPanel.show();
-        }));
-        this.getWorldRankPanel.onRankTypeAction.add((rankType => {
+        });
+        this.getWorldRankPanel.onRankTypeAction.add(rankType => {
             if (!this.isRefresh) {
                 Notice.showDownNotice(GameConfig.Language.Text_DonTClickTooQuicklyWithYourLittleHand.Value);
             }
             this.isRefresh = false;
-            TimeUtil.delaySecond(1.5).then((() => {
+            TimeUtil.delaySecond(1.5).then(() => {
                 this.isRefresh = true;
-            }));
+            });
             this.rankType = rankType;
             this.refreshRanking();
-        }));
+        });
     }
     onEnterScene(sceneType) {
         let playerLv = this.getPlayerData.playerLv;
@@ -23872,7 +23872,7 @@ class WorldRankModuleC extends ModuleC {
         this.getWorldRankPanel.refreshRankPanel(this.rankPlayerDatas_CR, curPlayerIndex, false, null, -1);
     }
     sortRankData_C() {
-        this.rankPlayerDatas_CR.sort(((a, b) => {
+        this.rankPlayerDatas_CR.sort((a, b) => {
             switch (this.rankType) {
               case RankType.Lv:
                 return b.playerLv - a.playerLv;
@@ -23883,7 +23883,7 @@ class WorldRankModuleC extends ModuleC {
               case RankType.Kill:
                 return b.playerKill - a.playerKill;
             }
-        }));
+        });
     }
 }
 
@@ -24399,13 +24399,13 @@ class WorldUIModuleC extends ModuleC {
         this.initWorldUI();
     }
     initWorldUI() {
-        worldUIs.forEach(((value, key) => {
+        worldUIs.forEach((value, key) => {
             if (value.npcId && value.npcId.length > 0) {
-                mw.GameObject.asyncFindGameObjectById(value.npcId).then((npcGo => {
+                mw.GameObject.asyncFindGameObjectById(value.npcId).then(npcGo => {
                     let npc = npcGo;
-                    Utils.asyncDownloadAsset(value.skinId).then((() => {
+                    Utils.asyncDownloadAsset(value.skinId).then(() => {
                         npc.setDescription([ value.skinId ]);
-                    }));
+                    });
                     if (!value.animationIds || value.animationIds.length == 0) return;
                     if (value.animationIds.length == 1) {
                         let npcAnimation1 = npc.loadAnimation(value.animationIds[0]);
@@ -24414,9 +24414,9 @@ class WorldUIModuleC extends ModuleC {
                     } else if (value.animationIds.length == 2) {
                         let npcAnimation1 = npc.loadAnimation(value.animationIds[0]);
                         let npcAnimation2 = npc.loadAnimation(value.animationIds[1]);
-                        npcAnimation1.onFinish.add((() => {
+                        npcAnimation1.onFinish.add(() => {
                             npcAnimation2.play();
-                            setTimeout((() => {
+                            setTimeout(() => {
                                 let forward = npc.worldTransform.getForwardVector().normalized;
                                 let right = npc.worldTransform.getRightVector().normalized;
                                 let offsetLoc = mw.Vector.zero;
@@ -24426,11 +24426,11 @@ class WorldUIModuleC extends ModuleC {
                                 EffectService.playAtPosition(value.effectIds[1], offsetPos, {
                                     rotation: offsetRotate
                                 });
-                            }), value.delayPlayEffects[1]);
-                        }));
-                        npcAnimation2.onFinish.add((() => {
+                            }, value.delayPlayEffects[1]);
+                        });
+                        npcAnimation2.onFinish.add(() => {
                             npcAnimation1.play();
-                            setTimeout((() => {
+                            setTimeout(() => {
                                 let forward = npc.worldTransform.getForwardVector().normalized;
                                 let right = npc.worldTransform.getRightVector().normalized;
                                 let offsetLoc = mw.Vector.zero;
@@ -24440,10 +24440,10 @@ class WorldUIModuleC extends ModuleC {
                                 EffectService.playAtPosition(value.effectIds[0], offsetPos, {
                                     rotation: offsetRotate
                                 });
-                            }), value.delayPlayEffects[0]);
-                        }));
+                            }, value.delayPlayEffects[0]);
+                        });
                         npcAnimation1.play();
-                        setTimeout((() => {
+                        setTimeout(() => {
                             let forward = npc.worldTransform.getForwardVector().normalized;
                             let right = npc.worldTransform.getRightVector().normalized;
                             let offsetLoc = mw.Vector.zero;
@@ -24453,101 +24453,101 @@ class WorldUIModuleC extends ModuleC {
                             EffectService.playAtPosition(value.effectIds[0], offsetPos, {
                                 rotation: offsetRotate
                             });
-                        }), value.delayPlayEffects[0]);
+                        }, value.delayPlayEffects[0]);
                     }
-                }));
+                });
             }
             if (value.triggerId && value.triggerId.length > 0) {
-                mw.GameObject.asyncFindGameObjectById(value.triggerId).then((triggerGo => {
+                mw.GameObject.asyncFindGameObjectById(value.triggerId).then(triggerGo => {
                     let trigger = triggerGo;
-                    trigger.onEnter.add((character => {
+                    trigger.onEnter.add(character => {
                         if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
                         this.nextAds(value);
-                    }));
-                }));
+                    });
+                });
             }
             if (value.worldUIId && value.worldUIId.length > 0) {
-                mw.GameObject.asyncFindGameObjectById(value.worldUIId).then((worldUIGo => {
+                mw.GameObject.asyncFindGameObjectById(value.worldUIId).then(worldUIGo => {
                     let worldUI = worldUIGo;
                     let levelItem = mw.UIService.create(LevelItem);
                     levelItem.updateLevelTextBlock(GameConfig.Language[`${value.worldUIName}`].Value);
                     worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-                }));
+                });
             }
-        }));
-        needRefreshWorldUI.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+        });
+        needRefreshWorldUI.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        needRefreshWorldUI_1.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+            });
+        });
+        needRefreshWorldUI_1.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_1_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        needRefreshWorldUI_2.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+            });
+        });
+        needRefreshWorldUI_2.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_2_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        needRefreshWorldUI_3.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+            });
+        });
+        needRefreshWorldUI_3.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_3_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        needRefreshWorldUI_4.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+            });
+        });
+        needRefreshWorldUI_4.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_4_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        needRefreshWorldUI_5.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+            });
+        });
+        needRefreshWorldUI_5.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_5_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        needRefreshWorldUI_6.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+            });
+        });
+        needRefreshWorldUI_6.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_6_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        needRefreshWorldUI_7.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((worldUIGo => {
+            });
+        });
+        needRefreshWorldUI_7.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(worldUIGo => {
                 let worldUI = worldUIGo;
                 let levelItem = mw.UIService.create(WorldTips_7_Generate$1);
                 worldUI.setTargetUIWidget(levelItem.uiWidgetBase);
-            }));
-        }));
-        diamondTrigger.forEach((value => {
-            mw.GameObject.asyncFindGameObjectById(value).then((triggerGo => {
+            });
+        });
+        diamondTrigger.forEach(value => {
+            mw.GameObject.asyncFindGameObjectById(value).then(triggerGo => {
                 let trigger = triggerGo;
-                trigger.onEnter.add((character => {
+                trigger.onEnter.add(character => {
                     if (character.gameObjectId != this.localPlayer.character.gameObjectId) return;
                     this.getDiamonds();
-                }));
-            }));
-        }));
+                });
+            });
+        });
     }
     getDiamonds() {
         if (GlobalData.isOpenIAA) {
-            this.getAdTipsPanel.showRewardAd((() => {
+            this.getAdTipsPanel.showRewardAd(() => {
                 Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount * this.currentGetDiamondCount));
                 this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount * this.currentGetDiamondCount);
                 this.currentGetDiamondCount++;
-            }), StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount * this.currentGetDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+            }, StringUtil.format(GameConfig.Language.Text_GetFreeDiamonds.Value, GlobalData.addDiamondCount * this.currentGetDiamondCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
         } else {
             Notice.showDownNotice(StringUtil.format(GameConfig.Language.Text_SuccessfullyObtainedDiamonds.Value, GlobalData.addDiamondCount * this.currentGetDiamondCount));
             this.getPlayerModuleC.saveDiamond(GlobalData.addDiamondCount * this.currentGetDiamondCount);
@@ -24559,16 +24559,16 @@ class WorldUIModuleC extends ModuleC {
             Notice.showDownNotice(GameConfig.Language.Text_ObtainedOpenTheBackpackToUse.Value);
             return;
         }
-        this.getAdTipsPanel.showRewardAd((() => {
+        this.getAdTipsPanel.showRewardAd(() => {
             value.currentAdsCount++;
             if (value.currentAdsCount >= value.adsCount) {
                 this.getBagModuleC.onCompleted(value.bagId);
             } else {
-                TimeUtil.delaySecond(2).then((() => {
+                TimeUtil.delaySecond(2).then(() => {
                     this.nextAds(value);
-                }));
+                });
             }
-        }), StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, value.adsCount - value.currentAdsCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_GetItForFree.Value);
+        }, StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, value.adsCount - value.currentAdsCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_GetItForFree.Value);
     }
 }
 
@@ -24660,17 +24660,17 @@ let GameLauncher = class GameLauncher extends mw.Script {
         }
         GlobalData.languageId = languageId;
         console.error(`wfz - languageId:${languageId}`);
-        GameConfig.initLanguage(languageId, (key => {
+        GameConfig.initLanguage(languageId, key => {
             let ele = GameConfig.Language.getElement(key);
             if (ele == null) return "unknow_" + key;
             return ele.Value;
-        }));
-        mw.UIScript.addBehavior("lan", (ui => {
+        });
+        mw.UIScript.addBehavior("lan", ui => {
             let key = ui.text;
             if (!key) return;
             let lan = GameConfig.Language.getElement(key);
             if (lan) ui.text = lan.Value;
-        }));
+        });
     }
     onUpdateC(dt) {}
     onStartS() {
@@ -24761,11 +24761,11 @@ class ModifiedCameraSystem {
         ModifiedCameraSystem.followRotationValue = newOverrideRotation;
         Player.setControllerRotation(ModifiedCameraSystem.followRotationValue);
         if (!ModifiedCameraSystem.isBind) {
-            TimeUtil.onEnterFrame.add((() => {
+            TimeUtil.onEnterFrame.add(() => {
                 if (ModifiedCameraSystem.followEnable) {
                     Player.setControllerRotation(ModifiedCameraSystem.followRotationValue);
                 }
-            }), this);
+            }, this);
             ModifiedCameraSystem.isBind = true;
         }
     }
@@ -24807,13 +24807,13 @@ class ModifiedCameraSystem {
     }
     static cameraFocusing(targetArmLength, targetOffset, timeInterval = 20) {
         if (!SystemUtil.isClient()) return;
-        let timer = TimeUtil.onEnterFrame.add((() => {
+        let timer = TimeUtil.onEnterFrame.add(() => {
             let interpolationValue = Camera.currentCamera.springArm.length + (targetArmLength - Camera.currentCamera.springArm.length) / timeInterval;
             Camera.currentCamera.springArm.length = interpolationValue;
             if (Math.abs(Camera.currentCamera.springArm.length - targetArmLength) <= .5) {
                 TimeUtil.onEnterFrame.remove(timer);
             }
-        }));
+        });
     }
     static startCameraShake(shakeData) {
         if (!SystemUtil.isClient()) return;
@@ -24968,10 +24968,10 @@ class PropModuleC extends ModuleC {
     }
     registerAction() {
         let isBig = false;
-        InputUtil.onKeyDown(mw.Keys.NumPadTwo, (() => {
+        InputUtil.onKeyDown(mw.Keys.NumPadTwo, () => {
             isBig = !isBig;
             this.giant(isBig);
-        }));
+        });
     }
     giant(isGiant) {
         if (isGiant) {
@@ -25016,12 +25016,12 @@ class PropModuleS extends ModuleS {
     gianting(character) {
         PlayerManagerExtesion.rpcPlayAnimation(character, this.giantAnimationId, 1);
         let giantingEffectIds = this.playGiantingEffects(character);
-        TimeUtil.delaySecond(2).then((() => {
+        TimeUtil.delaySecond(2).then(() => {
             this.stopGiantingEffects(giantingEffectIds);
             character.worldTransform.position = character.worldTransform.position.add(new mw.Vector(0, 0, 500));
             character.worldTransform.scale = mw.Vector.one.multiply(5);
             this.playGianEffects(character);
-        }));
+        });
     }
     playGiantingEffects(character) {
         let giantingEffectIds = [];
@@ -25031,9 +25031,9 @@ class PropModuleS extends ModuleS {
         return giantingEffectIds;
     }
     stopGiantingEffects(giantingEffectIds) {
-        giantingEffectIds.forEach((e => {
+        giantingEffectIds.forEach(e => {
             EffectService.stop(e);
-        }));
+        });
         giantingEffectIds = [];
     }
     playGianEffects(character) {
@@ -25111,9 +25111,9 @@ class InputManagers {
         if (this.touch != null) return;
         this.touch = new mw.TouchInput;
         this.beginMulFun = this.touchControl.bind(this);
-        Player.asyncGetLocalPlayer().then((player => {
+        Player.asyncGetLocalPlayer().then(player => {
             this.touch.onTouchBegin.add(this.touchHandler.bind(this));
-        }));
+        });
     }
     touchControl(index, loc, touchType) {
         let touchArr = this.touch.getTouchVectorArray();
@@ -25143,9 +25143,9 @@ class InputManagers {
     onKeyDown(key) {
         if (!this.keyDownActionMap.has(key)) {
             this.keyDownActionMap.set(key, new Action1);
-            InputUtil.onKeyDown(key, (() => {
+            InputUtil.onKeyDown(key, () => {
                 this.keyDownActionMap.get(key).call(key);
-            }));
+            });
         }
         let action = this.keyDownActionMap.get(key);
         if (action.count > 0) {
@@ -25298,13 +25298,13 @@ let CostPanel_Generate = class CostPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mSureButton.onClicked.add((() => {
+        this.mSureButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mSureButton");
-        }));
+        });
         this.mSureButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCancleButton.onClicked.add((() => {
+        this.mCancleButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCancleButton");
-        }));
+        });
         this.mCancleButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mCostTextBlock);
         this.initLanguage(this.uiWidgetBase.findChildByPath("RootCanvas/Canvas/mSureButton/TextBlock_1"));
@@ -25349,13 +25349,13 @@ class CostPanel extends CostPanel_Generate$1 {
         this.shopModuleC = ModuleService.getModule(ShopModuleC);
     }
     bindButtons() {
-        this.mSureButton.onClicked.add((() => {
+        this.mSureButton.onClicked.add(() => {
             this.hide();
             this.shopModuleC.sureBuy();
-        }));
-        this.mCancleButton.onClicked.add((() => {
+        });
+        this.mCancleButton.onClicked.add(() => {
             this.hide();
-        }));
+        });
     }
     showAndInitData(price) {
         this.mCostTextBlock.text = "确定要花费" + price + "金币\n购买此英雄套装吗？";
@@ -25429,21 +25429,21 @@ let ShopPanel_Generate = class ShopPanel_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mTurnLeftButton.onClicked.add((() => {
+        this.mTurnLeftButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mTurnLeftButton");
-        }));
+        });
         this.mTurnLeftButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mTurnRightButton.onClicked.add((() => {
+        this.mTurnRightButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mTurnRightButton");
-        }));
+        });
         this.mTurnRightButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mCloseButton");
-        }));
+        });
         this.mCloseButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
-        this.mSaveButton.onClicked.add((() => {
+        this.mSaveButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mSaveButton");
-        }));
+        });
         this.mSaveButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mSaveTextBlock);
         this.initLanguage(this.mCoinTextBlock);
@@ -25496,13 +25496,13 @@ class ShopPanel extends ShopPanel_Generate$1 {
         Console.error("[ShopPanel-registerActions]");
     }
     bindButtons() {
-        this.mCloseButton.onClicked.add((() => {
+        this.mCloseButton.onClicked.add(() => {
             this.hide();
             this.shopModuleC.onSwitchCameraAction.call(false);
-        }));
-        this.mSaveButton.onClicked.add((() => {
+        });
+        this.mSaveButton.onClicked.add(() => {
             this.shopModuleC.updateRoleType(this.coldWeapons[this.curSelectId - 1]);
-        }));
+        });
     }
     initShopItems() {
         this.coldWeapons = GameConfig.ColdWeapon.getAllElement();
@@ -25575,18 +25575,18 @@ class ShopItem {
     initData(id, iconGuid, isHave, roleType) {
         this.id = id;
         this.mIconImage.imageGuid = iconGuid;
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick");
             if (!GlobalData.isCanClickShopItem) {
                 Notice.showDownNotice("别点太快");
                 return;
             }
             GlobalData.isCanClickShopItem = false;
-            TimeUtil.delaySecond(.5).then((() => {
+            TimeUtil.delaySecond(.5).then(() => {
                 GlobalData.isCanClickShopItem = true;
-            }));
+            });
             mw.UIService.getUI(ShopPanel).updateShopNPC(this.id);
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         if (roleType == 3) {
             this.mTextBlock_1.text = "限时";
@@ -25661,18 +25661,18 @@ class ShopModuleC extends ModuleC {
         Console.error(this.limitedTouchXs + " | " + this.limitedTouchYs);
     }
     registerActions() {
-        this.hudModuleC.onOpenShopAction.add((() => {
+        this.hudModuleC.onOpenShopAction.add(() => {
             this.shopPanel.show();
             this.onSwitchCameraAction.call(true);
-        }));
-        this.onSwitchCameraAction.add((isOpenSkinShop => {
+        });
+        this.onSwitchCameraAction.add(isOpenSkinShop => {
             isOpenSkinShop ? this.openWeaponSetShop() : this.closeWeaponSetShop();
-        }));
+        });
     }
     onEnterScene(sceneType) {
         this.initShopNPCData();
         this.weaponSet = this.data.weaponSet;
-        TimeUtil.delaySecond(3).then((() => {
+        TimeUtil.delaySecond(3).then(() => {
             let id = this.data.useWeaponId;
             let coldWeaponElement = GameConfig.ColdWeapon.getElement(id);
             this.onSwitchWeapon(coldWeaponElement);
@@ -25681,7 +25681,7 @@ class ShopModuleC extends ModuleC {
             this.updateShopRoles(coldWeaponElement);
             this.shopPanel.defaultSelectItem(id);
             this.updateHeadUI(coldWeaponElement);
-        }));
+        });
     }
     updateRoleType(element) {
         this.coldWeaponElement = element;
@@ -25869,26 +25869,26 @@ class ShopModuleC extends ModuleC {
         crT.rotation = mw.Rotation.zero;
         cs.localTransform = crT;
         ModifiedCameraSystem.setOverrideCameraRotation(this.cameraRotation);
-        InputManagers.getInstance.onPressTouch.add((data => {
+        InputManagers.getInstance.onPressTouch.add(data => {
             this.onPressTouch(data);
-        }));
-        InputManagers.getInstance.onReleaseTouch.add((data => {
+        });
+        InputManagers.getInstance.onReleaseTouch.add(data => {
             this.onReleaseTouch(data);
-        }));
+        });
     }
     closeWeaponSetShop() {
         let cs = this.getCamera;
         ModifiedCameraSystem.setCameraFollowTarget(this.localPlayer.character);
         ModifiedCameraSystem.applySettings(this.oldCameraData[0]);
         ModifiedCameraSystem.setOverrideCameraRotation(this.oldRotation);
-        setTimeout((() => {
+        setTimeout(() => {
             cs.positionLagEnabled = this.oldCameraData[1].positionLagEnabled;
             cs.rotationLagEnabled = this.oldCameraData[1].rotationLagEnabled;
             ModifiedCameraSystem.followTargetInterpSpeed = this.oldCameraData[1].followTargetInterpSpeed;
             cs.positionLagSpeed = this.oldCameraData[1].positionLagSpeed;
             cs.rotationLagSpeed = this.oldCameraData[1].rotationLagSpeed;
             ModifiedCameraSystem.resetOverrideCameraRotation();
-        }), 200);
+        }, 200);
         InputManagers.getInstance.onPressTouch.clear();
         InputManagers.getInstance.onReleaseTouch.clear();
     }
@@ -26070,11 +26070,11 @@ let Trampoline = class Trampoline extends mw.Script {
     }
     onUpdateC(dt) {
         try {
-            this.playersRadiusUI.forEach(((value, key) => {
+            this.playersRadiusUI.forEach((value, key) => {
                 let player = Player.getPlayer(key);
                 if (!player || !player.character || player.character.velocity.z >= 0) return;
                 this.lineTraceCheck(player, value);
-            }));
+            });
         } catch (error) {}
     }
     lineTraceCheck(player, radiusUI) {
@@ -26116,11 +26116,11 @@ let Trampoline = class Trampoline extends mw.Script {
                 time: 0
             }).to({
                 time: 1
-            }, 1e3).onUpdate((obj => {
+            }, 1e3).onUpdate(obj => {
                 let z = this.shakeFunc(obj.time, 100, 6, 5) * 8;
                 let worldScale = new mw.Vector(baseScale.x, baseScale.y, baseScale.z + z);
                 this.trampolineModelsC[triggerIndex].worldTransform.scale = worldScale;
-            })).start();
+            }).start();
         } else {
             let curTrampolinePos = this.trampolineModelsC[triggerIndex];
             let modelLoc2 = new mw.Vector2(curTrampolinePos.worldTransform.position.x, curTrampolinePos.worldTransform.position.y);
@@ -26131,12 +26131,12 @@ let Trampoline = class Trampoline extends mw.Script {
                 time: 0
             }).to({
                 time: 1
-            }, 1e3).onUpdate((obj => {
+            }, 1e3).onUpdate(obj => {
                 let x = this.shakeFunc(obj.time, 100, 6, 5) * 100 * changeRot.y;
                 let y = this.shakeFunc(obj.time, 100, 6, 5) * 100 * changeRot.x;
                 let rot = new mw.Rotation(x, y, changeRot.z);
                 this.trampolineModelsC[triggerIndex].localTransform.rotation = rot;
-            })).start();
+            }).start();
         }
     }
     showRadiusUIC(playerId, number) {
@@ -26172,7 +26172,7 @@ let Trampoline = class Trampoline extends mw.Script {
         this.bindTriggerS();
     }
     registerEventsS() {
-        Player.onPlayerLeave.add((player => {
+        Player.onPlayerLeave.add(player => {
             let playerId = player.playerId;
             if (this.playerFlyAndFallMap.has(playerId)) {
                 this.playerFlyAndFallMap.delete(playerId);
@@ -26183,7 +26183,7 @@ let Trampoline = class Trampoline extends mw.Script {
             if (this.playersImpactRadius.has(playerId)) {
                 this.playersImpactRadius.delete(playerId);
             }
-        }));
+        });
     }
     async findGameObjectsS() {
         if (this.trampolineLen == 0) return;
@@ -26202,9 +26202,9 @@ let Trampoline = class Trampoline extends mw.Script {
     bindTriggerS() {
         if (this.triggersS.length == 0) return;
         for (let i = 0; i < this.triggersS.length; ++i) {
-            this.triggersS[i].onEnter.add((go => {
+            this.triggersS[i].onEnter.add(go => {
                 this.onEnterTriggerS(go, i);
-            }));
+            });
         }
     }
     onEnterTriggerS(go, triggerIndex) {
@@ -26214,9 +26214,9 @@ let Trampoline = class Trampoline extends mw.Script {
         let playerId = player.playerId;
         if (this.cantEnterPlayerIdS.has(playerId)) return;
         this.cantEnterPlayerIdS.add(playerId);
-        mw.TimeUtil.delayExecute((() => {
+        mw.TimeUtil.delayExecute(() => {
             this.cantEnterPlayerIdS.delete(playerId);
-        }), 20);
+        }, 20);
         Event.dispatchToClient(player, ListenerEventsType$1.ServerToAllClient_ShowJumpRecordUI, this.triggersS[triggerIndex].worldTransform.position.z);
         this.modelVisualEffectS(playerId, triggerIndex);
         this.playerFlyS(player);
@@ -26235,9 +26235,9 @@ let Trampoline = class Trampoline extends mw.Script {
         let value = this.playersJumpTimeS.get(playerId);
         value = value ? value : 0;
         this.addPlayerImpulse(player, value);
-        setTimeout((() => {
+        setTimeout(() => {
             this.playerFlyAndFallMap.set(playerId, false);
-        }), 500);
+        }, 500);
         this.playersJumpTimeS.set(playerId, value + 1);
     }
     addPlayerImpulse(player, jumpTime) {
@@ -26249,11 +26249,11 @@ let Trampoline = class Trampoline extends mw.Script {
     }
     onUpdateS(dt) {
         if (this.playerFlyAndFallMap.size > 0) {
-            this.playerFlyAndFallMap.forEach(((isFall, playerId) => {
+            this.playerFlyAndFallMap.forEach((isFall, playerId) => {
                 let player = Player.getPlayer(playerId);
                 this.isTouchDownS(player);
                 this.updatePlayerStateS(playerId, isFall);
-            }));
+            });
         }
     }
     isTouchDownS(player) {
@@ -26489,22 +26489,22 @@ class P_Game_Trampoline extends mw.UIScript {
             time: 0
         }).to({
             time: 1
-        }, 1e3).onStart((() => {
+        }, 1e3).onStart(() => {
             this.mRecordMaxHeightCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        })).onUpdate((obj => {
+        }).onUpdate(obj => {
             let pos = new mw.Vector2(this.recordMaxHeightCanvasPos.x - this.backEaseIn(obj.time) * 500, this.recordMaxHeightCanvasPos.y);
             this.mRecordMaxHeightCanvas.position = pos;
-        }));
+        });
         this.showUITween2 = new mw.Tween({
             time: 0
         }).to({
             time: 1
-        }, 1e3).onStart((() => {
+        }, 1e3).onStart(() => {
             this.mCurrentHeightCanvas.visibility = mw.SlateVisibility.SelfHitTestInvisible;
-        })).onUpdate((obj => {
+        }).onUpdate(obj => {
             let pos = new mw.Vector2(this.currentHeightCanvasPos.x - this.backEaseIn(obj.time) * 500, this.currentHeightCanvasPos.y);
             this.mCurrentHeightCanvas.position = pos;
-        })).delay(200);
+        }).delay(200);
     }
     getComponentUI() {
         let rootCanvas = this.uiObject;
@@ -26516,9 +26516,9 @@ class P_Game_Trampoline extends mw.UIScript {
     registerListener() {
         Event.addServerListener(ListenerEventsType.ServerToAllClient_ShowJumpRecordUI, this.showUI.bind(this));
         Event.addServerListener(ListenerEventsType.ServerToAllClient_HideJumpRecordUI, this.hideUI.bind(this));
-        Event.addLocalListener("SyncMaxHeight", (maxHeight => {
+        Event.addLocalListener("SyncMaxHeight", maxHeight => {
             this.recordMaxHight = maxHeight;
-        }));
+        });
     }
     onUpdate(dt) {
         if (!this.isStart) return;
@@ -26610,31 +26610,31 @@ let NewScript = class NewScript extends Script {
             if (this.bagId <= 0) return;
             let skinId = this.skinId && this.skinId.length > 0 ? this.skinId : GameConfig.BagInfo.getElement(this.bagId).AssetId;
             this.curAdsCount = 0;
-            Utils.asyncDownloadAsset(skinId).then((() => {
+            Utils.asyncDownloadAsset(skinId).then(() => {
                 this.gameObject.parent.setDescription([ skinId ]);
-            }));
+            });
             let trigger = this.gameObject;
-            trigger.onEnter.add((char => {
+            trigger.onEnter.add(char => {
                 if (char.gameObjectId != Player.localPlayer.character.gameObjectId) return;
                 if (this.getBagModuleC.isHasBagId(this.bagId)) {
                     Notice.showDownNotice(GameConfig.Language.Text_ObtainedOpenTheBackpackToUse.Value);
                     return;
                 }
                 this.nextAds();
-            }));
+            });
         }
     }
     nextAds() {
-        this.getAdTipsPanel.showRewardAd((() => {
+        this.getAdTipsPanel.showRewardAd(() => {
             this.curAdsCount++;
             if (this.curAdsCount >= this.adsCount) {
                 this.getBagModuleC.onCompleted(this.bagId);
             } else {
-                TimeUtil.delaySecond(2).then((() => {
+                TimeUtil.delaySecond(2).then(() => {
                     this.nextAds();
-                }));
+                });
             }
-        }), StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, this.adsCount - this.curAdsCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
+        }, StringUtil.format(GameConfig.Language.Text_WatchTheAdvertisementTimesGetItForFree.Value, this.adsCount - this.curAdsCount), GameConfig.Language.Text_Cancel.Value, GameConfig.Language.Text_FreeToReceive.Value);
     }
     onUpdate(dt) {}
     onDestroy() {}
@@ -26686,28 +26686,28 @@ class WeaponClient extends WeaponData {
         this.animationJsons = [];
         this.animationJsons = jsonList;
         this.animationInfo = [];
-        this.animationJsons.forEach((e => {
+        this.animationJsons.forEach(e => {
             let info = JSON.parse(e);
             let newInfo = new AnimationInfo$2;
             if (info) {
-                Object.keys(info).forEach((e => {
+                Object.keys(info).forEach(e => {
                     if (info[e] instanceof Object) {
                         return;
                     }
                     newInfo[e] = info[e];
-                }));
-                info.infos.forEach((e => {
+                });
+                info.infos.forEach(e => {
                     let nodeInfo = new NodeInfo;
-                    Object.keys(e).forEach((k => {
+                    Object.keys(e).forEach(k => {
                         nodeInfo[k] = e[k];
-                    }));
+                    });
                     newInfo.infos.push(nodeInfo);
-                }));
+                });
                 this.animationInfo.push(newInfo);
             } else {
                 Console.error("解析json错误 : " + e);
             }
-        }));
+        });
         if (this.animationInfo.length != this.animationJsons.length) {
             Console.error("解析json错误 : 动画数量和解析数量不一致 : " + this.animationInfo.length + " = " + this.animationJsons.length);
         } else {
@@ -26792,20 +26792,20 @@ class WeaponClient extends WeaponData {
         this.fightingSec = 0;
         let skillRectNodes = this.getCurPlayInfoAtType(NodeType.SkillRect);
         let logicFrontTime = rock;
-        moves.forEach((e => {
+        moves.forEach(e => {
             if (e.isToPos == "1") return;
             let moveTime = parseInt(e.delayPlayTime) + parseInt(e.duration);
             if (moveTime > logicFrontTime) {
                 logicFrontTime = moveTime;
             }
-        }));
+        });
         if (logicFrontTime > durMilSec) durMilSec = logicFrontTime;
         let maxIndex = this.getActionLengthByAnimation(this.curAnimationIndex) - 1;
         let curIndex = this.curActionIndex;
         if (info.isCharge != "0") {
-            new Promise(((resolve, reject) => {
+            new Promise((resolve, reject) => {
                 if (onStartCharge) onStartCharge(this.curActionIndex, this.getActionLengthByAnimation(this.curAnimationIndex) - 1, resolve);
-            })).then((res => {
+            }).then(res => {
                 this.char.movementEnabled = true;
                 this.char.jumpEnabled = true;
                 this.canOper = true;
@@ -26822,10 +26822,10 @@ class WeaponClient extends WeaponData {
                 }
                 this.server_StopAllEffectProxy();
                 this.playAnimation(index, onComplate, onHit, onStartCombo, onStartCharge);
-            }));
+            });
             return;
         }
-        this.startTimeOut((() => {
+        this.startTimeOut(() => {
             this.char.movementEnabled = true;
             this.char.jumpEnabled = true;
             this.canOper = true;
@@ -26833,11 +26833,11 @@ class WeaponClient extends WeaponData {
             if (onStartCombo) {
                 onStartCombo(durMilSec - hitMilSec);
             }
-        }), logicFrontTime);
+        }, logicFrontTime);
         if (logicFrontTime > hitMilSec) {
             Console.error("前摇最终时间 : " + logicFrontTime + " 大于 击打时间 : " + hitMilSec);
         }
-        this.startTimeOut((() => {
+        this.startTimeOut(() => {
             if (onHit) {
                 onHit(this.curActionIndex, maxIndex, SkillRectCheck.checkNodes(this.char, skillRectNodes));
             }
@@ -26847,8 +26847,8 @@ class WeaponClient extends WeaponData {
                 this.playAnimation(index, onComplate, onHit, onStartCombo, onStartCharge);
                 return;
             }
-        }), hitMilSec);
-        this.startTimeOut((() => {
+        }, hitMilSec);
+        this.startTimeOut(() => {
             this.canCombo = false;
             this.canOper = true;
             this.curActionIndex = 0;
@@ -26856,7 +26856,7 @@ class WeaponClient extends WeaponData {
                 onComplate(curIndex, maxIndex);
                 this.fightingSec = this.constFightingSec;
             }
-        }), durMilSec);
+        }, durMilSec);
         return true;
     }
     getAnimationCount() {
@@ -26877,9 +26877,9 @@ class WeaponClient extends WeaponData {
         }
         let res = 0;
         let aniInfo = this.animationInfo[animationIndex];
-        aniInfo.infos.forEach((e => {
+        aniInfo.infos.forEach(e => {
             if (e.type == NodeType.Animation.toString()) res++;
-        }));
+        });
         return res;
     }
     equipWeapon_Hand(equipGuid, isRight = true) {
@@ -26899,7 +26899,7 @@ class WeaponClient extends WeaponData {
         return aniInfo.charFightIdelAniId;
     }
     client_OnChangeCharGuid() {
-        let handle = setInterval((async () => {
+        let handle = setInterval(async () => {
             let char = await GameObject.asyncFindGameObjectById(this.charGuid);
             if (char) {
                 await char.asyncReady();
@@ -26910,7 +26910,7 @@ class WeaponClient extends WeaponData {
                     this.char = char;
                 }
             }
-        }), 100);
+        }, 100);
     }
     client_OnChangeEquipWeaponRight() {
         if (this.clientEquipGo_Right != null) {
@@ -26919,7 +26919,7 @@ class WeaponClient extends WeaponData {
             this.clientEquipGo_Right = null;
         }
         if (this.equipRightWeaponGuid != "") {
-            const handle = setInterval((async () => {
+            const handle = setInterval(async () => {
                 if (this.char != null) {
                     await this.char.asyncReady();
                     clearInterval(handle);
@@ -26927,7 +26927,7 @@ class WeaponClient extends WeaponData {
                     this.char.attachToSlot(this.clientEquipGo_Right, mw.HumanoidSlotType.RightHand);
                     this.clientEquipGo_Right.localTransform.position = mw.Vector.zero;
                 }
-            }), 100);
+            }, 100);
         }
     }
     client_OnChangeEquipWeaponLeft() {
@@ -26937,21 +26937,21 @@ class WeaponClient extends WeaponData {
             this.clientEquipGo_Left = null;
         }
         if (this.equipLeftWeaponGuid != "") {
-            const handle = setInterval((async () => {
+            const handle = setInterval(async () => {
                 if (this.char != null) {
                     clearInterval(handle);
                     this.clientEquipGo_Left = await SpawnManager.wornAsyncSpawn(this.equipLeftWeaponGuid, false);
                     this.char.attachToSlot(this.clientEquipGo_Left, mw.HumanoidSlotType.LeftHand);
                     this.clientEquipGo_Left.localTransform.position = mw.Vector.zero;
                 }
-            }), 100);
+            }, 100);
         }
     }
     async client_StopAllEffect() {
-        this.curPlayEffs.forEach((e => {
+        this.curPlayEffs.forEach(e => {
             e.stop();
             e.destroy();
-        }));
+        });
         this.curPlayEffs = [];
     }
     async client_PlayEffect(guid, stopTime, slotIndex, offsetPos, offsetRotate, offsetScale, colorHex) {
@@ -26969,9 +26969,9 @@ class WeaponClient extends WeaponData {
             if (stopTime == 0) {
                 this.curPlayEffs.push(eff);
             } else {
-                setTimeout((() => {
+                setTimeout(() => {
                     eff.destroy();
-                }), stopTime);
+                }, stopTime);
             }
         } else {
             eff.worldTransform.position = new mw.Vector(offsetPos.x, offsetPos.y, offsetPos.z);
@@ -26986,14 +26986,14 @@ class WeaponClient extends WeaponData {
             if (stopTime == 0) {
                 this.curPlayEffs.push(eff);
             } else {
-                setTimeout((() => {
+                setTimeout(() => {
                     eff.destroy();
-                }), stopTime);
+                }, stopTime);
             }
         }
     }
     moveHandle(moveInfo) {
-        moveInfo.forEach((e => {
+        moveInfo.forEach(e => {
             let dur = parseInt(e.duration);
             let moveDis = parseInt(e.moveDistance);
             let moveType = parseInt(e.isToPos);
@@ -27001,7 +27001,7 @@ class WeaponClient extends WeaponData {
             if (moveDir != -1) moveDir = 1;
             let moveDelay = parseInt(e.delayPlayTime);
             if (moveDelay <= 0) moveDelay = 1;
-            this.startTimeOut((() => {
+            this.startTimeOut(() => {
                 if (moveType == 1) {
                     let charPos = this.char.worldTransform.position.clone();
                     let toPos = charPos;
@@ -27013,7 +27013,7 @@ class WeaponClient extends WeaponData {
                             return;
                         }
                         let res = QueryUtil.lineTrace(charPos, toPos, true, true);
-                        res = res.filter((e => e.gameObject.gameObjectId != this.char.gameObjectId));
+                        res = res.filter(e => e.gameObject.gameObjectId != this.char.gameObjectId);
                         if (res.length > 0) {
                             rate -= .2;
                             toPos = charPos.clone().add(curMoveDis.clone().multiply(rate));
@@ -27030,30 +27030,30 @@ class WeaponClient extends WeaponData {
                 let curMoveDis = this.char.worldTransform.getForwardVector().multiply(moveDis).multiply(moveDir);
                 toPos = toPos.clone().add(curMoveDis);
                 this.server_setCharToPos(this.char.gameObjectId, charPos, toPos, dur);
-            }), moveDelay);
-        }));
+            }, moveDelay);
+        });
     }
     playAudio(audios) {
         if (mw.SystemUtil.isServer()) return;
-        audios.forEach((e => {
-            this.startTimeOut((async () => {
+        audios.forEach(e => {
+            this.startTimeOut(async () => {
                 let audioObj = await SpawnManager.wornAsyncSpawn(e.guid, false);
                 if (audioObj) {
                     let audio = audioObj;
                     audio.stop();
                     audio.isLoop = false;
                     audio.play();
-                    audio.onFinish.add((() => {
+                    audio.onFinish.add(() => {
                         audio.destroy();
-                    }));
+                    });
                 }
-            }), parseInt(e.delayPlayTime));
-        }));
+            }, parseInt(e.delayPlayTime));
+        });
     }
     playAnimationEff(effs) {
         if (mw.SystemUtil.isServer()) return;
-        effs.forEach((e => {
-            setTimeout((async () => {
+        effs.forEach(e => {
+            setTimeout(async () => {
                 let offsetPos = new mw.Vector(parseFloat(e.offsetPos[0]), parseFloat(e.offsetPos[1]), parseFloat(e.offsetPos[2]));
                 let offsetRotate = new mw.Rotation(parseFloat(e.offsetRotation[0]), parseFloat(e.offsetRotation[1]), parseFloat(e.offsetRotation[2]));
                 let offsetScale = new mw.Vector(parseFloat(e.offsetScale[0]), parseFloat(e.offsetScale[1]), parseFloat(e.offsetScale[2]));
@@ -27071,17 +27071,17 @@ class WeaponClient extends WeaponData {
                     if (this.char.player == null) return;
                     this.server_playEffectProxy(e.guid, parseInt(e.stopTime), slotIndex, offsetPos, offsetRotate, offsetScale, e.colorHex);
                 }
-            }), parseInt(e.delayPlayTime));
-        }));
+            }, parseInt(e.delayPlayTime));
+        });
     }
     startTimeOut(callback, milSec) {
         this.allTimer.push(setTimeout(callback, milSec));
     }
     startTimeInterval(callback, milSec) {
         let index = this.allTimer.length;
-        this.allTimer.push(setInterval((() => {
+        this.allTimer.push(setInterval(() => {
             callback(this.allTimer[index]);
-        }), milSec));
+        }, milSec));
     }
     getCurPlayActionInfo() {
         let info = this.animationInfo[this.curAnimationIndex];
@@ -27190,10 +27190,10 @@ class WeaponServer extends WeaponClient {
         super.onUpdate(dt);
     }
     server_StopAllTimer() {
-        this.allTimer.forEach((e => {
+        this.allTimer.forEach(e => {
             clearTimeout(e);
             clearInterval(e);
-        }));
+        });
         this.allTimer = [];
         this.allUpdateCallback = [];
     }
@@ -27227,7 +27227,7 @@ class WeaponServer extends WeaponClient {
             let subDis = posVec.clone().subtract(startPosVec);
             let lastVec = new mw.Vector(char.worldTransform.position.x, char.worldTransform.position.y, char.worldTransform.position.z);
             Console.error("start Set char To Pos : " + Date.now());
-            this.startUpdateInterval((dt => {
+            this.startUpdateInterval(dt => {
                 curDur += dt * 1e3;
                 if (curDur >= time) {
                     Console.error("end Set char To Pos : " + Date.now());
@@ -27237,7 +27237,7 @@ class WeaponServer extends WeaponClient {
                 let curPos = new mw.Vector(parseFloat((subDis.x * curProgress).toFixed(2)), parseFloat((subDis.y * curProgress).toFixed(2)), parseFloat((subDis.z * curProgress).toFixed(2)));
                 let curVec = curPos.clone().add(startPosVec);
                 let res = QueryUtil.lineTrace(char.worldTransform.position, curVec, true, true);
-                res = res.filter((e => e.gameObject.gameObjectId != this.char.gameObjectId));
+                res = res.filter(e => e.gameObject.gameObjectId != this.char.gameObjectId);
                 if (res.length > 0) {
                     curVec = this.char.worldTransform.position.clone();
                 }
@@ -27245,7 +27245,7 @@ class WeaponServer extends WeaponClient {
                 lastVec = curVec.clone();
                 char.worldTransform.position = char.worldTransform.position.add(sub);
                 return true;
-            }));
+            });
         }
     }
     server_EquipWeapon(guid, isRight) {
@@ -27322,18 +27322,18 @@ let FreeCamera = FreeCamera_1 = class FreeCamera extends Script {
         this.freeCamera.springArm.localTransform = Transform.identity;
         this.freeCamera.springArm.length = 0;
         this.freeCamera.springArm.collisionEnabled = false;
-        InputUtil.onKeyDown(Keys.F8, (() => {
+        InputUtil.onKeyDown(Keys.F8, () => {
             if (this.isFreeCamera) {
                 this.exitFreeCamera();
             } else {
                 this.enterFreeCamera();
             }
-        }));
-        InputUtil.onKeyDown(Keys.NumPadNine, (() => {
+        });
+        InputUtil.onKeyDown(Keys.NumPadNine, () => {
             this.freeCamera.springArm.worldTransform.position = Player.localPlayer.character.worldTransform.position.clone();
             this._moveLoc = this.freeCamera.springArm.worldTransform.position.clone();
-        }));
-        Event.addLocalListener(FreeCamera_1.EVENTS_JOYSTICK_INPUT, (dir => {
+        });
+        Event.addLocalListener(FreeCamera_1.EVENTS_JOYSTICK_INPUT, dir => {
             if (this.freeCamera) {
                 const forward = this.freeCamera.worldTransform.clone().getForwardVector().clone();
                 const right = this.freeCamera.worldTransform.clone().getRightVector().clone();
@@ -27342,7 +27342,7 @@ let FreeCamera = FreeCamera_1 = class FreeCamera extends Script {
                 this.freeCamera.springArm.worldTransform.position = this._moveLoc;
                 if (this.useUpdate) this.useUpdate = false;
             }
-        }));
+        });
         KeyActionManager.instance.add([ Keys.W, Keys.S, Keys.A, Keys.D, Keys.E, Keys.Q ]);
     }
     enterFreeCamera() {
@@ -27435,22 +27435,22 @@ class KeyActionManager {
     add(btn) {
         if (btn instanceof Button) {
             this._btnStates.set(btn.guid, false);
-            btn.onPressed.add((() => {
+            btn.onPressed.add(() => {
                 this._btnStates.set(btn.guid, true);
-            }));
-            btn.onReleased.add((() => {
+            });
+            btn.onReleased.add(() => {
                 this._btnStates.set(btn.guid, false);
-            }));
+            });
         } else {
-            btn.forEach((element => {
+            btn.forEach(element => {
                 this._actionStates.set(element, false);
-                InputUtil.onKeyDown(element, (() => {
+                InputUtil.onKeyDown(element, () => {
                     this._actionStates.set(element, true);
-                }));
-                InputUtil.onKeyUp(element, (() => {
+                });
+                InputUtil.onKeyUp(element, () => {
                     this._actionStates.set(element, false);
-                }));
-            }));
+                });
+            });
         }
     }
 }
@@ -27527,9 +27527,9 @@ let OnlineRewardItem_Generate = class OnlineRewardItem_Generate extends UIScript
         this.initButtons();
     }
     initButtons() {
-        this.mButton.onClicked.add((() => {
+        this.mButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mButton");
-        }));
+        });
         this.mButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mCoinTextBlock);
         this.initLanguage(this.mExpTextBlock);
@@ -27605,9 +27605,9 @@ let ShopItem_Generate = class ShopItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mClickButton.onClicked.add((() => {
+        this.mClickButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mClickButton");
-        }));
+        });
         this.mClickButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mTextBlock);
         this.initLanguage(this.mTextBlock_1);
@@ -27703,9 +27703,9 @@ let TaskItem_Generate = class TaskItem_Generate extends UIScript {
         this.initButtons();
     }
     initButtons() {
-        this.mFinishButton.onClicked.add((() => {
+        this.mFinishButton.onClicked.add(() => {
             Event.dispatchToLocal("PlayButtonClick", "mFinishButton");
-        }));
+        });
         this.mFinishButton.touchMethod = mw.ButtonTouchMethod.PreciseTap;
         this.initLanguage(this.mNameTextBlock);
         this.initLanguage(this.mCoinTextBlock);

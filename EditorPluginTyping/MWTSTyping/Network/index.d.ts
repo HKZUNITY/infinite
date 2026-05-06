@@ -121,7 +121,48 @@ declare namespace mw {
         /** Pandora */
         Pandora = 10,
         /** Translation */
-        Translation = 11
+        Translation = 11,
+        /** Translation */
+        PlayerGateway = 12,
+        /** WebHub */
+        Web_Hub = 13
+    }
+    /**
+     * @author yingjie.zhong
+     * @description 不开放给用户,仅UGC内部使用的的URL枚举，需要与C++层的枚举对应
+     * @groups 玩法
+     */
+    enum HttpRequestURLExtension {
+        /** Release */
+        Release = 0,
+        /** Match */
+        Match = 1,
+        /** StringGuidMatch */
+        StringGuidMatch = 2,
+        /** ResourceAuditToB */
+        ResourceAuditToB = 3,
+        /** ResourceAuditToC */
+        ResourceAuditToC = 4,
+        /** ResourceManually */
+        ResourceManually = 5,
+        /** AthenaLogin */
+        AthenaLogin = 6,
+        /** PandoraPush */
+        PandoraPush = 7,
+        /** PandoraABTest */
+        PandoraABTest = 8,
+        /** Unify */
+        Unify = 9,
+        /** CdnUri */
+        CdnUri = 10,
+        /** Sequence */
+        Sequence = 11,
+        /** UnifyKV */
+        UnifyKV = 12,
+        /** PandoraCrashUpload */
+        PandoraCrashUpload = 13,
+        /** CharEditorSetProduct */
+        CharEditorSetProduct = 14
     }
     /**
      * @author junwen.hua
